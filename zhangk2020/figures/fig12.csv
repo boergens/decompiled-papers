@@ -1,0 +1,22 @@
+# zhangk2020 Fig. 12 (p. 11): Figure 12. Experimental results using Cantilever 2.
+# Provenance: tier 2, vector paths in the PDF (PyMuPDF get_drawings); marker centre = centre of the marker's stroked outline; legend markers dropped.
+# x calibration: tick marks 201.39 pt=20, 249.09 pt=60, 296.79 pt=100, 344.49 pt=140, 392.18 pt=180; max residual 0.000335 nm.
+# left y axis (The actual cutting edge radius, nm): tick marks 591.59 pt=33, 724.89 pt=27, 680.51 pt=29, 635.96 pt=31; max residual 0.0024 nm.
+# right y axis (Uncertainty, nm): tick marks 591.59 pt=2.15, 724.89 pt=1.85, 680.51 pt=1.95, 635.96 pt=2.05; max residual 0.00012 nm.
+# series 'Cutting edge radius' (blue open squares) is read on the left axis, 'Uncertainty' (red open squares with an X inside) on the right axis.
+# Uncertainty of the extraction: about 0.05 nm in x, 0.002 nm (left) and 0.0003 nm (right) in y (PDF coordinate precision).
+# Check (decompiler): Cutting edge radius: n=6, mean 29.6710 nm, sample SD 0.1640 nm; Uncertainty: n=6, mean 1.9873 nm, sample SD 0.0282 nm
+# (text: average radius 29.67 nm, standard deviation 0.16 nm; standard deviation of the uncertainties 0.028 nm).
+series,axis,x_indentation_depth_nm,y_nm
+Cutting edge radius,left (The actual cutting edge radius nm),29.04,29.5028
+Cutting edge radius,left (The actual cutting edge radius nm),43.89,29.8717
+Cutting edge radius,left (The actual cutting edge radius nm),62.27,29.8423
+Cutting edge radius,left (The actual cutting edge radius nm),84.03,29.4801
+Cutting edge radius,left (The actual cutting edge radius nm),125.16,29.6685
+Cutting edge radius,left (The actual cutting edge radius nm),157.11,29.6605
+Uncertainty,right (Uncertainty nm),29.04,1.9608
+Uncertainty,right (Uncertainty nm),43.89,1.9631
+Uncertainty,right (Uncertainty nm),62.27,2.0008
+Uncertainty,right (Uncertainty nm),84.03,2.0031
+Uncertainty,right (Uncertainty nm),125.16,1.9661
+Uncertainty,right (Uncertainty nm),157.11,2.0298

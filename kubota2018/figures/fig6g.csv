@@ -1,0 +1,24 @@
+# Kubota et al. 2018 Nat Commun 9:437, Fig. 6g: Michelson contrast vs acceleration voltage (main PDF p. 10);
+#   BSD = filled circles + solid line, In-Lens SE = open circles + dashed line (labels in the panel: 'BSD', 'In-Lens SE').
+# Columns: detector; acceleration_voltage_kev (x axis 'Acceleration voltage (keV)'); michelson = the value (tier 1);
+#   michelson_marker_digitized = the centre of the plotted marker in the published raster, for comparison.
+# Provenance: tier 1, source data = Supplementary Table 3 'Michelson contrast and Contrast-to-noise ratio'
+#   (Supplementary Information, 41467_2017_2768_MOESM1_ESM.pdf p. 25; the table is an image there, values read off it).
+#   The table heads the BSD rows 'Detector: BSE' and the others 'In-Lens SE'; the figure labels them 'BSD' and 'In-Lens SE'.
+# Check (fig6gh_extract.py): each table value was mapped into the embedded 300 ppi plot image through the tick
+#   calibration (x: 5 labelled ticks, max residual 0.030 keV; y: 7 labelled ticks, max residual 0.0011)
+#   and the marker centre located next to it (filled: opening + connected components; open: Hough circle).
+#   Largest offset table vs plotted marker: 0.043 keV in x, 0.0011 in y (1 px = 0.0009); 0 marker(s) not located.
+detector,acceleration_voltage_kev,michelson,michelson_marker_digitized
+BSD,2,0.277,0.2781
+BSD,3,0.374,0.3738
+BSD,4,0.376,0.3763
+BSD,5,0.272,0.2729
+BSD,6,0.302,0.3020
+BSD,7,0.273,0.2729
+In-Lens SE,1,0.156,0.1557
+In-Lens SE,1.5,0.231,0.2301
+In-Lens SE,2,0.246,0.2461
+In-Lens SE,3,0.211,0.2112
+In-Lens SE,4,0.180,0.1792
+In-Lens SE,5,0.168,0.1688

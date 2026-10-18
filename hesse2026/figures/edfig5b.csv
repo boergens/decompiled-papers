@@ -1,0 +1,58 @@
+# Extended Data Figure 5, panel b (PDF page 45, clip x=0-128, y=320-468 pt): explained variance of face features vs feature index.
+# Series: priming_average = black solid line (priming stimulus features from average priming activity); binocular_conscious_state1/2 = orange/purple solid lines; binocular_suppressed_state1/2 = orange/purple dashed lines (legend names).
+# Solid lines: 50-point stroke paths read directly (one vertex per feature). Dashed lines were exported as filled dash polygons; the centre line was recovered geometrically (vertex points contained in the dash outlines are exact; vertices falling in dash gaps were solved from the dash-pattern gap length (4.000 pt) and the adjacent segments' directions). *_se_pct = estimated uncertainty of each recovered dashed value in % units (0 = read exactly, coordinate precision ~0.02 pt = 0.04 %).
+# x axis calibrated on tick marks at features 10,20,30,40,50 (residual 1.61e-03 pt); y axis on ticks -100,-50,0,50,100 (residual 7.42e-04 pt). 1 % = 0.555 pt.
+# Shape/Appearance brackets above the plot span features 1.0-19.7 (Shape) and 20.2-50.1 (Appearance) in x-axis units.
+# Dashed-line recovery: state1 methods {'line': 5, 'line+ellipse': 18, 'vertex': 23, 'ellipse-2roots': 1, 'vertex+ellipse': 3}, max se 2.02 %, empty 0 (of which 0 blanked for se > 3.0 %); state2 methods {'line': 6, 'line+ellipse': 16, 'vertex': 28}, max se 0.52 %, empty 0 (of which 0 blanked for se > 3.0 %). Empty = not recoverable from the PDF.
+# Corrections 2026-10-18 with tools/dashlines.py: dashgeo.py had applied the dash-pattern constraint at spike vertices whose adjacent dashes overlap in x; dashlines.py reads such vertices directly from the dash outline (the outline contains the vertex point). binocular_suppressed_state1 features 31 (-44.84 -> -41.95), 37 (-58.48 -> -55.59), 43 (-43.82 -> -40.92): exact vertex-point reads, se 0.01. binocular_suppressed_state2 feature 34 (22.01 -> 21.87, se 0.02): pattern-constraint solution re-fitted (end-cap -> vertex -> start-cap path = 4.000 pt instead of 4.017). The se columns of the corrected values were updated; all other values, and the method counts in the comments above, are from the original extraction.
+feature_index,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_suppressed_state1_pct,binocular_suppressed_state1_se_pct,binocular_suppressed_state2_pct,binocular_suppressed_state2_se_pct
+1,76.13,62.97,-10.23,-15.62,0.22,59.99,0.13
+2,85.39,51.10,-19.89,-29.14,0.02,53.14,0.02
+3,85.82,61.80,-2.43,-21.22,0.15,60.43,0.04
+4,59.82,37.15,2.74,-21.26,0.23,32.25,0.04
+5,49.50,12.38,1.82,-9.73,0.02,16.70,0.04
+6,34.49,15.19,-3.87,-16.59,0.04,23.75,0.02
+7,31.44,17.98,17.32,-0.38,0.04,18.97,0.04
+8,40.18,20.51,-24.23,-18.54,0.21,19.59,0.04
+9,55.89,25.95,1.26,-26.27,0.04,12.77,0.02
+10,35.62,37.28,-16.94,-28.80,0.07,29.93,0.04
+11,38.11,6.04,-14.39,-20.51,0.04,12.31,0.04
+12,25.91,19.21,1.12,-7.59,0.04,13.83,0.03
+13,16.31,8.61,1.32,0.82,0.02,4.78,0.04
+14,41.96,21.33,0.30,-24.10,0.04,16.36,0.04
+15,-7.35,-13.49,-27.26,-36.93,0.04,-18.90,0.02
+16,15.26,14.70,-23.69,-24.24,0.04,4.38,0.04
+17,20.63,-3.19,-3.94,-5.94,0.02,6.02,0.04
+18,21.26,2.63,-5.74,-11.70,0.04,0.48,0.07
+19,9.37,1.44,-1.94,-0.38,0.12,1.84,0.04
+20,8.47,-2.72,6.22,5.08,0.04,5.38,0.07
+21,97.50,48.79,-46.64,-85.24,0.02,27.32,0.04
+22,97.53,48.29,-40.14,-80.32,0.13,25.60,0.04
+23,98.31,53.50,-48.62,-87.68,0.02,32.52,0.16
+24,87.06,59.53,15.66,-11.54,0.02,42.74,0.20
+25,95.87,59.33,-56.92,-88.98,0.04,42.67,0.31
+26,73.37,33.60,-47.03,-65.10,0.28,25.37,0.04
+27,84.07,57.01,-18.30,-44.98,0.04,43.98,0.04
+28,76.13,31.19,-0.71,-6.95,0.02,28.45,0.25
+29,75.93,32.54,-10.02,-27.64,0.04,21.66,0.04
+30,95.69,50.13,-34.12,-82.28,0.04,24.27,0.04
+31,59.46,16.49,-42.49,-41.95,0.01,4.70,0.02
+32,78.04,46.56,-51.30,-75.33,0.04,33.41,0.02
+33,77.30,32.99,-17.10,-31.37,0.04,24.99,0.04
+34,86.11,42.69,-25.94,-69.68,0.04,21.87,0.02
+35,71.71,29.71,-7.04,-34.67,0.02,15.28,0.04
+36,64.13,30.09,-43.51,-62.69,0.04,23.39,0.02
+37,83.33,31.59,-30.60,-55.59,0.01,18.78,0.04
+38,93.64,47.35,-45.63,-82.64,0.02,27.51,0.02
+39,94.18,46.31,-35.85,-78.70,0.04,24.29,0.04
+40,32.25,13.96,-2.79,-30.05,0.02,11.64,0.04
+41,68.49,29.26,-19.85,-37.56,0.04,22.35,0.09
+42,94.63,48.61,-38.76,-76.95,0.02,26.47,0.04
+43,68.16,23.91,-15.18,-40.92,0.01,6.78,0.02
+44,79.05,45.44,-40.88,-65.23,0.04,28.22,0.04
+45,72.20,30.18,-19.18,-51.51,0.04,15.23,0.04
+46,72.83,40.09,-34.50,-69.20,0.04,31.41,0.04
+47,65.60,36.76,-54.17,-67.22,0.07,35.26,0.02
+48,68.74,20.67,-22.35,-36.02,0.02,16.01,0.02
+49,93.66,54.74,-54.25,-90.99,0.02,33.84,0.04
+50,56.29,15.48,-13.30,-55.48,0.55,1.58,0.52

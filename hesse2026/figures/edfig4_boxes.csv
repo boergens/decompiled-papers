@@ -1,0 +1,14 @@
+# Extended Data Figure 4 (PDF page 44 of 2026.10.15.759299v1.full.pdf). Box plots of explained variance (%) per session.
+# Recovered from vector paths: boxes are single filled rectangles, median lines and whiskers are 1-pt strokes, points are 2.83-pt filled circles.
+# y axis calibrated from the 8 horizontal tick marks (0.5-pt filled rects) at values [-60, -40, -20, 0, 20, 40, 60, 80] (read off the render; labels are glyph outlines); max residual 2.25e-03 %.
+# x axis is categorical: category tick positions (pt) [74.62, 128.16, 181.7, 235.24, 288.78]; x_position = category_index + (x - tick)/category_spacing.
+# Dotted reference line at y=-0.000 % (0.70 opacity black, 556 tiny rects).
+# Precision: PDF coordinates are exact to ~0.01 pt = ~0.013 %; values rounded to 0.01 %.
+# Boxes: median and interquartile range across 9 sessions; whiskers: range (min/max of the 9 points; checked: whisker ends coincide with extreme points).
+# Quartiles match MATLAB boxplot/prctile convention ((k-0.5)/n) applied to the 9 points.
+category_index,condition,label,color_hex,box_fill_alpha,line_and_point_alpha,whisker_min_pct,q1_pct,median_pct,q3_pct,whisker_max_pct,box_width_category_units
+1,priming,Priming,#000000,0.502,1.0,33.17,44.92,57.58,66.73,69.34,0.6
+2,conscious_state1,Conscious State 1,#fcae34,0.502,1.0,6.4,7.56,10.84,20.2,22.65,0.6
+3,suppressed_state1,Suppressed State 1,#fcae34,0.176,0.349,-55.03,-42.58,-33.43,-29.94,-28.32,0.6
+4,conscious_state2,Conscious State 2,#543379,0.176,0.349,-37.0,-28.39,-23.04,-19.26,-12.57,0.6
+5,suppressed_state2,Suppressed State 2,#543379,0.502,1.0,-2.99,1.8,5.22,9.74,13.83,0.6

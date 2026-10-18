@@ -1,0 +1,30 @@
+# Fig. 10d: energy difference ΔE (kcal/mol) between the cases h_z = 45 Å and h_z = 0 Å at different loading
+# rates, grouped bars: pe (potential energy, orange), ke (kinetic energy, red), total (total energy, blue).
+# Columns: series; loading_rate_A_per_ps = category label printed under the group (category axis, not to
+# scale); bar_centre_px = bar centre column in the source image; delta_E_kcal_per_mol = bar top; flag.
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG (PDF page 15, middle image 1777 x 1486 px) by figures/fig10_extract.py with tools/f2_common.py.
+# Bar tops: edge row where the bar colour covers half of the bar's middle third (sub-pixel interpolation).
+# Uncertainty: about ±10 kcal/mol (one source pixel = 8.3 kcal/mol).
+# Calibration (linear least squares on tick marks): x: category axis (groups in printed order); y: major ticks at px 847.0, 907.0, 967.0, 1027.0, 1086.5, 1147.0, 1207.0, 1267.0 = 4000..500 kcal/mol plus frame rows 787 = 4500 and 1327 = 0 kcal/mol, max residual 3.74 kcal/mol; 1 px = 8.33 kcal/mol
+series,loading_rate_A_per_ps,bar_centre_px,delta_E_kcal_per_mol,flag
+pe,0.1,1073.5,2257.9,
+pe,0.25,1179.0,1916.2,
+pe,0.5,1283.5,1891.2,
+pe,0.75,1387.5,1707.9,
+pe,1.0,1493.5,1457.9,
+pe,1.5,1598.0,1599.6,
+pe,2.0,1702.5,1549.5,
+ke,0.1,1092.5,1932.9,
+ke,0.25,1197.5,1649.6,
+ke,0.5,1302.0,1266.2,
+ke,0.75,1407.0,1107.9,
+ke,1.0,1512.0,1007.9,
+ke,1.5,1616.5,1032.9,
+ke,2.0,1721.0,957.9,
+total,0.1,1111.5,4174.7,
+total,0.25,1216.5,3549.6,
+total,0.5,1321.0,3133.0,
+total,0.75,1426.0,2792.0,
+total,1.0,1530.5,2449.6,
+total,1.5,1635.5,2616.3,
+total,2.0,1740.0,2491.3,

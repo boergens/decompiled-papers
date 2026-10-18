@@ -1,0 +1,126 @@
+# Table 1 of Scheffer et al. 2020 (eLife 9:e57443), pp. 5-6: brain regions contained and defined in the hemibrain.
+# Caption: Table 1. Brain regions contained and defined in the hemibrain, following the naming conventions of Ito et al., 2014 with the addition of (R) and (L) to specify the side of the soma for that region. Italics indicate master regions not explicitly defined in the hemibrain. Region LA is not included in the volume. The regions are hierarchical, with the more indented regions forming subsets of the less indented. The only exceptions are dACA, lACA, and vACA which are considered part of the mushroom body but are not contained in the master region MB.
+# The printed table has three column pairs (abbreviation, name) side by side; block = which pair (1 left, 2 middle, 3 right),
+# rows are in printed order within each block. level = indentation (0 master region, 1, 2 sub-regions); italic = abbreviation printed
+# in italics (master regions not explicitly defined in the hemibrain). 'Major Fiber bundles' is a heading in block 3 with no abbreviation.
+# Transcribed from the PDF text layer and checked against the page images. Printed as in the PDF: 'a', 'b', 'g' for the mushroom-body
+# lobes (alpha, beta, gamma in the text), 'Medula', 'Rubu', 'prow', 'SMP(R)(L)', and FBl3 named 'Fan-shaped body layer 4'.
+block,abbreviation,name,level,italic
+1,OL(R),Optic lobe,0,no
+1,LA,lamina,1,yes
+1,ME(R),Medula,1,no
+1,AME(R),Accessory medulla,1,no
+1,LO(R),Lobula,1,no
+1,LOP(R),Lobula plate,1,no
+1,MB(R)/(L),Mushroom body,0,no
+1,CA(R)/(L),Calyx,1,no
+1,dACA(R),Dorsal accessory calyx,1,no
+1,lACA(R),Lateral accessory calyx,1,no
+1,vACA(R),Ventral accessory calyx,1,no
+1,PED(R),Pedunculus,1,no
+1,a’L(R)/(L),Alpha prime lobe,1,no
+1,a’1(R),Alpha prime lobe compartment 1,2,no
+1,a’2(R),Alpha prime lobe compartment 2,2,no
+1,a’3(R),Alpha prime lobe compartment 3,2,no
+1,aL(R)/(L),Alpha lobe,1,no
+1,a1(R),Alpha lobe compartment 1,2,no
+1,a2(R),Alpha lobe compartment 2,2,no
+1,a3(R),Alpha lobe compartment 3,2,no
+1,gL(R)/(L),Gamma lobe,1,no
+1,g1(R),Gamma lobe compartment 1,2,no
+1,g2(R),Gamma lobe compartment 2,2,no
+1,g3(R),Gamma lobe compartment 3,2,no
+1,g4(R),Gamma lobe compartment 4,2,no
+1,g5(R),Gamma lobe compartment 5,2,no
+1,b’L(R)/(L),Beta prime lobe,1,no
+1,b’1(R),Beta prime lobe compartment 1,2,no
+1,b’2(R),Beta prime lobe compartment 2,2,no
+1,bL(R)/(L),Beta lobe,1,no
+1,b1(R),Beta lobe compartment 1,2,no
+1,b2(R),Beta lobe compartment 2,2,no
+1,LX(R)/(L),Lateral complex,0,yes
+1,BU(R)/(L),Bulb,1,no
+1,LAL(R)/(L),Lateral accessory lobe,1,no
+1,GA(R),Gall,2,no
+1,VLNP(R),Ventrolateral neuropils,0,yes
+1,AOTU(R),Anterior optic tubercle,1,no
+1,AVLP(R),Anterior ventrolateral protocerebrum,1,no
+1,PVLP(R),Posterior ventrolateral protocerebrum,1,no
+1,PLP(R),Posterior lateral cerebrum,1,no
+1,WED(R),Wedge,1,no
+2,CX,Central complex,0,no
+2,FB,Fan-shaped body,1,no
+2,FBl1,Fan-shaped body layer 1,2,no
+2,FBl2,Fan-shaped body layer 2,2,no
+2,FBl3,Fan-shaped body layer 4,2,no
+2,FBl4,Fan-shaped body layer 4,2,no
+2,FBl5,Fan-shaped body layer 5,2,no
+2,FBl6,Fan-shaped body layer 6,2,no
+2,FBl7,Fan-shaped body layer 7,2,no
+2,FBl8,Fan-shaped body layer 8,2,no
+2,FBl9,Fan-shaped body layer 9,2,no
+2,EB,Ellipsoid body,1,no
+2,EBr1,Ellipsoid body zone r1,2,no
+2,EBr2r4,Ellipsoid body zone r2r4,2,no
+2,EBr3am,Ellipsoid body zone r3am,2,no
+2,EBr3d,Ellipsoid body zone r3d,2,no
+2,EBr3pw,Ellipsoid body zone r3pw,2,no
+2,EBr5,Ellipsoid body zone r5,2,no
+2,EBr6,Ellipsoid body zone r6,2,no
+2,AB(R)/(L),Asymmetrical body,1,no
+2,PB,Protocerebral bridge,1,no
+2,PB(R1),PB glomerulus R1,2,no
+2,PB(R2),PB glomerulus R2,2,no
+2,PB(R3),PB glomerulus R3,2,no
+2,PB(R4),PB glomerulus R4,2,no
+2,PB(R5),PB glomerulus R5,2,no
+2,PB(R6),PB glomerulus R6,2,no
+2,PB(R7),PB glomerulus R7,2,no
+2,PB(R8),PB glomerulus R8,2,no
+2,PB(R9),PB glomerulus R9,2,no
+2,PB(L1),PB glomerulus L1,2,no
+2,PB(L2),PB glomerulus L2,2,no
+2,PB(L3),PB glomerulus L3,2,no
+2,PB(L4),PB glomerulus L4,2,no
+2,PB(L5),PB glomerulus L5,2,no
+2,PB(L6),PB glomerulus L6,2,no
+2,PB(L7),PB glomerulus L7,2,no
+2,PB(L8),PB glomerulus L8,2,no
+2,PB(L9),PB glomerulus L9,2,no
+2,NO,Noduli,1,no
+2,NO1(R)/(L),Nodulus 1,2,no
+2,NO2(R)/(L),Nodulus 2,2,no
+2,NO3(R)/(L),Nodulus 3,2,no
+3,LH(R),Lateral horn,0,no
+3,SNP(R)/(L),Superior neuropils,0,yes
+3,SLP(R),Superior lateral protocerebrum,1,no
+3,SIP(R)/(L),Superior intermediate protocerebrum,1,no
+3,SMP(R)(L),Superior medial protocerebrum,1,no
+3,INP,Inferior neuropils,0,yes
+3,CRE(R)/(L),Crepine,1,no
+3,RUB(R)/(L),Rubu,2,no
+3,ROB(R),Round body,2,no
+3,SCL(R)/(L),Superior clamp,1,no
+3,ICL(R)/(L),Inferior clamp,1,no
+3,IB,Inferior bridge,1,no
+3,ATL(R)/(L),Antler,1,no
+3,AL(R)/(L),Antennal lobe,0,no
+3,VMNP,Ventromedial neuropils,0,yes
+3,VES(R)/(L),Vest,1,no
+3,EPA(R)/(L),Epaulette,1,no
+3,GOR(R)/(L),Gorget,1,no
+3,SPS(R)/(L),Superior posterior slope,1,no
+3,IPS(R)/(L),Inferior posterior slope,1,no
+3,PENP,Pariesophageal neuropils,0,yes
+3,SAD,Saddle,1,no
+3,AMMC,Antennal mechanosensory and motor center,2,no
+3,FLA(R),Flange,1,no
+3,CAN(R),Cantle,1,no
+3,PRW,prow,1,no
+3,GNG,Gnathal ganglia,0,no
+3,Major Fiber bundles,,0,no
+3,AOT(R),Anterior optic tract,1,no
+3,GC,Great commissure,1,no
+3,GF(R),Giant Fiber (single neuron),1,no
+3,mALT(R)/(L),Medial antennal lobe tract,1,no
+3,POC,Posterior optic commissure,1,no

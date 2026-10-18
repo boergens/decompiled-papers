@@ -1,0 +1,20 @@
+# Wei et al. 2025, TABLE 2 (p. 10): "Reduced modulus (Er), Young's modulus (E), and indentation hardness (H) of epoxy resin in this work and similar materials (various epoxy resin composites) in previous studies."
+# Footnote: AGE, allyl glycidyl ether; CNF, carbon nanofiber; D230, Jeffamine D230; DETDA, diethyltoluenediamine; DGEBA, diglycidyl ether of bisphenol A; EPON862, bisphenol F diglycidyl ether; GMA, glycidyl methacrylate; mPDA, m-phenylenediamine; TEPA, tetraethylenepentamine; TETA, triethylenetetramine.
+# Columns: species (Er = reduced modulus, E = Young's modulus, H = indentation hardness), methods, value_GPa (printed text, kept as text because cells hold ranges and several values), notes (verbatim, with the paper's reference numbers).
+# The printed table leaves the Species and Methods cells blank under the first row of each group (merged cells); they are filled down here.
+species,methods,value_GPa,notes
+Er,MD results in this work,1.84–6.17,Epoxy resin at the loading rate of 1.0 Å/ps under various indenter
+Er,Nanoindentation experiments in previous works,4.78–5.35,Epoxy resin at different loading rates of 0.25–6.0 mN/s [44]
+Er,Nanoindentation experiments in previous works,1.5–7.5,Nanoclay/epoxy composite at 40°C [25]
+Er,Nanoindentation experiments in previous works,4.0–7.1,Epoxy composite with 0%–5% CNF [46]
+E,MD results in this work,1.58–5.29,Calculated by Equation (13)
+E,Various experiments in previous works,2.21–2.72,"DGEBA epoxy networks (containing DGEBA/D230, DGEBA/TETA, DGEBA/TEPA) through dynamic mechanical analysis experiments [47]"
+E,Various experiments in previous works,"3.5 (unmodified epoxy resin), 3.85 (epoxy + 8.5% nanofiller)",A DGEBA-based epoxy resin through the tensile test [4]
+E,Various experiments in previous works,2.83,Matrix epoxy Epon 862 [48]
+E,Various experiments in previous works,"3.441–4.601 (DGEBA/AGE), 3.441–6.293 (DGEBA/GMA)",Epoxy resin composite by ultrasonic velocity Measurement [49]
+E,Various experiments in previous works,"3.3 ± 0.12 (uniaxial tension), 3.9 ± 0.12 (nanoindentation)",Epoxy resin through uniaxial tension and nanoindentation test [26]
+E,Various experiments in previous works,"3.76 (0 wt%), 3.49 (0.5 wt%), 3.47 (1.0 wt%)",Epoxy resin with 0.78 wt% polyaniline added by 0–1.0 wt% ZnO nanoparticles using nanoindentation test [50]
+H,MD results in this work,1.90–2.04,See Figure 10d
+H,Nanoindentation experiments in previous works,0.26–0.67,"Epoxy composite with 0%–5% CNF [26, 44, 46]"
+H,Nanoindentation experiments in previous works,0.26–0.276,Epoxy resin at different loading rates of 0.25–6.0 mN/s [44]
+H,Nanoindentation experiments in previous works,0.256–0.318,Epoxy reinforced nanocomposites with fumed silica of 0%–3% [26]

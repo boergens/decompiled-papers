@@ -1,0 +1,5 @@
+# Table 3. Free volume of the epoxy system.
+# Fu et al. 2019, Polymers 11, 975, p. 9.
+Epoxy System,Vf (Å3),Vtotal (Å3),FFV (%)
+DGEBA/MTHPA,1616.96 ± 67.88,9697.1 ± 66.52,16.67 ± 0.59
+DGEBA/NA,1285.69 ± 42.66,9067.72 ± 35.84,14.18 ± 0.43

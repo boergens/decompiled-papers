@@ -1,0 +1,54 @@
+# Extended Data Figure 4 (PDF page 44 of 2026.10.15.759299v1.full.pdf). Box plots of explained variance (%) per session.
+# Recovered from vector paths: boxes are single filled rectangles, median lines and whiskers are 1-pt strokes, points are 2.83-pt filled circles.
+# y axis calibrated from the 8 horizontal tick marks (0.5-pt filled rects) at values [-60, -40, -20, 0, 20, 40, 60, 80] (read off the render; labels are glyph outlines); max residual 2.25e-03 %.
+# x axis is categorical: category tick positions (pt) [74.62, 128.16, 181.7, 235.24, 288.78]; x_position = category_index + (x - tick)/category_spacing.
+# Dotted reference line at y=-0.000 % (0.70 opacity black, 556 tiny rects).
+# Precision: PDF coordinates are exact to ~0.01 pt = ~0.013 %; values rounded to 0.01 %.
+# One row per session point (9 per condition), sorted ascending by value within a condition; x_position preserves the original horizontal jitter.
+# Session identity is not recoverable from the figure (points are not labelled).
+category_index,condition,point_rank_ascending,x_position,explained_variance_pct,color_hex,alpha,marker_diameter_pt
+1,priming,1,0.9009,33.17,#000000,1.0,2.84
+1,priming,2,1.0224,34.9,#000000,1.0,2.84
+1,priming,3,1.106,48.26,#000000,1.0,2.84
+1,priming,4,0.9005,49.74,#000000,1.0,2.84
+1,priming,5,1.004,57.57,#000000,1.0,2.84
+1,priming,6,1.04,58.58,#000000,1.0,2.84
+1,priming,7,0.9,66.62,#000000,1.0,2.83
+1,priming,8,1.0827,67.06,#000000,1.0,2.84
+1,priming,9,1.0383,69.35,#000000,1.0,2.84
+2,conscious_state1,1,2.1054,6.4,#fcae34,1.0,2.84
+2,conscious_state1,2,2.0454,6.98,#fcae34,1.0,2.84
+2,conscious_state1,3,1.8985,7.75,#fcae34,1.0,2.84
+2,conscious_state1,4,2.0432,8.45,#fcae34,1.0,2.84
+2,conscious_state1,5,1.9542,10.84,#fcae34,1.0,2.84
+2,conscious_state1,6,2.1036,16.75,#fcae34,1.0,2.83
+2,conscious_state1,7,2.0571,19.93,#fcae34,1.0,2.84
+2,conscious_state1,8,1.916,21.01,#fcae34,1.0,2.84
+2,conscious_state1,9,1.9006,22.65,#fcae34,1.0,2.84
+3,suppressed_state1,1,2.9255,-55.03,#fcae34,0.349,2.84
+3,suppressed_state1,2,3.1088,-44.03,#fcae34,0.349,2.84
+3,suppressed_state1,3,3.0541,-42.1,#fcae34,0.349,2.84
+3,suppressed_state1,4,3.0608,-39.04,#fcae34,0.349,2.84
+3,suppressed_state1,5,2.9551,-33.43,#fcae34,0.349,2.84
+3,suppressed_state1,6,2.9784,-30.34,#fcae34,0.349,2.84
+3,suppressed_state1,7,2.9624,-30.02,#fcae34,0.349,2.84
+3,suppressed_state1,8,3.0655,-29.71,#fcae34,0.349,2.84
+3,suppressed_state1,9,2.9154,-28.32,#fcae34,0.349,2.84
+4,conscious_state2,1,4.0049,-37.0,#543379,0.349,2.83
+4,conscious_state2,2,4.0773,-35.39,#543379,0.349,2.84
+4,conscious_state2,3,4.0134,-26.06,#543379,0.349,2.84
+4,conscious_state2,4,4.0091,-25.82,#543379,0.349,2.84
+4,conscious_state2,5,3.9114,-23.04,#543379,0.349,2.83
+4,conscious_state2,6,3.9817,-20.78,#543379,0.349,2.84
+4,conscious_state2,7,3.948,-20.61,#543379,0.349,2.84
+4,conscious_state2,8,4.0208,-15.2,#543379,0.349,2.83
+4,conscious_state2,9,4.0947,-12.57,#543379,0.349,2.84
+5,suppressed_state2,1,4.9116,-2.99,#543379,1.0,2.84
+5,suppressed_state2,2,5.0372,0.66,#543379,1.0,2.84
+5,suppressed_state2,3,5.0897,2.18,#543379,1.0,2.84
+5,suppressed_state2,4,4.9559,4.87,#543379,1.0,2.84
+5,suppressed_state2,5,5.0869,5.22,#543379,1.0,2.84
+5,suppressed_state2,6,4.8993,8.35,#543379,1.0,2.84
+5,suppressed_state2,7,5.0439,8.76,#543379,1.0,2.84
+5,suppressed_state2,8,4.9469,12.67,#543379,1.0,2.84
+5,suppressed_state2,9,5.0364,13.82,#543379,1.0,2.84

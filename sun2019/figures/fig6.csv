@@ -1,0 +1,22 @@
+# Sun & Gamstedt 2019, Nanomanuf Metrol 2:45-55, Fig. 6: chip thickness and shear plane angle as a function of
+#   the cutting speed (t_u = 85 nm per Sect. 3.2.1).
+# Columns: series (paper's labels: 'chip thickness' = filled circles, solid line, left axis; 'shear plane angle' =
+#   filled squares, dashed line, right axis); cutting_speed_mm_s = marker centre on the linear x axis (the
+#   nominal speeds of Table 1 are 0.25, 0.5, 1.0, 3.0, 10.0 mm/s); value = chip thickness in nm or shear plane
+#   angle in degrees.
+# Provenance: tier 3, digitized from the embedded 300 ppi greyscale raster (no vector data in the PDF) by
+#   fig6_extract.py: linear fits on the tick marks and frames (x residual 0.004 mm/s, left 0.008 nm,
+#   right 0.014 deg); marker centres from connected components after a 9 px opening.
+# Uncertainty: about +-0.028 mm/s, +-0.05 nm, +-0.06 deg (2 px). The circle at
+#   3 mm/s lies close below the square and is crossed by both lines; its centre may be off by ~1 px more.
+series,cutting_speed_mm_s,value
+chip thickness,0.243,87.00
+chip thickness,0.498,93.00
+chip thickness,1.001,97.98
+chip thickness,2.999,92.02
+chip thickness,10.017,96.00
+shear plane angle,0.241,63.59
+shear plane angle,0.499,59.51
+shear plane angle,0.995,56.33
+shear plane angle,3.000,60.16
+shear plane angle,10.003,57.56

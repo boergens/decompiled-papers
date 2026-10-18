@@ -1,0 +1,669 @@
+# Yin et al. 2020 Nat. Commun. 11:4949, Fig. 4g: 'Example of stage step-and-settle time distribution for GridStage'.
+# x axis 'Stage step and settle time (s)' 0.00-0.18, y axis 'Counts' 0-40, both linear.
+# Two series: 'bars' = histogram bars (light purple with dark outlines); 'fit_curve' = the thick blue curve drawn over
+#   them (the paper does not say what function it is).
+# Columns: series; x_s = bin left edge (bars) or curve abscissa (fit_curve), s; x_right_s, x_centre_s = bin right edge
+#   and centre (bars only); y_counts = bar height or curve height in Counts as read; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG (no vector data in the PDF; tick labels are PDF text) by
+#   fig4g_extract.py. Calibration: linear fit on the frame (x 0.00 and 0.18, y 0 and 40) and the inward tick marks
+#   (8 x ticks along the top frame, 7 y ticks averaged left/right); max residual 0.0003 s and 0.08 counts (the 35 tick
+#   sits about 2 px lower than the even spacing of the others).
+# Bins: 21 bins of 11.95 px = 0.00282 s on a regular grid fitted to 15 dark vertical bar
+#   outlines (max deviation 1.3 px). Bar top = the topmost horizontal grey outline (seen in >= 2 adjacent pixel
+#   columns, light background above, bar fill below). Where the thick curve covers the whole bar top, the centre of the
+#   curve band is given and the note gives the range the top can lie in. Bars too low to see under the curve where it
+#   runs along the baseline (x < ~0.075 s and x > ~0.14 s) are not listed.
+# Uncertainty: x about +-0.0002 s (1 px); visible bar tops about +-0.16 counts (2 px). The bar heights are
+#   not all close to whole numbers (e.g. ~26.6 at 0.0924 s), so they are given as read, not rounded.
+#   Curve: centre of the blue line, about +-0.3 counts (the line is ~8-10 px thick); on the steep flanks one pixel
+#   column spans many rows (flagged 'steep').
+# Sum of the bar heights as read: 354.5.
+series,x_s,x_right_s,x_centre_s,y_counts,note
+bars,0.07699,0.07980,0.07839,0.98,
+bars,0.07980,0.08262,0.08121,3.26,
+bars,0.08262,0.08544,0.08403,6.88,
+bars,0.08544,0.08826,0.08685,11.99,
+bars,0.08826,0.09107,0.08967,19.07,
+bars,0.09107,0.09389,0.09248,26.62,
+bars,0.09389,0.09671,0.09530,35.89,
+bars,0.09671,0.09953,0.09812,37.86,
+bars,0.09953,0.10235,0.10094,38.80,
+bars,0.10235,0.10516,0.10376,38.96,
+bars,0.10516,0.10798,0.10657,33.61,
+bars,0.10798,0.11080,0.10939,28.35,
+bars,0.11080,0.11362,0.11221,22.29,
+bars,0.11362,0.11644,0.11503,16.63,
+bars,0.11644,0.11925,0.11784,10.97,
+bars,0.11925,0.12207,0.12066,8.53,
+bars,0.12207,0.12489,0.12348,5.62,
+bars,0.12489,0.12771,0.12630,3.54,"top hidden under the curve: curve band centre given, bar top between 3.3 and 3.7 counts"
+bars,0.12771,0.13052,0.12912,1.97,"top hidden under the curve: curve band centre given, bar top between 1.8 and 2.1 counts"
+bars,0.13052,0.13334,0.13193,1.53,
+bars,0.13334,0.13616,0.13475,1.14,
+fit_curve,0.01638,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01662,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01685,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01709,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01733,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01756,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01780,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01803,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01827,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01851,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01874,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01898,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01921,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01945,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.01968,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.01992,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.02016,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.02039,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.02063,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02086,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02110,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02134,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02157,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02181,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02204,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02228,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02251,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02275,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02299,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02322,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02346,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02369,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02393,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02417,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02440,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02464,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02487,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02511,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02534,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02558,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02582,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02605,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02629,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02652,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02676,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02700,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02723,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02747,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02770,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02794,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02817,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02841,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02865,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02888,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02912,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02935,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02959,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.02983,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03006,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03030,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03053,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03077,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03100,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03124,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03148,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03171,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03195,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03218,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03242,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03266,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03289,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03313,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03336,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03360,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03384,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03407,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03431,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03454,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03478,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03501,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03525,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03549,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03572,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03596,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03619,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03643,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03667,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03690,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03714,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03737,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03761,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03784,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03808,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03832,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03855,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03879,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03902,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03926,,,0.04,"tail on the baseline, merged with the frame line"
+fit_curve,0.03950,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.03973,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.03997,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.04020,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04044,,,0.04,"tail on the baseline, merged with the frame line"
+fit_curve,0.04067,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04091,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04115,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04138,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04162,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04185,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04209,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04233,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04256,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04280,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04303,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04327,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04350,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04374,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04398,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04421,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04445,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04468,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04492,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04516,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04539,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04563,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04586,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04610,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04633,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04657,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04681,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04704,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04728,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04751,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04775,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04799,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04822,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04846,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04869,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04893,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04916,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04940,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04964,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.04987,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05011,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05034,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05058,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05082,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05105,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05129,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05152,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05176,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05199,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05223,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05247,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05270,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05294,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05317,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05341,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05365,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05388,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05412,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05435,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05459,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05482,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05506,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05530,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05553,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05577,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05600,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05624,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05648,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05671,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05695,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05718,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05742,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05765,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05789,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05813,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05836,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05860,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05883,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05907,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05931,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05954,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.05978,,,0.04,"tail on the baseline, merged with the frame line"
+fit_curve,0.06001,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.06025,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.06048,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.06072,,,0.04,"tail on the baseline, merged with the frame line"
+fit_curve,0.06096,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06119,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06143,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06166,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06190,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06214,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06237,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06261,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06284,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06308,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06331,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06355,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06379,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06402,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06426,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06449,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06473,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06497,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06520,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06544,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06567,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06591,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06614,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06638,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06662,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06685,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06709,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06732,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06756,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06780,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06803,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06827,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06850,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06874,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06897,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06921,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06945,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06968,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.06992,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07015,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07039,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07063,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07086,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07110,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07133,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07157,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07181,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07204,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07228,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07251,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07275,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07298,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07322,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.07346,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.07369,,,0.16,"tail on the baseline, merged with the frame line"
+fit_curve,0.07393,,,0.35,
+fit_curve,0.07416,,,0.32,
+fit_curve,0.07440,,,0.32,
+fit_curve,0.07464,,,0.32,
+fit_curve,0.07487,,,0.32,
+fit_curve,0.07511,,,0.32,
+fit_curve,0.07534,,,0.35,
+fit_curve,0.07558,,,0.39,
+fit_curve,0.07581,,,0.43,
+fit_curve,0.07605,,,0.43,
+fit_curve,0.07629,,,0.47,
+fit_curve,0.07652,,,0.51,
+fit_curve,0.07676,,,0.63,
+fit_curve,0.07699,,,0.67,
+fit_curve,0.07723,,,0.79,
+fit_curve,0.07747,,,0.87,
+fit_curve,0.07770,,,0.98,
+fit_curve,0.07794,,,1.06,
+fit_curve,0.07817,,,1.26,
+fit_curve,0.07841,,,1.38,
+fit_curve,0.07864,,,1.46,
+fit_curve,0.07912,,,1.85,
+fit_curve,0.07935,,,1.93,
+fit_curve,0.07959,,,2.16,
+fit_curve,0.07982,,,2.36,
+fit_curve,0.08006,,,2.63,
+fit_curve,0.08030,,,2.79,
+fit_curve,0.08053,,,3.03,
+fit_curve,0.08077,,,3.07,
+fit_curve,0.08100,,,3.46,
+fit_curve,0.08124,,,3.74,
+fit_curve,0.08147,,,4.13,
+fit_curve,0.08171,,,4.33,
+fit_curve,0.08195,,,4.48,
+fit_curve,0.08218,,,4.98,
+fit_curve,0.08242,,,5.11,
+fit_curve,0.08265,,,5.54,steep (run 13 px)
+fit_curve,0.08289,,,5.99,steep (run 18 px)
+fit_curve,0.08313,,,6.33,steep (run 13 px)
+fit_curve,0.08336,,,6.45,
+fit_curve,0.08360,,,6.53,
+fit_curve,0.08383,,,7.39,
+fit_curve,0.08407,,,7.51,
+fit_curve,0.08430,,,8.18,
+fit_curve,0.08454,,,8.41,
+fit_curve,0.08478,,,9.12,
+fit_curve,0.08501,,,9.32,
+fit_curve,0.08525,,,9.59,steep (run 18 px)
+fit_curve,0.08548,,,10.42,steep (run 25 px)
+fit_curve,0.08572,,,10.54,steep (run 24 px)
+fit_curve,0.08596,,,11.32,steep (run 20 px)
+fit_curve,0.08619,,,11.44,steep (run 19 px)
+fit_curve,0.08643,,,12.27,steep (run 14 px)
+fit_curve,0.08666,,,12.65,steep (run 16 px)
+fit_curve,0.08690,,,13.56,steep (run 15 px)
+fit_curve,0.08713,,,13.92,
+fit_curve,0.08737,,,13.88,
+fit_curve,0.08761,,,15.14,steep (run 13 px)
+fit_curve,0.08784,,,15.52,steep (run 23 px)
+fit_curve,0.08808,,,16.00,steep (run 23 px)
+fit_curve,0.08831,,,16.39,steep (run 27 px)
+fit_curve,0.08855,,,17.42,steep (run 21 px)
+fit_curve,0.08879,,,17.61,steep (run 22 px)
+fit_curve,0.08902,,,18.32,steep (run 20 px)
+fit_curve,0.08926,,,18.63,steep (run 20 px)
+fit_curve,0.08949,,,18.91,steep (run 19 px)
+fit_curve,0.08973,,,20.00,steep (run 15 px)
+fit_curve,0.08996,,,20.36,
+fit_curve,0.09020,,,21.27,steep (run 13 px)
+fit_curve,0.09044,,,21.47,steep (run 18 px)
+fit_curve,0.09067,,,22.45,steep (run 25 px)
+fit_curve,0.09091,,,22.84,steep (run 29 px)
+fit_curve,0.09114,,,23.73,steep (run 41 px)
+fit_curve,0.09138,,,24.26,steep (run 27 px)
+fit_curve,0.09162,,,24.69,steep (run 30 px)
+fit_curve,0.09185,,,25.59,steep (run 25 px)
+fit_curve,0.09209,,,25.95,steep (run 26 px)
+fit_curve,0.09232,,,27.17,steep (run 25 px)
+fit_curve,0.09256,,,27.72,steep (run 21 px)
+fit_curve,0.09279,,,28.23,steep (run 16 px)
+fit_curve,0.09303,,,29.25,
+fit_curve,0.09327,,,30.55,
+fit_curve,0.09350,,,30.90,steep (run 16 px)
+fit_curve,0.09374,,,31.06,steep (run 20 px)
+fit_curve,0.09397,,,32.20,steep (run 27 px)
+fit_curve,0.09421,,,32.63,steep (run 28 px)
+fit_curve,0.09445,,,33.65,steep (run 28 px)
+fit_curve,0.09468,,,33.89,steep (run 24 px)
+fit_curve,0.09492,,,34.44,steep (run 26 px)
+fit_curve,0.09515,,,35.03,steep (run 21 px)
+fit_curve,0.09539,,,35.30,steep (run 18 px)
+fit_curve,0.09562,,,35.81,steep (run 15 px)
+fit_curve,0.09586,,,35.81,
+fit_curve,0.09610,,,35.81,
+fit_curve,0.09633,,,36.84,
+fit_curve,0.09657,,,37.10,
+fit_curve,0.09680,,,37.35,
+fit_curve,0.09704,,,37.47,
+fit_curve,0.09728,,,37.70,
+fit_curve,0.09751,,,37.82,
+fit_curve,0.09775,,,37.98,
+fit_curve,0.09798,,,38.21,
+fit_curve,0.09845,,,38.53,
+fit_curve,0.09869,,,38.68,
+fit_curve,0.09893,,,38.76,
+fit_curve,0.09916,,,38.80,
+fit_curve,0.09940,,,38.92,
+fit_curve,0.09963,,,38.96,
+fit_curve,0.09987,,,39.12,
+fit_curve,0.10011,,,39.16,
+fit_curve,0.10034,,,39.23,
+fit_curve,0.10058,,,39.23,
+fit_curve,0.10081,,,39.23,
+fit_curve,0.10105,,,39.23,
+fit_curve,0.10128,,,39.16,
+fit_curve,0.10152,,,39.08,
+fit_curve,0.10176,,,39.04,
+fit_curve,0.10199,,,38.88,
+fit_curve,0.10223,,,38.84,
+fit_curve,0.10246,,,38.80,
+fit_curve,0.10270,,,38.57,
+fit_curve,0.10294,,,38.41,
+fit_curve,0.10317,,,38.17,
+fit_curve,0.10341,,,38.06,
+fit_curve,0.10364,,,37.62,steep (run 13 px)
+fit_curve,0.10388,,,37.51,
+fit_curve,0.10411,,,37.03,steep (run 18 px)
+fit_curve,0.10435,,,36.80,steep (run 14 px)
+fit_curve,0.10459,,,36.21,steep (run 17 px)
+fit_curve,0.10482,,,35.97,steep (run 15 px)
+fit_curve,0.10506,,,35.89,steep (run 17 px)
+fit_curve,0.10529,,,35.81,
+fit_curve,0.10553,,,34.64,
+fit_curve,0.10577,,,34.60,
+fit_curve,0.10600,,,34.56,
+fit_curve,0.10624,,,33.26,
+fit_curve,0.10647,,,33.18,
+fit_curve,0.10671,,,32.98,steep (run 15 px)
+fit_curve,0.10695,,,32.47,steep (run 16 px)
+fit_curve,0.10718,,,32.16,
+fit_curve,0.10742,,,31.65,steep (run 17 px)
+fit_curve,0.10765,,,31.49,steep (run 17 px)
+fit_curve,0.10789,,,31.41,steep (run 15 px)
+fit_curve,0.10812,,,31.37,
+fit_curve,0.10836,,,30.08,
+fit_curve,0.10883,,,28.19,
+fit_curve,0.10907,,,28.07,
+fit_curve,0.10930,,,27.91,
+fit_curve,0.10954,,,27.40,steep (run 23 px)
+fit_curve,0.10978,,,27.21,steep (run 20 px)
+fit_curve,0.11001,,,26.30,steep (run 19 px)
+fit_curve,0.11025,,,26.07,steep (run 21 px)
+fit_curve,0.11048,,,25.91,steep (run 23 px)
+fit_curve,0.11072,,,26.10,
+fit_curve,0.11095,,,24.26,
+fit_curve,0.11119,,,24.22,
+fit_curve,0.11143,,,22.29,
+fit_curve,0.11166,,,22.06,
+fit_curve,0.11190,,,21.98,
+fit_curve,0.11213,,,21.78,
+fit_curve,0.11237,,,21.35,steep (run 21 px)
+fit_curve,0.11261,,,20.72,steep (run 13 px)
+fit_curve,0.11284,,,20.09,steep (run 21 px)
+fit_curve,0.11308,,,19.93,steep (run 23 px)
+fit_curve,0.11331,,,19.38,steep (run 33 px)
+fit_curve,0.11355,,,18.28,
+fit_curve,0.11378,,,18.16,
+fit_curve,0.11402,,,18.20,
+fit_curve,0.11449,,,16.32,
+fit_curve,0.11473,,,16.16,
+fit_curve,0.11496,,,15.73,steep (run 18 px)
+fit_curve,0.11520,,,15.65,steep (run 20 px)
+fit_curve,0.11544,,,14.86,steep (run 18 px)
+fit_curve,0.11567,,,14.43,steep (run 13 px)
+fit_curve,0.11591,,,14.04,steep (run 13 px)
+fit_curve,0.11614,,,13.76,steep (run 16 px)
+fit_curve,0.11638,,,13.48,steep (run 23 px)
+fit_curve,0.11661,,,12.84,steep (run 17 px)
+fit_curve,0.11685,,,12.31,
+fit_curve,0.11709,,,12.27,
+fit_curve,0.11732,,,11.68,
+fit_curve,0.11756,,,11.44,
+fit_curve,0.11779,,,10.93,
+fit_curve,0.11803,,,10.65,
+fit_curve,0.11827,,,10.54,
+fit_curve,0.11850,,,10.18,
+fit_curve,0.11874,,,9.99,
+fit_curve,0.11897,,,9.83,
+fit_curve,0.11921,,,9.51,steep (run 14 px)
+fit_curve,0.11944,,,9.17,steep (run 13 px)
+fit_curve,0.11968,,,8.92,
+fit_curve,0.11992,,,8.81,
+fit_curve,0.12015,,,8.57,
+fit_curve,0.12039,,,8.33,
+fit_curve,0.12062,,,8.14,
+fit_curve,0.12086,,,7.90,
+fit_curve,0.12110,,,7.78,
+fit_curve,0.12133,,,7.43,
+fit_curve,0.12157,,,7.35,
+fit_curve,0.12180,,,7.16,steep (run 14 px)
+fit_curve,0.12204,,,6.80,
+fit_curve,0.12227,,,6.53,
+fit_curve,0.12251,,,6.49,
+fit_curve,0.12275,,,6.17,
+fit_curve,0.12322,,,5.58,
+fit_curve,0.12345,,,5.47,
+fit_curve,0.12369,,,5.39,
+fit_curve,0.12393,,,5.19,
+fit_curve,0.12416,,,5.03,
+fit_curve,0.12440,,,4.80,
+fit_curve,0.12463,,,4.64,
+fit_curve,0.12487,,,4.52,
+fit_curve,0.12510,,,4.25,
+fit_curve,0.12534,,,4.17,
+fit_curve,0.12558,,,3.85,
+fit_curve,0.12581,,,3.74,
+fit_curve,0.12605,,,3.62,
+fit_curve,0.12628,,,3.54,
+fit_curve,0.12652,,,3.38,
+fit_curve,0.12676,,,3.22,
+fit_curve,0.12699,,,3.11,
+fit_curve,0.12723,,,3.03,
+fit_curve,0.12746,,,2.87,
+fit_curve,0.12770,,,2.67,
+fit_curve,0.12793,,,2.60,
+fit_curve,0.12817,,,2.52,
+fit_curve,0.12841,,,2.36,
+fit_curve,0.12864,,,2.18,
+fit_curve,0.12888,,,2.08,
+fit_curve,0.12911,,,1.97,
+fit_curve,0.12935,,,1.97,
+fit_curve,0.12959,,,1.89,
+fit_curve,0.12982,,,1.81,
+fit_curve,0.13006,,,1.77,
+fit_curve,0.13029,,,1.69,
+fit_curve,0.13053,,,1.61,
+fit_curve,0.13076,,,1.57,
+fit_curve,0.13100,,,1.53,
+fit_curve,0.13124,,,1.49,
+fit_curve,0.13147,,,1.46,
+fit_curve,0.13218,,,1.30,
+fit_curve,0.13242,,,1.26,
+fit_curve,0.13265,,,1.22,
+fit_curve,0.13289,,,1.18,
+fit_curve,0.13312,,,1.14,
+fit_curve,0.13336,,,1.18,
+fit_curve,0.13359,,,1.02,
+fit_curve,0.13383,,,1.06,
+fit_curve,0.13407,,,1.06,
+fit_curve,0.13430,,,1.02,
+fit_curve,0.13454,,,1.02,
+fit_curve,0.13477,,,1.02,
+fit_curve,0.13501,,,1.02,
+fit_curve,0.13525,,,0.98,
+fit_curve,0.13548,,,0.94,
+fit_curve,0.13572,,,0.94,
+fit_curve,0.13595,,,0.87,
+fit_curve,0.13619,,,0.83,
+fit_curve,0.13642,,,0.83,
+fit_curve,0.13666,,,0.75,
+fit_curve,0.13690,,,0.67,
+fit_curve,0.13713,,,0.63,
+fit_curve,0.13737,,,0.63,
+fit_curve,0.13760,,,0.55,
+fit_curve,0.13784,,,0.51,
+fit_curve,0.13808,,,0.51,
+fit_curve,0.13831,,,0.43,
+fit_curve,0.13855,,,0.47,
+fit_curve,0.13878,,,0.43,
+fit_curve,0.13902,,,0.39,
+fit_curve,0.13925,,,0.43,
+fit_curve,0.13949,,,0.47,
+fit_curve,0.13973,,,0.51,
+fit_curve,0.13996,,,0.16,"tail on the baseline, merged with the frame line"
+fit_curve,0.14020,,,0.16,"tail on the baseline, merged with the frame line"
+fit_curve,0.14043,,,0.28,
+fit_curve,0.14067,,,0.28,
+fit_curve,0.14091,,,0.32,
+fit_curve,0.14114,,,0.32,
+fit_curve,0.14138,,,0.32,
+fit_curve,0.14161,,,0.32,
+fit_curve,0.14185,,,0.32,
+fit_curve,0.14208,,,0.32,
+fit_curve,0.14232,,,0.32,
+fit_curve,0.14256,,,0.32,
+fit_curve,0.14279,,,0.32,
+fit_curve,0.14303,,,0.32,
+fit_curve,0.14326,,,0.32,
+fit_curve,0.14350,,,0.32,
+fit_curve,0.14374,,,0.32,
+fit_curve,0.14397,,,0.32,
+fit_curve,0.14421,,,0.32,
+fit_curve,0.14444,,,0.32,
+fit_curve,0.14468,,,0.32,
+fit_curve,0.14492,,,0.28,
+fit_curve,0.14515,,,0.28,
+fit_curve,0.14539,,,0.28,
+fit_curve,0.14562,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.14586,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.14609,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.14633,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.14657,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14680,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14704,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14727,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14751,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14775,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14798,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14822,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14845,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14869,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14892,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14916,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14940,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14963,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.14987,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15010,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15034,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15058,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15081,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15105,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15128,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15152,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15175,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15199,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15223,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15246,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15270,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15293,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15317,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15341,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15364,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15388,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15411,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15435,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15458,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15482,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15506,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15529,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15553,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15576,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15600,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15624,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15647,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15671,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15694,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15718,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15741,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15765,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15789,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15812,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15836,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15859,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15883,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15907,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15930,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15954,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.15977,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.16001,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.16024,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.16048,,,0.12,"tail on the baseline, merged with the frame line"
+fit_curve,0.16072,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16095,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16119,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16142,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16166,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16190,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16213,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16237,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16260,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16284,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16307,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16331,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16355,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16378,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16402,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16425,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16449,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16473,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16496,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16520,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16543,,,0.08,"tail on the baseline, merged with the frame line"
+fit_curve,0.16567,,,0.04,"tail on the baseline, merged with the frame line"

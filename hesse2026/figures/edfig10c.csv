@@ -1,0 +1,24 @@
+# source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 10, PDF page 50 (vector graphics; bars, error bars and in-bar labels are drawn inside form XObjects), panel c
+# Conscious-face reconstruction explained variance in state 1 (%) vs achieved mean HMM dwell time (ms), for the recorded data (red #cc2929) and the averaging model (blue #2970bf)
+# point coordinates from the 9-vertex stroke polylines (markers coincide to < 0.05 pt); self_transition_p = the label printed next to each point, transcribed by eye from a 300-dpi render (9 labels per series found as glyph outlines, one per point, in the same left-to-right order)
+# dwell_err_lo/hi = extent of the small horizontal error bar drawn through each point (0.5-pt strokes of the series colour), about +/-0.1 to +/-3 ms; no vertical error bars are drawn
+# x axis: 7 tick marks calibrated to 0..300 ms (resid 1.5e-05); y axis: 5 tick marks calibrated to 45..65 % (resid 5.0e-04)
+series,self_transition_p,achieved_mean_dwell_ms,reconstruction_ev_conscious_pct,dwell_err_lo_ms,dwell_err_hi_ms,n_x_error_bar_segments
+real_data,0.50,65.938,63.418,65.371,66.505,2
+real_data,0.60,79.42,62.4628,78.86,79.982,2
+real_data,0.70,96.618,61.5317,95.945,97.291,2
+real_data,0.80,118.564,60.3514,117.564,119.545,2
+real_data,0.87,138.127,59.3831,136.873,139.382,2
+real_data,0.92,157.982,58.6354,156.382,159.564,2
+real_data,0.95,174.618,57.8802,172.745,176.509,2
+real_data,0.97,191.2,57.0011,188.945,193.455,2
+real_data,0.99,222.891,55.8259,220.036,225.764,2
+average_model,0.50,39.342,62.8125,39.262,39.42,2
+average_model,0.60,49.385,62.4803,49.196,49.575,2
+average_model,0.70,63.953,61.0333,63.489,64.415,2
+average_model,0.80,86.633,58.6771,85.738,87.529,2
+average_model,0.87,111.6,56.4271,110.236,112.964,2
+average_model,0.92,140.055,54.0924,138.255,141.873,2
+average_model,0.95,167.527,51.8955,165.382,169.673,2
+average_model,0.97,196.236,49.8429,193.709,198.764,2
+average_model,0.99,258.291,46.0642,254.982,261.6,2

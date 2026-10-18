@@ -1,0 +1,30 @@
+# Figure 12 (p. 27 of elife-57443-v4.pdf): histogram, number of cell types (y, '#types') with a given number of
+#   constituent neurons (x, '#neurons in a type'; categories 1..20 and '>20').
+# Provenance: tier 3, digitized from the embedded raster image (2413 x 1605 px) by fig12_extract.py.
+# Tier 1 not available: the caption names 'Figure 12-source data 1' (eLife online), not in papers/scheffer2020/.
+# y calibration: linear fit to the 5 labelled major ticks; 0.640 px per type; residuals [-0.31, 1.95, -2.03, -0.55, 0.93] types.
+# Columns: neurons_in_type = x category label as printed; n_types = bar height (number of cell types).
+# Uncertainty: about +-2 types (1 px = 1.56 types). Bars of 1-3 types are only 1-2 px tall; category 13 shows at most a
+#   hairline bar (value 0-3).
+neurons_in_type,n_types
+1,2048.3
+2,1804.6
+3,684.2
+4,492.6
+5,170.5
+6,117.5
+7,36.3
+8,44.0
+9,19.0
+10,9.5
+11,11.1
+12,18.6
+13,4.9
+14,12.5
+15,12.9
+16,9.5
+17,9.5
+18,16.0
+19,6.4
+20,9.5
+>20,133.0

@@ -1,0 +1,36 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, abstract graphic (p. 1, no caption): energy (blue circles, left axis, eV)
+#   and force (red squares, right axis, nN; axis title printed 'Forcce (nN)') vs displacement (A), with structure insets.
+#   It shows the same curves as Figure 3 (compare figures/fig3.csv; README gives the agreement).
+# Columns: series ('Energy (eV)' or 'Force (nN)'); displacement_A = x of the marker centre in Angstrom (measured);
+#   value = y of the marker centre in the series' unit; value_unc = estimated uncertainty in that unit;
+#   x_px, y_px = marker centre in the embedded image (xref 197); status; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by toc_extract.py.
+#   Energy axis calibrated on the 12 blue major ticks -1..10 eV (max residual 0.011 eV,
+#   0.0224 eV/px); force axis on the 7 red major ticks 0..12 nN (max residual 0.006 nN,
+#   0.0281 nN/px); x on the 6 major ticks 0..2.5 A (max residual 0.0014 A).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening (7 px) of the closed colour mask.
+# Uncertainty: 2 px for clear markers; 5 px for partly hidden ones.
+# The curves of the graphic are interpolations through the markers and are not given.
+series,displacement_A,value,value_unc,x_px,y_px,status,note
+Energy (eV),0.001,-0.014,0.04,91.0,454.5,ok,
+Energy (eV),0.251,0.333,0.04,172.5,439.0,ok,
+Energy (eV),0.501,1.473,0.04,253.5,388.0,ok,
+Energy (eV),0.751,1.977,0.04,335.0,365.5,ok,
+Energy (eV),1.000,2.625,0.04,416.0,336.5,ok,
+Energy (eV),1.249,2.457,0.04,497.0,344.0,ok,
+Energy (eV),1.500,2.435,0.04,578.5,345.0,ok,
+Energy (eV),1.749,2.457,0.04,659.5,344.0,ok,
+Energy (eV),1.999,2.692,0.09,741.0,333.5,partly hidden,lower part under the force square (centre from its top edge and the typical marker height 20 px)
+Energy (eV),2.249,3.274,0.04,822.0,307.5,ok,
+Energy (eV),2.501,3.061,0.04,904.0,317.0,ok,
+Force (nN),0.001,-0.016,0.06,91.0,435.0,ok,
+Force (nN),0.250,4.211,0.06,172.0,284.5,ok,
+Force (nN),0.501,7.651,0.06,253.5,162.0,ok,
+Force (nN),0.753,2.806,0.06,335.5,334.5,ok,
+Force (nN),0.999,5.348,0.06,415.5,244.0,ok,
+Force (nN),1.252,-0.269,0.06,498.0,444.0,ok,
+Force (nN),1.501,-0.058,0.06,579.0,436.5,ok,
+Force (nN),1.752,0.588,0.06,660.5,413.5,ok,
+Force (nN),1.999,2.610,0.06,741.0,341.5,ok,
+Force (nN),2.252,4.730,0.06,823.0,266.0,ok,
+Force (nN),2.501,0.152,0.06,904.0,429.0,ok,

@@ -1,0 +1,39 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Fig. 4j: variance per pair across z: upper triangle = variance in a (key 0-22.5 deg), lower triangle = variance in d (key 0-1 um).
+# Rows/columns: the 6 left-right pairs in the order of the printed colour dots (MeMv, MeMd, MeLr, MeLm, MeLc, Mauthner;
+# colour code of Fig. 4f). Diagonal cells are empty (white) in the figure.
+# Provenance: tier 3, digitized from the embedded 150 ppi raster on PDF page 29 (figures/fig4j_extract.py): median colour
+# of the inner 7x7 px of each 13x13 px cell matched to the nearest colour of the printed key (a blue-to-green map, linear from
+# 0 at the bottom edge to the top label at the top edge; the key is only ~86 px tall). Uncertainty about +-3 % of the key
+# range for blue cells; colours between blue and green are less certain. rgb_dist = RGB distance to the matched key colour.
+# columns: row_axon; col_axon; row; col; triangle; quantity; unit; value; rgb_dist
+row_axon,col_axon,row,col,triangle,quantity,unit,value,rgb_dist
+MeMv,MeMd,1,2,upper,variance in a across z,deg,1.18,2.0
+MeMv,MeLr,1,3,upper,variance in a across z,deg,1.7,4.2
+MeMv,MeLm,1,4,upper,variance in a across z,deg,17.9,2.4
+MeMv,MeLc,1,5,upper,variance in a across z,deg,0.654,3.3
+MeMv,Mauthner,1,6,upper,variance in a across z,deg,0.654,5.0
+MeMd,MeMv,2,1,lower,variance in d across z,um,0.343,4.0
+MeMd,MeLr,2,3,upper,variance in a across z,deg,17.7,5.2
+MeMd,MeLm,2,4,upper,variance in a across z,deg,0.916,1.9
+MeMd,MeLc,2,5,upper,variance in a across z,deg,2.75,5.4
+MeMd,Mauthner,2,6,upper,variance in a across z,deg,0.654,5.4
+MeLr,MeMv,3,1,lower,variance in d across z,um,0.122,7.2
+MeLr,MeMd,3,2,lower,variance in d across z,um,0.238,1.3
+MeLr,MeLm,3,4,upper,variance in a across z,deg,1.44,3.4
+MeLr,MeLc,3,5,upper,variance in a across z,deg,6.93,3.5
+MeLr,Mauthner,3,6,upper,variance in a across z,deg,0.654,2.5
+MeLm,MeMv,4,1,lower,variance in d across z,um,0.552,1.6
+MeLm,MeMd,4,2,lower,variance in d across z,um,0.227,2.8
+MeLm,MeLr,4,3,lower,variance in d across z,um,0.11,2.2
+MeLm,MeLc,4,5,upper,variance in a across z,deg,0.654,4.2
+MeLm,Mauthner,4,6,upper,variance in a across z,deg,0.654,4.1
+MeLc,MeMv,5,1,lower,variance in d across z,um,0.134,2.2
+MeLc,MeMd,5,2,lower,variance in d across z,um,0.0988,2.4
+MeLc,MeLr,5,3,lower,variance in d across z,um,0.0523,2.4
+MeLc,MeLm,5,4,lower,variance in d across z,um,0.0872,1.7
+MeLc,Mauthner,5,6,upper,variance in a across z,deg,1.44,5.7
+Mauthner,MeMv,6,1,lower,variance in d across z,um,0.203,2.9
+Mauthner,MeMd,6,2,lower,variance in d across z,um,0.39,3.0
+Mauthner,MeLr,6,3,lower,variance in d across z,um,0.122,1.8
+Mauthner,MeLm,6,4,lower,variance in d across z,um,0.134,4.1
+Mauthner,MeLc,6,5,lower,variance in d across z,um,0.0756,3.7

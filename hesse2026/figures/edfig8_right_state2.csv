@@ -1,0 +1,49 @@
+# Extended Data Figure 8 (PDF page 48 of 2026.10.15.759299v1.full.pdf), right panel: histograms of the cosine similarity
+# between each cell's state-resolved feature-tuning axis and its priming axis (n = 548 cells), plus the priming noise ceiling (two half-trial priming axes).
+# Recovered from vector paths: each series is drawn as translucent (alpha 0.30) bar rectangles, one per non-empty bin, plus an opaque 0.5-pt step outline.
+# Counts = (baseline y - bar top y) / (pt per count); all came out within 0.02 of an integer and were rounded. The outline polygon gives the same values.
+# x axis calibrated from 5 tick marks at [-1, -0.5, 0, 0.5, 1] (resid 3.0e-05); y axis from the 2 tick marks at 0 and 60 (resid 1.4e-14); tick labels are glyph outlines read off the render.
+# Bins: 40 bins of width 0.05 from -1 to 1 (bar edges lie on this grid to < 0.002). Empty bins have count 0.
+# Series colours (fill hex): state2_conscious=#b56cc7, state2_suppressed=#543379, priming_half_trials=#000000; legend text: State 2, conscious; State 2, suppressed; Priming, half-trials
+# Grey vertical reference line at cosine = 0 (#b3b3b3, 0.5 pt, alpha 0.70).
+bin_left,bin_right,bin_centre,state2_conscious_count,state2_suppressed_count,priming_half_trials_count
+-1.0,-0.95,-0.975,0,0,0
+-0.95,-0.9,-0.925,0,0,0
+-0.9,-0.85,-0.875,0,0,0
+-0.85,-0.8,-0.825,0,0,0
+-0.8,-0.75,-0.775,0,0,0
+-0.75,-0.7,-0.725,0,0,0
+-0.7,-0.65,-0.675,0,0,0
+-0.65,-0.6,-0.625,0,0,0
+-0.6,-0.55,-0.575,0,0,0
+-0.55,-0.5,-0.525,1,1,1
+-0.5,-0.45,-0.475,4,2,1
+-0.45,-0.4,-0.425,9,0,1
+-0.4,-0.35,-0.375,6,1,3
+-0.35,-0.3,-0.325,8,0,4
+-0.3,-0.25,-0.275,12,1,4
+-0.25,-0.2,-0.225,13,4,0
+-0.2,-0.15,-0.175,14,3,3
+-0.15,-0.1,-0.125,26,7,9
+-0.1,-0.05,-0.075,21,7,8
+-0.05,0.0,-0.025,32,6,17
+0.0,0.05,0.025,27,7,8
+0.05,0.1,0.075,27,9,13
+0.1,0.15,0.125,30,13,7
+0.15,0.2,0.175,24,15,14
+0.2,0.25,0.225,34,14,8
+0.25,0.3,0.275,41,21,17
+0.3,0.35,0.325,27,15,28
+0.35,0.4,0.375,31,38,26
+0.4,0.45,0.425,20,31,17
+0.45,0.5,0.475,26,40,26
+0.5,0.55,0.525,26,41,35
+0.55,0.6,0.575,19,30,28
+0.6,0.65,0.625,13,31,34
+0.65,0.7,0.675,22,55,34
+0.7,0.75,0.725,19,38,31
+0.75,0.8,0.775,4,27,49
+0.8,0.85,0.825,7,42,45
+0.85,0.9,0.875,5,30,37
+0.9,0.95,0.925,0,15,21
+0.95,1.0,0.975,0,4,19

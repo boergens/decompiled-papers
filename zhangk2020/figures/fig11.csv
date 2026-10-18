@@ -1,0 +1,14 @@
+# zhangk2020 Fig. 11 (p. 11): The measurement uncertainties of cutting edge radius of a diamond tool under various indentation depths.
+# Provenance: tier 2, vector paths in the PDF (PyMuPDF get_drawings); marker centre = centre of the marker's stroked outline (red open square with an X inside).
+# x calibration: tick marks 216.00 pt=20, 263.31 pt=60, 310.65 pt=100, 357.99 pt=140, 405.27 pt=180; max residual 0.0203 nm.
+# y calibration: tick marks 229.38 pt=1.9, 185.36 pt=1.95, 141.23 pt=2, 97.22 pt=2.05; max residual 4.06e-05 nm.
+# Uncertainty of the extraction: about 0.05 nm in x and 0.0003 nm in y (PDF coordinate precision).
+# x_indentation_depth_nm: Indentation depth (nm); y_uncertainty_nm: Uncertainty (nm).
+# Check (decompiler): mean 1.9687 nm, sample standard deviation 0.0052 nm (text: standard deviation 0.005 nm).
+series,x_indentation_depth_nm,y_uncertainty_nm
+Uncertainty,29.14,1.965
+Uncertainty,43.95,1.966
+Uncertainty,62.25,1.9759
+Uncertainty,83.91,1.972
+Uncertainty,125.08,1.971
+Uncertainty,157.07,1.962

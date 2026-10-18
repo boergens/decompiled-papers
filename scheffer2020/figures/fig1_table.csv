@@ -1,0 +1,9 @@
+# scheffer2020 Figure 1, the table printed inside the figure image (below the brain rendering), p. 3.
+# Transcribed by eye from the embedded image (171 ppi; all digits clearly legible); wording, ≥/< signs, commas and 'M' as printed.
+# No header row is printed in the figure; the column names below are the decompiler's.
+item,count
+"Neurons traced, most arbors in volume (uncropped)","21,734"
+"Neurons traced, large (≥ 1000 connections) but cropped by edge of volume","4,456"
+"Remaining traced, small (< 1000 connections) and cropped","71,710"
+Presynaptic sites (T-Bars) in uncropped/traced/total T-bars,6M/8.6M/9.5M
+Postsynaptic densities (PSDs) in uncropped/traced/total,19M/23M/64M

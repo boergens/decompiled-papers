@@ -1,0 +1,53 @@
+# Table 2 of Scheffer et al. 2020 (eLife 9:e57443), p. 6: regions with >=50% included in the hemibrain, sorted by completion percentage.
+# Caption: The approximate percentage of the region included in the hemibrain volume is shown as '%inV'. 'T-bars' gives a rough estimate
+# of the size of the region. 'comp%' is the fraction of the post-synaptic densities (PSDs) contained in the brain region for which both
+# the PSD and the corresponding T-bar are in neurons marked 'Traced'.
+# The printed table has two column groups side by side; half = 1 (left) or 2 (right). Sorted by comp% reading down the left half, then
+# the right half. Values as printed (percent signs kept). Transcribed from the PDF text layer, checked against the page image.
+half,Name,%inV,T-bars,comp%
+1,PED(R),100%,54805,85%
+2,aL(R),100%,95375,84%
+1,b’L(R),100%,67695,83%
+2,bL(R),100%,71112,83%
+1,gL(R),100%,176785,83%
+2,a’L(R),100%,39091,82%
+1,EB,100%,164286,81%
+2,bL(L),56%,58799,81%
+1,NO,100%,36722,79%
+2,b’L(L),88%,57802,78%
+1,gL(L),55%,133256,76%
+2,CA(R),100%,69517,73%
+1,AB(R),100%,2734,65%
+2,aL(L),51%,44803,62%
+1,FB,100%,451031,62%
+2,AL(R),83%,501004,59%
+1,AB(L),100%,572,57%
+2,PB,100%,46557,55%
+1,AME(R),100%,6045,51%
+2,BU(R),100%,9385,46%
+1,CRE(R),100%,137946,40%
+2,AOTU(R),100%,92578,38%
+1,LAL(R),100%,234388,38%
+2,SMP(R),100%,510937,34%
+1,PVLP(R),100%,475219,30%
+2,ATL(R),100%,25472,29%
+1,SPS(R),100%,253818,29%
+2,ATL(L),100%,28153,29%
+1,VES(R),84%,157168,29%
+2,IB,100%,200447,28%
+1,CRE(L),90%,132656,28%
+2,SIP(R),100%,187493,26%
+1,BU(L),52%,7014,26%
+2,GOR(R),100%,27140,26%
+1,WED(R),100%,232898,25%
+2,SMP(L),100%,460784,26%
+1,EPA(R),100%,31438,26%
+2,PLP(R),100%,429949,26%
+1,AVLP(R),100%,630538,23%
+2,ICL(R),100%,202549,23%
+1,SLP(R),100%,487795,23%
+2,LO(R),64%,855251,22%
+1,SCL(R),100%,189569,22%
+2,GOR(L),60%,19558,21%
+1,LH(R),100%,231662,19%
+2,CAN(R),68%,6512,16%

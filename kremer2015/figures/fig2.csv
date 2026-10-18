@@ -1,0 +1,22 @@
+# Fig. 2 (kremer2015, p. 6), single panel: length-scale axis of the schematic 'Summary of imaging modalities and scales'.
+# Provenance: tier 3, digitized from the embedded raster (1080 x 818 px, 200 ppi) by figures/fig2_extract.py.
+# The axis is logarithmic, decreasing from left to right; ticks labelled 10^-2 m ... 10^-9 m.
+# Calibration: log10(length/m) = -0.0908 + (-0.009012) * x_px, least squares on the 8 tick centres; residuals (decades): +0.028, -0.007, -0.016, -0.007, -0.020, +0.007, +0.003, +0.012
+# Uncertainty: about +/-1 px = +/-0.0090 decade. The pins mark the scale of example images; the figure gives no numbers for them,
+# so the pin values are only where the pin meets the axis. Tick labels sit slightly left of their tick marks; the tick marks are used.
+# Columns: kind (tick/pin), index (left to right), x_px (column in the embedded image), log10_length_m, length_m,
+#   label (printed tick label, for ticks), pin_bottom_y_px (row where the pin line ends at its image, for pins; axis row = 548), target (the example image the pin leads to, decompiler's description)
+kind,index,x_px,log10_length_m,length_m,label,pin_bottom_y_px,target
+tick,1,215.0,-2.028,0.00937,10^-2 m,,
+tick,2,322.0,-2.993,0.00102,10^-3 m,,
+tick,3,432.0,-3.984,0.000104,10^-4 m,,
+tick,4,544.0,-4.993,1.02e-05,10^-5 m,,
+tick,5,653.5,-5.980,1.05e-06,10^-6 m,,
+tick,6,767.5,-7.007,9.84e-08,10^-7 m,,
+tick,7,878.0,-8.003,9.93e-09,10^-8 m,,
+tick,8,990.0,-9.012,9.72e-10,10^-9 m,,
+pin,1,188.5,-1.790,0.0162,,669,"photograph of a whole yellow, lobed organ on black, with a small black-and-white round marker at its left edge"
+pin,2,402.5,-3.718,0.000191,,611,green fluorescence image of an irregular tissue fragment
+pin,3,636.5,-5.827,1.49e-06,,737,"greyscale SEM-type image of a cell with a dark rounded nucleus, on white background"
+pin,4,758.5,-6.926,1.19e-07,,652,greyscale EM micrograph with a dark curved membrane-like band
+pin,5,936.5,-8.530,2.95e-09,,611,greyscale EM micrograph of membrane profiles (neuropil-like) with a dark-rimmed round profile

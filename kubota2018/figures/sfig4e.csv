@@ -1,0 +1,29 @@
+# Supplementary Figure 4e (kubota2018 SI): electron dose vs acceleration voltage, one series per dwell time (no legend in e; colours as in d)
+# columns: series (legend text), x_nominal (acceleration voltage, keV), x_digitized, y (electron dose, ke- nm-2 (axis label 'Electron dose (ke- nm-2)')), marker_px (pixels in the colour blob found), status, printed_panel_c (the depth printed under the imaged square in panel c of the same figure, where it belongs to this point; empty otherwise), pixel_x, pixel_y (marker centre in the embedded image)
+# provenance: tier 3, digitized from the embedded raster image of SI page 13 (885 x 595 px JPEG, 150 ppi), native resolution; script sfig4_extract.py
+# method: ticks found in the image and fitted to the printed tick labels; at each nominal x the pixels of each series colour (HSV class) in a 7-px-wide column window are grouped into blobs and the centroid of the largest blob is the marker centre
+# axis fit: y on 7 ticks 6..0, max residual 0.0291; x on 7 ticks 0..6, max residual 0.0195
+# uncertainty: about 1-2 source pixels = 0.054-0.11 in y (1 px = 0.0541); markers that overlap other markers are less certain
+# status 'hidden under other markers': the series colour was not found at that x (the marker is covered by another series' marker); 'partly hidden': fewer than 8 pixels of its colour visible
+# decompiler's check: the values agree with the panel g legend dose rates x dwell time within about 0.05
+series,x_nominal,x_digitized,y,marker_px,status,printed_panel_c,pixel_x,pixel_y
+6.4 µsec,2,2.023,4.57,21,ok,,802.00,183.90
+6.4 µsec,3,3.005,4.908,24,ok,,820.08,177.67
+6.4 µsec,4,4.003,5.268,25,ok,,838.48,171.00
+6.4 µsec,5,4.973,5.61,22,ok,,856.36,164.68
+6.4 µsec,6,5.993,5.951,18,ok,,875.17,158.39
+3.2 µsec,2,1.996,2.266,16,ok,,801.50,226.50
+3.2 µsec,3,3.000,2.428,16,ok,,820.00,223.50
+3.2 µsec,4,4.028,2.604,16,ok,,838.94,220.25
+3.2 µsec,5,5.014,2.757,17,ok,,857.12,217.41
+3.2 µsec,6,6.012,2.969,16,ok,,875.50,213.50
+1.6 µsec,2,2.018,1.111,20,ok,,801.90,247.85
+1.6 µsec,3,3.007,1.199,23,ok,,820.13,246.22
+1.6 µsec,4,4.000,1.28,21,ok,,838.43,244.71
+1.6 µsec,5,4.975,1.359,23,ok,,856.39,243.26
+1.6 µsec,6,6.004,1.453,17,ok,,875.35,241.53
+0.8 µsec,2,2.021,0.5615,23,ok,,801.96,258.00
+0.8 µsec,3,3.000,0.6113,25,ok,,820.00,257.08
+0.8 µsec,4,4.017,0.6368,23,ok,,838.74,256.61
+0.8 µsec,5,4.994,0.6721,23,ok,,856.74,255.96
+0.8 µsec,6,6.018,0.7316,21,ok,,875.62,254.86

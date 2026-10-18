@@ -1,0 +1,18 @@
+# Supplementary Figure 3f (kubota2018 SI): electron dose vs EHT (one series, filled circles, no legend)
+# columns: series (named CNT/PET here after panel e; panel f has no legend), eht_nominal (keV), eht_keV (digitized), electron_dose_ke_per_nm2 (y axis 'Electron dose (ke- nm-2)')
+# provenance: tier 3, digitized from the embedded raster image of SI page 12 (887 x 331 px JPEG, 150 ppi), native resolution; script sfig3ef_extract.py
+# markers = dark connected components; centre = centroid of the marker ink (open circles: of the ring); filled vs open told apart by the ink fill fraction
+# eht_nominal = digitized EHT rounded to the nearest 0.5 keV (the points sit at 2.5, 3, 4, ..., 10 keV)
+# pixel_x, pixel_y = marker centre in the embedded image (for the overlay check)
+# axis fit: y on 4 ticks 4..7, max residual 0.008; x on 6 ticks 0..10 keV, max residual 0.053 keV
+# uncertainty: about 1 source pixel = 0.03 ke- nm-2 in y, 0.08 keV in x
+series,eht_nominal,eht_keV,electron_dose_ke_per_nm2,pixel_x,pixel_y
+CNT/PET,2.5,2.51,4.74,783.09,271.09
+CNT/PET,3,3.01,4.91,789.29,265.00
+CNT/PET,4,4.02,5.25,801.91,252.91
+CNT/PET,5,4.99,5.59,814.00,240.71
+CNT/PET,6,5.98,5.97,826.36,227.36
+CNT/PET,7,6.96,6.31,838.71,215.00
+CNT/PET,8,8.02,6.68,851.91,201.91
+CNT/PET,9,8.99,7.03,864.04,189.61
+CNT/PET,10,9.99,7.40,876.50,176.50

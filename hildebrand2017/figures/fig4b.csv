@@ -1,0 +1,501 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Fig. 4b: pairwise 3D bilateral symmetry costs for 44 identified reticulospinal
+# neurons (22 per side); rows = left axon (axis 'left'), columns = right axon (axis 'right'), names in the printed order.
+# Provenance: tier 3, digitized from the embedded 150 ppi raster on PDF page 29 (figures/fig4b_extract.py): median colour of
+# the 9x9 px cell centre (asterisk and outline pixels removed) matched to the nearest colour of the printed colour bar
+# (rows 5-326 of the image, linear 6000 at the top edge to 2000 at the bottom edge; parula-like map, dark blue = high).
+# cost: value of the matched key colour, rounded to 10; resolution of the key ~12.5 cost units per pixel row, but
+# JPEG noise (chroma subsampling bleeds the white separators and black asterisks into the cells) makes the uncertainty larger:
+# checked against the costs printed in Fig. 4c and Extended Data Fig. 9a,d: MiD3cm/MiD3cm 2006 (printed 1315, below the key),
+# MiD2cm/MiD2cm 2006 (2054), MiD2i/MiD2i 2031 (2062), MiM1 #1/MiM1 #1 2354 (2321), MiD2i/MiM1 #1 2354 (2242),
+# MiM1 #1/MiD2i 2155 (1967), CaV/MeMv 5968 (14608, above the key): about +-50 to +-200 near the yellow end, where the key
+# colours change slowly; take the values as about +-150 overall.
+# Costs outside 2000-6000 are clipped by the colour scale: flag says so ('>=6000' for the dark navy cells; the paper
+# prints 1315 for the MiD3cm pair and 14608 for MeMv right vs CaV left in Fig. 4c, both outside the key).
+# rgb_dist: RGB distance to the matched key colour (quality). asterisk: black = globally optimal assignment;
+# red = optimal assignment that is not the left-right homolog (Fig. 4b caption).
+# columns: left; right; row (1-22); col (1-22); cost; rgb_dist; asterisk; flag
+left,right,row,col,cost,rgb_dist,asterisk,flag
+MiD3cm,MiD3cm,1,1,2010,6.2,black,near bottom of key (yellow); costs <= 2000 look the same
+MiD3cm,RoM2L,1,2,5980,1.6,,">=6000 (top of key, saturated)"
+MiD3cm,RoM1C,1,3,5980,2.8,,">=6000 (top of key, saturated)"
+MiD3cm,MeLc,1,4,5980,2.5,,">=6000 (top of key, saturated)"
+MiD3cm,RoM3M #1,1,5,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3cm,MeLr,1,6,5970,3.1,,">=6000 (top of key, saturated)"
+MiD3cm,MiD3i,1,7,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3cm,Mauthner,1,8,5980,1.8,,">=6000 (top of key, saturated)"
+MiD3cm,RoM3L,1,9,5970,2.4,,">=6000 (top of key, saturated)"
+MiD3cm,MiD2cm,1,10,3530,4.7,,ok
+MiD3cm,MiD2i,1,11,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3cm,MiR1,1,12,5970,2.3,,">=6000 (top of key, saturated)"
+MiD3cm,MiM1 #1,1,13,5970,3.3,,">=6000 (top of key, saturated)"
+MiD3cm,MiR2,1,14,5980,1.1,,">=6000 (top of key, saturated)"
+MiD3cm,RoM2M,1,15,5970,2.1,,">=6000 (top of key, saturated)"
+MiD3cm,MiM1 #2,1,16,5970,1.7,,">=6000 (top of key, saturated)"
+MiD3cm,MeMd,1,17,5970,1.3,,">=6000 (top of key, saturated)"
+MiD3cm,RoM3M #2,1,18,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3cm,MeLm,1,19,5970,2.8,,">=6000 (top of key, saturated)"
+MiD3cm,MeMv,1,20,5980,1.7,,">=6000 (top of key, saturated)"
+MiD3cm,CaV,1,21,5980,1.8,,">=6000 (top of key, saturated)"
+MiD3cm,RoM1R,1,22,5980,3.5,,">=6000 (top of key, saturated)"
+RoM2L,MiD3cm,2,1,5970,3.2,,">=6000 (top of key, saturated)"
+RoM2L,RoM2L,2,2,2010,9.2,black,near bottom of key (yellow); costs <= 2000 look the same
+RoM2L,RoM1C,2,3,5970,3.8,,">=6000 (top of key, saturated)"
+RoM2L,MeLc,2,4,4910,2.4,,ok
+RoM2L,RoM3M #1,2,5,2040,3.2,,near bottom of key (yellow); costs <= 2000 look the same
+RoM2L,MeLr,2,6,2640,2.8,,ok
+RoM2L,MiD3i,2,7,4230,1.5,,ok
+RoM2L,Mauthner,2,8,5990,2.5,,">=6000 (top of key, saturated)"
+RoM2L,RoM3L,2,9,5980,1.8,,">=6000 (top of key, saturated)"
+RoM2L,MiD2cm,2,10,5980,4.0,,">=6000 (top of key, saturated)"
+RoM2L,MiD2i,2,11,2900,1.8,,ok
+RoM2L,MiR1,2,12,5970,0.9,,">=6000 (top of key, saturated)"
+RoM2L,MiM1 #1,2,13,2170,3.5,,ok
+RoM2L,MiR2,2,14,5970,2.5,,">=6000 (top of key, saturated)"
+RoM2L,RoM2M,2,15,5970,2.1,,">=6000 (top of key, saturated)"
+RoM2L,MiM1 #2,2,16,3930,2.4,,ok
+RoM2L,MeMd,2,17,2660,2.1,,ok
+RoM2L,RoM3M #2,2,18,5960,4.2,,ok
+RoM2L,MeLm,2,19,5980,2.2,,">=6000 (top of key, saturated)"
+RoM2L,MeMv,2,20,5970,2.8,,">=6000 (top of key, saturated)"
+RoM2L,CaV,2,21,5970,3.5,,">=6000 (top of key, saturated)"
+RoM2L,RoM1R,2,22,5970,2.0,,">=6000 (top of key, saturated)"
+RoM1C,MiD3cm,3,1,5970,1.5,,">=6000 (top of key, saturated)"
+RoM1C,RoM2L,3,2,5970,2.8,,">=6000 (top of key, saturated)"
+RoM1C,RoM1C,3,3,2120,8.1,black,near bottom of key (yellow); costs <= 2000 look the same
+RoM1C,MeLc,3,4,5970,3.6,,">=6000 (top of key, saturated)"
+RoM1C,RoM3M #1,3,5,5980,2.2,,">=6000 (top of key, saturated)"
+RoM1C,MeLr,3,6,5980,2.2,,">=6000 (top of key, saturated)"
+RoM1C,MiD3i,3,7,5970,4.1,,">=6000 (top of key, saturated)"
+RoM1C,Mauthner,3,8,5970,2.3,,">=6000 (top of key, saturated)"
+RoM1C,RoM3L,3,9,3550,1.5,,ok
+RoM1C,MiD2cm,3,10,5980,1.6,,">=6000 (top of key, saturated)"
+RoM1C,MiD2i,3,11,5970,5.0,,">=6000 (top of key, saturated)"
+RoM1C,MiR1,3,12,3350,0.7,,ok
+RoM1C,MiM1 #1,3,13,5970,0.3,,">=6000 (top of key, saturated)"
+RoM1C,MiR2,3,14,4710,4.0,,ok
+RoM1C,RoM2M,3,15,3990,2.9,,ok
+RoM1C,MiM1 #2,3,16,5980,1.7,,">=6000 (top of key, saturated)"
+RoM1C,MeMd,3,17,5980,3.5,,">=6000 (top of key, saturated)"
+RoM1C,RoM3M #2,3,18,5970,5.3,,">=6000 (top of key, saturated)"
+RoM1C,MeLm,3,19,4230,2.5,,ok
+RoM1C,MeMv,3,20,5970,3.1,,">=6000 (top of key, saturated)"
+RoM1C,CaV,3,21,5980,2.5,,">=6000 (top of key, saturated)"
+RoM1C,RoM1R,3,22,3780,1.5,,ok
+MeLc,MiD3cm,4,1,5970,3.6,,">=6000 (top of key, saturated)"
+MeLc,RoM2L,4,2,3780,2.0,,ok
+MeLc,RoM1C,4,3,5980,3.0,,">=6000 (top of key, saturated)"
+MeLc,MeLc,4,4,2130,5.2,black,near bottom of key (yellow); costs <= 2000 look the same
+MeLc,RoM3M #1,4,5,4500,0.9,,ok
+MeLc,MeLr,4,6,3000,1.9,,ok
+MeLc,MiD3i,4,7,4200,2.6,,ok
+MeLc,Mauthner,4,8,5980,4.9,,">=6000 (top of key, saturated)"
+MeLc,RoM3L,4,9,5970,3.5,,">=6000 (top of key, saturated)"
+MeLc,MiD2cm,4,10,5970,2.3,,">=6000 (top of key, saturated)"
+MeLc,MiD2i,4,11,4220,3.7,,ok
+MeLc,MiR1,4,12,5970,3.9,,">=6000 (top of key, saturated)"
+MeLc,MiM1 #1,4,13,4600,4.2,,ok
+MeLc,MiR2,4,14,5970,3.1,,">=6000 (top of key, saturated)"
+MeLc,RoM2M,4,15,5990,2.6,,">=6000 (top of key, saturated)"
+MeLc,MiM1 #2,4,16,2860,0.8,,ok
+MeLc,MeMd,4,17,4680,3.5,,ok
+MeLc,RoM3M #2,4,18,5970,1.4,,">=6000 (top of key, saturated)"
+MeLc,MeLm,4,19,5970,2.1,,">=6000 (top of key, saturated)"
+MeLc,MeMv,4,20,5970,3.1,,">=6000 (top of key, saturated)"
+MeLc,CaV,4,21,5980,1.8,,">=6000 (top of key, saturated)"
+MeLc,RoM1R,4,22,5980,2.5,,">=6000 (top of key, saturated)"
+RoM3M #1,MiD3cm,5,1,5980,2.8,,">=6000 (top of key, saturated)"
+RoM3M #1,RoM2L,5,2,2040,3.7,,near bottom of key (yellow); costs <= 2000 look the same
+RoM3M #1,RoM1C,5,3,5980,1.7,,">=6000 (top of key, saturated)"
+RoM3M #1,MeLc,5,4,4680,1.7,,ok
+RoM3M #1,RoM3M #1,5,5,2010,13.9,black,near bottom of key (yellow); costs <= 2000 look the same
+RoM3M #1,MeLr,5,6,2710,1.6,,ok
+RoM3M #1,MiD3i,5,7,3610,1.2,,ok
+RoM3M #1,Mauthner,5,8,5990,3.3,,">=6000 (top of key, saturated)"
+RoM3M #1,RoM3L,5,9,5980,2.8,,">=6000 (top of key, saturated)"
+RoM3M #1,MiD2cm,5,10,5970,2.3,,">=6000 (top of key, saturated)"
+RoM3M #1,MiD2i,5,11,2400,2.9,,ok
+RoM3M #1,MiR1,5,12,5980,1.7,,">=6000 (top of key, saturated)"
+RoM3M #1,MiM1 #1,5,13,2040,3.9,,near bottom of key (yellow); costs <= 2000 look the same
+RoM3M #1,MiR2,5,14,5980,4.9,,">=6000 (top of key, saturated)"
+RoM3M #1,RoM2M,5,15,5970,4.2,,">=6000 (top of key, saturated)"
+RoM3M #1,MiM1 #2,5,16,3170,2.6,,ok
+RoM3M #1,MeMd,5,17,2650,0.8,,ok
+RoM3M #1,RoM3M #2,5,18,5970,2.8,,">=6000 (top of key, saturated)"
+RoM3M #1,MeLm,5,19,5970,5.4,,">=6000 (top of key, saturated)"
+RoM3M #1,MeMv,5,20,5980,4.4,,">=6000 (top of key, saturated)"
+RoM3M #1,CaV,5,21,5970,5.3,,">=6000 (top of key, saturated)"
+RoM3M #1,RoM1R,5,22,5970,1.5,,">=6000 (top of key, saturated)"
+MeLr,MiD3cm,6,1,5970,3.5,,">=6000 (top of key, saturated)"
+MeLr,RoM2L,6,2,2200,2.2,,ok
+MeLr,RoM1C,6,3,5980,1.6,,">=6000 (top of key, saturated)"
+MeLr,MeLc,6,4,2980,1.4,,ok
+MeLr,RoM3M #1,6,5,2420,1.2,,ok
+MeLr,MeLr,6,6,2010,5.9,black,near bottom of key (yellow); costs <= 2000 look the same
+MeLr,MiD3i,6,7,3600,5.0,,ok
+MeLr,Mauthner,6,8,5980,1.6,,">=6000 (top of key, saturated)"
+MeLr,RoM3L,6,9,5980,3.5,,">=6000 (top of key, saturated)"
+MeLr,MiD2cm,6,10,5980,2.2,,">=6000 (top of key, saturated)"
+MeLr,MiD2i,6,11,2990,1.9,,ok
+MeLr,MiR1,6,12,5970,1.7,,">=6000 (top of key, saturated)"
+MeLr,MiM1 #1,6,13,2730,2.1,,ok
+MeLr,MiR2,6,14,5980,2.2,,">=6000 (top of key, saturated)"
+MeLr,RoM2M,6,15,5980,4.4,,">=6000 (top of key, saturated)"
+MeLr,MiM1 #2,6,16,3670,2.9,,ok
+MeLr,MeMd,6,17,2860,2.6,,ok
+MeLr,RoM3M #2,6,18,5980,2.2,,">=6000 (top of key, saturated)"
+MeLr,MeLm,6,19,5970,5.3,,">=6000 (top of key, saturated)"
+MeLr,MeMv,6,20,5970,5.3,,">=6000 (top of key, saturated)"
+MeLr,CaV,6,21,5970,5.4,,">=6000 (top of key, saturated)"
+MeLr,RoM1R,6,22,5980,2.5,,">=6000 (top of key, saturated)"
+MiD3i,MiD3cm,7,1,5980,3.5,,">=6000 (top of key, saturated)"
+MiD3i,RoM2L,7,2,3390,4.0,,ok
+MiD3i,RoM1C,7,3,5970,2.3,,">=6000 (top of key, saturated)"
+MiD3i,MeLc,7,4,4270,1.6,,ok
+MiD3i,RoM3M #1,7,5,3990,1.5,,ok
+MiD3i,MeLr,7,6,4040,4.0,,ok
+MiD3i,MiD3i,7,7,2010,5.4,black,near bottom of key (yellow); costs <= 2000 look the same
+MiD3i,Mauthner,7,8,5980,6.6,,">=6000 (top of key, saturated)"
+MiD3i,RoM3L,7,9,5970,1.8,,">=6000 (top of key, saturated)"
+MiD3i,MiD2cm,7,10,5980,3.8,,">=6000 (top of key, saturated)"
+MiD3i,MiD2i,7,11,2860,2.4,,ok
+MiD3i,MiR1,7,12,5970,2.1,,">=6000 (top of key, saturated)"
+MiD3i,MiM1 #1,7,13,3930,1.0,,ok
+MiD3i,MiR2,7,14,5980,3.5,,">=6000 (top of key, saturated)"
+MiD3i,RoM2M,7,15,5980,2.5,,">=6000 (top of key, saturated)"
+MiD3i,MiM1 #2,7,16,3210,2.9,,ok
+MiD3i,MeMd,7,17,5980,3.5,,">=6000 (top of key, saturated)"
+MiD3i,RoM3M #2,7,18,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3i,MeLm,7,19,5980,3.5,,">=6000 (top of key, saturated)"
+MiD3i,MeMv,7,20,5980,2.2,,">=6000 (top of key, saturated)"
+MiD3i,CaV,7,21,5970,3.5,,">=6000 (top of key, saturated)"
+MiD3i,RoM1R,7,22,5970,2.8,,">=6000 (top of key, saturated)"
+Mauthner,MiD3cm,8,1,5980,2.2,,">=6000 (top of key, saturated)"
+Mauthner,RoM2L,8,2,5980,1.7,,">=6000 (top of key, saturated)"
+Mauthner,RoM1C,8,3,5980,1.6,,">=6000 (top of key, saturated)"
+Mauthner,MeLc,8,4,5970,4.2,,">=6000 (top of key, saturated)"
+Mauthner,RoM3M #1,8,5,5970,2.8,,">=6000 (top of key, saturated)"
+Mauthner,MeLr,8,6,5970,3.6,,">=6000 (top of key, saturated)"
+Mauthner,MiD3i,8,7,5980,3.5,,">=6000 (top of key, saturated)"
+Mauthner,Mauthner,8,8,2130,8.5,black,near bottom of key (yellow); costs <= 2000 look the same
+Mauthner,RoM3L,8,9,5980,2.3,,">=6000 (top of key, saturated)"
+Mauthner,MiD2cm,8,10,5240,2.2,,ok
+Mauthner,MiD2i,8,11,5970,1.3,,">=6000 (top of key, saturated)"
+Mauthner,MiR1,8,12,5970,3.6,,">=6000 (top of key, saturated)"
+Mauthner,MiM1 #1,8,13,5970,3.3,,">=6000 (top of key, saturated)"
+Mauthner,MiR2,8,14,5980,4.0,,">=6000 (top of key, saturated)"
+Mauthner,RoM2M,8,15,5980,2.2,,">=6000 (top of key, saturated)"
+Mauthner,MiM1 #2,8,16,5970,2.8,,">=6000 (top of key, saturated)"
+Mauthner,MeMd,8,17,5970,3.9,,">=6000 (top of key, saturated)"
+Mauthner,RoM3M #2,8,18,5980,3.8,,">=6000 (top of key, saturated)"
+Mauthner,MeLm,8,19,5970,4.2,,">=6000 (top of key, saturated)"
+Mauthner,MeMv,8,20,5970,4.4,,">=6000 (top of key, saturated)"
+Mauthner,CaV,8,21,5970,2.1,,">=6000 (top of key, saturated)"
+Mauthner,RoM1R,8,22,5970,2.0,,">=6000 (top of key, saturated)"
+RoM3L,MiD3cm,9,1,5970,5.0,,">=6000 (top of key, saturated)"
+RoM3L,RoM2L,9,2,5970,4.4,,">=6000 (top of key, saturated)"
+RoM3L,RoM1C,9,3,2760,3.0,,ok
+RoM3L,MeLc,9,4,5970,2.1,,">=6000 (top of key, saturated)"
+RoM3L,RoM3M #1,9,5,5970,4.0,,">=6000 (top of key, saturated)"
+RoM3L,MeLr,9,6,5970,3.5,,">=6000 (top of key, saturated)"
+RoM3L,MiD3i,9,7,5970,5.0,,">=6000 (top of key, saturated)"
+RoM3L,Mauthner,9,8,5970,0.9,,">=6000 (top of key, saturated)"
+RoM3L,RoM3L,9,9,2120,7.5,black,near bottom of key (yellow); costs <= 2000 look the same
+RoM3L,MiD2cm,9,10,5970,3.3,,">=6000 (top of key, saturated)"
+RoM3L,MiD2i,9,11,5970,3.5,,">=6000 (top of key, saturated)"
+RoM3L,MiR1,9,12,2280,2.4,,ok
+RoM3L,MiM1 #1,9,13,5970,2.8,,">=6000 (top of key, saturated)"
+RoM3L,MiR2,9,14,3400,2.2,,ok
+RoM3L,RoM2M,9,15,3100,1.3,,ok
+RoM3L,MiM1 #2,9,16,5980,3.2,,">=6000 (top of key, saturated)"
+RoM3L,MeMd,9,17,5980,4.0,,">=6000 (top of key, saturated)"
+RoM3L,RoM3M #2,9,18,4570,3.0,,ok
+RoM3L,MeLm,9,19,3880,3.5,,ok
+RoM3L,MeMv,9,20,5970,3.6,,">=6000 (top of key, saturated)"
+RoM3L,CaV,9,21,5970,3.5,,">=6000 (top of key, saturated)"
+RoM3L,RoM1R,9,22,5970,1.3,,">=6000 (top of key, saturated)"
+MiD2cm,MiD3cm,10,1,4040,5.1,,ok
+MiD2cm,RoM2L,10,2,5980,4.4,,">=6000 (top of key, saturated)"
+MiD2cm,RoM1C,10,3,5970,3.3,,">=6000 (top of key, saturated)"
+MiD2cm,MeLc,10,4,5980,0.8,,">=6000 (top of key, saturated)"
+MiD2cm,RoM3M #1,10,5,5980,0.8,,">=6000 (top of key, saturated)"
+MiD2cm,MeLr,10,6,5970,1.9,,">=6000 (top of key, saturated)"
+MiD2cm,MiD3i,10,7,5980,3.5,,">=6000 (top of key, saturated)"
+MiD2cm,Mauthner,10,8,5980,3.1,,">=6000 (top of key, saturated)"
+MiD2cm,RoM3L,10,9,5970,2.3,,">=6000 (top of key, saturated)"
+MiD2cm,MiD2cm,10,10,2010,5.4,black,near bottom of key (yellow); costs <= 2000 look the same
+MiD2cm,MiD2i,10,11,5980,3.7,,">=6000 (top of key, saturated)"
+MiD2cm,MiR1,10,12,5970,1.9,,">=6000 (top of key, saturated)"
+MiD2cm,MiM1 #1,10,13,5990,3.5,,">=6000 (top of key, saturated)"
+MiD2cm,MiR2,10,14,5980,3.0,,">=6000 (top of key, saturated)"
+MiD2cm,RoM2M,10,15,5980,1.6,,">=6000 (top of key, saturated)"
+MiD2cm,MiM1 #2,10,16,5980,1.1,,">=6000 (top of key, saturated)"
+MiD2cm,MeMd,10,17,5980,1.7,,">=6000 (top of key, saturated)"
+MiD2cm,RoM3M #2,10,18,5970,5.7,,">=6000 (top of key, saturated)"
+MiD2cm,MeLm,10,19,5970,2.8,,">=6000 (top of key, saturated)"
+MiD2cm,MeMv,10,20,5970,2.1,,">=6000 (top of key, saturated)"
+MiD2cm,CaV,10,21,5980,1.7,,">=6000 (top of key, saturated)"
+MiD2cm,RoM1R,10,22,5980,1.8,,">=6000 (top of key, saturated)"
+MiD2i,MiD3cm,11,1,5980,1.6,,">=6000 (top of key, saturated)"
+MiD2i,RoM2L,11,2,2040,3.1,,near bottom of key (yellow); costs <= 2000 look the same
+MiD2i,RoM1C,11,3,5980,1.5,,">=6000 (top of key, saturated)"
+MiD2i,MeLc,11,4,4610,2.3,,ok
+MiD2i,RoM3M #1,11,5,2200,0.3,,ok
+MiD2i,MeLr,11,6,2450,1.5,,ok
+MiD2i,MiD3i,11,7,2690,3.4,,ok
+MiD2i,Mauthner,11,8,5980,4.4,,">=6000 (top of key, saturated)"
+MiD2i,RoM3L,11,9,5980,1.0,,">=6000 (top of key, saturated)"
+MiD2i,MiD2cm,11,10,5990,3.0,,">=6000 (top of key, saturated)"
+MiD2i,MiD2i,11,11,2030,3.6,,near bottom of key (yellow); costs <= 2000 look the same
+MiD2i,MiR1,11,12,5970,3.6,,">=6000 (top of key, saturated)"
+MiD2i,MiM1 #1,11,13,2350,4.5,red,ok
+MiD2i,MiR2,11,14,5980,1.8,,">=6000 (top of key, saturated)"
+MiD2i,RoM2M,11,15,5980,3.2,,">=6000 (top of key, saturated)"
+MiD2i,MiM1 #2,11,16,3410,1.7,,ok
+MiD2i,MeMd,11,17,4010,5.1,,ok
+MiD2i,RoM3M #2,11,18,5980,2.2,,">=6000 (top of key, saturated)"
+MiD2i,MeLm,11,19,5980,0.8,,">=6000 (top of key, saturated)"
+MiD2i,MeMv,11,20,5980,3.2,,">=6000 (top of key, saturated)"
+MiD2i,CaV,11,21,5970,2.8,,">=6000 (top of key, saturated)"
+MiD2i,RoM1R,11,22,5970,3.1,,">=6000 (top of key, saturated)"
+MiR1,MiD3cm,12,1,5980,3.2,,">=6000 (top of key, saturated)"
+MiR1,RoM2L,12,2,5980,3.2,,">=6000 (top of key, saturated)"
+MiR1,RoM1C,12,3,2740,1.3,,ok
+MiR1,MeLc,12,4,5980,3.0,,">=6000 (top of key, saturated)"
+MiR1,RoM3M #1,12,5,5980,1.7,,">=6000 (top of key, saturated)"
+MiR1,MeLr,12,6,5970,2.5,,">=6000 (top of key, saturated)"
+MiR1,MiD3i,12,7,5970,3.5,,">=6000 (top of key, saturated)"
+MiR1,Mauthner,12,8,5990,4.1,,">=6000 (top of key, saturated)"
+MiR1,RoM3L,12,9,2540,0.5,,ok
+MiR1,MiD2cm,12,10,5980,3.1,,">=6000 (top of key, saturated)"
+MiR1,MiD2i,12,11,5970,2.1,,">=6000 (top of key, saturated)"
+MiR1,MiR1,12,12,2250,7.6,black,ok
+MiR1,MiM1 #1,12,13,5980,3.7,,">=6000 (top of key, saturated)"
+MiR1,MiR2,12,14,3010,3.4,,ok
+MiR1,RoM2M,12,15,3340,3.5,,ok
+MiR1,MiM1 #2,12,16,5980,2.2,,">=6000 (top of key, saturated)"
+MiR1,MeMd,12,17,5980,3.5,,">=6000 (top of key, saturated)"
+MiR1,RoM3M #2,12,18,4800,3.2,,ok
+MiR1,MeLm,12,19,3920,0.2,,ok
+MiR1,MeMv,12,20,4800,3.1,,ok
+MiR1,CaV,12,21,5980,3.7,,">=6000 (top of key, saturated)"
+MiR1,RoM1R,12,22,5980,2.2,,">=6000 (top of key, saturated)"
+MiM1 #1,MiD3cm,13,1,5990,2.3,,">=6000 (top of key, saturated)"
+MiM1 #1,RoM2L,13,2,2040,2.5,,near bottom of key (yellow); costs <= 2000 look the same
+MiM1 #1,RoM1C,13,3,5980,1.8,,">=6000 (top of key, saturated)"
+MiM1 #1,MeLc,13,4,3210,3.5,,ok
+MiM1 #1,RoM3M #1,13,5,2160,0.5,,ok
+MiM1 #1,MeLr,13,6,2950,3.0,,ok
+MiM1 #1,MiD3i,13,7,2290,2.9,,ok
+MiM1 #1,Mauthner,13,8,5970,1.5,,">=6000 (top of key, saturated)"
+MiM1 #1,RoM3L,13,9,5980,2.5,,">=6000 (top of key, saturated)"
+MiM1 #1,MiD2cm,13,10,5980,1.6,,">=6000 (top of key, saturated)"
+MiM1 #1,MiD2i,13,11,2160,10.4,red,ok
+MiM1 #1,MiR1,13,12,5970,2.3,,">=6000 (top of key, saturated)"
+MiM1 #1,MiM1 #1,13,13,2350,0.8,,ok
+MiM1 #1,MiR2,13,14,5970,5.4,,">=6000 (top of key, saturated)"
+MiM1 #1,RoM2M,13,15,5980,2.2,,">=6000 (top of key, saturated)"
+MiM1 #1,MiM1 #2,13,16,2120,3.3,,near bottom of key (yellow); costs <= 2000 look the same
+MiM1 #1,MeMd,13,17,3910,2.1,,ok
+MiM1 #1,RoM3M #2,13,18,5980,1.7,,">=6000 (top of key, saturated)"
+MiM1 #1,MeLm,13,19,5970,3.3,,">=6000 (top of key, saturated)"
+MiM1 #1,MeMv,13,20,5980,2.5,,">=6000 (top of key, saturated)"
+MiM1 #1,CaV,13,21,5970,3.3,,">=6000 (top of key, saturated)"
+MiM1 #1,RoM1R,13,22,5980,2.2,,">=6000 (top of key, saturated)"
+MiR2,MiD3cm,14,1,5970,2.5,,">=6000 (top of key, saturated)"
+MiR2,RoM2L,14,2,5990,2.5,,">=6000 (top of key, saturated)"
+MiR2,RoM1C,14,3,4230,3.3,,ok
+MiR2,MeLc,14,4,5970,1.4,,">=6000 (top of key, saturated)"
+MiR2,RoM3M #1,14,5,5980,1.8,,">=6000 (top of key, saturated)"
+MiR2,MeLr,14,6,5970,4.1,,">=6000 (top of key, saturated)"
+MiR2,MiD3i,14,7,5980,2.2,,">=6000 (top of key, saturated)"
+MiR2,Mauthner,14,8,5970,1.2,,">=6000 (top of key, saturated)"
+MiR2,RoM3L,14,9,2690,4.4,,ok
+MiR2,MiD2cm,14,10,5970,3.7,,">=6000 (top of key, saturated)"
+MiR2,MiD2i,14,11,5970,2.8,,">=6000 (top of key, saturated)"
+MiR2,MiR1,14,12,2350,2.7,,ok
+MiR2,MiM1 #1,14,13,5980,4.9,,">=6000 (top of key, saturated)"
+MiR2,MiR2,14,14,2470,8.0,black,ok
+MiR2,RoM2M,14,15,3170,1.0,,ok
+MiR2,MiM1 #2,14,16,5970,2.1,,">=6000 (top of key, saturated)"
+MiR2,MeMd,14,17,5970,4.4,,">=6000 (top of key, saturated)"
+MiR2,RoM3M #2,14,18,4180,4.0,,ok
+MiR2,MeLm,14,19,3920,1.6,,ok
+MiR2,MeMv,14,20,5970,2.1,,">=6000 (top of key, saturated)"
+MiR2,CaV,14,21,5970,3.1,,">=6000 (top of key, saturated)"
+MiR2,RoM1R,14,22,5970,3.0,,">=6000 (top of key, saturated)"
+RoM2M,MiD3cm,15,1,5970,2.8,,">=6000 (top of key, saturated)"
+RoM2M,RoM2L,15,2,5970,3.3,,">=6000 (top of key, saturated)"
+RoM2M,RoM1C,15,3,4160,3.0,,ok
+RoM2M,MeLc,15,4,5970,1.4,,">=6000 (top of key, saturated)"
+RoM2M,RoM3M #1,15,5,5970,1.4,,">=6000 (top of key, saturated)"
+RoM2M,MeLr,15,6,5970,4.4,,">=6000 (top of key, saturated)"
+RoM2M,MiD3i,15,7,5970,5.4,,">=6000 (top of key, saturated)"
+RoM2M,Mauthner,15,8,5970,2.8,,">=6000 (top of key, saturated)"
+RoM2M,RoM3L,15,9,2340,1.7,,ok
+RoM2M,MiD2cm,15,10,5980,4.0,,">=6000 (top of key, saturated)"
+RoM2M,MiD2i,15,11,5970,2.8,,">=6000 (top of key, saturated)"
+RoM2M,MiR1,15,12,2290,1.9,,ok
+RoM2M,MiM1 #1,15,13,5980,2.0,,">=6000 (top of key, saturated)"
+RoM2M,MiR2,15,14,3340,2.6,,ok
+RoM2M,RoM2M,15,15,2580,7.4,black,ok
+RoM2M,MiM1 #2,15,16,5980,2.5,,">=6000 (top of key, saturated)"
+RoM2M,MeMd,15,17,5980,1.6,,">=6000 (top of key, saturated)"
+RoM2M,RoM3M #2,15,18,4040,5.4,,ok
+RoM2M,MeLm,15,19,3100,1.3,,ok
+RoM2M,MeMv,15,20,5730,2.8,,ok
+RoM2M,CaV,15,21,5980,7.4,,">=6000 (top of key, saturated)"
+RoM2M,RoM1R,15,22,5970,1.3,,">=6000 (top of key, saturated)"
+MiM1 #2,MiD3cm,16,1,5970,3.3,,">=6000 (top of key, saturated)"
+MiM1 #2,RoM2L,16,2,3160,3.6,,ok
+MiM1 #2,RoM1C,16,3,5970,2.3,,">=6000 (top of key, saturated)"
+MiM1 #2,MeLc,16,4,3140,4.0,,ok
+MiM1 #2,RoM3M #1,16,5,3550,2.1,,ok
+MiM1 #2,MeLr,16,6,3600,4.3,,ok
+MiM1 #2,MiD3i,16,7,2570,2.8,,ok
+MiM1 #2,Mauthner,16,8,5980,3.0,,">=6000 (top of key, saturated)"
+MiM1 #2,RoM3L,16,9,5970,4.0,,">=6000 (top of key, saturated)"
+MiM1 #2,MiD2cm,16,10,5970,3.0,,">=6000 (top of key, saturated)"
+MiM1 #2,MiD2i,16,11,3070,2.0,,ok
+MiM1 #2,MiR1,16,12,5970,2.4,,">=6000 (top of key, saturated)"
+MiM1 #2,MiM1 #1,16,13,3160,3.1,,ok
+MiM1 #2,MiR2,16,14,5970,3.5,,">=6000 (top of key, saturated)"
+MiM1 #2,RoM2M,16,15,5970,2.3,,">=6000 (top of key, saturated)"
+MiM1 #2,MiM1 #2,16,16,2690,6.5,black,ok
+MiM1 #2,MeMd,16,17,5660,1.5,,ok
+MiM1 #2,RoM3M #2,16,18,5970,2.4,,">=6000 (top of key, saturated)"
+MiM1 #2,MeLm,16,19,5970,3.5,,">=6000 (top of key, saturated)"
+MiM1 #2,MeMv,16,20,5970,3.1,,">=6000 (top of key, saturated)"
+MiM1 #2,CaV,16,21,5980,1.8,,">=6000 (top of key, saturated)"
+MiM1 #2,RoM1R,16,22,5970,1.5,,">=6000 (top of key, saturated)"
+MeMd,MiD3cm,17,1,5980,2.2,,">=6000 (top of key, saturated)"
+MeMd,RoM2L,17,2,3340,1.2,,ok
+MeMd,RoM1C,17,3,5980,1.6,,">=6000 (top of key, saturated)"
+MeMd,MeLc,17,4,5000,2.2,,ok
+MeMd,RoM3M #1,17,5,3460,1.5,,ok
+MeMd,MeLr,17,6,3110,0.6,,ok
+MeMd,MiD3i,17,7,5980,1.8,,">=6000 (top of key, saturated)"
+MeMd,Mauthner,17,8,5980,1.6,,">=6000 (top of key, saturated)"
+MeMd,RoM3L,17,9,5980,1.6,,">=6000 (top of key, saturated)"
+MeMd,MiD2cm,17,10,5980,1.7,,">=6000 (top of key, saturated)"
+MeMd,MiD2i,17,11,4780,1.9,,ok
+MeMd,MiR1,17,12,5970,1.7,,">=6000 (top of key, saturated)"
+MeMd,MiM1 #1,17,13,3990,2.0,,ok
+MeMd,MiR2,17,14,5980,1.6,,">=6000 (top of key, saturated)"
+MeMd,RoM2M,17,15,5970,3.1,,">=6000 (top of key, saturated)"
+MeMd,MiM1 #2,17,16,5840,0.8,,ok
+MeMd,MeMd,17,17,2790,2.9,black,ok
+MeMd,RoM3M #2,17,18,5980,1.0,,">=6000 (top of key, saturated)"
+MeMd,MeLm,17,19,5980,2.2,,">=6000 (top of key, saturated)"
+MeMd,MeMv,17,20,5970,4.4,,">=6000 (top of key, saturated)"
+MeMd,CaV,17,21,5980,2.5,,">=6000 (top of key, saturated)"
+MeMd,RoM1R,17,22,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,MiD3cm,18,1,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM2L,18,2,5980,3.5,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM1C,18,3,5980,2.8,,">=6000 (top of key, saturated)"
+RoM3M #2,MeLc,18,4,5970,2.8,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM3M #1,18,5,5980,2.5,,">=6000 (top of key, saturated)"
+RoM3M #2,MeLr,18,6,5970,2.1,,">=6000 (top of key, saturated)"
+RoM3M #2,MiD3i,18,7,5980,3.5,,">=6000 (top of key, saturated)"
+RoM3M #2,Mauthner,18,8,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM3L,18,9,3800,3.0,,ok
+RoM3M #2,MiD2cm,18,10,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,MiD2i,18,11,5970,1.0,,">=6000 (top of key, saturated)"
+RoM3M #2,MiR1,18,12,3470,3.4,,ok
+RoM3M #2,MiM1 #1,18,13,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,MiR2,18,14,3350,2.7,,ok
+RoM3M #2,RoM2M,18,15,2420,1.6,,ok
+RoM3M #2,MiM1 #2,18,16,5970,2.8,,">=6000 (top of key, saturated)"
+RoM3M #2,MeMd,18,17,5970,3.3,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM3M #2,18,18,2860,3.2,black,ok
+RoM3M #2,MeLm,18,19,4040,4.6,,ok
+RoM3M #2,MeMv,18,20,5980,2.2,,">=6000 (top of key, saturated)"
+RoM3M #2,CaV,18,21,5970,1.9,,">=6000 (top of key, saturated)"
+RoM3M #2,RoM1R,18,22,5980,2.2,,">=6000 (top of key, saturated)"
+MeLm,MiD3cm,19,1,5980,2.2,,">=6000 (top of key, saturated)"
+MeLm,RoM2L,19,2,5990,3.4,,">=6000 (top of key, saturated)"
+MeLm,RoM1C,19,3,5980,4.0,,">=6000 (top of key, saturated)"
+MeLm,MeLc,19,4,5970,3.1,,">=6000 (top of key, saturated)"
+MeLm,RoM3M #1,19,5,5980,1.6,,">=6000 (top of key, saturated)"
+MeLm,MeLr,19,6,5970,1.3,,">=6000 (top of key, saturated)"
+MeLm,MiD3i,19,7,5980,2.2,,">=6000 (top of key, saturated)"
+MeLm,Mauthner,19,8,5980,1.8,,">=6000 (top of key, saturated)"
+MeLm,RoM3L,19,9,5970,1.5,,">=6000 (top of key, saturated)"
+MeLm,MiD2cm,19,10,5970,1.7,,">=6000 (top of key, saturated)"
+MeLm,MiD2i,19,11,5970,2.8,,">=6000 (top of key, saturated)"
+MeLm,MiR1,19,12,5970,1.7,,">=6000 (top of key, saturated)"
+MeLm,MiM1 #1,19,13,5980,4.4,,">=6000 (top of key, saturated)"
+MeLm,MiR2,19,14,5970,3.3,,">=6000 (top of key, saturated)"
+MeLm,RoM2M,19,15,5980,1.8,,">=6000 (top of key, saturated)"
+MeLm,MiM1 #2,19,16,5970,1.4,,">=6000 (top of key, saturated)"
+MeLm,MeMd,19,17,5970,2.3,,">=6000 (top of key, saturated)"
+MeLm,RoM3M #2,19,18,5980,1.8,,">=6000 (top of key, saturated)"
+MeLm,MeLm,19,19,2990,1.7,black,ok
+MeLm,MeMv,19,20,4500,1.4,,ok
+MeLm,CaV,19,21,5990,4.3,,">=6000 (top of key, saturated)"
+MeLm,RoM1R,19,22,5980,1.7,,">=6000 (top of key, saturated)"
+MeMv,MiD3cm,20,1,5980,1.6,,">=6000 (top of key, saturated)"
+MeMv,RoM2L,20,2,5980,5.8,,">=6000 (top of key, saturated)"
+MeMv,RoM1C,20,3,4910,2.3,,ok
+MeMv,MeLc,20,4,5970,2.8,,">=6000 (top of key, saturated)"
+MeMv,RoM3M #1,20,5,5980,2.5,,">=6000 (top of key, saturated)"
+MeMv,MeLr,20,6,5970,4.0,,">=6000 (top of key, saturated)"
+MeMv,MiD3i,20,7,5980,3.5,,">=6000 (top of key, saturated)"
+MeMv,Mauthner,20,8,5980,2.0,,">=6000 (top of key, saturated)"
+MeMv,RoM3L,20,9,4580,2.5,,ok
+MeMv,MiD2cm,20,10,5970,3.2,,">=6000 (top of key, saturated)"
+MeMv,MiD2i,20,11,5970,2.8,,">=6000 (top of key, saturated)"
+MeMv,MiR1,20,12,4430,1.7,,ok
+MeMv,MiM1 #1,20,13,5990,2.6,,">=6000 (top of key, saturated)"
+MeMv,MiR2,20,14,5600,1.7,,ok
+MeMv,RoM2M,20,15,4940,0.8,,ok
+MeMv,MiM1 #2,20,16,5980,1.6,,">=6000 (top of key, saturated)"
+MeMv,MeMd,20,17,5970,5.0,,">=6000 (top of key, saturated)"
+MeMv,RoM3M #2,20,18,5980,1.6,,">=6000 (top of key, saturated)"
+MeMv,MeLm,20,19,3220,2.4,,ok
+MeMv,MeMv,20,20,3350,4.9,black,ok
+MeMv,CaV,20,21,5970,3.3,,">=6000 (top of key, saturated)"
+MeMv,RoM1R,20,22,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,MiD3cm,21,1,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,RoM2L,21,2,5970,3.5,,">=6000 (top of key, saturated)"
+CaV,RoM1C,21,3,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,MeLc,21,4,5980,2.5,,">=6000 (top of key, saturated)"
+CaV,RoM3M #1,21,5,5970,2.3,,">=6000 (top of key, saturated)"
+CaV,MeLr,21,6,5970,4.0,,">=6000 (top of key, saturated)"
+CaV,MiD3i,21,7,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,Mauthner,21,8,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,RoM3L,21,9,5980,1.6,,">=6000 (top of key, saturated)"
+CaV,MiD2cm,21,10,5970,1.3,,">=6000 (top of key, saturated)"
+CaV,MiD2i,21,11,5970,1.3,,">=6000 (top of key, saturated)"
+CaV,MiR1,21,12,5970,0.9,,">=6000 (top of key, saturated)"
+CaV,MiM1 #1,21,13,5970,2.8,,">=6000 (top of key, saturated)"
+CaV,MiR2,21,14,5980,4.4,,">=6000 (top of key, saturated)"
+CaV,RoM2M,21,15,5970,3.5,,">=6000 (top of key, saturated)"
+CaV,MiM1 #2,21,16,5980,1.7,,">=6000 (top of key, saturated)"
+CaV,MeMd,21,17,5970,3.1,,">=6000 (top of key, saturated)"
+CaV,RoM3M #2,21,18,5980,2.2,,">=6000 (top of key, saturated)"
+CaV,MeLm,21,19,5970,3.5,,">=6000 (top of key, saturated)"
+CaV,MeMv,21,20,5970,4.4,,">=6000 (top of key, saturated)"
+CaV,CaV,21,21,3570,3.6,black,ok
+CaV,RoM1R,21,22,5970,2.5,,">=6000 (top of key, saturated)"
+RoM1R,MiD3cm,22,1,5980,2.0,,">=6000 (top of key, saturated)"
+RoM1R,RoM2L,22,2,5980,3.7,,">=6000 (top of key, saturated)"
+RoM1R,RoM1C,22,3,5980,2.2,,">=6000 (top of key, saturated)"
+RoM1R,MeLc,22,4,5970,3.1,,">=6000 (top of key, saturated)"
+RoM1R,RoM3M #1,22,5,5980,0.8,,">=6000 (top of key, saturated)"
+RoM1R,MeLr,22,6,5970,2.1,,">=6000 (top of key, saturated)"
+RoM1R,MiD3i,22,7,5980,2.8,,">=6000 (top of key, saturated)"
+RoM1R,Mauthner,22,8,5980,2.0,,">=6000 (top of key, saturated)"
+RoM1R,RoM3L,22,9,5980,1.7,,">=6000 (top of key, saturated)"
+RoM1R,MiD2cm,22,10,5980,4.0,,">=6000 (top of key, saturated)"
+RoM1R,MiD2i,22,11,5980,3.0,,">=6000 (top of key, saturated)"
+RoM1R,MiR1,22,12,5970,1.5,,">=6000 (top of key, saturated)"
+RoM1R,MiM1 #1,22,13,5980,2.8,,">=6000 (top of key, saturated)"
+RoM1R,MiR2,22,14,5980,2.0,,">=6000 (top of key, saturated)"
+RoM1R,RoM2M,22,15,5970,1.4,,">=6000 (top of key, saturated)"
+RoM1R,MiM1 #2,22,16,5970,3.6,,">=6000 (top of key, saturated)"
+RoM1R,MeMd,22,17,5970,2.1,,">=6000 (top of key, saturated)"
+RoM1R,RoM3M #2,22,18,5980,2.5,,">=6000 (top of key, saturated)"
+RoM1R,MeLm,22,19,5980,2.0,,">=6000 (top of key, saturated)"
+RoM1R,MeMv,22,20,5980,1.5,,">=6000 (top of key, saturated)"
+RoM1R,CaV,22,21,5970,1.2,,">=6000 (top of key, saturated)"
+RoM1R,RoM1R,22,22,5050,17.9,black,ok

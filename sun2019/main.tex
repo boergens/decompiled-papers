@@ -1,0 +1,381 @@
+\documentclass{article}
+\usepackage{decomp}
+\newcommand{\envelope}{{\fontspec{DejaVu Sans}✉}}
+\begin{document}
+
+\sourcefile{source/sun2019.pdf}
+\decompnote{Publisher version of record (Springer typeset PDF, 11 pages, Nanomanufacturing and Metrology 2:45--55), open access under CC BY 4.0. Running headers (journal name, volume and pages, page numbers), the Springer logo in the footers, the ``Check for updates'' button, the ORCID icon after the first author's name and the ``Vol.:(0123456789)'' stamp on p.\,1 are left out.}
+
+\pdfpage{1}
+\noindent Nanomanufacturing and Metrology (2019) 2:45–55\\
+https://doi.org/10.1007/s41871-018-0034-7
+
+\noindent\textbf{ORIGINAL ARTICLES}
+
+\section*{Homogeneous and Localized Deformation in Poly(Methyl Methacrylate) Nanocutting}
+
+\noindent\textbf{Fengzhen Sun\textsuperscript{1,2} · E. Kristofer Gamstedt\textsuperscript{1}}
+
+\begin{quote}\small
+\noindent \envelope\ Fengzhen Sun\\
+f.sun@imperial.ac.uk
+
+\noindent \textsuperscript{1}\quad Department of Engineering Sciences, Uppsala University, 751 21 Uppsala, Sweden
+
+\noindent \textsuperscript{2}\quad Department of Mechanical Engineering, Imperial College London, London SW7 2AZ, UK
+\end{quote}
+\decompnote{The corresponding-author note and the two affiliations are printed as a footnote at the bottom of the left column of p.\,1; they are placed here after the author line.}
+
+\noindent Received: 17 September 2018 / Revised: 7 December 2018 / Accepted: 17 December 2018 / Published online: 1 February 2019\\
+© The Author(s) 2019
+
+\subsection*{Abstract}
+Nanoscale manufacturing imposes demands on prediction of cutting processes on small scales. Predictive modeling schemes based on the underlying physical mechanisms could potentially be more generally applicable in manufacturing. In this work, the experimental and numerical studies on polymethyl methacrylate (PMMA) nanocutting are reported. The cutting experiments were performed on an ultramicrotome instrumented with piezoelectric transducers to measure the cutting forces on cutting down to about 60 nm thickness. Using atomic force microscopy, the surface damage was identified as shear yield bands triggered by adiabatic heating. A suitable physical model including these observed phenomena made it possible to link the processing conditions with the onset of damage, i.e., the transition between a high-quality transparent surface and a damaged uneven surface. Finite element analysis was carried out to investigate the deformation modes of PMMA under different cutting conditions and to predict the formation of the undesired shear bands. From an engineering perspective, such an approach could be potentially useful in improving manufacturing control.
+
+\noindent\textbf{Keywords}\quad Nanocutting · Shear band · Adiabatic shearing · Deformation mode
+
+\section*{1\quad Introduction}
+
+The fast development in device miniaturization demands increased abilities to manipulate matter at nanoscale and even atomic level. Cutting of polymers at nanoscale (submicroscale) is of great significance in manufacturing components and devices for electrical and optical applications [1]. As cutting goes down to small scales, the mechanical mechanisms related to material volume (e.g., the plastic work) are increasingly restricted, while the mechanisms related to surface area (e.g., adhesion, fracture) become relatively more significant [2].
+
+Polymers can deform plastically, with chain molecules sliding past each other over relatively large distances. The plastic behavior of amorphous polymers strongly depends on the temperature and deformation rate [3]. Far below the glass transition temperature \emph{T}\textsubscript{g}, chain molecules cannot easily slide past each other because the secondary bonds between molecules are tight. As polymers are subjected to external loading, brittle failure usually takes place by breaking the intermolecular bonds [4]. When the temperature approaches about 0.8\emph{T}\textsubscript{g}, the molecules gain some mobility and polymers exhibit certain ductility. When the temperature approaches \emph{T}\textsubscript{g}, the chain molecules become more mobile and can rearrange under loading. Under sufficient large deformation, molecular chains are drawn and orientated in parallel, leading to local hardening in the direction of loading. If the temperature exceeds \emph{T}\textsubscript{g}, the molecules obtain very high mobility and polymers show relatively viscous behavior. Varying the strain rate also influences the deformation mode. Generally, increasing the strain rate, i.e., decreasing the testing time, is equivalent to decrease the temperature. However, increasing the strain rate may lead to the isothermal–adiabatic transition. Under high rate plastic deformation, the heat converted from the plastic work in polymer cannot dissipate to the surrounding regions rapidly due to the low thermal diffusivities (\textasciitilde\,10\textsuperscript{−7} m\textsuperscript{2}/s, two orders of magnitude lower than metals [5]), and thus it results in thermal softening, which can lead to brittle-ductile deformation transition [6]. In addition, a glassy polymer exhibits apparent scale effects (or cube–square scaling effects) [2]; namely it tends to deform \pdfpage{2}in a ductile manner at small scale while behaves in a brittle fashion at large scale. Since cutting is a shear-dominated dynamic process, glassy polymer may exhibit different deformation modes when the cutting speed or cutting thickness (depth of cut) varies, which directly influence the surface qualities in manufacturing of engineering applications.
+
+Investigating the mechanical response of glassy polymers during cutting process is important for both scientific studies and engineering applications. The main objective of this study is to reveal the mechanisms that govern the deformation behavior of polymeric material during nanocutting by well-controlled experiments and modeling. Such knowledge can be useful in controlling and limiting damage formation in manufacturing of small-scale polymer components, and in models predicting the mechanical behavior on the submicrometer level in polymer–matrix composites.
+
+\section*{2\quad Nanocutting Experiments}
+
+In order to have a complete structure and content, some experimental work and results already published in Refs [7] and [8] are briefly summarized in the beginning of this paper.
+
+\subsection*{2.1\quad Experiment Setup}
+
+In order to assess the mechanical behavior of polymers during nanocutting process, an ultramicrotome instrumented with sensitive piezoelectric load sensors (PCB Piezotronics, 209A12) was set up, as shown in Fig.~1. This instrumented ultramicrotome can measure the cutting forces along and normal to the cutting directions. A diamond knife tool (Diatome MC3295, nominal edge radius of 7 nm) attached with a water trough was used in this machine. The diamond knife was installed on the knife stage which can only move along the horizontal axis. The rake angle of the knife was set to 40°. The ultramicrotome can advance the knife with a minimum of 5 nm and maximum of 200 nm distance by a thermal-feed control unit. A CCD eyepiece camera (ToupTek, S3CMOS) was installed on this ultramicrotome to provide high-quality images of the formed chips, which were used to determine the thickness of the obtained chips.
+
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Fig. 1}\quad An ultramicrotome instrumented with piezoelectric sensors for nanocutting test, adopted from [7]
+\alttext{Colour photograph of the laboratory set-up on a bench. In the centre stands an ultramicrotome with a dark-blue body and a white stereo microscope on top; the lettering ``Reichert-Jung'' is on the front of its base. Three labelled red arrows point at parts of it: ``CCD camera'' (a cylindrical camera fitted in one eyepiece of the microscope, upper centre, with a blue cable), ``Sample holder'' (the specimen arm below the microscope, centre) and ``Diamond knife'' (the knife holder in front of the sample holder, just below it). A laptop on the left shows a grey camera image; a laptop on the right shows a software window with a black panel holding a periodic white signal trace. A control box with red digital displays stands at the lower left; a grey data-acquisition box, a green terminal board and two small signal-conditioner boxes with cables lie at the lower right.}
+\decompnote{Fig.~1 is printed at the bottom of the left column of p.\,2, inside the paragraph above; it is placed after that paragraph.}
+
+\subsection*{2.2\quad Materials and Methods}
+
+A commercial extruded polymethyl methacrylate (PMMA, 2 mm thickness, tensile strength of 70 MPa and Young’s modulus of 3.2 GPa) plate provided by Quinn Plastics was chosen for the nanocutting. PMMA was selected as a model material, since it is amorphous and widely used in optical and electronics applications. The PMMA samples were prepared according to the ultramicrotome manual.
+
+Nanocutting at different thicknesses (\emph{t}\textsubscript{u}) and speeds (\emph{v}\textsubscript{0}), as shown in Table~1, were carried out. After nanocutting, the cut surfaces of the work material were examined by atomic force microscopy (AFM, Bruker Multimode 8) in the ScanAsyst mode based on a peak force tapping mechanism, using a silicon tip with a radius of 3 nm.
+
+\section*{3\quad Experimental Results}
+
+This section presents the results of the two sets of nanocutting experiments described above in terms of the macroscopic features of the formed PMMA chips, the cut surfaces of the work material, and the mechanical behavior. More details about the experiments can be found in [7, 8].
+
+\subsection*{3.1\quad Nanocutting with Varying \emph{t}\textsubscript{u}}
+
+\subsubsection*{3.1.1\quad Chip and Surface Morphologies}
+
+Figure~2 displays the macroscopic features of PMMA chips formed at \emph{t}\textsubscript{u}\,=\,60 nm and \emph{t}\textsubscript{u}\,=\,140 nm, which were taken through the CCD camera. It shows that the formed PMMA chips had integral shapes, which implies that the nanocutting was governed by a ductile deformation mechanism [2, 9]. Figure~2 also indicates that microcracks were formed in the chips, orientating in the transverse direction.
+
+\begin{center}
+\noindent\textbf{Table 1}\quad Experimental settings for cutting thickness and speed\par\medskip
+\begin{tabular}{lll}
+\toprule
+ & \emph{t}\textsubscript{u} (nm) & \emph{v}\textsubscript{0} (mm/s) \\
+\midrule
+Varying \emph{t}\textsubscript{u} & 60, 85, 110, 140, 170, 200 & 1.0 \\
+Varying \emph{v}\textsubscript{0} & 85 & 0.25, 0.5, 1.0, 3.0, 10.0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\pdfpage{3}
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Fig. 2}\quad Macroscopic appearances of the formed PMMA chips, from [7]
+\alttext{Two colour light-microscope images (CCD camera) of PMMA chips, side by side, each with a white double-headed arrow across the chip width and its length printed above it. (a) Label ``(a) \emph{t}\textsubscript{u}=60 nm''; arrow labelled ``0.60 mm''. The chip is a roughly rectangular, partly transparent band lying vertically in the image, with bluish-white and dark regions, several bright vertical streaks, and many short dark horizontal marks (cracks across the chip, i.e.\ transverse) concentrated in its middle and right part; a horizontal break or fold runs across it at about mid-height. (b) Label ``(b) \emph{t}\textsubscript{u}=140 nm''; arrow labelled ``0.47 mm'' (the chip is visibly narrower than in (a)). This chip appears brownish-yellow and violet, densely covered with dark, horizontally elongated transverse marks across most of its width, with ragged, serrated left and right edges.}
+
+\begin{center}
+\includegraphics[width=0.55\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Fig. 3}\quad Chip thickness and shear plane angle as a function of the cutting thickness
+\alttext{Line plot with two y axes. x axis ``Cutting thickness (nm)'', a category axis with six evenly spaced labels 60, 85, 110, 140, 170, 200 (not to scale), with tick marks between and at the categories. Left y axis ``Chip thickness (nm)'', linear, 0 to 300 in steps of 50. Right y axis ``Shear plane angle (°)'', linear, 40 to 60 in steps of 5. Series ``chip thickness'' (filled circles, solid line, left axis; labelled with an arrow): rises monotonically, about 80, 102, 135, 175, 215 and 240 nm at the six cutting thicknesses. Series ``shear plane angle'' (filled squares, dashed line, right axis; labelled with an arrow): about 47.3° at 60 nm, jumps to about 54.0° at 85 nm, then 52.7°, 51.3°, 50.9° at 110, 140, 170 nm and back up to about 53.7° at 200 nm. The two lines cross near 140 nm, where the circle and square markers overlap. Values digitized (see the CSV).}
+\figuredata{(single panel)}{figures/fig3.csv}{figures/fig3.py}{tier 3, digitized from the embedded 300 ppi raster (marker centres; category x axis)}
+
+Due to the difficulty in quantifying the thickness of the nanoscale chips by experiment, the chip thickness is estimated as
+\begin{equation*}
+t_\mathrm{c} = \frac{w_\mathrm{u} l_\mathrm{u} t_\mathrm{u}}{w_\mathrm{c} l_\mathrm{c}} \tag{1}
+\end{equation*}
+where \emph{w}\textsubscript{u} is the cutting width, \emph{l}\textsubscript{u} is the cutting length, \emph{w}\textsubscript{c} is the chip width, and \emph{l}\textsubscript{c} is the chip length that were immediately measured after nanocutting using the installed CCD camera. Therefore, the angle of the shear plane \emph{ϕ} where plastic shearing mostly takes place can be obtained as
+\begin{equation*}
+\phi = \tan^{-1}\left(\frac{t_\mathrm{u}\cos\alpha}{t_\mathrm{c} - t_\mathrm{u}\sin\alpha}\right) \tag{2}
+\end{equation*}
+where \emph{α}\,=\,40° is the knife rake angle. The values of chip thickness and shear plane angle as a function of the cutting thickness are plotted in Fig.~3. It is seen that the chip thickness increases monotonically as the cutting thickness increases while the shear plane angle varies little for \emph{t}\textsubscript{u}\,≥\,85 nm.
+
+After nanocutting, the cut surfaces of the bulk PMMA were examined by AFM. A transition of the surface feature was found at a critical cutting thickness. Figure~4a displays the morphology of the surface cut at \emph{t}\textsubscript{u}\,=\,60 nm, flat and smooth. As \emph{t}\textsubscript{u} increased to 85 nm, short and weak wave-like features began to appear on the surface. As \emph{t}\textsubscript{u} increased \pdfpage{4}beyond 110 nm, pronounced periodic features formed on the surfaces [7]. These features oriented in parallel and perpendicular to the cutting direction, as shown in Fig.~4b. The average spacing between adjacent features exhibited a linear dependence on the cutting thickness [7]. The features were similar to these in metals and polymer composites [10, 11], which were explained by adiabatic shearing on the shear plane.
+
+\begin{center}
+\includegraphics[width=0.9\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Fig. 4}\quad AFM images of the cut surfaces created at \emph{t}\textsubscript{u}\,=\,60 and 140 nm, with arrows indicating the cutting directions
+\alttext{Two AFM height maps side by side, orange-brown colour scale. A vertical colour bar in panel (a) runs from black (bottom, ``-25.0 nm'') through dark red-brown and orange to white (top, ``25.0 nm''). A white scale bar at the bottom right of (a) is labelled ``400 nm''; panel (b) has no own scale bar. (a) Label ``\emph{t}\textsubscript{u}=60 nm'' at top left and ``(a)'' at bottom left. The surface is a nearly uniform orange with fine grainy texture and no visible structure. A thin, straight, light-yellow line runs diagonally from the top edge (centre) down to the right edge; a white double-headed arrow parallel to this line (upper right) marks the cutting direction. (b) Label ``\emph{t}\textsubscript{u}=140 nm'' at top left and ``(b)'' at bottom left. The surface shows many dark, irregular, roughly parallel stripes (periodic features) running from upper left to lower right, spaced roughly evenly across the whole image. A thin light-yellow line runs diagonally from the left edge (upper middle) down to the bottom edge (right of centre); a white double-headed arrow at the top right, parallel to that line, marks the cutting direction. Two white arrows below the label ``Periodic features'' point down at the stripes near the image centre.}
+\decompnote{Fig.~4 is printed at the bottom of p.\,3; it is placed after the paragraph that continues on p.\,4. The AFM maps carry a calibrated colour bar; the colour-to-height conversion is in figures/fig4a.csv and figures/fig4b.csv.}
+\figuredata{a}{figures/fig4a.csv}{figures/fig4a.py}{tier 3, height map digitized from the embedded JPEG through the printed colour bar (uncertainty large: JPEG colours, see CSV header)}
+\figuredata{b}{figures/fig4b.csv}{figures/fig4b.py}{tier 3, height map digitized from the embedded JPEG through the colour bar of panel (a) (see CSV header)}
+
+\subsubsection*{3.1.2\quad Fracture Energy}
+
+During cutting, two force components, the cutting force \emph{F}\textsubscript{c} and thrust force \emph{F}\textsubscript{t} which are, respectively, along and normal to the cutting direction, were collected by the load sensors instrumented in the sample holder (Table~2). The external work for cutting is mainly dissipated by plastic deformation, friction on the chip–knife interface and the fracture formation. The cutting force \emph{F}\textsubscript{c} satisfies the relation [12],
+\begin{equation*}
+\frac{F_\mathrm{c}}{w_\mathrm{u}} = \left(\frac{\tau_y\gamma}{Q}\right)t_\mathrm{u} + \frac{R}{Q} \tag{3}
+\end{equation*}
+where \emph{τ}\textsubscript{\emph{y}} is the flow stress of the material, \emph{γ} is the plastic strain, \emph{Q}\,=\,\{1\,−\,sin\emph{β}sin\emph{ϕ}/[cos(\emph{β}\,−\,\emph{α})cos(\emph{ϕ}\,−\,\emph{α})]\} is the friction parameter, \emph{R} is the fracture energy (work of surface formation), and \emph{β} is the Coulomb friction angle. The mechanical values of \emph{τ}\textsubscript{\emph{y}} and \emph{R} can be calculated by following the procedure described in Ref. [12].
+
+The calculated results show that \emph{τ}\textsubscript{\emph{y}} is \textasciitilde\,110 MPa and \emph{R} is around \textasciitilde\,10 J/m\textsuperscript{2} for the present PMMA at nanoscale cutting. It is notable that value of \emph{R} at nanoscale deformation and the theoretical free energy that required in creating new surfaces by breaking of covalent bonds (\textasciitilde\,1.5 J/m\textsuperscript{2}) are found to be in the same order of magnitude. The macroscopic fracture energy \emph{G}\textsubscript{c} is several orders of magnitude larger than \emph{R} of nanocutting. For instance, Wyeth and Atkins [13] obtained \emph{G}\textsubscript{c}\,=\,640 J/m\textsuperscript{2} for microcutting of PMMA, and Patel et al. [14] found the value of \emph{G}\textsubscript{c} for PMMA is around 1 kJ/m\textsuperscript{2} in macroscale cutting. This is because the size of the plastic zone in front of the crack tip is significantly restricted in nanocutting while it is much larger in macroscale deformation.
+
+\begin{center}
+\noindent\textbf{Table 2}\quad Average values of cutting force \emph{F}\textsubscript{c} and thrust force \emph{F}\textsubscript{t} during nanocutting at different thicknesses, \emph{v}\textsubscript{0}\,=\,1.0 mm/s\par\medskip
+\begin{tabular}{lll}
+\toprule
+\emph{t}\textsubscript{u} (nm) & \emph{F}\textsubscript{c}/\emph{w}\textsubscript{u} (N/m) & \emph{F}\textsubscript{t}/\emph{w}\textsubscript{u} (N/m) \\
+\midrule
+60 & 30 & 13 \\
+85 & 43 & 23 \\
+110 & 46 & 21 \\
+140 & 54 & 20 \\
+170 & 64 & 19 \\
+200 & 68 & 19 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table~2 is printed at the bottom of the left column of p.\,4, inside the paragraph that ends ``procedure described in Ref.\ [12].''; it is placed after the section text.}
+
+\subsection*{3.2\quad Nanocutting with Varying \emph{v}\textsubscript{0}}
+
+\subsubsection*{3.2.1\quad Chip and Surface Morphologies}
+
+Nanocutting was performed on PMMA with \emph{v}\textsubscript{0} varying from 0.25 to 10.0 mm/s, at the thickness \emph{t}\textsubscript{u}\,=\,85 nm. Figure~5 displays the macroscopic features of the PMMA chips that were made at \emph{v}\textsubscript{0}\,=\,0.25 and 10.0 mm/s. Similar to the results obtained in Fig.~2, the chips had integral shapes, indicating that the cutting process in this speed range was controlled by a ductile deformation mode. These chips were also associated with microcracks oriented in the transverse direction.
+
+The values of chip thickness and shear plane angle as a function of the cutting speed are given in Fig.~6. It can be seen that the chip thickness increases monotonically as the cutting speed increases from 0.25 to 1.0 mm/s and then decreases slightly, while the shear plane angle shows an opposite trend.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Fig. 5}\quad Macroscopic appearances of formed PMMA chips, from [8]
+\alttext{Two colour light-microscope images (CCD camera) of PMMA chips side by side, each with a white double-headed arrow across the chip width labelled ``0.61 mm''. (a) Label ``(a) \emph{v}\textsubscript{0}=0.25 mm/s''. A pale, partly transparent rectangular chip occupies the middle; it is covered with many short dark-red/brown horizontal (transverse) marks arranged in vertical columns, with brighter vertical bands between them; another chip segment with similar striped marks is visible above it, and a pale strip below it. (b) Label ``(b) \emph{v}\textsubscript{0}=10.0 mm/s''. Two pale yellowish rectangular chip segments, one above the other, separated by a dark horizontal gap; both carry dense short dark horizontal marks concentrated in vertical bands in their middle and right parts, and fine horizontal striation over the whole width.}
+
+\pdfpage{5}
+\begin{center}
+\includegraphics[width=0.55\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Fig. 6}\quad Chip thickness and shear plane angle as a function of the cutting speed
+\alttext{Line plot with two y axes. x axis ``Cutting speed (mm/s)'', linear, 0 to 10 with ticks every 1 (the frame ends at about 10.5). Left y axis ``Chip thickness (nm)'', linear, 86 to 100 in steps of 2. Right y axis ``Shear plane angle (°)'', linear, labels 53 to 67 in steps of 2 (frame top about 68). Markers at the five tested speeds 0.25, 0.5, 1, 3 and 10 mm/s. Series ``chip thickness'' (filled circles, solid line, left axis; labelled with an arrow): about 87 nm at 0.25, 93 at 0.5, a maximum of 98 at 1, down to 92 at 3, and 96 at 10 mm/s. Series ``shear plane angle'' (filled squares, dashed line, right axis; labelled with an arrow): about 63.6° at 0.25, 59.5° at 0.5, a minimum of 56.3° at 1, 60.2° at 3 and 57.6° at 10 mm/s; it mirrors the chip-thickness curve. Values digitized (see the CSV).}
+\figuredata{(single panel)}{figures/fig6.csv}{figures/fig6.py}{tier 3, digitized from the embedded 300 ppi raster (marker centres)}
+
+The AFM morphologies of the cut surface of bulk PMMA made with varying speeds are displayed in Fig.~7. Below \emph{v}\textsubscript{0}\,=\,1.0 mm/s, the surfaces were rather flat, while above this speed periodic structures oriented perpendicular to the cutting direction were formed. This can be observed from the plots of surface height profile along the cutting direction measured by AFM, shown in Fig.~8.
+
+\subsubsection*{3.2.2\quad Mechanical Response}
+
+The measured values of the cutting force \emph{F}\textsubscript{c} and thrust force \emph{F}\textsubscript{t} are given in Table~3. The cutting force \emph{F}\textsubscript{c} increases as \emph{v}\textsubscript{0} increases from 0.5 to 1.0 mm/s but decreases with further increase in cutting speed. It implies that the strain rate hardening due to the increasing cutting speed probably was diminished by thermal softening or damage mechanisms.
+
+\begin{center}
+\includegraphics[width=0.55\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Fig. 8}\quad Experimental surface heights along the cutting direction, from [8]
+\alttext{Line plot of five AFM height profiles, each in its own colour and labelled in that colour directly above or on the line. x axis ``Distance (nm)'', linear, labels 0 to 500 in steps of 100 (ticks every 50; axis from about −60 to 530). y axis ``Relative height (nm)'', linear, 0 to 10 in steps of 1 (ticks every 0.5). The profiles are stacked with vertical offsets, from top to bottom: black ``\emph{v}\textsubscript{0}=0.25 mm s\textsuperscript{-1}'' (0 to 500 nm), nearly flat between about 8.1 and 8.6 nm with small irregular undulations; red ``\emph{v}\textsubscript{0}=0.5 mm s\textsuperscript{-1}'' (0 to about 515 nm), nearly flat between about 6.7 and 7.1 nm; blue ``\emph{v}\textsubscript{0}=1.0 mm s\textsuperscript{-1}'' (0 to about 490 nm), between about 3.9 and 6.5 nm, with three deep, wide troughs near 35, 200–215 and 430 nm separated by higher, bumpy plateaus around 5.3–6.4 nm; green ``\emph{v}\textsubscript{0}=3.0 mm s\textsuperscript{-1}'' (0 to about 490 nm), between about 2.7 and 4.3 nm, with troughs near 90, 190, 300 and 390 nm and peaks near 135, 260, 345 and 420 nm; magenta ``\emph{v}\textsubscript{0}=10.0 mm s\textsuperscript{-1}'' (0 to 500 nm), between about 0.45 and 2.8 nm, starting at about 2.8 nm, with deep troughs near 60 nm (about 0.45 nm), 160 nm (about 0.9 nm) and 320 nm (about 1.0 nm) and peaks near 110, 260 and 390 nm, ending flatter at about 1.6–1.8 nm. The labels of the blue, green and magenta curves overlap their own lines. Values digitized (see the CSV).}
+\figuredata{(single panel)}{figures/fig8.csv}{figures/fig8.py}{tier 3, digitized from the embedded 300 ppi raster (colour masks per pixel column; short gaps where a line crosses its own label)}
+
+\section*{4\quad Analysis and Discussions}
+
+By comparing the surface morphology results shown above with findings in literature [10, 15], we attribute the periodic structures to the adiabatic shearing deformation mechanism during nanocutting. In this section, analytical and finite element modeling work including these physical mechanisms was conducted and compared with the experimental results.
+
+\subsection*{4.1\quad Adiabatic Shearing Modeling}
+
+During plastic deformation, the increase in temperature has a negative effect on the material strength. If this effect overweighs the positive effect due to the strain rate hardening, a shear instability occurs [6]. Essentially, if the stress in the primary shear zone (PSZ), \emph{τ}\textsubscript{PSZ}, is surpassed by the stress in the bulk material, \emph{τ}\textsubscript{Bulk}, a shear localization event takes place.
+
+\begin{center}
+\includegraphics[width=0.9\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Fig. 7}\quad AFM images of the cut surfaces created at \emph{v}\textsubscript{0}\,=\,0.5 and 3.0 mm/s, with arrows indicating the cutting directions
+\alttext{A vertical colour bar at the left, from black (bottom, ``-3.0 nm'') through dark brown and orange to white (top, ``3.0 nm''), and two AFM height maps in an orange-brown colour scale, each with a white scale bar ``400 nm'' at the bottom right. (a) Label ``(a) 0.5 mm s\textsuperscript{−1}''. A mottled surface with fine, irregular, short light and dark streaks, many of them running from lower left to upper right; a brighter diagonal band crosses the bottom right corner. A white double-headed arrow at the lower left, pointing from lower left to upper right, marks the cutting direction. (b) Label ``(b) 3.0 mm s\textsuperscript{−1}''. The surface is covered by fine, closely spaced, roughly vertical light and dark streaks over the whole image (perpendicular to the cutting direction). A white horizontal double-headed arrow at the left marks the cutting direction.}
+\decompnote{Fig.~7 is printed at the bottom of p.\,5, below both columns; Fig.~8 is printed at the top of its right column, above Section 4.}
+\figuredata{a}{figures/fig7a.csv}{figures/fig7a.py}{tier 3, height map digitized from the embedded JPEG through the printed colour bar (uncertainty large: JPEG colours, see CSV header)}
+\figuredata{b}{figures/fig7b.csv}{figures/fig7b.py}{tier 3, height map digitized from the embedded JPEG through the printed colour bar (see CSV header)}
+
+\pdfpage{6}
+\begin{center}
+\noindent\textbf{Table 3}\quad Average values of cutting force and thrust force during nanocutting at different speeds, \emph{t}\textsubscript{u}\,=\,85 nm\par\medskip
+\begin{tabular}{lll}
+\toprule
+\emph{v}\textsubscript{0} (mm/s) & \emph{F}\textsubscript{c}/\emph{w}\textsubscript{u} (N/m) & \emph{F}\textsubscript{t}/\emph{w}\textsubscript{u} (N/m) \\
+\midrule
+0.25 & 30 & 4 \\
+0.5 & 35 & 2 \\
+1.0 & 42 & 4 \\
+3.0 & 39 & 15 \\
+10.0 & 37 & 63 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The effects of sectioning speed on temperature rise in the PSZ and in the bulk ahead were analyzed using Komanduri–Hou model [15, 16]. A schematic drawing of the process zones of cutting in shear-banding material is found in Fig.~9. The model divides the formation of shear band into the shearing stage and flattening stage, and each includes two primary heating mechanisms. In the shearing stage, the plastic deformation in the PSZ and the friction on the interface between the chip segment already formed and the knife are the main heating mechanisms. In the flattening stage, the shearing on the second shear plane and the friction on the interface of the chip segment being formed and the knife are the other two primary heat sources. For instance, the temperature rise \emph{θ} at an arbitrary position \emph{M}(\emph{x}, \emph{y}) due to the plastic deformation in the shearing stage is formulated in an integral form
+\begin{equation*}
+\theta_M = \frac{q_0}{2\pi\lambda}\left(1-\frac{t}{2t_0}\right)\int_0^{l_s}\Omega(p)\,\mathrm{d}y_i + \frac{q_0}{16\pi\lambda\alpha_t t_0}\int_0^{l_s} r_i^2\,\chi(p)\,\mathrm{d}y_i \tag{4}
+\end{equation*}
+where \emph{q}\textsubscript{0} is the heat flux, \emph{λ} is the thermal conductivity, \emph{t} is the duration of the heat source, \emph{t}\textsubscript{0}\,=\,\emph{l}\textsubscript{s}/\emph{v}\textsubscript{s} (\emph{l}\textsubscript{s} is the length of the PSZ, \emph{v}\textsubscript{s} is the shear velocity on PSZ), \emph{α}\textsubscript{t} is the thermal diffusivity, and
+\begin{equation*}
+\Omega(p) = \int_p^\infty \exp(-u^2)\big/u\,\mathrm{d}u, \quad \chi(p) = \int_p^\infty \exp(-u^2)\big/u^3\,\mathrm{d}u \tag{5}
+\end{equation*}
+in which \emph{p}\,=\,\emph{r}\textsubscript{\emph{i}}/$\sqrt{4\alpha_\mathrm{t}t}$ is a non-dimensional value and \emph{r}\textsubscript{\emph{i}}\,=\,$\sqrt{[x^2+(y-y_i)^2]}$ is the distance between the heat segment and the point \emph{M}(\emph{x}, \emph{y}).
+
+\begin{center}
+\includegraphics[width=0.5\linewidth,height=0.3\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Fig. 9}\quad Schematic illustration of the shear localization during cutting: (1) undeformed surfaces, (2) part of the shear failed surface separated from the following segment due to intense shear, (3) intense shear band formed due to shear in the flattening stage of the segment being formed, (4) intensely sheared surfaces of a segment in contact with the knife and subsequent slid on the tool face, and (5) intense localized deformation in the PSZ (Redrawn after Komanduri and Hou [15])
+\alttext{Black-and-white line drawing, side view of orthogonal cutting. The ``Knife'' (left) is a wedge whose cutting edge points down-right onto the horizontal surface of the cut workpiece at the bottom. The uncut layer of thickness \emph{t}\textsubscript{u} (dimension arrow at the right) lies to the right of the knife, with its undeformed top surface marked ``1'' (two arrows from the label ``1''). A segmented chip rises from the knife edge up and to the left along the knife face: it consists of stacked, sheared segments with saw-tooth outer edges; a dimension arrow along the knife face gives the chip thickness \emph{t}\textsubscript{c}. The angle \emph{α} is marked between the knife face and a thin vertical line through the edge. A dashed line from the knife edge to the upper right marks the primary shear plane at angle \emph{ϕ} to the horizontal (marked at the bottom); a second angle \emph{ϕ′} is marked at the base of the segment being formed. Numbered labels: ``2'' at a short gap between two segments near the top of the shear plane (part of the failed surface, with a small double arrow), ``3'' on a thin curved band inside the segment being formed (the intense shear band of the flattening stage), ``4'' at the segment surface next to the knife edge, and ``5'' (arrow) on the thin curved zone running from the knife edge to the free surface (the PSZ).}
+\decompnote{Fig.~9 is printed at the bottom of the left column of p.\,6 and Fig.~10 at the bottom of the right column; each is placed after the paragraph that ends next to it.}
+
+As discussed in Sect.~1, the mechanical behavior of polymers is highly affected by the deformation rates, temperature change, etc. These effects need to be included in physical models describing the cutting processes in polymers. The yield stress of PMMA, \emph{σ}\textsubscript{\emph{y}}, below the glass transition temperature is expressed as [3]
+\begin{equation*}
+\sigma_y = \sigma_i(0) - mT + \frac{2k_\mathrm{B}T}{V_\mathrm{a}}\sinh^{-1}\left(\frac{\dot{\varepsilon}}{\dot{\varepsilon}_0\exp\left(-\Delta H_\beta\big/k_\mathrm{B}T\right)}\right)^{1/n} \tag{6}
+\end{equation*}
+where \emph{σ}\textsubscript{\emph{i}}(0) is the athermal yield stress, \emph{m} is a softening parameter, \emph{k}\textsubscript{B} is the Boltzmann constant, \emph{V}\textsubscript{a} is the activation volume, $\dot{\varepsilon}$ is the strain rate, $\dot{\varepsilon}_0$ is a pre-exponential constant, Δ\emph{H}\textsubscript{β} is the activation energy, and \emph{n} is a molecular chain parameter. The values of the parameters in Eq.~(5) can be found in Richeton et al. [3].
+\decompnote{``Eq.~(5)'' as printed; the parameters listed belong to Eq.~(6).}
+
+The temperature and yield stress in the primary shear zone (PSZ) and in the bulk ahead of the PSZ were calculated separately (please refer to [8] for more details). Predictions show that the onset speed for shear banding in PMMA nanocutting is 4–5 mm/s, above which the yield stress in the PSZ was exceeded by the stress in the bulk (cf. Figure~10), and the shear banding takes place. The predicted critical speed for the onset of shear band generally agrees with the experimental result of \textasciitilde\,1 mm/s which is identified from Fig.~8.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth,height=0.35\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Fig. 10}\quad Shear stresses in the primary shear zone and in the bulk material as a function of the cutting speed, from [8]
+\alttext{Line plot. x axis ``Cutting speed \emph{v}\textsubscript{0}, mm/s'', linear, 0 to 10 (labels every 2, ticks every 1). y axis ``Shear stress \emph{τ}, MPa'', linear, labels 115 to 140 in steps of 5 (ticks every 2.5; the axis starts at about 113). Red solid line labelled \emph{τ}\textsubscript{PSZ}: starts at about 120 MPa at 0.25 mm/s, rises steeply (about 127 at 1 mm/s, 130 at 2.3 mm/s) and flattens towards about 133 MPa at 10 mm/s. Black dashed line labelled \emph{τ}\textsubscript{Bulk}: starts lower, at about 115 MPa at 0.25 mm/s, rises more slowly but keeps rising (about 125.5 at 1.5 mm/s, 130 at 3.2 mm/s) to about 136.5 MPa at 10 mm/s. The two lines cross at about 4.8 mm/s and 132 MPa; a thin grey vertical line is drawn through the crossing, and the text ``Critical \emph{v}\textsubscript{0}= 4.7 mm/s'' is printed below the curves. Below the crossing \emph{τ}\textsubscript{PSZ} is above \emph{τ}\textsubscript{Bulk}; above it, \emph{τ}\textsubscript{Bulk} is higher. Values digitized (see the CSV).}
+\figuredata{(single panel)}{figures/fig10.csv}{figures/fig10.py}{tier 3, digitized from the embedded 300 ppi JPEG (colour/grey masks per pixel column)}
+
+\pdfpage{7}
+\subsection*{4.2\quad Finite Element Analysis}
+
+Strictly, molecular dynamic (MD) method is more suitable for the nanocutting simulation than the finite element method considering the strong interplay among atoms and molecules under nanoscale deformation [17, 18]; however, the MD method can only model a rather small volume cutting due to its computational limits. Therefore, the commercial finite element code Abaqus/Explicit (version 2017) is chosen to investigate the nanocutting of PMMA. In lack of experimentally characterized constitutive relations of the present PMMA, the experimental stress–strain relationship already including the effect of adiabatic softening by Richeton et al. [3] was adopted (please refer to the original Fig.~2 in [3]) to describe the yield and post-yield behavior of PMMA. Figure~11 shows the 2D model for the cutting simulation. The CPE4R (4-node quadratic plane strain element with reduced integration) type elements were used for the chip and work material in the analysis. Pre-distorted meshes were generated in the chip zone to avoid severe element distortion during cutting [19]. The material separation between the chip and work material in front of the knife was achieved using a predefined cutting plane (a layer of 4-node elements) that joins the chip and work material parts. In the cutting plane, the built-in Abaqus shear damage model [20] was used and the material would degrade linearly (maximum failure displacement was equal to the size of the knife tip of 10 nm) after the equivalent strain reached the critical value of 0.5 determined according to [3]. A sharp diamond knife was assumed in the model considering the radius of the diamond knife tip is only few nanometers. It was assumed that there was no friction between the chip and knife for ultramicrotome cutting.
+
+In this simulation, the PMMA cutting at the thicknesses \emph{t}\textsubscript{u}\,=\,85 nm and \emph{t}\textsubscript{u}\,=\,200 nm was implemented, respectively, with the cutting speeds \emph{v}\textsubscript{0} varying from 0.01 to 1.0 mm/s. In the case of \emph{t}\textsubscript{u}\,=\,85 nm, a total of 20 elements were assigned along the chip thickness. In the case of \emph{t}\textsubscript{u}\,=\,200 nm, 40 elements were applied to have a similar mesh size for both chip parts.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Fig. 11}\quad 2D model used in the cutting simulation
+\alttext{Screenshot of the Abaqus finite element model on a white background. Bottom left: the workpiece, a wide green rectangle meshed with a fine regular grid of quadrilateral elements (element columns closer together than rows), with a thin black layer (densely meshed) along its top: the layer to be cut. Purple triangle symbols (boundary conditions) sit along the bottom edge (four, pointing up) and on the left and right edges (two each, pointing sideways). Small coordinate triads (Y up, X right) at the lower left. Right: the knife, a large green triangle meshed with triangular elements that are finer near its tip, which touches the top right corner of the workpiece. A large white arrow labelled ``\emph{v}\textsubscript{0}'' points from the knife to the left (direction of the knife motion relative to the workpiece). A red box around the contact region is shown enlarged in an inset at the top (red frame, connected by red dotted lines): the left part shows the chip layer's quadrilateral mesh, the knife's triangular mesh at the right with its face inclined at ``40 °'' from a thin vertical line, and a red arrow labelled ``cutting plane'' pointing at the horizontal boundary at the knife tip, between the upper (chip) mesh and the lower (work material) part.}
+
+\subsubsection*{4.2.1\quad \emph{t}\textsubscript{u}\,=\,85 nm}
+
+Figure~12 shows the equivalent plastic strain for the cutting at \emph{t}\textsubscript{u}\,=\,85 nm under different speeds. As indicated in Fig.~12a, a continuous chip forms at \emph{v}\textsubscript{0}\,=\,0.01 mm/s. The backside of the chip undergoes more plastic deformation than the front side due to the chip–knife contact and material separation mechanisms. As the cutting speed increases to \emph{v}\textsubscript{0}\,=\,0.1 mm/s, localized deformation takes place as shown in Fig.~12b. Intense plastic strain develops near the knife tip and propagates to the free surface of the chip. As a result, an inclined shear band forms in the chip, leading to a serrated chip profile. Under a larger cutting speed, e.g., \emph{v}\textsubscript{0}\,=\,1.0 mm/s in Fig.~12c, localized deformation takes place as well, and the spacing between the adjacent shear bands decreases compared to the cutting result in Fig.~12b. During the formation of a shear band, localized plastic deformation takes place on the cut surface of the work material simultaneously, as displayed in Fig.~12b, c. The localized plastic deformation on the cut surface probably corresponds to the observed periodic patterns in experiment (Fig.~7b). According to [21, 22], a crack forms on the cut surface as a shear band generates in the chip. Since a pre-cutting plane method is used in the simulation, these cracks could not be predicted using this method.
+
+The simulation reveals that the deformation in the chip transmits from a rather homogeneous mode to a localized mode as the cutting speed increases from 0.01 to 1.0 mm/s. As a result, the shape of the chip transmits from a continuous profile to a serrated one (localized shape). The predicted value of the critical speed for the onset of shear band is not discussed in this study since it can be easily obtained by a parametric study. Apparently, the value is much smaller than the experimental value of 1.0 mm/s.
+
+\subsubsection*{4.2.2\quad \emph{t}\textsubscript{u}\,=\,200 nm}
+
+Figure~13 shows the equivalent plastic strain for the cutting at \emph{t}\textsubscript{u}\,=\,200 nm under different speeds. Similar to the results in Fig.~12, continuous chip is obtained at \emph{v}\textsubscript{0}\,=\,0.01 mm/s and serrated chips are formed as the cutting speed increases.
+
+Comparing Fig.~13b with Fig.~12b as well as Fig.~13c with Fig.~12c, which were cut at identical speeds, we can find that the shear bands in a thicker cutting (Fig.~13, \emph{t}\textsubscript{u}\,=\,200 nm) have more intense plastic deformation and a smaller average spacing than those in a relative thinner cutting (Fig.~12, \emph{t}\textsubscript{u}\,=\,85 nm). It implies that the critical speed for the onset of localized deformation decreases as the cutting thickness increases.
+
+\pdfpage{8}
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.7\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Fig. 12}\quad Simulated plastic strains in PMMA cutting at a cutting thickness \emph{t}\textsubscript{u}\,=\,85 nm under different cutting speeds
+\alttext{Three Abaqus contour plots of the equivalent plastic strain, stacked vertically, panels (a)--(c), each the same view: the grey knife at the right (a wedge whose edge points left; its upper face rises to the upper right, its lower face runs almost horizontally to the right), the workpiece (blue) along the bottom, higher on the left of the knife edge (uncut material) and lower under the knife (the cut surface), and the chip, which leaves the knife edge along the knife face and curls up and back to the left over the uncut material. Each panel has a discrete colour key at the top left titled ``PEEQ (Avg: 75\%)'' with the band limits listed below; the colours from high to low are grey (only when the top value is above 3), red, orange, yellow-green, green, spring green, cyan, light blue and blue, i.e.\ red = 2--3, orange = 1--2, yellow-green = 0.5--1, green = 0.1--0.5, spring green = 0.05--0.1, cyan = 0.005--0.05, light blue = 0.0005--0.005, blue = 0--0.0005; a small green/red axis triad sits at the lower left and the panel label in a white box at the bottom left. (a) Label ``(a) \emph{v}\textsubscript{0}=0.01 mm/s''. Key: +7.24e+00, +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. The chip is a smooth, continuous curl of even thickness, about three quarters of a circle, with a thin orange rim along its outer (convex) edge, a yellow-green outer layer and a green inner part with irregular boundaries; its free end at the upper left has small cyan/light-blue patches and a tiny red/grey tip. In the uncut material just left of and below the chip root there is a light-blue/cyan zone. The cut surface to the right is blue with a few light-blue downward spikes and a cyan band at the far right edge. (b) Label ``(b) \emph{v}\textsubscript{0}=0.1 mm/s''. Key: +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00 (no grey band). Same curled chip with an orange outer rim, but its yellow-green body is crossed by a regular series of roughly radial green stripes (inclined bands) along its whole length, and its inner edge is slightly wavy. Below the cut surface to the right of the knife edge there is a light-blue layer whose lower boundary is a row of sharp, irregular spikes reaching down into the blue material. (c) Label ``(c) \emph{v}\textsubscript{0}=1.0 mm/s''. Key as in (b). The chip is crossed by more, more closely spaced and more pronounced inclined stripes than in (b), green stripes alternating with yellow-green/orange ones, and its inner (concave) edge is visibly serrated; a cyan zone sits at the chip root and in the uncut material next to it. The cut surface to the right shows light-blue downward spikes, more widely spaced than the layer in (b).}
+\decompnote{The colour-classified strain maps of Figs.~12--14 (band index per pixel, mapped through each panel's colour key) are in figures/fig12a.csv \dots\ figures/fig14b.csv; the figures have no length scale, so positions are in image pixels.}
+\figuredata{a}{figures/fig12a.csv}{figures/fig12.py}{tier 3, PEEQ band per pixel, classified through the panel's colour key from the lossless embedded image}
+\figuredata{b}{figures/fig12b.csv}{figures/fig12.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig12c.csv}{figures/fig12.py}{tier 3, as panel a}
+
+The above simulation results confirm that there is a transition of the deformation mode in the chip as the cutting speed (or thickness) varies, although the simulation gives a much smaller critical cutting speed than the experiment.
+
+\subsubsection*{4.2.3\quad Element-Type Sensitivity}
+
+In the above simulation models, the chip parts use inclined 4-node quadratic plane strain elements, CPE4R, which would facilitate the formation of shear bands during cutting process. To investigate the mesh-type sensitivities of the \pdfpage{9}simulation, the quadratic elements were replaced by triangle plane strain elements, CPE3, in the chip part meshing.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.7\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent\textbf{Fig. 13}\quad Simulated plastic strains in PMMA cutting at a cutting thickness \emph{t}\textsubscript{u}\,=\,200 nm under different cutting speeds
+\alttext{Three Abaqus contour plots of the equivalent plastic strain, laid out as in Fig.~12 (grey knife at the right, blue workpiece at the bottom with the cut surface under the knife, chip curling up and to the left, colour key ``PEEQ (Avg: 75\%)'' at the top left with the same colour bands, axis triad at the lower left); the chip is visibly thicker than in Fig.~12. (a) Label ``(a) \emph{v}\textsubscript{0}=0.01 mm/s''. Key: +5.32e+00, +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. The chip is a smooth, continuous curl rising almost vertically from the knife edge to the top of the image, bending to the left, with a thin orange rim on its outer edge, a broad yellow-green outer layer and a green inner part; a few short, inclined yellow-green streaks cross the green part; its free end at the top left is cyan/light blue. A light-blue/cyan region with curved bands lies in the uncut material just left of and below the chip root. The cut surface at the right is a light-blue layer with small downward spikes and a cyan section at the far right. (b) Label ``(b) \emph{v}\textsubscript{0}=0.1 mm/s''. Key: +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. The chip curls through about three quarters of a circle and is segmented along its whole length: many closely spaced, roughly radial orange bands (some with red cores) separate green segments, and the outer rim is orange. Below the cut surface at the right is a thick light-blue layer whose lower boundary forms a row of irregular spikes. (c) Label ``(c) \emph{v}\textsubscript{0}=1.0 mm/s''. Key: +3.68e+00, +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. The chip is segmented by even more closely spaced orange/red inclined bands, with a serrated inner edge; its free end at the upper left is cyan; a cyan/light-blue zone lies at the chip root and in the uncut material to its left. The cut surface at the right shows narrow light-blue downward spikes.}
+\figuredata{a}{figures/fig13a.csv}{figures/fig13.py}{tier 3, PEEQ band per pixel, classified through the panel's colour key from the lossless embedded image}
+\figuredata{b}{figures/fig13b.csv}{figures/fig13.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig13c.csv}{figures/fig13.py}{tier 3, as panel a}
+
+Figure~14 displays the simulation results of cutting at \emph{t}\textsubscript{u}\,=\,85 nm under the speeds of 0.1 and 1.0 mm/s. Compared to the simulation results using quadratic elements shown in Fig.~12, the cutting process is more steady as the cutting speed increases. The chips undergo more homogeneous deformation than those using quadratic elements and the chip profile becomes more continuous, but localized deformation still occurs. The results in Fig.~14 indicate that the PMMA cutting \pdfpage{10}simulation is sensitive to the element type, which needs to take into account in the numerical analysis of PMMA cutting.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig14.png}
+\end{center}
+\noindent\textbf{Fig. 14}\quad Simulated plastic strains in PMMA using triangle plane strain elements, at a cutting thickness \emph{t}\textsubscript{u}\,=\,85 nm
+\alttext{Two Abaqus contour plots of the equivalent plastic strain, stacked, laid out as in Fig.~12 (grey knife at the right, blue workpiece at the bottom, colour key ``PEEQ (Avg: 75\%)'' at the top left with the same colour bands, axis triad at the lower left). In both, the chip does not curl into a circle: it rises from the knife edge as a long, gently curved strip, bending slightly to the left, and leaves the top of the image. (a) Label ``(a)\emph{v}\textsubscript{0}=0.1 mm/s''. Key: +5.04e+00, +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. The strip is mostly yellow-green (0.5--1) with a thin red/orange layer along its right edge (the side facing the knife) and many irregular green patches; in its lower half the green patches form short, regularly spaced inclined streaks. A cyan/light-blue zone lies in the uncut material at the chip root; the cut surface at the right is a thin light-blue layer with small spikes. (b) Label ``(b)\emph{v}\textsubscript{0}=1.0 mm/s''. Key: +6.05e+00, +3.00e+00, +2.00e+00, +1.00e+00, +5.00e-01, +1.00e-01, +5.00e-02, +5.00e-03, +5.00e-04, +0.00e+00. Similar strip, mostly yellow-green with a red layer along the knife side and a series of short inclined green streaks spaced along it; a small cyan patch near its top left end; light-blue/cyan zones at the chip root; the thin cut-surface layer at the right shows a few spikes.}
+\figuredata{a}{figures/fig14a.csv}{figures/fig14.py}{tier 3, PEEQ band per pixel, classified through the panel's colour key from the lossless embedded image}
+\figuredata{b}{figures/fig14b.csv}{figures/fig14.py}{tier 3, as panel a}
+
+\section*{5\quad Conclusions}
+
+Periodic, wavy structures were found to form on the cut surface of PMMA at/above critical cutting thickness and speed. Below the critical cutting conditions, cut surfaces were flat and smooth, while above which periodic wavy structures formed. These wavy structures were identified as shear localizations originated from the yield deformation in the primary shear plane. The analytical modeling of the stress variation in the primary shear zone and in the bulk material in front of the shear zone predicts a critical speed for the onset of shear bands in cutting, which is relatively close to the experimental result of nanocutting. The finite element analysis also confirms that shear bands are formed when critical cutting conditions are reached.
+
+\noindent\textbf{Acknowledgements}\quad China Scholarship Council is acknowledged for the financial support. Dr. H. Li from Uppsala University is gratefully acknowledged for valuable discussions and experiment help.
+
+\noindent\textbf{Open Access}\quad This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.
+
+\section*{References}
+
+\begin{hangpars}\small
+1. Rhorer RL, Evans CJ (2010) Fabrication of optics by diamond turning. In: Bass M (ed) Handbook of optics, 3rd edn. McGraw Hill, New York
+
+2. Atkins AG (2016) Slice-push, formation of grooves and the scale effect in cutting. Interface Focus 6:20160019
+
+3. Richeton J, Ahzi S, Vecchio KS, Jiang FC, Adharapurapu RR (2006) Influence of temperature and strain rate on the mechanical behavior of three amorphous polymers: characterization and modeling of the compressive yield stress. Int J Solids Struct 43:2318–2335
+
+\pdfpage{11}4. Roesler J, Harders H, Baeker M (2007) Mechanical behaviour of engineering materials. Springer, New York
+
+5. Dodd B, Bai Y (2012) Adiabatic shear localization—frontiers and advances, 2nd edn. Elsevier, Amsterdam
+
+6. Recht RF (1964) Catastrophic thermoplastic shear. J Appl Mech 31:189–193
+
+7. Sun F, Li H, Lindberg H, Leifer K, Gamstedt EK (2017) Polymer fracture and deformation during nanosectioning in an ultramicrotome. Eng Fract Mech 182:595–606
+
+8. Sun F, Li H, Leifer K, Gamstedt EK (2017) Rate effects on localized shear deformation during nanosectioning of an amorphous thermoplastic polymer. Int J Solids Struct 129:40–48
+
+9. Williams JG, Patel Y (2016) Fundamentals of cutting. Interface Focus 6:20150108
+
+10. Burns TJ, Davies MA (2002) On repeated adiabatic shear band formation during high-speed machining. Int J Plast 18:487–506
+
+11. Gong Y, Baik Y-J, Li CP, Byon C, Park JM, Ko TJ (2017) Experimental and modeling investigation on machined surfaces of HDPE-MWCNT polymer nanocomposite. Int J Adv Manuf Technol 88:879–885
+
+12. Atkins AG (2003) Modelling metal cutting using modern ductile fracture mechanics: quantitative explanations for some longstanding problems. Int J Mech Sci 45:373–396
+
+13. Wyeth DJ, Atkins AG (2009) Mixed mode fracture toughness as a separation parameter when cutting polymers. Eng Fract Mech 76:2690–2697
+
+14. Patel Y, Blackman BRK, Williams JG (2009) Determining fracture toughness from cutting tests on polymers. Eng Fract Mech 76:2711–2730
+
+15. Komanduri R, Hou Z-B (2002) On thermoplastic shear instability in the machining of a titanium alloy (Ti–6Al–4V). Metall Mater Trans A 33:2995–3010
+
+16. Hou ZB, Komanduri R (1997) Modeling of thermomechanical shear instability in machining. Int J Mech Sci 39:1273–1314
+
+17. Komanduri R, Chandrasekaran N, Raff LM (2000) MD simulation of nanometric cutting of single crystal aluminum-effect of crystal orientation and direction of cutting. Wear 242:60–88
+
+18. Fang F, Xu F (2017) Recent advances in micro/nano-cutting: effect of tool edge and material properties. Nanomanuf Metrol 1:4–31
+
+19. Vaz M Jr, Owen DRJ, Kalhori V, Lundblad M, Lindgren L-E (2007) Modelling and simulation of machining process. Arch Compt Methods Eng 14:173–204
+
+20. Abaqus analysis user’s manual 6.13, Dassault System
+
+21. Turley DM, Doyle ED, Ramalingam S (1982) Calculation of shear strains in chip formation in titanium. Mater Sci Eng 55:45–48
+
+22. Davies MA, Chou Y, Evans CJ (1996) On chip morphology, tool wear and cutting mechanics in finish hard turning. CIRP Ann Manuf Technol 45:77–82
+\end{hangpars}
+\decompnote{The ``References'' heading is printed in the paper. References 1--3 are at the bottom of the right column of p.\,10, 4--22 on p.\,11.}
+
+\begin{center}
+\includegraphics[width=0.22\linewidth]{figures/bio_sun.png}
+\end{center}
+\noindent\textbf{Fengzhen Sun}\quad research associate in the Department of Mechanical Engineering, Imperial College London, UK. He received his PhD degree from Uppsala University in 2017. His recent work includes adhesive joining of metals, polymer nanocutting and fracture characterization.
+\alttext{Colour portrait photograph of Fengzhen Sun: head and shoulders, dark hair, dark-rimmed glasses, grey sweater over a checked shirt, light background.}
+
+\begin{center}
+\includegraphics[width=0.22\linewidth]{figures/bio_gamstedt.png}
+\end{center}
+\noindent\textbf{E. Kristofer Gamstedt}\quad professor in Applied Mechanics at Uppsala University, Sweden. His research interest includes the mechanics of composites, polymers, wood, biobased materials, biomaterials, coatings, etc.
+\alttext{Colour portrait photograph of E. Kristofer Gamstedt: head and shoulders, short grey hair, smiling, dark jacket over a light-blue shirt, grey background.}
+
+\end{document}

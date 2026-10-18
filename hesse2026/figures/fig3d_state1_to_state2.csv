@@ -1,0 +1,42 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Figure 3, PDF page 37; extracted by fig3_extract.py from vector paths (PDF points, origin top-left)
+# Panel d (State 1 -> State 2, right raster; example AM cell preferring the suppressed face): spike raster of one example cell, one row per spike (vertical 0.14-pt tick marks).
+# 20 transitions (rows); row 1 = top row of the raster (y-axis tick '1' at the top, '20' at the bottom).
+# x axis calibrated from 3 tick marks at -50, 0, 50 ms (max residual 3.7e-04); spike time = x of the tick mark, precision ~0.02 ms.
+# y axis calibrated from the two y tick marks (rows 1 and 20, max residual 3.6e-15); worst deviation from an integer row 0.000.
+# Vertical dashed line at 0 ms = state transition.
+row_index,time_ms
+1,30.0
+2,0.0
+2,9.0
+2,17.0
+2,29.0
+3,-47.0
+4,3.0
+5,35.0
+6,6.0
+6,47.0
+7,2.0
+7,23.0
+7,28.0
+8,-39.0
+8,4.0
+8,21.0
+9,-3.0
+9,4.0
+10,-3.0
+10,6.0
+10,31.0
+10,42.0
+13,-5.0
+13,-1.0
+14,-44.0
+14,27.0
+15,-30.0
+15,31.0
+16,-15.0
+16,-3.0
+16,9.0
+16,15.0
+17,49.0
+19,11.0
+20,7.0

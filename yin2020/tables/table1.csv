@@ -1,0 +1,17 @@
+# Table 1 Performance metric during 1 mm³ production for 20 MP and 50 MP cameras. (Yin et al. 2020, Nat. Commun. 11:4949, PDF p. 8)
+# Footnote: An estimation of mean 65% uptime takes into account the downtime from microscope maintenance, barcode reading errors, and imaging pause determined by real-time QC.
+# Cells verbatim; the printed tilde before some numbers is written as ∼ (U+223C). Row labels printed on two lines are joined with a space.
+Imaging parameters,Avg. production 20 Mpixel,Avg. production 50 Mpixel,50 Mpixel peak,Unit
+Frame size (pix),3840,5408,5504,Aspect ratio of 1:1
+Resolution,3.95–4,3.95–4,4,nm/pixel
+Tile overlap,13,9,9,%
+Net imaging rate,3.2–3.5,3.2–3.5,4.0,Hz
+FOV per side,15,21,22,µm
+AOV,225,468,484,µm²
+Pixels per image,14.7,29.2,30.3,Mpixel
+Time per section,30–40,15–25,∼14,Minute
+Tiles w/overlap,5100,2916,2600,Per section
+Sections per week (24/7),∼300,∼490,∼700,Section per week
+Time to image volume with one scope @65% uptime,900,525,450,Day
+Time to image volume with five scopes @65% uptime,180,105,90,Day
+Completion of project in months @65% w/5 scopes,∼6,∼3.5,∼3,Month

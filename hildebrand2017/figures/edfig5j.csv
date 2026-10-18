@@ -1,0 +1,11 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Extended Data Fig. 5j: number of sections in each partial-section category
+# (minor / moderate / severe) for the 208 partial sections within the 16000 sections imaged at 56.4x56.4x60 nm3/vx.
+# Provenance: tier 3, digitized from the embedded 150 ppi raster image on PDF page 37 (figures/edfig5j_extract.py).
+# y calibrated on 10 tick marks (0..90 step 10), linear fit, max residual 0.10 sections.
+# value = centre of the bar's dark top outline (found by walking up from the baseline through the grey fill); uncertainty ~ one source pixel (column u_px, sections per pixel).
+# Bar values are counts, so the true values are integers; the three digitized values sum to 208.0 (the panel prints '208 total').
+# columns: category; sections (digitized bar height); u_px (sections per source pixel)
+category,sections,u_px
+minor,84.01,0.40
+moderate,80.98,0.40
+severe,43.01,0.40

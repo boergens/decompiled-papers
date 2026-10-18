@@ -1,0 +1,22 @@
+# Zhao et al. 2025, Nat. Commun. 16:3203, Fig. 5a: crack extension energy Gamma (J m^-2) vs surface density of
+#   broken bonds Sigma_exp (chains m^-2, in units of 1e18 as printed: 'Sigma_exp (chains . m^-2) x 10^18').
+# Columns: series (red squares = Cutting-induced; the last point, highest Gamma, carries the red/white
+#   'Tearing-induced' icon over a red square); x = Sigma_exp / 1e18 (chains m^-2); y = Gamma (J m^-2);
+#   x_err_low/high = ends of the horizontal error bar at the caps; y_err_* empty (no vertical bars drawn);
+#   marker_box_centre_* = centre of the square's bounding box; centre_from: x from the junction of the two
+#   half-bars (hjunction), y from the bar line (hbar); these agree with the square centres to <0.1 pt.
+# Provenance: tier 2, vector paths in the PDF (page 6), exact to ~0.01 pt (~0.0002e18 in x, ~0.07 J m^-2 in y).
+#   x: linear fit through 5 ticks 0@92.280pt, 0.6@125.870pt, 1.2@159.460pt, 1.8@193.055pt, 2.4@226.650pt; max residual 5.4e-05 data units
+#   y: linear fit through 4 ticks 0@155.225pt, 200@124.530pt, 400@93.660pt, 600@62.970pt; max residual 0.35 data units
+# The black open right triangle at lower right of the panel is a slope sketch without numbers (not data).
+# Fit line (red dash-dot, drawn as filled dash polygons; least-squares line through all their vertices, max
+#   vertex offset 1.10 pt = line half-width): from Sigma_exp = -0.007698 to 1.984, i.e. Gamma = 269.45 * Sigma_exp + (-1.2664).
+#   The paper prints no equation for this line; these numbers are read off the drawing.
+series,x,y,x_err_low,x_err_high,y_err_low,y_err_high,marker_box_centre_x,marker_box_centre_y,centre_from
+Cutting-induced,0.81109,208.2453,0.63432,0.98633,,,0.81058,208.6171,hjunction/hbar
+Cutting-induced,0.88384,214.58401,0.65788,1.11034,,,0.88333,214.58679,hjunction/hbar
+Cutting-induced,1.14004,246.29047,0.95866,1.31937,,,1.13953,245.92045,hjunction/hbar
+Cutting-induced,1.33269,298.50801,1.16567,1.49667,,,1.33219,298.51158,hjunction/hbar
+Cutting-induced,1.50282,387.84299,1.2748,1.7293,,,1.50333,388.2146,hjunction/hbar
+Cutting-induced,1.67191,501.98484,1.33885,2.00495,,,1.6719,501.60907,hjunction/hbar
+Tearing-induced,1.69547,554.01232,1.28557,2.10742,,,1.69649,554.0147,hjunction/hbar

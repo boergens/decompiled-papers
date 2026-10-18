@@ -1,0 +1,69 @@
+# Decompiled papers (public mirror)
+
+Machine- and human-readable versions of openly licensed scientific papers: each paper's text rebuilt as LaTeX,
+every figure described panel by panel, and the data of every plotted panel recovered as CSV with the code that
+extracted and re-plots it. The purpose is to make papers easy to read, search and re-use without the PDF, and to
+make their figures accessible (every figure carries a written description). Reproducing the publisher's layout is
+not a goal.
+
+This is the public part of a private collection. It holds only papers whose licence allows redistribution
+(Creative Commons Attribution, one public-domain article, and one CC BY-NC-ND article as a deliberate test of the
+format-shift reading of "no derivatives"; see the table). Everything was produced by AI agents (Claude, run by
+Kevin Boergens) following the written procedure in `docs/SPEC.md`, and checked as each paper's README describes.
+Mistakes are possible: the README of each paper reports its text-coverage check against the PDF and what could not
+be recovered. If you find an error, open an issue.
+
+## What is in a paper folder
+
+`<key>/` (first author + year): `README.md` (citation, licence, what is included, check results, a figure table,
+errors found in the paper), `main.tex` (every word of the paper in reading order, compiled to `main.pdf`;
+`supplement.tex` where there is one), `figures/` (`figN.png` renders of the figures, `<panel>.csv` data,
+`<panel>_extract.py` how it was obtained, `<panel>.py` re-plot → `<panel>_replot.png`), `tables/` (every table as
+CSV), `source/SOURCE.txt` (where the PDF came from; the PDFs themselves are not included, they are open access at
+the DOI). The paper's own text is verbatim; the decompiler's words appear only inside `\alttext{}` (figure
+descriptions), `\figuredata{}` (data provenance) and `\decompnote{}` (remarks), typeset in colour in the PDF.
+
+Compile a paper: `cd <key> && lualatex main.tex` (twice; `decomp.sty` is in each folder, DejaVu fonts needed).
+Re-run its data: `python3 -I <key>/figures/<panel>_extract.py` (needs the source PDF in `<key>/source/`) and
+`python3 -I <key>/figures/<panel>.py`. Shared tools are in `tools/`, the procedure in `docs/SPEC.md`.
+
+## Licences and attribution
+
+Each paper remains the work of its authors under the licence they published it with, stated in the paper's README
+and kept verbatim in its `main.tex`. Changes made to each paper: the text was re-typeset in LaTeX (running headers,
+footers and publisher boilerplate left out, line-end hyphenation removed), the figures were rendered from the PDF,
+and descriptions, data files, scripts and notes were added by the decompiler, all marked as such. Please cite the
+original paper, not this mirror.
+
+The additions (descriptions, notes, data files, scripts, READMEs, tools) are released under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE`).
+
+## Papers
+
+| key | paper (from the paper's README, which has the full citation) | DOI | licence of the paper | note |
+|---|---|---|---|---|
+| `bouwer2016` | James C. Bouwer, Thomas J. Deerinck, Eric Bushong, Vadim Astakhov, Ranjan Ramachandra, Steven T. Peltier, Mark H. Ellisman. "Deceleration of probe beam by stage bias potential improves resolution of serial block-face scanning electron microscopic images." *… | [10.1186/s40679-016-0025-y](https://doi.org/10.1186/s40679-016-0025-y) | CC BY 4.0 |  |
+| `denk2004` | Winfried Denk, Heinz Horstmann. "Serial Block-Face Scanning Electron Microscopy to Reconstruct Three-Dimensional Tissue Nanostructure." *PLoS Biology* **2**(11): e329, pp. 1900–1909 (November 2004). DOI [10.1371/journal.pbio.0020329](https://doi.org/10.1371… | [10.1371/journal.pbio.0020329](https://doi.org/10.1371/journal.pbio.0020329) | CC BY |  |
+| `fu2025` | Guoyu Fu, Jia Ge, Hao Li, Fengzhen Sun, Weizhou Wu. "Finite Element Analysis and Experimental Investigation on the Machinability of PMMA/CNT Composites via Nanosectioning." *Polymers* **2025**, 17, 2441. DOI [10.3390/polym17182441](https://doi.org/10.3390/p… | [10.3390/polym17182441](https://doi.org/10.3390/polym17182441) | CC BY 4.0 |  |
+| `fuk2019` | Kexin Fu, Qing Xie, Fangcheng LÜ, Qijun Duan, Xinjie Wang, Quansheng Zhu, Zhengyong Huang. "Molecular Dynamics Simulation and Experimental Studies on the Thermomechanical Properties of Epoxy Resin with Different Anhydride Curing Agents." *Polymers* **2019**… | [10.3390/polym11060975](https://doi.org/10.3390/polym11060975) | CC BY 4.0 |  |
+| `hayworth2014` | Kenneth J. Hayworth, Josh L. Morgan, Richard Schalek, Daniel R. Berger, David G. C. Hildebrand, Jeff W. Lichtman. "Imaging ATUM ultrathin section libraries with WaferMapper: a multi-scale approach to EM reconstruction of neural circuits." *Frontiers in Neur… | [10.3389/fncir.2014.00068](https://doi.org/10.3389/fncir.2014.00068) | CC BY |  |
+| `hesse2026` | Janis K. Hesse, Frank F. Lanfranchi, Conor McGrory, Yuelin Shi, Tatiana A. Engel, Doris Y. Tsao. "Rapid alternation of conscious and suppressed stimulus representations in the primate brain." *bioRxiv* preprint, version 1, posted 16 October 2026. DOI [10.64… | [10.64898/2026.10.15.759299](https://doi.org/10.64898/2026.10.15.759299) | CC BY 4.0 | bioRxiv preprint v1 |
+| `hildebrand2017` | David Grant Colburn Hildebrand, Marcelo Cicconet, Russel Miguel Torres, Woohyuk Choi, Tran Minh Quan, Jungmin Moon, Arthur Willis Wetzel, Andrew Scott Champion, Brett Jesse Graham, Owen Randlett, George Scott Plummer, Ruben Portugues, Isaac Henry Bianco, St… | [10.1101/134882](https://doi.org/10.1101/134882) | CC BY 4.0 | bioRxiv preprint v1 |
+| `horstmann2012` | Heinz Horstmann, Christoph Körber, Kurt Sätzler, Daniel Aydin, Thomas Kuner. "Serial Section Scanning Electron Microscopy (S³EM) on Silicon Wafers for Ultra-Structural Volume Imaging of Cells and Tissues." *PLoS ONE* **2012**, 7(4): e35172. DOI [10.1371/jou… | [10.1371/journal.pone.0035172](https://doi.org/10.1371/journal.pone.0035172) | CC BY |  |
+| `kremer2015` | A. Kremer, S. Lippens, S. Bartunkova, B. Asselbergh, C. Blanpain, M. Fendrych, A. Goossens, M. Holt, S. Janssens, M. Krols, J.-C. Larsimont, C. Mc Guire, M.K. Nowack, X. Saelens, A. Schertel, B. Schepens, M. Slezak, V. Timmerman, C. Theunis, R. Van Brempt, … | [10.1111/jmi.12211](https://doi.org/10.1111/jmi.12211) | CC BY |  |
+| `kubota2018` | Yoshiyuki Kubota, Jaerin Sohn, Sayuri Hatada, Meike Schurr, Jakob Straehle, Anjali Gour, Ralph Neujahr, Takafumi Miki, Shawn Mikula, Yasuo Kawaguchi. "A carbon nanotube tape for serial-section electron microscopy of brain ultrastructure." *Nature Communicat… | [10.1038/s41467-017-02768-7](https://doi.org/10.1038/s41467-017-02768-7) | CC BY 4.0 | with the supplement; the peer-review file is left out (its licence is not stated in our copy) |
+| `lee2018` | Timothy J. Lee, Aditi Kumar, Aishwarya H. Balwani, Derrick Brittain, Sam Kinn, Craig A. Tovey, Eva L. Dyer, Nuno M. da Costa, R. Clay Reid, Craig R. Forest, Daniel J. Bumbarger. "Large-scale neuroanatomy using LASSO: Loop-based Automated Serial Sectioning O… | [10.1371/journal.pone.0206172](https://doi.org/10.1371/journal.pone.0206172) | CC BY |  |
+| `microns2025` | The MICrONS Consortium (J. Alexander Bae, Mahaly Baptiste, … Chi Zhang; 96 named members, list on p. 13). "Functional connectomics spanning multiple areas of mouse visual cortex." *Nature* **640**, 435–447 (10 April 2025). DOI [10.1038/s41586-025-08790-w](h… | [10.1038/s41586-025-08790-w](https://doi.org/10.1038/s41586-025-08790-w) | CC BY 4.0 | Fig. 2 contains panels the paper adapted from third-party sources (see its README) |
+| `pallotto2015` | Marta Pallotto, Paul V Watkins, Boma Fubara, Joshua H Singer, Kevin L Briggman. "Extracellular space preservation aids the connectomic analysis of neural circuits." *eLife* **2015**;4:e08206. DOI [10.7554/eLife.08206](https://doi.org/10.7554/eLife.08206). R… | [10.7554/eLife.08206](https://doi.org/10.7554/eLife.08206) | free of all copyright (US government work, eLife) |  |
+| `peddie2022` | Christopher J. Peddie, Christel Genoud, Anna Kreshuk, Kimberly Meechan, Kristina D. Micheva, Kedar Narayan, Constantin Pape, Robert G. Parton, Nicole L. Schieber, Yannick Schwab, Benjamin Titze, Paul Verkade, Aubrey Weigel (printed "Aubrey Aubrey", see belo… | [10.1038/s43586-022-00131-9](https://doi.org/10.1038/s43586-022-00131-9) | CC BY 4.0 |  |
+| `scheffer2020` | Louis K Scheffer, C Shan Xu, Michal Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary B Huang, Kazunori Shinomiya, … Viren Jain, Stephen M Plaza (115 authors; full list in `main.tex`). "A connectome and analysis of the adult *Drosophila* c… | [10.7554/eLife.57443](https://doi.org/10.7554/eLife.57443) | CC BY |  |
+| `sun2019` | Fengzhen Sun, E. Kristofer Gamstedt. "Homogeneous and Localized Deformation in Poly(Methyl Methacrylate) Nanocutting." *Nanomanufacturing and Metrology* **2019**, 2:45–55. DOI [10.1007/s41871-018-0034-7](https://doi.org/10.1007/s41871-018-0034-7). Received … | [10.1007/s41871-018-0034-7](https://doi.org/10.1007/s41871-018-0034-7) | CC BY 4.0 |  |
+| `ta2023` | Huong T. T. Ta, Nam V. Tran, M. C. Righi. "Atomistic Wear Mechanisms in Diamond: Effects of Surface Orientation, Stress, and Interaction with Adsorbed Molecules." *Langmuir* **2023**, 39, 14396−14403. DOI [10.1021/acs.langmuir.3c01800](https://doi.org/10.10… | [10.1021/acs.langmuir.3c01800](https://doi.org/10.1021/acs.langmuir.3c01800) | CC BY 4.0 |  |
+| `wanner2015` | A.A. Wanner, M.A. Kirschmann & C. Genoud. "Challenges of microtome-based serial block-face scanning electron microscopy in neuroscience." *Journal of Microscopy* **259**(2), 137–142 (2015). DOI [10.1111/jmi.12244](https://doi.org/10.1111/jmi.12244) (printed… | [10.1111/jmi.12244](https://doi.org/10.1111/jmi.12244) | CC BY |  |
+| `wei2024` | Pengchang Wei, Zhen-Yu Yin, Pierre-Yves Hicher, Wangqi Xu. "Interfacial mechanical behavior of epoxy-quartz: MD nanoindentation and nanoscratching study." *Acta Geotechnica* (2025) **20**:1599–1620. DOI [10.1007/s11440-024-02503-9](https://doi.org/10.1007/s… | [10.1007/s11440-024-02503-9](https://doi.org/10.1007/s11440-024-02503-9) | CC BY 4.0 |  |
+| `wei2025` | Pengchang Wei, Zhen-Yu Yin, Pierre-Yves Hicher, Yuanyuan Zheng. "Molecular Dynamics Study on Quartz-Indenter Shape and Depth Effects in Epoxy Interfacial Mechanics." *International Journal for Numerical and Analytical Methods in Geomechanics* **2025**, 49(1… | [10.1002/nag.4021](https://doi.org/10.1002/nag.4021) | CC BY |  |
+| `xie2019` | Wenkun Xie, Fengzhou Fang. "Cutting-based single atomic layer removal mechanism of monocrystalline copper: edge radius effect." *Nanoscale Research Letters* **2019**, 14:370 (NANO EXPRESS). DOI [10.1186/s11671-019-3195-4](https://doi.org/10.1186/s11671-019-… | [10.1186/s11671-019-3195-4](https://doi.org/10.1186/s11671-019-3195-4) | CC BY 4.0 |  |
+| `xu2017` | C Shan Xu, Kenneth J Hayworth, Zhiyuan Lu, Patricia Grob, Ahmed M Hassan, José G García-Cerdán, Krishna K Niyogi, Eva Nogales, Richard J Weinberg, Harald F Hess. "Enhanced FIB-SEM systems for large-volume 3D imaging." *eLife* **2017**;6:e25916 (Tools and Re… | [10.7554/eLife.25916](https://doi.org/10.7554/eLife.25916) | CC BY |  |
+| `yin2020` | Wenjing Yin, Derrick Brittain, Jay Borseth, Marie E. Scott, Derric Williams, Jedediah Perkins, Christopher S. Own, Matthew Murfitt, Russel M. Torres, Daniel Kapner, Gayathri Mahalingam, Adam Bleckert, Daniel Castelli, David Reid, Wei-Chung Allen Lee, Brett … | [10.1038/s41467-020-18659-3](https://doi.org/10.1038/s41467-020-18659-3) | CC BY 4.0 |  |
+| `zhangk2020` | Kai Zhang, Yindi Cai, Yuki Shimizu, Hiraku Matsukuma and Wei Gao. "High-Precision Cutting Edge Radius Measurement of Single Point Diamond Tools Using an Atomic Force Microscope and a Reverse Cutting Edge Artifact." *Appl. Sci.* **2020**, *10*, 4799. DOI [10… | [10.3390/app10144799](https://doi.org/10.3390/app10144799) | CC BY 4.0 |  |
+| `zhao2025` | Donghao Zhao, Alex Cartier, Tetsuharu Narita, Frederic Lechenault, Costantino Creton, Matteo Ciccotti. "Why cutting is easier than tearing elastomers." *Nature Communications* **2025**, 16:3203. DOI [10.1038/s41467-025-58483-1](https://doi.org/10.1038/s4146… | [10.1038/s41467-025-58483-1](https://doi.org/10.1038/s41467-025-58483-1) | CC BY-NC-ND 4.0 | ND test case: verbatim re-typesetting (format shift); the additions are marked |

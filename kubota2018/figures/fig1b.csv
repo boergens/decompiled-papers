@@ -1,0 +1,43 @@
+# Kubota et al. 2018 Nat Commun 9:437, Fig. 1b: surface resistance of the CNT tape along the tape (main PDF p. 3).
+# Columns: length_m = position along the tape (x axis 'Length (meter)'); surface_resistance_ohm_per_sq = y axis
+#   'Surface resistance', unit printed as 'Ω □-1' (ohms per square). One row per plotted marker (filled circle).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector plot paths in the PDF) by
+#   fig1b_extract.py: marker centres by morphological opening + connected components (3 pairs of touching
+#   markers split by k-means). Axes calibrated on the tick marks in the image, paired with the PDF-text tick labels:
+#   x on 6 labelled ticks (0-10 m), max residual 0.024 m; y on 6 labelled ticks (220-320), max residual 0.52.
+# Uncertainty: about +-0.05 m in x and +-0.8 ohm/sq in y (2 source pixels).
+# The y axis is broken: a '0' label sits at the x-axis line below a break mark; all data lie above the break,
+#   in the linear 220-320 part, which is what the calibration uses.
+length_m,surface_resistance_ohm_per_sq
+0.015,304.8
+0.292,271.5
+0.640,297.8
+0.992,238.9
+1.277,231.9
+1.628,251.3
+1.909,234.1
+2.192,245.6
+2.611,244.6
+2.887,238.8
+3.179,249.2
+3.530,237.6
+3.876,240.0
+4.222,240.0
+4.512,229.6
+4.788,232.9
+5.073,243.3
+5.495,236.5
+5.775,235.4
+6.119,242.2
+6.406,230.7
+6.688,238.7
+7.107,224.8
+7.388,222.7
+7.676,228.4
+8.016,231.8
+8.305,235.3
+8.724,237.6
+9.003,238.8
+9.287,230.7
+9.567,237.5
+9.989,251.6

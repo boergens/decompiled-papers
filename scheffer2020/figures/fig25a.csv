@@ -1,0 +1,95 @@
+# Fig. 25(a) of Scheffer et al. 2020 (eLife 9:e57443), p. 47: 'Delay and Amplitude of Response' for inputs in the gall (GA) of an EPG neuron.
+# x = Delay in millisec (linear, 0 to 4.0); y = Amplitude in millivolts (linear, 0 to 1.5).
+# Provenance: tier 3, digitized from the embedded raster (2141 x 803 px); the authors' Figure 25-source data 1-3 were not available locally.
+# Calibration on white gridlines: x 0.5..3.5 (max residual 0.0015 ms), y 0.2..1.4 (max residual 0.0006 mV).
+# GA->GA (blue +, 16 px markers) forms a narrow overlapping cloud in which single markers cannot be separated reliably:
+# kind cloud_row: every 4 px row of the cloud, x = mean ink column, x_min/x_max = ink extent in that row (incl. marker arms), y = row.
+# kind cluster_summary: x, y = ink centroid; x_min/x_max, y_min/y_max = extent of marker centres (ink extent minus 8 px, half a marker).
+# kind band_centre: centre (mean ink row) of the band every 4 px column; y_min/y_max = lower/upper ink edge in that column (includes marker size).
+# Uncertainty: about +-0.01 ms and +-0.003 mV per pixel; band contents (hundreds of overlapping markers) cannot be separated into points.
+# Columns: series, kind, x, y, x_min, x_max, y_min, y_max.
+series,kind,x,y,x_min,x_max,y_min,y_max
+GA->GA,cluster_summary,0.26109,0.816614,0.132742,0.365038,0.699897,1.01465
+GA->GA,cloud_row,0.153483,1.03303,0.153483,0.153483,,
+GA->GA,cloud_row,0.157631,1.02384,0.153483,0.161779,,
+GA->GA,cloud_row,0.153483,1.01465,0.124446,0.18252,,
+GA->GA,cloud_row,0.145187,1.00546,0.0995571,0.190816,,
+GA->GA,cloud_row,0.155853,0.996267,0.128594,0.174224,,
+GA->GA,cloud_row,0.165927,0.987077,0.157631,0.174224,,
+GA->GA,cloud_row,0.168001,0.977887,0.13689,0.199113,,
+GA->GA,cloud_row,0.178372,0.968697,0.145187,0.211557,,
+GA->GA,cloud_row,0.178372,0.959508,0.174224,0.18252,,
+GA->GA,cloud_row,0.178372,0.950318,0.174224,0.18252,,
+GA->GA,cloud_row,0.188051,0.941128,0.178372,0.194964,,
+GA->GA,cloud_row,0.186668,0.931938,0.178372,0.194964,,
+GA->GA,cloud_row,0.18252,0.922749,0.149335,0.215705,,
+GA->GA,cloud_row,0.190816,0.913559,0.157631,0.224001,,
+GA->GA,cloud_row,0.201483,0.904369,0.18252,0.22815,,
+GA->GA,cloud_row,0.223483,0.895179,0.190816,0.253038,,
+GA->GA,cloud_row,0.240594,0.88599,0.22815,0.253038,,
+GA->GA,cloud_row,0.240594,0.8768,0.22815,0.253038,,
+GA->GA,cloud_row,0.234372,0.86761,0.203261,0.265483,,
+GA->GA,cloud_row,0.241424,0.85842,0.161779,0.286224,,
+GA->GA,cloud_row,0.249456,0.849231,0.161779,0.298668,,
+GA->GA,cloud_row,0.219853,0.840041,0.13689,0.302816,,
+GA->GA,cloud_row,0.265642,0.830851,0.161779,0.323557,,
+GA->GA,cloud_row,0.280001,0.821662,0.240594,0.319409,,
+GA->GA,cloud_row,0.282075,0.812472,0.265483,0.298668,,
+GA->GA,cloud_row,0.217779,0.803282,0.211557,0.224001,,
+GA->GA,cloud_row,0.281557,0.794092,0.211557,0.327705,,
+GA->GA,cloud_row,0.257483,0.784903,0.190816,0.327705,,
+GA->GA,cloud_row,0.294224,0.775713,0.211557,0.356742,,
+GA->GA,cloud_row,0.280001,0.766523,0.203261,0.356742,,
+GA->GA,cloud_row,0.29452,0.757333,0.219853,0.369186,,
+GA->GA,cloud_row,0.292127,0.748144,0.236446,0.344298,,
+GA->GA,cloud_row,0.314402,0.738954,0.24889,0.373335,,
+GA->GA,cloud_row,0.315261,0.729764,0.244742,0.385779,,
+GA->GA,cloud_row,0.333927,0.720574,0.269631,0.398223,,
+GA->GA,cloud_row,0.309038,0.711385,0.24889,0.369186,,
+GA->GA,cloud_row,0.337444,0.702195,0.273779,0.385779,,
+GA->GA,cloud_row,0.328836,0.693005,0.277927,0.36089,,
+GA->GA,cloud_row,0.348446,0.683815,0.336001,0.36089,,
+GA->EB,cluster_summary,2.43578,0.137114,2.2317,2.64237,0.132431,0.141621
+GA->EB,band_centre,2.19852,0.144378,,,0.123241,0.16
+GA->EB,band_centre,2.21511,0.140472,,,0.120944,0.16
+GA->EB,band_centre,2.2317,0.140472,,,0.120944,0.16
+GA->EB,band_centre,2.2483,0.140472,,,0.120944,0.16
+GA->EB,band_centre,2.26489,0.140472,,,0.120944,0.16
+GA->EB,band_centre,2.28148,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.29807,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.31467,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.33126,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.34785,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.36444,0.139323,,,0.118647,0.16
+GA->EB,band_centre,2.38104,0.138175,,,0.118647,0.157703
+GA->EB,band_centre,2.39763,0.138175,,,0.118647,0.157703
+GA->EB,band_centre,2.41422,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.43081,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.44741,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.464,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.48059,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.49718,0.137026,,,0.116349,0.157703
+GA->EB,band_centre,2.51378,0.134729,,,0.114052,0.155406
+GA->EB,band_centre,2.53037,0.134729,,,0.114052,0.155406
+GA->EB,band_centre,2.54696,0.134729,,,0.114052,0.155406
+GA->EB,band_centre,2.56356,0.134729,,,0.114052,0.155406
+GA->EB,band_centre,2.58015,0.134729,,,0.114052,0.155406
+GA->EB,band_centre,2.59674,0.13358,,,0.114052,0.153108
+GA->EB,band_centre,2.61333,0.13358,,,0.114052,0.153108
+GA->EB,band_centre,2.62993,0.13358,,,0.114052,0.153108
+GA->EB,band_centre,2.64652,0.13358,,,0.114052,0.153108
+GA->EB,band_centre,2.66311,0.134311,,,0.114052,0.153108
+GA->PB,cluster_summary,3.59599,0.107021,3.53007,3.66281,0.104862,0.109457
+GA->PB,band_centre,3.49689,0.108308,,,0.0910774,0.125539
+GA->PB,band_centre,3.51348,0.10961,,,0.0910774,0.127836
+GA->PB,band_centre,3.53007,0.107159,,,0.0887799,0.125539
+GA->PB,band_centre,3.54667,0.107159,,,0.0887799,0.125539
+GA->PB,band_centre,3.56326,0.108308,,,0.0887799,0.127836
+GA->PB,band_centre,3.57985,0.107159,,,0.0864825,0.127836
+GA->PB,band_centre,3.59644,0.107159,,,0.0864825,0.127836
+GA->PB,band_centre,3.61304,0.106011,,,0.0864825,0.125539
+GA->PB,band_centre,3.62963,0.107159,,,0.0887799,0.125539
+GA->PB,band_centre,3.64622,0.106011,,,0.0864825,0.125539
+GA->PB,band_centre,3.66281,0.106011,,,0.0864825,0.125539
+GA->PB,band_centre,3.67941,0.105628,,,0.0864825,0.125539
+GA->PB,band_centre,3.696,0.103024,,,0.0887799,0.123241

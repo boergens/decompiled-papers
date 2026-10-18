@@ -1,0 +1,18 @@
+# Xie & Fang 2019, Nanoscale Research Letters 14:370, Fig. 12(b): cutting forces versus tool edge radius at cutting depth of 2 A.
+# Columns: series (legend names: Ft, tangential cutting force; panel b shows Ft alone); tool_edge_radius_nm = x (nm);
+#   cutting_force_nN = y (nN); px_x, px_y = marker centre in the embedded image (1420 x 569 px, both panels), for checking.
+# One row per plotted marker (8 per series, at R = 0, 1, 2, 3, 4, 5, 7.5, 10 nm). The smoothed lines between markers
+#   are Excel's drawing, not data.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster (no vector data in the PDF) by fig12_extract.py.
+#   x calibrated on the 11 vertical gridlines (0 to 10 nm), max residual 0.0129 nm; y on the 7 horizontal
+#   gridlines (22 to 46 nN), max residual 0.045 nN. Marker centre = circle fit to the marker rim.
+# Uncertainty: about +-0.018 nm in x and +-0.06 nN in y (1 px).
+series,tool_edge_radius_nm,cutting_force_nN,px_x,px_y
+Ft,-0.001,23.77,836.51,417.36
+Ft,0.977,24.57,891.69,402.84
+Ft,1.994,25.37,949.06,388.29
+Ft,2.978,25.73,1004.63,381.70
+Ft,3.996,31.61,1062.07,274.92
+Ft,4.982,38.53,1117.69,149.40
+Ft,7.500,40.69,1259.84,110.17
+Ft,9.989,42.96,1400.30,68.94

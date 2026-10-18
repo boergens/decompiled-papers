@@ -1,0 +1,1065 @@
+# zhangk2020 Fig. 7b (p. 8): Profile of Section C-C' (Figure 7. Measured reverse diamond tool cutting edge).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (xref 480, 1767 x 657 px).
+# Axes carry no numbers: 'X-position 20 nm/div.', 'Z-position 20 nm/div.'. Origin arbitrary: x = 0 at the left frame line, z = 0 at the bottom frame line.
+# Calibration: frame columns 923.5/1721.0 px, x ticks at columns 1083.0, 1242.0, 1402.0, 1562.0 (= 20, 40, 60, 80 nm), max residual 0.06 nm;
+# frame rows 17.0/574.0 px, z ticks at rows 156.0, 295.0, 434.0 (= 60, 40, 20 nm), max residual 0.06 nm.
+# One source pixel = 0.125 nm in x and 0.144 nm in z.
+# series 'Raw data (circles)': centres of the red open circles (Hough transform on the circle outlines after removing the thick line,
+# then a least-squares circle fit to each outline; 51 circles; uncertainty about 1 px = 0.13-0.15 nm); circles behind the black curve may be missed.
+# series 'Raw data (red line)': the red line through the circles, per pixel column (opening 4x4 removes the circle outlines; z_low/z_high = run ends
+# moved inward by 3 px, z_nm = their mean). Where the black curve covers it, the red line is hidden and the column is skipped or follows the visible part.
+# series 'Reversed fitted curve': centre of the thick black arc per pixel column (black mask, closing and opening 5x5, largest component);
+# columns where the arrowhead of the R_mark_m label touches the arc are named 'Reversed fitted curve (arrowhead overlap)' and are biased.
+# Check (decompiler): least-squares circle through the unflagged 'Reversed fitted curve' points has radius 21.20 nm (centre x 52.96, z 43.59 nm);
+# the plot label says R_mark_m = 21.04 nm. Labels in the panel: '(b)', 'Raw data', 'R_mark_m=21.04 nm', 'Reversed fitted curve'.
+series,x_nm,z_nm,z_low_nm,z_high_nm
+Raw data (circles),0.85,51.71,,
+Raw data (circles),2.58,51.18,,
+Raw data (circles),4.71,50.73,,
+Raw data (circles),6.63,50.15,,
+Raw data (circles),8.50,49.57,,
+Raw data (circles),10.47,48.86,,
+Raw data (circles),12.47,48.13,,
+Raw data (circles),14.45,47.25,,
+Raw data (circles),16.43,46.60,,
+Raw data (circles),18.45,45.52,,
+Raw data (circles),20.23,44.45,,
+Raw data (circles),22.36,43.21,,
+Raw data (circles),24.31,42.00,,
+Raw data (circles),26.21,40.57,,
+Raw data (circles),28.24,39.02,,
+Raw data (circles),30.21,37.53,,
+Raw data (circles),32.00,36.01,,
+Raw data (circles),34.17,34.28,,
+Raw data (circles),36.18,32.74,,
+Raw data (circles),38.01,31.26,,
+Raw data (circles),40.03,29.52,,
+Raw data (circles),41.98,27.61,,
+Raw data (circles),43.85,25.51,,
+Raw data (circles),45.85,23.48,,
+Raw data (circles),47.91,21.87,,
+Raw data (circles),49.76,20.96,,
+Raw data (circles),51.80,20.52,,
+Raw data (circles),53.79,20.78,,
+Raw data (circles),55.77,21.57,,
+Raw data (circles),57.63,22.57,,
+Raw data (circles),59.63,23.98,,
+Raw data (circles),61.51,25.65,,
+Raw data (circles),63.56,27.20,,
+Raw data (circles),65.60,28.77,,
+Raw data (circles),67.63,30.52,,
+Raw data (circles),69.45,31.76,,
+Raw data (circles),71.38,33.30,,
+Raw data (circles),73.37,34.60,,
+Raw data (circles),75.56,36.19,,
+Raw data (circles),77.33,37.31,,
+Raw data (circles),79.36,38.32,,
+Raw data (circles),81.24,39.35,,
+Raw data (circles),83.27,40.57,,
+Raw data (circles),85.25,41.49,,
+Raw data (circles),87.24,42.49,,
+Raw data (circles),89.15,43.58,,
+Raw data (circles),91.07,44.45,,
+Raw data (circles),93.04,45.44,,
+Raw data (circles),95.24,46.56,,
+Raw data (circles),97.04,47.45,,
+Raw data (circles),99.07,48.04,,
+Raw data (red line),0.71,51.59,51.59,51.59
+Raw data (red line),0.83,51.59,51.59,51.59
+Raw data (red line),0.96,51.59,51.59,51.59
+Raw data (red line),1.08,51.52,51.52,51.52
+Raw data (red line),1.21,51.52,51.52,51.52
+Raw data (red line),1.33,51.52,51.52,51.52
+Raw data (red line),1.46,51.52,51.52,51.52
+Raw data (red line),1.58,51.45,51.45,51.45
+Raw data (red line),1.71,51.38,51.38,51.38
+Raw data (red line),1.84,51.38,51.38,51.38
+Raw data (red line),1.96,51.38,51.38,51.38
+Raw data (red line),2.09,51.24,51.24,51.24
+Raw data (red line),2.21,51.24,51.24,51.24
+Raw data (red line),2.34,51.24,51.24,51.24
+Raw data (red line),2.46,51.16,51.16,51.16
+Raw data (red line),2.59,51.09,51.09,51.09
+Raw data (red line),2.71,51.09,51.09,51.09
+Raw data (red line),2.84,51.09,51.09,51.09
+Raw data (red line),2.96,50.95,50.95,50.95
+Raw data (red line),3.09,50.95,50.95,50.95
+Raw data (red line),3.21,50.95,50.95,50.95
+Raw data (red line),3.34,50.88,50.88,50.88
+Raw data (red line),3.46,50.88,50.88,50.88
+Raw data (red line),3.59,50.80,50.80,50.80
+Raw data (red line),3.72,50.80,50.80,50.80
+Raw data (red line),3.84,50.80,50.80,50.80
+Raw data (red line),3.97,50.66,50.66,50.66
+Raw data (red line),4.09,50.66,50.66,50.66
+Raw data (red line),4.22,50.66,50.66,50.66
+Raw data (red line),4.34,50.66,50.66,50.66
+Raw data (red line),4.47,50.52,50.52,50.52
+Raw data (red line),4.59,50.52,50.52,50.52
+Raw data (red line),4.72,50.52,50.52,50.52
+Raw data (red line),4.84,50.52,50.52,50.52
+Raw data (red line),4.97,50.45,50.45,50.45
+Raw data (red line),5.09,50.45,50.45,50.45
+Raw data (red line),5.22,50.37,50.37,50.37
+Raw data (red line),5.35,50.37,50.37,50.37
+Raw data (red line),5.47,50.37,50.37,50.37
+Raw data (red line),5.60,50.37,50.37,50.37
+Raw data (red line),5.72,50.30,50.30,50.30
+Raw data (red line),5.85,50.23,50.23,50.23
+Raw data (red line),5.97,50.23,50.23,50.23
+Raw data (red line),6.10,50.23,50.23,50.23
+Raw data (red line),6.22,50.23,50.23,50.23
+Raw data (red line),6.35,50.16,50.16,50.16
+Raw data (red line),6.47,50.09,50.09,50.09
+Raw data (red line),6.60,50.09,50.09,50.09
+Raw data (red line),6.72,50.09,50.09,50.09
+Raw data (red line),6.85,50.01,50.01,50.01
+Raw data (red line),6.97,49.94,49.94,49.94
+Raw data (red line),7.10,49.94,49.94,49.94
+Raw data (red line),7.23,49.87,49.87,49.87
+Raw data (red line),7.35,49.87,49.87,49.87
+Raw data (red line),7.48,49.87,49.87,49.87
+Raw data (red line),7.60,49.73,49.73,49.73
+Raw data (red line),7.73,49.73,49.73,49.73
+Raw data (red line),7.85,49.73,49.73,49.73
+Raw data (red line),7.98,49.58,49.58,49.58
+Raw data (red line),8.10,49.58,49.58,49.58
+Raw data (red line),8.23,49.58,49.58,49.58
+Raw data (red line),8.35,49.51,49.51,49.51
+Raw data (red line),8.48,49.44,49.44,49.44
+Raw data (red line),8.60,49.44,49.44,49.44
+Raw data (red line),8.73,49.44,49.44,49.44
+Raw data (red line),8.85,49.37,49.37,49.37
+Raw data (red line),8.98,49.30,49.30,49.30
+Raw data (red line),9.11,49.30,49.30,49.30
+Raw data (red line),9.23,49.22,49.22,49.22
+Raw data (red line),9.36,49.15,49.15,49.15
+Raw data (red line),9.48,49.15,49.15,49.15
+Raw data (red line),9.61,49.15,49.15,49.15
+Raw data (red line),9.73,49.08,49.08,49.08
+Raw data (red line),9.86,49.01,49.01,49.01
+Raw data (red line),9.98,49.01,49.01,49.01
+Raw data (red line),10.11,49.01,49.01,49.01
+Raw data (red line),10.23,48.94,48.94,48.94
+Raw data (red line),10.36,48.86,48.86,48.86
+Raw data (red line),10.48,48.79,48.79,48.79
+Raw data (red line),10.61,48.79,48.79,48.79
+Raw data (red line),10.74,48.79,48.79,48.79
+Raw data (red line),10.86,48.65,48.65,48.65
+Raw data (red line),10.99,48.65,48.65,48.65
+Raw data (red line),11.11,48.65,48.65,48.65
+Raw data (red line),11.24,48.58,48.58,48.58
+Raw data (red line),11.36,48.51,48.51,48.51
+Raw data (red line),11.49,48.51,48.51,48.51
+Raw data (red line),11.61,48.43,48.43,48.43
+Raw data (red line),11.74,48.36,48.36,48.36
+Raw data (red line),11.86,48.36,48.36,48.36
+Raw data (red line),11.99,48.29,48.29,48.29
+Raw data (red line),12.11,48.22,48.22,48.22
+Raw data (red line),12.24,48.22,48.22,48.22
+Raw data (red line),12.36,48.15,48.15,48.15
+Raw data (red line),12.49,48.07,48.07,48.07
+Raw data (red line),12.62,48.07,48.07,48.07
+Raw data (red line),12.74,48.00,48.00,48.00
+Raw data (red line),12.87,47.93,47.93,47.93
+Raw data (red line),12.99,47.86,47.86,47.86
+Raw data (red line),13.12,47.86,47.86,47.86
+Raw data (red line),13.24,47.79,47.79,47.79
+Raw data (red line),13.37,47.72,47.72,47.72
+Raw data (red line),13.49,47.64,47.64,47.64
+Raw data (red line),13.62,47.57,47.57,47.57
+Raw data (red line),13.74,47.57,47.57,47.57
+Raw data (red line),13.87,47.50,47.50,47.50
+Raw data (red line),13.99,47.43,47.43,47.43
+Raw data (red line),14.12,47.36,47.36,47.36
+Raw data (red line),14.24,47.28,47.28,47.28
+Raw data (red line),14.37,47.28,47.28,47.28
+Raw data (red line),14.50,47.21,47.21,47.21
+Raw data (red line),14.62,47.21,47.21,47.21
+Raw data (red line),14.75,47.07,47.07,47.07
+Raw data (red line),14.87,47.07,47.07,47.07
+Raw data (red line),15.00,47.07,47.07,47.07
+Raw data (red line),15.12,47.00,47.00,47.00
+Raw data (red line),15.25,46.93,46.93,46.93
+Raw data (red line),15.37,46.93,46.93,46.93
+Raw data (red line),15.50,46.93,46.93,46.93
+Raw data (red line),15.62,46.78,46.78,46.78
+Raw data (red line),15.75,46.78,46.78,46.78
+Raw data (red line),15.87,46.78,46.78,46.78
+Raw data (red line),16.00,46.71,46.71,46.71
+Raw data (red line),16.13,46.64,46.64,46.64
+Raw data (red line),16.25,46.64,46.64,46.64
+Raw data (red line),16.38,46.57,46.57,46.57
+Raw data (red line),16.50,46.49,46.49,46.49
+Raw data (red line),16.63,46.42,46.42,46.42
+Raw data (red line),16.75,46.42,46.42,46.42
+Raw data (red line),16.88,46.28,46.28,46.28
+Raw data (red line),17.00,46.28,46.28,46.28
+Raw data (red line),17.13,46.21,46.21,46.21
+Raw data (red line),17.25,46.14,46.14,46.14
+Raw data (red line),17.38,46.06,46.06,46.06
+Raw data (red line),17.50,46.06,46.06,46.06
+Raw data (red line),17.63,45.92,45.92,45.92
+Raw data (red line),17.75,45.85,45.85,45.85
+Raw data (red line),17.88,45.78,45.78,45.78
+Raw data (red line),18.01,45.78,45.78,45.78
+Raw data (red line),18.13,45.63,45.63,45.63
+Raw data (red line),18.26,45.49,45.49,45.49
+Raw data (red line),18.38,45.49,45.49,45.49
+Raw data (red line),18.51,45.42,45.42,45.42
+Raw data (red line),18.63,45.20,45.20,45.20
+Raw data (red line),18.76,45.13,45.13,45.13
+Raw data (red line),18.88,45.06,45.06,45.06
+Raw data (red line),19.01,44.99,44.99,44.99
+Raw data (red line),19.13,44.99,44.99,44.99
+Raw data (red line),19.26,44.99,44.99,44.99
+Raw data (red line),19.38,44.91,44.91,44.91
+Raw data (red line),19.51,44.84,44.84,44.84
+Raw data (red line),19.63,44.77,44.77,44.77
+Raw data (red line),19.76,44.70,44.70,44.70
+Raw data (red line),19.89,44.63,44.63,44.63
+Raw data (red line),20.01,44.63,44.63,44.63
+Raw data (red line),20.14,44.48,44.48,44.48
+Raw data (red line),20.26,44.41,44.41,44.41
+Raw data (red line),20.39,44.34,44.34,44.34
+Raw data (red line),20.51,44.27,44.27,44.27
+Raw data (red line),20.64,44.12,44.12,44.12
+Raw data (red line),20.76,44.12,44.12,44.12
+Raw data (red line),20.89,43.98,43.98,43.98
+Raw data (red line),21.01,43.91,43.91,43.91
+Raw data (red line),21.14,43.84,43.84,43.84
+Raw data (red line),21.26,43.76,43.76,43.76
+Raw data (red line),21.39,43.76,43.76,43.76
+Raw data (red line),21.51,43.62,43.62,43.62
+Raw data (red line),21.64,43.55,43.55,43.55
+Raw data (red line),21.77,43.48,43.48,43.48
+Raw data (red line),21.89,43.48,43.48,43.48
+Raw data (red line),22.02,43.33,43.33,43.33
+Raw data (red line),22.14,43.19,43.19,43.19
+Raw data (red line),22.27,43.19,43.19,43.19
+Raw data (red line),22.39,43.05,43.05,43.05
+Raw data (red line),22.52,43.05,43.05,43.05
+Raw data (red line),22.64,42.90,42.90,42.90
+Raw data (red line),22.77,42.90,42.90,42.90
+Raw data (red line),22.89,42.76,42.76,42.76
+Raw data (red line),23.02,42.69,42.61,42.76
+Raw data (red line),23.14,42.61,42.61,42.61
+Raw data (red line),23.27,42.54,42.47,42.61
+Raw data (red line),23.40,42.40,42.33,42.47
+Raw data (red line),23.52,42.40,42.33,42.47
+Raw data (red line),23.65,42.33,42.33,42.33
+Raw data (red line),23.77,42.18,42.18,42.18
+Raw data (red line),23.90,42.18,42.18,42.18
+Raw data (red line),24.02,42.04,42.04,42.04
+Raw data (red line),24.15,41.97,41.90,42.04
+Raw data (red line),24.27,41.90,41.90,41.90
+Raw data (red line),24.40,41.82,41.75,41.90
+Raw data (red line),24.52,41.75,41.75,41.75
+Raw data (red line),24.65,41.61,41.61,41.61
+Raw data (red line),24.77,41.54,41.47,41.61
+Raw data (red line),24.90,41.47,41.47,41.47
+Raw data (red line),25.02,41.39,41.32,41.47
+Raw data (red line),25.15,41.32,41.32,41.32
+Raw data (red line),25.28,41.18,41.18,41.18
+Raw data (red line),25.40,41.11,41.03,41.18
+Raw data (red line),25.53,41.03,41.03,41.03
+Raw data (red line),25.65,40.89,40.89,40.89
+Raw data (red line),25.78,40.89,40.89,40.89
+Raw data (red line),25.90,40.75,40.75,40.75
+Raw data (red line),26.03,40.68,40.60,40.75
+Raw data (red line),26.15,40.60,40.60,40.60
+Raw data (red line),26.28,40.46,40.46,40.46
+Raw data (red line),26.40,40.39,40.32,40.46
+Raw data (red line),26.53,40.32,40.32,40.32
+Raw data (red line),26.65,40.17,40.17,40.17
+Raw data (red line),26.78,40.10,40.03,40.17
+Raw data (red line),26.90,40.03,40.03,40.03
+Raw data (red line),27.03,39.81,39.74,39.89
+Raw data (red line),27.16,39.81,39.74,39.89
+Raw data (red line),27.28,39.67,39.60,39.74
+Raw data (red line),27.41,39.60,39.60,39.60
+Raw data (red line),27.53,39.53,39.45,39.60
+Raw data (red line),27.66,39.45,39.45,39.45
+Raw data (red line),27.78,39.31,39.31,39.31
+Raw data (red line),27.91,39.24,39.17,39.31
+Raw data (red line),28.03,39.09,39.02,39.17
+Raw data (red line),28.16,39.02,39.02,39.02
+Raw data (red line),28.28,38.95,38.88,39.02
+Raw data (red line),28.41,38.81,38.74,38.88
+Raw data (red line),28.53,38.74,38.74,38.74
+Raw data (red line),28.66,38.59,38.59,38.59
+Raw data (red line),28.79,38.52,38.45,38.59
+Raw data (red line),28.91,38.45,38.45,38.45
+Raw data (red line),29.04,38.30,38.30,38.30
+Raw data (red line),29.16,38.23,38.16,38.30
+Raw data (red line),29.29,38.16,38.16,38.16
+Raw data (red line),29.41,38.09,38.02,38.16
+Raw data (red line),29.54,37.95,37.87,38.02
+Raw data (red line),29.66,37.95,37.87,38.02
+Raw data (red line),29.79,37.73,37.73,37.73
+Raw data (red line),29.91,37.66,37.59,37.73
+Raw data (red line),30.04,37.51,37.44,37.59
+Raw data (red line),30.16,37.44,37.44,37.44
+Raw data (red line),30.29,37.37,37.30,37.44
+Raw data (red line),30.41,37.23,37.16,37.30
+Raw data (red line),30.54,37.16,37.16,37.16
+Raw data (red line),30.67,37.08,37.01,37.16
+Raw data (red line),30.79,36.94,36.87,37.01
+Raw data (red line),30.92,36.80,36.72,36.87
+Raw data (red line),31.04,36.80,36.72,36.87
+Raw data (red line),31.17,36.65,36.58,36.72
+Raw data (red line),31.29,36.58,36.58,36.58
+Raw data (red line),31.42,36.51,36.44,36.58
+Raw data (red line),31.54,36.36,36.29,36.44
+Raw data (red line),31.67,36.36,36.29,36.44
+Raw data (red line),31.79,36.22,36.15,36.29
+Raw data (red line),31.92,36.08,36.01,36.15
+Raw data (red line),32.04,35.93,35.86,36.01
+Raw data (red line),32.17,35.93,35.86,36.01
+Raw data (red line),32.29,35.79,35.72,35.86
+Raw data (red line),32.42,35.65,35.57,35.72
+Raw data (red line),32.55,35.57,35.57,35.57
+Raw data (red line),32.67,35.50,35.43,35.57
+Raw data (red line),32.80,35.36,35.29,35.43
+Raw data (red line),32.92,35.22,35.14,35.29
+Raw data (red line),33.05,35.14,35.14,35.14
+Raw data (red line),33.17,35.00,35.00,35.00
+Raw data (red line),33.30,35.00,35.00,35.00
+Raw data (red line),33.42,35.00,35.00,35.00
+Raw data (red line),33.55,35.00,35.00,35.00
+Raw data (red line),36.06,32.63,32.63,32.63
+Raw data (red line),36.18,32.56,32.56,32.56
+Raw data (red line),36.31,32.49,32.49,32.49
+Raw data (red line),36.43,32.49,32.49,32.49
+Raw data (red line),36.56,32.41,32.41,32.41
+Raw data (red line),36.68,32.27,32.27,32.27
+Raw data (red line),36.81,32.13,32.13,32.13
+Raw data (red line),36.93,32.13,32.13,32.13
+Raw data (red line),37.06,31.98,31.98,31.98
+Raw data (red line),37.18,31.84,31.84,31.84
+Raw data (red line),37.31,31.77,31.70,31.84
+Raw data (red line),37.43,31.70,31.70,31.70
+Raw data (red line),37.56,31.62,31.55,31.70
+Raw data (red line),37.68,31.48,31.41,31.55
+Raw data (red line),37.81,31.34,31.26,31.41
+Raw data (red line),37.94,31.26,31.26,31.26
+Raw data (red line),38.06,31.19,31.12,31.26
+Raw data (red line),38.19,31.05,30.98,31.12
+Raw data (red line),38.31,30.98,30.98,30.98
+Raw data (red line),38.44,30.83,30.83,30.83
+Raw data (red line),38.56,30.76,30.69,30.83
+Raw data (red line),38.69,30.69,30.69,30.69
+Raw data (red line),38.81,30.55,30.55,30.55
+Raw data (red line),38.94,30.33,30.26,30.40
+Raw data (red line),39.06,30.33,30.26,30.40
+Raw data (red line),39.19,30.26,30.26,30.26
+Raw data (red line),39.31,30.11,30.11,30.11
+Raw data (red line),39.44,30.04,29.97,30.11
+Raw data (red line),39.56,29.97,29.97,29.97
+Raw data (red line),39.69,29.83,29.83,29.83
+Raw data (red line),39.82,29.68,29.68,29.68
+Raw data (red line),39.94,29.54,29.54,29.54
+Raw data (red line),40.07,29.54,29.54,29.54
+Raw data (red line),40.19,29.40,29.40,29.40
+Raw data (red line),40.32,29.25,29.25,29.25
+Raw data (red line),40.44,29.11,29.11,29.11
+Raw data (red line),40.57,29.04,28.97,29.11
+Raw data (red line),40.69,28.89,28.82,28.97
+Raw data (red line),40.82,28.61,28.39,28.82
+Raw data (red line),40.94,28.53,28.39,28.68
+Raw data (red line),41.07,28.46,28.39,28.53
+Raw data (red line),41.19,28.32,28.25,28.39
+Raw data (red line),41.32,28.25,28.10,28.39
+Raw data (red line),41.45,28.18,27.96,28.39
+Raw data (red line),41.57,27.89,27.82,27.96
+Raw data (red line),41.70,27.74,27.67,27.82
+Raw data (red line),41.82,27.60,27.53,27.67
+Raw data (red line),41.95,27.46,27.39,27.53
+Raw data (red line),42.07,27.31,27.24,27.39
+Raw data (red line),42.20,27.17,27.10,27.24
+Raw data (red line),42.32,27.03,26.95,27.10
+Raw data (red line),42.45,26.95,26.81,27.10
+Raw data (red line),42.57,26.81,26.67,26.95
+Raw data (red line),42.70,26.59,26.38,26.81
+Raw data (red line),42.82,26.52,26.38,26.67
+Raw data (red line),42.95,26.38,26.24,26.52
+Raw data (red line),43.07,26.24,26.09,26.38
+Raw data (red line),43.20,26.16,26.09,26.24
+Raw data (red line),43.33,26.09,25.95,26.24
+Raw data (red line),43.45,26.02,25.95,26.09
+Raw data (red line),43.58,25.88,25.80,25.95
+Raw data (red line),43.70,25.80,25.80,25.80
+Raw data (red line),43.83,25.66,25.66,25.66
+Raw data (red line),43.95,25.59,25.59,25.59
+Raw data (red line),44.08,25.45,25.45,25.45
+Raw data (red line),44.20,25.37,25.37,25.37
+Raw data (red line),44.33,25.30,25.30,25.30
+Raw data (red line),44.45,25.30,25.30,25.30
+Raw data (red line),47.46,21.85,21.85,21.85
+Raw data (red line),47.59,21.78,21.78,21.78
+Raw data (red line),47.71,21.71,21.71,21.71
+Raw data (red line),47.84,21.71,21.71,21.71
+Raw data (red line),47.96,21.71,21.71,21.71
+Raw data (red line),48.09,21.57,21.57,21.57
+Raw data (red line),48.21,21.49,21.49,21.49
+Raw data (red line),48.34,21.49,21.49,21.49
+Raw data (red line),48.46,21.42,21.42,21.42
+Raw data (red line),48.59,21.28,21.28,21.28
+Raw data (red line),48.72,21.28,21.28,21.28
+Raw data (red line),48.84,21.28,21.28,21.28
+Raw data (red line),48.97,21.21,21.21,21.21
+Raw data (red line),49.09,21.14,21.14,21.14
+Raw data (red line),49.22,21.06,21.06,21.06
+Raw data (red line),49.34,21.06,21.06,21.06
+Raw data (red line),49.47,20.99,20.99,20.99
+Raw data (red line),49.59,20.92,20.92,20.92
+Raw data (red line),49.72,20.85,20.85,20.85
+Raw data (red line),49.84,20.85,20.85,20.85
+Raw data (red line),49.97,20.78,20.78,20.78
+Raw data (red line),50.09,20.78,20.78,20.78
+Raw data (red line),50.22,20.70,20.70,20.70
+Raw data (red line),50.34,20.70,20.70,20.70
+Raw data (red line),50.47,20.70,20.70,20.70
+Raw data (red line),50.60,20.63,20.63,20.63
+Raw data (red line),50.72,20.63,20.63,20.63
+Raw data (red line),50.85,20.63,20.63,20.63
+Raw data (red line),50.97,20.63,20.63,20.63
+Raw data (red line),51.10,20.63,20.63,20.63
+Raw data (red line),51.22,20.56,20.56,20.56
+Raw data (red line),51.35,20.56,20.56,20.56
+Raw data (red line),51.47,20.56,20.56,20.56
+Raw data (red line),51.60,20.56,20.56,20.56
+Raw data (red line),51.72,20.56,20.56,20.56
+Raw data (red line),51.85,20.56,20.56,20.56
+Raw data (red line),51.97,20.56,20.56,20.56
+Raw data (red line),52.10,20.56,20.56,20.56
+Raw data (red line),52.22,20.56,20.56,20.56
+Raw data (red line),52.35,20.56,20.56,20.56
+Raw data (red line),52.48,20.56,20.56,20.56
+Raw data (red line),52.60,20.56,20.56,20.56
+Raw data (red line),52.73,20.56,20.56,20.56
+Raw data (red line),52.85,20.56,20.56,20.56
+Raw data (red line),52.98,20.56,20.56,20.56
+Raw data (red line),53.10,20.56,20.56,20.56
+Raw data (red line),53.23,20.56,20.56,20.56
+Raw data (red line),53.35,20.56,20.56,20.56
+Raw data (red line),53.48,20.56,20.56,20.56
+Raw data (red line),53.60,20.63,20.63,20.63
+Raw data (red line),53.73,20.63,20.63,20.63
+Raw data (red line),53.85,20.63,20.63,20.63
+Raw data (red line),53.98,20.63,20.63,20.63
+Raw data (red line),54.11,20.70,20.70,20.70
+Raw data (red line),54.23,20.78,20.78,20.78
+Raw data (red line),54.36,20.78,20.78,20.78
+Raw data (red line),54.48,20.85,20.85,20.85
+Raw data (red line),54.61,20.92,20.92,20.92
+Raw data (red line),54.73,20.92,20.92,20.92
+Raw data (red line),54.86,20.99,20.99,20.99
+Raw data (red line),54.98,21.06,21.06,21.06
+Raw data (red line),55.11,21.14,21.14,21.14
+Raw data (red line),55.23,21.14,21.14,21.14
+Raw data (red line),55.36,21.14,21.14,21.14
+Raw data (red line),55.48,21.21,21.21,21.21
+Raw data (red line),55.61,21.28,21.28,21.28
+Raw data (red line),55.73,21.35,21.35,21.35
+Raw data (red line),55.86,21.35,21.35,21.35
+Raw data (red line),55.99,21.35,21.35,21.35
+Raw data (red line),56.11,21.42,21.42,21.42
+Raw data (red line),56.24,21.42,21.42,21.42
+Raw data (red line),60.62,24.87,24.87,24.87
+Raw data (red line),60.75,24.87,24.87,24.87
+Raw data (red line),60.87,24.94,24.94,24.94
+Raw data (red line),61.00,25.01,25.01,25.01
+Raw data (red line),61.12,25.09,25.09,25.09
+Raw data (red line),61.25,25.16,25.16,25.16
+Raw data (red line),61.38,25.23,25.23,25.23
+Raw data (red line),61.50,25.37,25.37,25.37
+Raw data (red line),61.63,25.37,25.37,25.37
+Raw data (red line),61.75,25.52,25.52,25.52
+Raw data (red line),61.88,25.66,25.66,25.66
+Raw data (red line),62.00,25.73,25.73,25.73
+Raw data (red line),62.13,25.80,25.80,25.80
+Raw data (red line),62.25,25.95,25.95,25.95
+Raw data (red line),62.38,26.02,26.02,26.02
+Raw data (red line),62.50,26.16,26.09,26.24
+Raw data (red line),62.63,26.24,26.24,26.24
+Raw data (red line),62.75,26.31,26.31,26.31
+Raw data (red line),62.88,26.38,26.38,26.38
+Raw data (red line),63.00,26.45,26.38,26.52
+Raw data (red line),63.13,26.59,26.59,26.59
+Raw data (red line),63.26,26.67,26.67,26.67
+Raw data (red line),63.38,26.81,26.81,26.81
+Raw data (red line),63.51,26.95,26.95,26.95
+Raw data (red line),63.63,26.95,26.95,26.95
+Raw data (red line),63.76,27.10,27.10,27.10
+Raw data (red line),63.88,27.24,27.24,27.24
+Raw data (red line),64.01,27.31,27.31,27.31
+Raw data (red line),64.13,27.39,27.39,27.39
+Raw data (red line),64.26,27.53,27.53,27.53
+Raw data (red line),64.38,27.67,27.67,27.67
+Raw data (red line),64.51,27.67,27.67,27.67
+Raw data (red line),64.63,27.82,27.82,27.82
+Raw data (red line),64.76,27.89,27.82,27.96
+Raw data (red line),64.88,28.03,27.96,28.10
+Raw data (red line),65.01,28.10,28.10,28.10
+Raw data (red line),65.14,28.18,28.10,28.25
+Raw data (red line),65.26,28.32,28.25,28.39
+Raw data (red line),65.39,28.46,28.39,28.53
+Raw data (red line),65.51,28.53,28.53,28.53
+Raw data (red line),65.64,28.61,28.53,28.68
+Raw data (red line),65.76,28.68,28.68,28.68
+Raw data (red line),65.89,28.82,28.82,28.82
+Raw data (red line),66.01,28.97,28.97,28.97
+Raw data (red line),66.14,28.97,28.97,28.97
+Raw data (red line),66.26,29.11,29.11,29.11
+Raw data (red line),66.39,29.25,29.25,29.25
+Raw data (red line),66.51,29.25,29.25,29.25
+Raw data (red line),66.64,29.40,29.40,29.40
+Raw data (red line),66.77,29.40,29.40,29.40
+Raw data (red line),66.89,29.54,29.54,29.54
+Raw data (red line),67.02,29.61,29.54,29.68
+Raw data (red line),67.14,29.76,29.76,29.76
+Raw data (red line),67.27,29.83,29.83,29.83
+Raw data (red line),67.39,29.97,29.97,29.97
+Raw data (red line),67.52,30.04,30.04,30.04
+Raw data (red line),67.64,30.11,30.11,30.11
+Raw data (red line),67.77,30.26,30.26,30.26
+Raw data (red line),67.89,30.33,30.33,30.33
+Raw data (red line),68.02,30.40,30.40,30.40
+Raw data (red line),68.14,30.55,30.55,30.55
+Raw data (red line),68.27,30.69,30.69,30.69
+Raw data (red line),68.39,30.69,30.69,30.69
+Raw data (red line),68.52,30.83,30.83,30.83
+Raw data (red line),68.65,30.91,30.83,30.98
+Raw data (red line),68.77,31.05,30.98,31.12
+Raw data (red line),68.90,31.05,30.98,31.12
+Raw data (red line),69.02,31.26,31.26,31.26
+Raw data (red line),69.15,31.34,31.34,31.34
+Raw data (red line),69.27,31.41,31.41,31.41
+Raw data (red line),69.40,31.48,31.48,31.48
+Raw data (red line),72.16,33.78,33.78,33.78
+Raw data (red line),72.28,33.78,33.78,33.78
+Raw data (red line),72.41,33.78,33.78,33.78
+Raw data (red line),72.53,33.85,33.85,33.85
+Raw data (red line),72.66,33.92,33.92,33.92
+Raw data (red line),72.78,33.99,33.99,33.99
+Raw data (red line),72.91,34.14,34.14,34.14
+Raw data (red line),73.03,34.21,34.21,34.21
+Raw data (red line),73.16,34.28,34.28,34.28
+Raw data (red line),73.28,34.43,34.43,34.43
+Raw data (red line),73.41,34.50,34.50,34.50
+Raw data (red line),73.53,34.57,34.57,34.57
+Raw data (red line),73.66,34.64,34.64,34.64
+Raw data (red line),73.78,34.78,34.78,34.78
+Raw data (red line),73.91,34.86,34.86,34.86
+Raw data (red line),74.04,34.93,34.93,34.93
+Raw data (red line),74.16,35.07,35.00,35.14
+Raw data (red line),74.29,35.14,35.14,35.14
+Raw data (red line),74.41,35.29,35.29,35.29
+Raw data (red line),74.54,35.29,35.29,35.29
+Raw data (red line),74.66,35.36,35.36,35.36
+Raw data (red line),74.79,35.43,35.43,35.43
+Raw data (red line),74.91,35.57,35.57,35.57
+Raw data (red line),75.04,35.65,35.65,35.65
+Raw data (red line),75.16,35.72,35.72,35.72
+Raw data (red line),75.29,35.86,35.86,35.86
+Raw data (red line),75.41,35.93,35.93,35.93
+Raw data (red line),75.54,36.01,36.01,36.01
+Raw data (red line),75.66,36.08,36.08,36.08
+Raw data (red line),75.79,36.22,36.22,36.22
+Raw data (red line),75.92,36.22,36.22,36.22
+Raw data (red line),76.04,36.36,36.36,36.36
+Raw data (red line),76.17,36.36,36.36,36.36
+Raw data (red line),76.29,36.51,36.51,36.51
+Raw data (red line),76.42,36.51,36.51,36.51
+Raw data (red line),76.54,36.65,36.65,36.65
+Raw data (red line),76.67,36.65,36.65,36.65
+Raw data (red line),76.79,36.80,36.80,36.80
+Raw data (red line),76.92,36.80,36.80,36.80
+Raw data (red line),77.04,36.94,36.94,36.94
+Raw data (red line),77.17,37.01,37.01,37.01
+Raw data (red line),77.29,37.08,37.08,37.08
+Raw data (red line),77.42,37.16,37.16,37.16
+Raw data (red line),77.54,37.23,37.23,37.23
+Raw data (red line),77.67,37.30,37.30,37.30
+Raw data (red line),77.80,37.37,37.37,37.37
+Raw data (red line),77.92,37.44,37.44,37.44
+Raw data (red line),78.05,37.59,37.59,37.59
+Raw data (red line),78.17,37.59,37.59,37.59
+Raw data (red line),78.30,37.66,37.66,37.66
+Raw data (red line),78.42,37.73,37.73,37.73
+Raw data (red line),78.55,37.80,37.80,37.80
+Raw data (red line),78.67,37.87,37.87,37.87
+Raw data (red line),78.80,37.95,37.95,37.95
+Raw data (red line),78.92,38.02,38.02,38.02
+Raw data (red line),79.05,38.09,38.09,38.09
+Raw data (red line),79.17,38.16,38.16,38.16
+Raw data (red line),79.30,38.23,38.23,38.23
+Raw data (red line),79.43,38.23,38.23,38.23
+Raw data (red line),79.55,38.38,38.38,38.38
+Raw data (red line),79.68,38.45,38.45,38.45
+Raw data (red line),79.80,38.52,38.52,38.52
+Raw data (red line),79.93,38.59,38.59,38.59
+Raw data (red line),80.05,38.66,38.66,38.66
+Raw data (red line),80.18,38.66,38.66,38.66
+Raw data (red line),80.30,38.81,38.81,38.81
+Raw data (red line),80.43,38.81,38.81,38.81
+Raw data (red line),80.55,38.95,38.95,38.95
+Raw data (red line),80.68,38.95,38.95,38.95
+Raw data (red line),80.80,39.02,39.02,39.02
+Raw data (red line),80.93,39.02,39.02,39.02
+Raw data (red line),81.05,39.17,39.17,39.17
+Raw data (red line),81.18,39.24,39.24,39.24
+Raw data (red line),81.31,39.31,39.31,39.31
+Raw data (red line),81.43,39.38,39.38,39.38
+Raw data (red line),81.56,39.45,39.45,39.45
+Raw data (red line),81.68,39.53,39.53,39.53
+Raw data (red line),81.81,39.60,39.60,39.60
+Raw data (red line),81.93,39.74,39.74,39.74
+Raw data (red line),82.06,39.74,39.74,39.74
+Raw data (red line),82.18,39.81,39.81,39.81
+Raw data (red line),82.31,39.89,39.89,39.89
+Raw data (red line),82.43,39.96,39.96,39.96
+Raw data (red line),82.56,40.03,40.03,40.03
+Raw data (red line),82.68,40.10,40.10,40.10
+Raw data (red line),82.81,40.17,40.17,40.17
+Raw data (red line),82.93,40.24,40.24,40.24
+Raw data (red line),83.06,40.32,40.32,40.32
+Raw data (red line),83.19,40.39,40.39,40.39
+Raw data (red line),83.31,40.39,40.39,40.39
+Raw data (red line),83.44,40.53,40.53,40.53
+Raw data (red line),83.56,40.53,40.53,40.53
+Raw data (red line),83.69,40.68,40.68,40.68
+Raw data (red line),83.81,40.68,40.68,40.68
+Raw data (red line),83.94,40.75,40.75,40.75
+Raw data (red line),84.06,40.82,40.82,40.82
+Raw data (red line),84.19,40.82,40.82,40.82
+Raw data (red line),84.31,40.96,40.96,40.96
+Raw data (red line),84.44,41.03,41.03,41.03
+Raw data (red line),84.56,41.11,41.11,41.11
+Raw data (red line),84.69,41.11,41.11,41.11
+Raw data (red line),84.82,41.18,41.18,41.18
+Raw data (red line),84.94,41.25,41.25,41.25
+Raw data (red line),85.07,41.39,41.39,41.39
+Raw data (red line),85.19,41.39,41.39,41.39
+Raw data (red line),85.32,41.47,41.47,41.47
+Raw data (red line),85.44,41.54,41.54,41.54
+Raw data (red line),85.57,41.61,41.61,41.61
+Raw data (red line),85.69,41.68,41.68,41.68
+Raw data (red line),85.82,41.68,41.68,41.68
+Raw data (red line),85.94,41.82,41.82,41.82
+Raw data (red line),86.07,41.82,41.82,41.82
+Raw data (red line),86.19,41.82,41.82,41.82
+Raw data (red line),86.32,41.97,41.97,41.97
+Raw data (red line),86.44,42.11,42.11,42.11
+Raw data (red line),86.57,42.11,42.11,42.11
+Raw data (red line),86.70,42.11,42.11,42.11
+Raw data (red line),86.82,42.18,42.18,42.18
+Raw data (red line),86.95,42.26,42.26,42.26
+Raw data (red line),87.07,42.40,42.40,42.40
+Raw data (red line),87.20,42.40,42.40,42.40
+Raw data (red line),87.32,42.47,42.47,42.47
+Raw data (red line),87.45,42.54,42.54,42.54
+Raw data (red line),87.57,42.61,42.61,42.61
+Raw data (red line),87.70,42.69,42.69,42.69
+Raw data (red line),87.82,42.76,42.76,42.76
+Raw data (red line),87.95,42.83,42.83,42.83
+Raw data (red line),88.07,42.83,42.83,42.83
+Raw data (red line),88.20,42.83,42.83,42.83
+Raw data (red line),88.32,42.97,42.97,42.97
+Raw data (red line),88.45,43.05,43.05,43.05
+Raw data (red line),88.58,43.12,43.12,43.12
+Raw data (red line),88.70,43.12,43.12,43.12
+Raw data (red line),88.83,43.19,43.19,43.19
+Raw data (red line),88.95,43.26,43.26,43.26
+Raw data (red line),89.08,43.33,43.33,43.33
+Raw data (red line),89.20,43.33,43.33,43.33
+Raw data (red line),89.33,43.41,43.41,43.41
+Raw data (red line),89.45,43.48,43.48,43.48
+Raw data (red line),89.58,43.55,43.55,43.55
+Raw data (red line),89.70,43.62,43.62,43.62
+Raw data (red line),89.83,43.62,43.62,43.62
+Raw data (red line),89.95,43.69,43.69,43.69
+Raw data (red line),90.08,43.76,43.76,43.76
+Raw data (red line),90.20,43.84,43.84,43.84
+Raw data (red line),90.33,43.91,43.91,43.91
+Raw data (red line),90.46,43.98,43.98,43.98
+Raw data (red line),90.58,43.98,43.98,43.98
+Raw data (red line),90.71,44.05,44.05,44.05
+Raw data (red line),90.83,44.12,44.12,44.12
+Raw data (red line),90.96,44.27,44.27,44.27
+Raw data (red line),91.08,44.27,44.27,44.27
+Raw data (red line),91.21,44.34,44.34,44.34
+Raw data (red line),91.33,44.41,44.41,44.41
+Raw data (red line),91.46,44.48,44.48,44.48
+Raw data (red line),91.58,44.55,44.55,44.55
+Raw data (red line),91.71,44.63,44.63,44.63
+Raw data (red line),91.83,44.70,44.70,44.70
+Raw data (red line),91.96,44.70,44.70,44.70
+Raw data (red line),92.09,44.77,44.77,44.77
+Raw data (red line),92.21,44.84,44.84,44.84
+Raw data (red line),92.34,44.91,44.91,44.91
+Raw data (red line),92.46,44.99,44.99,44.99
+Raw data (red line),92.59,44.99,44.99,44.99
+Raw data (red line),92.71,45.13,45.13,45.13
+Raw data (red line),92.84,45.13,45.13,45.13
+Raw data (red line),92.96,45.27,45.27,45.27
+Raw data (red line),93.09,45.27,45.27,45.27
+Raw data (red line),93.21,45.34,45.34,45.34
+Raw data (red line),93.34,45.42,45.42,45.42
+Raw data (red line),93.46,45.49,45.49,45.49
+Raw data (red line),93.59,45.56,45.56,45.56
+Raw data (red line),93.71,45.56,45.56,45.56
+Raw data (red line),93.84,45.70,45.70,45.70
+Raw data (red line),93.97,45.70,45.70,45.70
+Raw data (red line),94.09,45.70,45.70,45.70
+Raw data (red line),94.22,45.85,45.85,45.85
+Raw data (red line),94.34,45.92,45.92,45.92
+Raw data (red line),94.47,45.99,45.99,45.99
+Raw data (red line),94.59,45.99,45.99,45.99
+Raw data (red line),94.72,46.14,46.14,46.14
+Raw data (red line),94.84,46.14,46.14,46.14
+Raw data (red line),94.97,46.28,46.28,46.28
+Raw data (red line),95.09,46.28,46.28,46.28
+Raw data (red line),95.22,46.35,46.35,46.35
+Raw data (red line),95.34,46.42,46.42,46.42
+Raw data (red line),95.47,46.49,46.49,46.49
+Raw data (red line),95.59,46.57,46.57,46.57
+Raw data (red line),95.72,46.64,46.64,46.64
+Raw data (red line),95.85,46.71,46.71,46.71
+Raw data (red line),95.97,46.71,46.71,46.71
+Raw data (red line),96.10,46.85,46.85,46.85
+Raw data (red line),96.22,46.93,46.93,46.93
+Raw data (red line),96.35,47.00,47.00,47.00
+Raw data (red line),96.47,47.00,47.00,47.00
+Raw data (red line),96.60,47.07,47.07,47.07
+Raw data (red line),96.72,47.14,47.14,47.14
+Raw data (red line),96.85,47.28,47.28,47.28
+Raw data (red line),96.97,47.28,47.28,47.28
+Raw data (red line),97.10,47.36,47.36,47.36
+Raw data (red line),97.22,47.43,47.43,47.43
+Raw data (red line),97.35,47.50,47.50,47.50
+Raw data (red line),97.48,47.50,47.50,47.50
+Raw data (red line),97.60,47.57,47.57,47.57
+Raw data (red line),97.73,47.72,47.72,47.72
+Raw data (red line),97.85,47.72,47.72,47.72
+Raw data (red line),97.98,47.72,47.72,47.72
+Raw data (red line),98.10,47.79,47.79,47.79
+Raw data (red line),98.23,47.86,47.86,47.86
+Raw data (red line),98.35,47.93,47.93,47.93
+Raw data (red line),98.48,47.93,47.93,47.93
+Raw data (red line),98.60,48.00,48.00,48.00
+Raw data (red line),98.73,48.07,48.07,48.07
+Raw data (red line),98.85,48.15,48.15,48.15
+Raw data (red line),98.98,48.15,48.15,48.15
+Raw data (red line),99.10,48.22,48.22,48.22
+Raw data (red line),99.23,48.29,48.29,48.29
+Raw data (red line),99.36,48.36,48.36,48.36
+Raw data (red line),99.48,48.36,48.36,48.36
+Reversed fitted curve,33.55,34.07,,
+Reversed fitted curve,33.67,33.99,,
+Reversed fitted curve,33.80,33.92,,
+Reversed fitted curve,33.92,33.78,,
+Reversed fitted curve,34.05,33.78,,
+Reversed fitted curve,34.17,33.64,,
+Reversed fitted curve,34.30,33.49,,
+Reversed fitted curve,34.43,33.42,,
+Reversed fitted curve,34.55,33.20,,
+Reversed fitted curve,34.68,33.06,,
+Reversed fitted curve,34.80,32.92,,
+Reversed fitted curve,34.93,32.63,,
+Reversed fitted curve,35.05,32.41,,
+Reversed fitted curve,35.18,32.34,,
+Reversed fitted curve,35.30,31.98,,
+Reversed fitted curve,35.43,31.91,,
+Reversed fitted curve,35.55,31.62,,
+Reversed fitted curve,35.68,31.48,,
+Reversed fitted curve,35.80,31.34,,
+Reversed fitted curve,35.93,31.12,,
+Reversed fitted curve,36.06,30.98,,
+Reversed fitted curve,36.18,30.83,,
+Reversed fitted curve,36.31,30.62,,
+Reversed fitted curve,36.43,30.47,,
+Reversed fitted curve,36.56,30.11,,
+Reversed fitted curve,36.68,30.04,,
+Reversed fitted curve,36.81,29.97,,
+Reversed fitted curve,36.93,29.83,,
+Reversed fitted curve,37.06,29.68,,
+Reversed fitted curve,37.18,29.54,,
+Reversed fitted curve,37.31,29.40,,
+Reversed fitted curve,37.43,29.18,,
+Reversed fitted curve,37.56,29.11,,
+Reversed fitted curve,37.68,28.97,,
+Reversed fitted curve,37.81,28.82,,
+Reversed fitted curve,37.94,28.75,,
+Reversed fitted curve,38.06,28.53,,
+Reversed fitted curve,38.19,28.46,,
+Reversed fitted curve,38.31,28.39,,
+Reversed fitted curve,38.44,28.25,,
+Reversed fitted curve,38.56,28.10,,
+Reversed fitted curve,38.69,27.60,,
+Reversed fitted curve,38.81,27.53,,
+Reversed fitted curve,38.94,27.53,,
+Reversed fitted curve,39.06,27.46,,
+Reversed fitted curve,39.19,27.39,,
+Reversed fitted curve,39.31,27.39,,
+Reversed fitted curve,39.44,27.31,,
+Reversed fitted curve,39.56,27.24,,
+Reversed fitted curve,39.69,27.17,,
+Reversed fitted curve,39.82,27.03,,
+Reversed fitted curve,39.94,26.95,,
+Reversed fitted curve,40.07,26.81,,
+Reversed fitted curve,40.19,26.74,,
+Reversed fitted curve,40.32,26.59,,
+Reversed fitted curve,40.44,26.52,,
+Reversed fitted curve,40.57,26.38,,
+Reversed fitted curve,40.69,26.31,,
+Reversed fitted curve,40.82,26.24,,
+Reversed fitted curve,40.94,26.16,,
+Reversed fitted curve,41.07,26.02,,
+Reversed fitted curve,41.19,25.95,,
+Reversed fitted curve,41.32,25.88,,
+Reversed fitted curve,41.45,25.73,,
+Reversed fitted curve,41.57,25.73,,
+Reversed fitted curve,41.70,25.66,,
+Reversed fitted curve,41.82,25.52,,
+Reversed fitted curve,41.95,25.52,,
+Reversed fitted curve,42.07,25.37,,
+Reversed fitted curve,42.20,25.37,,
+Reversed fitted curve,42.32,25.16,,
+Reversed fitted curve,42.45,25.16,,
+Reversed fitted curve,42.57,25.01,,
+Reversed fitted curve,42.70,25.01,,
+Reversed fitted curve,42.82,24.94,,
+Reversed fitted curve,42.95,24.87,,
+Reversed fitted curve,43.07,24.80,,
+Reversed fitted curve,43.20,24.73,,
+Reversed fitted curve,43.33,24.66,,
+Reversed fitted curve,43.45,24.58,,
+Reversed fitted curve,43.58,24.58,,
+Reversed fitted curve,43.70,24.44,,
+Reversed fitted curve,43.83,24.44,,
+Reversed fitted curve,43.95,24.37,,
+Reversed fitted curve,44.08,24.30,,
+Reversed fitted curve,44.20,24.22,,
+Reversed fitted curve,44.33,24.15,,
+Reversed fitted curve,44.45,24.08,,
+Reversed fitted curve,44.58,24.08,,
+Reversed fitted curve,44.70,24.01,,
+Reversed fitted curve,44.83,23.94,,
+Reversed fitted curve,44.95,23.86,,
+Reversed fitted curve,45.08,23.79,,
+Reversed fitted curve,45.21,23.79,,
+Reversed fitted curve,45.33,23.72,,
+Reversed fitted curve,45.46,23.72,,
+Reversed fitted curve,45.58,23.72,,
+Reversed fitted curve,45.71,23.72,,
+Reversed fitted curve,45.83,23.65,,
+Reversed fitted curve (arrowhead overlap),45.96,24.08,,
+Reversed fitted curve (arrowhead overlap),46.08,24.37,,
+Reversed fitted curve (arrowhead overlap),46.21,24.37,,
+Reversed fitted curve (arrowhead overlap),46.33,24.30,,
+Reversed fitted curve (arrowhead overlap),46.46,24.30,,
+Reversed fitted curve (arrowhead overlap),46.58,24.30,,
+Reversed fitted curve (arrowhead overlap),46.71,24.30,,
+Reversed fitted curve (arrowhead overlap),46.83,24.22,,
+Reversed fitted curve (arrowhead overlap),46.96,24.22,,
+Reversed fitted curve (arrowhead overlap),47.09,24.22,,
+Reversed fitted curve (arrowhead overlap),47.21,24.22,,
+Reversed fitted curve (arrowhead overlap),47.34,24.15,,
+Reversed fitted curve (arrowhead overlap),47.46,23.79,,
+Reversed fitted curve,47.59,23.07,,
+Reversed fitted curve,47.71,23.00,,
+Reversed fitted curve,47.84,23.00,,
+Reversed fitted curve,47.96,23.00,,
+Reversed fitted curve,48.09,22.86,,
+Reversed fitted curve,48.21,22.86,,
+Reversed fitted curve,48.34,22.86,,
+Reversed fitted curve,48.46,22.79,,
+Reversed fitted curve,48.59,22.79,,
+Reversed fitted curve,48.72,22.72,,
+Reversed fitted curve,48.84,22.72,,
+Reversed fitted curve,48.97,22.72,,
+Reversed fitted curve,49.09,22.72,,
+Reversed fitted curve,49.22,22.72,,
+Reversed fitted curve,49.34,22.72,,
+Reversed fitted curve,49.47,22.57,,
+Reversed fitted curve,49.59,22.57,,
+Reversed fitted curve,49.72,22.57,,
+Reversed fitted curve,49.84,22.57,,
+Reversed fitted curve,49.97,22.57,,
+Reversed fitted curve,50.09,22.57,,
+Reversed fitted curve,50.22,22.57,,
+Reversed fitted curve,50.34,22.50,,
+Reversed fitted curve,50.47,22.50,,
+Reversed fitted curve,50.60,22.50,,
+Reversed fitted curve,50.72,22.50,,
+Reversed fitted curve,50.85,22.50,,
+Reversed fitted curve,50.97,22.50,,
+Reversed fitted curve,51.10,22.50,,
+Reversed fitted curve,51.22,22.50,,
+Reversed fitted curve,51.35,22.43,,
+Reversed fitted curve,51.47,22.43,,
+Reversed fitted curve,51.60,22.43,,
+Reversed fitted curve,51.72,22.43,,
+Reversed fitted curve,51.85,22.43,,
+Reversed fitted curve,51.97,22.43,,
+Reversed fitted curve,52.10,22.43,,
+Reversed fitted curve,52.22,22.43,,
+Reversed fitted curve,52.35,22.43,,
+Reversed fitted curve,52.48,22.43,,
+Reversed fitted curve,52.60,22.43,,
+Reversed fitted curve,52.73,22.43,,
+Reversed fitted curve,52.85,22.43,,
+Reversed fitted curve,52.98,22.43,,
+Reversed fitted curve,53.10,22.43,,
+Reversed fitted curve,53.23,22.43,,
+Reversed fitted curve,53.35,22.43,,
+Reversed fitted curve,53.48,22.43,,
+Reversed fitted curve,53.60,22.43,,
+Reversed fitted curve,53.73,22.43,,
+Reversed fitted curve,53.85,22.43,,
+Reversed fitted curve,53.98,22.43,,
+Reversed fitted curve,54.11,22.43,,
+Reversed fitted curve,54.23,22.50,,
+Reversed fitted curve,54.36,22.50,,
+Reversed fitted curve,54.48,22.50,,
+Reversed fitted curve,54.61,22.50,,
+Reversed fitted curve,54.73,22.50,,
+Reversed fitted curve,54.86,22.50,,
+Reversed fitted curve,54.98,22.50,,
+Reversed fitted curve,55.11,22.50,,
+Reversed fitted curve,55.23,22.50,,
+Reversed fitted curve,55.36,22.50,,
+Reversed fitted curve,55.48,22.50,,
+Reversed fitted curve,55.61,22.50,,
+Reversed fitted curve,55.73,22.50,,
+Reversed fitted curve,55.86,22.50,,
+Reversed fitted curve,55.99,22.50,,
+Reversed fitted curve,56.11,22.57,,
+Reversed fitted curve,56.24,22.72,,
+Reversed fitted curve,56.36,22.72,,
+Reversed fitted curve,56.49,22.72,,
+Reversed fitted curve,56.61,22.72,,
+Reversed fitted curve,56.74,22.72,,
+Reversed fitted curve,56.86,22.72,,
+Reversed fitted curve,56.99,22.72,,
+Reversed fitted curve,57.11,22.79,,
+Reversed fitted curve,57.24,22.86,,
+Reversed fitted curve,57.36,22.86,,
+Reversed fitted curve,57.49,22.86,,
+Reversed fitted curve,57.61,22.93,,
+Reversed fitted curve,57.74,22.93,,
+Reversed fitted curve,57.87,22.93,,
+Reversed fitted curve,57.99,22.93,,
+Reversed fitted curve,58.12,23.07,,
+Reversed fitted curve,58.24,23.07,,
+Reversed fitted curve,58.37,23.07,,
+Reversed fitted curve,58.49,23.07,,
+Reversed fitted curve,58.62,23.22,,
+Reversed fitted curve,58.74,23.22,,
+Reversed fitted curve,58.87,23.22,,
+Reversed fitted curve,58.99,23.29,,
+Reversed fitted curve,59.12,23.36,,
+Reversed fitted curve,59.24,23.36,,
+Reversed fitted curve,59.37,23.43,,
+Reversed fitted curve,59.50,23.51,,
+Reversed fitted curve,59.62,23.51,,
+Reversed fitted curve,59.75,23.58,,
+Reversed fitted curve,59.87,23.65,,
+Reversed fitted curve,60.00,23.65,,
+Reversed fitted curve,60.12,23.72,,
+Reversed fitted curve,60.25,23.79,,
+Reversed fitted curve,60.37,23.79,,
+Reversed fitted curve,60.50,23.79,,
+Reversed fitted curve,60.62,23.94,,
+Reversed fitted curve,60.75,23.94,,
+Reversed fitted curve,60.87,23.94,,
+Reversed fitted curve,61.00,24.01,,
+Reversed fitted curve,61.12,24.08,,
+Reversed fitted curve,61.25,24.08,,
+Reversed fitted curve,61.38,24.15,,
+Reversed fitted curve,61.50,24.15,,
+Reversed fitted curve,61.63,24.30,,
+Reversed fitted curve,61.75,24.30,,
+Reversed fitted curve,61.88,24.30,,
+Reversed fitted curve,62.00,24.37,,
+Reversed fitted curve,62.13,24.44,,
+Reversed fitted curve,62.25,24.51,,
+Reversed fitted curve,62.38,24.58,,
+Reversed fitted curve,62.50,24.58,,
+Reversed fitted curve,62.63,24.73,,
+Reversed fitted curve,62.75,24.73,,
+Reversed fitted curve,62.88,24.87,,
+Reversed fitted curve,63.00,24.87,,
+Reversed fitted curve,63.13,24.94,,
+Reversed fitted curve,63.26,24.94,,
+Reversed fitted curve,63.38,25.16,,
+Reversed fitted curve,63.51,25.16,,
+Reversed fitted curve,63.63,25.30,,
+Reversed fitted curve,63.76,25.37,,
+Reversed fitted curve,63.88,25.45,,
+Reversed fitted curve,64.01,25.52,,
+Reversed fitted curve,64.13,25.59,,
+Reversed fitted curve,64.26,25.66,,
+Reversed fitted curve,64.38,25.80,,
+Reversed fitted curve,64.51,25.80,,
+Reversed fitted curve,64.63,25.95,,
+Reversed fitted curve,64.76,25.95,,
+Reversed fitted curve,64.88,26.09,,
+Reversed fitted curve,65.01,26.16,,
+Reversed fitted curve,65.14,26.24,,
+Reversed fitted curve,65.26,26.24,,
+Reversed fitted curve,65.39,26.45,,
+Reversed fitted curve,65.51,26.52,,
+Reversed fitted curve,65.64,26.59,,
+Reversed fitted curve,65.76,26.67,,
+Reversed fitted curve,65.89,26.81,,
+Reversed fitted curve,66.01,26.88,,
+Reversed fitted curve,66.14,26.95,,
+Reversed fitted curve,66.26,27.03,,
+Reversed fitted curve,66.39,27.17,,
+Reversed fitted curve,66.51,27.31,,
+Reversed fitted curve,66.64,27.39,,
+Reversed fitted curve,66.77,27.53,,
+Reversed fitted curve,66.89,27.60,,
+Reversed fitted curve,67.02,27.67,,
+Reversed fitted curve,67.14,27.74,,
+Reversed fitted curve,67.27,27.96,,
+Reversed fitted curve,67.39,28.10,,
+Reversed fitted curve,67.52,28.18,,
+Reversed fitted curve,67.64,28.32,,
+Reversed fitted curve,67.77,28.46,,
+Reversed fitted curve,67.89,28.61,,
+Reversed fitted curve,68.02,28.75,,
+Reversed fitted curve,68.14,28.82,,
+Reversed fitted curve,68.27,28.97,,
+Reversed fitted curve,68.39,29.11,,
+Reversed fitted curve,68.52,29.25,,
+Reversed fitted curve,68.65,29.40,,
+Reversed fitted curve,68.77,29.47,,
+Reversed fitted curve,68.90,29.68,,
+Reversed fitted curve,69.02,29.83,,
+Reversed fitted curve,69.15,29.97,,
+Reversed fitted curve,69.27,30.11,,
+Reversed fitted curve,69.40,30.33,,
+Reversed fitted curve,69.52,30.47,,
+Reversed fitted curve,69.65,30.62,,
+Reversed fitted curve,69.77,30.83,,
+Reversed fitted curve,69.90,30.98,,
+Reversed fitted curve,70.02,31.12,,
+Reversed fitted curve,70.15,31.26,,
+Reversed fitted curve,70.27,31.48,,
+Reversed fitted curve,70.40,31.55,,
+Reversed fitted curve,70.53,31.91,,
+Reversed fitted curve,70.65,32.05,,
+Reversed fitted curve,70.78,32.20,,
+Reversed fitted curve,70.90,32.49,,
+Reversed fitted curve,71.03,32.56,,
+Reversed fitted curve,71.15,32.63,,
+Reversed fitted curve,71.28,32.84,,
+Reversed fitted curve,71.40,32.84,,
+Reversed fitted curve,71.53,32.92,,
+Reversed fitted curve,71.65,33.06,,
+Reversed fitted curve,71.78,33.13,,
+Reversed fitted curve,71.90,33.20,,

@@ -1,0 +1,40 @@
+# Xu et al. 2017 eLife 6:e25916, Figure 17(e): 'Z Step Edge', Monte Carlo backscatter fraction vs step-edge position.
+# Columns: series (legend '800 V' = blue circles, '1200 V' = orange circles; the caption calls these landing energies 800 eV and 1.2 keV),
+#   x_nm = 'Nanometers' (edge position), backscatter_percent = 'Backscatter %',
+#   n_in_cluster = number of circles fitted to the blob this marker belongs to (1 = isolated marker),
+#   fit_mismatch = mismatched pixels of that blob's circle fit, in units of one marker's area (0 = perfect).
+# Provenance: tier 3, digitized from the embedded raster image (~403 ppi, no vector data in the PDF) by fig17de_extract.py.
+#   Axes calibrated on the light grey grid lines (y 8.0-12.0 every 0.5; x every 2 nm in d, every 5 nm in e); the grid is
+#   evenly spaced to within 1 px. Markers: colour masks; touching markers are split by fitting equal circles of radius
+#   10.9 px (from isolated markers) to each blob.
+# Uncertainty: about +-0.040 nm in x and +-0.0071 % in y per pixel; isolated markers ~1 px;
+#   markers inside clusters (n_in_cluster > 1) ~2-3 px.
+series,x_nm,backscatter_percent,n_in_cluster,fit_mismatch
+800 V,-0.019,10.242,5,0.21
+800 V,0.456,10.142,5,0.21
+800 V,0.976,10.020,5,0.21
+800 V,1.452,9.914,5,0.21
+800 V,1.970,9.794,5,0.21
+800 V,2.958,9.551,1,0.05
+800 V,3.955,9.394,1,0.05
+800 V,4.984,9.194,1,0.05
+800 V,5.976,9.059,1,0.05
+800 V,7.965,8.702,1,0.05
+800 V,9.994,8.481,1,0.05
+800 V,11.976,8.339,1,0.05
+800 V,14.998,8.268,1,0.05
+1200 V,-0.021,11.604,1,0.05
+1200 V,0.973,11.461,1,0.05
+1200 V,1.965,11.333,1,0.05
+1200 V,2.958,11.177,1,0.05
+1200 V,3.955,11.048,1,0.05
+1200 V,4.986,10.906,1,0.04
+1200 V,5.978,10.813,1,0.05
+1200 V,7.965,10.471,1,0.05
+1200 V,9.994,10.135,1,0.05
+1200 V,11.976,9.865,1,0.05
+1200 V,14.997,9.430,1,0.04
+1200 V,20.003,8.916,1,0.04
+1200 V,25.006,8.474,1,0.05
+1200 V,29.976,8.296,1,0.05
+1200 V,34.980,8.303,1,0.05

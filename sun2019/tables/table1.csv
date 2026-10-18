@@ -1,0 +1,6 @@
+# Sun & Gamstedt 2019, Nanomanuf Metrol 2:45-55, Table 1 (p. 2): "Experimental settings for cutting thickness and speed"
+# Columns: set = row label of the table; t_u_nm = cutting thickness t_u (nm); v0_mm_s = cutting speed v0 (mm/s).
+# Lists of values are kept as printed (comma-separated within one quoted cell).
+set,t_u_nm,v0_mm_s
+Varying t_u,"60, 85, 110, 140, 170, 200",1.0
+Varying v0,85,"0.25, 0.5, 1.0, 3.0, 10.0"

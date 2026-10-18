@@ -1,0 +1,8 @@
+# Extended Data Table 2 | Data Access Tools
+# A list of programmatic open source tools for data access, what data products they help you access, and a link to their open source repository where there are further instructions and examples.
+# Transcribed by the decompiler from the page image (the table is printed as an image in the PDF, p. 30); not a text layer. Superscript reference numbers are written as ^N.
+Tool Name,Data Products,URLs
+cloud-volume,"EM imagery, voxel segmentation and meshes",https://www.github.com/seung-lab/cloud-volume
+MeshParty,EM meshes and skeletons,https://github.com/sdorkenw/MeshParty
+CAVEclient,"EM structural annotations (synapses, cell-types, etc), segmentation edits, local geometric properties",https://github.com/seung-lab/CAVEclient
+microns-nda,Functional imaging DataJoint database,https://github.com/cajal/microns-nda-access

@@ -1,0 +1,5 @@
+# Table 1. Initial parameters of DGEBA/MTHPA and DGEBA/NA epoxy resin models.
+# Fu et al. 2019, Polymers 11, 975, p. 4. Column heads flattened: "Molecular Number of" DGEBA / MTHPA / DGEBA-MTHPA/NA; Amorphous Models Volume (A^3) / Density (g/cm^3); Crosslinked Models Volume / Density; Volumetric Shrinkage (%). The curing-agent column is headed MTHPA for both rows, as printed.
+Structure Models,Molecular Number of DGEBA,Molecular Number of MTHPA,Molecular Number of DGEBA-MTHPA/NA,Amorphous Models Volume (Å3),Amorphous Models Density (g/cm3),Crosslinked Models Volume (Å3),Crosslinked Models Density (g/cm3),Volumetric Shrinkage (%)
+DGEBA/MTHPA,8,18,2,9782.613,1.143,9693.979,1.153,0.91%
+DGEBA/NA,8,18,2,9387.993,1.184,9224.818,1.205,1.74%

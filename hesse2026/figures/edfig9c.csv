@@ -1,0 +1,57 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 9, PDF page 49; coordinates recovered from vector paths with PyMuPDF (tools/pdfplot.py).
+# Panel c: explained variance of features (%) vs feature index (1-50; 1-20 shape, 21-50 appearance), 5 series.
+# x axis from tick marks at 10..50 (resid 1.61e-03); y axis from tick marks at -100..100 (resid 7.29e-04).
+# Solid series (priming_average black #1c0f29, binocular_conscious_state1 orange #fcae34, binocular_conscious_state2 purple #543379) are 1-pt stroke polylines with one vertex per feature; precision about 0.1 % (0.01 pt).
+# binocular_conscious_state2 is clipped at the lower axis limit: 9 features have values below -100 % and are left empty (the drawn line leaves the axes there).
+# Dashed series (binocular_suppressed_state1 orange dashed, binocular_suppressed_state2 purple dashed) were exported as filled dash outlines; the centre line of each dash was reconstructed from its two long parallel edges and the polyline vertex values were read where the dashes cover the vertex or by extending the adjacent dash segments; precision about 0.5-1 % (worse on steep segments). Empty cells = vertex not covered by any dash (none expected).
+feature_index,feature_group,priming_average,binocular_conscious_state1,binocular_conscious_state2,binocular_suppressed_state1,binocular_suppressed_state2
+1,shape,76.1084,53.3158,-38.548,-18.0427,68.0553
+2,shape,85.3695,48.1987,-55.2596,-17.5207,70.5054
+3,shape,85.82,64.3968,-47.0885,-18.8852,73.6448
+4,shape,59.8383,32.307,-25.6166,-12.1973,45.464
+5,shape,49.406,26.0548,-24.0725,-10.1102,46.1365
+6,shape,34.5052,18.2351,-20.0095,-1.588,33.3656
+7,shape,31.4061,20.7396,4.1452,8.6371,20.2686
+8,shape,40.1808,24.5053,-37.1084,-15.9573,34.6701
+9,shape,55.9104,21.3702,-29.0329,-17.331,33.002
+10,shape,35.5683,25.9648,-21.9554,-3.8269,35.5065
+11,shape,38.1268,13.8207,-26.2113,-8.796,19.6781
+12,shape,25.9648,20.9558,-8.1304,-0.0258,17.9734
+13,shape,16.2351,5.983,-2.9664,6.6702,13.9348
+14,shape,41.9826,22.5234,-21.1825,-13.9082,31.0676
+15,shape,-7.3412,-27.222,-33.9914,-32.2473,-24.0541
+16,shape,15.2802,3.8569,-30.6689,-7.5853,11.1703
+17,shape,20.6315,-3.5412,-12.4817,-5.6433,11.0274
+18,shape,21.2801,5.4244,-16.7537,-8.7191,8.1294
+19,shape,9.3523,13.9289,-4.5899,-8.1261,7.1498
+20,shape,8.5235,-8.4331,10.9019,-0.5101,3.679
+21,appearance,97.4955,42.9556,,-71.2176,70.2267
+22,appearance,97.5315,42.0907,,-67.9976,68.5973
+23,appearance,98.2883,46.9555,,-72.7386,73.035
+24,appearance,87.0452,59.4599,-4.7845,-1.1721,63.1785
+25,appearance,95.8739,49.2618,,-67.5792,70.6864
+26,appearance,73.3516,30.235,-77.3999,-35.1489,57.4179
+27,appearance,84.0722,47.1357,-72.6107,-20.6174,69.2172
+28,appearance,76.1083,34.5593,-49.3371,-14.4939,55.2851
+29,appearance,75.9102,31.1719,-54.3605,-14.077,50.8854
+30,appearance,95.6937,46.5771,,-74.8733,69.4166
+31,appearance,59.4599,23.5864,-51.3786,-35.1418,34.0215
+32,appearance,78.0002,34.1809,-89.9565,-51.3055,55.5066
+33,appearance,77.3155,34.6674,-81.1728,-41.1159,57.0999
+34,appearance,86.1082,39.0817,-90.3061,-59.6636,57.8857
+35,appearance,71.694,34.0728,-70.9802,-40.4313,49.1422
+36,appearance,64.1265,24.3972,-94.4718,-34.4163,47.4401
+37,appearance,83.3155,32.4332,-82.6503,-51.704,49.9837
+38,appearance,93.6397,39.7123,,-68.1129,71.054
+39,appearance,94.1802,41.37,,-67.6473,63.2696
+40,appearance,32.253,13.118,-20.487,-10.8085,9.8356
+41,appearance,68.4508,26.1269,-37.1282,-25.2676,38.8904
+42,appearance,94.6127,40.7754,,-63.5807,68.5017
+43,appearance,68.1445,23.6224,-60.337,-23.7783,38.1225
+44,appearance,79.0092,35.9827,-94.1403,-50.5408,55.032
+45,appearance,72.1264,33.8385,-99.1637,-53.2479,54.5966
+46,appearance,72.8111,33.8025,-92.9403,-53.1917,57.1784
+47,appearance,65.5859,23.2621,-85.4268,-34.7941,51.5389
+48,appearance,68.703,15.3523,-75.5116,-42.7497,46.5331
+49,appearance,93.6577,44.9916,,-68.8451,70.819
+50,appearance,56.2527,21.2801,-57.5064,-44.4956,21.2284

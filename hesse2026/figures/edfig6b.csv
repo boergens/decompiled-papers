@@ -1,0 +1,59 @@
+# Extended Data Figure 6, panel b (PDF page 46, clip x=256-385, y=14-161 pt): explained variance of face features vs feature index.
+# Series: priming_average = black solid line (priming stimulus features from average priming activity); binocular_conscious_state1/2 = orange/purple solid lines; binocular_suppressed_state1/2 = orange/purple dashed lines (legend names).
+# Solid lines: 50-point stroke paths read directly (one vertex per feature). Dashed lines were exported as filled dash polygons; the centre line was recovered geometrically (vertex points contained in the dash outlines are exact; vertices falling in dash gaps were solved from the dash-pattern gap length (4.000 pt) and the adjacent segments' directions). *_se_pct = estimated uncertainty of each recovered dashed value in % units (0 = read exactly, coordinate precision ~0.02 pt = 0.04 %).
+# x axis calibrated on tick marks at features 10,20,30,40,50 (residual 1.61e-03 pt); y axis on ticks -100,-50,0,50,100 (residual 7.31e-04 pt). 1 % = 0.555 pt.
+# Shape/Appearance brackets above the plot span features 1.0-19.7 (Shape) and 20.2-50.1 (Appearance) in x-axis units.
+# Dashed-line recovery: state1 methods {'line': 11, 'vertex': 19, 'line+ellipse': 17, 'ellipse-2roots': 3}, max se 0.61 %, empty 0 (of which 0 blanked for se > 3.0 %); state2 methods {'line': 6, 'vertex': 23, 'line+ellipse': 19, 'vertex+ellipse': 2}, max se 1.88 %, empty 0 (of which 0 blanked for se > 3.0 %). Empty = not recoverable from the PDF.
+# The solid-line strokes contain a near-duplicate 51st point 0.01 pt right of feature 50 (same value); it was dropped.
+# Corrections 2026-10-18 with tools/dashlines.py: dashgeo.py had applied the dash-pattern constraint at spike vertices whose adjacent dashes overlap in x; dashlines.py reads such vertices directly from the dash outline. binocular_suppressed_state2 features 9 (-6.02 -> -8.91) and 31 (11.43 -> 8.54): exact vertex-point reads, se 0.01. binocular_suppressed_state1 features 14 (-28.84 -> -28.33, se 0.12; the dash-side slope on segment 13-14 anchored at feature 13 gives -28.33) and 16 (-17.09 -> -16.82, se 0.04): pattern-constraint solutions re-fitted (path end-cap -> vertex -> start-cap = 4.001 pt instead of 4.000/3.993; the two candidates differ by 0.15 pt along a steep segment, so the second is the weaker correction). The se columns of the corrected values were updated; all other values, and the method counts in the comments above, are from the original extraction.
+feature_index,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_suppressed_state1_pct,binocular_suppressed_state1_se_pct,binocular_suppressed_state2_pct,binocular_suppressed_state2_se_pct
+1,76.11,53.24,-7.22,-33.08,0.15,45.48,0.10
+2,85.37,44.83,-30.19,-24.01,0.15,50.13,0.04
+3,85.82,61.55,0.03,-15.36,0.04,49.19,0.05
+4,59.84,31.91,-6.02,-18.61,0.12,31.94,0.28
+5,49.41,17.35,-0.81,-18.97,0.15,7.96,0.02
+6,34.51,12.16,-11.48,-11.26,0.04,26.72,0.02
+7,31.41,14.87,14.56,0.31,0.04,10.09,0.04
+8,40.18,19.35,-9.05,-13.40,0.04,3.91,0.11
+9,55.91,20.16,-0.11,-15.24,0.05,-8.91,0.01
+10,35.57,29.55,-13.96,-24.86,0.04,24.67,0.02
+11,38.13,1.64,-3.34,-8.22,0.04,6.18,0.04
+12,25.96,24.40,-0.79,-4.28,0.14,23.33,0.04
+13,16.24,-1.23,6.20,-3.31,0.04,-10.54,0.02
+14,41.98,11.71,-1.70,-28.33,0.12,-1.22,0.04
+15,-7.34,-40.57,-42.85,-63.58,0.04,-24.64,0.04
+16,15.28,14.33,-19.53,-16.82,0.04,0.68,0.10
+17,20.63,-9.88,-9.54,-7.34,0.04,4.76,0.04
+18,21.28,2.97,-13.55,-8.66,0.06,-3.09,0.02
+19,9.35,4.47,-13.60,-9.39,0.03,0.78,0.04
+20,8.52,-5.25,-2.88,2.92,0.02,-10.02,0.02
+21,97.50,49.15,-44.05,-85.56,0.02,24.58,0.04
+22,97.53,47.19,-40.88,-79.53,0.04,22.54,0.03
+23,98.29,54.40,-42.16,-89.52,0.02,27.84,0.04
+24,87.05,57.89,18.69,-9.80,0.02,43.75,0.04
+25,95.87,61.57,-56.48,-96.00,0.02,40.81,0.07
+26,73.35,32.09,-39.68,-52.84,0.17,20.58,0.02
+27,84.07,49.80,-12.60,-34.11,0.24,40.99,0.04
+28,76.11,34.69,-12.62,-19.15,0.04,21.34,0.13
+29,75.91,28.34,-8.06,-18.35,0.04,16.69,0.04
+30,95.69,48.65,-32.82,-79.65,0.04,21.38,0.02
+31,59.46,18.76,-38.73,-45.43,0.02,8.54,0.01
+32,78.00,48.60,-54.77,-81.44,0.04,35.28,0.04
+33,77.32,38.34,-26.37,-43.31,0.02,28.59,0.15
+34,86.11,47.15,-31.21,-76.29,0.04,19.08,0.17
+35,71.69,28.11,-9.26,-33.32,0.04,19.91,0.14
+36,64.13,28.16,-36.67,-65.92,0.54,15.24,0.04
+37,83.32,31.24,-26.70,-60.57,0.32,13.48,0.04
+38,93.64,43.17,-45.58,-79.25,0.04,24.07,0.04
+39,94.18,47.57,-32.74,-87.76,0.02,17.77,0.15
+40,32.25,11.30,-9.09,-22.79,0.04,-3.51,0.04
+41,68.45,22.88,-7.23,-49.61,0.34,-1.11,0.06
+42,94.61,47.87,-42.58,-80.19,0.04,24.05,0.04
+43,68.14,20.13,0.84,-31.55,0.02,10.72,0.04
+44,79.01,49.46,-38.49,-78.04,0.04,24.33,0.04
+45,72.13,33.75,-19.36,-52.34,0.02,12.49,0.04
+46,72.81,44.38,-30.58,-82.80,0.19,22.09,0.15
+47,65.59,34.20,-59.79,-70.78,0.18,31.75,0.02
+48,68.70,24.29,-44.93,-59.15,0.02,22.18,0.04
+49,93.66,53.73,-43.30,-86.53,0.02,28.20,0.02
+50,56.25,14.42,-3.35,-49.88,0.61,-13.85,0.68

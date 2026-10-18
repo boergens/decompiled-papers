@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage{decomp}
+\newcommand{\yes}{\textsf{☒}}
+\newcommand{\no}{\textsf{☐}}
+\begin{document}
+
+\sourcefile{microns2025.pdf}
+\decompnote{Pages 32--34 of the PDF: the Nature Portfolio Reporting Summary filled in by the authors (form version ``April 2023''). The form's boilerplate is transcribed as printed; check boxes are written as \yes{} (ticked) and \no{} (empty); in the two-column materials/methods block on p.\,34 the Methods column is given after the Materials column. Left out: the vertical margin label ``nature portfolio | reporting summary'' and the margin note ``April 2023'' on every page, and the page numbers 1--3. Underlined words in the form are hyperlinks in the PDF (Editorial Policies, Editorial Policy Checklist, statistics for biologists, availability of computer code, guidelines for submitting code \& software, availability of data, data availability statement, policy, human participants or human data, sex, gender (identity/presentation), and sexual orientation, race, ethnicity and racism, nature.com/documents/nr-reporting-summary-flat.pdf, studies involving animals, ARRIVE guidelines, Sex and Gender in Research); the link targets are not printed.}
+
+\pdfpage{32}
+\noindent nature portfolio\par
+
+\noindent Corresponding author(s): Nuno Macarico da Costa, Forrest Collman, Jacob Reimer, Xaq Pitkow, Andreas S. Tolias, R. Clay Reid, H. Sebastian Seung\par
+\noindent Last updated by author(s): Jan 7, 2025\par
+\decompnote{The names are printed one per line; ``Macarico'' is printed without the cedilla used in the article (``Maçarico'').}
+
+\section*{Reporting Summary}
+
+Nature Portfolio wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency in reporting. For further information on Nature Portfolio policies, see our Editorial Policies and the Editorial Policy Checklist.
+
+\subsection*{Statistics}
+
+For all statistical analyses, confirm that the following items are present in the figure legend, table legend, main text, or Methods section.
+
+\noindent n/a\quad Confirmed
+
+\begin{hangpars}
+\no\ \yes\ The exact sample size (\emph{n}) for each experimental group/condition, given as a discrete number and unit of measurement
+
+\no\ \yes\ A statement on whether measurements were taken from distinct samples or whether the same sample was measured repeatedly
+
+\yes\ \no\ The statistical test(s) used AND whether they are one- or two-sided\\
+\emph{Only common tests should be described solely by name; describe more complex techniques in the Methods section.}
+
+\yes\ \no\ A description of all covariates tested
+
+\yes\ \no\ A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons
+
+\yes\ \no\ A full description of the statistical parameters including central tendency (e.g. means) or other basic estimates (e.g. regression coefficient) AND variation (e.g. standard deviation) or associated estimates of uncertainty (e.g. confidence intervals)
+
+\yes\ \no\ For null hypothesis testing, the test statistic (e.g. \emph{F}, \emph{t}, \emph{r}) with confidence intervals, effect sizes, degrees of freedom and \emph{P} value noted\\
+\emph{Give P values as exact values whenever suitable.}
+
+\yes\ \no\ For Bayesian analysis, information on the choice of priors and Markov chain Monte Carlo settings
+
+\yes\ \no\ For hierarchical and complex designs, identification of the appropriate level for tests and full reporting of outcomes
+
+\yes\ \no\ Estimates of effect sizes (e.g. Cohen's \emph{d}, Pearson's \emph{r}), indicating how they were calculated
+\end{hangpars}
+
+\begin{center}\small\emph{Our web collection on statistics for biologists contains articles on many of the points above.}\end{center}
+
+\subsection*{Software and code}
+
+Policy information about availability of computer code
+
+\noindent\textbf{Data collection}\quad Tools and software for data collection have been described in: Yin, W., Brittain, D., Borseth, J. et al. A petascale automated imaging pipeline for mapping neuronal circuits with high-throughput transmission electron microscopy. Nat Commun11, 4949 (2020). https://doi.org/10.1038/s41467-020-18659-3
+
+The software tools used to stitch and align the dataset is available in our github repository https://github.com/AllenInstitute/asap-modules. The volume assembly process is entirely based on image meta-data and transformations manipulations and is supported by the Render service (https://github.com/saalfeldlab/render).
+
+\noindent\textbf{Data analysis}\quad Code for analysis and generation of figures was generated in Python Jupiter notebooks and will be available in https://github.com/AllenInstitute/MicronsFunctionalConnectomics\\
+CAVE analysis infrastructure available at: https://github.com/CAVEconnectome
+
+{\small For manuscripts utilizing custom algorithms or software that are central to the research but not yet described in published literature, software must be made available to editors and reviewers. We strongly encourage code deposition in a community repository (e.g. GitHub). See the Nature Portfolio guidelines for submitting code \& software for further information.}
+
+\pdfpage{33}
+\subsection*{Data}
+
+Policy information about availability of data
+
+All manuscripts must include a data availability statement. This statement should provide the following information, where applicable:
+
+\begin{hangpars}
+- Accession codes, unique identifiers, or web links for publicly available datasets
+
+- A description of any restrictions on data availability
+
+- For clinical datasets or third party data, please ensure that the statement adheres to our policy
+\end{hangpars}
+
+\noindent Image and segmentation data is available via https://www.microns-explorer.org.
+
+\subsection*{Research involving human participants, their data, or biological material}
+
+Policy information about studies with human participants or human data. See also policy information about sex, gender (identity/presentation), and sexual orientation and race, ethnicity and racism.
+
+\begin{hangpars}
+\textbf{Reporting on sex and gender}\quad N/A
+
+\textbf{Reporting on race, ethnicity, or other socially relevant groupings}\quad N/A
+
+\textbf{Population characteristics}\quad N/A
+
+\textbf{Recruitment}\quad N/A
+
+\textbf{Ethics oversight}\quad N/A
+\end{hangpars}
+
+{\small Note that full information on the approval of the study protocol must also be provided in the manuscript.}
+
+\section*{Field-specific reporting}
+
+Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.
+
+\noindent\yes\ Life sciences\qquad \no\ Behavioural \& social sciences\qquad \no\ Ecological, evolutionary \& environmental sciences
+
+{\small For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf}
+
+\section*{Life sciences study design}
+
+All studies must disclose on these points even when the disclosure is negative.
+
+\begin{hangpars}
+\textbf{Sample size}\quad No explicit sample size calculation was performed. The spatial extent of sampling was chosen based on the goal of including both primary and secondary visual areas
+
+\textbf{Data exclusions}\quad Neurons without proofread axons were excluded from the analysis in Figure 7
+
+\textbf{Replication}\quad No experimental replication was performed.
+
+\textbf{Randomization}\quad No randomization was performed
+
+\textbf{Blinding}\quad No blinding was performed
+\end{hangpars}
+
+\section*{Reporting for specific materials, systems and methods}
+
+We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material, system or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response.
+
+\pdfpage{34}
+\noindent\textbf{Materials \& experimental systems}\\
+n/a\ Involved in the study
+
+\begin{hangpars}
+\yes\ \no\ Antibodies
+
+\yes\ \no\ Eukaryotic cell lines
+
+\yes\ \no\ Palaeontology and archaeology
+
+\no\ \yes\ Animals and other organisms
+
+\yes\ \no\ Clinical data
+
+\yes\ \no\ Dual use research of concern
+
+\yes\ \no\ Plants
+\end{hangpars}
+
+\noindent\textbf{Methods}\\
+n/a\ Involved in the study
+
+\begin{hangpars}
+\yes\ \no\ ChIP-seq
+
+\yes\ \no\ Flow cytometry
+
+\yes\ \no\ MRI-based neuroimaging
+\end{hangpars}
+
+\subsection*{Animals and other research organisms}
+
+Policy information about studies involving animals; ARRIVE guidelines recommended for reporting animal research, and Sex and Gender in Research
+
+\begin{hangpars}
+\textbf{Laboratory animals}\quad Slc17a7-IRES2-Cre-D knock-in mice (Jackson Laboratory, Stock No. 023527) and Ai162 mice (Jackson Laboratory, Stock No. 031562)
+
+\textbf{Wild animals}\quad N/A
+
+\textbf{Reporting on sex}\quad Male mouse
+
+\textbf{Field-collected samples}\quad N/A
+
+\textbf{Ethics oversight}\quad All procedures were approved by the Institutional Animal Care and Use Committee at Allen Institute of Brain Science or Baylor College of Medicine.
+\end{hangpars}
+
+{\small Note that full information on the approval of the study protocol must also be provided in the manuscript.}
+
+\subsection*{Plants}
+
+\begin{hangpars}
+\textbf{Seed stocks}\quad N/A
+
+\textbf{Novel plant genotypes}\quad N/A
+
+\textbf{Authentication}\quad N/A
+\end{hangpars}
+
+\end{document}

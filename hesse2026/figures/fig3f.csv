@@ -1,0 +1,64 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Figure 3, PDF page 37; extracted by fig3_extract.py from vector paths (PDF points, origin top-left)
+# Panel f: explained variance (%) of the 50 face features (1-20 shape, 21-50 appearance) by features predicted from
+# neural activity of the held-out half of neurons. Solid lines are stroke paths with 50 vertices (one per feature, exact).
+# Dashed lines are exported as filled dash polygons; their vertices were recovered from the dash geometry (pairs of
+# anti-parallel polygon edges 1 pt apart = the two sides of the 1-pt stroke; each piece extrapolated to the integer
+# feature at both ends of its interval). *_recovery: 'dash' = at least one dash piece lies in an adjacent unit interval
+# (exact to ~0.1 pt = 0.4 %), 'gap' = vertex lies between two dashes with no coverage on either side: linearly
+# interpolated between neighbours (approximate), 'none' = no estimate (first/last vertex lies beyond the first/last
+# dash), 'clipped_at_axis_min' = the figure clips the line at -100 there (the exported line is split into fragments with
+# the clipped vertex projected onto the axis limit): value left empty, true value <= -100 (the figure draws it at -100).
+# x axis calibrated from ticks 10..50 (max residual 1.6e-03); y axis from ticks -100..100 (max residual 7.4e-04).
+# max spread between independent estimates of one dashed vertex: orange 2.71 %, purple 0.32 %.
+# Colours: priming_average #1c0f29, state1 #fcae34, state2 #543379.
+feature_index,feature_type,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_suppressed_state1_pct,binocular_suppressed_state1_recovery,binocular_suppressed_state2_pct,binocular_suppressed_state2_recovery
+1,shape,76.11,51.75,-18.23,-35.01,dash,,none
+2,shape,85.37,47.42,-30.5,-28.02,dash,47.28,dash
+3,shape,85.82,63.33,-3.7,-21.61,dash,56.5,dash
+4,shape,59.84,31.55,-0.69,-16.51,dash,29.88,dash
+5,shape,49.41,12.02,-3.82,-16.02,dash,8.96,dash
+6,shape,34.51,9.41,-8.21,-9.73,dash,29.57,dash
+7,shape,31.41,16.99,11.64,4.1,dash,15.24,dash
+8,shape,40.18,23.96,-13.11,-17.69,dash,5.71,dash
+9,shape,55.91,15.73,1.98,-15.95,dash,-5.67,dash
+10,shape,35.57,34.07,-11.54,-27.68,dash,22.33,dash
+11,shape,38.13,7.53,-3.86,-12.7,dash,4.33,dash
+12,shape,25.96,21.64,4.31,-5.36,dash,19.44,dash
+13,shape,16.24,-3.92,3.84,-3.83,dash,-8.26,dash
+14,shape,41.98,10.72,-3.38,-28.69,dash,6.97,dash
+15,shape,-7.34,-27.34,-35.63,-51.52,dash,-23.92,dash
+16,shape,15.28,15.46,-25.54,-14.9,dash,1.93,dash
+17,shape,20.63,-12.09,-7.69,-10.68,dash,-3.87,dash
+18,shape,21.28,6.15,-17.11,-7.7,dash,-11.23,dash
+19,shape,9.35,8.25,-12.42,-5.24,dash,-1.13,dash
+20,shape,8.52,-10.98,2.16,4.06,dash,-9.88,dash
+21,appearance,97.5,51.59,-43.16,-91.0,dash,24.98,dash
+22,appearance,97.53,49.39,-37.77,-83.76,dash,21.79,dash
+23,appearance,98.29,56.02,-42.15,-94.04,dash,28.16,dash
+24,appearance,87.05,57.93,17.48,-13.33,dash,42.72,dash
+25,appearance,95.87,63.68,-56.14,,clipped_at_axis_min,41.13,dash
+26,appearance,73.35,28.31,-41.77,-57.33,dash,25.04,dash
+27,appearance,84.07,49.84,-13.04,-31.52,dash,40.16,dash
+28,appearance,76.11,37.26,-13.03,-19.57,dash,26.08,dash
+29,appearance,75.91,32.47,-8.82,-22.21,dash,19.13,dash
+30,appearance,95.69,51.62,-32.67,-87.59,dash,21.03,dash
+31,appearance,59.46,18.45,-33.99,-45.67,dash,11.75,dash
+32,appearance,78.0,47.39,-47.57,-80.28,dash,30.56,dash
+33,appearance,77.32,41.24,-25.39,-53.67,dash,25.88,dash
+34,appearance,86.11,49.17,-32.3,-81.35,dash,20.39,dash
+35,appearance,71.69,28.87,-9.33,-35.26,dash,17.96,gap
+36,appearance,64.13,28.34,-33.44,-57.03,dash,15.53,dash
+37,appearance,83.32,35.82,-24.36,-66.08,dash,12.16,dash
+38,appearance,93.64,46.45,-41.42,-83.32,dash,15.12,gap
+39,appearance,94.18,48.29,-31.36,-88.74,dash,18.08,dash
+40,appearance,32.25,5.93,-3.62,-19.97,dash,-1.97,dash
+41,appearance,68.45,21.89,-0.96,-38.45,dash,-5.45,dash
+42,appearance,94.61,48.63,-37.28,-80.92,dash,21.99,dash
+43,appearance,68.14,21.15,-0.58,-29.67,dash,9.8,dash
+44,appearance,79.01,47.98,-41.62,-76.23,dash,27.57,dash
+45,appearance,72.13,30.9,-15.14,-49.96,dash,12.88,dash
+46,appearance,72.81,44.38,-28.81,-79.29,dash,21.81,dash
+47,appearance,65.59,35.75,-57.56,-68.18,dash,33.98,dash
+48,appearance,68.7,25.01,-38.24,-60.24,dash,17.08,dash
+49,appearance,93.66,55.6,-43.4,-90.34,dash,29.13,dash
+50,appearance,56.25,13.5,-4.74,-48.35,dash,,none

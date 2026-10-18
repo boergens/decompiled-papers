@@ -1,0 +1,12 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Figure 3, PDF page 37; extracted by fig3_extract.py from vector paths (PDF points, origin top-left)
+# Panel a: box plot of per-session gain in log-likelihood (two-state minus one-state model), n=19 sessions.
+# Box geometry from the box fill rect, the median stroke and the whisker cap strokes (all #262626).
+# y axis calibrated from 5 tick marks at values 0,0.2,0.4,0.6,0.8 (max residual 5.8e-08).
+# Dashed reference line at y=-0.0000 (nominally 0). Precision ~0.002 (0.1 pt).
+# Legend: boxes = median and interquartile range, whiskers = range.
+statistic,log_likelihood_diff
+whisker_low_min,0.0083
+q1,0.0474
+median,0.1624
+q3,0.4085
+whisker_high_max,0.7653

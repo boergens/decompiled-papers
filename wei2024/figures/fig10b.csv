@@ -1,0 +1,867 @@
+# Fig. 10b: energy increment (kcal/mol) of the energy terms vs displacement of indenter h_z (Å) at a loading
+# rate of 1.0 Å/ps. Lines (legend): E_pe black, E_ke red, E_total blue (no symbols).
+# Columns: series; kind = line (centre of the line in each pixel column, every 2nd column; in steep parts flag
+# gives the band the line covers in that column); x_hz_A; y_energy_increment_kcal_per_mol; flag.
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG (PDF page 15, middle image 1777 x 1486 px) by figures/fig10_extract.py with tools/f2_common.py.
+# Where lines overlap (E_pe and E_total below h_z ~ 10 Å) the hidden line is interpolated by the tracer or has a gap.
+# Uncertainty: about ±0.1 Å in x and ±6 kcal/mol in y (one source pixel = 0.075 Å, 5.8 kcal/mol).
+# Calibration (linear least squares on tick marks): x: major ticks at px 1095.0, 1161.0, 1227.0, 1293.5, 1359.5, 1426.0, 1492.0, 1558.0, 1624.5, 1691.0 = 0..45 Å, max residual 0.022 Å; y: major ticks at px 84.5, 154.0, 223.0, 292.0, 361.0, 430.0, 499.0 = 2400..0 kcal/mol plus top frame row 15 = 2800 kcal/mol, max residual 2.41 kcal/mol; 1 px = 0.076 Å in x and 5.79 kcal/mol in y
+series,kind,x_hz_A,y_energy_increment_kcal_per_mol,flag
+E_pe,line,2.810,258.8,
+E_pe,line,2.961,247.2,
+E_pe,line,3.112,232.7,
+E_pe,line,3.263,221.1,band 212.5 to 229.8
+E_pe,line,3.415,206.7,band 189.3 to 224.0
+E_pe,line,3.566,198.0,band 177.7 to 218.2
+E_pe,line,3.717,180.6,band 166.2 to 195.1
+E_pe,line,3.868,169.0,band 160.4 to 177.7
+E_pe,line,4.019,163.3,band 154.6 to 171.9
+E_pe,line,4.170,160.4,
+E_pe,line,4.321,166.2,
+E_pe,line,4.472,171.9,
+E_pe,line,4.623,169.0,
+E_pe,line,5.076,195.1,
+E_pe,line,5.227,189.3,
+E_pe,line,5.378,180.6,
+E_pe,line,5.529,171.9,
+E_pe,line,5.680,163.3,
+E_pe,line,5.831,157.5,
+E_pe,line,5.982,160.4,
+E_pe,line,6.133,166.2,
+E_pe,line,7.039,186.4,
+E_pe,line,7.190,186.4,
+E_pe,line,7.341,189.3,
+E_pe,line,7.492,183.5,
+E_pe,line,7.643,180.6,band 171.9 to 189.3
+E_pe,line,7.794,177.7,
+E_pe,line,7.945,177.7,
+E_pe,line,8.096,186.4,band 177.7 to 195.1
+E_pe,line,8.247,192.2,band 183.5 to 200.9
+E_pe,line,8.398,200.9,band 189.3 to 212.5
+E_pe,line,8.549,212.5,band 200.9 to 224.0
+E_pe,line,8.700,224.0,
+E_pe,line,8.851,235.6,
+E_pe,line,9.002,250.1,
+E_pe,line,9.153,258.8,
+E_pe,line,9.304,264.5,
+E_pe,line,9.455,270.3,
+E_pe,line,9.606,273.2,
+E_pe,line,9.757,276.1,
+E_pe,line,9.908,276.1,
+E_pe,line,10.060,270.3,
+E_pe,line,10.211,270.3,
+E_pe,line,10.362,270.3,
+E_pe,line,10.513,270.3,
+E_pe,line,10.664,264.5,
+E_pe,line,10.815,264.5,
+E_pe,line,10.966,258.8,
+E_pe,line,11.117,253.0,
+E_pe,line,11.268,247.2,
+E_pe,line,11.419,238.5,band 229.8 to 247.2
+E_pe,line,11.570,232.7,band 224.0 to 241.4
+E_pe,line,11.721,226.9,band 218.2 to 235.6
+E_pe,line,11.872,221.1,band 212.5 to 229.8
+E_pe,line,12.023,215.4,band 206.7 to 224.0
+E_pe,line,12.174,209.6,band 200.9 to 218.2
+E_pe,line,12.325,203.8,band 195.1 to 212.5
+E_pe,line,12.476,200.9,
+E_pe,line,12.627,200.9,
+E_pe,line,12.778,209.6,band 200.9 to 218.2
+E_pe,line,12.929,218.2,band 206.7 to 229.8
+E_pe,line,13.080,229.8,band 212.5 to 247.2
+E_pe,line,13.231,244.3,band 224.0 to 264.5
+E_pe,line,13.382,264.5,band 241.4 to 287.7
+E_pe,line,13.533,287.7,band 264.5 to 310.8
+E_pe,line,13.684,308.0,band 281.9 to 334.0
+E_pe,line,13.835,328.2,band 305.1 to 351.4
+E_pe,line,13.986,351.4,band 328.2 to 374.5
+E_pe,line,14.137,368.7,band 345.6 to 391.9
+E_pe,line,14.288,386.1,band 368.7 to 403.4
+E_pe,line,14.439,400.6,band 386.1 to 415.0
+E_pe,line,14.590,412.1,band 397.7 to 426.6
+E_pe,line,14.741,426.6,band 409.2 to 444.0
+E_pe,line,14.892,441.1,band 426.6 to 455.5
+E_pe,line,15.043,452.6,band 438.2 to 467.1
+E_pe,line,15.194,464.2,band 449.7 to 478.7
+E_pe,line,15.345,478.7,band 467.1 to 490.3
+E_pe,line,15.496,490.3,band 478.7 to 501.8
+E_pe,line,15.647,498.9,band 490.3 to 507.6
+E_pe,line,15.798,504.7,band 496.0 to 513.4
+E_pe,line,15.949,507.6,
+E_pe,line,16.100,507.6,
+E_pe,line,16.251,498.9,band 490.3 to 507.6
+E_pe,line,16.402,493.2,band 484.5 to 501.8
+E_pe,line,16.553,484.5,band 472.9 to 496.0
+E_pe,line,16.705,472.9,band 461.3 to 484.5
+E_pe,line,16.856,464.2,band 455.5 to 472.9
+E_pe,line,17.007,458.4,band 449.7 to 467.1
+E_pe,line,17.158,452.6,band 444.0 to 461.3
+E_pe,line,17.309,449.7,
+E_pe,line,17.460,444.0,
+E_pe,line,17.611,444.0,
+E_pe,line,17.762,444.0,
+E_pe,line,17.913,444.0,
+E_pe,line,18.064,444.0,
+E_pe,line,18.215,446.9,
+E_pe,line,18.366,446.9,
+E_pe,line,18.517,446.9,
+E_pe,line,18.668,449.7,
+E_pe,line,18.819,449.7,
+E_pe,line,18.970,449.7,
+E_pe,line,19.121,452.6,
+E_pe,line,19.272,452.6,
+E_pe,line,19.423,452.6,
+E_pe,line,19.574,449.7,
+E_pe,line,19.725,444.0,
+E_pe,line,19.876,444.0,
+E_pe,line,20.027,435.3,band 426.6 to 444.0
+E_pe,line,20.178,429.5,band 420.8 to 438.2
+E_pe,line,20.329,423.7,band 415.0 to 432.4
+E_pe,line,20.480,415.0,band 403.4 to 426.6
+E_pe,line,20.631,406.3,band 397.7 to 415.0
+E_pe,line,20.782,397.7,band 386.1 to 409.2
+E_pe,line,20.933,391.9,
+E_pe,line,21.084,383.2,band 374.5 to 391.9
+E_pe,line,21.235,377.4,band 368.7 to 386.1
+E_pe,line,21.386,371.6,band 362.9 to 380.3
+E_pe,line,21.537,365.8,band 357.1 to 374.5
+E_pe,line,21.688,357.1,band 345.6 to 368.7
+E_pe,line,21.839,345.6,band 334.0 to 357.1
+E_pe,line,21.990,331.1,band 316.6 to 345.6
+E_pe,line,22.141,316.6,band 299.3 to 334.0
+E_pe,line,22.292,299.3,band 281.9 to 316.6
+E_pe,line,22.443,281.9,band 264.5 to 299.3
+E_pe,line,22.594,267.4,band 253.0 to 281.9
+E_pe,line,22.745,258.8,band 247.2 to 270.3
+E_pe,line,22.896,250.1,band 241.4 to 258.8
+E_pe,line,23.047,253.0,
+E_pe,line,23.198,261.7,band 247.2 to 276.1
+E_pe,line,23.350,276.1,band 258.8 to 293.5
+E_pe,line,23.501,290.6,band 270.3 to 310.8
+E_pe,line,23.652,305.1,band 287.7 to 322.4
+E_pe,line,23.803,319.5,band 305.1 to 334.0
+E_pe,line,23.954,334.0,band 322.4 to 345.6
+E_pe,line,24.105,342.7,band 334.0 to 351.4
+E_pe,line,24.256,348.5,
+E_pe,line,24.407,348.5,
+E_pe,line,24.558,348.5,
+E_pe,line,24.709,348.5,
+E_pe,line,24.860,348.5,
+E_pe,line,25.011,351.4,
+E_pe,line,25.162,354.3,band 345.6 to 362.9
+E_pe,line,25.313,360.0,band 351.4 to 368.7
+E_pe,line,25.464,368.7,band 357.1 to 380.3
+E_pe,line,25.615,380.3,band 368.7 to 391.9
+E_pe,line,25.766,394.8,band 380.3 to 409.2
+E_pe,line,25.917,409.2,band 391.9 to 426.6
+E_pe,line,26.068,420.8,band 403.4 to 438.2
+E_pe,line,26.219,438.2,band 420.8 to 455.5
+E_pe,line,26.370,455.5,band 438.2 to 472.9
+E_pe,line,26.521,467.1,band 449.7 to 484.5
+E_pe,line,26.672,478.7,band 467.1 to 490.3
+E_pe,line,26.823,490.3,
+E_pe,line,26.974,493.2,
+E_pe,line,27.125,487.4,band 478.7 to 496.0
+E_pe,line,27.276,481.6,band 472.9 to 490.3
+E_pe,line,27.427,472.9,band 461.3 to 484.5
+E_pe,line,27.578,461.3,band 449.7 to 472.9
+E_pe,line,27.729,452.6,band 444.0 to 461.3
+E_pe,line,27.880,444.0,
+E_pe,line,28.031,444.0,
+E_pe,line,28.182,446.9,band 438.2 to 455.5
+E_pe,line,28.333,455.5,band 444.0 to 467.1
+E_pe,line,28.484,467.1,band 449.7 to 484.5
+E_pe,line,28.635,487.4,band 467.1 to 507.6
+E_pe,line,28.786,504.7,band 478.7 to 530.8
+E_pe,line,28.937,530.8,band 501.8 to 559.7
+E_pe,line,29.088,553.9,band 525.0 to 582.9
+E_pe,line,29.239,582.9,band 553.9 to 611.8
+E_pe,line,29.390,608.9,band 577.1 to 640.7
+E_pe,line,29.541,635.0,band 606.0 to 663.9
+E_pe,line,29.692,658.1,band 635.0 to 681.3
+E_pe,line,29.843,675.5,band 658.1 to 692.8
+E_pe,line,29.995,687.0,band 675.5 to 698.6
+E_pe,line,30.146,692.8,
+E_pe,line,30.297,692.8,
+E_pe,line,30.448,687.0,
+E_pe,line,30.599,687.0,
+E_pe,line,30.750,687.0,
+E_pe,line,30.901,689.9,band 681.3 to 698.6
+E_pe,line,31.052,701.5,band 687.0 to 716.0
+E_pe,line,31.203,713.1,band 692.8 to 733.3
+E_pe,line,31.354,733.3,band 710.2 to 756.5
+E_pe,line,31.505,750.7,band 727.6 to 773.9
+E_pe,line,31.656,773.9,band 750.7 to 797.0
+E_pe,line,31.807,791.2,band 773.9 to 808.6
+E_pe,line,31.958,805.7,band 791.2 to 820.2
+E_pe,line,32.109,817.3,band 808.6 to 825.9
+E_pe,line,32.260,820.2,
+E_pe,line,32.411,820.2,
+E_pe,line,32.562,814.4,
+E_pe,line,32.713,814.4,
+E_pe,line,32.864,808.6,
+E_pe,line,33.015,808.6,
+E_pe,line,33.166,814.4,
+E_pe,line,33.317,817.3,band 808.6 to 825.9
+E_pe,line,33.468,823.0,band 814.4 to 831.7
+E_pe,line,33.619,828.8,band 820.2 to 837.5
+E_pe,line,33.770,831.7,
+E_pe,line,33.921,831.7,
+E_pe,line,34.072,828.8,band 820.2 to 837.5
+E_pe,line,34.223,823.0,band 814.4 to 831.7
+E_pe,line,34.374,811.5,band 802.8 to 820.2
+E_pe,line,34.525,805.7,band 797.0 to 814.4
+E_pe,line,34.676,799.9,band 791.2 to 808.6
+E_pe,line,34.827,797.0,
+E_pe,line,34.978,802.8,band 791.2 to 814.4
+E_pe,line,35.129,814.4,band 797.0 to 831.7
+E_pe,line,35.280,831.7,band 808.6 to 854.9
+E_pe,line,35.431,849.1,band 825.9 to 872.2
+E_pe,line,35.582,872.2,band 849.1 to 895.4
+E_pe,line,35.733,895.4,band 872.2 to 918.5
+E_pe,line,35.884,912.8,band 895.4 to 930.1
+E_pe,line,36.035,927.2,band 912.8 to 941.7
+E_pe,line,36.186,938.8,band 930.1 to 947.5
+E_pe,line,36.337,941.7,
+E_pe,line,36.488,944.6,
+E_pe,line,36.640,944.6,
+E_pe,line,36.791,947.5,
+E_pe,line,36.942,947.5,
+E_pe,line,37.093,953.3,
+E_pe,line,37.244,959.1,
+E_pe,line,37.395,964.8,
+E_pe,line,37.546,970.6,
+E_pe,line,37.697,973.5,band 964.8 to 982.2
+E_pe,line,37.848,976.4,
+E_pe,line,37.999,970.6,
+E_pe,line,38.150,967.7,band 959.1 to 976.4
+E_pe,line,38.301,959.1,band 947.5 to 970.6
+E_pe,line,38.452,950.4,band 941.7 to 959.1
+E_pe,line,38.603,944.6,band 935.9 to 953.3
+E_pe,line,38.754,941.7,
+E_pe,line,38.905,944.6,band 935.9 to 953.3
+E_pe,line,39.056,953.3,band 941.7 to 964.8
+E_pe,line,39.207,964.8,band 947.5 to 982.2
+E_pe,line,39.358,985.1,band 959.1 to 1011.1
+E_pe,line,39.509,1002.5,band 976.4 to 1028.5
+E_pe,line,39.660,1025.6,band 999.6 to 1051.7
+E_pe,line,39.811,1048.8,band 1022.7 to 1074.8
+E_pe,line,39.962,1071.9,band 1051.7 to 1092.2
+E_pe,line,40.113,1089.3,band 1069.0 to 1109.5
+E_pe,line,40.264,1106.6,band 1092.2 to 1121.1
+E_pe,line,40.415,1121.1,band 1109.5 to 1132.7
+E_pe,line,40.566,1132.7,band 1121.1 to 1144.3
+E_pe,line,40.717,1141.4,band 1132.7 to 1150.0
+E_pe,line,40.868,1144.3,
+E_pe,line,41.019,1150.0,
+E_pe,line,41.170,1152.9,
+E_pe,line,41.321,1155.8,
+E_pe,line,41.472,1155.8,
+E_pe,line,41.623,1158.7,band 1150.0 to 1167.4
+E_pe,line,41.774,1167.4,band 1155.8 to 1179.0
+E_pe,line,41.925,1181.9,band 1167.4 to 1196.3
+E_pe,line,42.076,1199.2,band 1179.0 to 1219.5
+E_pe,line,42.227,1216.6,band 1190.6 to 1242.6
+E_pe,line,42.378,1245.5,band 1213.7 to 1277.4
+E_pe,line,42.529,1280.3,band 1242.6 to 1317.9
+E_pe,line,42.680,1312.1,band 1271.6 to 1352.6
+E_pe,line,42.831,1349.7,band 1306.3 to 1393.1
+E_pe,line,42.982,1387.3,band 1346.8 to 1427.9
+E_pe,line,43.133,1422.1,band 1381.6 to 1462.6
+E_pe,line,43.285,1462.6,band 1422.1 to 1503.1
+E_pe,line,43.436,1494.4,band 1456.8 to 1532.0
+E_pe,line,43.587,1526.2,band 1491.5 to 1561.0
+E_pe,line,43.738,1552.3,band 1526.2 to 1578.3
+E_pe,line,43.889,1569.6,band 1555.2 to 1584.1
+E_pe,line,44.040,1581.2,band 1572.5 to 1589.9
+E_pe,line,44.191,1584.1,
+E_pe,line,44.342,1578.3,band 1566.8 to 1589.9
+E_pe,line,44.493,1566.8,band 1549.4 to 1584.1
+E_pe,line,44.644,1546.5,band 1520.5 to 1572.5
+E_pe,line,44.795,1526.2,band 1503.1 to 1549.4
+E_pe,line,44.946,1514.7,band 1497.3 to 1532.0
+E_pe,line,45.097,1506.0,
+E_ke,line,1.225,-1.7,
+E_ke,line,1.376,4.1,
+E_ke,line,1.527,4.1,
+E_ke,line,1.678,4.1,
+E_ke,line,1.829,4.1,
+E_ke,line,1.980,4.1,
+E_ke,line,2.131,4.1,
+E_ke,line,2.282,1.2,
+E_ke,line,2.433,1.2,
+E_ke,line,2.584,1.2,
+E_ke,line,2.735,4.1,
+E_ke,line,2.886,9.9,band -1.7 to 21.5
+E_ke,line,3.037,15.7,band 4.1 to 27.3
+E_ke,line,3.188,24.4,band 9.9 to 38.8
+E_ke,line,3.339,35.9,band 21.5 to 50.4
+E_ke,line,3.490,44.6,band 33.0 to 56.2
+E_ke,line,3.641,56.2,band 44.6 to 67.8
+E_ke,line,3.792,62.0,
+E_ke,line,3.943,62.0,
+E_ke,line,4.094,59.1,band 50.4 to 67.8
+E_ke,line,4.245,50.4,band 38.8 to 62.0
+E_ke,line,4.396,38.8,band 21.5 to 56.2
+E_ke,line,4.547,27.3,band 9.9 to 44.6
+E_ke,line,4.698,12.8,band -1.7 to 27.3
+E_ke,line,4.849,1.2,band -13.3 to 15.7
+E_ke,line,5.000,-10.4,band -24.8 to 4.1
+E_ke,line,5.151,-19.0,band -30.6 to -7.5
+E_ke,line,5.302,-24.8,
+E_ke,line,5.453,-27.7,
+E_ke,line,5.604,-30.6,
+E_ke,line,5.755,-24.8,
+E_ke,line,5.906,-24.8,
+E_ke,line,6.057,-19.0,
+E_ke,line,6.208,-16.2,band -24.8 to -7.5
+E_ke,line,6.359,-10.4,band -19.0 to -1.7
+E_ke,line,6.510,-4.6,band -13.3 to 4.1
+E_ke,line,6.661,1.2,band -7.5 to 9.9
+E_ke,line,6.813,7.0,band -1.7 to 15.7
+E_ke,line,6.964,12.8,band 4.1 to 21.5
+E_ke,line,7.115,18.6,band 9.9 to 27.3
+E_ke,line,7.266,27.3,
+E_ke,line,7.417,30.1,band 21.5 to 38.8
+E_ke,line,7.568,35.9,band 27.3 to 44.6
+E_ke,line,7.719,38.8,
+E_ke,line,7.870,38.8,
+E_ke,line,8.021,38.8,
+E_ke,line,8.172,38.8,
+E_ke,line,8.323,38.8,
+E_ke,line,8.474,35.9,
+E_ke,line,8.625,33.0,
+E_ke,line,8.776,27.3,
+E_ke,line,8.927,27.3,
+E_ke,line,9.078,24.4,
+E_ke,line,9.229,24.4,
+E_ke,line,9.380,27.3,
+E_ke,line,9.531,27.3,
+E_ke,line,9.682,30.1,band 21.5 to 38.8
+E_ke,line,9.833,33.0,
+E_ke,line,9.984,38.8,
+E_ke,line,10.135,44.6,
+E_ke,line,10.286,50.4,
+E_ke,line,10.437,59.1,band 50.4 to 67.8
+E_ke,line,10.588,62.0,
+E_ke,line,10.739,67.8,
+E_ke,line,10.890,67.8,
+E_ke,line,11.041,67.8,
+E_ke,line,11.192,67.8,
+E_ke,line,11.343,67.8,
+E_ke,line,11.494,62.0,
+E_ke,line,11.645,59.1,band 50.4 to 67.8
+E_ke,line,11.796,56.2,
+E_ke,line,11.947,50.4,
+E_ke,line,12.098,50.4,
+E_ke,line,12.249,50.4,
+E_ke,line,12.400,53.3,
+E_ke,line,12.551,56.2,
+E_ke,line,12.702,59.1,band 50.4 to 67.8
+E_ke,line,12.853,62.0,
+E_ke,line,13.004,67.8,
+E_ke,line,13.155,70.7,band 62.0 to 79.3
+E_ke,line,13.306,76.4,band 67.8 to 85.1
+E_ke,line,13.458,82.2,band 73.6 to 90.9
+E_ke,line,13.609,88.0,band 79.3 to 96.7
+E_ke,line,13.760,96.7,band 85.1 to 108.3
+E_ke,line,13.911,108.3,band 96.7 to 119.9
+E_ke,line,14.062,119.9,band 102.5 to 137.2
+E_ke,line,14.213,137.2,band 114.1 to 160.4
+E_ke,line,14.364,151.7,band 131.4 to 171.9
+E_ke,line,14.515,169.0,band 148.8 to 189.3
+E_ke,line,14.666,183.5,band 166.2 to 200.9
+E_ke,line,14.817,195.1,band 183.5 to 206.7
+E_ke,line,14.968,203.8,band 195.1 to 212.5
+E_ke,line,15.119,212.5,
+E_ke,line,15.270,212.5,
+E_ke,line,15.421,206.7,
+E_ke,line,15.572,198.0,band 189.3 to 206.7
+E_ke,line,15.723,189.3,band 177.7 to 200.9
+E_ke,line,15.874,183.5,band 171.9 to 195.1
+E_ke,line,16.025,171.9,band 160.4 to 183.5
+E_ke,line,16.176,160.4,band 148.8 to 171.9
+E_ke,line,16.327,151.7,band 137.2 to 166.2
+E_ke,line,16.478,140.1,band 125.6 to 154.6
+E_ke,line,16.629,128.5,band 114.1 to 143.0
+E_ke,line,16.780,117.0,band 102.5 to 131.4
+E_ke,line,16.931,105.4,band 90.9 to 119.9
+E_ke,line,17.082,93.8,band 79.3 to 108.3
+E_ke,line,17.233,79.3,band 67.8 to 90.9
+E_ke,line,17.384,73.6,band 62.0 to 85.1
+E_ke,line,17.535,64.9,band 56.2 to 73.6
+E_ke,line,17.686,59.1,band 50.4 to 67.8
+E_ke,line,17.837,62.0,
+E_ke,line,17.988,70.7,band 56.2 to 85.1
+E_ke,line,18.139,85.1,band 67.8 to 102.5
+E_ke,line,18.290,102.5,band 79.3 to 125.6
+E_ke,line,18.441,122.7,band 96.7 to 148.8
+E_ke,line,18.592,143.0,band 114.1 to 171.9
+E_ke,line,18.743,166.2,band 137.2 to 195.1
+E_ke,line,18.894,189.3,band 160.4 to 218.2
+E_ke,line,19.045,212.5,band 189.3 to 235.6
+E_ke,line,19.196,229.8,band 212.5 to 247.2
+E_ke,line,19.347,244.3,band 229.8 to 258.8
+E_ke,line,19.498,250.1,band 241.4 to 258.8
+E_ke,line,19.649,258.8,
+E_ke,line,19.800,261.7,band 253.0 to 270.3
+E_ke,line,19.951,261.7,band 253.0 to 270.3
+E_ke,line,20.103,258.8,
+E_ke,line,20.254,250.1,band 241.4 to 258.8
+E_ke,line,20.405,244.3,band 235.6 to 253.0
+E_ke,line,20.556,235.6,band 224.0 to 247.2
+E_ke,line,20.707,229.8,band 218.2 to 241.4
+E_ke,line,20.858,218.2,band 206.7 to 229.8
+E_ke,line,21.009,209.6,band 200.9 to 218.2
+E_ke,line,21.160,203.8,band 195.1 to 212.5
+E_ke,line,21.311,198.0,band 189.3 to 206.7
+E_ke,line,21.462,192.2,band 183.5 to 200.9
+E_ke,line,21.613,186.4,band 177.7 to 195.1
+E_ke,line,21.764,180.6,band 171.9 to 189.3
+E_ke,line,21.915,171.9,band 160.4 to 183.5
+E_ke,line,22.066,166.2,band 154.6 to 177.7
+E_ke,line,22.217,154.6,band 143.0 to 166.2
+E_ke,line,22.368,148.8,band 137.2 to 160.4
+E_ke,line,22.519,140.1,band 131.4 to 148.8
+E_ke,line,22.670,134.3,band 125.6 to 143.0
+E_ke,line,22.821,125.6,band 114.1 to 137.2
+E_ke,line,22.972,119.9,
+E_ke,line,23.123,114.1,
+E_ke,line,23.274,114.1,
+E_ke,line,23.425,111.2,band 102.5 to 119.9
+E_ke,line,23.576,108.3,
+E_ke,line,23.727,108.3,
+E_ke,line,23.878,108.3,
+E_ke,line,24.029,108.3,
+E_ke,line,24.180,108.3,
+E_ke,line,24.331,108.3,
+E_ke,line,24.482,108.3,
+E_ke,line,24.633,108.3,
+E_ke,line,24.784,108.3,
+E_ke,line,24.935,108.3,
+E_ke,line,25.086,114.1,
+E_ke,line,25.237,122.7,band 114.1 to 131.4
+E_ke,line,25.388,125.6,band 114.1 to 137.2
+E_ke,line,25.539,134.3,band 125.6 to 143.0
+E_ke,line,25.690,140.1,band 131.4 to 148.8
+E_ke,line,25.841,148.8,band 137.2 to 160.4
+E_ke,line,25.992,157.5,band 148.8 to 166.2
+E_ke,line,26.143,166.2,band 154.6 to 177.7
+E_ke,line,26.294,171.9,band 160.4 to 183.5
+E_ke,line,26.445,180.6,band 171.9 to 189.3
+E_ke,line,26.596,189.3,band 177.7 to 200.9
+E_ke,line,26.748,198.0,band 183.5 to 212.5
+E_ke,line,26.899,209.6,band 195.1 to 224.0
+E_ke,line,27.050,221.1,band 206.7 to 235.6
+E_ke,line,27.201,235.6,band 218.2 to 253.0
+E_ke,line,27.352,247.2,band 229.8 to 264.5
+E_ke,line,27.503,261.7,band 247.2 to 276.1
+E_ke,line,27.654,273.2,band 258.8 to 287.7
+E_ke,line,27.805,281.9,band 270.3 to 293.5
+E_ke,line,27.956,290.6,band 281.9 to 299.3
+E_ke,line,28.107,296.4,band 287.7 to 305.1
+E_ke,line,28.258,299.3,
+E_ke,line,28.409,299.3,
+E_ke,line,28.560,305.1,
+E_ke,line,28.711,305.1,
+E_ke,line,28.862,308.0,band 299.3 to 316.6
+E_ke,line,29.013,313.7,band 305.1 to 322.4
+E_ke,line,29.164,322.4,band 310.8 to 334.0
+E_ke,line,29.315,336.9,band 322.4 to 351.4
+E_ke,line,29.466,345.6,band 328.2 to 362.9
+E_ke,line,29.617,362.9,band 345.6 to 380.3
+E_ke,line,29.768,374.5,band 357.1 to 391.9
+E_ke,line,29.919,391.9,band 374.5 to 409.2
+E_ke,line,30.070,403.4,band 386.1 to 420.8
+E_ke,line,30.221,417.9,band 403.4 to 432.4
+E_ke,line,30.372,429.5,band 415.0 to 444.0
+E_ke,line,30.523,444.0,band 432.4 to 455.5
+E_ke,line,30.674,449.7,band 438.2 to 461.3
+E_ke,line,30.825,455.5,
+E_ke,line,30.976,455.5,
+E_ke,line,31.127,452.6,band 444.0 to 461.3
+E_ke,line,31.278,444.0,band 432.4 to 455.5
+E_ke,line,31.429,438.2,band 426.6 to 449.7
+E_ke,line,31.580,426.6,band 415.0 to 438.2
+E_ke,line,31.731,420.8,
+E_ke,line,31.882,415.0,
+E_ke,line,32.033,415.0,
+E_ke,line,32.184,415.0,
+E_ke,line,32.335,420.8,
+E_ke,line,32.486,423.7,band 415.0 to 432.4
+E_ke,line,32.637,429.5,band 420.8 to 438.2
+E_ke,line,32.788,432.4,
+E_ke,line,32.939,432.4,
+E_ke,line,33.090,429.5,band 420.8 to 438.2
+E_ke,line,33.241,423.7,band 415.0 to 432.4
+E_ke,line,33.393,415.0,band 403.4 to 426.6
+E_ke,line,33.544,409.2,band 397.7 to 420.8
+E_ke,line,33.695,400.6,band 391.9 to 409.2
+E_ke,line,33.846,397.7,
+E_ke,line,33.997,400.6,band 391.9 to 409.2
+E_ke,line,34.148,409.2,band 397.7 to 420.8
+E_ke,line,34.299,420.8,band 403.4 to 438.2
+E_ke,line,34.450,435.3,band 415.0 to 455.5
+E_ke,line,34.601,452.6,band 426.6 to 478.7
+E_ke,line,34.752,472.9,band 449.7 to 496.0
+E_ke,line,34.903,493.2,band 467.1 to 519.2
+E_ke,line,35.054,516.3,band 490.3 to 542.3
+E_ke,line,35.205,536.6,band 513.4 to 559.7
+E_ke,line,35.356,556.8,band 536.6 to 577.1
+E_ke,line,35.507,571.3,band 553.9 to 588.7
+E_ke,line,35.658,585.8,band 571.3 to 600.2
+E_ke,line,35.809,591.5,band 582.9 to 600.2
+E_ke,line,35.960,600.2,
+E_ke,line,36.111,594.4,
+E_ke,line,36.262,588.7,band 577.1 to 600.2
+E_ke,line,36.413,580.0,band 565.5 to 594.4
+E_ke,line,36.564,568.4,band 553.9 to 582.9
+E_ke,line,36.715,556.8,band 542.3 to 571.3
+E_ke,line,36.866,548.1,band 536.6 to 559.7
+E_ke,line,37.017,539.5,band 530.8 to 548.1
+E_ke,line,37.168,530.8,
+E_ke,line,37.319,527.9,
+E_ke,line,37.470,527.9,
+E_ke,line,37.621,527.9,
+E_ke,line,37.772,527.9,
+E_ke,line,37.923,527.9,
+E_ke,line,38.074,527.9,
+E_ke,line,38.225,525.0,
+E_ke,line,38.376,525.0,
+E_ke,line,38.527,525.0,
+E_ke,line,38.678,525.0,
+E_ke,line,38.829,530.8,
+E_ke,line,38.980,539.5,band 530.8 to 548.1
+E_ke,line,39.131,545.2,band 536.6 to 553.9
+E_ke,line,39.282,553.9,band 542.3 to 565.5
+E_ke,line,39.433,562.6,band 548.1 to 577.1
+E_ke,line,39.584,574.2,band 559.7 to 588.7
+E_ke,line,39.735,582.9,band 571.3 to 594.4
+E_ke,line,39.886,591.5,band 582.9 to 600.2
+E_ke,line,40.038,597.3,band 588.7 to 606.0
+E_ke,line,40.189,606.0,
+E_ke,line,40.340,606.0,
+E_ke,line,40.491,606.0,
+E_ke,line,40.642,611.8,
+E_ke,line,40.793,617.6,
+E_ke,line,40.944,623.4,band 611.8 to 635.0
+E_ke,line,41.095,629.2,band 617.6 to 640.7
+E_ke,line,41.246,640.7,band 629.2 to 652.3
+E_ke,line,41.397,655.2,band 640.7 to 669.7
+E_ke,line,41.548,666.8,band 652.3 to 681.3
+E_ke,line,41.699,678.4,band 663.9 to 692.8
+E_ke,line,41.850,689.9,band 675.5 to 704.4
+E_ke,line,42.001,701.5,band 687.0 to 716.0
+E_ke,line,42.152,713.1,band 698.6 to 727.6
+E_ke,line,42.303,721.8,band 710.2 to 733.3
+E_ke,line,42.454,730.4,band 716.0 to 744.9
+E_ke,line,42.605,742.0,band 727.6 to 756.5
+E_ke,line,42.756,753.6,band 739.1 to 768.1
+E_ke,line,42.907,765.2,band 750.7 to 779.6
+E_ke,line,43.058,773.9,band 756.5 to 791.2
+E_ke,line,43.209,791.2,band 773.9 to 808.6
+E_ke,line,43.360,805.7,band 785.4 to 825.9
+E_ke,line,43.511,823.0,band 802.8 to 843.3
+E_ke,line,43.662,840.4,band 820.2 to 860.7
+E_ke,line,43.813,854.9,band 837.5 to 872.2
+E_ke,line,43.964,869.3,band 854.9 to 883.8
+E_ke,line,44.115,880.9,band 866.5 to 895.4
+E_ke,line,44.266,895.4,band 883.8 to 907.0
+E_ke,line,44.417,901.2,band 889.6 to 912.8
+E_ke,line,44.568,909.9,band 901.2 to 918.5
+E_ke,line,44.719,915.6,band 907.0 to 924.3
+E_ke,line,44.870,921.4,band 912.8 to 930.1
+E_ke,line,45.021,927.2,
+E_total,line,0.998,33.0,band -7.5 to 73.6
+E_total,line,1.149,73.6,band 27.3 to 119.9
+E_total,line,1.300,102.5,band 44.6 to 160.4
+E_total,line,1.451,143.0,band 90.9 to 195.1
+E_total,line,1.602,183.5,band 137.2 to 229.8
+E_total,line,1.753,218.2,band 183.5 to 253.0
+E_total,line,1.904,247.2,band 218.2 to 276.1
+E_total,line,2.055,276.1,band 264.5 to 287.7
+E_total,line,2.206,287.7,band 276.1 to 299.3
+E_total,line,2.357,296.4,
+E_total,line,2.508,293.5,
+E_total,line,2.659,296.4,
+E_total,line,2.810,290.6,
+E_total,line,2.961,284.8,
+E_total,line,3.112,276.1,
+E_total,line,3.263,267.4,
+E_total,line,3.415,261.7,
+E_total,line,3.566,250.1,band 241.4 to 258.8
+E_total,line,3.717,241.4,
+E_total,line,3.868,232.7,band 224.0 to 241.4
+E_total,line,4.019,226.9,band 218.2 to 235.6
+E_total,line,4.170,221.1,band 212.5 to 229.8
+E_total,line,4.321,215.4,band 206.7 to 224.0
+E_total,line,4.472,209.6,band 200.9 to 218.2
+E_total,line,4.623,203.8,
+E_total,line,4.774,195.1,
+E_total,line,4.925,180.6,band 166.2 to 195.1
+E_total,line,5.076,160.4,
+E_total,line,5.227,148.8,
+E_total,line,5.378,140.1,
+E_total,line,5.529,128.5,
+E_total,line,5.680,125.6,
+E_total,line,5.831,125.6,
+E_total,line,5.982,125.6,
+E_total,line,6.133,131.4,
+E_total,line,6.284,143.0,
+E_total,line,6.435,166.2,band 148.8 to 183.5
+E_total,line,6.586,177.7,band 160.4 to 195.1
+E_total,line,6.737,192.2,band 177.7 to 206.7
+E_total,line,6.888,212.5,
+E_total,line,7.039,218.2,
+E_total,line,7.190,221.1,
+E_total,line,7.341,221.1,
+E_total,line,7.492,218.2,
+E_total,line,7.643,218.2,
+E_total,line,7.794,218.2,
+E_total,line,7.945,224.0,
+E_total,line,8.096,226.9,band 218.2 to 235.6
+E_total,line,8.247,238.5,band 229.8 to 247.2
+E_total,line,8.398,250.1,band 241.4 to 258.8
+E_total,line,8.549,261.7,band 253.0 to 270.3
+E_total,line,8.700,270.3,
+E_total,line,8.851,284.8,
+E_total,line,9.002,290.6,
+E_total,line,9.153,296.4,
+E_total,line,9.304,302.2,
+E_total,line,9.455,302.2,
+E_total,line,9.606,308.0,
+E_total,line,9.757,310.8,
+E_total,line,9.908,310.8,
+E_total,line,10.060,316.6,
+E_total,line,10.211,322.4,
+E_total,line,10.362,325.3,band 316.6 to 334.0
+E_total,line,10.513,328.2,
+E_total,line,10.664,334.0,
+E_total,line,10.815,334.0,
+E_total,line,10.966,328.2,
+E_total,line,11.117,319.5,band 310.8 to 328.2
+E_total,line,11.268,316.6,band 305.1 to 328.2
+E_total,line,11.419,305.1,band 293.5 to 316.6
+E_total,line,11.570,293.5,band 281.9 to 305.1
+E_total,line,11.721,281.9,band 270.3 to 293.5
+E_total,line,11.872,276.1,band 264.5 to 287.7
+E_total,line,12.023,267.4,band 258.8 to 276.1
+E_total,line,12.174,261.7,band 253.0 to 270.3
+E_total,line,12.325,258.8,
+E_total,line,12.476,258.8,
+E_total,line,12.627,261.7,band 253.0 to 270.3
+E_total,line,12.778,270.3,band 258.8 to 281.9
+E_total,line,12.929,281.9,band 264.5 to 299.3
+E_total,line,13.080,302.2,band 281.9 to 322.4
+E_total,line,13.231,316.6,band 287.7 to 345.6
+E_total,line,13.382,342.7,band 316.6 to 368.7
+E_total,line,13.533,368.7,band 334.0 to 403.4
+E_total,line,13.684,397.7,band 357.1 to 438.2
+E_total,line,13.835,432.4,band 391.9 to 472.9
+E_total,line,13.986,464.2,band 426.6 to 501.8
+E_total,line,14.137,498.9,band 461.3 to 536.6
+E_total,line,14.288,530.8,band 496.0 to 565.5
+E_total,line,14.439,562.6,band 530.8 to 594.4
+E_total,line,14.590,591.5,band 559.7 to 623.4
+E_total,line,14.741,617.6,band 588.7 to 646.5
+E_total,line,14.892,637.8,band 611.8 to 663.9
+E_total,line,15.043,658.1,band 635.0 to 681.3
+E_total,line,15.194,675.5,band 658.1 to 692.8
+E_total,line,15.345,687.0,band 675.5 to 698.6
+E_total,line,15.496,695.7,band 687.0 to 704.4
+E_total,line,15.647,698.6,
+E_total,line,15.798,692.8,band 681.3 to 704.4
+E_total,line,15.949,681.3,band 669.7 to 692.8
+E_total,line,16.100,669.7,band 652.3 to 687.0
+E_total,line,16.251,655.2,band 635.0 to 675.5
+E_total,line,16.402,637.8,band 617.6 to 658.1
+E_total,line,16.553,617.6,band 594.4 to 640.7
+E_total,line,16.705,597.3,band 571.3 to 623.4
+E_total,line,16.856,577.1,band 553.9 to 600.2
+E_total,line,17.007,556.8,band 536.6 to 577.1
+E_total,line,17.158,539.5,band 519.2 to 559.7
+E_total,line,17.309,525.0,band 507.6 to 542.3
+E_total,line,17.460,513.4,band 501.8 to 525.0
+E_total,line,17.611,507.6,
+E_total,line,17.762,507.6,
+E_total,line,17.913,513.4,band 501.8 to 525.0
+E_total,line,18.064,525.0,band 507.6 to 542.3
+E_total,line,18.215,542.3,band 519.2 to 565.5
+E_total,line,18.366,559.7,band 536.6 to 582.9
+E_total,line,18.517,585.8,band 559.7 to 611.8
+E_total,line,18.668,606.0,band 577.1 to 635.0
+E_total,line,18.819,632.1,band 606.0 to 658.1
+E_total,line,18.970,652.3,band 629.2 to 675.5
+E_total,line,19.121,672.6,band 652.3 to 692.8
+E_total,line,19.272,687.0,band 669.7 to 704.4
+E_total,line,19.423,701.5,band 687.0 to 716.0
+E_total,line,19.574,707.3,band 698.6 to 716.0
+E_total,line,19.725,710.2,
+E_total,line,19.876,707.3,band 698.6 to 716.0
+E_total,line,20.027,698.6,band 687.0 to 710.2
+E_total,line,20.178,684.1,band 669.7 to 698.6
+E_total,line,20.329,672.6,band 652.3 to 692.8
+E_total,line,20.480,655.2,band 635.0 to 675.5
+E_total,line,20.631,640.7,band 623.4 to 658.1
+E_total,line,20.782,623.4,band 606.0 to 640.7
+E_total,line,20.933,606.0,band 588.7 to 623.4
+E_total,line,21.084,594.4,band 577.1 to 611.8
+E_total,line,21.235,580.0,band 565.5 to 594.4
+E_total,line,21.386,568.4,band 553.9 to 582.9
+E_total,line,21.537,553.9,band 536.6 to 571.3
+E_total,line,21.688,539.5,band 525.0 to 553.9
+E_total,line,21.839,522.1,band 501.8 to 542.3
+E_total,line,21.990,501.8,band 472.9 to 530.8
+E_total,line,22.141,478.7,band 449.7 to 507.6
+E_total,line,22.292,452.6,band 420.8 to 484.5
+E_total,line,22.443,429.5,band 397.7 to 461.3
+E_total,line,22.594,409.2,band 380.3 to 438.2
+E_total,line,22.745,389.0,band 368.7 to 409.2
+E_total,line,22.896,374.5,band 362.9 to 386.1
+E_total,line,23.047,368.7,
+E_total,line,23.198,374.5,band 362.9 to 386.1
+E_total,line,23.350,386.1,band 368.7 to 403.4
+E_total,line,23.501,400.6,band 380.3 to 420.8
+E_total,line,23.652,417.9,band 397.7 to 438.2
+E_total,line,23.803,432.4,band 415.0 to 449.7
+E_total,line,23.954,444.0,band 432.4 to 455.5
+E_total,line,24.105,452.6,band 444.0 to 461.3
+E_total,line,24.256,455.5,
+E_total,line,24.407,455.5,
+E_total,line,24.558,455.5,
+E_total,line,24.709,455.5,
+E_total,line,24.860,455.5,
+E_total,line,25.011,464.2,band 455.5 to 472.9
+E_total,line,25.162,475.8,band 461.3 to 490.3
+E_total,line,25.313,484.5,band 467.1 to 501.8
+E_total,line,25.464,504.7,band 484.5 to 525.0
+E_total,line,25.615,519.2,band 496.0 to 542.3
+E_total,line,25.766,539.5,band 513.4 to 565.5
+E_total,line,25.917,562.6,band 536.6 to 588.7
+E_total,line,26.068,585.8,band 559.7 to 611.8
+E_total,line,26.219,606.0,band 577.1 to 635.0
+E_total,line,26.370,632.1,band 606.0 to 658.1
+E_total,line,26.521,655.2,band 629.2 to 681.3
+E_total,line,26.672,675.5,band 652.3 to 698.6
+E_total,line,26.823,695.7,band 675.5 to 716.0
+E_total,line,26.974,707.3,band 692.8 to 721.8
+E_total,line,27.125,718.9,band 710.2 to 727.6
+E_total,line,27.276,724.7,band 716.0 to 733.3
+E_total,line,27.427,730.4,band 721.8 to 739.1
+E_total,line,27.578,730.4,band 721.8 to 739.1
+E_total,line,27.729,733.3,
+E_total,line,27.880,736.2,band 727.6 to 744.9
+E_total,line,28.031,742.0,band 733.3 to 750.7
+E_total,line,28.182,750.7,band 739.1 to 762.3
+E_total,line,28.333,759.4,band 744.9 to 773.9
+E_total,line,28.484,773.9,band 756.5 to 791.2
+E_total,line,28.635,794.1,band 768.1 to 820.2
+E_total,line,28.786,817.3,band 785.4 to 849.1
+E_total,line,28.937,846.2,band 808.6 to 883.8
+E_total,line,29.088,878.0,band 837.5 to 918.5
+E_total,line,29.239,918.5,band 872.2 to 964.8
+E_total,line,29.390,953.3,band 901.2 to 1005.4
+E_total,line,29.541,990.9,band 941.7 to 1040.1
+E_total,line,29.692,1025.6,band 982.2 to 1069.0
+E_total,line,29.843,1060.3,band 1022.7 to 1098.0
+E_total,line,29.995,1089.3,band 1063.2 to 1115.3
+E_total,line,30.146,1106.6,band 1086.4 to 1126.9
+E_total,line,30.297,1121.1,band 1109.5 to 1132.7
+E_total,line,30.448,1129.8,band 1121.1 to 1138.5
+E_total,line,30.599,1135.6,band 1126.9 to 1144.3
+E_total,line,30.750,1141.4,band 1132.7 to 1150.0
+E_total,line,30.901,1147.2,band 1138.5 to 1155.8
+E_total,line,31.052,1155.8,band 1144.3 to 1167.4
+E_total,line,31.203,1164.5,band 1150.0 to 1179.0
+E_total,line,31.354,1176.1,band 1161.6 to 1190.6
+E_total,line,31.505,1187.7,band 1173.2 to 1202.1
+E_total,line,31.656,1199.2,band 1184.8 to 1213.7
+E_total,line,31.807,1210.8,band 1196.3 to 1225.3
+E_total,line,31.958,1225.3,band 1213.7 to 1236.9
+E_total,line,32.109,1234.0,band 1225.3 to 1242.6
+E_total,line,32.260,1239.8,band 1231.1 to 1248.4
+E_total,line,32.411,1242.6,
+E_total,line,32.562,1245.5,band 1236.9 to 1254.2
+E_total,line,32.713,1248.4,
+E_total,line,32.864,1248.4,
+E_total,line,33.015,1242.6,
+E_total,line,33.166,1242.6,
+E_total,line,33.317,1236.9,
+E_total,line,33.468,1236.9,
+E_total,line,33.619,1236.9,
+E_total,line,33.770,1231.1,
+E_total,line,33.921,1231.1,
+E_total,line,34.072,1231.1,
+E_total,line,34.223,1234.0,band 1225.3 to 1242.6
+E_total,line,34.374,1239.8,band 1231.1 to 1248.4
+E_total,line,34.525,1248.4,band 1236.9 to 1260.0
+E_total,line,34.676,1265.8,band 1248.4 to 1283.2
+E_total,line,34.827,1286.1,band 1260.0 to 1312.1
+E_total,line,34.978,1312.1,band 1277.4 to 1346.8
+E_total,line,35.129,1343.9,band 1300.5 to 1387.3
+E_total,line,35.280,1375.8,band 1329.5 to 1422.1
+E_total,line,35.431,1410.5,band 1364.2 to 1456.8
+E_total,line,35.582,1451.0,band 1410.5 to 1491.5
+E_total,line,35.733,1482.8,band 1451.0 to 1514.7
+E_total,line,35.884,1508.9,band 1485.7 to 1532.0
+E_total,line,36.035,1523.3,band 1508.9 to 1537.8
+E_total,line,36.186,1532.0,
+E_total,line,36.337,1529.1,band 1520.5 to 1537.8
+E_total,line,36.488,1520.5,band 1508.9 to 1532.0
+E_total,line,36.640,1511.8,band 1497.3 to 1526.2
+E_total,line,36.791,1500.2,band 1485.7 to 1514.7
+E_total,line,36.942,1491.5,
+E_total,line,37.093,1488.6,band 1479.9 to 1497.3
+E_total,line,37.244,1491.5,
+E_total,line,37.395,1494.4,band 1485.7 to 1503.1
+E_total,line,37.546,1497.3,
+E_total,line,37.697,1503.1,
+E_total,line,37.848,1503.1,
+E_total,line,37.999,1500.2,band 1491.5 to 1508.9
+E_total,line,38.150,1494.4,band 1485.7 to 1503.1
+E_total,line,38.301,1488.6,band 1479.9 to 1497.3
+E_total,line,38.452,1482.8,band 1474.2 to 1491.5
+E_total,line,38.603,1474.2,
+E_total,line,38.754,1474.2,
+E_total,line,38.905,1479.9,band 1468.4 to 1491.5
+E_total,line,39.056,1494.4,band 1474.2 to 1514.7
+E_total,line,39.207,1517.6,band 1485.7 to 1549.4
+E_total,line,39.358,1546.5,band 1508.9 to 1584.1
+E_total,line,39.509,1575.4,band 1537.8 to 1613.1
+E_total,line,39.660,1607.3,band 1566.8 to 1647.8
+E_total,line,39.811,1639.1,band 1601.5 to 1676.7
+E_total,line,39.962,1668.0,band 1636.2 to 1699.9
+E_total,line,40.113,1694.1,band 1670.9 to 1717.2
+E_total,line,40.264,1714.3,band 1694.1 to 1734.6
+E_total,line,40.415,1731.7,band 1711.4 to 1752.0
+E_total,line,40.566,1743.3,band 1728.8 to 1757.7
+E_total,line,40.717,1757.7,band 1746.2 to 1769.3
+E_total,line,40.868,1769.3,band 1757.7 to 1780.9
+E_total,line,41.019,1778.0,band 1763.5 to 1792.5
+E_total,line,41.170,1789.6,band 1775.1 to 1804.0
+E_total,line,41.321,1801.2,band 1786.7 to 1815.6
+E_total,line,41.472,1818.5,band 1798.3 to 1838.8
+E_total,line,41.623,1835.9,band 1815.6 to 1856.1
+E_total,line,41.774,1856.1,band 1827.2 to 1885.1
+E_total,line,41.925,1879.3,band 1850.3 to 1908.2
+E_total,line,42.076,1905.3,band 1873.5 to 1937.2
+E_total,line,42.227,1937.2,band 1896.6 to 1977.7
+E_total,line,42.378,1977.7,band 1931.4 to 2024.0
+E_total,line,42.529,2015.3,band 1960.3 to 2070.3
+E_total,line,42.680,2058.7,band 2000.8 to 2116.6
+E_total,line,42.831,2105.0,band 2041.3 to 2168.7
+E_total,line,42.982,2157.1,band 2093.4 to 2220.8
+E_total,line,43.133,2206.3,band 2139.7 to 2272.8
+E_total,line,43.285,2261.3,band 2197.6 to 2324.9
+E_total,line,43.436,2316.2,band 2249.7 to 2382.8
+E_total,line,43.587,2356.8,band 2301.8 to 2411.7
+E_total,line,43.738,2397.3,band 2348.1 to 2446.5
+E_total,line,43.889,2429.1,band 2394.4 to 2463.8
+E_total,line,44.040,2455.2,band 2434.9 to 2475.4
+E_total,line,44.191,2472.5,band 2463.8 to 2481.2
+E_total,line,44.342,2478.3,band 2469.6 to 2487.0
+E_total,line,44.493,2472.5,band 2463.8 to 2481.2
+E_total,line,44.644,2460.9,band 2446.5 to 2475.4
+E_total,line,44.795,2449.4,band 2434.9 to 2463.8
+E_total,line,44.946,2440.7,band 2429.1 to 2452.3
+E_total,line,45.097,2434.9,

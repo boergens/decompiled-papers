@@ -1,0 +1,24 @@
+# Lee et al. 2018, PLoS ONE 13(10):e0206172, Fig 1: volume of neural tissue in ssTEM studies versus publication year.
+# Columns: kind (point = one study marker, dashed_line = the horizontal dashed line), label = the printed letter,
+#   legend = the legend entry for that letter (verbatim from the figure), year = x position in years,
+#   volume_mm3 = y position in mm^3 (log axis), log10_volume = log10 of that.
+# Provenance: tier 3, digitized by fig1_extract.py from the embedded 300 ppi raster image (no vector data in the PDF).
+#   x calibrated on 12 major ticks 1970-2025 (max residual 0.054 yr); y on 8 decade ticks 1e0-1e-7 (log, max residual 0.0015 decades).
+#   Marker centre = centroid of the filled circle (connected component).
+# Uncertainty: about +-0.05 yr in x and +-0.005 decades in y (283 px per decade; centroid precision ~1 px).
+#   The years come out as whole numbers to within 0.05 yr, matching the legend years.
+kind,label,legend,year,volume_mm3,log10_volume
+point,A,"Spacek, J. & Lieberman, A. R., 1974",1974.00,6.007e-07,-6.221
+point,B,"White, J. G., Southgate, E., Thomson, J. N. & Brenner, S. 1986",1986.00,0.002011,-2.697
+point,C,"Hamos, J. E., Van Horn, S. C., Raczkowski, D., Sherman, S. M., 1987",1987.00,9.609e-06,-5.017
+point,D,"Hall, D. H., Russell, R. L., 1991",1991.00,0.001201,-2.921
+point,E,"Shepherd, G. N. & Harris, K. M., 1998",1997.99,1.258e-05,-4.900
+point,F,"Hoffpauir, B. K., Pope, B., & Spirou, G., 2007",2006.99,0.0006129,-3.213
+point,G,"Takemura, S., Lu, Z. & Meinerzhagen, I. A., 2008",2007.99,1.509e-05,-4.821
+point,H,"Bock, D. D., et. al., 2011",2010.99,0.0327,-1.485
+point,I,"Sommer, R. J., Bumbarger, D. J., Riebesell, M. & Ro, C., 2013",2012.99,0.002102,-2.677
+point,J,"Takemura, S., et. al., 2013",2012.99,0.0001017,-3.993
+point,K,"Kuwajima, M., Mendenhall, J. M., Lindsey, L. F. & Harris, K. M. 2013",2012.99,3.875e-05,-4.412
+point,L,"Lee, W. A., et. al., 2016",2015.99,0.03748,-1.426
+point,M,"Zheng, Z., et al., 2017",2016.98,0.08001,-1.097
+dashed_line,,horizontal dashed line across the plot,,0.0999,-1.000

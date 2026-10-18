@@ -1,0 +1,21 @@
+# fig10a of Fu et al. 2019, Polymers 11, 975 (DGEBA-MTHPA): MSD (15 ps) against temperature (squares), two fitted straight lines (red) and their crossing (red dot, labelled 398.26K). y = MSD in Angstrom^2; x in K.
+# Provenance: tier 3, digitized from the embedded raster image on p. 10 (Origin export, 300 ppi); no source data published.
+# Axis fit: x on the inward major ticks 300-600 K (max residual 1.14e-13 K), y on ticks [1, 2, 3, 4, 5] (max residual 3.55e-15); frame edges x = 274.75..625.25 K, y = 0.5000..6.0000.
+# Rows: kind = marker (one per temperature; x is the measured marker centre, T_label the temperature it stands for), line_low / line_high (the two red fitted lines: one row per end point, as drawn), dot (the red dot at the crossing), crossing_of_digitized_lines (where the two digitized lines intersect; computed by the decompiler, not printed), label (the printed crossing temperature).
+# y_err_low / y_err_high: ends of the error bar (the caps), only where the figure has error bars.
+# Uncertainty: about +-1 px = +-0.0109 in y and +-0.51 K in x; partly hidden markers (note column) +-2 px.
+kind,T_label,x_K,y,y_err_low,y_err_high,px_x,px_y,note
+marker,300,299.747,1.17935,,,160.0,466.0,bottom part hidden by red; centre = top edge + half the marker width
+marker,350,350.000,1.36413,,,259.5,449.0,
+marker,400,400.000,1.85870,,,358.5,403.5,bottom part hidden by red; centre = top edge + half the marker width
+marker,450,450.000,2.80435,,,457.5,316.5,
+marker,500,500.000,3.38587,,,556.5,263.0,
+marker,550,550.000,4.05435,,,655.5,201.5,
+marker,600,600.000,5.46739,,,754.5,71.5,
+line_low,,279.545,0.99507,,,120.0,483.0,"least-squares fit on 197 columns, rms 0.20 px; slope 0.00670499 per K"
+line_low,,419.949,1.93648,,,398.0,396.3,
+line_high,,379.545,1.46993,,,318.0,439.3,"least-squares fit on 393 columns, rms 0.22 px; slope 0.0169693 per K"
+line_high,,619.949,5.54942,,,794.0,64.0,
+dot,,398.399,1.78702,,,355.3,410.1,centre of the red dot
+crossing_of_digitized_lines,,398.606,1.79337,,,,,computed
+label,,398.260,,,,,,printed next to the dot: 398.26K

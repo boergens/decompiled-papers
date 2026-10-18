@@ -1,0 +1,41 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 2D: (Splits + Mergers) / Object versus ECS fraction (%).
+# Columns: kind (fold = one grey open circle, one cross-validation test image; median = red + marker),
+#   group (ECS fraction of the data set, %, from the caption), x_axis (horizontal position in axis units; the
+#   circles are jittered around the group position), y (value).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 5) by ring-template matching
+#   (circles) and red-component centroids (medians); script figures/fig2_extract.py.
+# x axis (linear) fitted on ticks 0.6@1150px, 6@1213.5px, 11@1272.5px, 24@1426px; max residual 0.00968 axis units.
+# y axis (linear) fitted on ticks 0@1818.25px, 0.2@1747px, 0.4@1675px, 0.6@1603px, 0.8@1531px, 1@1459.5px; max residual 0.000861 axis units.
+# Uncertainty: about +-1 px = +-0.0028 y units for isolated circles, +-2 px for overlapping ones.
+# Circles resolved per group (9 expected from the ninefold cross-validation): {'0.6': 7, '5.8': 5, '11.3': 7, '23.9': 5}.
+#   Missing circles are hidden under overlapping circles or under the red median marker.
+# match_score = template correlation (0-1) of each circle.
+kind,group,x_axis,y,match_score
+median,0.6,0.607,0.7346,
+median,5.8,5.993,0.3160,
+median,11.3,10.992,0.3831,
+median,23.9,23.970,0.3775,
+fold,0.6,0.271,0.9510,0.71
+fold,0.6,0.694,0.9371,0.7
+fold,0.6,0.271,0.8897,0.92
+fold,0.6,0.610,0.8173,0.89
+fold,0.6,0.779,0.6837,0.63
+fold,0.6,0.271,0.6697,0.69
+fold,0.6,0.101,0.6363,0.74
+fold,11.3,11.121,0.5361,0.53
+fold,11.3,10.866,0.5166,0.61
+fold,11.3,11.290,0.4247,0.68
+fold,11.3,11.121,0.3384,0.42
+fold,11.3,10.951,0.3272,0.58
+fold,11.3,11.036,0.2715,0.82
+fold,11.3,10.697,0.2409,0.76
+fold,23.9,23.496,0.5667,0.83
+fold,23.9,24.174,0.4470,0.52
+fold,23.9,23.920,0.4275,0.51
+fold,23.9,23.750,0.3217,0.64
+fold,23.9,24.344,0.3077,0.67
+fold,5.8,6.035,0.6642,0.9
+fold,5.8,6.289,0.5584,0.91
+fold,5.8,5.526,0.4665,0.76
+fold,5.8,6.204,0.4303,0.76
+fold,5.8,5.950,0.1629,0.92

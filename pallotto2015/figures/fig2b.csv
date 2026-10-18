@@ -1,0 +1,45 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 2B: Classification Error versus ECS fraction (%).
+# Columns: kind (fold = one grey open circle, one cross-validation test image; median = red + marker),
+#   group (ECS fraction of the data set, %, from the caption), x_axis (horizontal position in axis units; the
+#   circles are jittered around the group position), y (value).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 5) by ring-template matching
+#   (circles) and red-component centroids (medians); script figures/fig2_extract.py.
+# x axis (linear) fitted on ticks 0.6@150.2px, 6@214px, 11@273px, 24@426px; max residual 0.011 axis units.
+# y axis (linear) fitted on ticks 0@1818px, 0.02@1758px, 0.04@1698px, 0.06@1638.5px, 0.08@1578.5px, 0.1@1518.8px; max residual 7.16e-05 axis units.
+# Uncertainty: about +-1 px = +-0.00033 y units for isolated circles, +-2 px for overlapping ones.
+# Circles resolved per group (9 expected from the ninefold cross-validation): {'0.6': 8, '5.8': 7, '11.3': 7, '23.9': 6}.
+#   Missing circles are hidden under overlapping circles or under the red median marker.
+# match_score = template correlation (0-1) of each circle.
+kind,group,x_axis,y,match_score
+median,0.6,0.598,0.0836,
+median,5.8,6.000,0.0667,
+median,11.3,11.010,0.0757,
+median,23.9,24.021,0.0733,
+fold,0.6,0.743,0.0959,0.68
+fold,0.6,0.319,0.0936,0.59
+fold,0.6,0.743,0.0919,0.58
+fold,0.6,0.743,0.0852,0.44
+fold,0.6,-0.020,0.0835,0.56
+fold,0.6,-0.020,0.0782,0.71
+fold,0.6,0.234,0.0742,0.76
+fold,0.6,0.404,0.0571,0.91
+fold,11.3,11.350,0.0956,0.91
+fold,11.3,10.841,0.0875,0.82
+fold,11.3,10.587,0.0825,0.53
+fold,11.3,11.096,0.0755,0.43
+fold,11.3,11.181,0.0682,0.48
+fold,11.3,11.181,0.0651,0.39
+fold,11.3,11.011,0.0631,0.57
+fold,23.9,24.249,0.0852,0.8
+fold,23.9,23.740,0.0825,0.79
+fold,23.9,23.994,0.0765,0.62
+fold,23.9,24.503,0.0698,0.53
+fold,23.9,24.164,0.0658,0.58
+fold,23.9,23.994,0.0635,0.53
+fold,5.8,6.259,0.0815,0.84
+fold,5.8,5.835,0.0765,0.51
+fold,5.8,5.495,0.0742,0.56
+fold,5.8,5.326,0.0668,0.64
+fold,5.8,6.089,0.0544,0.65
+fold,5.8,6.259,0.0514,0.66
+fold,5.8,6.259,0.0371,0.77

@@ -1,0 +1,8 @@
+# Figure 1g layout values recovered from the PDF (row grid as in fig1g_spikes.csv).
+element,value
+n_rows_between_y_ticks,412
+ml_am_separator_row,158.5
+flash_time_s,0
+x_min_s,-1
+x_max_s,1
+rows_below_bottom_tick_in_axis_box,5

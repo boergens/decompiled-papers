@@ -1,0 +1,28 @@
+# Bouwer et al. 2016 Adv Struct Chem Imag 2:11, Fig. 2: 'Applied Voltage Vs. Sample Surface Voltage'.
+# Series: 'Measured Sample Surface Potential' (open circles, the only series).
+# Columns: applied_potential_V = Applied Potential (Volts), x axis; measured_sample_potential_V = Measured Sample
+#   Potential (Volts), y axis; circle_radius_px = fitted marker radius in source pixels (a check only).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig2_extract.py.
+#   Axes fitted on the frame and grid lines (labelled ticks), max residual x 0.42 V, y 0.77 V.
+#   Marker centre = least-squares circle fit to the ring pixels of each open circle. The first (-1500 V) and last (0 V)
+#   markers are cut by the frame corners; their centres come from the visible arcs.
+# Uncertainty: about +-2.1 V in x and +-2.0 V in y (1 source pixel); the applied voltages look like
+#   steps of 100 V (plus one point near -50 V), but the values below are as read, not rounded.
+applied_potential_V,measured_sample_potential_V,circle_radius_px
+-1501.8,-1378.1,5.33
+-1401.8,-1279.8,5.28
+-1301.6,-1179.7,5.20
+-1201.4,-1077.7,5.22
+-1101.5,-976.4,5.29
+-1001.5,-875.4,5.33
+-901.7,-763.5,5.25
+-801.5,-642.8,5.30
+-701.3,-544.0,5.27
+-601.6,-453.4,5.37
+-501.3,-342.4,5.28
+-401.4,-260.8,5.24
+-301.3,-183.0,5.21
+-201.1,-110.8,5.30
+-101.2,-45.9,5.32
+-51.4,-18.6,5.29
+-1.0,1.9,5.31

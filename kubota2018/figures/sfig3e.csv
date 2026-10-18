@@ -1,0 +1,29 @@
+# Supplementary Figure 3e (kubota2018 SI): depression depth / expansion height vs EHT
+# columns: series (legend text), eht_nominal (keV), eht_keV (digitized), depth_height_nm (y axis 'Depth/height (nm)'; negative = depression, positive = expansion)
+# provenance: tier 3, digitized from the embedded raster image of SI page 12 (887 x 331 px JPEG, 150 ppi), native resolution; script sfig3ef_extract.py
+# markers = dark connected components; centre = centroid of the marker ink (open circles: of the ring); filled vs open told apart by the ink fill fraction
+# eht_nominal = digitized EHT rounded to the nearest 0.5 keV (the points sit at 2.5, 3, 4, ..., 10 keV)
+# pixel_x, pixel_y = marker centre in the embedded image (for the overlay check)
+# axis fit: y on 10 ticks +100 (unlabelled) ... -800 nm, max residual 4.76 nm; x on 6 ticks 0..10 keV, max residual 0.034 keV
+# uncertainty: about 1 source pixel = 8 nm in y, 0.08 keV in x
+# the light-grey horizontal line at y = 0 is a reference line in the figure (not data)
+# cross-check: panels b and d print the SCM depth/height above each imaged square (CNT -808 -708 -614 -511 -419 -324 -232 -163 -140; cc-Kapton 134 113 109 85 44 54 45 21 11 for 10, 9, ..., 3, 2.5 keV); the digitized points agree with these to within about 1 pixel
+series,eht_nominal,eht_keV,depth_height_nm,pixel_x,pixel_y
+CNT/PET,2.5,2.56,-137,784.91,44.09
+CNT/PET,3,3.03,-160,790.91,46.91
+CNT/PET,4,4.01,-231,803.22,55.91
+CNT/PET,5,5.01,-320,815.91,67.09
+CNT/PET,6,5.98,-421,828.09,79.78
+CNT/PET,7,6.99,-511,840.91,91.09
+CNT/PET,8,8.03,-617,854.08,104.50
+CNT/PET,9,9.01,-709,866.40,116.04
+CNT/PET,10,10.00,-807,878.96,128.39
+cc-Kapton,2.5,2.54,8,784.62,25.88
+cc-Kapton,3,3.05,22,791.06,24.06
+cc-Kapton,4,4.03,46,803.53,21.00
+cc-Kapton,5,5.02,52,816.00,20.29
+cc-Kapton,6,5.99,46,828.27,21.07
+cc-Kapton,7,7.00,87,841.08,15.92
+cc-Kapton,8,8.02,108,853.93,13.20
+cc-Kapton,9,9.02,112,866.60,12.73
+cc-Kapton,10,10.01,136,879.00,9.71

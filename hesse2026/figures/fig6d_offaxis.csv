@@ -1,0 +1,5 @@
+# Figure 6d: feature values that lie below the -100 % axis limit (not drawn in the original; the line leaves the axes).
+# Values are extrapolated from the visible straight line segments that enter/leave the clipped region (least-squares fit of the polyline);
+# precision_pct = 1-sigma propagated from 0.005 pt coordinate rounding. Use only to redraw the excursions; they are not plotted data points.
+# Rows with an empty value: both adjacent segments are entirely below -100 %, so nothing constrains the vertex.
+series,feature_index,extrapolated_value_pct,precision_pct,note

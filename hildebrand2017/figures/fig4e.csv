@@ -1,0 +1,39 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Fig. 4e: difference matrix at z = 5560 (slice 5560): upper triangle = angle difference a (0-180 deg), lower triangle = distance difference d (0-8 um).
+# Rows/columns: the 6 left-right pairs in the order of the printed colour dots (MeMv, MeMd, MeLr, MeLm, MeLc, Mauthner;
+# colour code of Fig. 4f). Diagonal cells are empty (white) in the figure.
+# Provenance: tier 3, digitized from the embedded 150 ppi raster on PDF page 29 (figures/fig4e_extract.py): median colour
+# of the inner 7x7 px of each 13x13 px cell matched to the nearest colour of the printed key (a blue-to-green map, linear from
+# 0 at the bottom edge to the top label at the top edge; the key is only ~86 px tall). Uncertainty about +-3 % of the key
+# range for blue cells; colours between blue and green are less certain. rgb_dist = RGB distance to the matched key colour.
+# columns: row_axon; col_axon; row; col; triangle; quantity; unit; value; rgb_dist
+row_axon,col_axon,row,col,triangle,quantity,unit,value,rgb_dist
+MeMv,MeMd,1,2,upper,angle difference a at z = 5560,deg,5.23,3.7
+MeMv,MeLr,1,3,upper,angle difference a at z = 5560,deg,15.7,2.1
+MeMv,MeLm,1,4,upper,angle difference a at z = 5560,deg,5.23,8.3
+MeMv,MeLc,1,5,upper,angle difference a at z = 5560,deg,5.23,7.5
+MeMv,Mauthner,1,6,upper,angle difference a at z = 5560,deg,5.23,8.0
+MeMd,MeMv,2,1,lower,distance difference d at z = 5560,um,0.233,5.2
+MeMd,MeLr,2,3,upper,angle difference a at z = 5560,deg,164,5.6
+MeMd,MeLm,2,4,upper,angle difference a at z = 5560,deg,5.23,7.1
+MeMd,MeLc,2,5,upper,angle difference a at z = 5560,deg,7.33,0.8
+MeMd,Mauthner,2,6,upper,angle difference a at z = 5560,deg,5.23,5.2
+MeLr,MeMv,3,1,lower,distance difference d at z = 5560,um,1.53,4.4
+MeLr,MeMd,3,2,lower,distance difference d at z = 5560,um,1.53,5.4
+MeLr,MeLm,3,4,upper,angle difference a at z = 5560,deg,42.9,2.7
+MeLr,MeLc,3,5,upper,angle difference a at z = 5560,deg,19.9,5.1
+MeLr,Mauthner,3,6,upper,angle difference a at z = 5560,deg,5.23,8.4
+MeLm,MeMv,4,1,lower,distance difference d at z = 5560,um,1.81,1.0
+MeLm,MeMd,4,2,lower,distance difference d at z = 5560,um,0.233,1.0
+MeLm,MeLr,4,3,lower,distance difference d at z = 5560,um,0.233,4.5
+MeLm,MeLc,4,5,upper,angle difference a at z = 5560,deg,7.33,1.1
+MeLm,Mauthner,4,6,upper,angle difference a at z = 5560,deg,5.23,6.5
+MeLc,MeMv,5,1,lower,distance difference d at z = 5560,um,1.81,1.4
+MeLc,MeMd,5,2,lower,distance difference d at z = 5560,um,2,7.4
+MeLc,MeLr,5,3,lower,distance difference d at z = 5560,um,0.233,7.8
+MeLc,MeLm,5,4,lower,distance difference d at z = 5560,um,1.07,3.8
+MeLc,Mauthner,5,6,upper,angle difference a at z = 5560,deg,5.23,7.5
+Mauthner,MeMv,6,1,lower,distance difference d at z = 5560,um,1.53,5.4
+Mauthner,MeMd,6,2,lower,distance difference d at z = 5560,um,0.233,5.8
+Mauthner,MeLr,6,3,lower,distance difference d at z = 5560,um,1.91,2.4
+Mauthner,MeLm,6,4,lower,distance difference d at z = 5560,um,0.233,3.7
+Mauthner,MeLc,6,5,lower,distance difference d at z = 5560,um,0.233,4.5

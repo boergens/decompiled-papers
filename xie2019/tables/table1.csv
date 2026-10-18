@@ -1,0 +1,12 @@
+# Table 1 Parameters used in the MD simulation (Xie & Fang 2019, Nanoscale Res Lett 14:370, p. 3).
+# Transcribed verbatim; the first row is the table's own header row.
+Configuration,Diamond cutting process
+Workpiece material,Single crystal copper
+Workpiece,Face-centred-cubic (FCC) structure
+Crystal structure,Lattice constant = 3.65 Å
+Workpiece size,27 × 10 × 5nm³
+Tool material,Diamond
+Cutting velocity,25 m/s
+Tool edge radius,"0 nm, 2 nm, 3 nm, 4 nm, 5 nm, 7.5 nm, 10 nm"
+Tool rake angle,0°
+Tool clearance angle,12°

@@ -1,0 +1,11 @@
+# Xu et al. 2017 eLife, Figure 9(a), upper table (printed as an image; transcribed by the decompiler).
+# Caption: Figure 9. Major challenges to long-term reliability and stability of FIB-SEM systems. (a) System failure modes with different frequencies of occurrence and resume challenges. (b) Corresponding customized solutions.
+# The 'Type' cells 'Regular Maintenance' and 'System Failure' span several rows in the figure; repeated here on each row. 'sub mm' as printed.
+Type,Interrupts,Frequency
+Stability,System Drifting (nm to sub mm),1 day
+Regular Maintenance,FIB Ga Source Reheat,3-5 days
+Regular Maintenance,FIB Ga Source Replacement,3-4 months
+Regular Maintenance,SEM Tip Replacement,1 year
+Facility,Room Temp Excursion,Few weeks
+System Failure,System Component (e.g. Pump) Failure,Random
+System Failure,Computer SW&HW Failure,1 year

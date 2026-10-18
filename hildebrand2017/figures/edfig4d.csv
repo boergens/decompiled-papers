@@ -1,0 +1,35 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Extended Data Fig. 4d: lost, partial and adjacent (lost-partial or
+# partial-partial) events per bin of 50 sections along the 7dpf series (x: position in series, z).
+# Provenance: tier 3, digitized from the embedded 150 ppi raster image on PDF page 36 (figures/edfig4d_extract.py).
+# x calibrated on 7 ticks 0..15000 step 2500 (labels 0, 5000, 10000, 15000), max residual 7.2 sections;
+# one pixel column = 32.7 sections, so the 50-section bin of a bar is known only to about +-1 bin (z_left..z_right).
+# One row per bar (run of touching dark pixel columns): width_px, heights_px = bar height in each column, value = number of
+# events read from the run (height / px per unit, rounded; a flat run wider than one bin counts one bin per ~1.5 px).
+# Runs wider than one column may hold neighbouring bins that cannot be separated (flagged in 'note').
+# lost: 6 events in the digitized bars (the panel prints 6); y scale 5.52 px per section/bin, tick-fit residual 0.06
+# partial: 24 events in the digitized bars (the panel prints 25); y scale 5.30 px per section/bin, tick-fit residual 0.04
+# adjacent: 5 events in the digitized bars (the panel prints 6); y scale 5.00 px per section/bin, tick-fit residual 0.00
+# columns: series; z_left; z_right (z range of the run); z_centre; width_px; heights_px; value; note
+series,z_left,z_right,z_centre,width_px,heights_px,value,note
+lost,303.4,336.1,319.8,1,10,2,
+lost,3347.4,3380.1,3363.8,1,5,1,
+lost,3511.1,3543.8,3527.4,1,5,1,
+lost,4100.2,4133.0,4116.6,1,5,1,
+lost,12315.8,12348.5,12332.2,1,5,1,
+partial,270.7,336.1,303.4,2,10 10,2,"run of 2 columns, may hold more than one bin"
+partial,990.7,1023.5,1007.1,1,5,1,
+partial,2398.2,2430.9,2414.6,1,10,2,
+partial,2561.8,2594.6,2578.2,1,5,1,
+partial,2660.0,2692.8,2676.4,1,21,4,
+partial,2758.2,2889.2,2823.7,4,10 5 5 10,6,"run of 4 columns, may hold more than one bin"
+partial,3020.1,3052.8,3036.5,1,10,2,
+partial,3347.4,3380.1,3363.8,1,5,1,
+partial,3707.4,3740.2,3723.8,1,5,1,
+partial,4100.2,4133.0,4116.6,1,5,1,
+partial,8191.6,8224.4,8208.0,1,10,2,
+partial,12315.8,12348.5,12332.2,1,5,1,
+adjacent,270.7,336.1,303.4,2,5 5,1,"run of 2 columns, may hold more than one bin"
+adjacent,2660.0,2692.8,2676.4,1,5,1,
+adjacent,3347.4,3380.1,3363.8,1,4,1,
+adjacent,4100.2,4133.0,4116.6,1,5,1,
+adjacent,8191.6,8224.4,8208.0,1,5,1,

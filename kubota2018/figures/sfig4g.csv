@@ -1,0 +1,30 @@
+# Supplementary Figure 4g (kubota2018 SI): electron dose vs dwell time, one series per acceleration voltage
+# columns: series (legend text), x_nominal (dwell time, µsec), x_digitized, y (electron dose (axis label printed 'Electron dose (e- nm-2)', but the values 0-6 match panel e in ke- nm-2)), marker_px (pixels in the colour blob found), status, printed_panel_c (the depth printed under the imaged square in panel c of the same figure, where it belongs to this point; empty otherwise), pixel_x, pixel_y (marker centre in the embedded image)
+# provenance: tier 3, digitized from the embedded raster image of SI page 13 (885 x 595 px JPEG, 150 ppi), native resolution; script sfig4_extract.py
+# method: ticks found in the image and fitted to the printed tick labels; at each nominal x the pixels of each series colour (HSV class) in a 7-px-wide column window are grouped into blobs and the centroid of the largest blob is the marker centre
+# axis fit: y on 7 ticks 6..0, max residual 0.0271; x on 5 ticks 0..6.4, max residual 0.019
+# uncertainty: about 1-2 source pixels = 0.054-0.11 in y (1 px = 0.0542); markers that overlap other markers are less certain
+# status 'hidden under other markers': the series colour was not found at that x (the marker is covered by another series' marker); 'partly hidden': fewer than 8 pixels of its colour visible
+# legend (verbatim, with the dose rate in e- nm-2 µs-1 printed after each label): 2 keV 714.5; 3 keV 768.7; 4 keV 822.9; 5 keV 877.1; 6 keV 931.2 (the 931.2 is printed on the line below '6 keV')
+# decompiler's check: dose rate x dwell time (e.g. 931.2 x 6.4 = 5.96, 714.5 x 6.4 = 4.57 ke- nm-2) agrees with the clearly visible markers within about 0.05; the small-blob value of 2 keV at 3.2 µs (2.15) is 0.14 below 714.5 x 3.2 = 2.29 and is unreliable
+series,x_nominal,x_digitized,y,marker_px,status,printed_panel_c,pixel_x,pixel_y
+2 keV,0.8,0.803,0.563,4,partly hidden (small blob),,778.50,549.00
+2 keV,1.6,,,1,hidden under other markers,,,
+2 keV,3.2,3.091,2.147,4,partly hidden (small blob),,817.75,519.75
+2 keV,6.4,6.394,4.529,21,ok,,874.43,475.76
+3 keV,0.8,0.790,0.4779,7,partly hidden (small blob),,778.29,550.57
+3 keV,1.6,1.613,1.079,15,ok,,792.40,539.47
+3 keV,3.2,3.229,2.376,23,ok,,820.13,515.52
+3 keV,6.4,6.379,4.876,31,ok,,874.16,469.35
+4 keV,0.8,,,0,hidden under other markers,,,
+4 keV,1.6,1.551,1.195,3,partly hidden (small blob),,791.33,537.33
+4 keV,3.2,3.199,2.554,13,ok,,819.62,512.23
+4 keV,6.4,6.374,5.246,23,ok,,874.09,462.52
+5 keV,0.8,,,0,hidden under other markers,,,
+5 keV,1.6,,,0,hidden under other markers,,,
+5 keV,3.2,3.193,2.756,8,ok,,819.50,508.50
+5 keV,6.4,6.398,5.627,16,ok,,874.50,455.50
+6 keV,0.8,0.827,0.7353,22,ok,,778.91,545.82
+6 keV,1.6,1.598,1.428,29,ok,,792.14,533.03
+6 keV,3.2,3.173,2.896,12,ok,,819.17,505.92
+6 keV,6.4,6.349,5.903,23,ok,,873.65,450.39

@@ -1,0 +1,57 @@
+# Figure 5e (page 39), AM -> ML plot: explained variance (%) of face-feature reconstruction per feature (1..50), states inferred in one area and features reconstructed from the other.
+# Series (legend): priming average (black, solid), binocular conscious state 1 (orange, solid), binocular conscious state 2 (purple, solid), binocular suppressed state 1 (orange, dashed), binocular suppressed state 2 (purple, dashed).
+# Solid series: vector stroke paths with 50 vertices at feature 1..50 (a 51st vertex 0.01 pt right of the 50th was dropped).
+# Dashed series: the PDF holds them as filled dash polygons (1 pt wide); the centre line was reconstructed from the parallel dash edges per segment and evaluated at the feature positions (each dash polygon is a chain of 1-pt-wide rectangles joined at explicit vertex points; vertices covered by a dash are those points (exact), vertices in a gap are the least-squares line through the neighbouring rectangles' end midpoints extended to the vertex x).
+# Dashed-series uncertainty: <= 0.04 pt (<= 0.07 %) for every vertex except AM -> ML suppressed state 1 at feature 43 (both adjacent segments are gaps; estimated from two sub-0.4-pt stubs at the neighbouring junctions, s.d. 0.095 pt = 0.17 %). Junction points agree with the fitted lines to <= 0.035 pt.
+# x axis calibrated on tick marks 10..50 (resid 1.6e-03); y axis on tick marks -100..100 (resid 7.4e-04); precision about 0.05 % (27.75 pt per 50 %).
+feature_index,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_suppressed_state1_pct,binocular_suppressed_state2_pct
+1,75.93,23.51,32.25,22.11,26.05
+2,80.94,19.3,11.69,0.51,17.53
+3,84.02,33.64,18.25,8.29,31.4
+4,52.7,10.88,20.22,-1.25,5.6
+5,42.79,13.41,10.67,1.14,9.54
+6,29.77,10.47,11.66,-7.06,5.3
+7,23.71,6.67,-5.54,-8.78,-9.67
+8,39.08,-7.29,1.14,0.85,-9.94
+9,50.92,-13.87,3.32,3.59,-23.56
+10,24.09,9.84,21.03,3.51,2.67
+11,33.84,-12.29,5.19,-8.22,-5.01
+12,16.72,-10.88,-0.26,-19.79,-5.71
+13,7.5,-6.2,3.03,-2.38,-6.63
+14,42.47,17.1,12.04,2.24,-0.33
+15,-4.07,-21.53,-41.94,-31.2,-33.75
+16,15.6,-8.93,-4.09,-7.34,-12.74
+17,23.23,-6.07,-9.29,-17.34,9.15
+18,14.15,-7.99,10.51,-9.35,-4.38
+19,8.43,-6.44,-5.7,-12.93,-3.74
+20,3.98,-8.96,-0.78,2.29,1.5
+21,97.28,23.51,-4.43,-48.04,-15.77
+22,97.32,24.92,1.68,-41.23,-15.76
+23,97.95,27.78,-11.9,-61.71,-10.99
+24,86.68,46.05,41.35,12.48,21.75
+25,94.58,35.64,-7.52,-54.64,1.6
+26,60.67,2.78,-4.05,-28.92,-1.69
+27,81.59,28.09,28.05,-19.43,-10.07
+28,70.09,25.24,19.12,0.78,12.04
+29,68.18,22.34,22.58,-21.83,-13.53
+30,94.86,28.29,-3.8,-62.39,-19.7
+31,53.03,2.79,-7.86,-30.92,-15.01
+32,75.32,20.88,-17.57,-48.77,0.52
+33,75.73,26.94,1.68,-34.94,3.3
+34,84.9,25.59,0.15,-44.29,-14.98
+35,69.1,18.04,-3.29,-34.15,-1.91
+36,54.83,28.74,15.48,-28.25,0.69
+37,80.79,9.05,-0.87,-29.5,-13.36
+38,92.97,25.59,-12.14,-56.55,-10.3
+39,92.13,29.68,-3.16,-57.64,-9.63
+40,32.79,14.58,-14.55,-21.65,-18.38
+41,63.39,20.81,2.83,-35.25,7.3
+42,93.91,23.37,3.24,-37.17,-13.47
+43,66.59,8.27,-0.44,-34.48,-11.86
+44,76.32,15.91,-0.3,-33.99,-5.25
+45,71.48,16.9,7.53,-34.41,-15.62
+46,72.61,23.78,-6.82,-43.78,0.6
+47,63.8,12.15,-2.53,-11.68,-3.0
+48,66.23,6.31,-1.12,-11.77,-5.66
+49,93.23,27.8,-2.73,-50.5,-12.35
+50,53.51,-9.58,-24.03,-83.47,-34.3

@@ -1,0 +1,38 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 3: energy (blue circles, left axis, eV) and force (red squares,
+#   right axis, nN; the axis title is printed 'Forcce (nN)') vs displacement during detachment of a carbon chain on C(110).
+# Columns: series ('Energy (eV)' or 'Force (nN)'); displacement_A = x of the marker centre in Angstrom (measured);
+#   value = y of the marker centre in the series' unit; value_unc = estimated uncertainty in that unit;
+#   x_px, y_px = marker centre in the embedded image (xref 285); status; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig3_extract.py.
+#   Energy axis calibrated on the 11 blue major ticks -1..9 eV (the 10 eV tick lies under the inset row;
+#   max residual 0.009 eV, 0.0210 eV/px); force axis on the 7 red major ticks 0..12 nN
+#   (max residual 0.006 nN, 0.0264 nN/px); x on the 6 major ticks 0..2.5 A
+#   (max residual 0.0009 A).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening (7 px) of the closed colour mask.
+# Uncertainty: 2 px for clear markers (0.04 eV, 0.05 nN); 5 px for partly hidden ones.
+# The smooth blue curve and the dashed red curve of the figure are interpolations through the markers and are not
+#   given; the dashed force curve dips to about -0.9 nN near x~1.35 A, below the markers either side of it.
+# Black dotted lines mark steps 1-6 at x = 0.25, 0.5, 0.75, 1.0, 2.25, 2.5 A (call-outs and structure insets).
+series,displacement_A,value,value_unc,x_px,y_px,status,note
+Energy (eV),0.001,-0.022,0.04,86.0,552.0,ok,
+Energy (eV),0.249,0.335,0.04,167.5,535.0,ok,
+Energy (eV),0.500,1.469,0.04,249.5,481.0,ok,
+Energy (eV),0.749,1.984,0.04,331.0,456.5,ok,
+Energy (eV),1.001,2.614,0.04,413.5,426.5,ok,
+Energy (eV),1.251,2.467,0.04,495.5,433.5,ok,
+Energy (eV),1.500,2.436,0.04,577.0,435.0,ok,
+Energy (eV),1.749,2.467,0.04,658.5,433.5,ok,
+Energy (eV),2.001,2.698,0.08,741.0,422.5,partly hidden,lower part under the force square (centre from its top edge and the typical marker height 22 px)
+Energy (eV),2.250,3.276,0.04,822.5,395.0,ok,
+Energy (eV),2.498,3.056,0.04,904.0,405.5,ok,
+Force (nN),0.001,0.012,0.05,86.0,530.0,ok,
+Force (nN),0.249,4.202,0.05,167.5,371.0,ok,
+Force (nN),0.500,7.655,0.05,249.5,240.0,ok,
+Force (nN),0.753,2.806,0.05,332.5,424.0,ok,
+Force (nN),0.996,5.349,0.05,412.0,327.5,ok,
+Force (nN),1.251,-0.251,0.05,495.5,540.0,ok,
+Force (nN),1.501,-0.054,0.05,577.5,532.5,ok,
+Force (nN),1.752,0.605,0.05,659.5,507.5,ok,
+Force (nN),1.999,2.595,0.05,740.5,432.0,ok,
+Force (nN),2.250,4.743,0.05,822.5,350.5,ok,
+Force (nN),2.500,0.170,0.05,904.5,524.0,ok,

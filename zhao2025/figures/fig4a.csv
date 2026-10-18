@@ -1,0 +1,25 @@
+# Zhao et al. 2025, Nat. Commun. 16:3203, Fig. 4a: damage zone depth d (um) vs applied stretch ratio lambda.
+# Columns: series (red squares = Cutting-induced; the last point, at lambda ~1.45 in region III, carries the blue
+#   'Tearing-induced' icon drawn over a red square and a blue error bar drawn over a red one of the same length);
+#   x = lambda; y = d (um); x_err_* empty (no horizontal bars); y_err_low/high = ends of the error bar (standard
+#   deviation per the caption) at the cap lines; marker_box_centre_* = centre of the square's bounding box;
+#   centre_from: x from the vertical error-bar line (vbar) / y from the junction of the two half-bars (vjunction);
+#   these agree with the square centres to <0.1 pt.
+# Provenance: tier 2, vector paths in the PDF (page 5), exact to ~0.01 pt (~0.0001 in lambda, ~0.01 um in d).
+#   x: linear fit through 3 ticks 1@139.530pt, 1.2@204.650pt, 1.4@269.520pt; max residual 0.00026 data units
+#   y: linear fit through 4 ticks 0@176.160pt, 20@149.010pt, 40@121.810pt, 60@94.570pt; max residual 0.018 data units
+#   Note the frame's left edge (139.53 pt) is the '1' tick; the 1.2/1.4 spacing puts lambda = 1 at 139.78 pt
+#   (fit residual shown above). Background shading: region I lambda < 1.1423, II 1.1423-1.4279, III > 1.4279 (fill edges).
+# Fit line (red dash-dot, drawn as filled dash polygons; least-squares line through all their vertices, max
+#   vertex offset 1.15 pt = line half-width): from lambda = 1.163 to 1.45, i.e. d = 67.927 * lambda + (-57.593).
+#   The paper prints no equation for this line; these numbers are read off the drawing.
+series,x,y,x_err_low,x_err_high,y_err_low,y_err_high,marker_box_centre_x,marker_box_centre_y,centre_from
+Cutting-induced,1.08192,43.89083,,,30.99607,56.67977,1.08177,43.90853,vbar/vjunction
+Cutting-induced,1.1225,21.29791,,,10.21511,32.38151,1.1225,21.31542,vbar/vjunction
+Cutting-induced,1.16323,21.29791,,,16.43123,26.05802,1.16316,21.31542,vbar/vjunction
+Cutting-induced,1.20426,24.45929,,,18.45645,30.56955,1.20418,24.49527,vbar/vjunction
+Cutting-induced,1.24499,27.72729,,,22.96798,32.52344,1.24491,27.74571,vbar/vjunction
+Cutting-induced,1.28557,29.82312,,,23.67835,36.07603,1.28557,29.84153,vbar/vjunction
+Cutting-induced,1.34711,33.30438,,,26.6625,39.98382,1.34704,33.3228,vbar/vjunction
+Cutting-induced,1.40836,36.71504,,,27.15961,46.3426,1.40828,36.73275,vbar/vjunction
+Tearing-induced,1.44908,42.36348,,,31.56451,53.09187,1.44901,42.34535,vbar/vjunction

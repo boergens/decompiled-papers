@@ -1,0 +1,18 @@
+# Appendix 1-table 4 of Scheffer et al. 2020 (eLife 9:e57443), p. 70: criteria for agglomerating priority groups.
+# Legend: If an agglomeration decision fulfills the criteria for multiple priority groups, it is assigned to the one with the lowest
+# resulting score.
+# Criteria and scores transcribed by hand from the page image (the math font has no usable text layer); subscripts written as _X,
+# 'f_**' is f with subscript ** (two asterisks). Score of group 10 printed as '11 − J_AB' (as printed).
+Group,Segmentation,Criterion,Score
+1,S32,(d_A ≤ 0.02 ∨ d_B ≤ 0.02) ∧ (f_** ≥ 0.6 ∧ J_AB ≥ 0.8),1 − J_AB
+2,S16,(d_A ≤ 0.02 ∨ d_B ≤ 0.02) ∧ (f_** ≥ 0.6 ∧J_AB ≥ 0.8) ∧ (A_max = 0 ∨ B_max = 0)∧ A and B are classified as neuropil,2 − J_AB
+3,S16,(d_A ≤ 0.02 ∨ d_B ≤ 0.02) ∧ (f_** ≥ 0.6 ∧J_AB ≥ 0.8) ∧ (A_max = 0 ∨ B_max = 0),3 − J_AB
+4,S16,(d_A ≤ 0.02 ∨ d_B ≤ 0.02) ∧ (f_** ≥ 0.6 ∧ J_AB ≥ 0.8)∧ A and B are classified as neuropil,4 − J_AB
+5,S16,(d_A ≤ 0.02 ∨ d_B ≤ 0.02) ∧ (f_** ≥ 0.6 ∧ J_AB ≥ 0.8),5 − J_AB
+6,S32,(f_** ≥ 0.6 ∧ J_AB ≥ 0.4) ∧ (A_max = 0 ∨ B_max = 0)∧ A and B are classified as neuropil,6 − J_AB
+7,S16,(f_** ≥ 0.6 ∧ J_AB ≥ 0.4) ∧ (A_max = 0 ∨ B_max = 0),7 − J_AB
+8,S16,(f_** ≥ 0.6 ∧ J_AB ≥ 0.4)∧ A and B are classified as neuropil,8 − J_AB
+9,S16,(f_** ≥ 0.6 ∧ J_AB ≥ 0.4),9 − J_AB
+10,S8,None,11 − J_AB
+11,S32,None,"12 − max(min(f_AA, f_AB), min(f_BA, f_BB))"
+12,S16,None,"13 − max(min(f_AA, f_AB), min(f_BA, f_BB))"

@@ -1,0 +1,13 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 5C: FWHM labeling distance (um), mean +/- SEM (caption), conv fix vs ECS fix.
+# Columns: antibody, condition, mean_um (marker centre), err_low_um, err_high_um (error-bar ends), half_bar_um (half the bar length).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 10); figures/fig5c_extract.py.
+# y axis (linear) fitted on ticks 0@493.5px, 5@427.5px, 10@361.5px, 15@295.5px, 20@229.5px, 25@163.5px, 30@98.5px; max residual 0.0407 axis units.
+# Uncertainty: +-1 px = +-0.076 um. Where the bar is shorter than the marker (VAChT conv fix) the 'ends' are the
+#   marker edges, so the bar length is an upper bound of what is visible.
+# Text (p. 10): VAChT 28.1 +/- 2.4 um (ECS-preserved) vs 6.8 +/- 0.5 um (control); VGAT 16.9 +/- 1.0 um vs 6.1 +/- 0.4 um.
+#   n = 20 retina slices from two animals (caption).
+antibody,condition,mean_um,err_low_um,err_high_um,half_bar_um
+VAChT,conv fix,6.82,6.40,7.23,0.42
+VAChT,ECS fix,28.14,27.19,29.09,0.95
+VGAT,conv fix,6.09,5.11,7.01,0.95
+VGAT,ECS fix,16.95,15.96,17.93,0.99

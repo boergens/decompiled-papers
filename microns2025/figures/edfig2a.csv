@@ -1,0 +1,284 @@
+# Extended Data Fig. 2A (p. 25 of microns2025.pdf): histogram of number of edits per object associated with a nucleus.
+# Provenance: tier 2, vector paths in the PDF (exact up to PDF precision, ~0.01 pt).
+# Columns: series (legend name); bin (bin index, 0 = first bin at 10^0); bin_left, bin_right (number of edits, bin edges;
+#   bins are equal-width in log10, width 0.03535 decades); count (number of cells = bar/step height); kind:
+#   bar = grey filled bar; step = step outline; at_floor(<=1) = the step runs along the bottom axis (10^0), i.e. count 0 or 1.
+# Bars of height 1 or 0 are not drawn on the log axis, so bins missing for All Cells have count <= 1.
+# Counts are 10^(height); values come out as integers to within ~0.5 % (log-scale rounding).
+# x (log10 edits): value (log10) = 0.0176255 * page_coord + -1.47985; max |residual| on the ticks 5.3e-05 log10 units
+# y (log10 count): value (log10) = -0.0219684 * page_coord + 6.05492; max |residual| on the ticks 4.4e-15 log10 units
+# Tick labels are outlined glyphs; decades read from the rendered figure.
+series,bin,bin_left,bin_right,count,kind
+All Cells,0,0.99991,1.0847,3.473e+04,bar
+All Cells,8,1.9178,2.0804,1.232e+04,bar
+All Cells,13,2.8812,3.1255,9867,bar
+All Cells,17,3.9901,4.3285,7908,bar
+All Cells,19,4.6956,5.0939,6379,bar
+All Cells,22,5.9946,6.503,4809,bar
+All Cells,23,6.503,7.0545,3620,bar
+All Cells,25,7.6528,8.3018,2761,bar
+All Cells,26,8.3018,9.0059,2181,bar
+All Cells,28,9.7698,10.598,1774,bar
+All Cells,29,10.598,11.497,1266,bar
+All Cells,30,11.497,12.472,1082,bar
+All Cells,31,12.472,13.53,858.9,bar
+All Cells,32,13.53,14.678,730,bar
+All Cells,33,14.678,15.922,591.9,bar
+All Cells,34,15.922,17.273,917.9,bar
+All Cells,35,17.273,18.738,353,bar
+All Cells,36,18.738,20.327,625.9,bar
+All Cells,37,20.327,22.051,462,bar
+All Cells,38,22.051,23.921,181,bar
+All Cells,39,23.921,25.95,271,bar
+All Cells,40,25.95,28.151,343,bar
+All Cells,41,28.151,30.538,189,bar
+All Cells,42,30.538,33.128,167,bar
+All Cells,43,33.128,35.938,84.99,bar
+All Cells,44,35.938,38.986,121,bar
+All Cells,45,38.986,42.293,109,bar
+All Cells,46,42.293,45.879,86.99,bar
+All Cells,47,45.879,49.771,74.99,bar
+All Cells,48,49.771,53.992,76.99,bar
+All Cells,49,53.992,58.571,63.99,bar
+All Cells,50,58.571,63.538,74.99,bar
+All Cells,51,63.538,68.927,52,bar
+All Cells,52,68.927,74.773,55.99,bar
+All Cells,53,74.773,81.115,52.99,bar
+All Cells,54,81.115,87.994,33,bar
+All Cells,55,87.994,95.457,42.99,bar
+All Cells,56,95.457,103.55,30,bar
+All Cells,57,103.55,112.34,31,bar
+All Cells,58,112.34,121.86,21,bar
+All Cells,59,121.86,132.2,43.99,bar
+All Cells,60,132.2,143.41,34.99,bar
+All Cells,61,143.41,155.57,30,bar
+All Cells,62,155.57,168.77,39.99,bar
+All Cells,63,168.77,183.08,66.99,bar
+All Cells,64,183.08,198.61,60.99,bar
+All Cells,65,198.61,215.45,66.99,bar
+All Cells,66,215.45,233.73,59.99,bar
+All Cells,67,233.73,253.55,72.99,bar
+All Cells,68,253.55,275.05,68.99,bar
+All Cells,69,275.05,298.38,80.99,bar
+All Cells,70,298.38,323.69,65.99,bar
+All Cells,71,323.69,351.14,52,bar
+All Cells,72,351.14,380.92,33.99,bar
+All Cells,73,380.92,413.23,22,bar
+All Cells,74,413.23,448.27,20,bar
+All Cells,75,448.27,486.29,19,bar
+All Cells,76,486.29,527.53,15,bar
+All Cells,77,527.53,572.28,14,bar
+All Cells,78,572.28,620.81,8.999,bar
+All Cells,79,620.81,673.46,14,bar
+All Cells,80,673.46,730.58,11,bar
+All Cells,81,730.58,792.54,9.998,bar
+All Cells,82,792.54,859.76,9.998,bar
+All Cells,83,859.76,932.68,6.999,bar
+All Cells,84,932.68,1011.8,12,bar
+All Cells,85,1011.8,1097.6,3.999,bar
+All Cells,86,1097.6,1190.7,6.999,bar
+All Cells,87,1190.7,1291.7,2,bar
+All Cells,88,1291.7,1401.2,4.999,bar
+All Cells,90,1520.1,1649,2,bar
+All Cells,91,1649,1788.8,2,bar
+All Cells,93,1940.5,2105.1,2,bar
+All Cells,94,2105.1,2283.7,2,bar
+All Cells,96,2477.3,2687.4,2,bar
+Dendrite Proofreading Complete,0,0.99991,1.0847,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,1,1.0847,1.1767,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,2,1.1767,1.2765,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,3,1.2765,1.3848,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,4,1.3848,1.5022,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,5,1.5022,1.6296,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,6,1.6296,1.7678,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,7,1.7678,1.9178,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,8,1.9178,2.0804,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,9,2.0804,2.2569,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,10,2.2569,2.4483,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,11,2.4483,2.6559,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,12,2.6559,2.8812,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,13,2.8812,3.1255,2,step
+Dendrite Proofreading Complete,14,3.1255,3.3906,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,15,3.3906,3.6782,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,16,3.6782,3.9901,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,17,3.9901,4.3285,2,step
+Dendrite Proofreading Complete,18,4.3285,4.6956,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,19,4.6956,5.0939,2,step
+Dendrite Proofreading Complete,20,5.0939,5.5259,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,21,5.5259,5.9946,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,22,5.9946,6.503,2,step
+Dendrite Proofreading Complete,23,6.503,7.0545,2,step
+Dendrite Proofreading Complete,24,7.0545,7.6528,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,25,7.6528,8.3018,2,step
+Dendrite Proofreading Complete,26,8.3018,9.0059,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,27,9.0059,9.7698,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,28,9.7698,10.598,2.999,step
+Dendrite Proofreading Complete,29,10.598,11.497,2.999,step
+Dendrite Proofreading Complete,30,11.497,12.472,3.999,step
+Dendrite Proofreading Complete,31,12.472,13.53,2,step
+Dendrite Proofreading Complete,32,13.53,14.678,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,33,14.678,15.922,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,34,15.922,17.273,6.999,step
+Dendrite Proofreading Complete,35,17.273,18.738,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,36,18.738,20.327,3.999,step
+Dendrite Proofreading Complete,37,20.327,22.051,3.999,step
+Dendrite Proofreading Complete,38,22.051,23.921,2,step
+Dendrite Proofreading Complete,39,23.921,25.95,2,step
+Dendrite Proofreading Complete,40,25.95,28.151,4.999,step
+Dendrite Proofreading Complete,41,28.151,30.538,4.999,step
+Dendrite Proofreading Complete,42,30.538,33.128,6.999,step
+Dendrite Proofreading Complete,43,33.128,35.938,6.999,step
+Dendrite Proofreading Complete,44,35.938,38.986,11,step
+Dendrite Proofreading Complete,45,38.986,42.293,13,step
+Dendrite Proofreading Complete,46,42.293,45.879,16,step
+Dendrite Proofreading Complete,47,45.879,49.771,11,step
+Dendrite Proofreading Complete,48,49.771,53.992,14,step
+Dendrite Proofreading Complete,49,53.992,58.571,12,step
+Dendrite Proofreading Complete,50,58.571,63.538,17,step
+Dendrite Proofreading Complete,51,63.538,68.927,13,step
+Dendrite Proofreading Complete,52,68.927,74.773,15,step
+Dendrite Proofreading Complete,53,74.773,81.115,17,step
+Dendrite Proofreading Complete,54,81.115,87.994,11,step
+Dendrite Proofreading Complete,55,87.994,95.457,5.999,step
+Dendrite Proofreading Complete,56,95.457,103.55,12,step
+Dendrite Proofreading Complete,57,103.55,112.34,4.999,step
+Dendrite Proofreading Complete,58,112.34,121.86,3.999,step
+Dendrite Proofreading Complete,59,121.86,132.2,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,60,132.2,143.41,2,step
+Dendrite Proofreading Complete,61,143.41,155.57,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,62,155.57,168.77,3.999,step
+Dendrite Proofreading Complete,63,168.77,183.08,5.999,step
+Dendrite Proofreading Complete,64,183.08,198.61,2.999,step
+Dendrite Proofreading Complete,65,198.61,215.45,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,66,215.45,233.73,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,67,233.73,253.55,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,68,253.55,275.05,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,69,275.05,298.38,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,70,298.38,323.69,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,71,323.69,351.14,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,72,351.14,380.92,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,73,380.92,413.23,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,74,413.23,448.27,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,75,448.27,486.29,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,76,486.29,527.53,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,77,527.53,572.28,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,78,572.28,620.81,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,79,620.81,673.46,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,80,673.46,730.58,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,81,730.58,792.54,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,82,792.54,859.76,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,83,859.76,932.68,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,84,932.68,1011.8,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,85,1011.8,1097.6,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,86,1097.6,1190.7,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,87,1190.7,1291.7,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,88,1291.7,1401.2,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,89,1401.2,1520.1,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,90,1520.1,1649,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,91,1649,1788.8,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,92,1788.8,1940.5,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,93,1940.5,2105.1,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,94,2105.1,2283.7,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,95,2283.7,2477.3,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,96,2477.3,2687.4,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,97,2687.4,2915.4,0.9998,at_floor(<=1)
+Dendrite Proofreading Complete,98,2915.4,3162.6,0.9998,at_floor(<=1)
+Cleaned Axons,0,0.99991,1.0847,0.9998,at_floor(<=1)
+Cleaned Axons,1,1.0847,1.1767,0.9998,at_floor(<=1)
+Cleaned Axons,2,1.1767,1.2765,0.9998,at_floor(<=1)
+Cleaned Axons,3,1.2765,1.3848,0.9998,at_floor(<=1)
+Cleaned Axons,4,1.3848,1.5022,0.9998,at_floor(<=1)
+Cleaned Axons,5,1.5022,1.6296,0.9998,at_floor(<=1)
+Cleaned Axons,6,1.6296,1.7678,0.9998,at_floor(<=1)
+Cleaned Axons,7,1.7678,1.9178,0.9998,at_floor(<=1)
+Cleaned Axons,8,1.9178,2.0804,0.9998,at_floor(<=1)
+Cleaned Axons,9,2.0804,2.2569,0.9998,at_floor(<=1)
+Cleaned Axons,10,2.2569,2.4483,0.9998,at_floor(<=1)
+Cleaned Axons,11,2.4483,2.6559,0.9998,at_floor(<=1)
+Cleaned Axons,12,2.6559,2.8812,0.9998,at_floor(<=1)
+Cleaned Axons,13,2.8812,3.1255,0.9998,at_floor(<=1)
+Cleaned Axons,14,3.1255,3.3906,0.9998,at_floor(<=1)
+Cleaned Axons,15,3.3906,3.6782,0.9998,at_floor(<=1)
+Cleaned Axons,16,3.6782,3.9901,0.9998,at_floor(<=1)
+Cleaned Axons,17,3.9901,4.3285,0.9998,at_floor(<=1)
+Cleaned Axons,18,4.3285,4.6956,0.9998,at_floor(<=1)
+Cleaned Axons,19,4.6956,5.0939,0.9998,at_floor(<=1)
+Cleaned Axons,20,5.0939,5.5259,0.9998,at_floor(<=1)
+Cleaned Axons,21,5.5259,5.9946,0.9998,at_floor(<=1)
+Cleaned Axons,22,5.9946,6.503,0.9998,at_floor(<=1)
+Cleaned Axons,23,6.503,7.0545,0.9998,at_floor(<=1)
+Cleaned Axons,24,7.0545,7.6528,0.9998,at_floor(<=1)
+Cleaned Axons,25,7.6528,8.3018,0.9998,at_floor(<=1)
+Cleaned Axons,26,8.3018,9.0059,0.9998,at_floor(<=1)
+Cleaned Axons,27,9.0059,9.7698,0.9998,at_floor(<=1)
+Cleaned Axons,28,9.7698,10.598,0.9998,at_floor(<=1)
+Cleaned Axons,29,10.598,11.497,0.9998,at_floor(<=1)
+Cleaned Axons,30,11.497,12.472,0.9998,at_floor(<=1)
+Cleaned Axons,31,12.472,13.53,0.9998,at_floor(<=1)
+Cleaned Axons,32,13.53,14.678,0.9998,at_floor(<=1)
+Cleaned Axons,33,14.678,15.922,0.9998,at_floor(<=1)
+Cleaned Axons,34,15.922,17.273,2,step
+Cleaned Axons,35,17.273,18.738,0.9998,at_floor(<=1)
+Cleaned Axons,36,18.738,20.327,0.9998,at_floor(<=1)
+Cleaned Axons,37,20.327,22.051,2,step
+Cleaned Axons,38,22.051,23.921,2,step
+Cleaned Axons,39,23.921,25.95,2.999,step
+Cleaned Axons,40,25.95,28.151,0.9998,at_floor(<=1)
+Cleaned Axons,41,28.151,30.538,0.9998,at_floor(<=1)
+Cleaned Axons,42,30.538,33.128,0.9998,at_floor(<=1)
+Cleaned Axons,43,33.128,35.938,0.9998,at_floor(<=1)
+Cleaned Axons,44,35.938,38.986,2,step
+Cleaned Axons,45,38.986,42.293,0.9998,at_floor(<=1)
+Cleaned Axons,46,42.293,45.879,2.999,step
+Cleaned Axons,47,45.879,49.771,2.999,step
+Cleaned Axons,48,49.771,53.992,5.999,step
+Cleaned Axons,49,53.992,58.571,8.998,step
+Cleaned Axons,50,58.571,63.538,12,step
+Cleaned Axons,51,63.538,68.927,9.998,step
+Cleaned Axons,52,68.927,74.773,13,step
+Cleaned Axons,53,74.773,81.115,12,step
+Cleaned Axons,54,81.115,87.994,12,step
+Cleaned Axons,55,87.994,95.457,17,step
+Cleaned Axons,56,95.457,103.55,13,step
+Cleaned Axons,57,103.55,112.34,17,step
+Cleaned Axons,58,112.34,121.86,13,step
+Cleaned Axons,59,121.86,132.2,36.99,step
+Cleaned Axons,60,132.2,143.41,29,step
+Cleaned Axons,61,143.41,155.57,29,step
+Cleaned Axons,62,155.57,168.77,34.99,step
+Cleaned Axons,63,168.77,183.08,59.99,step
+Cleaned Axons,64,183.08,198.61,55.99,step
+Cleaned Axons,65,198.61,215.45,65.99,step
+Cleaned Axons,66,215.45,233.73,59.99,step
+Cleaned Axons,67,233.73,253.55,70.99,step
+Cleaned Axons,68,253.55,275.05,68.99,step
+Cleaned Axons,69,275.05,298.38,79.99,step
+Cleaned Axons,70,298.38,323.69,65.99,step
+Cleaned Axons,71,323.69,351.14,51.99,step
+Cleaned Axons,72,351.14,380.92,33.99,step
+Cleaned Axons,73,380.92,413.23,22,step
+Cleaned Axons,74,413.23,448.27,20,step
+Cleaned Axons,75,448.27,486.29,19,step
+Cleaned Axons,76,486.29,527.53,12,step
+Cleaned Axons,77,527.53,572.28,14,step
+Cleaned Axons,78,572.28,620.81,8.998,step
+Cleaned Axons,79,620.81,673.46,13,step
+Cleaned Axons,80,673.46,730.58,9.998,step
+Cleaned Axons,81,730.58,792.54,9.998,step
+Cleaned Axons,82,792.54,859.76,9.998,step
+Cleaned Axons,83,859.76,932.68,6.999,step
+Cleaned Axons,84,932.68,1011.8,11,step
+Cleaned Axons,85,1011.8,1097.6,3.999,step
+Cleaned Axons,86,1097.6,1190.7,6.999,step
+Cleaned Axons,87,1190.7,1291.7,2,step
+Cleaned Axons,88,1291.7,1401.2,3.999,step
+Cleaned Axons,89,1401.2,1520.1,0.9998,at_floor(<=1)
+Cleaned Axons,90,1520.1,1649,2,step
+Cleaned Axons,91,1649,1788.8,2,step
+Cleaned Axons,92,1788.8,1940.5,0.9998,at_floor(<=1)
+Cleaned Axons,93,1940.5,2105.1,2,step
+Cleaned Axons,94,2105.1,2283.7,2,step
+Cleaned Axons,95,2283.7,2477.3,0.9998,at_floor(<=1)
+Cleaned Axons,96,2477.3,2687.4,2,step
+Cleaned Axons,97,2687.4,2915.4,0.9998,at_floor(<=1)
+Cleaned Axons,98,2915.4,3162.6,0.9998,at_floor(<=1)

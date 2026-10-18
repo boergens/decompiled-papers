@@ -1,0 +1,18 @@
+# zhangk2020 Table 1 (p. 10): Uncertainty analysis in the measurement of a diamond tool with a nose radius of 1 mm.
+# Transcribed from the PDF. Symbols written with underscores for the printed subscripts (u_L_n = u with subscript L_n).
+# "-" cells are printed as "-". Rows 1-6 belong to R_tool_m, rows 7-14 to R_mark_m (block rows printed in bold: "Uncertainty in R_tool_m", "Uncertainty in R_mark_m").
+Uncertainty Sources,Symbol,Uncertainty Value,Distribution,Standard Uncertainty
+Lateral imaging resolution,u_r,0.97 nm,Rectangular,0.56 nm
+Lateral positioning resolution,u_L_n,1.2 nm,Normal,1.2 nm
+Vertical positioning resolution,u_V_n,0.2 nm,Normal,0.2 nm
+Thermal resolution,u_t_t,3.3 × 10^-5 nm,Rectangular,1.9 × 10^-5 nm
+Measurement resolution,u_t_d,1.457 nm,-,0.46 nm
+Uncertainty in R_tool_m,u_tool_m,-,-,1.36 nm
+Lateral imaging resolution,u_r,0.97 nm,Rectangular,0.56 nm
+Lateral positioning resolution,u_L_n,1.2 nm,Normal,1.2 nm
+Vertical positioning resolution,u_V_n,0.2 nm,Normal,0.2 nm
+Thermal resolution,u_m_t,4.9 × 10^-5 nm,Rectangular,2.8 × 10^-5 nm
+Measurement resolution,u_m_d,0.385 nm,-,0.12 nm
+Elastic recovery,u_m_e,0.358 nm,Rectangular,0.21 nm
+Indentation force,u_m_f,0.001 nm,Rectangular,5.7 × 10^-4 nm
+Uncertainty in R_mark_m,u_mark_m,-,-,1.42 nm

@@ -1,0 +1,18 @@
+# Figure 4a inset, page 38: response vs projection onto the preferred axis, binned (6 bins), for the conscious face in
+# state 1 (orange #fcae34) and the suppressed face in state 2 (purple #543379). Values from the vector paths: the series
+# line (stroke, 6 vertices) gives the points; errorbar_lo/hi are the ends of the vertical error-bar strokes (the legend does
+# not say whether they are s.e.m. or s.d.). x axis calibrated on the tick marks at -1 and 1 (resid 0.0e+00), y axis on the
+# ticks at 0 and 9 (resid 0.0e+00). The y axis is labelled 'Response' without units (ticks 0 and 9).
+series,bin_index,projection_preferred_axis_au,response,errorbar_lo,errorbar_hi
+state1_conscious,1,-0.4967,0.6493,0.5273,0.7714
+state1_conscious,2,-0.2407,0.8677,0.7808,0.9544
+state1_conscious,3,0.0153,1.7113,1.5937,1.8288
+state1_conscious,4,0.2713,3.3607,3.1469,3.5743
+state1_conscious,5,0.5273,5.1302,4.6363,5.6239
+state1_conscious,6,0.7832,7.3348,6.1305,8.5392
+state2_suppressed,1,-0.4967,1.0739,0.9255,1.2222
+state2_suppressed,2,-0.2407,1.2174,1.1193,1.3158
+state2_suppressed,3,0.0153,1.8698,1.7572,1.9822
+state2_suppressed,4,0.2713,2.8649,2.6451,3.0846
+state2_suppressed,5,0.5273,4.4842,4.0511,4.9173
+state2_suppressed,6,0.7832,5.2852,3.899,6.6714

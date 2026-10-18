@@ -1,0 +1,15 @@
+# Supplementary Table 3 | Michelson contrast and Contrast-to-noise ratio (Supplementary Information p. 25)
+# Transcribed from the table IMAGE (no text layer). One row per detector and acceleration voltage. Source data (tier 1) for main Fig. 6g, h.
+detector,acceleration_voltage_keV,michelson_contrast,contrast_to_noise_ratio
+BSE,2,0.277,0.144
+BSE,3,0.374,0.209
+BSE,4,0.376,0.208
+BSE,5,0.272,0.211
+BSE,6,0.302,0.199
+BSE,7,0.273,0.193
+In-Lens SE,1,0.156,0.145
+In-Lens SE,1.5,0.231,0.202
+In-Lens SE,2,0.246,0.219
+In-Lens SE,3,0.211,0.195
+In-Lens SE,4,0.180,0.161
+In-Lens SE,5,0.168,0.141

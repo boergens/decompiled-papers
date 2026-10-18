@@ -1,0 +1,342 @@
+\documentclass{article}
+\usepackage{decomp}
+\newcommand{\R}[1]{\emph{R}\textsubscript{#1}}
+\begin{document}
+
+\sourcefile{source/zhangk2020.pdf}
+\decompnote{Publisher version of record (MDPI typeset PDF, 14 pages, pdfTeX). Running headers (``Appl. Sci. 2020, 10, 4799'' and ``n of 14''), the journal and MDPI logos, and the ``check for updates'' button are left out; the journal block from the page-1 footer is given once below. The figures are embedded as clipped pages of the authors' manuscript, so the PDF text layer also carries invisible, clipped manuscript text (with line numbers) around the figures; it is not part of the printed article and is not transcribed.}
+
+\pdfpage{1}
+\noindent applied sciences\par
+\noindent Appl. Sci. \textbf{2020}, \emph{10}, 4799; doi:10.3390/app10144799\quad www.mdpi.com/journal/applsci\par
+\medskip
+\noindent\emph{Article}
+
+\section*{High-Precision Cutting Edge Radius Measurement of Single Point Diamond Tools Using an Atomic Force Microscope and a Reverse Cutting Edge Artifact}
+
+\noindent\textbf{Kai Zhang \textsuperscript{1}, Yindi Cai \textsuperscript{2,*}, Yuki Shimizu \textsuperscript{1}, Hiraku Matsukuma \textsuperscript{1} and Wei Gao \textsuperscript{1}}
+
+\begin{quote}\small
+\noindent \textsuperscript{1}\quad Precision Nanometrology Laboratory, Department of Finemechanics, Tohoku University, Sendai 980-8579, Japan; zhangkai@nano.mech.tohoku.ac.jp (K.Z.); yuki.shimizu@nano.mech.tohoku.ac.jp (Y.S.); hiraku.matsukuma@nano.mech.tohoku.ac.jp (H.M.); gaowei@nano.mech.tohoku.ac.jp (W.G.)
+
+\noindent \textsuperscript{2}\quad Key Laboratory for Micro/Nano Technology and System of Liaoning Province, Dalian University of Technology, Dalian 116024, China
+
+\noindent *\quad Correspondence: caiyd@dlut.edu.cn
+\end{quote}
+\decompnote{Yindi Cai and Yuki Shimizu carry ORCID icons after their affiliation marks.}
+
+\noindent Received: 28 May 2020; Accepted: 6 July 2020; Published: 13 July 2020
+
+\begin{quote}
+\noindent\textbf{Abstract:} This paper presents a measurement method for high-precision cutting edge radius of single point diamond tools using an atomic force microscope (AFM) and a reverse cutting edge artifact based on the edge reversal method. Reverse cutting edge artifact is fabricated by indenting a diamond tool into a soft metal workpiece with the bisector of the included angle between the tool’s rake face and clearance face perpendicular to the workpiece surface on a newly designed nanoindentation system. An AFM is applied to measure the topographies of the actual and the reverse diamond tool cutting edges. With the proposed edge reversal method, a cutting edge radius can be accurately evaluated based on two AFM topographies, from which the convolution effect of the AFM tip can be reduced. The accuracy of the measurement of cutting edge radius is significantly influenced by the geometric accuracy of reverse cutting edge artifact in the proposed measurement method. In the nanoindentation system, the system operation is optimized for achieving high-precision control of the indentation depth of reverse cutting edFigurege artifact. The influence of elastic recovery and the AFM cantilever tip radius on the accuracy of cutting edge radius measurement are investigated. Diamond tools with different nose radii are also measured. The reliability and capability of the proposed measurement method for cutting edge radius and the designed nanoindentation system are demonstrated through a series of experiments.
+\decompnote{``edFigurege'' is printed so in the PDF (the word ``Figure'' pasted into ``edge''); kept verbatim.}
+
+\noindent\textbf{Keywords:} single point diamond tool; cutting edge radius; reversal method; nanoindentation system; elastic recovery
+\end{quote}
+
+\subsection*{1. Introduction}
+
+Ultra-precision diamond cutting, combining a single point diamond tool with an ultra-precision lathe, has been widely employed for the fabrication of microstructure elements, such as microlens arrays [1], compound eye freeform surfaces [2], and sinusoidal grids [3,4]. The achievable machining accuracy of the ultra-precision diamond cutting is significantly affected by the geometry of the diamond tool, including cutting edge contour, cutting edge radius, and tool faces [5–7]. In order to achieve a nanometric machining accuracy, it is essential to conduct a quantitative evaluation of the geometry of the diamond tool, especially cutting edge radius, which determines the minimum depth of cut and the surface finish of the machined microstructures [8,9].
+
+Cutting edge radius of a diamond tool is usually required to be within 10 to 100 nm for ultra-precision diamond cutting [10]. Therefore, the methods for cutting edge radius measurement \pdfpage{2}should have a nanometric measurement accuracy in both lateral and vertical directions [11]. Optical methods can conduct fast and non-contact measurements [12–14]. However, a lateral resolution that is larger than 10 nm is limited by the optical diffraction phenomenon which occurs around the cutting edge when an optical method is used to measure the geometry of the diamond tool. Scanning electron microscopes (SEMs) have a nanometric lateral resolution and a wide view field [15]. However, because SEMs have a limitation of two-dimensional (2D) projection, they can only be used for the qualitative evaluation of diamond tool cutting edge radius and cannot be used for the quantitative evaluation. In addition, the material of diamond tools also influences the measurement accuracy of the diamond tool cutting edge radius using SEMs [16]. Atomic force microscopes (AFMs), which can provide a three-dimensional (3D) measurement with a nanometric accuracy in both lateral and vertical directions, can directly measure the diamond tool cutting edge radius by accurately aligning the AFM cantilever tip with the diamond tool cutting edge within the measurement range of the AFM [17–19]. However, the process for an accurate alignment is extremely time-consuming and the AFM cantilever tip can also be easily damaged due to an inaccurate alignment operation.
+
+An indirect measurement method based on an AFM has been proposed to address the above problems using an AFM to measure cutting edge radius of a diamond tool [20]. A profile of a diamond tool cutting edge is copied on a copper workpiece by indenting the diamond tool into the workpiece on an ultra-precision lathe. Then, the copied profile is scanned by an AFM, from which the diamond tool cutting edge radius can be obtained. Since this indirect measurement method can protect the diamond tool and the AFM cantilever tip from damage, and also shorten the measurement time, it is attractive for practical applications. However, the elastic recovery of the copied profile can affect the measurement accuracy, which is not considered in the indirect measurement method based on the AFM. More importantly, since both the direct and indirect measurement methods are based on an AFM, the obtained profile is a geometric convolution of the AFM tip and the actual and copied diamond tool cutting edges. It is essential to eliminate the convolution effect of the AFM tip whose size is comparable to that of the diamond tool cutting edge, for achieving a high-precision diamond tool cutting edge radius measurement.
+
+There are two approaches for reducing the convolution effect of the AFM tip. One approach is to directly characterize the AFM tip with a form surface measuring instrument. The other is to make an error separation operation on the AFM images for removing the influence of the AFM tip profile. Compared with the direct characterization approach, the error separation approach is more effective because no additional form surface measuring instruments are necessary [21]. An edge reversal error separation method based on an AFM was proposed for measuring cutting edge radius of diamond tool without the effect of the AFM tip radius by the authors of [22]. Firstly, a replicated cutting edge was obtained by indenting a diamond tool into a soft metal material. Then, an AFM was applied to scan the actual and the replicated cutting edges. The cutting edge radius of the diamond tool was obtained by taking the difference between the AFM images of the actual and the replicated cutting edges when the elastic recovery of the replicated cutting edge was small as compared with the cutting edge radius. Molecular dynamics (MD) simulations were carried out to investigate the effect of elastic recovery on cutting edge radius in our previous researches [23,24]. It was verified that when the indentation depth of the replicated cutting edge was set to be larger than 200 nm, the elastic recovery of the replicated cutting edge could be ignored. However, a large indentation depth would cause more measurement uncertainties in the AFM measurement of the replicated tool cutting edge.
+
+Meanwhile, a nanoindentation instrument has been designed for replicating the diamond tool cutting edge onto a soft workpiece surface [25]. The displacement of the diamond tool was monitored by a capacitive sensor of a fast tool servo (FTS) unit, which was employed to drive the diamond tool. The workpiece was pasted on a cantilever whose deflection was detected by another capacitive sensor. The indentation depth of the diamond tool was obtained from the outputs of the two capacitive sensors. However, it was a time-consuming process to replicate the diamond tool cutting edge using this nanoindentation instrument. In addition, a contact damage would be generated on the workpiece \pdfpage{3}surface when the tool-workpiece contact was established before the replication. The contact damage would influence the indentation depth and the profile of the replicated cutting edge.
+
+In this paper, we present high-precision cutting edge radius measurements of single point diamond tools using an AFM and a reverse cutting edge artifact based on the proposed edge reversal method and the designed nanoindentation system. After introducing the measurement principles, the operation of the nanoindentation system is optimized for achieving high-precision control of the indentation depth. The effects of the elastic recovery and the AFM cantilever tip on the measurement accuracy and the measurement uncertainty are investigated. A series of experiments are preformed to verify the reliability and the capability of the proposed method and the designed system.
+
+\subsection*{2. Principle of Measuring Cutting Edge Radius}
+
+There are three steps in the process of measuring the diamond tool cutting edge radius using the proposed edge reversal method, as shown in Figure 1.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Figure 1.} Principle of the proposed edge reversal method.
+\alttext{Colour schematic in three steps with two magnified insets. Step 1 (left, ``Step 1:''): a pink diamond tool, labelled ``Diamond tool'', with its ``Rake face'' and ``Clearance face'' marked by pointers, is pressed into a beige block labelled ``Workpiece''; a dash-dot line marks the bisector of the angle between the faces, perpendicular to the workpiece surface, with a right-angle symbol, and a dotted grey line on the surface marks the indented edge. Two blue curved arrows lead from Step 1 to Step 2 (upper middle) and Step 3 (lower middle). Step 2 (``Step 2:''): a light blue ``AFM cantilever'' with an ``AFM Tip'' above the apex of the pink ``Diamond tool''; a red dotted arc follows the tool apex inside a green dotted box; X--Y--Z axes are drawn beside it. The upper inset (green dotted rounded frame, axes Z up, X right) magnifies the tool apex: a beige region bounded by a black curve labelled ``Actual Cutting edge'', grey outlines of the AFM tip at successive scan positions, a red dotted curve labelled ``Measured cutting edge'' lying outside the black edge, the ``AFM tip'' with its radius $R_{tip}$, and two radii from a common centre: $R_{tool\_m}$ (red, to the red dotted curve) and $R_{tool}$ (black, to the black edge). Step 3 (``Step 3:''): the AFM cantilever and ``AFM Tip'' above a beige workpiece with an orange groove labelled ``Reversed cutting edge'' (dotted green box around it); the block is also labelled ``Workpiece''. The lower inset (green dotted frame, axes Z, X) shows the groove profile as a black U-shaped curve labelled ``Reversal edge'', grey tip outlines, the ``AFM tip'' with $R_{tip}$, a red dotted curve labelled ``Measured reversal edge'' lying inside the groove, and two radii $R_{mark}$ (black) and $R_{mark\_m}$ (red).}
+
+The first step is related to the cutting-edge replication shown in Figure 1. The single point diamond tool, a piece of copper workpiece, and a nanoindentation system are employed. An indentation mark, referred to as the reverse cutting edge artifact, is fabricated by indenting the diamond tool into the workpiece with the bisector of the included angle between its rake face and clearance face perpendicular to the workpiece surface using the nanoindentation system. The configuration and the principle of the nanoindentation system is introduced later. The reverse cutting edge artifact is, thus, directly transcribed from the geometry of the diamond tool.
+
+The second step is related to the AFM measurement of the actual cutting edge of the diamond tool. The diamond tool, with the cutting edge radius, \R{tool}, is positioned under the AFM cantilever with the bisector of the included angle between its rake face and clearance face along the vertical axis. An AFM cantilever is moved by an \emph{XY}-stage and a \emph{Z}-scanner of the AFM along the \emph{X}-, \emph{Y}- and \emph{Z}-directions to align the AFM cantilever tip with the apex of the diamond tool cutting edge. After an accurate alignment, the AFM cantilever is brought to scan across the diamond tool cutting edge. Since the tip radius \R{tip} of the AFM cantilever is comparable to the cutting edge radius, \R{tool}, of the diamond tool, the scan trace of the AFM with an apex radius of \R{tool\_m} is a convolution of the AFM tip and the diamond tool cutting edge, as shown in Figure 1. Therefore, the following equation can be obtained:
+\begin{equation}
+R_\mathrm{tool\_m} = R_\mathrm{tool} + R_\mathrm{tip}
+\tag{1}
+\end{equation}
+
+\pdfpage{4}
+The third step is related to the AFM measurement of the reverse cutting edge artifact. Then, the reverse cutting edge artifact is measured by the AFM. The apex radius of the reverse cutting edge is defined as \R{mark}, which is also comparable to the AFM tip radius \R{tip}. After the alignment between the AFM cantilever tip and the apex of reverse cutting edge, the AFM tip scans across the reverse cutting edge artifact to map out its topography. The scanned image is also a convolution of the AFM tip and the reverse cutting edge artifact. Therefore, the following equation can be obtained:
+\begin{equation}
+R_\mathrm{mark\_m} = R_\mathrm{mark} - R_\mathrm{tip}
+\tag{2}
+\end{equation}
+
+The copper workpiece surface displays a certain degree of elastic recovery after the diamond tool is withdrawn from the surface in the nanoindentation process [23,24]. The relationship between the actual cutting edge radius and reverse cutting edge radius can be expressed as:
+\begin{equation}
+R_\mathrm{tool} = (1 - \xi) R_\mathrm{mark}
+\tag{3}
+\end{equation}
+where \emph{ξ} represents the elastic recovery coefficient of the reverse cutting edge artifact. According to Equations (1)–(3), cutting edge radius of the diamond tool can be evaluated to be:
+\begin{equation}
+R_\mathrm{tool} = \frac{1}{2 - \xi} \left( R_\mathrm{tool\_m} + R_\mathrm{mark\_m} \right)
+\tag{4}
+\end{equation}
+\decompnote{Equation (4) is transcribed as printed. Combining Equations (1)–(3) as printed gives $R_\mathrm{tool} = \frac{1-\xi}{2-\xi}(R_\mathrm{tool\_m} + R_\mathrm{mark\_m})$; the two forms agree only for $\xi = 0$, the case used in Section 3. See the README.}
+
+Therefore, cutting edge radius of the diamond tool can be obtained without being influenced by the AFM tip radius. As can be seen from Equation (4), the achievable accuracy of this method depends on the elastic recovery coefficient \emph{ξ}. It has been verified that the elastic recovery coefficient, \emph{ξ}, of the reverse cutting edge would be reduced to 0.012 from 0.068 when the indentation depth was increased to 20 nm from 2.5 nm based on molecular dynamics (MD) simulations [22]. The detail of the MD simulation can be found in [22] and is not repeated in this paper for the sake of clarity. The difference between \R{mark} and \R{tool} was evaluated to be 0.24 nm when the indentation depth was set to be 200 nm. The difference is small and is negligible for the cutting edge radius measurement as compared with the cutting edge radius. However, when the indentation depth is set to be 200 nm, the measurement uncertainty in the tool cutting edge radius measurement becomes large. Therefore, the indentation depth should be controlled within a range of 20 to 200 nm.
+
+A nanoindentation system is, then, designed for achieving the requirement of high-precision indentation depth control of the reverse cutting edge artifact as shown in Figure 2. A single point diamond tool is mounted on the FTS to indent into a prepolished metal workpiece by a linear stage and/or the FTS. When the distance between the diamond tool tip and the workpiece surface is larger than the motion stroke of the FTS, the linear stage is employed to move the diamond tool to approach the workpiece surface by a steeping motor controller. The displacement of the diamond tool driven by the linear stage and the FTS can be measured by the linear encoder of the stage and the displacement sensor of the FTS unit (inside sensor). The workpiece is attached on a cantilever. One end of the cantilever is fixed on a holder and the other end is preloaded by a preload controller. An outside displacement sensor (outside sensor) is used to detect the deflection of the cantilever caused by the indentation. Two \emph{XY}-manual stages (Stage 1 and Stage 2) are used for the alignment between the workpiece surface and the diamond tool tip. The outputs of two sensors are collected by an oscilloscope for further evaluating the indentation depth \emph{d}\textsubscript{depth} based on the following equation:
+\begin{equation}
+d_\mathrm{depth} = d_\mathrm{in} - d_\mathrm{out}
+\tag{5}
+\end{equation}
+where \emph{d}\textsubscript{in} and \emph{d}\textsubscript{out} represent the outputs of the inside and the outside sensors, respectively.
+
+\pdfpage{5}
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Figure 2.} Schematic of the nanoindentation system.
+\alttext{Block schematic in top view (axes: Y up, X right, Z out of the page). Centre right: a ``Linear stage'' carrying the ``FTS'', which holds the ``Diamond tool'' (small tool at its left end, pointing left at the workpiece). Centre left: a vertical cantilever with the small ``Workpiece'' attached at the tool's height; the cantilever's upper end is clamped in a ``Holder'' on ``Stage 2'' (upper left, with micrometer knobs), its lower part rests on ``Stage 1'' (lower left); a ``Preload controller'' presses on the cantilever; an ``Outside sensor'' (capacitive probe, left) faces the cantilever. Dotted boxes: two ``Sensor amplifier'' boxes (top left and top right), an ``Oscilloscope'' (top centre), ``D/A'', ``PC'' and ``Motor Controller'' (bottom right). Arrows: outside sensor $\rightarrow$ left sensor amplifier $\rightarrow$ oscilloscope; FTS (inside sensor) $\rightarrow$ right sensor amplifier $\rightarrow$ oscilloscope; PC $\rightarrow$ D/A $\rightarrow$ FTS; PC $\rightarrow$ Motor Controller $\rightarrow$ linear stage.}
+
+The operation of the nanoindentation system is optimized for achieving high-precision control of the indentation depth during the tool cutting edge replication, as shown in Figure 3. There are three steps for replicating the cutting-edge geometry of a diamond tool into a workpiece surface. In step one, the linear stage is firstly used to move the diamond tool to the initial position shown in Figure 3a, where the distance between the diamond tool tip and the workpiece surface is equal to the motion stroke of the FTS. Then, the diamond tool is actuated by the FTS with a step of 5 nm to avoid any unexpected contact damages on the workpiece surface. The output of the outside sensor does not change in this step, as shown in Figure 3b. In step two, the contact between the diamond tool and the workpiece is established at the contact position where the output of the outside sensor starts to vary due to the deflection of the cantilever. A small indentation mark with a depth less than 5 nm is generated on the workpiece surface, which is small as compared with the reverse cutting edge. Therefore, the effect of the small indentation mark can be ignored. In step three, the diamond tool is indented into the workpiece surface with the command indentation depth, which can be evaluated by substituting the outputs of two sensors at the indentation position into Equation (5). Therefore, a reverse cutting edge artifact with a high-precision depth is fabricated by following these three steps.
+
+\begin{center}
+\includegraphics[width=0.65\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3a.png}
+\end{center}
+\noindent\textbf{Figure 3.} \emph{Cont.}
+\alttext{Panel (a): schematic of the indentation steps (axes Y up, X right, Z out of the page). On the left, a vertical cantilever (dash-dot centre line) clamped by a ``Holder'' at the top and a ``Holder'' at the bottom; it is bent to the left in the middle, where an orange ``Workpiece'' block is attached; the grey dotted outline shows the undeflected position, and the deflection is marked $d_\mathrm{out}$. An ``Outside sensor'' (blue, far left) faces the cantilever. A ``Diamond tool'' (pink wedge pointing left) is shown at three positions: the faded ``Initial position'' (right), the ``Contact position'' at the workpiece surface, and the ``Indentation position'' inside the workpiece (black dots at the tool tips). Vertical dashed lines bound the ranges labelled ``Step 1'' (initial to near the surface), ``Step 2'' (to the contact position) and ``Step 3'' (into the workpiece, width $d_\mathrm{depth}$). The tool travel from the contact position is marked $d_\mathrm{in}$. An ``Inside sensor'' (lavender, far right) faces the tool.}
+
+\pdfpage{6}
+\begin{center}
+\includegraphics[width=0.65\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3b.png}
+\end{center}
+\noindent\textbf{Figure 3.} Principle of replicating the tool cutting edge using the proposed nanoindentation system. (\textbf{a}) Motion of the diamond tool; (\textbf{b}) Outputs of two sensors.
+\alttext{Panel (b): schematic signal plot, ``Output of sensor'' (vertical arrow, no scale) against ``Time'' (horizontal arrow, no scale), divided by dashed vertical lines into ``Step 1'', ``Step 2'' and ``Step 3''. Red upper trace, ``Outside sensor'': flat in Step 1, a small dip in Step 2 marked ``$\leq$ 5 nm'' (arrows), a larger V-shaped dip in Step 3. Blue lower trace, ``Inside sensor'': in Step 1 two small triangular excursions, the step height marked ``5 nm''; in Step 2 one larger triangle; in Step 3 a taller triangle whose extra height over the Step 2 peak (dotted line) is marked $d_\mathrm{in}$. No numerical axes; drawn as a schematic, so no data were extracted.}
+
+\subsection*{3. Experiment and Discussion}
+
+A series of experiments were performed to investigate the effect of elastic recovery on the reverse cutting edge artifact and the AFM cantilever tip on the measurement accuracy of the cutting edge radius as well as to verify the reliability of the proposed edge reversal method and the capability of the designed nanoindentation system.
+
+Since copper has a relatively large Young’s modulus, a prepolished copper workpiece with a size of 10 mm (length) × 10 mm (width) × 2 mm (thickness) was selected as the workpiece. Figure 4a shows the topography of the copper workpiece surface measured by a commercial AFM (Innova, Bruker, Billerica, MA, USA). As shown in Figure 4b, the Root Mean Square (RMS) roughness of the section A–A’ of the copper workpiece was evaluated to be 2.43 nm based on a 3D AFM topography. The workpiece surface was smooth enough for replicating the diamond tool cutting edge geometry. The copper workpiece was pasted on an aluminum cantilever with a spring constant of 155 N/m at the contact point. The deformation of the aluminum cantilever was detected by a capacitive sensor (6800, MicroSense, Lowell, MA, USA).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Figure 4.} Copper workpiece. (\textbf{a}) Atomic force microscope (AFM) topography; (\textbf{b}) Roughness of the section A–A’.
+\alttext{(a) 3D AFM topography rendered in brown–gold shading (no colour key), seen obliquely; axes labelled ``Z-position 10 nm/div.'', ``Y-position 50 nm/div.'' and ``X-position 50 nm/div.''. The surface is nearly flat with small bumps; a red dashed line runs across it from A’ (left) to A (right). Inset at upper right: a photograph of the copper workpiece, a small square block whose polished upper half mirrors printed text (letters reversed) and whose lower half is dark. (b) Line profile, red trace on a framed plot without numbers: ``X-position 50 nm/div.'' (4 divisions = 200 nm across the frame) and ``Z-position 5 nm/div.'' (4 divisions = 20 nm). The trace runs from A’ (left) to A (right) at about mid-height, fluctuating within about −0.9 to +1.2 nm of its mean; an annotation ``2.43 nm'' with two arrows marks the vertical distance between two short horizontal lines, one at the highest peak (near the middle) and one at a low valley to its right.}
+\figuredata{b}{figures/fig4b.csv}{figures/fig4b.py}{tier 3, digitized from the embedded 300-ppi JPEG; x and z in nm from the frame's lower left corner (the axes have no numbers, only nm/div scales)}
+
+\subsubsection*{\emph{3.1. Effect of Elastic Recovery}}
+
+The effect of elastic recovery of the reverse cutting edge artifact on cutting edge radius measurement accuracy was analyzed. An AFM cantilever (OMCL-AC240TS, Olympus, Tokyo, Japan) with a nominal tip radius of 7 nm and a tip height of 14 μm was selected to measure the topographies of the actual and the reverse diamond tool cutting edge. A single point diamond tool with a nose radius of 1 mm was measured in this test.
+
+\pdfpage{7}
+Since the indentation depth and the elastic recovery of the reverse cutting edge artifact are related with each other based on the Hertz theory, a group of reverse cutting edge artifacts with various indentation depths from 20 to 180 nm were fabricated on the designed nanoindentation system in order to investigate the effect of the elastic recovery. The interval of indentation depth was set at approximately 20 nm.
+
+Figure 5 shows the outputs of the inside and the outside sensors when the command displacement of the diamond tool actuated by the FTS was set at 50 nm. Only the outputs in step three of Figure 3 are plotted in Figure 5. The output of the inside sensor was 52 nm, which was approximately the same as the command displacement of the diamond tool. The output of the outside sensor was 27 nm. The indentation depth of the reverse cutting edge artifact was calculated to be 25 nm by substituting the outputs of two sensors into Equation (5).
+
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Figure 5.} The outputs of the inside and the outside sensors with a command displacement of 50 nm.
+\alttext{Line plot with two y axes and no numbers: x ``Time 5 s/div.'' (about 5.4 divisions across the frame), left y ``Output of inside sensor 110 nm/div.'', right y ``Output of outside sensor 50 nm/div.''. Red upper trace (``Outside sensor'', right axis): flat, then a staircase descent in small steps to a minimum in the middle of a dashed rectangle and a staircase return, with a slight overshoot at the right edge of the rectangle before returning to the baseline; the drop is marked ``27 nm'' with a double arrow. Blue lower trace (``Inside sensor'', left axis): a staircase rising in about 10 equal steps from the left edge to a peak in the middle and descending in steps symmetrically to the right edge; the rise from a horizontal reference line inside the rectangle to the peak is marked ``52 nm''. On the printed scales the outside drop is about 28 nm and the inside arrow spans about 56 nm (see CSV header).}
+\figuredata{(single panel)}{figures/fig5.csv}{figures/fig5.py}{tier 2, vector paths in the PDF (the thick traces are split into many filled pieces; per 0.25 pt bin the line's upper and lower edge and their mean); time and outputs from arbitrary origins at the frame}
+
+The diamond tool was positioned on the \emph{Z}-scanner of the AFM with the bisector of the included angle between its rake face and clearance face. The Olympus AFM cantilever was moved along the \emph{X}-, \emph{Y}- and \emph{Z}-directions by the \emph{XY}-stage and the \emph{Z}-scanner of the AFM to make the alignment between the AFM tip and the apex of the diamond tool cutting edge. The actual cutting edge was, then, scanned by the AFM cantilever. The scan range and the scan rate were set to be 2 μm (\emph{X}) × 2 μm (\emph{Y}) and 1.2 μm/s, respectively. The numbers of scanning lines in the \emph{X}- and \emph{Y}-positions were 1024 and 1024, respectively. Figure 6a shows a 3D topography of the diamond tool cutting edge. It can be seen from the figure that there was a clear edge between the rake face and the clearance face, which can be employed for quantitative evaluation of the diamond tool cutting edge radius. The cross-sectional profile extracted from the 3D topography is shown in Figure 6b. The measured tool cutting edge radius was obtained from that of the fitted arc, which was evaluated by fitting the points in the apex of the cross-sectional profile of the cutting edge based on the least square method. The radius of the fitted arc, referred to as \R{tool\_m}, was evaluated to be approximately 40.32 nm. It should be noted that the fitted arc was a geometric convolution of the AFM tip and the actual diamond tool cutting edge. Therefore, the value of 40.32 nm was not the actual diamond tool cutting edge radius.
+
+\pdfpage{8}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Figure 6.} Measured diamond tool cutting edge. (\textbf{a}) AFM topography; (\textbf{b}) Profile of Section B–B’.
+\alttext{(a) 3D AFM topography of the tool cutting edge, brown–gold shading (no colour key): a rounded ridge running from back to front, with the ``Clearance face'' sloping down to the left and the ``Rake face'' to the right (darker). A white dashed line B’–B crosses the ridge. Axes: ``X-position 20 nm/div.'', ``Y-position 20 nm/div.'', ``Z-position 50 nm/div.''. (b) Profile plot without numbers (``X-position 20 nm/div.'', 5 divisions = 100 nm; ``Z-position 20 nm/div.'', 4 divisions = 80 nm): red open circles (``Raw data'') joined by a red line form a convex arc peaking at about 61 nm height near x = 49 nm and falling to about 25–27 nm at both frame edges; a thick black ``Fitted curve'' covers the apex region (about x = 23–73 nm); a zigzag arrow points to the apex with the label ``$R_\mathrm{tool\_m}$=40.32 nm''.}
+\figuredata{b}{figures/fig6b.csv}{figures/fig6b.py}{tier 2, vector paths in the PDF (circle centres, red line vertices, vertices of the fitted curve); x and z in nm from the frame's lower left corner}
+
+The reverse cutting edge artifact was also placed on the \emph{Z}-scanner of the AFM. The same AFM cantilever, which had been used to scan the actual cutting edge, was brought to scan the reverse cutting edge. The scanning range, the scan rate, and the number of scanning lines in the \emph{X}- and \emph{Y}-position were set to be the same as those in the AFM measurement of the actual cutting edge. Figure 7a,b shows the AFM topography and the cross-sectional profile of the reverse cutting edge artifact, respectively. It can be seen from Figure 7a that the reverse cutting edge was well transcribed from the geometry of the diamond tool. The depth of the reverse cutting edge artifact was evaluated to be 28 nm. It was approximately the same as the indentation depth of 25 nm, which was evaluated based on the outputs of the inside and the outside sensors of the nanoindentation system. The control accuracy of the indentation depth in the designed nanoindentation system was, therefore, verified from the result. The points in the apex of the measured revered cutting edge were fitted using the least square method, as shown in Figure 7b. The radius of the reverse fitted arc, referred to as \R{mark\_m}, was evaluated to be 21.04 nm. Similarly, the reverse fitted arc was a geometric convolution of the AFM tip and the reverse cutting edge. The value of 21.04 nm was not the reverse diamond tool cutting edge radius. Assuming \emph{ξ} is equal to zero, the actual cutting edge radius, \R{tool}, was calculated by substituting the evaluated \R{tool\_m} and \R{mark\_m} into Equation (4) to obtain 30.68 nm. The difference between \R{tool} and \R{tool\_m} was evaluated to be 9.64 nm, which was close to the nominal AFM tip radius of 7 nm. On the basis of the experimental results, the effectiveness of the proposed measurement method for cutting edge radius using an AFM and a reverse cutting edge artifact was verified.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Figure 7.} Measured reverse diamond tool cutting edge. (\textbf{a}) AFM topography; (\textbf{b}) Profile of Section C–C’.
+\alttext{(a) 3D AFM topography of the reverse cutting edge artifact, brown–gold shading (no colour key): a trough (darker brown) running diagonally across the surface; a white dashed line C’–C crosses it. Axes: ``X-position 20 nm/div.'', ``Y-position 20 nm/div.'', ``Z-position 10 nm/div.''. (b) Profile plot without numbers (``X-position 20 nm/div.'', 5 divisions = 100 nm; ``Z-position 20 nm/div.'', 4 divisions = 80 nm): red open circles (``Raw data'') joined by a red line form a concave trough, from about 51 nm height at the left frame down to a minimum of about 21 nm near x = 51 nm and up to about 48 nm at the right frame; a thick black ``Reversed fitted curve'' spans the bottom of the trough (about x = 34–71 nm) and lies slightly above the lowest circles; an arrow from the label ``$R_\mathrm{mark\_m}$=21.04 nm'' points to it.}
+\figuredata{b}{figures/fig7b.csv}{figures/fig7b.py}{tier 3, digitized from the embedded 300-ppi JPEG (circle centres, red line, black fitted arc); x and z in nm from the frame's lower left corner}
+
+\R{mark\_m} of other reverse cutting edges with various indentation depths were also evaluated using the proposed measurement method for cutting edge radius. The evaluated \R{mark\_m} and \R{tool} are \pdfpage{9}plotted in Figure 8. As can be seen in the figure, the average diamond tool cutting edge radius was estimated to be 30.38 nm with a standard deviation of 0.31 nm. Therefore, it was verified that the elastic recovery of the reverse cutting edge artifact did not affect the measurement accuracy of cutting edge radius when the indentation depth was within 20 to 200 nm.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Figure 8.} Experimental results under various indentation depths.
+\alttext{Scatter plot: x ``Indentation depth nm'' 20–180 (ticks 20, 60, 100, 140, 180), y ``Evaluated Radius nm'' 0–60 (ticks 0, 20, 40, 60). Three series of six points at depths of about 29, 44, 62, 84, 125 and 157 nm, labelled in the plot: $R_\mathrm{tool\_m}$ (green open diamonds) constant at about 40.3 nm; $R_\mathrm{tool}$ (blue open squares) between about 30.0 and 30.8 nm; $R_\mathrm{mark\_m}$ (red open circles) between about 19.7 and 21.1 nm.}
+\figuredata{(single panel)}{figures/fig8.csv}{figures/fig8.py}{tier 2, vector paths in the PDF, marker centres}
+
+In addition, the effect of elastic recovery on measurement uncertainty of cutting edge radius was investigated. The indentation area between the diamond tool cutting edge and the workpiece, shown in Figure 9, can be recognized as a cylinder and a plane surface. According to the Hertz theory [26], for a plane surface and a cylinder with a radius of \R{tool}, the elastic recovery \emph{d}\textsubscript{er} of the reverse cutting edge along the \emph{X}-direction can be expressed by the following equation:
+\begin{equation}
+d_{er} = \frac{4}{\pi} \cdot \frac{1}{L} \cdot F \cdot \frac{1 - v^2}{E}
+\tag{6}
+\end{equation}
+where \emph{F} is the applied indentation force between the diamond tool and the workpiece, which can be obtained from the deflection of the cantilever at the indentation position and the spring constants of the cantilever in the designed nanoindentation system. \emph{L} is the length of cylinder, which can be obtained based on the indentation depth and the nose radius of the diamond tool. \emph{E} and \emph{ν} represent the Young’s modulus and the Poisson’s ratio of the diamond tool, respectively.
+\decompnote{Equation (6) prints the subscript as italic ``\emph{er}'' and the Poisson's ratio as an italic ``\emph{v}''; the text below it uses \emph{ν} and the upright subscript ``er''.}
+
+\begin{center}
+\includegraphics[width=0.4\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Figure 9.} Schematic of the indentation area between the diamond tool and the copper workpiece.
+\alttext{Schematic in perspective: a beige upright plate labelled ``Workpiece'' with a pink ``Diamond tool'' pressed against it; the contact region is an orange patch with a dotted outline. Labels: $L$ (length of the contact, with a dimension arrow along the edge), $F$ (force arrow), $R_\mathrm{tool}$ (radius at the edge); axes Z (up), Y and X.}
+
+Figure 10 shows the elastic recovery of the reverse cutting edge under various indentation depths. The values were employed to evaluate the measurement uncertainty induced by the elastic recovery. The measurement uncertainty of cutting edge radius of a diamond tool with 1 mm nose radius was evaluated based on the Guide to the Uncertainty in Measurement (GUM) [27].
+
+\pdfpage{10}
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Figure 10.} The theoretical elastic recovery under various indentation depths.
+\alttext{Line plot with markers: x ``Indentation depth nm'' 20–180 (ticks 20, 60, 100, 140, 180), y ``Theoretical elastic recovery nm'' 0–0.006 (ticks 0, 0.002, 0.004, 0.006). Eleven red squares (lower right half filled) at 16 nm steps from 20 to 180 nm, joined by a red line: 0 at 20 nm, 0.0018 at 36 nm, then a concave rise to about 0.0054 nm at 180 nm. The right frame has unlabelled ticks at a different spacing (every 0.0012 nm), and a small stray mark sits below the x axis between 60 and 100.}
+\figuredata{(single panel)}{figures/fig10.csv}{figures/fig10.py}{tier 2, vector paths in the PDF, marker centres}
+
+Table 1 shows the calculated uncertainties when the indentation depth was equal to 25 nm. The uncertainty in \R{tool\_m} and \R{mark\_m} was evaluated to be 1.36 and 1.42 nm, respectively. The uncertainty with a coverage factor of \emph{k} = 2 (95\% confidence) in the measurement of the diamond tool cutting edge radius was evaluated to be 1.97 nm, which was smaller than that obtained in our previous research [22].
+
+The measurement uncertainties under various indentation depths are shown in Figure 11. The standard deviation of the evaluated uncertainties was calculated to be 0.005 nm. The results further demonstrated that elastic recovery of the reverse cutting edge did not influence the measurement accuracy of the diamond tool cutting edge radius based on the proposed edge reversal method and the designed nanoindentation system.
+
+\begin{center}
+\noindent\textbf{Table 1.} Uncertainty analysis in the measurement of a diamond tool with a nose radius of 1 mm.
+
+\smallskip
+\small
+\begin{tabular}{ccccc}
+\toprule
+\textbf{Uncertainty Sources} & \textbf{Symbol} & \textbf{Uncertainty Value} & \textbf{Distribution} & \textbf{Standard Uncertainty} \\
+\midrule
+Lateral imaging resolution & $u_\mathrm{r}$ & 0.97 nm & Rectangular & 0.56 nm \\
+Lateral positioning resolution & $u_\mathrm{L\_n}$ & 1.2 nm & Normal & 1.2 nm \\
+Vertical positioning resolution & $u_\mathrm{V\_n}$ & 0.2 nm & Normal & 0.2 nm \\
+Thermal resolution & $u_\mathrm{t\_t}$ & 3.3 × 10\textsuperscript{−5} nm & Rectangular & 1.9 × 10\textsuperscript{−5} nm \\
+Measurement resolution & $u_\mathrm{t\_d}$ & 1.457 nm & - & 0.46 nm \\
+\textbf{Uncertainty in \boldmath$R_\mathrm{tool\_m}$} & $u_\mathrm{tool\_m}$ & - & - & 1.36 nm \\
+Lateral imaging resolution & $u_\mathrm{r}$ & 0.97 nm & Rectangular & 0.56 nm \\
+Lateral positioning resolution & $u_\mathrm{L\_n}$ & 1.2 nm & Normal & 1.2 nm \\
+Vertical positioning resolution & $u_\mathrm{V\_n}$ & 0.2 nm & Normal & 0.2 nm \\
+Thermal resolution & $u_\mathrm{m\_t}$ & 4.9 × 10\textsuperscript{−5} nm & Rectangular & 2.8 × 10\textsuperscript{−5} nm \\
+Measurement resolution & $u_\mathrm{m\_d}$ & 0.385 nm & - & 0.12 nm \\
+Elastic recovery & $u_\mathrm{m\_e}$ & 0.358 nm & Rectangular & 0.21 nm \\
+Indentation force & $u_\mathrm{m\_f}$ & 0.001 nm & Rectangular & 5.7 × 10\textsuperscript{−4} nm \\
+\textbf{Uncertainty in \boldmath$R_\mathrm{mark\_m}$} & $u_\mathrm{mark\_m}$ & - & - & 1.42 nm \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Also as tables/table1.csv. The symbols are printed as italic $u$ with upright subscripts.}
+
+\pdfpage{11}
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Figure 11.} The measurement uncertainties of cutting edge radius of a diamond tool under various indentation depths.
+\alttext{Scatter plot: x ``Indentation depth nm'' 20–180 (ticks 20, 60, 100, 140, 180), y ``Uncertainty nm'' 1.90–2.05 (ticks 1.90, 1.95, 2.00, 2.05). Six red open squares with an X inside, at depths of about 29, 44, 62, 84, 125 and 157 nm, all between about 1.962 and 1.976 nm.}
+\figuredata{(single panel)}{figures/fig11.csv}{figures/fig11.py}{tier 2, vector paths in the PDF, marker centres}
+
+\subsubsection*{\emph{3.2. Effect of AFM Cantilever Tip}}
+
+The AFM cantilever was one of the crucial factors that affected the evaluation accuracy of the diamond tool cutting edge radius. Therefore, another AFM cantilever (MPP-11100-10, Bruker, Billerica, MA, USA) was installed onto the AFM to scan the actual and the reverse diamond tool cutting edges for investigating the effect of the AFM cantilever tip on the measurement accuracy of the diamond tool cutting edge radius. The Olympus AFM cantilever and the Bruker AFM cantilever were referred to as Cantilever 1 and Cantilever 2, respectively. Differing from Cantilever 1, there was a long base at the top of Cantilever 2. The tip radius of Cantilever 2 was 12 nm, which was larger than that of Cantilever 1.
+
+Then, Cantilever 2 was used to scan the actual and the reverse cutting edges, which had been scanned by Cantilever 1. We confirmed that the AFM topographies of the cutting edges scanned by Cantilever 2 were similar to those measured by Cantilever 1, although the AFM images are not shown here for the sake of clarity. Figure 12 shows the measured diamond tool cutting edge radii using Cantilever 2. The average characterized cutting edge radius of the diamond tool was 29.67 nm, with a standard deviation of 0.16 nm. Characterized cutting edge radius using Cantilever 2 was the same as that using Cantilever 1. The measurement uncertainty using Cantilever 2 was evaluated. The results are also plotted in Figure 12. The standard deviation of the evaluated uncertainty values was calculated to be 0.028 nm. From the above results, it can be seen that the measurement accuracy of the diamond tool cutting edge radius based on the proposed edge reversal method was not affected by the AFM cantilever tip radius. This is consistent with the fact that the effect of the AFM cantilever tip radius can be removed in the proposed method.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Figure 12.} Experimental results using Cantilever 2.
+\alttext{Scatter plot with two y axes: x ``Indentation depth nm'' 20–180 (ticks 20, 60, 100, 140, 180); left y ``The actual cutting edge radius nm'' 27–33 (ticks 27, 29, 31, 33); right y ``Uncertainty nm'' 1.85–2.15 (ticks 1.85, 1.95, 2.05, 2.15). Legend at upper left: blue open square ``Cutting edge radius'', red open square with an X ``Uncertainty''. Six points per series at depths of about 29, 44, 62, 84, 125 and 157 nm: cutting edge radius between about 29.5 and 29.9 nm; uncertainty between about 1.96 and 2.03 nm, highest at 157 nm.}
+\figuredata{(single panel)}{figures/fig12.csv}{figures/fig12.py}{tier 2, vector paths in the PDF, marker centres; each series read on its own axis}
+
+\pdfpage{12}
+\subsubsection*{\emph{3.3. Reliability of the Proposed Method and the Designed System}}
+
+To further demonstrate the reliability of the proposed measurement method, cutting edge radius of a diamond tool with a different nose radius of 2 mm, which was referred to as Diamond Tool 2, was also evaluated.
+
+Diamond Tool 2 was mounted on the nanoindentation system to replicate its cutting edge on the copper workpiece with various indentation depths. The AFM with Cantilever 1 was, then, applied to measure the profiles of the actual and replicated cutting edges. The command displacement of Diamond Tool 2 actuated by the FTS was also set from 50 to 300 nm with an interval of 50 nm. However, the corresponding indentation depths were evaluated to be 35, 45, 77, 104, 127, and 163 nm according to the outputs of the inside and the outside sensors, which were different from those by the previous diamond tool with a nose radius of 1 mm.
+
+The measured results of Diamond Tool 2 are summarized in Figure 13. The average radius of the diamond tool cutting edge was evaluated to be 41.29 nm with a standard deviation of 0.66 nm. The standard deviation of the evaluated uncertainty values was calculated to be 0.032 nm. The difference between the actual cutting edge radius by the proposed measurement method (\R{tool}) and the cutting edge radius imaged directly by the AFM (\R{tool\_m}) of Diamond Tool 2 was evaluated to be 7.36 nm. This value was also close to the nominal AFM tip radius of 7 nm. The reliability of the proposed method was, thus, verified from the measurement results of Diamond Tool 2.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent\textbf{Figure 13.} Experimental results of measuring Diamond Tool 2.
+\alttext{Scatter plot with two y axes: x ``Indentation depth nm'' 20–180 (ticks 20, 60, 100, 140, 180); left y ``The actual cutting edge radius nm'' 38–44 (ticks 38, 40, 42, 44); right y ``Uncertainty nm'' 1.85–2.15 (ticks 1.85, 1.95, 2.05, 2.15). Legend at upper left: blue open square ``Cutting edge radius'', red open square with an X ``Uncertainty''. Six points per series at depths of about 35, 45, 77, 104, 127 and 163 nm: cutting edge radius about 42.0, 41.3, 41.1, 40.4, 40.8 and 42.1 nm; uncertainty about 1.96, 1.95, 1.98, 1.97, 1.98 and 2.04 nm.}
+\figuredata{(single panel)}{figures/fig13.csv}{figures/fig13.py}{tier 2, vector paths in the PDF, marker centres; each series read on its own axis}
+
+\subsection*{4. Summary}
+
+In this paper, we presented high-precision cutting edge radius measurement of single point diamond tools using an atomic force microscope and a reverse cutting edge artifact based on the edge reversal method. A reverse cutting-edge artifact with a high-precision depth was fabricated on a workpiece surface using the optimized operation of a newly designed nanoindentation system. Cutting edge radius was evaluated from two AFM images, including an AFM image of the actual cutting edge and an AFM image of the reverse cutting edge, from which the convolution effect of the AFM tip radius was reduced. Cutting edge radii of two diamond tools were evaluated. The first tool had a nose radius of 1 mm and the second tool had a nose radius of 2 mm. The difference between cutting edge radii evaluated by the proposed measurement method and that directly obtained from the AFM image was 9.64 nm for the first tool and 7.36 nm for the second tool. Both values were close to the AFM probe tip nominal radius of 7 nm, from which the feasibility and the reliability of the proposed method were demonstrated. The effect of the elastic recovery was investigated by scanning a group of reverse cutting edge artifacts with various depths from 20 to 180 nm. We confirmed that the elastic recovery of the reverse cutting edge did not affect the measurement accuracy of cutting edge radius when the indentation depth was within 20 to 200 nm. Three-dimensional profile measurements \pdfpage{13}of diamond tool cutting edge based on the proposed measurement method will be carried out in the future work.
+
+\medskip
+\noindent{\small\textbf{Author Contributions:} Conceptualization, W.G., Y.S., and Y.C., Data curation, K.Z. and H.M.; Formal analysis, K.Z. and Y.C.; Investigation, Y.S. and Y.C.; Methodology, W.G.; Supervision, W.G.; Visualization, H.M.; Writing—original draft, K.Z.; Writing—review and editing, W.G. and Y.C. All authors have read and agreed to the published version of the manuscript.}
+
+\noindent{\small\textbf{Funding:} This research is supported by a Japanese Government (MEXT) Scholarship. K.Z. thanks the support from the China Scholarship Council (CSC). In addition, a part of this research is supported by the Japan Society for the Promotion of Science (JSPS) 15H05759 and 20H00211.}
+
+\noindent{\small\textbf{Conflicts of Interest:} The authors declare no conflict of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, and in the decision to publish the results.}
+
+\subsection*{References}
+
+\begin{hangpars}\small
+1.\enspace Zhu, Z.W.; To, S.; Zhang, S.J. Large-scale Fabrication of micro-lens array by novel end-fly-cutting servo diamond machining. \emph{Opt. Express} \textbf{2015}, \emph{23}, 20593–20604. [CrossRef] [PubMed]
+
+2.\enspace Gong, H.; Wang, Y.; Song, L.; Fang, F.Z. Spiral tool path generation for diamond turning optical freeform surfaces of quasi-revolution. \emph{Comput. Aided Des.} \textbf{2015}, \emph{59}, 15–22. [CrossRef]
+
+3.\enspace Gao, W.; Araki, T.; Kiyono, S.; Okazaki, Y.; Yamanaka, M. Precision nano-fabrication and evaluation of a large area sinusoidal grid surface for a surface encoder. \emph{Precis. Eng.} \textbf{2003}, \emph{27}, 289–298. [CrossRef]
+
+4.\enspace Gao, W.; Aoki, J.; Ju, B.F.; Kiyono, S. Surface profile measurement of a sinusoidal grid using an atomic force microscope on a diamond turning machine. \emph{Precis. Eng.} \textbf{2007}, \emph{31}, 304–309. [CrossRef]
+
+5.\enspace Guo, J.; Zhang, J.; Pan, Y.; Kang, R.; Namba, Y.; Shore, P.; Yue, X.; Wang, B.; Guo, D. A critical review on the chemical wear and wear suppression of diamond tools in diamond cutting of ferrous metals. \emph{Int. J. Extrem. Manuf.} \textbf{2020}, \emph{2}, 012001.
+
+6.\enspace Brinksmeier, E.; Riemer, O.; Glabe, R.; Lunemann, B.; Kopylow, Y.V.; Dankwart, C.; Meier, A. Submicron functional surface generated by diamond machining. \emph{CIRP Ann. Manuf. Technol.} \textbf{2010}, \emph{59}, 535–538. [CrossRef]
+
+7.\enspace Wang, J.S.; Fang, F.Z.; Yan, G.P.; Guo, Y.B. Study on diamond cutting of ion implanted tungsten carbide with and without ultrasonic vibration. \emph{Nanomanuf. Metrol.} \textbf{2019}, \emph{2}, 177–185. [CrossRef]
+
+8.\enspace Shinozaki, A.; Namba, N. Diamond tool wear in the ultra-Precision cutting of large electroless nickel and fabrication of replicated mirrors for a soft X-ray microscope. \emph{JSME Int. J. C Mech. Syst.} \textbf{2006}, \emph{49}, 56–62.
+
+9.\enspace Gao, W.; Motoki, T.; Kiyono, S. Nanometer edge profile measurement of diamond cutting tools by atomic force microscope with optical alignment sensor. \emph{Precis. Eng.} \textbf{2006}, \emph{30}, 396–405. [CrossRef]
+
+10.\enspace Gao, W. \emph{Precision Nanometrology–Sensors and Measuring Systems for Nanomanufacturing}; Springer: London, UK, 2010.
+
+11.\enspace Gao, W.; Kim, S.W.; Bosse, H.; Haitjema, H.; Chen, Y.L.; Lu, X.D.; Knapp, W.; Weckenmann, A.; Estler, W.T.; Kunzmann, H. Measurement technologies for precision positioning. \emph{CIRP Ann. Manuf. Technol.} \textbf{2015}, \emph{64}, 773–796. [CrossRef]
+
+12.\enspace Weckenmann, A.; Nalbantic, K. Precision measurement of cutting tools with two matched optical 3D-sensors. \emph{CIRP Ann. Manuf. Technol.} \textbf{2003}, \emph{52}, 443–446. [CrossRef]
+
+13.\enspace Lim, T.Y.; Ratnam, M.M. Edge detection and measurement of nose radii of cutting tool inserts from scanned 2-D images. \emph{Opt. Lasers Eng.} \textbf{2012}, \emph{50}, 1628–1642. [CrossRef]
+
+14.\enspace Michihata, M.; Kim, J.; Takahashi, S.; Takamasu, K.; Mizutani, Y.; Takaya, Y. Surface imaging technique by an optically trapped microsphere in air condition. \emph{Nanomanuf. Metrol.} \textbf{2018}, \emph{1}, 32–38. [CrossRef]
+
+15.\enspace Asai, S.; Taguchi, Y.; Horio, K.; Kasai, T.; Kobayashi, A. Measuring the very small cutting-edge radius for a diamond tool using a new kind of SEM having two detectors. \emph{CIRP Ann. Manuf. Technol.} \textbf{1990}, \emph{39}, 85–88. [CrossRef]
+
+16.\enspace Denkena, B.; Kohler, J.; Ventura, C.E.H. Customized cutting edge preparation by means of grinding. \emph{Precis. Eng.} \textbf{2013}, \emph{37}, 590–598. [CrossRef]
+
+17.\enspace Sawano, H.; Ayada, S.; Yoshioka, H.; Shinno, H. A newly developed AFM-Based three dimensional profile measuring system. In Proceedings of the 11th International Conference of the European Society for Precision Engineering and Nanotechnology, Como, Italy, 23–26 May 2011; Volume 1, pp. 108–112.
+
+\pdfpage{14}18.\enspace Gao, W.; Asai, T.; Arai, Y. Precision and fast measurement of 3D cutting edge profiles of single point diamond micro-tools. \emph{CIRP Ann. Manuf. Technol.} \textbf{2009}, \emph{58}, 451–454. [CrossRef]
+
+19.\enspace Li, Z.Q.; Sun, T.; Li, P.; Zhao, X.S.; Dong, S. Measuring the nose roundness of diamond cutting tools based on atomic force microscopy. \emph{J. Vac. Sci. Technol. B} \textbf{2009}, \emph{27}, 1394–1398. [CrossRef]
+
+20.\enspace Li, X.P.; Rahman, M.; Liu, K.; Neo, K.S.; Chan, C.C. Nano-precision measurement of diamond tool edge radius for wafer fabrication. \emph{J. Mater. Process. Technol.} \textbf{2003}, \emph{140}, 358–362. [CrossRef]
+
+21.\enspace Gao, W.; Haitjema, H.; Fang, F.Z.; Leach, R.K.; Cheung, C.F.; Savio, E.; Linares, J.M. On-machine and in-process surface metrology for precision manufacturing. \emph{CIRP Ann. Manuf. Technol.} \textbf{2019}, \emph{68}, 843–866. [CrossRef]
+
+22.\enspace Chen, Y.L.; Cai, Y.; Xu, M.L.; Shimizu, Y.; Ito, S.; Gao, W. An edge reversal method for precision measurement of cutting edge radius of single point diamond tools. \emph{Precis. Eng.} \textbf{2017}, \emph{50}, 380–387. [CrossRef]
+
+23.\enspace Cai, Y.; Chen, Y.L.; Shimizu, Y.; Ito, S.; Matsukuma, H.; Gao, W.; Zhang, L.C. Molecular dynamics simulation of sub-nanometric tool-workpiece contact on a force sensor-integrated fast tool servo for ultra-precision microcutting. \emph{Appl. Surf. Sci.} \textbf{2016}, \emph{369}, 354–365. [CrossRef]
+
+24.\enspace Cai, Y.; Chen, Y.L.; Shimizu, Y.; Ito, S.; Gao, W. Molecular dynamics simulation of elastic-plastic deformation associated with tool-workpiece contact in force sensor-integrated fast tool servo. \emph{J. Eng. Manuf.} \textbf{2018}, \emph{232}, 1893–1902. [CrossRef]
+
+25.\enspace Cai, Y.; Chen, Y.L.; Xu, M.L.; Shimizu, Y.; Ito, S.; Matsukuma, H.; Gao, W. An ultra-precision tool nano-indentation instrument for replication of single point diamond tool cutting edges. \emph{Meas. Sci. Technol.} \textbf{2018}, \emph{29}, 054004. [CrossRef]
+
+26.\enspace Johnson, K.L. One hundred years of hertz contact. \emph{Proc. Inst. Mech. Eng.} \textbf{1982}, \emph{196}, 363–378. [CrossRef]
+
+27.\enspace \emph{JCGM 100: 2008 GUM 1995 with Minor Corrections. Evaluation of Measurement Data—Guide to the Expression of Uncertainty in Measurement (GUM)}; BIPM: Sèvres Cedex, France, 2008.
+\end{hangpars}
+
+\medskip
+\noindent{\small © 2020 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).}
+\decompnote{The licence statement is printed next to the Creative Commons ``CC BY'' logo.}
+
+\end{document}

@@ -1,0 +1,15 @@
+# Wei et al. 2025, Figure 14(a): absolute value of the average sliding force (nN) per indenter system, h_c = 4 Å
+#   (average over the data at sliding distances over 10 Å, per the caption).
+# Category x axis: six evenly spaced labels (rotated, bold) on the major ticks; points joined by a blue dashed line.
+# Columns: label = printed category label; symbol_centre_px / tick_px = symbol centre and nearest major tick, column of
+#   the 1500 px wide embedded image; abs_avg_sliding_force_nN = symbol centre on the y axis.
+# Provenance: tier 3, digitized from the embedded 300 ppi image of Figure 14 by fig14a_extract.py; symbol centre =
+#   centroid of the blue sphere symbol after filling its highlight and an opening with a 7 px disk; y calibrated on the 7 labelled major ticks 1.0-4.0 nN (max residual 0.0039 nN).
+# Uncertainty: about +-0.018 nN (2 px; the symbols are shaded spheres ~12 px across).
+label,symbol_centre_px,tick_px,abs_avg_sliding_force_nN
+Pyramid-0°,144.7,145,1.262
+Pyramid-45°,244.3,244.5,1.177
+Sphere (R = 10 Å),343.6,344,1.806
+Sphere (R = 14.5 Å),443.5,443.5,2.138
+Sphere (R = 20 Å),543,543.5,3.244
+Sphere (R = 25 Å),642.7,642.5,3.816

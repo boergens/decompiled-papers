@@ -1,0 +1,61 @@
+# Figure 6d (page 40), Hesse et al. 2026: explained variance of face features (%) vs feature index (1-20 shape, 21-50 appearance).
+# Source: vector paths. Solid series = stroke polylines (1 vertex per feature). Dashed series were exported as filled dash polygons
+# (stroke width 1 pt); their centre lines were recovered from the dash outlines and the 50 vertices fitted by least squares
+# (polyline is straight between consecutive features).
+# x axis calibrated from tick marks at features 10,20,30,40,50 (resid 0.0016 features); feature 1 lies on the y-axis line.
+# y axis calibrated from tick marks at -100,-50,0,50,100 % (resid 0.00074 %).
+# Precision: solid series ~0.01 % (coordinate rounding); dashed series typically 0.01-0.2 %.
+# Empty cells: the line is below -100 % there (clipped by the axes in the original); see fig6d_offaxis.csv.
+# Columns: priming_average = priming stimulus features predicted from average priming activity (black solid);
+# binocular_conscious_stateN = conscious stimulus features from state N (solid); binocular_suppressed_stateN = suppressed stimulus features from state N (dashed).
+feature_index,feature_type,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_suppressed_state1_pct,binocular_suppressed_state2_pct
+1,shape,1.93,-21.82,-5.63,-5.16,-0.24
+2,shape,27.73,2.52,-6.02,-6.28,-2.17
+3,shape,8.50,-12.30,0.46,-4.88,3.11
+4,shape,-3.21,-6.55,3.21,-2.11,-6.83
+5,shape,2.87,-6.69,-17.30,-15.95,-1.95
+6,shape,-0.49,5.26,-1.14,-7.87,-12.99
+7,shape,1.10,0.38,-4.77,0.22,-1.89
+8,shape,-2.92,-12.80,-19.41,-6.53,-1.90
+9,shape,-8.06,-17.03,-9.64,-9.93,-2.58
+10,shape,-3.61,-8.64,2.63,-5.59,-11.24
+11,shape,-14.19,-1.74,-1.66,-0.24,-7.90
+12,shape,-0.58,-8.91,-0.87,-12.08,-1.89
+13,shape,-5.63,-19.34,-8.20,-11.46,-4.04
+14,shape,-1.95,-9.76,-0.56,4.07,-10.63
+15,shape,2.81,-11.39,-16.32,-9.54,-12.35
+16,shape,4.72,-9.19,-13.42,-11.69,-3.70
+17,shape,-10.44,-13.14,-6.38,-4.11,-20.37
+18,shape,-4.54,-11.21,-11.23,-1.29,-7.16
+19,shape,-6.56,-4.02,-15.84,-11.25,2.54
+20,shape,-8.23,-2.36,-1.36,-2.65,-12.71
+21,appearance,78.41,23.03,-24.50,-50.39,6.24
+22,appearance,74.85,24.70,-23.47,-52.57,6.66
+23,appearance,80.25,19.48,-22.10,-45.55,4.65
+24,appearance,10.18,1.64,-0.15,-6.08,-2.24
+25,appearance,65.23,13.21,-21.70,-40.69,3.03
+26,appearance,11.57,-5.37,-13.58,-18.40,3.20
+27,appearance,41.68,18.87,-10.90,-36.08,-2.05
+28,appearance,31.86,14.11,-10.00,-27.21,-2.30
+29,appearance,37.78,-3.82,-22.76,-29.68,-0.12
+30,appearance,77.75,23.87,-25.15,-52.41,5.88
+31,appearance,34.72,-5.99,-15.10,-13.90,-0.61
+32,appearance,50.75,17.46,-2.21,-35.98,-6.18
+33,appearance,52.73,23.21,-24.15,-44.33,11.78
+34,appearance,58.74,20.72,-22.15,-33.14,11.64
+35,appearance,46.93,16.34,-18.71,-29.06,7.24
+36,appearance,25.66,-7.34,-21.07,-27.01,-8.79
+37,appearance,62.94,13.77,-17.10,-35.46,6.24
+38,appearance,74.11,24.11,-25.91,-55.43,6.67
+39,appearance,67.93,19.53,-24.25,-43.81,2.79
+40,appearance,-3.18,-4.18,-3.08,-6.66,-17.38
+41,appearance,26.39,4.75,-12.57,-31.17,6.47
+42,appearance,69.82,14.70,-25.92,-46.05,4.83
+43,appearance,30.79,15.60,-25.44,-32.67,4.09
+44,appearance,55.19,6.04,-15.38,-36.72,-1.61
+45,appearance,50.64,13.97,-38.01,-47.55,5.04
+46,appearance,47.27,12.08,-21.12,-46.28,-1.66
+47,appearance,44.12,-2.59,-6.41,-13.82,-5.90
+48,appearance,42.92,9.78,-12.39,-36.44,-5.78
+49,appearance,72.11,21.33,-25.39,-52.33,6.65
+50,appearance,30.29,7.18,-25.32,-33.00,6.45

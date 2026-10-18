@@ -1,0 +1,52 @@
+# Figure 11 (p. 25 of elife-57443-v4.pdf): number of cell types in each major brain region (bar chart).
+# Provenance: tier 3, digitized from the embedded raster image (JPEG, 2734 x 1706 px) by fig11_extract.py.
+# Tier 1 not available: the caption names 'Figure 11-source data 1' (eLife online), not in papers/scheffer2020/.
+# y calibration: linear fit to the 4 labelled major ticks (0, 500, 1000, 1500); 0.685 px per type; residuals [-1.46, 1.83, 0.73, -1.1] types.
+# Columns: region = x-axis label as printed (Greek letters are printed as Latin: gL = gammaL, b'L = beta'L, a'L = alpha'L, aL = alphaL, bL = betaL);
+#   order = bar position from the left (1-based); n_types = bar height in number of cell types (y axis '#types').
+# Uncertainty: about +-2 types (1 px = 1.46 types; JPEG edges). Bars below about 3 types are hard to tell from the axis line;
+#   PRW shows no visible bar (0 here, could be 1-2).
+order,region,n_types
+1,SLP(R),1844.2
+2,SMP(R),1565.4
+3,PLP(R),1438.4
+4,AVLP(R),1232.0
+5,SCL(R),1217.3
+6,SIP(R),966.0
+7,ICL(R),941.3
+8,LH(R),884.8
+9,SPS(R),878.4
+10,PVLP(R),739.7
+11,WED(R),678.5
+12,LAL(R),657.8
+13,CRE(R),598.0
+14,IB,579.0
+15,VES(R),424.0
+16,AL(R),339.3
+17,IPS(R),335.5
+18,GNG,230.0
+19,SAD,222.9
+20,FB,216.7
+21,LO(R),209.8
+22,EPA(R),142.1
+23,AOTU(R),136.8
+24,ATL(R),133.4
+25,GOR(R),130.9
+26,CA(R),85.4
+27,gL(R),56.1
+28,EB,43.2
+29,AME(R),32.6
+30,NO,31.4
+31,BU(R),29.7
+32,PB,29.7
+33,b'L(R),28.3
+34,LOP(R),24.2
+35,a'L(R),23.7
+36,aL(R),22.5
+37,bL(R),19.6
+38,PED(R),19.6
+39,FLA(R),16.9
+40,AB(R),15.1
+41,CAN(R),14.1
+42,ME(R),13.5
+43,PRW,0.0

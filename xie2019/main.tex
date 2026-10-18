@@ -1,0 +1,527 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\sourcefile{source/xie2019.pdf}
+\decompnote{Publisher version of record (SpringerOpen typeset PDF, 18 pages). The running header ``Xie and Fang \emph{Nanoscale Research Letters} (2019) 14:370'' with ``Page n of 18'', the ``Check for updates'' button, the SpringerOpen logo and the SpringerOpen advertisement box on p.\,18 are left out; the journal block below is given once, as printed on p.\,1. Figure placement: each figure and table is placed after the paragraph that runs across its position in the PDF.}
+
+\pdfpage{1}
+\noindent Xie and Fang \emph{Nanoscale Research Letters}\quad (2019) 14:370\par
+\noindent https://doi.org/10.1186/s11671-019-3195-4\par
+\noindent Nanoscale Research Letters\par
+\noindent\textbf{NANO EXPRESS}\hfill\textbf{Open Access}\par
+
+\section*{Cutting-based single atomic layer removal mechanism of monocrystalline copper: edge radius effect}
+
+\noindent Wenkun Xie\textsuperscript{1} and Fengzhou Fang\textsuperscript{1,2*}
+
+\begin{quote}\small
+\noindent * Correspondence: fzfang@tju.edu.cn\\
+\textsuperscript{1}Centre of Micro/Nano Manufacturing Technology (MNMT-Dublin), University College Dublin, Dublin, Ireland\\
+\textsuperscript{2}State Key Laboratory of Precision Measuring Technology and Instruments, Centre of Micro/Nano Manufacturing Technology (MNMT), Tianjin University, Tianjin, China
+\end{quote}
+\decompnote{The correspondence and affiliation notes are printed at the foot of the left column of p.\,1; they are placed here after the author list.}
+
+\begin{quote}
+\noindent\textbf{Abstract}\par
+\noindent The ultimate objective of mechanical cutting is to down minimum chip thickness to single atomic layer. In this study, the cutting-based single atomic layer removal mechanism on monocrystalline copper is investigated by a series of molecular dynamics analysis. The research findings report that when cutting depth decreases to atomic scale, minimum chip thickness could be down to single atomic layer by mechanical cutting using rounded edge tool. The material removal behaviour during cutting-based single atomic layer removal exhibits four characteristics, including chip formation by shearing-stress driven dislocation motion, elastic deformation on the processed surface, atomic sizing effect, and cutting-edge radius effect. Based on this understanding, a new cutting model is proposed to study the material removal behaviour in cutting-based single atomic layer removal process, significantly different from those for nanocutting and conventional cutting. The outcomes provide theoretical support for the research and development of the atomic and close-to-atomic scale manufacturing technology.
+
+\noindent\textbf{Keywords:} Single atomic layer removal, Cutting edge radius effect, Atomic sizing effect, Mechanical cutting, Dislocation motion
+\end{quote}
+
+\begin{quote}\small
+\noindent © The Author(s). 2019 \textbf{Open Access} This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.
+\end{quote}
+\decompnote{The licence statement is printed at the foot of p.\,1, next to the SpringerOpen logo; it is placed here after the abstract.}
+
+\section*{Introduction}
+
+Mechanical cutting, as one of most important subtractive machining methods, has been applied to produce parts with a high surface finish quality [1, 2]. A large number of theoretical and experimental studies have been carried out to clarify the underling material removal mechanism at nanoscale to establish and enrich the basic nanocutting theory [3–6]. The research outcomes significantly contribute to the application of nanometric cutting in academia and industry, enabling the manufacturing of high-performance parts requiring complex form and nanometric surface finish quality [7, 8]. However, there is still no report on the mechanism of material removal in cutting at atomic and close-to-atomic scale (ACS), seriously restricting the progress of developing next-generation manufacturing technology—atomic and close-to-atomic scale manufacturing (ACSM), i.e., Manufacturing III [9]. Moreover, the progressive development of atomic scale devices also stressed the demand for various machining processes to achieve ACSM [10].
+
+In conventional macroscale cutting, cutting depth is significantly larger than cutting edge radius, where the material removal is realized by material shearing-driven chip formation [11–13]. In micro/nanocutting, as cutting depth is comparable or lower than tool edge radius, the chip formation of extrusion gradually becomes dominate with cutting depth decreasing down to nanoscale, which is greatly influenced by the cutting-edge radius effects [14–19]. In ACS cutting, as the cutting depth is further decreased to close-to-atomic scale and even atomic scale, which is much lower than cutting edge radius, the edge radius effect would inevitably affect the material removal behaviour.
+
+Moreover, unlike in conventional cutting and micro/nano cutting, in ACS cutting, cutting depth is not only significantly lower than cutting edge radius, but also comparable or even lower than the radius of the workpiece atoms. The practical material removal behaviour would be changed at different ratios of cutting depth to \pdfpage{2}workpiece atomic radius, which is recognized as one new sizing effect, i.e., atomic sizing effect [20]. Therefore, in ACS cutting, both cutting-edge radius effect and atom sizing effect should be considered. However, there is no report about this critically important issue in the study of ACS cutting technology.
+
+For those reasons, in the present study, the atomic sizing effect and edge radius effect on cutting-based single atomic layer removal mechanism are investigated by using molecular dynamics(MD) modelling.
+
+This paper is structured by following sections. Section 2 introduces the methodology used, including modelling and protocol, suitable potential function. Section 3 presents the analysis results and relevant discussions. Section 4 discusses the detailed cutting-based single atomic layer removal mechanism, under the coupled influence of cutting-edge effect and atomic sizing effect. The study findings are concluded in the Section 5.
+
+\section*{Methodology}
+
+\subsection*{Simulation Model and Protocol}
+
+As cutting depth decreases to atomic or close-to-atomic scale, it is indeed challenging to experientially observe the material removal process in practice. In this study, a series of MD simulations are conducted to analyse cutting-based single atomic layer removal mechanism, emphatically focusing the workpiece atomic sizing effect and cutting-edge radius effect.
+
+Figure 1 shows the snapshots for atomic configuration of diamond-copper cutting model, which consists of a single-crystal copper workpiece and a diamond cutting tool. The simulations are conducted on the (111) plane of single crystal copper. The dimensions of the workpiece in \emph{x}-[1 -1 0], \emph{y}-[1 1 -2], and \emph{z}-[1 1 1] directions are 27, 10, and 5 nm, respectively. During MD simulations, the workpiece atoms are divided into boundary layer atoms, thermostatic layer atoms, and Newtonian layer atoms, respectively, as shown in Fig. 1. The two layers at the bottom of the workpiece, namely, boundary layer, are kept fixed over the MD simulations, to eliminate the possible cutting-induced position translation of workpiece. The three atomic layers adjacent to boundary layer are thermostat layer atoms. The temperature of thermostatic layer is kept at 298 K by velocity rescaling methods. The remaining workpiece atoms belong to Newtonian layer. In the present simulations, the rake angle and clearance angle of the cutting tool is 0° and 12°. The detailed model parameters are summarized in Table 1. Since ACS cutting is preferably conducted at a lower cutting velocity, a cutting velocity of 25 m/s along [-1 1 0] direction is used after considering the effect of cutting velocity and computational time cost.
+
+\subsection*{Potential Function}
+
+The copper-diamond cutting system mainly involves two types of atoms, namely, copper, and diamond atoms. In the MD simulations, the interatomic interactions should be accurately described to ensure the computational accuracy of simulation results. Thus, reasonable selection of potential function is critically significant. In this study, the frequently-used embedded atom method (EAM) potential function is adopted to describe the interatomic interactions among copper atoms [21]. Morse function is applied to calculate the interactions between copper atoms and diamond atoms (Cu-C), mainly depending on the \emph{r.}
+\[
+E = D_0\left[e^{-2\alpha(r-r_0)} - 2e^{\alpha(r-r_0)}\right] \qquad (1)
+\]
+\decompnote{Equation (1) is transcribed as printed: the exponent of the second term is printed as $\alpha(r-r_0)$, without a minus sign.}
+
+where \emph{E} and \emph{D}\textsubscript{0} refer to pair potential energy and cohesion energy, \emph{α} represents a constant, \emph{r}\textsubscript{\emph{0}} is the equilibrium distance, and \emph{r} is the distance between two atoms. For Cu-C interactions, \emph{D}\textsubscript{\emph{0}} is 0.087ev, \emph{r}\textsubscript{\emph{0}} is 0.205 nm [22], and \emph{α} is 51.40 nm\textsuperscript{−1}\emph{.} For the interactions between carbons atoms in cutting tool (C-C), the significantly stronger bond strength between diamond atoms than copper \pdfpage{3}atoms are negligible. The cutting tool is regarded as rigid during the analysis.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Fig. 1} Simulation model for diamond-cutting model
+\alttext{Perspective rendering of the MD model (on p.\,2). A long rectangular block of atoms labelled ``Workpiece'' runs from the upper left to the lower right; most of it is pale yellow (labelled ``Newton layer'' at upper left). Along the bottom of the block run a thin blue layer (``Thermostatic layer'', red arrow pointing at it) and, below it, a thin red layer (``Boundary layer'', red arrow pointing at it). At the right end, partly overlapping the top surface, is a grey block of atoms with a rounded edge labelled ``Cutting tool''. An axis triad at the left shows \emph{z} upwards, \emph{y} into the page and \emph{x} towards the lower right.}
+
+\noindent\textbf{Table 1} Parameters used in the MD simulation\par
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Configuration & Diamond cutting process\\
+\midrule
+Workpiece material & Single crystal copper\\
+Workpiece & Face-centred-cubic (FCC) structure\\
+Crystal structure & Lattice constant = 3.65 Å\\
+Workpiece size & 27 × 10 × 5nm\textsuperscript{3}\\
+Tool material & Diamond\\
+Cutting velocity & 25 m/s\\
+Tool edge radius & 0 nm, 2 nm, 3 nm, 4 nm, 5 nm, 7.5 nm, 10 nm\\
+Tool rake angle & 0°\\
+Tool clearance angle & 12°\\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 1 also as \texttt{tables/table1.csv}.}
+
+\subsection*{Definition of Cutting Depth}
+
+Cutting depth (\emph{a}) is defined to be the distance between the topmost point of workpiece surface and the lowest point of cutting tool. The size of a workpiece atom is usually represented by atomic radius (\emph{r}\textsubscript{\emph{w}}\emph{).} As given in Fig. 2, when the topmost first atomic layer is targeted to be removed from the workpiece surface, theoretically, the maximum cutting depth used can be obtained as the following:
+\[
+a_{\max} = r_w + 0.5{\ast}d_{layer} \qquad (2)
+\]
+
+Here, \emph{d}\textsubscript{layer} represents the spacing distance between the topmost neighbouring atomic layers on the workpiece surface. In this study, all analysis is based on the (111) surface of monocrystalline copper workpiece; therefore, the \emph{r}\textsubscript{\emph{w}} in Eq. (2) refers to the radius of copper atoms, namely, 1.28 Å. The \emph{d}\textsubscript{layer} is 2.087 Å. When \emph{a} is larger than \emph{a}\textsubscript{max}, the lowest point of cutting tool will come into direct contact with the second atomic layer and may induce the material deformation and even removal. Therefore, in the present study, the cutting depths used are smaller than \emph{a}\textsubscript{max} (2.32 Å).
+
+Based on the findings, the fundamental cutting-based single atomic layer removal mechanism will be greatly changed at various combinations of the ratios of \emph{a} to \emph{R} and \emph{a} to \emph{r}\textsubscript{\emph{w}}\emph{.}
+
+\section*{Results and Discussion}
+
+According to MD results, both atomic sizing effect and cutting-edge radius effect have greatly influenced the cutting-based single atomic layer removal process. In the following sections, to clearly describe the atomic sizing effect and tool edge radius effect, the ratio of cutting depth (\emph{a}) to workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}), \emph{a/r}\textsubscript{\emph{w}}, and that of cutting depth(\emph{a}) to edge radius(\emph{R}), \emph{a/R}, are employed. The analysis results are systematically studied from the aspects of chip formation, surface generation, subsurface deformation and atomic displacement behaviour. The findings provide detailed insights into the typical characteristics in cutting-based single atomic layer removal mechanism.
+
+\subsection*{Chip Formation}
+
+The analysis results indicate that due to the workpiece atomic sizing effect [20], there are two critical values of \pdfpage{4}the ratio of cutting depth (\emph{a}) to workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}), namely, critical value 1 (C\textsubscript{1}) and critical value 2 (C\textsubscript{2}), which divided the chip formation behaviour into different cases.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Fig. 2} Schematic diagram for the cutting depth definition in single atomic layer removal
+\alttext{Schematic in two parts (on p.\,3). Top: side view of an MD snapshot: the workpiece (red atoms, labelled ``Workpiece'') with its top row of atoms blue (``1\textsuperscript{st} atomic layer'', arrow) and the row below green (``2\textsuperscript{nd} atomic layer'', arrow); a grey, bent band of atoms labelled ``Cutting tool'' comes down from the upper right and touches the surface at its right end. A small black rectangle around the tool tip is enlarged (two lines) into the lower box. Bottom (enlargement): a row of large blue circles (first layer) above a row of green circles (second layer), each row with a dash-dotted line through the centres. A curved band of light-grey circles with a dash-dotted centre line, bounded by dashed curves and closed by a solid outline, is labelled ``Cutting tool''; a red line from the band's centre of curvature to the band is labelled ``R''; a small red arrow inside one tool circle is labelled \emph{r}\textsubscript{\emph{t}}; a small red arrow inside a blue circle is labelled \emph{r}\textsubscript{\emph{w}}. A double red arrow between a horizontal line at the top of the blue atoms and a horizontal line at the lowest point of the tool is labelled \emph{a}; a double red arrow between the centre lines of the blue and green rows is labelled \emph{d}\textsubscript{\emph{layer}}.}
+
+\begin{hangpars}
+a.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} smaller than critical value 1 (C\textsubscript{1}).
+\end{hangpars}
+
+Figure 3 shows the results of MD simulation at various tool edge radius at the cutting depth of about 1.1 Å. Here, the ratio of cutting depth (\emph{a}) to workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}) is 0.781.
+
+Despite of the increased cutting-edge radius, there is elastic deformation occurring on the processed each Cu (111) surface. There is no chip formation and material removal over the cutting process. The study shows that the cutting depth should be larger than about 1.1 Å to enable material removal on Cu (111) surface.
+
+\begin{hangpars}
+b.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than C1, but smaller than critical value 2 (C\textsubscript{2}).
+\end{hangpars}
+
+When cutting depth is larger than about 1.1 Å, namely, the ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than 0.781, there is material removal occurring on workpiece surface. As shown in Fig. 4, a part of material is removed from workpiece surface, but a larger number of atoms within the topmost first layer is remained onto the new processed surface, forming surface defects. Moreover, as the edge radius increases to 7.5 nm, the ratio of \emph{a/R} is 0.019. At such case, a part of atoms in first atomic layer has been pressed into second layer and even third atomic layer, as shown in Fig. 4e, which should be ascribed to the extrusion action of cutting tool. It also indicates that tool edge radius effect starts to impose an influence on the material removal process, though a continuous material removal could not be obtained.
+
+\begin{hangpars}
+c.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than C\textsubscript{2}.
+\end{hangpars}
+
+Figure 5 shows the chip formation at cutting depth of about 2 Å. Here, the ratio of \emph{a/r}\textsubscript{\emph{w}} = 2 Å/1.28 Å = 1.563. Compared with Fig. 3, with an increase of cutting depth to 2 Å, the atoms within the targeted atomic layer could be continuously and stably removed by chip formation. It indicates that the cutting depth has been larger than the minimum chip thickness of monocrystalline copper, and the minimum chip thickness could be down to single atomic layer with a cutting depth of about 2 Å. After cutting, the materials within first atomic layer were fully removed from workpiece surface.
+
+However, it can be also noticed in Fig. 5 that, due to the increase of the ratio of \emph{a/R}, the atoms in the first atomic layer undergo evidently different removal processes, especially the cutting-induced deformation on the processed surface. At the cutting depth of 2 Å, when sharp cutting tool is used, namely, the ratio of \emph{a/R} is 5.70, only slight deformation occurs on the processed \pdfpage{5}surface. As cutting-edge radius increases to 3 nm, the ratio of \emph{a/R} is 0.134, the amplitude of elastic deformation was evidently increased.
+\decompnote{The values 5.70 (sharp tool) and 0.134 (3 nm) at a = 2 Å differ from the a/R values printed in Figs. 5--7 for the same cases (2.86 or 2.85, and 0.067) and from the text on p.\,6 and p.\,11 (2.85); 0.134 = 2 × 0.067. Kept as printed.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Fig. 3} Simulation results at cutting depth of 1.1 Å
+\alttext{Six MD snapshots (on p.\,4), side views of the workpiece surface during cutting, arranged in three rows of two (a--f). In each, the workpiece is red atoms with a green row (second atomic layer) under a blue top row (first atomic layer), and a grey tool made of atoms comes from above. Labels: (a) ``\emph{a/R}=1.57'', ``Cutting tool'', ``R=0nm'' (tool drawn as a block with a straight vertical face and flat bottom); (b) ``\emph{a/R}=0.055'', ``R=2nm''; (c) ``\emph{a/R}=0.037'', ``R=3nm''; (d) ``\emph{a/R}=0.0275'', ``R=4nm''; (e) ``\emph{a/R}=0.0147'', ``R=7.5nm''; (f) ``a/R=0.011'' (upright), ``R=10nm''; panels b--f show a bent tool whose rounded edge gets wider with R. In all panels the blue top row is continuous with no chip: under the tool's lowest point the blue atoms are only pushed slightly down into a shallow dip (a few atoms wide in a--d, a longer dip in e and f), with the green row bent below it.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Fig. 4} Simulation results at cutting depth of 1.4 Å
+\alttext{Six MD snapshots (on p.\,5), side views, three rows of two (a--f), same colouring as Fig. 3 (blue first layer, green second layer, red below, grey tool). Labels: (a) ``\emph{a/R}=2.0'', ``Chip'', ``Cutting tool'', ``R= 0nm''; (b) ``\emph{a/R}=0.07'', ``Chip'', ``R= 2nm''; (c) ``\emph{a/R}=0.047'', ``Chip'', ``R= 3nm''; (d) ``\emph{a/R}=0.035'', ``Chip'', ``R= 4nm''; (e) ``\emph{a/R}=0.019'', ``Chip'', ``R= 7.5nm''; (f) ``\emph{a/R}=0.014'', ``Chip'', ``R= 10nm''. In (a) blue atoms pile up in front of the straight tool face as a small chip, and the blue row left of the tool is lifted and loosened; to the right of the tool (the processed surface) the green row is exposed with a few isolated blue atoms on it. In (b)--(d) a low mound of blue atoms (the chip) sits in front of the rounded edge; behind the tool, short groups of blue atoms remain on the green surface with gaps between them. In (e) and (f) the chip is a thin, flat blue layer; under and behind the tool the surface is disordered, with blue atoms mixed into the green row and green atoms displaced, and in (e) a vertical disturbance of the red lattice under the contact point.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Fig. 5} Simulation results of ACS cutting at cutting depth = 2 Å
+\alttext{Six MD snapshots (on p.\,6), side views, three rows of two (a--f), same colouring (blue first layer, green second layer, red below, grey tool). Labels: (a) ``\emph{a}/R=2.86'', ``Chip'', ``Cutting tool'', ``R= 0nm''; (b) ``\emph{a}/R=0.1'', ``Chip'', ``R=2nm''; (c) ``\emph{a}/R=0.067'' (upright ``c)''), ``Chip'', ``R= 3nm''; (d) ``\emph{a}/R=0.05'', ``Chip'', ``R= 4nm''; (e) ``\emph{a}/R=0.027'', ``Chip'', ``R= 7.5nm''; (f) ``\emph{a}/R=0.02'', ``Chip'', ``R= 10nm''. In (a)--(c) the blue first layer is peeled off as a chip that lies flat on the green surface to the left of the tool (in (a) it curls up against the straight tool face); to the right of the tool the processed surface is the green row only. In (d) a few blue and green atoms remain on the surface right of the tool, circled by a blue ellipse. In (e) a blue ellipse marks a gap with scattered atoms in the surface behind the tool. In (f) a large blue ellipse marks a region of distorted red lattice reaching deep below the tool's contact point, and the surface behind the tool carries mixed green, blue and red atoms.}
+
+When tool edge radius is increased to 4 nm, as given in Fig. 5d, many atoms within the targeted first atomic layer have been pressed into second atomic layer, forming the new processed surface. At the tool edge radius of about 7.5 nm, a part of atoms in first layer is even diffused to third atomic layer. When tool edge radius reaches about 10 nm, an evident elastic and plastic deformation occurs, which can be also determined in the following Section 3.3.
+
+Therefore, the cutting-based single atomic layer removal depends on not only the ratio of \emph{a/r}\textsubscript{\emph{w}}, but also the ratio of \emph{a/R}. To achieve single atomic layer removal by mechanical cutting, i.e., material removal at atomic scale, both atom sizing effects and cutting-edge radius effect should be considered, significantly different from micro/nanocutting and conventional macroscale cutting.
+
+\subsection*{Surface Generation}
+
+One objective of cutting-based atomic layer removal is to obtain the defect-free processed surface with ideal crystalline structure. The workpiece atomic sizing effect on surface generation in ACS cutting has been studied recently [20]. In the present study, to clearly indicate the cutting-edge radius effect on surface generation in ACS cutting, the surface topography and surface composition of the new processed surface are studied as follows.
+
+\subsubsection*{\emph{Surface Topography}}
+
+Figure 6 shows the surface topographies of the processed Cu (111) surface at different edge radii. Here, a cutting depth of 2 Å is adopted. As shown in Fig. 6a, b, when tool edge radius is smaller than 3 nm, the Cu (111) surfaces with ideal crystalline structure could be obtained. As for the defects at the left-side of workpiece surface, it is due to the deformation during cutting-exit of tool. During the cutting in a stead stage, there is no surface defect formed on the processed surface.
+
+As tool edge radius increases, however, many defects are gradually formed on the processed surface. At the edge radius of 4 nm, many pitted-like defects are formed on the processed surface, see Fig. 6d. Further, when the tool edge radius is equal to or larger than 5 nm, there are a large number of surface defects formed, seriously deteriorating the surface quality. At such case, more than one layer of atoms has been removed from workpiece surface. Therefore, it can be determined that at the cutting depth of 2 Å, when tool edge radius is smaller than 3 nm, single atomic layer removal could be achieved on Cu (111) surface. Due to the cutting-edge radius effect, the ratio of cutting depth (\emph{a}) to edge radius (\emph{R}) should be larger than one threshold, in order to achieve defect-free processed surface via cutting-based \pdfpage{6}single atomic layer removal. Here, the critical value of the ratio of \emph{a/R} is [0.05, 0.067].
+
+\subsubsection*{\emph{Surface Composition}}
+
+Figure 7 shows the composition of the processed surfaces at various tool edge radii and the cutting depth of 2 Å. Here, green and blue atoms are those from first and second layers, while the red atoms are those below second atomic layer. As shown in Fig. 7a, when a sharp cutting tool is used, the ratio of \emph{a/R} is 2.85, the processed surface only consists of atoms in first layer. This result indicates that the targeted first atomic layer has been thoroughly removed from workpiece. Moreover, it means that the material removal is conducted in the form of layer-by-layer, in which the removed materials only comes from the targeted first atomic layer on the workpiece surface.
+
+However, when tool edge radius is 2 nm and 3 nm, as shown in Fig. 7b, c, the processed surfaces are composited of two atomic layers (blue and green). It indicates that though single atomic layer removal has been achieved, the surface generation process involves minimum 2 atomic layers. Further, when tool edge radius is larger than 4 nm, there is a large number of atoms of first atomic layer on the processed surface, indicating that many atoms in first layer have been pressed to generate a new surface.
+
+Therefore, with an increase in cutting edge radius, the surface generation has been greatly changed. Two kinds of surface generation mechanism involved are summarized below:
+
+\begin{hangpars}
+1.\quad \emph{Layer-by-layer}: the targeted first atomic layer is fully removed to generate new processed surface. \pdfpage{7}Only atoms within first layer are removed during the cutting process.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Fig. 6} Effects of tool edge radius on surface topographies. Atoms are coloured based on their z-direction heights
+\alttext{Six top views of the processed Cu (111) workpiece surface (on p.\,7), three rows of two (a--f), atoms coloured by z-direction height. Colour key at the right: a vertical rainbow (jet) bar labelled ``\emph{z}-direction height'', ``-200Å'' (dark red) at the top and ``-232Å'' (dark blue) at the bottom. Panel labels (bottom centre): (a) ``R= 0nm, \emph{a}/R= 2.85''; (b) ``R= 2nm, \emph{a}/R= 0.1''; (c) ``R= 3nm, \emph{a}/R= 0.067''; (d) ``R= 4nm, \emph{a}/R= 0.05''; (e) ``R= 7.5nm, \emph{a}/R= 0.027''; (f) ``R= 10nm, \emph{a}/R= 0.02''. Each panel shows a wide horizontal yellow-green band (the processed surface) between orange bands at top and bottom (higher, unprocessed surface at the sides of the cut). In (a) the yellow-green band is uniform. In (b) a small green triangular patch sits at the left end and a few orange-red atom clusters lie along the orange bands' edges. In (c) the band is uniform except for faint spots inside three blue outline ellipses at the right. In (d) four blue ellipses mark small spots (single atoms of other colour) along the band. In (e) and (f) many irregular brighter green patches (lower atoms) fill the left half of the band, scattered green spots lie further right, and the orange bands carry more red clusters; (f) also has a diagonal orange streak crossing the upper band and an orange patch in the right part of the band.}
+\figuredata{a}{figures/fig6a.csv.gz}{figures/fig6.py}{tier 3, colour key conversion of the embedded 300 ppi image (hue matched to the printed key; grid at native resolution, gzip) by \texttt{figures/fig6\_extract.py}}
+\figuredata{b}{figures/fig6b.csv.gz}{figures/fig6.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig6c.csv.gz}{figures/fig6.py}{tier 3, as panel a; the authors' blue ellipses blanked}
+\figuredata{d}{figures/fig6d.csv.gz}{figures/fig6.py}{tier 3, as panel a; the authors' blue ellipses blanked}
+\figuredata{e}{figures/fig6e.csv.gz}{figures/fig6.py}{tier 3, as panel a}
+\figuredata{f}{figures/fig6f.csv.gz}{figures/fig6.py}{tier 3, as panel a}
+
+\begin{hangpars}
+2.\quad \emph{Multi-layer removal}: though single atomic layer removal could be realized, the atoms within targeted atomic layer undergo two typical displacement behaviours. A part of atoms would be formed into chip by shear stress-driven dislocation motion, while others would be extruded into the processed surface, under the action of cutting tool. The material removal process involves minimum two atomic layers.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Fig. 7} Surface composition of processed surfaces. Atoms are coloured based on the number of atomic layer
+\alttext{Six top views of the processed surface (on p.\,7), three rows of two (a--f), atoms coloured by their original atomic layer: green, blue (purple-blue) and red; no colour key. Panel labels (bottom centre, white text): (a) ``R= 0nm, \emph{a}/R= 2.85''; (b) ``R= 2nm, \emph{a}/R= 0.1''; (c) ``R= 3nm, \emph{a}/R= 0.067''; (d) ``R= 4nm, \emph{a}/R= 0.05''; (e) ``R=7.5nm, \emph{a}/R= 0.054''; (f) ``R= 10nm, \emph{a}/R= 0.02''. Each panel has a wide horizontal green band (processed surface) between blue bands at top and bottom. (a) The green band is uniform. (b) A few blue atoms near the left end (with a thin red zig-zag line) and a few isolated blue atoms elsewhere. (c) Scattered blue atoms and a few red ones, mostly at the right end. (d) Many scattered blue atoms and several small red triangular clusters across the band. (e) and (f) The band is heavily mixed: large irregular red patches (especially in the left half) and many blue atoms among the green.}
+\decompnote{Fig. 7(e) prints ``\emph{a}/R= 0.054'' for R = 7.5 nm, where Fig. 6(e) prints 0.027 for the same case. Kept as printed.}
+
+\pdfpage{8}
+\subsection*{Subsurface Deformation Mechanism}
+
+In nanocutting, there is elastic and plastic deformation on the processed surface during cutting process. After the cutting tool passes over workpiece surface, the elastic portion springs back, while the plastic deformed part would lead to lasting deformation [1, 2]. As cutting depth decreases to atomic scale, in the cutting towards single atomic layer removal, it is postulated that there is only elastic deformation occurring on the processed surface. To verify it, the workpiece subsurface deformation states during and after cutting are analysed. Figure 8 illustrates the defect structures in workpiece subsurface at various tool edge radii. Here, the atoms are coloured based on centro-symmetry parameter (CSP), and the atoms with the CSP of smaller than 3 are omitted, which represent those with perfect FCC structure.
+
+When cutting edge radius is smaller than 4 nm, no subsurface defect is formed in the processed surface. There is only elastic deformation on the processed surface in cutting.
+
+As shown in Fig. 8, when cutting edge radius is equal to or larger than 4 nm, there are subsurface defects initialized. Moreover, as cutting-edge radius increase, the number of subsurface defects is significantly increased. When the edge radius reaches about 10 nm, one dislocation loop has been formed, and it could not disappear after cutting, as shown in Fig. 9e. It clearly indicates the plastic deformation occurring on the processed surface.
+
+After tool passes over the workpiece surface, the elastically deformed portion would spring back; thus, parts of subsurface defects are annihilated. As displayed in Fig. 9a–c, finally, there is no subsurface defect existed, when the tool edge radius is 2 nm or 3 nm.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Fig. 8} Surface composition of the processed surfaces. Atoms are coloured based on their CSPs
+\alttext{Six framed side views of the workpiece during cutting at cutting depth 2 Å (on p.\,8), three rows of two (a--f), showing only atoms with CSP of 3 or more, coloured by CSP; grey atoms form the tool. Colour key at the right: a jet bar labelled \emph{CSP}, ``10'' (dark red) at the top and ``3'' (dark blue) at the bottom. Labels: (a) ``\emph{a}/R=5.70'', ``Cutting tool'', ``R= 0nm''; (b) ``\emph{a}/R=0.1'', ``R= 2nm''; (c) ``\emph{a}/R=0.067'', ``R= 3nm''; (d) ``\emph{a}/R=0.05'', ``R= 4nm''; (e) ``\emph{a}/R=0.027'', ``R= 7.5nm''; (f) ``\emph{a}/R=0.02'', ``R= 10nm''. In every panel a red line of atoms marks the workpiece's top surface (with a raised red strip, the chip, to the left of the tool) and another red line marks the bottom of the frame. Under the tool and to its left lie thin layers of green and cyan atoms (CSP about 5--7), with a few blue and yellow atoms near the tool's contact point. The defected layer is thin and short in (a)--(c), wider and thicker in (d) and (e), with small green clusters on the surface right of the tool in (d) and (e). In (f) two large defect structures hang below the surface: a loop-shaped band of green/cyan atoms under the tool (a few dark blue atoms at its bottom) and, to the right, a slanted column of cyan/green atoms ending in blue atoms.}
+\figuredata{a}{figures/fig8a.csv.gz}{figures/fig8.py}{tier 3, colour key conversion of the embedded 300 ppi image (hue matched to the printed key; grid at native resolution, gzip) by \texttt{figures/fig8\_extract.py}}
+\figuredata{b}{figures/fig8b.csv.gz}{figures/fig8.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig8c.csv.gz}{figures/fig8.py}{tier 3, as panel a}
+\figuredata{d}{figures/fig8d.csv.gz}{figures/fig8.py}{tier 3, as panel a}
+\figuredata{e}{figures/fig8e.csv.gz}{figures/fig8.py}{tier 3, as panel a}
+\figuredata{f}{figures/fig8f.csv.gz}{figures/fig8.py}{tier 3, as panel a}
+\decompnote{The caption of Fig. 8 repeats the wording of the Fig. 7 caption (``Surface composition ...''); the text describes Fig. 8 as the defect structures in the workpiece subsurface. Fig. 8(a) prints \emph{a}/R=5.70 for R = 0 nm, where Figs. 5--7 print 2.86 or 2.85 for that case. Kept as printed.}
+
+\begin{center}
+\includegraphics[width=0.85\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Fig. 9} Subsurface defects at various tool edge radii. Atoms are coloured based on their CSPs
+\alttext{Five stacked views (a--e, on p.\,9) of the whole workpiece cross-section after cutting, showing only atoms with CSP of 3 or more, coloured by CSP. Colour key at the right: jet bar labelled \emph{CSP}, ``10'' (dark red) at the top and ``3'' (dark blue) at the bottom. Each panel shows a long rectangular outline of red (surface) atoms, with a thin green/cyan column on the right edge and the inside of the left edge, and a heap of mostly red atoms with green/cyan patches at the far left (the tool exit region). Labels (bottom centre): (a) ``\emph{a}/R=0.10 R= 2.0 nm''; (b) ``\emph{a}/R=0.067 R= 3.0 nm''; (c) ``\emph{a}/R=0.05 R= 4.0 nm''; (d) ``\emph{a}/R=0.027 R= 7.5nm''; (e) ``\emph{a}/R=0.02 R= 10nm'' and ``Dislocation loop''. (a) Apart from the left-end heap, no defect atoms under the top surface. (b) A triangular loop of cyan atoms in the left-end heap; two small green clusters on the top surface at the right. (c) A row of small green clusters along the top surface. (d) Many small green clusters along the top surface and a flat lens of cyan/blue atoms just below the surface near the middle. (e) A large dislocation loop of cyan/blue atoms hanging below the top surface in the left half (labelled), and a column of cyan/green atoms with blue atoms at its bottom below the surface right of centre.}
+\figuredata{a}{figures/fig9a.csv.gz}{figures/fig9.py}{tier 3, colour key conversion of the embedded 300 ppi image (hue matched to the printed key; grid at native resolution, gzip) by \texttt{figures/fig9\_extract.py}}
+\figuredata{b}{figures/fig9b.csv.gz}{figures/fig9.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig9c.csv.gz}{figures/fig9.py}{tier 3, as panel a}
+\figuredata{d}{figures/fig9d.csv.gz}{figures/fig9.py}{tier 3, as panel a}
+\figuredata{e}{figures/fig9e.csv.gz}{figures/fig9.py}{tier 3, as panel a}
+
+\pdfpage{9}As for the plastically deformed portion, it leads to a lasting deformation. As shown in Fig. 9, when tool edge radius is 7.5 nm, there is small number of subsurface defects remained. When tool edge radius is 10 nm, the dislocation loop and stacking fault are finally existed in the workpiece subsurface.
+
+Based on above analysis, it can be inferred that to enable cutting-based single atomic layer removal, plastic deformation should be avoided, and only elastic deformation is allowed on the processed surface. It is regarded as one characteristic feature of the cutting-based single atomic layer removal process.
+
+\subsection*{Atomic Displacement Behaviour}
+
+According to MD trajectory files, dislocation motion has dominated the cutting-based single atomic layer removal process. Figure 10 shows the simulation results using different tool edge radiuses. At the edge radius of 2 nm, under the action of cutting tool, only first atomic layer is slipped along cutting direction to form into chip, while others remain immobilized. It could be regarded as one cross section of one edge dislocation.
+
+As the tool edge radius increases, part of material within first atomic layer has been pressed into the processed surface, inducing the slip of the atomic layers below the first layer. Moreover, as tool edge radius increases, the number of atomic layers undergoing material slip process tends to grow. When tool edge radius is 4 nm, except for first atomic layer, the second atomic layer also conducts material slip along cutting direction, as illustrated in Fig. 10. When the tool edge radius is 7.5 nm, as cutting tool advances, the topmost three atomic layers on the workpiece surface have slipped along cutting direction. Further, when tool edge radius is increased to 10 nm, a large number of materials has been pressed to form new processed surface; there is plastic deformation (see Fig. 10e) occurring on the workpiece surface, which can be also determined in Fig. 9.
+
+Figure 11 shows the slip process of the targeted atomic layer along cutting direction. The area of the slipped zone is continually enlarged with the cutting tool moving forward. At the cutting distance of 17.5 nm, the slipped zone has reached a maximum value. Subsequently, the materials within the slipped zone are continuously formed into chip; the volume of chip is also increased.
+
+Overall, as per the analysis in Sections 3.3 and 3.4, as tool edge radius increases, both subsurface deformation mechanism and atomic displacement behaviour has greatly changed. At different tool edge radii, different numbers of atomic layers tend to slip along cutting direction, while different deformation regimes occur on the processed surface, as summarized in Table 2. Moreover, it can be found that in the cutting-based single atomic layer removal process, the \pdfpage{10}chip formation is governed by shear-stress driven dislocation motion, significantly different from the chip formation in conventional cutting and nanocutting, It can be also regarded as one characteristic feature of cutting-based single atomic layer removal.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Fig. 10} Atomic displacement behaviour at various cutting-edge radius
+\alttext{Five framed close-up side views of the surface layers (on p.\,10): (a) at top right, (b)--(e) in two rows below. Atoms are large spheres: dark blue in the top layer(s) (the slipping/chip material), a cyan row and a yellow-green row below, and red atoms underneath; short black lines/arrowheads on the atoms show displacement vectors, long black streaks in the blue layers point to the right. A thick red arrow pointing left lies in the blue layer in each panel; dashed purple horizontal lines mark the slip plane. Top left, outside the panels, a dashed rounded box holds a legend: ``Slipped zone'' (red arrow), ``Slip plane'' with a dashed purple arrow pointing left, ``Unslipped zone'', and below the box ``\,``Edge dislocation''\,''. Panel labels: (a) ``R=2nm'' (one blue layer above the slip plane); (b) ``R=3nm'' and ``Slip plane''; (c) ``R=4nm'' and ``Slip plane'' (the dashed line lies one layer deeper, under the cyan row); (d) ``R=7.5nm'' and ``Slip plane'', with an additional red arrow pointing down-left near the tool position and many black displacement marks in the red region below; (e) ``R=10nm'' and ``Slip plane'', with a red arrow pointing down-left and a dense field of downward black displacement arrows in the red atoms below the contact region.}
+
+\subsection*{Cutting Force}
+
+\subsubsection*{\emph{Influence of Edge Radius Effect}}
+
+Figure 12 shows the cutting-edge radius effect on the averaged cutting forces at cutting depth of 2 Å. Here, the tangential and normal components of cutting forces, \pdfpage{11}namely, \emph{F}\textsubscript{\emph{t}} and \emph{F}\textsubscript{\emph{n}}, are compared. As illustrated, for a sharp cutting tool, the ratio of \emph{a/R} is 2.85, and the \emph{F}\textsubscript{\emph{t}} of 16.4 nN is evidently smaller than \emph{F}\textsubscript{\emph{n}} of 23.7 nN. As tool edge radius increases, both of \emph{F}\textsubscript{\emph{t}} and \emph{F}\textsubscript{\emph{n}} are increased. However, the \emph{F}\textsubscript{\emph{n}} has exhibited greatly larger growth amplitudes than \emph{F}\textsubscript{\emph{t}}. It clearly indicates that as tool edge radius increases, the normal cutting force would have larger effect on material removal process at ACS cutting process. However, when tool edge radius is larger than about 3 nm, single atomic layer removal could not be achieved. Thus, a larger normal cutting force would not be helpful to enable cutting-based single atomic layer removal, and a lower normal cutting force should be preferably adopted.
+\decompnote{In Fig. 12(a) at R = 0 nm the plotted Ft is about 23.7 nN and Fn about 16.8 nN (fig12a.csv), i.e. Ft is the larger one; the two values in the sentence above appear swapped. Kept as printed.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Fig. 11} Slip process of the targeted atomic layer at cutting edge radius of 2 nm. Atoms are coloured based on their x-direction atomic displacement values
+\alttext{Four perspective renderings (on p.\,10), two rows of two (a--d), of the workpiece block (orange atoms) and the grey tool above its top surface; atoms coloured by x-direction displacement. Colour key at the right: jet bar labelled ``\emph{x}-displacement'', ``2.2Å'' (dark red) at the top and ``-10.2Å'' (dark blue) at the bottom. Labels: (a) ``Cutting distance=10nm'', ``Cutting tool'', ``Chip'' (red arrow) and ``Slipped zone'' (white text); (b) ``Cutting distance=12.5nm''; (c) ``Cutting distance=15nm'' and ``Slipped zone'' in two lines; (d) ``Cutting distance=17.5nm''. In each panel a dark blue zone (the slipped top layer) lies on the top surface in front of (to the left of) the tool, edged by a thin cyan/green/yellow border on its left side; a thin line of blue and cyan atoms runs from the tool to the right along the cut groove, and a short yellow-green row of atoms appears on the side face. The blue zone grows from a small patch in (a) to a large region reaching the block's left end in (d). In (d) a few red/orange atoms appear at the lower left of the block.}
+\figuredata{a}{figures/fig11a.csv.gz}{figures/fig11.py}{tier 3, colour key conversion of the embedded 300 ppi image (hue matched to the printed key; grid at native resolution, gzip) by \texttt{figures/fig11\_extract.py}; semi-quantitative, see the CSV header}
+\figuredata{b}{figures/fig11b.csv.gz}{figures/fig11.py}{tier 3, as panel a}
+\figuredata{c}{figures/fig11c.csv.gz}{figures/fig11.py}{tier 3, as panel a}
+\figuredata{d}{figures/fig11d.csv.gz}{figures/fig11.py}{tier 3, as panel a}
+
+\noindent\textbf{Table 2} Atom displacement behaviour versus cutting edge radius\par
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+ & Number of slipped atomic layers & Deformation regimes on the processed surface\\
+\midrule
+\emph{R} < 3 nm & 1 & Elastic deformation\\
+\emph{R} > 3 nm and \emph{R} < 7.5 nm & 2 & \\
+\emph{R} > 7.5 nm and \emph{R} < 10 nm & 3 & \\
+\emph{R} > =10 nm & 4 & Elastic-plastic deformation\\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 2 also as \texttt{tables/table2.csv}.}
+
+As the normal cutting forces provide the compressive stress to enable elastic and/or plastic deformation on the processed surface, the tangential cutting forces would provide the shearing stress to chip formation. Therefore, it can be inferred that chip formation in cutting-based single atomic layer removal should be mainly driven by the tangential cutting force. It can be also seen in Fig. 12b that the \emph{F}\textsubscript{\emph{t}} has exhibited three kinds of changes, which further leads to different surface topographies (see Fig. 6), including the following:
+
+When tool edge radius is smaller than about 3 nm, namely, the ratio of \emph{a/R} is 0.067, the \emph{F}\textsubscript{\emph{t}} approximately remains unchanged, and it is always smaller than 25 nN, as edge radius increases. In such case, only one atomic layer is removed from workpiece surface.
+
+When the tool edge radius is 3 nm and 5 nm, the ratios of \emph{a/R} are 0.04 and 0.067, while \emph{F}\textsubscript{\emph{t}} is evidently increased to about 38.5 nN. Consequently, more than one atomic layer is removed from workpiece surface, but there is small number of surface defects formed.
+
+As for the edge radius of larger than 5 nm, \emph{F}\textsubscript{\emph{t}} also gradually converges to a constant value. In this case, more than one atomic layer is removed. However, large numbers of surface defects are formed on the workpiece surface and subsurface.
+
+It can be concluded that a very low tangential cutting force could enable cutting-based single atomic layer removal at a reasonable cutting-edge radius, such as 2 nm. In turn, single atomic layer removal could not be realized, despite of the larger tangential cutting force.
+
+\subsubsection*{\emph{Influence of Atomic Sizing Effect}}
+
+Figure 13 further gives the plot of cutting forces versus cutting depth at cutting edge radius of 2 nm. It can be found that at the cutting-edge radius of 2 nm, as cutting depth increases, both normal cutting force and tangential cutting forces have exhibited three-stage changes. There are evident changes at cutting depth of about 1.1 Å and 1.6 Å. The corresponding ratio of cutting depth (\emph{a}) to workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}) are 0.055 and 0.080, which are abovementioned two critical values of \emph{a/r}\textsubscript{\emph{w}}, C\textsubscript{1} and C\textsubscript{2,} as depicted in Section 3.1.
+\decompnote{0.055 and 0.080 equal 1.1 Å and 1.6 Å divided by the 2 nm edge radius (a/R), not by r\textsubscript{w} = 1.28 Å (which would give 0.86 and 1.25). Kept as printed.}
+
+When cutting depth is smaller than 1.1 Å, namely, the ratio of \emph{a/r}\textsubscript{\emph{w}} is less than 0.055, \emph{F}\textsubscript{\emph{t}} is always 0 nN, while \emph{F}\textsubscript{\emph{n}} is \pdfpage{12}linearly increased to about 32 nN. However, the cutting forces could not enable plastic material deformation and removal on the workpiece surface. Consequently, there is only elastic deformation on workpiece surface, as shown in Fig. 3.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Fig. 12} Plot of cutting forces versus cutting edge radius at cutting depth of 2 Å
+\alttext{Two Excel line charts with markers and smoothed connecting lines, light-grey gridlines (on p.\,11). (a) x axis ``Tool edge radius R(nm)'', linear, 0 to 10 (ticks every 1); y axis ``Cutting forces(nN)'', linear, 10 to 170 (labels every 20). Legend: \emph{Ft} (blue circles), \emph{Fn} (orange circles); markers at R = 0, 1, 2, 3, 4, 5, 7.5 and 10. Fn rises steeply and almost linearly from about 17 nN at R = 0 through about 37, 60, 80, 100 to 130 nN at R = 5, then levels off to about 157 at 7.5 and 166 at 10. Ft starts at about 24 nN (above Fn at R = 0; the curves cross between 0 and 1), stays at 25--26 up to R = 3, then rises to about 32 at 4 and 39 at 5 and creeps up to about 41 and 43. (b) Same x axis; y axis ``Cutting forces(nN)'', 22 to 46 (labels every 4); legend \emph{Ft} only. Ft: about 23.8, 24.6, 25.4, 25.7 at R = 0--3, a steep rise to 31.6 at 4 and 38.5 at 5, then 40.7 at 7.5 and 43.0 at 10; the smoothed line dips slightly between 2 and 3.}
+\figuredata{a}{figures/fig12a.csv}{figures/fig12.py}{tier 3, digitized from the embedded 300 ppi raster (marker centres, axes calibrated on the gridlines) by \texttt{figures/fig12\_extract.py}}
+\figuredata{b}{figures/fig12b.csv}{figures/fig12.py}{tier 3, as panel a}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent\textbf{Fig. 13} Plot of cutting forces versus cutting depth at edge radius of 2 nm
+\alttext{Excel line chart with markers and smoothed connecting lines, light-grey gridlines (on p.\,12). x axis ``Cutting depth(Å)'', linear, 0 to 2.4 (labels every 0.2); y axis ``Cutting force(nN)'', linear, -10 to 80 (labels every 10). Legend (lower right): Ft (blue circles), Fn (orange circles). Markers at cutting depths of about 0, 0.18, 0.38, 0.58, 0.78, 0.98, then every 0.1 from 1.08 to 1.88, and 2.08, 2.18, 2.28, 2.38 Å. Ft is about 0--1 nN up to 1.08 Å, jumps to about 16 at 1.18 and 24 at 1.28, then stays between about 24 and 27.4 nN to 2.38 Å (26 at the last point). Fn starts at about -4 nN at 0, rises roughly linearly through 7, 10, 17, 22, 28 to 32 nN at 1.08 Å, jumps to about 59 at 1.18, stays at 56--60 up to 1.58, then rises with fluctuations: about 60 (1.68), 65 (1.78), 59 (1.88), 60 (2.08), 70 (2.18), 65 (2.28) and 76 nN (2.38).}
+\figuredata{(single panel)}{figures/fig13.csv}{figures/fig13.py}{tier 3, digitized from the embedded 300 ppi raster (marker centres, axes calibrated on the gridlines) by \texttt{figures/fig13\_extract.py}}
+
+When the cutting depth is larger than 1.1 Å, but smaller than 1.6 Å, the ratio of \emph{a/r}\textsubscript{\emph{w}} is more than 0.055 but less than 0.080. If this case, \emph{F}\textsubscript{\emph{t}} has greatly increased from 0 nN to about 25 Nn, while \emph{F}\textsubscript{\emph{n}} further increased to about 58 nN. The cutting forces are larger enough to enable material removal on workpiece surface. At the cutting depth of 1.4 Å, there is chip formation and material removal on workpiece surface. But the stable and continuous material removal could not be realized and many defects are formed on the processed surface, as shown in Fig. 4.
+
+When the cutting depth is larger than 1.6 Å, both \emph{F}\textsubscript{\emph{t}} and \emph{F}\textsubscript{\emph{n}} are large enough to enable continuous material removal on workpiece surface. Consequently, chip is stably formed over the workpiece surface, and the targeted atomic layer is continuously removed via chip formation, forming a new processed surface, as shown in Fig. 5b and Fig. 6b.
+
+Overall, both cutting-edge radius effect and atomic sizing effect have an influence on cutting force in cutting-based single atomic layer removal process, thereby changing the material removal and surface generation process.
+
+\section*{Discussions About Cutting-Based Single Atomic Layer Removal Mechanism}
+
+As per above analysis, both atomic sizing effect and cutting-edge radius effect have a great influence on the cutting-based single atomic layer removal mechanism. As summarized in Table 3, depending on the ratio of cutting depth to workpiece atomic radius(\emph{a/r}\textsubscript{\emph{w}}) and the ratio of cutting depth to edge radius(\emph{a/R}), there are minimum 5 typical cases of material deformation and removal behaviours in cutting-based single atomic layer removal process. In this section, the fundamental material deformation and removal mechanism of each case is summarized.
+
+In conventional machining, as cutting depth is significantly larger than the cutting-edge radius, the cutting-edge radius effect can be ignored. As the cutting depth is decreased to nanoscale, which is comparable or lower than the edge radius, the edge radius effect can be no longer ignored. In nanocutting, the material removal process is dominated by the extrusion deformation, which is greatly influenced by cutting-edge radius. As the cutting depth is further decreased to atomic scale, except for cutting-edge radius effect, a new sizing effect, atomic sizing effect [20] has a great influence on material removal.
+
+As shown in Fig. 14, in the cutting-based single atomic layer removal process, there are two portions involving in cutting, i.e., nanometric cutting edge and the lowest cutting tool atoms (\emph{B}). Such two portions could be coupled to enable single atomic layer removal. The size of cutting edge, regarded as ‘nano-tool,’ is described by edge radius (\emph{R}). The cutting edge is the envelope curve of the outermost atoms in cutting tool. Regarding the lowest atoms, as ‘atomic-tool,’ it is described by workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}). The cutting-based single atomic layer removal is the results of the coupled actions of nano-tool and atomic-tool on workpiece material.
+
+Firstly, depending on the ratio of cutting depth (\emph{a}) to the workpiece atomic radius (\emph{r}\textsubscript{\emph{w}}), i.e., \emph{a/r}, there are three \pdfpage{14}kinds of material deformation behaviour in ACS cutting process.
+
+\noindent\textbf{Table 3} Effect of atomic sizing effect and cutting-edge effect on material removal during ACS cutting\par
+\begin{center}\footnotesize
+\begin{tabular}{p{2.6cm}p{0.9cm}p{2.4cm}p{2.4cm}p{2.6cm}p{2.0cm}}
+\toprule
+ & & \multicolumn{4}{l}{Ratio of cutting depth to atomic radius (\emph{a/r}\textsubscript{\emph{w}})}\\
+\cmidrule{3-6}
+ & & (0, C1) & (C1, C2) & \multicolumn{2}{l}{(C2, ∞)}\\
+\midrule
+Ratio of cutting depth to edge radius (\emph{a/R}) & (T1, ∞) & Elastic deformation, no material removal (case 1) & Noncontinuous material removal, chip formation (case 2) & Elastic deformation, chip formation by dislocation motion & Slip of 1 atomic layer (case 3)\\
+ & (T2, T1) & & & & Slip of over 2 atomic layers (case 4)\\
+ & (0, T2) & & & \multicolumn{2}{p{4.8cm}}{No or extremely small chip formation, elastic-plastic deformation (case 5)}\\
+\midrule
+\multicolumn{2}{l}{Material removal behaviour} & Sliding & & Cutting & \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 3 (bottom of p.\,12) also as \texttt{tables/table3.csv}. Page 13 holds only Figs. 14 and 15, so its marker follows here, after the start of p.\,14.}
+
+\pdfpage{13}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig14.png}
+\end{center}
+\noindent\textbf{Fig. 14} Schematic diagram for cutting-based single atomic layer removal
+\alttext{Schematic (on p.\,13). Main drawing (a): a close-packed workpiece of yellow circles in seven rows, each row with a dash-dotted centre line; a purple dashed line along the top of the first row and a blue solid line slightly lower (at the level of the tool's lowest point) mark the cut. At upper right, a quarter-circle tool outline (thin black arc) whose inner edge is lined with a curved chain of black circles (tool atoms), bounded by purple dashed lines; a red arrow from the centre of curvature (crossing of two dash-dotted lines) to the chain is labelled ``R''; a small red arrow in the lowest tool atom is labelled \emph{r}\textsubscript{\emph{t}}; the lowest tool atom is labelled ``B'' and the workpiece atom just ahead of it ``A''; a small red arrow in a workpiece atom is labelled \emph{r}\textsubscript{\emph{w}}; a vertical red double arrow from the top of the first row down to the blue line is labelled \emph{a}; label ``\emph{a})'' at upper right. Three insets at top left, each showing a yellow atom A resting on two yellow atoms with a black tool atom B to its right at different heights, and a red double arrow \emph{a} between purple horizontal lines at the top of A and the bottom of B: (b) ``\emph{a}<\emph{r}\textsubscript{\emph{w}}'' (B high, a reaches less than A's radius); (c) ``\emph{r}\textsubscript{\emph{w}} <\emph{a}<=\emph{r}\textsubscript{\emph{w}}+\emph{r}\textsubscript{\emph{t}}'' (B lower, beside A's centre); (d) ``\emph{a}>\emph{r}\textsubscript{\emph{w+}} \emph{r}\textsubscript{\emph{t}}'' (B lower still, near A's bottom).}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig15.png}
+\end{center}
+\noindent\textbf{Fig. 15} Schematic illustration of cutting-based single atomic layer removal at the ratio of a/r\textsubscript{w} smaller than C1
+\alttext{Schematic (on p.\,13): the yellow close-packed workpiece (seven rows with dash-dotted centre lines) under a quarter-circle tool whose inner edge is a chain of black atoms bounded by purple dashed lines; red arrow ``R'' from the centre of curvature to the chain; small red arrows \emph{r}\textsubscript{\emph{t}} (tool atom) and \emph{r}\textsubscript{\emph{w}} (workpiece atom). The purple dashed line lies along the top of the first row and the blue line slightly below it; the lowest tool atoms dip just below the top of the first row, which stays continuous (no chip). At right, two vertical red double arrows from the top surface downward are labelled \emph{a} and \emph{D}\textsubscript{\emph{e}}.}
+
+\begin{hangpars}
+1.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} is smaller than critical value 1(C\textsubscript{1}).
+\end{hangpars}
+
+As shown in Fig. 15, chip formation does not occur, but elastic deformation does occur on the workpiece surface. During cutting process, after workpiece passes the lowest point of cutting tool, the elastically deformed part would recover completely. Consequently, no material deformation and removal occurred on the topmost surface. In such case, the tool edge effect could be ignored. This ratio could be affected by material properties (case 1).
+
+\begin{hangpars}
+2.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than \emph{C}\textsubscript{\emph{1}}, but smaller than critical value 2 (C\textsubscript{2}).
+\end{hangpars}
+
+As the ratio of the cutting depth to atomic radius (\emph{a/r}\textsubscript{\emph{w}}) increases to be larger than C\textsubscript{1} but smaller than critical value 2(C\textsubscript{2}), there is material removal on the workpiece surface, but it is noncontinuous. In such case, only part of material within targeted atomic layer is formed into chip by shear stress-driven dislocation motion, while others are remained on the workpiece surface. When cutting tool passes over the workpiece surface, the surface quality of the processed surface is seriously deteriorated (case 2) (Fig. 16).
+
+\begin{hangpars}
+3.\quad The ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than critical value 2 (C\textsubscript{2}).
+\end{hangpars}
+
+When the ratio of cutting depth to atomic radius (\emph{a/r}\textsubscript{\emph{w}}) increases to be larger than critical value, there is a continuous material removal by chip formation during cutting process. In such case, the edge radius effects can no longer be ignored. For ACS cutting process, the maximum cutting depth is subnanometer order. At such extremely low cutting depth, regardless of the nominal rake angle, the effective rake angle is always largely negative. The negative rake face can produce the necessary shear stress to enable chip formation by dislocation motion and the compressive force to enable the elastic and/or plastic deformation on the processed surface.
+
+Depending on the ratio of cutting depth (\emph{a}) to tool edge radius (\emph{R}), different kinds of elastic and/or plastic deformation process occur on the workpiece surface. There are two threshold values of \emph{a/R}, namely, threshold value 1 (\emph{T}\textsubscript{\emph{1}}) and threshold value 2 (\emph{T}\textsubscript{2}), leading to different material removal processes.
+
+\begin{hangpars}
+a.\quad The ratio of \emph{a/R} is larger than threshold (\emph{T}\textsubscript{\emph{1}}).
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig16.png}
+\end{center}
+\noindent\textbf{Fig. 16} Schematic illustration of cutting-based single atomic layer removal at a/r\textsubscript{w} larger than C\textsubscript{1} and smaller than C\textsubscript{2}
+\alttext{Schematic (on p.\,14), same construction as Fig. 15 (yellow workpiece rows with dash-dotted centre lines, quarter-circle tool with a chain of black atoms, ``R'', \emph{r}\textsubscript{\emph{t}}, \emph{r}\textsubscript{\emph{w}}, tool atom ``B'', ``Cutting tool''). Ahead of the tool, part of the first row is green and a small pyramid of three blue atoms (``Chip'') sits on it; a black arrow points left along the green atoms from atom ``A'' and another points up-left into the chip. A blue arrow labelled ``Slip plane'' points to a blue dashed horizontal line under the first row; a red double arrow \emph{a} marks the depth. Behind the tool, two green atoms remain on the surface (``Residual atoms'', arrow). A blue dashed U-shaped curve under the tool encloses deformed atoms, and a long red arrow from the bottom right points into it, labelled ``Compressive stress-induced elastic deformation''.}
+
+\pdfpage{15}As shown in Fig. 17, there is one atomic slip plane. The workpiece material below this plane would have an elastic deformation. As for the materials above this slip plane, it undergoes a plastic deformation by dislocation motion. A part of materials is also formed into chip by shearing stress-driven dislocation motion, while the other undergoes dislocation slip. After the workpiece passes the lowest point of the cutting tool, the elastically deformed part recovers completely (case 3).
+
+\begin{hangpars}
+b.\quad The ratio of \emph{a/R} is lower than threshold 1 (\emph{T}\textsubscript{1}), but larger than threshold 2 (\emph{T}\textsubscript{2}).
+\end{hangpars}
+
+Under the action of cutting edge, minimum two atomic layers undergo dislocation slip, while elastic deformation occurs on the processed surface, as shown in Fig. 18. The cutting edge provides a force to generate the shear stress to enable chip formation by dislocation motion and compressive stress to induce elastic deformation on the processed surface. In such case, part of material within the targeted atomic layer is formed into chip by dislocation motion, while the other is extruded into other atomic layers to form new processed surface. It also drives the slip of other atomic layers on the workpiece surface, leading to the negative dislocation climb. After workpiece material passes the lowest point of the cutting tool, the elastic portion springs back (case 4).
+
+\begin{hangpars}
+c.\quad The ratio of \emph{a/R} is lower than threshold 2 (\emph{T}\textsubscript{2}).
+\end{hangpars}
+
+As the ratio of \emph{a/R} decreases to lower than \emph{T}\textsubscript{2}, there is either no chip formation or extremely small volume of chip formation, but elastic-plastic deformation occurs on the processed surface, as shown in Fig. 19. After workpiece material passes the lowest point of cutting edge, the elastic deformed part springs back. The plastic deformed part (\emph{Δ}) leads to lasting deformation. Such ratio is related with material properties, tool geometry and process conditions (case 5).
+
+\section*{Conclusions}
+
+In the present study, both of atom sizing effect and cutting-edge radius effect are analysed to investigate their influence on chip formation, surface generation, subsurface deformation, and atomic displacement behaviour during the cutting of monocrystalline copper towards single atomic layer removal. The following conclusions can be drawn.
+
+\begin{hangpars}
+1.\quad A new model is proposed to describe the underlying material deformation and removal mechanism in the cutting-based single atomic layer removal process, which exhibits four characteristics, including chip formation by dislocation motion, elastic deformation occurring on the processed \pdfpage{17}surface, atomic sizing effect, and cutting-edge radius effect.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig17.png}
+\end{center}
+\noindent\textbf{Fig. 17} Schematic illustration of cutting-based single atomic layer removal at a/r\textsubscript{w} larger than C\textsubscript{2} and a/R larger than T\textsubscript{1}
+\alttext{Schematic (on p.\,15), same construction as Figs. 15--16. Ahead of the tool the first row is green over a stretch of six atoms; a larger blue chip (a pyramid of about eight atoms plus one separate atom at its left) sits on them. Black arrows: one long arrow pointing left along the green row from atom ``A'', one up-left from the left end, one up-left into the chip. A light-green line labelled ``Shear stress'' runs diagonally down to the tool contact. A blue arrow labelled ``Slip plane'' points to a blue dashed line under the first row; red double arrow \emph{a}; label \emph{r}\textsubscript{\emph{w}}. At the tool tip, short red arrows pointing left and the lowest tool atom ``B''; at the right, a red double arrow \emph{D}\textsubscript{\emph{e}} between the dashed surface line and a lower purple line. A blue dashed U-curve under the tool with a long red arrow into it, labelled ``Compressive stress-induced elastic deformation''.}
+
+\pdfpage{16}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig18.png}
+\end{center}
+\noindent\textbf{Fig. 18} Schematic illustration of cutting-based single atomic layer removal at a/r\textsubscript{w} larger than C\textsubscript{2}, a/R larger than T\textsubscript{2}, smaller than T\textsubscript{1}
+\alttext{Schematic (on p.\,16), same construction. Two rows ahead of the tool are green (the first row and part of the second), with a large blue chip (pyramid of about ten atoms plus one separate atom) on top. Black arrows: a long one pointing left along the first green row, one up-left from the second green row, one up-left at the left end of the chip, and one pointing down at the front (by atom ``A''). Labels: ``Shear stress'' (light-green line), ``Chip'', ``Slip plane'' (blue arrow to a blue dashed line under the second row), \emph{a} (red double arrow), ``R'', ``r'' (tool atom radius; subscript not visible), \emph{r}\textsubscript{\emph{w}}, ``B'', ``Cutting tool'', \emph{D}\textsubscript{\emph{e}} (red double arrow at right), and a blue dashed U-curve with a long red arrow, labelled ``Compressive stress induced elastic deformation''.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{figures/fig19.png}
+\end{center}
+\noindent\textbf{Fig. 19} Schematic illustration of cutting-based single atomic layer removal at a/r larger than C\textsubscript{2} and a/R lower than T\textsubscript{2}
+\alttext{Schematic (on p.\,16), same construction. Two green rows ahead of the tool with a small blue chip of three atoms on top. Black arrows: one pointing left along the upper green row, one up-left from the lower green row, one down at the front, and a black arrow labelled ``Slip plane'' pointing to a blue dashed line under the second row. Labels: \emph{r}\textsubscript{\emph{w}}, \emph{a}, ``Chip'', ``Shear stress'', ``R'', \emph{r}\textsubscript{\emph{t}}, ``B'' (lowest tool atom), ``B1'' (workpiece atom below it), ``A'' (an atom at the far right of the second row), ``Cutting tool''. At the right two red double arrows: \emph{Δ} (between the original surface and a blue line) and \emph{D}\textsubscript{\emph{e}}. A larger blue dashed U-curve under the tool with a long red arrow, labelled ``Compressive stress-induced elastic-plastic deformation''.}
+\decompnote{Page 16 holds only Figs. 18 and 19; the conclusions continue on p.\,17, whose marker therefore comes before p.\,16's.}
+
+\begin{hangpars}
+2.\quad Both of atomic sizing effect and cutting-edge radius effect have a great influence on the material deformation and removal during the cutting process of monocrystalline copper towards single atomic layer removal. With a specific ratio of cutting depth to workpiece atom radius (\emph{a/r}\textsubscript{\emph{w}}) and that of cutting depth to edge radius (\emph{a/R}), cutting-based single atomic layer removal could be achieved on Cu (111) surface.
+
+3.\quad Chip formation is affected by the ratios of \emph{a/r}\textsubscript{\emph{w}} and \emph{a/R}. There is a chip formation only when the ratio of \emph{a/r}\textsubscript{\emph{w}} is larger than one critical value (C1) and the ratio of \emph{a/R} is smaller than one threshold value (T1). Moreover, chip formation is mainly dependent on the shear stress-driven dislocation motion, significantly different from the extrusion-dominated chip formation in nanocutting and shearing-dominated chip formation in conventional machining.
+
+4.\quad Single atomic layer removal can be achieved via layer-by-layer removal and multi-layer removal. The former one refers to that the targeted atomic layer could be either fully removed from workpiece surface. The latter one means that the first atomic layer is partly removed while the remaining materials are pressed into other atomic layers, forming a new processed surface.
+
+5.\quad There is only elastic deformation occurring on the processed surface during ACS cutting process, different from the elastic-plastic deformation in nanocutting. It can be regarded as one characteristic feature in ACS cutting.
+
+6.\quad Depending on the combined effect of atom sizing effect and cutting-edge radius effect, there exist five cases of material deformation and removal processes during the cutting-based single atomic layer removal, i.e., no workpiece material is removed (case 1), workpiece materials are non-continuously removed (case 2), a part of materials is formed into chip while others undergoes material slip via dislocation motion (case 3), a part of materials within the targeted atomic layer is formed into chip while others are extruded into other atomic layers to form new processed surface (case 4), and the elastic deformed part springs back, while the plastic deformed part leads to a lasting deformation (case 5).
+\end{hangpars}
+
+\subsection*{Abbreviations}
+ACS: Atomic and close-to-atomic scale; ACSM: Atomic and close-to-atomic scale manufacturing; MD: Molecular dynamics
+
+\subsection*{Authors’ Contributions}
+FFZ designed and supervised this work. XWK performed the simulation and wrote the manuscript. All authors read and approved the final manuscript.
+
+\subsection*{Funding}
+The authors would like to thank the finical support from Science Foundation Ireland (SFI) (No. 15/RP/B3208) and ‘111’ project by the State Administration of Foreign Experts Affairs and the Ministry of Education of China (Grant No. B07014).
+
+\subsection*{Availability of Data and Materials}
+Authors declare that the materials, data, and associated protocols are available to the readers, and all the data used for the analysis are included in this article.
+
+\subsection*{Competing Interests}
+The authors declare that they have no competing interests.
+
+\noindent Received: 17 July 2019 Accepted: 28 October 2019\\
+Published online: 06 December 2019
+\decompnote{``Published online: 06 December 2019'' is printed as an embedded image (no text layer) on p.\,17; transcribed from the page image.}
+
+\subsection*{References}
+\begin{hangpars}\small
+1.\quad Fang FZ, Wu H, Zhou W, Hu XT (2007) A study on mechanism of nano-cutting single crystal silicon. J Mater Process Technol 184(1-3):407–410
+
+2.\quad Fang FZ, Wu H, Liu YC (2005) Modelling and experimental investigation on nanometric cutting of monocrystalline silicon. Int J Mach Tool Manu 15: 1681–1686
+
+3.\quad Liu H, Xie W, Sun Y, Zhu X, Wang M (2018) Investigations on brittle-ductile cutting transition and crack formation in diamond cutting of monocrystalline silicon. Int J Adv Manuf Technol 95(1-4):317–326
+
+4.\quad Chavoshi SZ, Goel S, Luo X (2016) Influence of temperature on the anisotropic cutting behaviour of single crystal silicon: a molecular dynamics simulation investigation. J Manuf Process 23:201–210
+
+5.\quad Fung KY, Tang CY, Cheung CF (2017) Molecular dynamics analysis of the effect of surface flaws of diamond tools on tool wear in nanometric cutting. Comput Mater Sci 133:60–70
+
+6.\quad Liu B, Xu Z, Chen C, Li R, Wang C, Yang X (2019) In situ experimental study on material removal behaviour of single-crystal silicon in nanocutting. Int J Mech Sci 152:378–383
+
+7.\quad Wang J, Zhang X, Fang F, Chen R (2019) Diamond cutting of microstructure array on brittle material assisted by multi-ion implantation. Int J Mach Tool Manu 137:58–66
+
+8.\quad Li D, Wang B, Qiao Z, Jiang X (2019) Ultraprecision machining of microlens arrays with integrated on-machine surface metrology. Opt Express 27(1): 212–224
+
+9.\quad Fang F, Zhang N, Guo D, Ehmann K, Cheung B, Liu K, Yamamura K (2019) Towards atomic and close-to-atomic scale manufacturing. Int J Extre Manuf
+
+10.\quad Weber B, Mahapatra S, Ryu H, Lee S, Fuhrer A, Reusch TCG, Thompson DL, Lee WCT, Klimeck G, Hollenberg LC, Simmons MY (2012) Ohm’s law survives to the atomic scale. Science 335(6064):64–67
+
+11.\quad Merchant, HEM (1941) Chip formation, friction and high-quality machined surfaces. Sur Treat Metal:299–378
+
+12.\quad Merchant ME (1944) Basic mechanics of the metal-cutting process. ASME J App Mech 11:A168
+
+13.\quad Merchant ME (1945) Mechanics of the metal cutting process. I. Orthogonal cutting and a type 2 chip. J Appl Phys 16(5):267–275
+
+14.\quad Woon KS, Rahman M, Neo KS, Liu K (2008) The effect of tool edge radius on the contact phenomenon of tool-based micromachining. Int J Mach Tool Manu 48(12-13):1395–1407
+
+15.\quad Woon KS, Rahman M, Fang FZ, Neo KS, Liu K (2008) Investigations of tool edge radius effect in micromachining: a FEM simulation approach. J Mater Process Technol 195(1-3):204–211
+
+16.\quad Nasr MN, Ng EG, Elbestawi MA (2007) Modelling the effects of tool-edge radius on residual stresses when orthogonal cutting AISI 316L. Int J Mach Tool Manu 47(2):401–411
+
+17.\quad Rahman MA, Woon KS, Venkatesh VC, Rahman M (2018) Modelling of the combined microstructural and cutting-edge effects in ultraprecision machining. CIRP Ann-Manuf Techn 67(1):129–132
+
+18.\quad Liu B, Fang F, Li R, Xu Z, Liang Y (2018) Experimental study on size effect of tool edge and subsurface damage of single crystal silicon in nano-cutting. Int J Adv Manuf Technol 98(5-8):1093–1101
+
+19.\quad Fang F, Xu F (2018) Recent advances in micro/nano-cutting: effect of tool edge and material properties. Nanomanu Metro:1–28
+
+\pdfpage{18}20.\quad Xie WK, Fang FZ (2019) Cutting-based single atomic layer removal mechanism of monocrystalline copper: atomic sizing effect. Nanomanuf Metrol:1–12
+
+21.\quad Foiles SM, Baskes MI, Daw MS (1986) Embedded-atom-method functions for the fcc metals Cu, Ag, Au, Ni, Pd, Pt, and their alloys. Phys Rev B 33(12):7983
+
+22.\quad Zhang L, Tanaka H (1997) Towards a deeper understanding of wear and friction on the atomic scale—a molecular dynamics analysis. Wear 211(1):44–53
+\end{hangpars}
+
+\subsection*{Publisher’s Note}
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+\end{document}

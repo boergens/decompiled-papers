@@ -1,0 +1,14 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 4F: # of contacts, stacked bars, color-coded by the cell type of the contacting cell.
+# Columns: bar, segment (cell type, colour as in the caption), y_bottom, y_top (stack edges, # of contacts), count (= height).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 9); figures/fig4f_extract.py.
+# y axis (linear) fitted on ticks 0@1216.5px, 50@1116.5px, 100@1016.5px, 150@917.5px; max residual 0.2 axis units.
+# Uncertainty: +-1 px = +-0.5 contacts per edge. Counts are integers in reality: the digitized heights round to
+#   tight: 17 cone bipolar + 4 AII = 21; cleft: 130 other + 7 cone bipolar + 13 presynaptic amacrine = 150.
+# Text (p. 8-9): 171 contacts; 150 cleft (13 chemical synapses from amacrine cells, 137 'other'); 21 tight (4 AII, 17 ON cone bipolar).
+#   The cleft bar's 7 green (cone bipolar) contacts are counted within the text's 137 'other'.
+bar,segment,y_bottom,y_top,count
+Tight contacts,AII (blue),16.95,21.21,4.26
+Tight contacts,cone bipolar (green),0.00,16.95,16.95
+Cleft contacts,presynaptic amacrine cell (cyan),136.81,150.10,13.29
+Cleft contacts,cone bipolar (green),130.29,136.81,6.52
+Cleft contacts,other (black),0.00,130.29,130.29

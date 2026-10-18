@@ -1,0 +1,16 @@
+# Figure 5c (page 39): fit accuracy (normalised conditional log-likelihood ratio, top) and median dwell time per state (bottom) vs HMM bin size.
+# Source: vector stroke paths (1-pt lines, 8 vertices = data points) and the s.e.m. band polygons (upper edge then lower edge); circle markers coincide with the vertices (<0.01 pt).
+# x axis: log10, calibrated on all 18 tick marks (2,3,...,9,10,20,...,90,100 ms), max residual 7.8e-05 in log10 units; bin_size_ms is the rounded value, bin_size_ms_from_axis the raw calibrated x.
+# top y axis calibrated on ticks 0.6, 0.8, 1.0 (resid 1.0e-06); bottom y axis on ticks 0, 100, 200 ms (resid 0.0e+00).
+# Precision: about 0.001 (top, 19.25 pt per 0.2) and 0.1 ms (bottom, 19.25 pt per 100 ms); PDF coordinates carry ~0.01 pt.
+# CAVEAT: the bottom axis ends at 200 ms; the state-1 value at 100 ms sits exactly on the 200 ms axis limit and both s.e.m. bands are clipped there (upper edge = axis top), so state1 at 100 ms is >= 200 ms (the band polygon has an extra clipping vertex at bin 97 ms).
+# s.e.m. band values of state 2 (purple) at 100 ms: upper edge clipped at 200 ms.
+bin_size_ms,bin_size_ms_from_axis,norm_cllr_mean,norm_cllr_sem_lo,norm_cllr_sem_hi,median_dwell_state1_ms,median_dwell_state1_sem_lo,median_dwell_state1_sem_hi,median_dwell_state2_ms,median_dwell_state2_sem_lo,median_dwell_state2_sem_hi
+2,2.0,0.8481,0.8079,0.8883,54.8,48.4,61.3,51.6,45.8,57.3
+3,3.0,0.9259,0.9009,0.951,62.7,56.9,68.5,58.5,53.7,63.4
+5,5.0,0.966,0.9455,0.9864,64.1,58.4,69.8,59.5,54.8,64.2
+10,10.0,0.9646,0.9469,0.9823,67.6,62.6,72.6,62.1,58.2,66.0
+20,20.0,0.9421,0.9274,0.9568,80.0,76.6,83.4,76.8,73.7,80.0
+50,49.99,0.8633,0.8453,0.8813,126.3,120.4,132.2,110.5,105.7,115.3
+75,75.0,0.7607,0.7227,0.7987,155.3,151.2,159.4,146.1,142.1,150.0
+100,100.0,0.6884,0.6459,0.7308,200.0,192.4,200.0,194.7,189.5,200.0

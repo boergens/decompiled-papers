@@ -1,0 +1,51 @@
+# scheffer2020 Figure 5B: precision vs recall of synapse prediction per brain region (synapses as a whole incl. PSD identification).
+# Provenance: tier 3, digitized from the embedded raster image (JPEG, 1187x562 px) on PDF p. 13 by figures/fig5_extract.py. The authors' Figure 5-source data 1-2 (online) are not available locally.
+# Axis calibration: linear fit through frame (0.5) and gridlines 0.6-1.0; max residual x 0.0003, y 0.0004 data units. One source pixel = 0.00103 (x), 0.00100 (y).
+# Columns: panel; kind (region = one brain region; human_reference = purple dot, typical human proofreader performance per caption); recall; precision (dot centre, fitted circle); r_px = dot radius in source pixels incl. half the white edge; rel_area = r_px^2 (marker area, proportional to region volume per caption, arbitrary units); visible_frac = visible fraction of the dot; pieces = visible pieces merged; status (ok / partly_hidden / mostly_hidden / partly_hidden_guided = refitted near a hand-placed guide circle).
+# Uncertainty: centres about +-0.003 (fully visible dots), more for partly hidden dots (circle fitted to the visible arc); radii +-1 px. Dots completely hidden under larger dots cannot be found, so the number of regions may be undercounted.
+# Check: the purple human-proofreader reference dot comes out at the caption's values (A 0.9/0.9, B 0.8/0.8) to within 0.0004.
+panel,kind,recall,precision,r_px,rel_area,visible_frac,pieces,status
+B,human_reference,0.7998,0.8004,6.2,38.1,0.91,1,ok
+B,region,0.5453,0.822,5.4,29.5,0.88,1,ok
+B,region,0.5995,0.7322,13.2,173.9,0.96,1,ok
+B,region,0.6535,0.88,3.3,10.8,0.8,1,partly_hidden
+B,region,0.6662,0.5794,7.3,53.3,0.92,1,ok
+B,region,0.67,0.7569,16.6,274.3,0.97,1,ok
+B,region,0.6779,0.8296,13.2,173.2,0.96,1,ok
+B,region,0.687,0.917,5.8,33.9,0.9,1,ok
+B,region,0.7244,0.7675,9.1,82.0,0.93,1,ok
+B,region,0.7268,0.8539,5.3,28.4,0.89,1,ok
+B,region,0.7316,0.6579,23.9,569.1,0.92,1,ok
+B,region,0.7332,0.6781,5.0,25.0,0.88,1,ok
+B,region,0.7536,0.8526,3.8,14.4,0.82,1,ok
+B,region,0.7583,0.7693,15.5,241.3,0.76,1,partly_hidden
+B,region,0.7595,0.8177,3.2,10.1,0.82,1,ok
+B,region,0.7608,0.8655,11.2,126.2,0.92,1,ok
+B,region,0.7689,0.8516,6.2,38.5,0.91,1,ok
+B,region,0.7709,0.7783,8.7,75.6,0.93,1,ok
+B,region,0.7724,0.8951,9.3,86.3,0.94,1,ok
+B,region,0.7827,0.755,13.5,183.0,0.96,1,ok
+B,region,0.7881,0.8729,3.3,10.8,0.8,1,partly_hidden
+B,region,0.7929,0.8522,3.2,10.5,0.82,1,ok
+B,region,0.7941,0.795,15.0,225.0,0.7,1,partly_hidden
+B,region,0.7963,0.898,18.1,328.1,0.47,1,partly_hidden
+B,region,0.7967,0.9108,4.0,16.1,0.81,1,ok
+B,region,0.8094,0.8967,8.0,64.3,0.92,1,ok
+B,region,0.8123,0.8882,14.6,212.6,0.63,1,partly_hidden
+B,region,0.8157,0.9225,13.3,175.9,0.96,1,ok
+B,region,0.8164,0.8453,20.0,400.7,0.97,1,ok
+B,region,0.8168,0.7281,21.1,447.2,0.93,1,ok
+B,region,0.8329,0.7148,4.9,23.6,0.88,1,ok
+B,region,0.8397,0.8754,3.1,9.7,0.82,1,ok
+B,region,0.8415,0.9494,3.3,10.9,0.81,1,ok
+B,region,0.8487,0.7557,12.5,156.0,0.95,1,ok
+B,region,0.8624,0.6034,3.8,14.6,0.85,1,ok
+B,region,0.8671,0.8504,10.0,99.4,0.94,1,ok
+B,region,0.8685,0.8442,12.8,163.7,0.39,1,partly_hidden
+B,region,0.8778,0.6157,4.4,19.7,0.86,1,ok
+B,region,0.8916,0.768,5.8,33.6,0.89,1,ok
+B,region,0.8921,0.8928,3.2,10.0,0.83,1,ok
+B,region,0.8977,0.8412,11.5,131.4,0.94,1,ok
+B,region,0.8997,0.7037,10.6,112.3,0.94,1,ok
+B,region,0.9052,0.9059,22.3,498.0,0.93,1,ok
+B,region,0.9278,0.829,17.2,295.4,0.97,1,ok

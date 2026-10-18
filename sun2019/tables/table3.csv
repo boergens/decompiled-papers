@@ -1,0 +1,9 @@
+# Sun & Gamstedt 2019, Nanomanuf Metrol 2:45-55, Table 3 (p. 6): "Average values of cutting force and thrust force during
+#   nanocutting at different speeds, t_u = 85 nm"
+# Columns: v0_mm_s = cutting speed v0 (mm/s); Fc_per_wu_N_per_m = F_c/w_u (N/m); Ft_per_wu_N_per_m = F_t/w_u (N/m).
+v0_mm_s,Fc_per_wu_N_per_m,Ft_per_wu_N_per_m
+0.25,30,4
+0.5,35,2
+1.0,42,4
+3.0,39,15
+10.0,37,63

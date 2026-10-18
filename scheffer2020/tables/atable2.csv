@@ -1,0 +1,17 @@
+# Appendix 1-table 2 of Scheffer et al. 2020 (eLife 9:e57443), p. 67: bounding boxes within the hemibrain volume used for
+# training CycleGAN models. Coordinates and sizes are given for [32 nm]^3 voxels. The same physical area of the hemibrain volume
+# was used to train both 32 nm and 16 nm CycleGAN models. Two-level printed header (Start: X Y Z; Size: X Y Z) flattened.
+# Transcribed from the PDF text layer, checked against the page image.
+Tab,Start X,Start Y,Start Z,Size X,Size Y,Size Z
+reference,4633,3792,2000,1374,2000,2000
+22,8089,4030,1744,518,2000,2000
+23,7435,3925,2101,654,2000,2000
+24,6713,2939,4094,722,2000,2000
+25,6017,2895,3635,694,2000,2000
+28,3980,4944,3495,638,2000,2000
+29,3307,2414,4094,666,2000,2000
+30,2649,2519,4094,657,2000,2000
+31,1979,2750,4094,670,2000,2000
+32,1312,3065,4094,667,2000,2000
+33,668,3101,3520,663,2000,2000
+34,1,3112,3520,660,2000,2000

@@ -1,0 +1,81 @@
+# Extended Data Figure 3c (PDF page 43): Euclidean-distance decoding accuracy (%) of the conscious (solid) and suppressed (dashed) face vs number of faces, sessions from monkey A only; states from one half of the neurons, decoding on the held-out half.
+# Source: vector paths in the PDF. Clip region (PDF pt, origin top-left) x 152-253, y 328-452.
+# x axis: tick marks at 0,20,40,60 faces -> slope 0.634930, max residual 1.45e-06; every series has one vertex per n_faces = 1..60 (checked against the solid strokes).
+# y axis: tick marks at 0,20,...,100 % -> slope -0.900922, max residual 6.72e-04. 1 pt = 0.901 %.
+# Columns: <series> = plotted line; <series>_lo / <series>_hi = lower / upper edge of the shaded band (filled polygon, alpha 0.2; the legend does not say what the band is - the related main-figure panels use SD).
+# Solid lines (stroke vertices, ~0.01 pt): priming_average (black #1c0f29), binocular_conscious_state1 (orange #fcae34), binocular_conscious_state2 (purple #543379).
+# Dashed lines binocular_suppressed_state1 (orange dashed), binocular_suppressed_state2 (purple dashed): stored as filled dash outlines (4 pt dash / 4 pt gap). *_qc codes: band_mid = value is the midpoint of the shaded band, which is exactly symmetric about the line (precision ~0.01 pt; used wherever both band edges are unclipped). Other codes (band edge clipped there, value from the dash polygons): direct = vertex inside a dash (~0.05 pt), extrap = extrapolated along the adjacent straight segment (~0.1-0.4 pt), interp = linear interpolation of the neighbours (bound ~1.2 pt), band = band collapses onto the line / lies entirely at the 0 boundary, gap/clipped = empty.
+#   Agreement of the independent dash-outline centreline recovery with the band midpoints (dash-recovery code: n vertices, max |difference| pt): binocular_suppressed_state1: direct (31, 0.00), extrap (9, 0.00), interp (7, 0.38); binocular_suppressed_state2: direct (33, 0.01), extrap (17, 0.01), interp (5, 0.59).
+# Bands are clipped by the axes box (0..100 %); clipped edges are written as the clip value:
+#   priming_average band, n_faces [1, 2, 3, 4, 5, 6]: upper edge clipped at 100 (true value above 100).
+#   priming_average band, n_faces [60]: band has zero height (upper = lower = line).
+#   binocular_conscious_state1 band, n_faces [1, 2]: upper edge clipped at 100 (true value above 100).
+#   binocular_conscious_state1 band, n_faces [60]: band has zero height (upper = lower = line).
+#   binocular_suppressed_state1 band, n_faces [7, 8, 9, 10, 11, 12, 13, 15, 22]: lower edge clipped at 0 (true value below 0).
+#   binocular_suppressed_state1 band, n_faces [1, 60]: band has zero height (upper = lower = line).
+#   binocular_conscious_state2 band, n_faces [7, 8, 13, 14, 17, 18, 19, 20, 22, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]: lower edge clipped at 0 (true value below 0).
+#   binocular_conscious_state2 band, n_faces [1, 60]: band has zero height (upper = lower = line).
+#   binocular_suppressed_state2 band, n_faces [1, 2]: upper edge clipped at 100 (true value above 100).
+#   binocular_suppressed_state2 band, n_faces [60]: band has zero height (upper = lower = line).
+# Values are rounded to 0.01 %.
+n_faces,priming_average,priming_average_lo,priming_average_hi,binocular_conscious_state1,binocular_conscious_state1_lo,binocular_conscious_state1_hi,binocular_suppressed_state1,binocular_suppressed_state1_lo,binocular_suppressed_state1_hi,binocular_suppressed_state1_qc,binocular_conscious_state2,binocular_conscious_state2_lo,binocular_conscious_state2_hi,binocular_suppressed_state2,binocular_suppressed_state2_lo,binocular_suppressed_state2_hi,binocular_suppressed_state2_qc
+1,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,direct,100.00,100.00,100.00,100.00,100.00,100.00,direct
+2,96.50,83.72,100.00,77.50,52.59,100.00,41.50,11.40,71.59,band_mid,42.83,10.53,75.14,78.50,53.04,100.00,direct
+3,92.33,77.50,100.00,66.00,41.62,90.37,25.11,3.15,47.07,band_mid,27.56,6.00,49.11,65.44,42.42,88.46,band_mid
+4,89.67,75.15,100.00,58.42,37.32,79.51,16.42,0.47,32.36,band_mid,20.08,2.29,37.87,58.75,37.79,79.71,band_mid
+5,88.47,74.43,100.00,54.60,35.41,73.78,12.33,0.26,24.40,band_mid,16.13,0.84,31.42,53.60,33.13,74.07,band_mid
+6,85.44,69.98,100.00,50.61,31.96,69.26,10.17,0.46,19.87,band_mid,13.50,2.34,24.66,48.06,29.90,66.22,band_mid
+7,81.81,66.72,96.90,47.81,30.96,64.66,9.29,0.00,18.71,extrap,11.38,0.00,22.96,44.66,27.04,62.29,band_mid
+8,79.54,64.74,94.34,45.37,30.21,60.53,7.17,0.00,14.93,direct,9.63,0.00,19.67,40.41,24.78,56.05,band_mid
+9,78.14,64.52,91.77,43.67,28.36,58.97,6.93,0.00,14.04,direct,8.41,0.40,16.41,40.00,26.61,53.39,band_mid
+10,75.14,61.14,89.12,41.90,28.09,55.71,5.63,0.00,12.22,extrap,7.57,0.41,14.73,37.70,24.05,51.35,band_mid
+11,72.82,58.94,86.69,40.30,26.99,53.62,6.00,0.00,12.42,extrap,7.24,0.46,14.03,35.42,23.03,47.82,band_mid
+12,73.33,60.14,86.53,38.25,26.74,49.76,5.58,0.00,11.17,direct,6.72,0.50,12.95,34.83,23.80,45.87,band_mid
+13,70.41,57.82,83.00,36.31,24.27,48.35,5.13,0.00,10.40,direct,5.85,0.00,11.89,31.82,20.84,42.80,band_mid
+14,71.09,58.05,84.14,35.50,23.45,47.55,5.05,0.16,9.94,band_mid,5.33,0.00,10.67,31.57,20.92,42.22,band_mid
+15,68.06,55.80,80.32,33.24,22.80,43.69,4.38,0.00,8.80,extrap,4.80,0.20,9.40,28.49,18.99,37.99,band_mid
+16,68.13,55.77,80.48,34.06,22.92,45.20,4.44,0.52,8.36,band_mid,5.00,0.37,9.63,28.19,18.70,37.67,band_mid
+17,65.92,54.79,77.05,32.86,22.92,42.81,4.45,0.30,8.61,band_mid,4.39,0.00,9.14,27.41,18.45,36.37,band_mid
+18,65.11,53.81,76.41,31.81,21.91,41.71,3.87,0.10,7.64,band_mid,4.24,0.00,8.51,26.43,18.10,34.75,band_mid
+19,62.80,52.00,73.61,30.07,20.68,39.46,3.61,0.06,7.17,band_mid,3.74,0.00,7.68,24.70,16.12,33.29,band_mid
+20,62.70,51.15,74.25,29.33,20.31,38.36,3.75,0.35,7.15,band_mid,3.63,0.00,7.40,24.10,16.44,31.76,band_mid
+21,62.69,52.01,73.35,29.46,20.62,38.30,3.27,0.08,6.46,band_mid,4.10,0.14,8.05,24.59,17.11,32.06,band_mid
+22,61.50,51.75,71.24,28.88,20.74,37.02,2.97,0.00,5.99,direct,3.30,0.00,6.75,23.33,16.44,30.22,band_mid
+23,60.50,51.84,69.14,28.13,19.84,36.42,3.49,0.40,6.59,band_mid,3.59,0.08,7.11,23.14,15.51,30.78,band_mid
+24,58.93,49.42,68.44,27.32,19.83,34.81,3.10,0.38,5.82,band_mid,3.42,0.00,6.81,22.29,15.57,29.01,band_mid
+25,57.60,48.96,66.24,26.40,19.58,33.21,2.85,0.26,5.44,band_mid,2.89,0.00,6.18,20.93,14.81,27.06,band_mid
+26,58.14,49.80,66.49,25.95,18.82,33.08,3.18,0.56,5.80,band_mid,3.12,0.08,6.15,20.72,14.84,26.60,band_mid
+27,57.37,49.46,65.28,25.30,18.47,32.12,3.07,0.63,5.52,band_mid,2.47,0.00,5.36,19.67,13.94,25.40,band_mid
+28,57.53,49.20,65.87,25.19,18.83,31.55,2.92,0.65,5.19,band_mid,2.63,0.00,5.40,20.05,14.56,25.53,band_mid
+29,55.56,48.52,62.60,24.94,18.90,30.99,2.92,0.50,5.34,band_mid,2.41,0.00,5.10,19.36,14.18,24.53,band_mid
+30,55.14,48.10,62.19,24.07,18.27,29.86,2.50,0.35,4.65,band_mid,2.30,0.00,5.12,19.04,13.74,24.35,band_mid
+31,54.03,46.79,61.27,23.37,17.93,28.80,2.76,0.52,5.01,band_mid,2.53,0.00,5.30,18.31,13.48,23.15,band_mid
+32,53.96,47.32,60.60,23.42,18.16,28.68,2.65,0.74,4.55,band_mid,2.19,0.00,4.79,18.27,13.55,22.99,band_mid
+33,54.19,47.98,60.41,23.30,17.92,28.69,2.42,0.37,4.46,band_mid,2.15,0.00,4.77,17.93,13.42,22.44,band_mid
+34,53.58,47.11,60.05,22.74,17.95,27.54,2.33,0.46,4.21,band_mid,1.77,0.00,3.90,17.30,12.85,21.76,band_mid
+35,52.58,46.42,58.75,22.16,17.25,27.07,2.38,0.51,4.25,band_mid,1.72,0.00,3.88,16.84,12.45,21.23,band_mid
+36,52.48,46.86,58.10,22.09,17.91,26.27,2.47,0.79,4.15,band_mid,2.00,0.00,4.45,16.99,13.03,20.95,band_mid
+37,52.23,46.40,58.05,21.77,17.27,26.26,2.46,0.69,4.23,band_mid,1.69,0.00,3.80,16.67,12.62,20.72,band_mid
+38,51.73,46.21,57.24,21.60,17.66,25.53,2.40,0.58,4.23,band_mid,1.56,0.00,3.62,16.38,12.56,20.19,band_mid
+39,50.55,45.02,56.07,20.78,17.00,24.55,2.33,0.55,4.12,band_mid,1.66,0.00,3.58,15.77,12.11,19.43,band_mid
+40,50.58,45.45,55.69,21.07,17.36,24.77,2.34,0.90,3.79,band_mid,1.24,0.00,2.98,15.77,12.27,19.26,band_mid
+41,50.51,45.54,55.49,20.82,17.74,23.90,2.38,0.85,3.92,band_mid,1.32,0.00,3.17,15.37,11.94,18.80,band_mid
+42,50.25,45.71,54.78,20.48,17.15,23.82,2.34,0.87,3.82,band_mid,1.16,0.00,2.98,14.84,11.73,17.95,band_mid
+43,50.02,45.61,54.43,20.72,17.87,23.57,2.20,0.66,3.74,band_mid,1.05,0.00,2.67,14.66,11.46,17.86,band_mid
+44,49.20,44.79,53.62,20.27,16.97,23.56,2.09,0.76,3.42,band_mid,1.17,0.00,2.90,14.74,11.47,18.00,band_mid
+45,49.18,44.94,53.43,19.95,17.00,22.89,2.05,0.85,3.25,band_mid,0.99,0.00,2.45,14.50,11.39,17.62,band_mid
+46,48.61,44.65,52.57,19.75,17.27,22.24,2.07,0.82,3.31,band_mid,0.84,0.00,2.35,13.96,10.96,16.97,band_mid
+47,48.25,44.31,52.20,19.81,16.90,22.72,2.06,0.89,3.24,band_mid,1.02,0.00,2.61,14.35,11.64,17.06,band_mid
+48,48.03,44.50,51.57,19.56,17.25,21.88,1.98,0.74,3.22,band_mid,0.60,0.00,1.60,13.44,11.12,15.77,band_mid
+49,48.07,44.72,51.41,19.69,17.27,22.10,1.96,0.89,3.03,band_mid,0.65,0.00,1.80,13.71,11.20,16.23,band_mid
+50,47.44,44.05,50.82,19.25,17.06,21.45,2.00,1.03,2.97,band_mid,0.55,0.00,1.66,13.38,10.96,15.80,band_mid
+51,46.88,43.88,49.87,19.40,17.46,21.34,2.01,0.99,3.04,band_mid,0.55,0.00,1.54,13.16,10.91,15.42,band_mid
+52,46.89,44.02,49.76,19.00,17.04,20.96,1.82,0.91,2.73,band_mid,0.49,0.00,1.41,12.76,10.73,14.78,band_mid
+53,46.65,44.16,49.13,18.97,17.28,20.67,1.81,0.92,2.69,band_mid,0.52,0.00,1.56,12.82,10.92,14.73,band_mid
+54,46.62,44.14,49.11,18.95,17.44,20.46,1.89,1.13,2.65,band_mid,0.32,0.00,1.02,12.61,11.04,14.17,band_mid
+55,46.08,44.03,48.13,18.78,17.34,20.23,1.78,1.07,2.49,band_mid,0.34,0.00,1.05,12.44,11.04,13.83,band_mid
+56,46.05,44.14,47.96,18.65,17.50,19.82,1.81,1.19,2.43,band_mid,0.26,0.00,0.93,12.26,10.88,13.63,band_mid
+57,45.72,44.10,47.34,18.72,17.72,19.72,1.78,1.26,2.31,band_mid,0.19,0.00,0.78,12.03,10.86,13.20,band_mid
+58,45.46,44.26,46.67,18.51,17.64,19.37,1.72,1.26,2.18,band_mid,0.17,0.00,0.69,12.02,10.90,13.13,band_mid
+59,45.38,44.37,46.39,18.43,17.88,18.99,1.71,1.37,2.05,band_mid,0.10,0.00,0.49,11.84,11.11,12.56,band_mid
+60,45.00,45.00,45.00,18.33,18.33,18.33,1.67,1.67,1.67,extrap,0.00,0.00,0.00,11.67,11.67,11.67,direct

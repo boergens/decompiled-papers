@@ -1,0 +1,37 @@
+# Fig. 5 of Fu et al. 2019, Polymers 11, 975: bond lengths printed (in blue) next to highlighted bonds in the molecule renderings.
+# Transcribed by the decompiler from the figure labels (not a plot; values as printed, in Angstrom).
+# bond = the printed label (C-C1..C-C5 are the bonds numbered 1-5 in panels b and c); position = the decompiler's reading of which bond the label points at
+# in panel a (from the highlighted bond in the rendering; not printed). C-C5 of DGEBA-MTHPA is printed as 1.107 A.
+panel,molecule,bond,position_decompiler,length_A,structure
+a,DGEBA,C-H,,1.139,monomer
+a,DGEBA,C-C,benzene ring,1.542,monomer
+a,DGEBA,C-O,aryl ether,1.511,monomer
+a,DGEBA,C-O,epoxide,1.502,monomer
+a,DGEBA-MTHPA,C-O,epoxide,1.441,primary crosslinking structure
+a,DGEBA-MTHPA,C-O,aryl ether,1.381,primary crosslinking structure
+a,DGEBA-MTHPA,C-H,,1.101,primary crosslinking structure
+a,DGEBA-MTHPA,C-C,benzene ring,1.387,primary crosslinking structure
+a,DGEBA-NA,C-O,epoxide,1.439,primary crosslinking structure
+a,DGEBA-NA,C-O,aryl ether,1.381,primary crosslinking structure
+a,DGEBA-NA,C-H,,1.101,primary crosslinking structure
+a,DGEBA-NA,C-C,benzene ring,1.388,primary crosslinking structure
+b,MTHPA,C-C1,,1.527,monomer
+b,MTHPA,C-C2,,1.534,monomer
+b,MTHPA,C-C3,,1.538,monomer
+b,MTHPA,C-C4,,1.487,monomer
+b,MTHPA,C-C5,,1.485,monomer
+b,DGEBA-MTHPA,C-C1,,1.531,primary crosslinking structure
+b,DGEBA-MTHPA,C-C2,,1.544,primary crosslinking structure
+b,DGEBA-MTHPA,C-C3,,1.558,primary crosslinking structure
+b,DGEBA-MTHPA,C-C4,,1.51,primary crosslinking structure
+b,DGEBA-MTHPA,C-C5,,1.107,primary crosslinking structure
+c,NA,C-C1,,1.544,monomer
+c,NA,C-C2,,1.544,monomer
+c,NA,C-C3,,1.541,monomer
+c,NA,C-C4,,1.483,monomer
+c,NA,C-C5,,1.483,monomer
+c,DGEBA-NA,C-C1,,1.546,primary crosslinking structure
+c,DGEBA-NA,C-C2,,1.559,primary crosslinking structure
+c,DGEBA-NA,C-C3,,1.575,primary crosslinking structure
+c,DGEBA-NA,C-C4,,1.535,primary crosslinking structure
+c,DGEBA-NA,C-C5,,1.549,primary crosslinking structure

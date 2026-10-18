@@ -1,0 +1,49 @@
+# Fu et al. 2025, Polymers 17, 2441, Figure 9: simulated resultant cutting force of various PMMA/CNT
+#   nanocomposites and plain PMMA at various cutting thicknesses (caption).
+# Columns: series = legend entry; chip_thickness_nm = Undeformed chip thickness (nm), the six simulated
+#   values (60, 80, 100, 120, 150, 200 nm, Table 2), at which the markers sit; force_N_per_m = Resultant
+#   cutting force (N/m) at the marker centre; err_top / err_bottom = ends of the error bar (centre of the
+#   cap line); empty where not visible; note = remarks. The figure does not say what the error bars are.
+# Provenance: tier 3, digitized from the embedded image strips on PDF p. 13 (500 ppi; stacked with
+#   tools/strips.py) by fig9_extract.py. Axes fitted on the frame and the inward ticks
+#   (x max residual 0.000 nm, y max residual 0.015 N/m). Series separated by colour (legend
+#   colours; Plain PMMA = any neutral dark-grey pixel). Marker centre = where the straight connecting lines
+#   (each segment fitted robustly to the line centre between two markers) reach the marker's x; left and
+#   right segments give two estimates, averaged (their difference is in the note; markers themselves are
+#   partly hidden under other series). Error-bar caps: approximate rows placed by hand on zoomed crops
+#   (GUIDE in the script), each snapped to the centre of the nearest bar of the series colour within 6 px;
+#   all 48 caps snapped. Check: every error bar is symmetric about its marker within 0.1 N/m.
+#   Thin grey lines inside some Plain PMMA error bars (a second, shorter bar?) are not extracted.
+# Uncertainty: about +-0.12 N/m (1.5 px) for markers and caps; x is the nominal thickness.
+#   The overlay work/fig9_overlay.png was checked by eye (see README).
+series,chip_thickness_nm,force_N_per_m,err_top,err_bottom,note
+Plain PMMA,60,21.51,24.06,19.0,marker centre from one connecting line (end point)
+Plain PMMA,80,22.12,25.68,18.54,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m)
+Plain PMMA,100,26.62,29.01,24.06,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+Plain PMMA,120,31.31,33.85,28.78,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+Plain PMMA,150,30.76,34.34,27.21,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m)
+Plain PMMA,200,33.03,35.53,30.47,marker centre from one connecting line (end point)
+PMMA/0.1 wt% CNT,60,31.35,33.88,28.9,marker centre from one connecting line (end point)
+PMMA/0.1 wt% CNT,80,32.02,34.57,29.51,marker centre from the connecting lines (left/right estimates differ by 0.02 N/m)
+PMMA/0.1 wt% CNT,100,34.62,38.18,31.08,marker centre from the connecting lines (left/right estimates differ by 0.04 N/m)
+PMMA/0.1 wt% CNT,120,38.37,40.94,35.8,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+PMMA/0.1 wt% CNT,150,32.01,35.69,28.36,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m)
+PMMA/0.1 wt% CNT,200,33.59,36.07,31.12,marker centre from one connecting line (end point)
+PMMA/0.2 wt% CNT,60,29.67,32.04,27.36,marker centre from one connecting line (end point)
+PMMA/0.2 wt% CNT,80,29.34,31.81,26.86,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+PMMA/0.2 wt% CNT,100,33.03,36.49,29.47,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+PMMA/0.2 wt% CNT,120,34.88,37.34,32.5,marker centre from the connecting lines (left/right estimates differ by 0.05 N/m)
+PMMA/0.2 wt% CNT,150,38.73,41.21,36.3,marker centre from the connecting lines (left/right estimates differ by 0.04 N/m)
+PMMA/0.2 wt% CNT,200,46.91,48.42,45.39,marker centre from one connecting line (end point)
+PMMA/0.5 wt% CNT,60,34.82,36.26,33.35,marker centre from one connecting line (end point)
+PMMA/0.5 wt% CNT,80,35.13,36.38,33.88,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+PMMA/0.5 wt% CNT,100,34.52,36.95,32.08,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m)
+PMMA/0.5 wt% CNT,120,35.5,39.1,31.97,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m)
+PMMA/0.5 wt% CNT,150,37.15,40.71,33.62,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m)
+PMMA/0.5 wt% CNT,200,37.23,39.79,34.73,marker centre from one connecting line (end point)
+PMMA/1.0 wt% CNT,60,38.8,,,marker centre from one connecting line (end point); no error bar drawn
+PMMA/1.0 wt% CNT,80,39.78,,,marker centre from the connecting lines (left/right estimates differ by 0.02 N/m); no error bar drawn
+PMMA/1.0 wt% CNT,100,39.84,,,marker centre from the connecting lines (left/right estimates differ by 0.01 N/m); no error bar drawn
+PMMA/1.0 wt% CNT,120,40.32,,,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m); no error bar drawn
+PMMA/1.0 wt% CNT,150,42.78,,,marker centre from the connecting lines (left/right estimates differ by 0.00 N/m); no error bar drawn
+PMMA/1.0 wt% CNT,200,48.31,,,marker centre from one connecting line (end point); no error bar drawn

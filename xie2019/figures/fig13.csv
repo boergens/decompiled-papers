@@ -1,0 +1,49 @@
+# Xie & Fang 2019, Nanoscale Research Letters 14:370, Fig. 13: cutting forces versus cutting depth at edge radius of 2 nm.
+# Columns: series (Ft = tangential, Fn = normal cutting force, the legend names); cutting_depth_A = x (Angstrom);
+#   cutting_force_nN = y (nN); px_x, px_y = marker centre in the embedded image (896 x 534 px), for checking.
+# One row per plotted marker (19 per series). The smoothed lines between markers are Excel's drawing, not data.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster (no vector data in the PDF) by fig13_extract.py.
+#   x calibrated on the 13 vertical gridlines (0 to 2.4 A), max residual 0.0023 A; y on the 10 horizontal
+#   gridlines (-10 to 80 nN), max residual 0.094 nN. Marker centre = circle fit to the marker rim.
+# Uncertainty: about +-0.0032 A in x and +-0.22 nN in y (1 px).
+# Note: the markers sit at x = 0, 0.18, 0.38, ... (0.2 A steps from 0.18) and at 0.1 A steps from 0.98 to 2.38 A,
+#   with no marker near 1.98 A; read as plotted.
+series,cutting_depth_A,cutting_force_nN,px_x,px_y
+Ft,-0.003,0.09,114.74,380.74
+Ft,0.177,0.09,171.46,380.75
+Ft,0.377,0.10,234.78,380.73
+Ft,0.578,0.43,298.14,379.17
+Ft,0.778,0.45,361.47,379.12
+Ft,0.979,0.75,424.79,377.71
+Ft,1.079,1.10,456.25,376.11
+Ft,1.179,15.91,488.07,308.09
+Ft,1.279,24.24,519.71,269.84
+Ft,1.380,27.01,551.41,257.10
+Ft,1.480,26.99,583.06,257.18
+Ft,1.580,23.92,614.74,271.32
+Ft,1.681,26.35,646.51,260.15
+Ft,1.781,27.35,678.08,255.53
+Ft,1.877,24.93,708.45,266.63
+Ft,2.077,24.90,771.50,266.77
+Ft,2.177,24.90,803.27,266.80
+Ft,2.277,24.58,834.77,268.28
+Ft,2.377,25.94,866.21,262.00
+Fn,-0.003,-4.00,114.65,399.54
+Fn,0.177,6.97,171.60,349.16
+Fn,0.377,10.06,234.68,334.98
+Fn,0.578,16.58,298.17,305.00
+Fn,0.779,21.78,361.61,281.11
+Fn,0.979,28.40,424.72,250.72
+Fn,1.079,32.21,456.48,233.23
+Fn,1.180,58.68,488.36,111.65
+Fn,1.279,59.71,519.66,106.91
+Fn,1.380,57.63,551.42,116.44
+Fn,1.480,56.60,583.08,121.18
+Fn,1.580,55.94,614.70,124.22
+Fn,1.681,60.40,646.42,103.74
+Fn,1.781,64.90,678.20,83.05
+Fn,1.877,58.67,708.38,111.65
+Fn,2.077,59.72,771.57,106.87
+Fn,2.177,69.69,803.33,61.04
+Fn,2.277,65.05,834.85,82.37
+Fn,2.378,75.60,866.52,33.90

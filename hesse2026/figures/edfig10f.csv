@@ -1,0 +1,11 @@
+# source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 10, PDF page 50 (vector graphics; bars, error bars and in-bar labels are drawn inside form XObjects), panel f
+# value = bar height read from the bar rectangle (top edge mapped through the y axis); for bars clipped at the lower axis limit the value is the number printed inside the bar (transcribed by eye from a 300-dpi render) and bar_drawn_to gives the drawn extent
+# err_lo / err_hi = ends of the black error bar (vertical 0.5-pt strokes at the bar centre; the geometry is unclipped even where the figure clips it at the axis limit); n_error_bar_segments = 2 normally (one segment each way from the bar top)
+# x axis: 4 tick marks calibrated to the four model positions 0..3 (Real, 2-state, Average, Uncoord) (resid 7.9e-05)
+# y axis: 6 tick marks calibrated to [-0.15, -0.1, -0.05, 0, 0.05, 0.1] (resid 5.7e-06)
+# bar colours as in the PDF: #fcae34 orange (state 1), #543379 purple (state 2); light variants are the same colour at fill opacity 0.35
+model,series,value_loglik,bar_drawn_to_loglik,err_lo_loglik,err_hi_loglik,printed_label,bar_colour_rgbhex,bar_fill_opacity,n_error_bar_segments
+Real,two_state_minus_one_state,0.08,0.08,0.067,0.093,,262626,1.0,2
+2-state,two_state_minus_one_state,0.053,0.053,0.039,0.066,,262626,1.0,2
+Average,two_state_minus_one_state,-0.122,-0.122,-0.136,-0.108,,262626,1.0,2
+Uncoord,two_state_minus_one_state,-0.122,-0.122,-0.136,-0.108,,262626,1.0,2

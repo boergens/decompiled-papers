@@ -1,0 +1,105 @@
+# Fig. 3c (p. 4 of microns2025.pdf): mean depth of registered imaging fields, posterior (Post.) and anterior (Ant.) columns.
+# Provenance: tier 3, digitized from the embedded raster (1 px = 0.12 pt = 0.91 um depth); axis tier 2 (vector ticks).
+# Uncertainty about +-1 um for isolated lines; lines in merged bands are evenly divided, +-2 um.
+# Columns: column (Post./Ant.); depth_um (distance from pial surface); band_px (thickness of the dark band in image px);
+# n_lines_in_band; row_px (line centre, image row); flag.
+# Single-line thickness (median band): Post. / Ant. as in the data; depth axis: value = 7.54847 * page_coord + -570.976; max |residual| on the ticks 0.034 data units
+column,depth_um,band_px,n_lines_in_band,row_px,flag
+Post.,97.5,4,1,24.0,
+Post.,102.9,4,1,30.0,
+Post.,111.1,4,1,39.0,
+Post.,119.7,3,1,48.5,
+Post.,131.0,4,1,61.0,
+Post.,144.6,4,1,76.0,
+Post.,149.6,7,2,81.5,merged band split
+Post.,152.7,7,2,85.0,merged band split
+Post.,159.1,4,1,92.0,
+Post.,169.5,3,1,103.5,
+Post.,177.2,4,1,112.0,
+Post.,184.0,3,1,119.5,
+Post.,192.2,3,1,128.5,
+Post.,198.5,3,1,135.5,
+Post.,203.9,3,1,141.5,
+Post.,216.2,4,1,155.0,
+Post.,225.2,5,2,165.0,merged band split
+Post.,227.5,5,2,167.5,merged band split
+Post.,240.6,4,1,182.0,
+Post.,248.3,3,1,190.5,
+Post.,256.9,4,1,200.0,
+Post.,271.0,3,1,215.5,
+Post.,281.8,3,1,227.5,
+Post.,290.0,3,1,236.5,
+Post.,300.9,3,1,248.5,
+Post.,310.8,3,1,259.5,
+Post.,321.7,3,1,271.5,
+Post.,328.9,3,1,279.5,
+Post.,337.1,3,1,288.5,
+Post.,350.2,4,1,303.0,
+Post.,356.1,3,1,309.5,
+Post.,359.7,3,1,313.5,
+Post.,377.8,3,1,333.5,
+Post.,385.1,3,1,341.5,
+Post.,393.7,4,1,351.0,
+Post.,402.8,5,2,361.0,merged band split
+Post.,405.0,5,2,363.5,merged band split
+Post.,417.7,3,1,377.5,
+Post.,426.3,4,1,387.0,
+Post.,467.1,4,1,432.0,
+Post.,476.6,3,1,442.5,
+Post.,487.0,4,1,454.0,
+Post.,491.1,7,2,458.5,merged band split
+Post.,494.2,7,2,462.0,merged band split
+Post.,511.5,4,1,481.0,
+Post.,518.2,3,1,488.5,
+Post.,525.9,4,1,497.0,
+Post.,538.2,3,1,510.5,
+Post.,548.1,3,1,521.5,
+Post.,559.9,3,1,534.5,
+Ant.,83.9,4,1,9.0,
+Ant.,101.1,4,1,28.0,
+Ant.,108.8,3,1,36.5,
+Ant.,115.6,4,1,44.0,
+Ant.,128.3,4,1,58.0,
+Ant.,139.6,3,1,70.5,
+Ant.,147.8,6,2,79.5,merged band split
+Ant.,150.5,6,2,82.5,merged band split
+Ant.,157.7,3,1,90.5,
+Ant.,168.1,4,1,102.0,
+Ant.,174.0,3,1,108.5,
+Ant.,181.7,4,1,117.0,
+Ant.,189.9,4,1,126.0,
+Ant.,196.7,3,1,133.5,
+Ant.,203.5,4,1,141.0,
+Ant.,208.5,3,1,146.5,
+Ant.,213.4,4,1,152.0,
+Ant.,217.5,3,1,156.5,
+Ant.,237.4,3,1,178.5,
+Ant.,244.7,3,1,186.5,
+Ant.,253.3,4,1,196.0,
+Ant.,267.3,3,1,211.5,
+Ant.,278.7,4,1,224.0,
+Ant.,287.7,4,1,234.0,
+Ant.,299.5,4,1,247.0,
+Ant.,309.5,4,1,258.0,
+Ant.,320.3,4,1,270.0,
+Ant.,325.8,4,1,276.0,
+Ant.,334.4,3,1,285.5,
+Ant.,347.5,8,2,300.0,merged band split
+Ant.,351.1,8,2,304.0,merged band split
+Ant.,373.8,4,1,329.0,
+Ant.,381.0,4,1,337.0,
+Ant.,391.0,4,1,348.0,
+Ant.,399.6,3,1,357.5,
+Ant.,404.1,3,1,362.5,
+Ant.,415.0,3,1,374.5,
+Ant.,424.9,3,1,385.5,
+Ant.,467.1,4,1,432.0,
+Ant.,473.0,3,1,438.5,
+Ant.,482.0,6,2,448.5,merged band split
+Ant.,484.7,6,2,451.5,merged band split
+Ant.,507.8,4,1,477.0,
+Ant.,512.8,3,1,482.5,
+Ant.,523.7,3,1,494.5,
+Ant.,536.8,4,1,509.0,
+Ant.,546.3,3,1,519.5,
+Ant.,552.2,4,1,526.0,

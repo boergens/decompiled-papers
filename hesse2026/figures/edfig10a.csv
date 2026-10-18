@@ -1,0 +1,7 @@
+# source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 10, PDF page 50 (vector graphics; bars, error bars and in-bar labels are drawn inside form XObjects), panel a
+# Model x test matrix: green check (#33a13d) = pass, red cross (#d63030) = fail; mark colours read from the vector paths, row/column assignment by position
+test,Real,2-state,C-only,Average,Uncoord
+Reconstruction,pass,pass,fail,pass,pass
+Reconstruction^coord,pass,pass,fail,fail,fail
+Reversal,pass,pass,fail,fail,fail
+Log likelihood,pass,pass,fail,fail,fail

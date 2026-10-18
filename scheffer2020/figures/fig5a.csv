@@ -1,0 +1,53 @@
+# scheffer2020 Figure 5A: precision vs recall of synapse prediction per brain region (T-bars).
+# Provenance: tier 3, digitized from the embedded raster image (JPEG, 1187x562 px) on PDF p. 13 by figures/fig5_extract.py. The authors' Figure 5-source data 1-2 (online) are not available locally.
+# Axis calibration: linear fit through frame (0.5) and gridlines 0.6-1.0; max residual x 0.0003, y 0.0004 data units. One source pixel = 0.00103 (x), 0.00100 (y).
+# Columns: panel; kind (region = one brain region; human_reference = purple dot, typical human proofreader performance per caption); recall; precision (dot centre, fitted circle); r_px = dot radius in source pixels incl. half the white edge; rel_area = r_px^2 (marker area, proportional to region volume per caption, arbitrary units); visible_frac = visible fraction of the dot; pieces = visible pieces merged; status (ok / partly_hidden / mostly_hidden / partly_hidden_guided = refitted near a hand-placed guide circle).
+# Uncertainty: centres about +-0.003 (fully visible dots), more for partly hidden dots (circle fitted to the visible arc); radii +-1 px. Dots completely hidden under larger dots cannot be found, so the number of regions may be undercounted. In the dense cluster of panel A (recall 0.91-0.99, precision 0.88-0.96) the dots overlap heavily: rows marked partly/mostly hidden there are uncertain, and some may be pieces of one dot fitted twice or mis-sized (e.g. the r 16.3 px fit at 0.959/0.934 lies inside the guided r 28 px dot; the r 4.1/4.4 px fits at 0.930/0.898 and 0.931/0.895 may be one dot).
+# Check: the purple human-proofreader reference dot comes out at the caption's values (A 0.9/0.9, B 0.8/0.8) to within 0.0004.
+panel,kind,recall,precision,r_px,rel_area,visible_frac,pieces,status
+A,human_reference,0.9003,0.8997,6.2,38.1,0.91,1,ok
+A,region,0.6879,0.9554,5.2,27.2,0.89,1,ok
+A,region,0.7945,0.9348,8.6,74.5,0.93,1,ok
+A,region,0.8206,0.8599,5.3,28.3,0.89,1,ok
+A,region,0.8331,0.8598,13.1,172.9,0.82,1,ok
+A,region,0.8356,0.9072,3.7,13.9,0.85,1,ok
+A,region,0.837,0.9236,11.6,134.7,0.95,1,ok
+A,region,0.8382,0.8752,15.6,242.2,0.64,1,partly_hidden
+A,region,0.8482,0.9339,13.4,180.5,0.67,1,partly_hidden
+A,region,0.8568,0.8004,5.7,32.2,0.9,1,ok
+A,region,0.8623,0.8124,8.9,78.9,0.88,1,ok
+A,region,0.8713,0.8945,5.6,31.5,0.89,1,ok
+A,region,0.8778,0.9064,7.8,60.3,0.76,1,partly_hidden
+A,region,0.8798,0.8975,2.6,6.7,0.75,1,partly_hidden
+A,region,0.8843,0.8218,3.3,10.8,0.8,1,partly_hidden
+A,region,0.8945,0.9345,12.4,154.1,0.95,1,ok
+A,region,0.8946,0.9628,3.1,9.8,0.81,1,ok
+A,region,0.9094,0.889,9.0,81.2,0.89,1,ok
+A,region,0.9147,0.9152,3.2,10.2,0.81,1,ok
+A,region,0.9178,0.8809,2.7,7.3,0.7,1,partly_hidden
+A,region,0.9186,0.8503,22.3,495.4,0.96,1,ok
+A,region,0.9244,0.8986,20.8,433.0,0.37,1,partly_hidden
+A,region,0.9282,1.0005,3.1,9.9,0.8,1,ok
+A,region,0.9293,0.9404,11.0,120.9,0.37,1,partly_hidden
+A,region,0.9304,0.8978,4.1,17.1,0.89,1,ok
+A,region,0.9314,0.8946,4.4,19.1,0.2,1,mostly_hidden
+A,region,0.9344,0.9352,9.9,97.2,0.94,1,ok
+A,region,0.936,0.9569,5.8,34.1,0.9,1,ok
+A,region,0.9375,0.8834,16.6,275.8,0.61,1,partly_hidden
+A,region,0.9442,0.945,3.2,10.1,0.82,1,ok
+A,region,0.9442,0.9194,10.7,113.8,0.86,1,ok
+A,region,0.9522,0.9095,3.3,10.7,0.81,1,ok
+A,region,0.9558,0.9428,16.1,260.4,0.14,1,mostly_hidden
+A,region,0.9564,0.8467,4.4,19.0,0.87,1,ok
+A,region,0.9572,0.8828,13.1,172.3,0.73,1,partly_hidden
+A,region,0.9593,0.9339,16.3,264.5,0.7,1,partly_hidden
+A,region,0.9606,0.9307,28.1,789.4,0.25,1,partly_hidden_guided
+A,region,0.9676,1.0004,15.0,226.4,0.96,1,ok
+A,region,0.9686,0.8385,4.8,22.9,0.87,1,ok
+A,region,0.9757,0.9534,14.7,215.0,0.96,1,ok
+A,region,0.9811,0.9373,4.1,16.6,0.56,1,partly_hidden
+A,region,0.985,0.956,14.4,207.1,0.19,1,mostly_hidden
+A,region,0.9998,0.9767,13.2,174.9,0.96,1,ok
+A,region,0.9999,0.9366,13.0,169.7,0.95,1,ok
+A,region,0.9999,0.9067,4.1,16.5,0.83,1,ok
+A,region,1.0009,0.9543,2.1,4.5,0.42,1,partly_hidden

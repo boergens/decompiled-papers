@@ -1,0 +1,30 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 9, PDF page 49; coordinates recovered from vector paths with PyMuPDF (tools/pdfplot.py).
+# Panel h (first of two panels labelled h): decoding accuracy (%) for state 1 vs state 2 vs number of cells; black 1-pt line with a 20 %-opacity grey band (standard deviation across decoding iterations per the Fig. 4f legend).
+# x axis from tick marks at 0 and 1000 (resid 4.55e-13); y axis from tick marks at 0,50,100 (resid 8.34e-06).
+# n_cells values are the line vertices snapped to integers (1-10, 20-100 by 10, 200-500 by 100, 1000); precision of accuracy about 0.1 %.
+# Dashed horizontal reference line at 50 % (chance) is not data.
+n_cells,decoding_accuracy_pct,band_lo_pct,band_hi_pct
+1,50.9902,48.6705,53.3098
+2,51.9738,49.277,54.6705
+3,52.7606,49.8557,55.6639
+4,53.9869,50.8295,57.1459
+5,53.9,50.936,56.8656
+6,54.3426,51.3688,57.3164
+7,54.8229,51.6017,58.0459
+8,55.3229,52.3049,58.341
+9,56.0164,53.3787,58.6557
+10,56.0279,53.1656,58.8885
+20,58.177,55.2197,61.1361
+30,60.0033,57.459,62.5475
+40,60.418,57.7836,63.0525
+50,61.6459,58.4099,64.8803
+60,62.4885,59.5541,65.423
+70,63.877,61.0246,66.7295
+80,63.3885,61.0328,65.7443
+90,64.0164,61.2705,66.7639
+100,64.0607,61.6787,66.441
+200,60.8393,58.1836,63.4951
+300,62.1344,59.2672,65.0033
+400,63.5639,61.4951,65.6344
+500,64.759,62.7869,66.7312
+1000,67.0852,65.8738,68.2951

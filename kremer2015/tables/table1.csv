@@ -1,0 +1,18 @@
+# Table 1 (kremer2015, p. 6). List of samples
+# Printed as one column: 'Bacteria' between the top rule and a second rule (heading position), then each species
+# (italic) followed by its indented tissues. Here one row per tissue, species repeated. Transcribed by the decompiler.
+species,sample
+Pichia pastoris,Entire organism
+Arabidopsis thaliana,Root tip
+Medicago truncatula,Root tip
+Medicago truncatula,Stem
+Drosophila melanogaster,Ventral nerve cord
+Drosophila melanogaster,Adult brain
+Mus musculus,Brain
+Mus musculus,Choroid plexus
+Mus musculus,Heart
+Mus musculus,Lung
+Mus musculus,Pancreas
+Mus musculus,Skin
+Mus musculus,Cultured mouse embryonic fibroblasts
+Homo sapiens,Cultured HeLa cells

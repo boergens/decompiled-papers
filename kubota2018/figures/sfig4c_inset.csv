@@ -1,0 +1,11 @@
+# Supplementary Figure 4c, inset graph at the bottom right of panel c (kubota2018 SI): averaged depression depth per acceleration voltage ('Inlet graph at right bottom indicates averaged depression depth for each acceleration voltage')
+# columns: series, acceleration_voltage_keV (nominal, x ticks 1 ... 6), depth_nm (read from the inset), mean_of_panel_c_values_nm (decompiler's arithmetic mean of the four depths printed in panel c for that keV, for comparison; not printed in the figure), pixel_x, pixel_y
+# provenance: tier 4, read by eye: white marks (axis, ticks, labels, markers with short error bars) on the colour height map, about 75 x 60 px in the embedded 150 ppi JPEG; the y tick labels (-50 ... -250) are barely legible; y calibrated on the centres of the tick labels (linear fit), marker centres located by eye on an 8x zoom; script sfig4_extract.py
+# uncertainty: about +-10 nm in y; error bars are visible at 3 and 5 keV but their ends cannot be read
+# no marker visible at 1 keV
+series,acceleration_voltage_keV,depth_nm,mean_of_panel_c_values_nm,pixel_x,pixel_y
+average,2,-62,-65.5,670.5,514.5
+average,3,-84,-85.2,681.5,520.0
+average,4,-88,-91.8,693.0,521.0
+average,5,-152,-153.0,703.5,537.5
+average,6,-253,-250.0,715.0,563.5

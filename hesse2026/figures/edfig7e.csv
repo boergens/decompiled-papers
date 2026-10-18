@@ -1,0 +1,60 @@
+# source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 7, PDF page 47 (vector graphics), panel e
+# Explained variance (%) of each of the 50 face features (1-20 shape, 21-50 appearance) for five series, see legend
+# x axis: 5 tick marks calibrated to feature # 10,20,30,40,50 (resid 1.6e-03); vertices lie exactly on integer features 1..50
+# y axis: 5 tick marks calibrated to -100,-50,0,50,100 % (resid 7.4e-04); 1 % = 0.5550 pt
+# solid series (priming_average black #1c0f29, binocular_conscious_state1 orange #fcae34, binocular_conscious_state2 purple #543379): 50-vertex stroke paths, exact to the PDF coordinate precision (0.001 pt = 0.002 %)
+# dashed series (binocular_suppressed_state1 orange dashed, binocular_suppressed_state2 purple dashed): drawn as filled dash outlines (1 pt wide, 4 pt long butt-capped dashes), not strokes;
+#   each vertex value is the weighted mean of estimates from the straight dash pieces in the two adjacent inter-vertex intervals (pair of parallel offset edges -> centreline, extrapolated to the vertex x);
+#   *_n_estimates = number of estimates, *_spread_pct = max-min of those estimates (precision indicator); n_estimates = 0 means the vertex lies inside a dash gap
+#   with no dash in either adjacent interval: the value is NOT in the PDF and was linearly interpolated between the neighbouring vertices (approximation)
+feature_index,feature_type,priming_average_ev_pct,binocular_conscious_state1_ev_pct,binocular_conscious_state2_ev_pct,binocular_suppressed_state1_ev_pct,binocular_suppressed_state2_ev_pct,suppressed_state1_n_estimates,suppressed_state1_spread_pct,suppressed_state2_n_estimates,suppressed_state2_spread_pct
+1,shape,76.108,15.388,46.901,35.99,10.955,1,0.0,1,0.0
+2,shape,85.37,10.83,23.028,23.232,-3.088,2,0.006,3,0.091
+3,shape,85.82,26.794,38.451,29.309,16.694,4,0.216,3,0.033
+4,shape,59.838,22.091,15.046,4.177,12.937,4,0.34,1,0.0
+5,shape,49.406,5.983,9.208,-2.052,15.879,2,0.004,1,0.0
+6,shape,34.505,9.046,9.947,10.141,11.554,1,0.0,1,0.0
+7,shape,31.406,20.812,13.154,10.555,11.474,1,0.0,0,
+8,shape,40.181,10.523,7.154,1.718,11.395,1,0.0,2,0.003
+9,shape,55.91,7.911,12.397,0.909,-6.898,1,0.0,4,0.024
+10,shape,35.568,20.127,10.65,-5.691,13.448,2,0.002,4,0.047
+11,shape,38.127,-8.795,7.136,3.77,-18.251,2,0.015,4,0.017
+12,shape,25.965,17.244,7.713,4.125,10.793,2,0.004,3,0.025
+13,shape,16.235,2.74,9.695,7.082,5.997,1,0.0,3,0.012
+14,shape,41.983,9.929,8.379,0.478,-4.267,2,0.01,5,0.07
+15,shape,-7.341,-34.777,-21.606,-20.35,-44.614,3,0.01,6,0.117
+16,shape,15.28,-8.507,-5.952,-8.753,-13.241,3,0.01,5,0.042
+17,shape,20.631,1.695,-9.184,3.811,3.353,3,0.027,4,0.015
+18,shape,21.28,-4.86,4.632,-3.665,-10.246,1,0.0,4,0.065
+19,shape,9.352,3.1,3.316,-1.484,2.63,1,0.0,3,0.002
+20,shape,8.524,5.262,0.956,1.818,7.802,2,0.006,4,0.024
+21,appearance,97.496,-1.745,13.55,-16.388,-34.046,1,0.0,3,0.013
+22,appearance,97.532,-1.015,17.334,-13.753,-35.259,1,0.0,1,0.0
+23,appearance,98.288,0.67,13.875,-15.835,-31.717,4,0.03,5,0.083
+24,appearance,87.045,45.676,41.694,15.262,20.611,6,0.084,7,0.228
+25,appearance,95.874,3.136,15.875,-10.703,-23.283,4,0.01,3,0.18
+26,appearance,73.352,-5.433,15.082,0.108,-22.511,2,0.0,2,0.005
+27,appearance,84.072,19.785,24.722,6.475,-2.047,1,0.0,3,0.008
+28,appearance,76.108,21.604,9.695,3.359,15.928,1,0.0,3,0.02
+29,appearance,75.91,8.542,22.848,7.279,-11.971,3,0.021,4,0.037
+30,appearance,95.694,2.65,20.505,-16.549,-35.615,4,0.175,2,0.004
+31,appearance,59.46,-14.327,4.235,0.694,-27.491,3,0.038,1,0.0
+32,appearance,78.0,0.221,13.208,-10.407,-23.12,2,0.006,3,0.115
+33,appearance,77.316,12.055,7.677,-9.697,0.027,2,0.001,5,0.687
+34,appearance,86.108,-1.988,17.767,-8.12,-34.708,2,0.008,6,0.562
+35,appearance,71.694,11.605,9.677,-2.424,-10.46,2,0.092,4,0.141
+36,appearance,64.127,-6.307,-1.938,-17.358,-15.47,2,0.082,2,0.023
+37,appearance,83.316,-8.208,13.226,-6.998,-31.482,2,0.035,2,0.071
+38,appearance,93.64,4.379,5.767,-22.585,-25.478,2,0.031,2,0.013
+39,appearance,94.18,1.28,14.559,-16.131,-33.66,2,0.003,3,0.246
+40,appearance,32.253,15.623,5.244,-8.555,-5.79,2,0.009,2,0.317
+41,appearance,68.451,4.758,14.938,0.2,-10.047,2,0.081,2,0.023
+42,appearance,94.613,1.623,12.65,-15.845,-30.172,2,0.038,3,0.044
+43,appearance,68.145,2.109,6.614,-6.978,-18.823,1,0.0,2,0.019
+44,appearance,79.009,2.506,12.163,-12.752,-14.917,1,0.0,1,0.0
+45,appearance,72.126,5.19,8.325,-14.245,-18.142,2,0.001,1,0.0
+46,appearance,72.811,2.794,7.172,-15.868,-18.014,2,0.046,2,0.002
+47,appearance,65.586,-10.833,5.857,-2.571,-12.424,2,0.014,2,0.038
+48,appearance,68.703,-3.145,1.244,-11.001,-9.193,2,0.088,3,0.144
+49,appearance,93.658,2.325,12.235,-18.746,-30.269,2,0.013,3,0.175
+50,appearance,56.253,6.073,-7.52,-28.599,-19.641,1,0.0,1,0.0

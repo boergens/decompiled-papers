@@ -1,0 +1,49 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 2(a) 'Clean surface': energy vs displacement of the pulled C atom.
+# Columns: series (legend names C(001) green squares, C(110) red triangles, C(111) blue circles);
+#   displacement_A = x of the marker centre in Angstrom (measured, not snapped to the 0.25 A step grid);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 284); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig2a_extract.py.
+#   y calibrated on the 12 major ticks -1..10 eV (max residual 0.013 eV, 0.0272 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0022 A, 0.00547 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening (7 px) of the closed colour mask;
+#   row offsets (-0.5, -1.0, +0.5 px) from the legend, where the legend line passes through each marker.
+# Uncertainty: 2 px for clear markers (0.05 eV); 4-5 px for partly hidden or hidden ones (0.11-0.14 eV).
+#   'hidden': the marker lies under another one; its value is read from that marker or from the series' curve
+#   on both sides of it (straight-line fit), as the note says.
+# The smooth curves of the figure are interpolations through the markers and are not given.
+# The C(001) curve continues past the last listed square (x~2.3) under the green-framed inset; any further marker
+#   there is hidden. The arrows (first-atom detachment per the text) point at C(001) x~1.0, C(110) x~1.25, C(111) x~1.75.
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+C(001),0.003,0.013,0.05,86.5,469.0,ok,
+C(001),0.246,0.407,0.05,131.0,454.5,ok,
+C(001),0.500,1.480,0.05,177.5,415.0,ok,
+C(001),0.752,3.056,0.05,223.5,357.0,ok,
+C(001),1.000,4.741,0.05,269.0,295.0,ok,
+C(001),1.255,3.722,0.05,315.5,332.5,ok,
+C(001),1.500,3.491,0.05,360.5,341.0,ok,
+C(001),1.798,4.007,0.05,415.0,322.0,ok,
+C(001),2.052,5.027,0.05,461.5,284.5,ok,
+C(001),2.304,6.453,0.11,507.5,232.0,partly hidden,top edge under the green-framed inset (centre from its bottom edge and the typical marker height 16 px)
+C(110),0.003,-0.032,0.11,86.5,470.7,hidden,under the C(001) square drawn on top (curve interpolated over 20 px from 8 columns)
+C(110),0.243,-0.137,0.05,130.5,474.5,ok,
+C(110),0.500,1.113,0.05,177.5,428.5,ok,
+C(110),0.749,1.399,0.05,223.0,418.0,ok,
+C(110),0.998,2.105,0.05,268.5,392.0,ok,
+C(110),1.241,2.934,0.05,313.0,361.5,ok,
+C(110),1.498,3.097,0.05,360.0,355.5,ok,
+C(110),1.744,3.478,0.05,405.0,341.5,ok,
+C(110),1.995,4.211,0.05,451.0,314.5,ok,
+C(110),2.257,3.804,0.05,499.0,329.5,ok,
+C(110),2.498,3.817,0.05,543.0,329.0,ok,
+C(111),0.003,0.013,0.11,86.5,469.0,hidden,"under the C(001) square drawn on top; the C(111) curve leaves the square at its centre, so the C(001) square's centre is given"
+C(111),0.246,0.328,0.11,131.0,457.4,hidden,under the C(001) square drawn on top (curve interpolated over 20 px from 13 columns)
+C(111),0.500,1.311,0.11,177.5,421.2,hidden,under the C(001) square drawn on top (curve interpolated over 20 px from 8 columns)
+C(111),0.754,2.622,0.05,224.0,373.0,ok,
+C(111),1.000,4.130,0.05,269.0,317.5,ok,
+C(111),1.252,5.584,0.05,315.0,264.0,ok,
+C(111),1.500,6.969,0.05,360.5,213.0,ok,
+C(111),1.755,8.518,0.05,407.0,156.0,ok,
+C(111),2.003,7.893,0.05,452.5,179.0,ok,
+C(111),2.252,8.872,0.05,498.0,143.0,ok,
+C(111),2.501,9.103,0.05,543.5,134.5,ok,

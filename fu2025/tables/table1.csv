@@ -1,0 +1,14 @@
+# Table 1. Epoxy material parameters defined in the Mulliken–Boyce model [41].
+# Transcribed from p. 8 of the PDF. Symbols written in plain text: gammadot_0,a = γ̇0,a (printed with Latin 'a'), etc.
+# The unit column gives the scale factor and unit of the value (value 6.95 with unit 10^15 s^-1 means 6.95 × 10^15 s^-1).
+Symbol,Unit,Value
+"γ̇0,a",10^15 s^−1,6.95
+"γ̇0,β",10^3 s^−1,1.77
+ΔGα,10^−18 J,5.528
+ΔGβ,10^−20 J,6.036
+"αp,α",,0.26
+"αp,β",,0.26
+hα,MPa,200
+hβ,MPa,500
+CR,MPa,14
+N,m^−1/2,2.1

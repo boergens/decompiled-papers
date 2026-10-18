@@ -1,0 +1,16 @@
+# Supplementary Table 2 | Depth of the electrons reached and signal efficiency for a 50 nm thick section (Supplementary Information p. 25)
+# Footnotes: DER: Depth of the electrons reached; BSE: backscattered electron; PE: Primary electron. SEF50: Signal efficiency for a 50 nm thick section
+# Transcribed from the table IMAGE (no text layer). Table transposed: one row per acceleration voltage (unit not printed in the table; keV per the text).
+# Values as printed. Note: PE at 5.5 is printed '1231' without the minus sign that all other DER values carry (probably a typo).
+acceleration_voltage,DER_BSE_nm,DER_PE_nm,SEF50_percent
+1,-25,-70,100.0
+1.5,-53,-137,99.5
+2,-89,-206,83.0
+2.5,-130,-301,57.4
+3,-173,-467,40.4
+3.5,-217,-570,30.3
+4,-274,-763,15.7
+4.5,-293,-897,18.9
+5,-474,-1016,14.8
+5.5,-517,1231,12.8
+6,-504,-1375,9.8

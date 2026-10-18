@@ -1,0 +1,49 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 3C: Adapted Rand Error versus network threshold (categorical axis).
+# Columns: series, threshold (category label of the tick), y (curve value at the tick), band_low, band_high
+#   (edges of the shaded confidence band at the tick), flag. y is the adapted Rand error (dimensionless).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 7); figures/fig3_extract.py.
+# LowECS = blue (perfused, 0.6 % ECS, data set M0027_11); HighECS = brown/orange (23.9 % ECS, M0007_33).
+# Bands: 'Shaded regions in C-E are the 99% confidence intervals based on a Bernoulli sampling of the data' (caption).
+# y axis (linear) fitted on ticks 0.9@1452.5px, 0.8@1557px, 0.7@1661px, 0.6@1766px, 0.95@1400px, 0.75@1609px; max residual 0.000311 axis units.
+# x: 18 equally spaced ticks at image columns 97, 122, 146.25, 171, 196, 220.25, 245, 269.75, 294, 319, 343.5, 368, 393, 417.25, 442, 466.75, 491, 516.
+# Uncertainty: +-1.5 px = +-0.0014 y units; where the two lines overlap (e.g. the flat parts near the top)
+#   the lower line is partly hidden and its value may be biased by up to 2 px.
+# Flags: band_hidden = band not wider than the drawn line, edges are the line edges; one-sided_vertex = only one adjacent
+#   segment visible.
+series,threshold,y,band_low,band_high,flag
+LowECS,0.3,0.9812,0.9798,0.9817,band_hidden one-sided_vertex
+LowECS,0.4,0.9812,0.9798,0.9817,band_hidden
+LowECS,0.5,0.9812,0.9798,0.9817,band_hidden
+LowECS,0.6,0.9812,0.9798,0.9817,band_hidden
+LowECS,0.7,0.9812,0.9798,0.9817,band_hidden
+LowECS,0.8,0.9809,0.9798,0.9807,band_hidden
+LowECS,0.9,0.9815,,,
+LowECS,0.95,0.9819,0.9807,0.9836,band_hidden
+LowECS,0.975,0.9802,0.9778,0.9826,band_hidden
+LowECS,0.99,0.9562,0.9491,0.9587,
+LowECS,0.995,0.9244,0.9137,0.9262,
+LowECS,0.999,0.8209,0.7807,0.8295,
+LowECS,0.9995,0.8106,0.773,0.8228,
+LowECS,0.9999,0.8438,0.8228,0.8553,
+LowECS,0.99995,0.8941,0.8898,0.9022,
+LowECS,0.99999,0.9921,0.9855,0.9932,
+LowECS,0.999995,0.9972,,,one-sided_vertex
+LowECS,0.999999,,,,hidden (under the other curve)
+HighECS,0.3,0.9841,0.9826,0.9865,band_hidden one-sided_vertex
+HighECS,0.4,0.9841,0.9826,0.9865,band_hidden
+HighECS,0.5,0.9841,0.9826,0.9865,band_hidden
+HighECS,0.6,0.9841,0.9826,0.9865,band_hidden
+HighECS,0.7,0.9841,0.9826,0.9865,band_hidden
+HighECS,0.8,0.9838,0.9826,0.9855,band_hidden
+HighECS,0.9,0.982,0.9826,0.9826,band_hidden
+HighECS,0.95,0.9609,0.9377,0.9645,
+HighECS,0.975,0.6955,0.6678,0.7166,
+HighECS,0.99,0.6748,0.6726,0.6802,
+HighECS,0.995,0.7363,0.7319,0.751,
+HighECS,0.999,0.9023,0.8908,0.908,
+HighECS,0.9995,0.9525,0.9463,0.9549,
+HighECS,0.9999,0.985,0.9807,0.9893,
+HighECS,0.99995,0.9941,0.9922,0.997,band_hidden
+HighECS,0.99999,0.9992,0.997,1.001,band_hidden
+HighECS,0.999995,0.9995,0.9979,1.001,band_hidden
+HighECS,0.999999,0.9994,0.997,1.001,band_hidden one-sided_vertex

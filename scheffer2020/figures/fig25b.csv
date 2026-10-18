@@ -1,0 +1,19 @@
+# Fig. 25(b) of Scheffer et al. 2020 (eLife 9:e57443), p. 47: 'Delay and Amplitude of Response', gall to PB, for 3 x 3 values of R_a and R_m.
+# x = Delay in millisec (linear, 0 to 12); y = Amplitude in millivolts (linear, 0 to 0.2).
+# Provenance: tier 3, digitized from the embedded raster (2141 x 803 px); the authors' Figure 25-source data 4 was not available locally.
+# Calibration on white gridlines: x 2..10 (max residual 0.0044 ms), y 0.05..0.15 (max residual 0.00000 mV).
+# One row per cluster of blue '+' markers (the markers within a cluster overlap almost completely and cannot be separated):
+# x, y = ink centroid; x_min/x_max, y_min/y_max = extent of the marker centres (ink extent minus 6.5 px, half a marker; = centroid for a single-marker cluster); ink_px = blue pixels.
+# The printed arrows 'Decreasing Rm' and 'Increasing Ra' (black) are not data. The caption does not say which cluster is which R_a/R_m combination.
+# Uncertainty: about +-0.04 ms and +-0.0003 mV per pixel.
+# Columns: series, kind, x, y, x_min, x_max, y_min, y_max, ink_px.
+series,kind,x,y,x_min,x_max,y_min,y_max,ink_px
+GA->PB,cluster_summary,1.3104,0.0721863,1.30908,1.30908,0.0716901,0.0725352,111
+GA->PB,cluster_summary,1.95871,0.0429325,1.91649,1.99241,0.0415493,0.0443662,190
+GA->PB,cluster_summary,2.38719,0.134409,2.38719,2.38719,0.134409,0.134409,86
+GA->PB,cluster_summary,2.95358,0.0138266,2.76432,3.14394,0.0125352,0.0153521,403
+GA->PB,cluster_summary,3.56533,0.172353,3.56533,3.56533,0.172535,0.172535,95
+GA->PB,cluster_summary,3.59458,0.107819,3.56153,3.63746,0.107465,0.10831,170
+GA->PB,cluster_summary,5.41807,0.157338,5.38374,5.45967,0.157338,0.157338,169
+GA->PB,cluster_summary,6.02734,0.0589091,5.83929,6.23157,0.0576056,0.0604225,471
+GA->PB,cluster_summary,10.3726,0.116448,10.205,10.572,0.115634,0.118169,530

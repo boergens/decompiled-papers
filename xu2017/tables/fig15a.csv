@@ -1,0 +1,16 @@
+# Xu et al. 2017 eLife, Figure 15(a): table printed as part of the figure image (transcribed by the decompiler).
+# Caption: (a) Table of results of Monte Carlo model and measurements of backscattered electrons at different landing energies, for the three reference samples and a model for an osmium-stained lipid.
+# Printed column groups: 'Gold'; 'Epoxy C21H25O5'; 'Pt Tetrakis Pt[(C6H5)3P]4'; 'Contrast: Pt[(C6H5)3P]4 to Epoxy'; 'Lechitin w Osmium C42H80N1O8P1 OsX' (spelled 'Lechitin' in the figure),
+#   each with 'Model'/'Measured' (Lecithin: 'Model X=0', 'Model X=1', 'Contrast'). Row groups: landing energy '1.2 KeV', '1.0 KeV', '0.8 KeV' (printed 'KeV'). Empty cells are empty in the figure.
+# Decompiler cross-check (detection efficiency = masked/total; contrast = (A-B)/mean(A,B)); differences beyond rounding:
+#   1.2 keV Pt Measured: masked/total = 57.5% vs printed detection efficiency 60.0%; 1.0 keV Gold Measured: masked/total = 51.9% vs printed detection efficiency 54.0%; 0.8 keV Gold Measured: masked/total = 48.3% vs printed detection efficiency 47.0%
+landing_energy_keV,quantity,Gold_Model,Gold_Measured,Epoxy_Model,Epoxy_Measured,PtTetrakis_Model,PtTetrakis_Measured,Contrast_Pt_to_Epoxy_Model,Contrast_Pt_to_Epoxy_Measured,Lecithin_Model_X0,Lecithin_Model_X1,Lecithin_Contrast
+1.2,Total backscatter e-,39.7%,27.0%,8.3%,9.1%,10.3%,12.7%,21.8%,33.0%,8.3%,11.6%,33.5%
+1.2,Masked backscatter e-,22.0%,15.0%,4.2%,5.5%,5.5%,7.3%,26.4%,28.1%,4.2%,6.3%,40.2%
+1.2,Detection efficiency,55.5%,55.0%,50.6%,60.0%,53.1%,60.0%,,,50.6%,54.1%,
+1.0,Total backscatter e-,38.8%,27.0%,8.2%,10.3%,10.0%,13.6%,19.6%,27.6%,8.3%,11.0%,28.6%
+1.0,Masked backscatter e-,20.8%,14.0%,4.3%,5.8%,5.4%,7.5%,23.5%,25.6%,4.4%,6.0%,31.0%
+1.0,Detection efficiency,53.6%,54.0%,52.7%,56.0%,54.4%,55.0%,,,53.4%,54.8%,
+0.8,Total backscatter e-,37.2%,29.0%,8.2%,12.2%,9.4%,15.4%,14.4%,23.2%,8.3%,10.2%,21.4%
+0.8,Masked backscatter e-,19.1%,14.0%,4.6%,6.2%,5.4%,7.7%,15.4%,21.6%,4.7%,5.8%,22.0%
+0.8,Detection efficiency,51.4%,47.0%,56.4%,51.0%,57.0%,50.0%,,,56.5%,56.8%,

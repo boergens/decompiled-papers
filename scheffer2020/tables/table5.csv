@@ -1,0 +1,16 @@
+# Table 5 of Scheffer et al. 2020 (eLife 9:e57443), p. 45: cell types that form cliques and near-cliques in the hemibrain data.
+# Legend: To be included, a cell type must have at least 20 cell instances, 90% or more of which have bidirectional connections to at
+# least 90% of cells of the same type. Coverage is the fraction of all possible edges in the clique that are present with any synapse
+# count >0. Average strength is the average number of synapses in each connection. Synapses is the total number of synapses in the clique.
+# Values as printed; transcribed from the PDF text layer, checked against the page image.
+Type,Region,Cells,Coverage,Avg. strength,Synapses
+KCab-p,MB,59/60,3455/3540,5.13,17722
+Delta7,"PB, CX",42/42,1719/1722,14.21,24433
+ER2_c,"EB, CX",21/21,420/420,33.76,14180
+ER3w,"EB, CX",20/20,380/380,28.00,10639
+ER4d,"EB, CX",25/25,600/600,54.94,32961
+ER5,"EB, CX",20/20,380/380,26.61,10111
+PFNa,NO(R),29/29,811/812,6.74,5467
+PFNa,NO(L),29/29,811/812,7.22,5858
+PFNd,NO(R),20/20,377/380,7.69,2899
+PFNd,NO(L),20/20,378/380,7.60,2874

@@ -1,0 +1,45 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 6(b): energy vs displacement during detachment of a silicate cluster
+#   from C(110). Legend: Case #1 (blue squares), Case #2 (red circles), Case #3 (grey triangles, black line).
+# Columns: series (legend names); displacement_A = x of the marker centre in Angstrom (measured, not snapped to 0.25 A);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 342); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig6b_extract.py.
+#   y calibrated on the 9 major ticks -1..7 eV (max residual 0.004 eV, 0.0132 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0015 A, 0.00324 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening of the closed colour mask; row
+#   offsets from the legend (squares -0.5 px, circles 0, triangles -2.5 px, where the opening blunts the apex).
+# Uncertainty: 2 px for clear markers (0.03 eV); 3-5 px for partly hidden or hidden ones (0.04-0.07 eV).
+#   'hidden': value read from the cluster on top or from the series' curve on both sides (straight-line fit).
+# Case #1 has no markers beyond x~2.0 A (its curve ends there). The smooth curves are interpolations and are not given.
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+Case #1,-0.001,0.016,0.04,911.5,609.5,partly hidden,"all three markers overlap at the origin; the Case #1 square's visible edges (columns 901-922, rows 599-621) give the centre, and the curves leave the cluster there"
+Case #1,0.248,0.096,0.05,988.5,603.5,partly hidden,"top under the Case #2 circle; bottom edge row 615, centre from it and the 23 px square height"
+Case #1,0.500,0.341,0.03,1066.0,585.0,ok,
+Case #1,0.749,1.579,0.03,1143.0,491.5,ok,
+Case #1,1.001,2.546,0.03,1220.5,418.5,ok,
+Case #1,1.250,2.480,0.03,1297.5,423.5,ok,
+Case #1,1.497,2.539,0.03,1373.5,419.0,ok,
+Case #1,1.750,2.586,0.03,1451.5,415.5,ok,
+Case #1,1.998,2.632,0.03,1528.0,412.0,ok,
+Case #2,-0.001,0.010,0.05,911.5,610.0,hidden,"all three markers overlap at the origin; the Case #1 square's visible edges (columns 901-922, rows 599-621) give the centre, and the curves leave the cluster there"
+Case #2,0.252,0.274,0.05,989.5,590.0,partly hidden,"lower part merges with the Case #1 square; top edge row 579, centre from it and the 23 px circle height"
+Case #2,0.500,0.950,0.03,1066.0,539.0,ok,
+Case #2,0.751,1.844,0.03,1143.5,471.5,ok,
+Case #2,0.999,2.208,0.03,1220.0,444.0,ok,
+Case #2,1.249,2.765,0.03,1297.0,402.0,ok,
+Case #2,1.500,3.467,0.03,1374.5,349.0,ok,
+Case #2,1.750,3.798,0.03,1451.5,324.0,ok,
+Case #2,1.999,3.976,0.03,1528.5,310.5,ok,
+Case #2,2.249,4.056,0.03,1605.5,304.5,ok,
+Case #2,2.495,4.063,0.07,1681.5,304.0,partly hidden,"visible blob 20x17 px, typical 22x23"
+Case #3,-0.001,0.010,0.05,911.5,610.0,hidden,"all three markers overlap at the origin; the Case #1 square's visible edges (columns 901-922, rows 599-621) give the centre, and the curves leave the cluster there"
+Case #3,0.248,0.262,0.07,988.5,591.0,hidden,under the Case #2 circle (curve interpolated over 26 px from 16 columns)
+Case #3,0.500,0.992,0.07,1066.0,535.8,hidden,under the Case #2 circle (curve interpolated over 26 px from 13 columns)
+Case #3,0.744,2.288,0.03,1141.5,438.0,ok,
+Case #3,1.001,2.449,0.07,1220.5,425.8,hidden,under the Case #1 square (curve interpolated over 26 px from 16 columns)
+Case #3,1.245,3.188,0.03,1296.0,370.0,ok,
+Case #3,1.500,2.784,0.07,1374.5,400.5,partly hidden,"visible blob 12x11 px, typical 17x17"
+Case #3,1.748,2.870,0.03,1451.0,394.0,ok,
+Case #3,1.999,3.076,0.03,1528.5,378.5,ok,
+Case #3,2.246,3.533,0.03,1604.5,344.0,ok,
+Case #3,2.500,4.261,0.05,1683.0,289.0,partly hidden,"lower part under the Case #2 circle; apex row 279 visible, centre = apex + 10 px (unobstructed triangles: apex to base 21 px)"

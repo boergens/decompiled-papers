@@ -1,0 +1,2547 @@
+# Fig. 21 of Scheffer et al. 2020 (eLife 9:e57443), p. 43: 'Number of connections vs strength of connection'.
+# x = Strength of connection (log axis, ~0.8 to 1000); y = Number of links with specified strength (log axis, ~0.6 to 1e7).
+# Provenance: tier 3, digitized from the embedded raster image (2200 x 1674 px); the authors' Figure 21-source data 1 was not available locally.
+# Calibration: white decade gridlines, x at 1, 10, 100, 1000 (log fit, max residual 0.0024 decades), y at 1e6..1 (max residual 0.0021 decades).
+# series 'observed': one row per detected '+' marker centre (template match on a blue mask); x_int = nearest integer strength where
+# neighbouring integers are >= 6 px apart (strength < ~100); status ok = marker separable (integers >= 13 px apart, strength <~ 4..20 where isolated),
+# overlap = in the dense cloud (strength above ~20-40) where crosses overlap: some markers are hidden and positions are uncertain by a few px.
+# Uncertainty: about +-0.002 decades (1 px) for isolated markers; y values are counts, so isolated ones should be near integers (bottom rows 1..6).
+# series 'rough fit': orange line centre per pixel column. Free fit of the digitized line to log N = c + k log s - s/s0: k = -1.673, s0 = 41.7 (caption: exponent -1.67, cutoff 42); A = 1.919e+06.
+# y_int = nearest integer count for the bottom rows (y < 6.5, rows >= 13 px apart). In dense rows a cross can be found twice a few px apart.
+# Columns: series, x, y, x_int, y_int, status.
+series,x,y,x_int,y_int,status
+observed,1.00375,1.72656e+06,1,,ok
+observed,2.00311,600018,2,,ok
+observed,2.99839,292175,3,,ok
+observed,3.99748,172240,4,,ok
+observed,5.0016,113621,5,,ok
+observed,5.98368,81089.3,6,,ok
+observed,6.99994,60534.3,7,,ok
+observed,7.97749,47803,8,,ok
+observed,8.99026,38607.8,9,,ok
+observed,9.98136,31890.5,10,,ok
+observed,10.9583,26639.8,11,,ok
+observed,11.9859,23017.1,12,,ok
+observed,13.0124,19444.8,13,,ok
+observed,13.9693,16800.5,14,,ok
+observed,14.9966,15013.8,15,,ok
+observed,15.9797,12972.1,16,,ok
+observed,16.9638,11334.7,17,,ok
+observed,18.0084,10129.3,18,,ok
+observed,18.9751,8850.8,19,,ok
+observed,19.9937,8089.42,20,,ok
+observed,20.9102,7068.37,21,,overlap
+observed,21.9505,6533.37,22,,overlap
+observed,22.9567,5904.58,23,,overlap
+observed,24.009,5396.65,24,,overlap
+observed,24.3703,5101.62,24,,overlap
+observed,24.9226,4877.26,25,,overlap
+observed,25.9679,4508.1,26,,overlap
+observed,26.9561,4261.65,27,,overlap
+observed,27.8776,3895.05,28,,overlap
+observed,28.9385,3600.23,29,,overlap
+observed,29.9278,3253.73,30,,overlap
+observed,30.8355,3110.64,31,,overlap
+observed,31.8896,2940.58,32,,overlap
+observed,32.8569,2627.86,33,,overlap
+observed,33.9801,2428.96,34,,overlap
+observed,34.8802,2270.5,35,,overlap
+observed,35.8042,2098.65,36,,overlap
+observed,36.8901,1961.73,37,,overlap
+observed,36.8901,1875.46,37,,overlap
+observed,37.4454,1875.46,37,,overlap
+observed,37.8673,1961.73,38,,overlap
+observed,38.8704,1714.12,39,,overlap
+observed,39.7513,1638.74,40,,overlap
+observed,40.9569,1481.02,41,,overlap
+observed,42.0419,1400.06,42,,overlap
+observed,42.8343,1279.62,43,,overlap
+observed,43.8051,1251.16,44,,overlap
+observed,44.9654,1130.75,,,overlap
+observed,45.9845,1081.02,,,overlap
+observed,46.8513,1010.5,,,overlap
+observed,47.7344,1010.5,,,overlap
+observed,48.8162,923.569,,,overlap
+observed,49.7364,892.935,,,overlap
+observed,49.9225,923.569,,,overlap
+observed,49.9225,892.935,,,overlap
+observed,50.8636,825.349,,,overlap
+observed,51.8223,789.051,,,overlap
+observed,52.2109,762.879,,,overlap
+observed,52.7992,745.915,,,overlap
+observed,53.5939,713.11,,,overlap
+observed,54.8085,754.349,,,overlap
+observed,54.8085,729.328,,,overlap
+observed,54.8085,659.135,,,overlap
+observed,55.6335,651.766,,,overlap
+observed,55.8416,729.328,,,overlap
+observed,55.8416,651.766,,,overlap
+observed,56.6822,659.135,,,overlap
+observed,56.6822,609.246,,,overlap
+observed,56.8943,666.588,,,overlap
+observed,56.8943,602.434,,,overlap
+observed,57.7506,666.588,,,overlap
+observed,57.7506,644.478,,,overlap
+observed,57.9667,666.588,,,overlap
+observed,58.6199,616.135,,,overlap
+observed,59.7249,623.102,,,overlap
+observed,59.7249,602.434,,,overlap
+observed,60.6238,582.452,,,overlap
+observed,61.7666,550.61,,,overlap
+observed,61.7666,520.509,,,overlap
+observed,62.6963,556.836,,,overlap
+observed,62.6963,520.509,,,overlap
+observed,62.9309,556.836,,,overlap
+observed,62.9309,526.395,,,overlap
+observed,63.64,526.395,,,overlap
+observed,63.64,508.935,,,overlap
+observed,63.64,492.054,,,overlap
+observed,64.3571,503.244,,,overlap
+observed,64.8396,475.733,,,overlap
+observed,64.8396,459.953,,,overlap
+observed,65.0822,475.733,,,overlap
+observed,65.0822,459.953,,,overlap
+observed,65.3258,475.733,,,overlap
+observed,65.3258,459.953,,,overlap
+observed,65.5702,475.733,,,overlap
+observed,65.5702,459.953,,,overlap
+observed,65.5702,439.725,,,overlap
+observed,66.3091,449.725,,,overlap
+observed,66.3091,434.808,,,overlap
+observed,66.5572,454.811,,,overlap
+observed,66.5572,439.725,,,overlap
+observed,66.8062,454.811,,,overlap
+observed,66.8062,439.725,,,overlap
+observed,67.8118,425.14,,,overlap
+observed,68.5759,425.14,,,overlap
+observed,69.6081,359.157,,,overlap
+observed,69.8685,347.244,,,overlap
+observed,70.13,359.157,,,overlap
+observed,70.13,347.244,,,overlap
+observed,70.3924,359.157,,,overlap
+observed,70.3924,347.244,,,overlap
+observed,70.6558,359.157,,,overlap
+observed,70.6558,347.244,,,overlap
+observed,70.9202,359.157,,,overlap
+observed,70.9202,347.244,,,overlap
+observed,71.1856,359.157,,,overlap
+observed,71.1856,347.244,,,overlap
+observed,71.4519,363.218,,,overlap
+observed,71.4519,351.171,,,overlap
+observed,71.7193,363.218,,,overlap
+observed,71.7193,351.171,,,overlap
+observed,72.5274,347.244,,,overlap
+observed,72.7988,335.726,,,overlap
+observed,73.6191,335.726,,,overlap
+observed,74.7272,296.668,,,overlap
+observed,75.5692,271.148,,,overlap
+observed,75.852,280.45,,,overlap
+observed,75.852,271.148,,,overlap
+observed,76.1358,280.45,,,overlap
+observed,76.1358,271.148,,,overlap
+observed,76.4207,283.621,,,overlap
+observed,76.4207,274.213,,,overlap
+observed,76.7067,286.828,,,overlap
+observed,76.7067,277.314,,,overlap
+observed,76.7067,268.116,,,overlap
+observed,76.9937,280.45,,,overlap
+observed,76.9937,271.148,,,overlap
+observed,77.571,262.154,,,overlap
+observed,78.445,268.116,,,overlap
+observed,79.6258,234.274,,,overlap
+observed,80.523,191.35,,,overlap
+observed,81.735,197.914,,,overlap
+observed,81.735,178.867,,,overlap
+observed,82.0408,195.702,,,overlap
+observed,82.0408,189.21,,,overlap
+observed,82.3478,195.702,,,overlap
+observed,82.3478,189.21,,,overlap
+observed,82.656,195.702,,,overlap
+observed,82.656,189.21,,,overlap
+observed,82.9653,195.702,,,overlap
+observed,82.9653,189.21,,,overlap
+observed,83.5873,207.019,,,overlap
+observed,84.5292,193.513,,,overlap
+observed,84.8455,178.867,,,overlap
+observed,85.4816,142.845,,,overlap
+observed,86.4448,176.867,,,overlap
+observed,86.7683,171,,,overlap
+observed,87.746,169.088,,,overlap
+observed,88.4039,156.29,,,overlap
+observed,89.4,141.248,,,overlap
+observed,90.4073,124.815,,,overlap
+observed,91.0852,133.526,,,overlap
+observed,91.7681,129.097,,,overlap
+observed,91.7681,117.992,,,overlap
+observed,92.1115,129.097,,,overlap
+observed,92.1115,124.815,,,overlap
+observed,92.1115,116.673,,,overlap
+observed,92.4562,129.097,,,overlap
+observed,92.4562,124.815,,,overlap
+observed,92.8021,129.097,,,overlap
+observed,92.8021,124.815,,,overlap
+observed,92.8021,111.542,,,overlap
+observed,93.1494,126.227,,,overlap
+observed,93.1494,116.673,,,overlap
+observed,93.4979,124.815,,,overlap
+observed,93.4979,116.673,,,overlap
+observed,93.4979,110.294,,,overlap
+observed,93.8478,116.673,,,overlap
+observed,94.5515,135.036,,,overlap
+observed,95.6168,101.946,,,overlap
+observed,96.3338,111.542,,,overlap
+observed,97.4192,116.673,,,overlap
+observed,97.4192,111.542,,,overlap
+observed,97.7838,116.673,,,overlap
+observed,97.7838,111.542,,,overlap
+observed,98.5169,105.444,,,overlap
+observed,99.2556,116.673,,,overlap
+observed,99.627,122.04,,,overlap
+observed,99.627,117.992,,,overlap
+observed,100.374,83.2674,,,overlap
+observed,101.505,120.675,,,overlap
+observed,102.266,94.2301,,,overlap
+observed,103.418,83.2674,,,overlap
+observed,104.584,75.2534,,,overlap
+observed,104.584,68.7798,,,overlap
+observed,105.368,85.1611,,,overlap
+observed,105.368,78.7153,,,overlap
+observed,105.762,85.1611,,,overlap
+observed,105.762,78.7153,,,overlap
+observed,106.555,101.946,,,overlap
+observed,107.354,82.3363,,,overlap
+observed,107.354,78.7153,,,overlap
+observed,107.354,76.1044,,,overlap
+observed,107.354,73.5801,,,overlap
+observed,107.756,82.3363,,,overlap
+observed,107.756,78.7153,,,overlap
+observed,107.756,76.1044,,,overlap
+observed,108.159,82.3363,,,overlap
+observed,108.159,78.7153,,,overlap
+observed,108.159,76.1044,,,overlap
+observed,108.564,78.7153,,,overlap
+observed,108.564,76.1044,,,overlap
+observed,109.378,68.7798,,,overlap
+observed,110.198,83.2674,,,overlap
+observed,110.61,87.0978,,,overlap
+observed,110.61,84.2089,,,overlap
+observed,111.024,87.0978,,,overlap
+observed,111.024,84.2089,,,overlap
+observed,112.275,78.7153,,,overlap
+observed,112.275,76.1044,,,overlap
+observed,112.275,69.5576,,,overlap
+observed,112.695,78.7153,,,overlap
+observed,112.695,76.1044,,,overlap
+observed,112.695,69.5576,,,overlap
+observed,113.54,82.3363,,,overlap
+observed,114.391,76.1044,,,overlap
+observed,114.819,68.7798,,,overlap
+observed,115.249,64.2928,,,overlap
+observed,115.249,62.1603,,,overlap
+observed,115.68,64.2928,,,overlap
+observed,115.68,62.1603,,,overlap
+observed,116.984,63.5739,,,overlap
+observed,116.984,61.4653,,,overlap
+observed,117.421,65.0198,,,overlap
+observed,117.421,62.8631,,,overlap
+observed,117.421,60.778,,,overlap
+observed,117.861,58.7621,,,overlap
+observed,118.302,60.778,,,overlap
+observed,118.302,58.7621,,,overlap
+observed,118.302,56.813,,,overlap
+observed,118.745,60.778,,,overlap
+observed,118.745,58.7621,,,overlap
+observed,118.745,56.813,,,overlap
+observed,119.189,60.778,,,overlap
+observed,119.189,58.7621,,,overlap
+observed,119.189,56.813,,,overlap
+observed,119.635,60.778,,,overlap
+observed,119.635,58.7621,,,overlap
+observed,119.635,56.813,,,overlap
+observed,120.083,60.778,,,overlap
+observed,120.083,58.7621,,,overlap
+observed,120.083,56.813,,,overlap
+observed,120.532,54.9286,,,overlap
+observed,120.532,53.1066,,,overlap
+observed,120.532,51.3451,,,overlap
+observed,120.983,56.813,,,overlap
+observed,120.983,54.9286,,,overlap
+observed,121.436,56.813,,,overlap
+observed,121.436,54.9286,,,overlap
+observed,121.89,56.813,,,overlap
+observed,121.89,54.9286,,,overlap
+observed,122.346,56.813,,,overlap
+observed,122.346,54.9286,,,overlap
+observed,122.346,53.1066,,,overlap
+observed,123.263,68.0108,,,overlap
+observed,123.263,53.7071,,,overlap
+observed,123.725,68.0108,,,overlap
+observed,123.725,53.7071,,,overlap
+observed,124.188,60.778,,,overlap
+observed,124.188,56.813,,,overlap
+observed,124.188,54.9286,,,overlap
+observed,124.652,60.0985,,,overlap
+observed,124.652,56.813,,,overlap
+observed,125.119,41.0049,,,overlap
+observed,125.587,56.1778,,,overlap
+observed,125.587,41.0049,,,overlap
+observed,126.057,56.1778,,,overlap
+observed,127.477,56.1778,,,overlap
+observed,127.477,53.1066,,,overlap
+observed,128.433,47.9955,,,overlap
+observed,130.366,39.2016,,,overlap
+observed,131.344,35.8293,,,overlap
+observed,132.328,45.8847,,,overlap
+observed,132.824,41.9375,,,overlap
+observed,132.824,37.9013,,,overlap
+observed,133.321,40.0931,,,overlap
+observed,133.321,38.7633,,,overlap
+observed,133.321,37.4775,,,overlap
+observed,133.82,40.0931,,,overlap
+observed,133.82,38.7633,,,overlap
+observed,133.82,37.4775,,,overlap
+observed,134.32,39.6448,,,overlap
+observed,134.32,38.3299,,,overlap
+observed,134.32,37.0585,,,overlap
+observed,134.32,35.8293,,,overlap
+observed,134.823,39.6448,,,overlap
+observed,134.823,38.3299,,,overlap
+observed,134.823,37.0585,,,overlap
+observed,134.823,35.8293,,,overlap
+observed,135.327,39.6448,,,overlap
+observed,135.327,38.3299,,,overlap
+observed,135.327,37.0585,,,overlap
+observed,135.327,35.8293,,,overlap
+observed,135.834,39.6448,,,overlap
+observed,135.834,38.3299,,,overlap
+observed,135.834,37.0585,,,overlap
+observed,135.834,35.8293,,,overlap
+observed,136.342,39.6448,,,overlap
+observed,136.342,38.3299,,,overlap
+observed,136.342,37.0585,,,overlap
+observed,136.342,35.8293,,,overlap
+observed,136.342,34.6409,,,overlap
+observed,136.852,39.6448,,,overlap
+observed,136.852,38.3299,,,overlap
+observed,136.852,37.0585,,,overlap
+observed,137.364,39.6448,,,overlap
+observed,137.364,38.3299,,,overlap
+observed,137.364,37.0585,,,overlap
+observed,137.878,41.9375,,,overlap
+observed,137.878,40.5465,,,overlap
+observed,137.878,39.2016,,,overlap
+observed,137.878,37.9013,,,overlap
+observed,137.878,36.6442,,,overlap
+observed,138.394,41.9375,,,overlap
+observed,138.394,39.2016,,,overlap
+observed,138.394,37.9013,,,overlap
+observed,138.912,41.9375,,,overlap
+observed,138.912,39.2016,,,overlap
+observed,138.912,37.9013,,,overlap
+observed,138.912,35.0326,,,overlap
+observed,138.912,33.1174,,,overlap
+observed,138.912,32.0189,,,overlap
+observed,139.432,41.9375,,,overlap
+observed,139.432,39.2016,,,overlap
+observed,139.432,37.9013,,,overlap
+observed,139.432,33.1174,,,overlap
+observed,139.432,32.0189,,,overlap
+observed,139.954,43.8667,,,overlap
+observed,139.954,41.9375,,,overlap
+observed,139.954,39.2016,,,overlap
+observed,139.954,33.1174,,,overlap
+observed,139.954,32.0189,,,overlap
+observed,140.477,43.8667,,,overlap
+observed,140.477,41.9375,,,overlap
+observed,140.477,39.2016,,,overlap
+observed,140.477,33.1174,,,overlap
+observed,140.477,32.0189,,,overlap
+observed,141.003,33.1174,,,overlap
+observed,141.003,32.0189,,,overlap
+observed,141.003,30.6108,,,overlap
+observed,141.531,33.1174,,,overlap
+observed,141.531,32.0189,,,overlap
+observed,141.531,30.6108,,,overlap
+observed,142.06,32.0189,,,overlap
+observed,142.06,30.2685,,,overlap
+observed,142.06,28.9373,,,overlap
+observed,142.06,27.9775,,,overlap
+observed,142.592,32.0189,,,overlap
+observed,142.592,30.2685,,,overlap
+observed,142.592,28.9373,,,overlap
+observed,142.592,27.9775,,,overlap
+observed,143.125,28.9373,,,overlap
+observed,143.125,27.9775,,,overlap
+observed,143.661,28.9373,,,overlap
+observed,143.661,27.9775,,,overlap
+observed,144.198,39.2016,,,overlap
+observed,144.198,37.9013,,,overlap
+observed,144.738,39.2016,,,overlap
+observed,144.738,37.9013,,,overlap
+observed,144.738,33.8706,,,overlap
+observed,145.28,39.2016,,,overlap
+observed,145.28,37.9013,,,overlap
+observed,145.28,33.8706,,,overlap
+observed,145.823,35.8293,,,overlap
+observed,145.823,33.8706,,,overlap
+observed,146.369,32.7471,,,overlap
+observed,146.369,30.2685,,,overlap
+observed,146.917,33.8706,,,overlap
+observed,146.917,32.7471,,,overlap
+observed,147.466,33.8706,,,overlap
+observed,147.466,32.7471,,,overlap
+observed,148.018,33.8706,,,overlap
+observed,148.018,32.7471,,,overlap
+observed,148.572,33.8706,,,overlap
+observed,148.572,32.7471,,,overlap
+observed,148.572,31.6609,,,overlap
+observed,149.128,23.1098,,,overlap
+observed,149.686,32.0189,,,overlap
+observed,149.686,23.1098,,,overlap
+observed,150.246,32.0189,,,overlap
+observed,150.246,30.2685,,,overlap
+observed,150.808,32.0189,,,overlap
+observed,150.808,30.2685,,,overlap
+observed,151.373,32.0189,,,overlap
+observed,151.939,24.1729,,,overlap
+observed,151.939,23.3711,,,overlap
+observed,152.508,24.1729,,,overlap
+observed,152.508,23.3711,,,overlap
+observed,153.078,24.1729,,,overlap
+observed,153.078,23.3711,,,overlap
+observed,153.078,20.8856,,,overlap
+observed,153.651,24.1729,,,overlap
+observed,153.651,23.3711,,,overlap
+observed,154.226,30.2685,,,overlap
+observed,154.226,27.9775,,,overlap
+observed,154.226,24.1729,,,overlap
+observed,154.226,23.3711,,,overlap
+observed,154.803,26.1523,,,overlap
+observed,154.803,25.2849,,,overlap
+observed,154.803,24.4462,,,overlap
+observed,154.803,23.6353,,,overlap
+observed,154.803,22.8514,,,overlap
+observed,154.803,22.0934,,,overlap
+observed,155.382,26.1523,,,overlap
+observed,155.382,25.2849,,,overlap
+observed,155.382,24.4462,,,overlap
+observed,155.382,23.6353,,,overlap
+observed,155.382,22.8514,,,overlap
+observed,155.382,22.0934,,,overlap
+observed,155.964,26.1523,,,overlap
+observed,155.964,25.2849,,,overlap
+observed,155.964,24.4462,,,overlap
+observed,155.964,23.6353,,,overlap
+observed,155.964,22.8514,,,overlap
+observed,155.964,22.0934,,,overlap
+observed,156.547,26.448,,,overlap
+observed,156.547,25.5708,,,overlap
+observed,156.547,24.7226,,,overlap
+observed,156.547,23.9026,,,overlap
+observed,156.547,23.1098,,,overlap
+observed,157.133,26.7471,,,overlap
+observed,157.133,25.8599,,,overlap
+observed,157.133,25.0022,,,overlap
+observed,157.133,24.1729,,,overlap
+observed,157.133,23.3711,,,overlap
+observed,157.721,28.2939,,,overlap
+observed,157.721,26.1523,,,overlap
+observed,157.721,25.2849,,,overlap
+observed,157.721,24.4462,,,overlap
+observed,157.721,23.6353,,,overlap
+observed,158.311,28.2939,,,overlap
+observed,158.311,26.1523,,,overlap
+observed,158.311,24.1729,,,overlap
+observed,158.311,23.3711,,,overlap
+observed,158.904,28.2939,,,overlap
+observed,158.904,26.1523,,,overlap
+observed,158.904,24.1729,,,overlap
+observed,158.904,23.3711,,,overlap
+observed,159.498,28.2939,,,overlap
+observed,159.498,26.1523,,,overlap
+observed,159.498,24.1729,,,overlap
+observed,159.498,23.3711,,,overlap
+observed,160.095,28.2939,,,overlap
+observed,160.095,26.1523,,,overlap
+observed,160.095,24.1729,,,overlap
+observed,160.095,23.3711,,,overlap
+observed,160.694,30.9569,,,overlap
+observed,160.694,29.9301,,,overlap
+observed,160.694,24.1729,,,overlap
+observed,160.694,23.3711,,,overlap
+observed,161.296,30.9569,,,overlap
+observed,161.296,29.9301,,,overlap
+observed,161.899,22.8514,,,overlap
+observed,161.899,22.0934,,,overlap
+observed,162.505,22.8514,,,overlap
+observed,162.505,22.0934,,,overlap
+observed,163.113,26.1523,,,overlap
+observed,163.113,24.1729,,,overlap
+observed,163.113,23.3711,,,overlap
+observed,163.113,22.5959,,,overlap
+observed,163.723,30.9569,,,overlap
+observed,163.723,29.9301,,,overlap
+observed,164.336,30.9569,,,overlap
+observed,164.336,29.9301,,,overlap
+observed,164.951,19.0889,,,overlap
+observed,166.81,24.1729,,,overlap
+observed,166.81,23.3711,,,overlap
+observed,167.434,24.1729,,,overlap
+observed,167.434,23.3711,,,overlap
+observed,168.06,30.9569,,,overlap
+observed,168.689,14.0908,,,overlap
+observed,169.954,12.0385,,,overlap
+observed,171.228,22.8514,,,overlap
+observed,171.228,22.0934,,,overlap
+observed,171.869,23.6353,,,overlap
+observed,171.869,22.8514,,,overlap
+observed,171.869,22.0934,,,overlap
+observed,172.512,23.6353,,,overlap
+observed,172.512,22.8514,,,overlap
+observed,173.158,23.6353,,,overlap
+observed,173.158,18.0454,,,overlap
+observed,173.806,24.1729,,,overlap
+observed,173.806,23.3711,,,overlap
+observed,173.806,18.8755,,,overlap
+observed,174.456,24.1729,,,overlap
+observed,174.456,19.0889,,,overlap
+observed,175.764,18.4558,,,overlap
+observed,175.764,14.0908,,,overlap
+observed,176.422,18.8755,,,overlap
+observed,176.422,18.2494,,,overlap
+observed,176.422,14.0908,,,overlap
+observed,177.082,18.8755,,,overlap
+observed,177.082,18.2494,,,overlap
+observed,177.744,27.0495,,,overlap
+observed,177.744,18.8755,,,overlap
+observed,178.409,27.0495,,,overlap
+observed,178.409,19.0889,,,overlap
+observed,179.077,19.9671,,,overlap
+observed,179.077,19.0889,,,overlap
+observed,179.747,18.0454,,,overlap
+observed,180.42,19.0889,,,overlap
+observed,180.42,18.0454,,,overlap
+observed,181.095,14.0908,,,overlap
+observed,181.773,12.0385,,,overlap
+observed,182.453,15.0743,,,overlap
+observed,182.453,12.0385,,,overlap
+observed,183.135,15.946,,,overlap
+observed,183.135,15.0743,,,overlap
+observed,183.821,17.0589,,,overlap
+observed,183.821,15.946,,,overlap
+observed,183.821,15.0743,,,overlap
+observed,184.509,19.0889,,,overlap
+observed,184.509,18.0454,,,overlap
+observed,184.509,17.0589,,,overlap
+observed,184.509,15.946,,,overlap
+observed,185.199,18.0454,,,overlap
+observed,185.199,17.0589,,,overlap
+observed,185.199,15.946,,,overlap
+observed,185.892,11.0029,,,overlap
+observed,186.588,13.0243,,,overlap
+observed,186.588,12.0385,,,overlap
+observed,187.286,13.0243,,,overlap
+observed,187.987,20.8856,,,overlap
+observed,188.69,12.0385,,,overlap
+observed,189.396,17.0589,,,overlap
+observed,189.396,16.1263,,,overlap
+observed,189.396,12.0385,,,overlap
+observed,190.105,17.0589,,,overlap
+observed,190.105,16.1263,,,overlap
+observed,190.816,15.0743,,,overlap
+observed,191.53,16.1263,,,overlap
+observed,191.53,11.0029,,,overlap
+observed,192.247,16.1263,,,overlap
+observed,192.247,11.0029,,,overlap
+observed,192.966,16.1263,,,overlap
+observed,193.688,15.0743,,,overlap
+observed,194.413,16.1263,,,overlap
+observed,194.413,15.0743,,,overlap
+observed,194.413,10.0564,,,overlap
+observed,195.14,16.1263,,,overlap
+observed,195.14,15.0743,,,overlap
+observed,195.14,10.4014,,,overlap
+observed,195.14,10.0564,,,overlap
+observed,195.871,15.946,,,overlap
+observed,195.871,15.0743,,,overlap
+observed,196.604,12.0385,,,overlap
+observed,196.604,11.0029,,,overlap
+observed,197.339,12.0385,,,overlap
+observed,197.339,11.0029,,,overlap
+observed,198.819,10.0564,,,overlap
+observed,199.563,8.98692,,,overlap
+observed,200.31,14.0908,,,overlap
+observed,200.31,8.98692,,,overlap
+observed,201.059,14.0908,,,overlap
+observed,201.811,13.0243,,,overlap
+observed,202.567,12.0385,,,overlap
+observed,202.567,11.0029,,,overlap
+observed,203.325,12.0385,,,overlap
+observed,203.325,11.0029,,,overlap
+observed,203.325,8.03118,,,overlap
+observed,204.085,12.0385,,,overlap
+observed,204.085,11.0029,,,overlap
+observed,204.085,8.03118,,,overlap
+observed,204.849,12.0385,,,overlap
+observed,204.849,11.0029,,,overlap
+observed,205.616,12.1746,,,overlap
+observed,205.616,11.0029,,,overlap
+observed,205.616,10.0564,,,overlap
+observed,206.385,12.0385,,,overlap
+observed,207.932,7.01748,,,overlap
+observed,208.711,13.0243,,,overlap
+observed,209.491,15.946,,,overlap
+observed,209.491,14.0908,,,overlap
+observed,210.275,15.946,,,overlap
+observed,210.275,5.99539,,6,overlap
+observed,211.852,5.00826,,5,overlap
+observed,212.645,7.01748,,,overlap
+observed,213.44,14.0908,,,overlap
+observed,214.239,8.03118,,,overlap
+observed,215.845,11.0029,,,overlap
+observed,216.653,10.0564,,,overlap
+observed,216.653,7.59213,,,overlap
+observed,216.653,7.3403,,,overlap
+observed,217.464,7.59213,,,overlap
+observed,217.464,7.3403,,,overlap
+observed,217.464,7.09683,,,overlap
+observed,218.278,12.0385,,,overlap
+observed,218.278,7.59213,,,overlap
+observed,218.278,7.3403,,,overlap
+observed,218.278,7.09683,,,overlap
+observed,219.094,12.0385,,,overlap
+observed,219.094,7.59213,,,overlap
+observed,219.094,7.3403,,,overlap
+observed,219.914,8.03118,,,overlap
+observed,219.914,7.59213,,,overlap
+observed,219.914,7.3403,,,overlap
+observed,220.737,9.08854,,,overlap
+observed,220.737,8.03118,,,overlap
+observed,220.737,7.59213,,,overlap
+observed,220.737,7.3403,,,overlap
+observed,221.563,9.08854,,,overlap
+observed,221.563,8.03118,,,overlap
+observed,221.563,7.59213,,,overlap
+observed,221.563,7.3403,,,overlap
+observed,221.563,7.09683,,,overlap
+observed,222.392,9.08854,,,overlap
+observed,222.392,8.03118,,,overlap
+observed,222.392,7.59213,,,overlap
+observed,222.392,7.3403,,,overlap
+observed,222.392,7.09683,,,overlap
+observed,223.224,9.08854,,,overlap
+observed,223.224,7.17708,,,overlap
+observed,223.224,6.93902,,,overlap
+observed,223.224,6.55968,,,overlap
+observed,223.224,5.99539,,6,overlap
+observed,224.06,7.17708,,,overlap
+observed,224.06,6.93902,,,overlap
+observed,224.06,6.55968,,,overlap
+observed,224.06,5.99539,,6,overlap
+observed,224.898,9.40034,,,overlap
+observed,224.898,7.59213,,,overlap
+observed,224.898,7.17708,,,overlap
+observed,224.898,6.93902,,,overlap
+observed,225.739,10.0564,,,overlap
+observed,225.739,9.40034,,,overlap
+observed,225.739,7.09683,,,overlap
+observed,227.432,14.0908,,,overlap
+observed,227.432,7.09683,,,overlap
+observed,228.283,14.0908,,,overlap
+observed,228.283,7.09683,,,overlap
+observed,229.137,10.0564,,,overlap
+observed,229.137,7.09683,,,overlap
+observed,229.995,10.0564,,,overlap
+observed,230.855,8.98692,,,overlap
+observed,231.719,5.00826,,5,overlap
+observed,232.586,7.01748,,,overlap
+observed,232.586,5.00826,,5,overlap
+observed,234.33,10.0564,,,overlap
+observed,234.33,5.00826,,5,overlap
+observed,235.207,10.0564,,,overlap
+observed,235.207,5.00826,,5,overlap
+observed,236.087,5.99539,,6,overlap
+observed,236.087,5.47964,,5,overlap
+observed,236.087,5.00826,,5,overlap
+observed,236.97,7.01748,,,overlap
+observed,236.97,6.55968,,,overlap
+observed,236.97,5.99539,,6,overlap
+observed,237.857,7.01748,,,overlap
+observed,238.747,12.0385,,,overlap
+observed,239.641,2.98581,,3,overlap
+observed,240.537,1.9919,,2,overlap
+observed,241.437,6.55968,,,overlap
+observed,241.437,6.06318,,6,overlap
+observed,242.341,6.55968,,,overlap
+observed,242.341,6.06318,,6,overlap
+observed,242.341,5.60426,,6,overlap
+observed,242.341,5.00826,,5,overlap
+observed,243.248,6.55968,,,overlap
+observed,243.248,6.06318,,6,overlap
+observed,244.158,6.55968,,,overlap
+observed,244.158,6.06318,,6,overlap
+observed,244.158,3.99967,,4,overlap
+observed,245.071,6.55968,,,overlap
+observed,245.071,6.06318,,6,overlap
+observed,245.071,3.99967,,4,overlap
+observed,245.989,6.55968,,,overlap
+observed,245.989,6.06318,,6,overlap
+observed,245.989,3.99967,,4,overlap
+observed,246.909,5.99539,,6,overlap
+observed,246.909,5.47964,,5,overlap
+observed,246.909,5.00826,,5,overlap
+observed,247.833,5.99539,,6,overlap
+observed,247.833,5.00826,,5,overlap
+observed,247.833,2.01443,,2,overlap
+observed,248.76,5.99539,,6,overlap
+observed,248.76,5.00826,,5,overlap
+observed,248.76,2.01443,,2,overlap
+observed,249.691,5.99539,,6,overlap
+observed,249.691,5.00826,,5,overlap
+observed,252.505,2.98581,,3,overlap
+observed,253.449,4.04489,,4,overlap
+observed,254.398,7.01748,,,overlap
+observed,255.35,2.01443,,2,overlap
+observed,256.305,5.00826,,5,overlap
+observed,256.305,2.01443,,2,overlap
+observed,258.227,3.01957,,3,overlap
+observed,258.227,2.01443,,2,overlap
+observed,259.193,4.04489,,4,overlap
+observed,259.193,3.01957,,3,overlap
+observed,260.163,4.04489,,4,overlap
+observed,262.114,5.00826,,5,overlap
+observed,262.114,4.04489,,4,overlap
+observed,263.095,5.00826,,5,overlap
+observed,263.095,1.00322,,1,overlap
+observed,264.079,5.99539,,6,overlap
+observed,264.079,1.00322,,1,overlap
+observed,265.067,5.99539,,6,overlap
+observed,265.067,3.01957,,3,overlap
+observed,265.067,1.00322,,1,overlap
+observed,266.059,3.01957,,3,overlap
+observed,266.059,1.00322,,1,overlap
+observed,267.055,3.99967,,4,overlap
+observed,267.055,1.00322,,1,overlap
+observed,268.054,3.99967,,4,overlap
+observed,268.054,1.00322,,1,overlap
+observed,269.057,5.00826,,5,overlap
+observed,270.064,2.01443,,2,overlap
+observed,271.074,3.01957,,3,overlap
+observed,271.074,2.01443,,2,overlap
+observed,272.089,3.01957,,3,overlap
+observed,272.089,2.01443,,2,overlap
+observed,273.107,3.01957,,3,overlap
+observed,273.107,2.01443,,2,overlap
+observed,274.129,3.01957,,3,overlap
+observed,274.129,1.00322,,1,overlap
+observed,275.154,3.01957,,3,overlap
+observed,275.154,1.00322,,1,overlap
+observed,276.184,3.08824,,3,overlap
+observed,276.184,2.98581,,3,overlap
+observed,276.184,2.88677,,3,overlap
+observed,276.184,1.00322,,1,overlap
+observed,277.218,3.08824,,3,overlap
+observed,277.218,2.98581,,3,overlap
+observed,277.218,2.88677,,3,overlap
+observed,277.218,1.00322,,1,overlap
+observed,278.255,3.08824,,3,overlap
+observed,278.255,2.98581,,3,overlap
+observed,278.255,2.88677,,3,overlap
+observed,278.255,2.01443,,2,overlap
+observed,278.255,1.00322,,1,overlap
+observed,279.296,3.08824,,3,overlap
+observed,279.296,2.98581,,3,overlap
+observed,279.296,2.88677,,3,overlap
+observed,279.296,1.00322,,1,overlap
+observed,280.341,3.08824,,3,overlap
+observed,280.341,2.98581,,3,overlap
+observed,280.341,2.88677,,3,overlap
+observed,281.39,3.01957,,3,overlap
+observed,282.443,5.99539,,6,overlap
+observed,282.443,3.01957,,3,overlap
+observed,283.5,2.01443,,2,overlap
+observed,284.561,3.01957,,3,overlap
+observed,284.561,2.01443,,2,overlap
+observed,285.626,3.01957,,3,overlap
+observed,285.626,2.01443,,2,overlap
+observed,287.767,6.06318,,6,overlap
+observed,287.767,2.01443,,2,overlap
+observed,288.844,6.06318,,6,overlap
+observed,288.844,1.00322,,1,overlap
+observed,292.099,2.01443,,2,overlap
+observed,292.099,1.00322,,1,overlap
+observed,293.192,5.99539,,6,overlap
+observed,293.192,1.00322,,1,overlap
+observed,294.289,0.969944,,1,overlap
+observed,295.39,3.99967,,4,overlap
+observed,295.39,1.02604,,1,overlap
+observed,295.39,0.992003,,1,overlap
+observed,295.39,0.9591,,1,overlap
+observed,296.495,1.02604,,1,overlap
+observed,296.495,0.992003,,1,overlap
+observed,296.495,0.9591,,1,overlap
+observed,297.605,2.01443,,2,overlap
+observed,297.605,1.00322,,1,overlap
+observed,298.718,2.01443,,2,overlap
+observed,298.718,1.00322,,1,overlap
+observed,299.836,2.01443,,2,overlap
+observed,299.836,1.00322,,1,overlap
+observed,300.958,2.01443,,2,overlap
+observed,300.958,1.00322,,1,overlap
+observed,302.084,2.01443,,2,overlap
+observed,302.084,1.00322,,1,overlap
+observed,303.215,2.06024,,2,overlap
+observed,303.215,1.9919,,2,overlap
+observed,303.215,1.92583,,2,overlap
+observed,304.349,2.98581,,3,overlap
+observed,304.349,2.06024,,2,overlap
+observed,304.349,1.9919,,2,overlap
+observed,304.349,1.92583,,2,overlap
+observed,305.488,2.06024,,2,overlap
+observed,305.488,1.9919,,2,overlap
+observed,305.488,1.92583,,2,overlap
+observed,306.631,2.06024,,2,overlap
+observed,306.631,1.9919,,2,overlap
+observed,306.631,1.92583,,2,overlap
+observed,307.778,2.06024,,2,overlap
+observed,307.778,1.9919,,2,overlap
+observed,307.778,1.92583,,2,overlap
+observed,308.93,2.06024,,2,overlap
+observed,308.93,1.9919,,2,overlap
+observed,308.93,1.92583,,2,overlap
+observed,308.93,1.00322,,1,overlap
+observed,310.086,2.06024,,2,overlap
+observed,310.086,1.9919,,2,overlap
+observed,310.086,1.92583,,2,overlap
+observed,311.246,3.01957,,3,overlap
+observed,311.246,2.01443,,2,overlap
+observed,312.411,3.01957,,3,overlap
+observed,312.411,2.01443,,2,overlap
+observed,315.931,2.01443,,2,overlap
+observed,317.113,1.00322,,1,overlap
+observed,320.687,3.99967,,4,overlap
+observed,320.687,1.00322,,1,overlap
+observed,323.091,2.98581,,3,overlap
+observed,323.091,1.03764,,1,overlap
+observed,323.091,1.00322,,1,overlap
+observed,323.091,0.969944,,1,overlap
+observed,324.3,2.98581,,3,overlap
+observed,324.3,1.03764,,1,overlap
+observed,324.3,1.00322,,1,overlap
+observed,324.3,0.969944,,1,overlap
+observed,325.514,3.99967,,4,overlap
+observed,325.514,1.03764,,1,overlap
+observed,325.514,1.00322,,1,overlap
+observed,325.514,0.969944,,1,overlap
+observed,326.732,3.99967,,4,overlap
+observed,326.732,1.03764,,1,overlap
+observed,326.732,1.00322,,1,overlap
+observed,326.732,0.969944,,1,overlap
+observed,327.954,1.00322,,1,overlap
+observed,329.181,2.01443,,2,overlap
+observed,329.181,1.00322,,1,overlap
+observed,330.413,2.01443,,2,overlap
+observed,330.413,1.00322,,1,overlap
+observed,331.65,2.01443,,2,overlap
+observed,331.65,1.00322,,1,overlap
+observed,332.891,2.01443,,2,overlap
+observed,332.891,1.00322,,1,overlap
+observed,334.136,2.01443,,2,overlap
+observed,337.901,2.01443,,2,overlap
+observed,339.166,1.00322,,1,overlap
+observed,340.435,2.01443,,2,overlap
+observed,340.435,1.00322,,1,overlap
+observed,342.987,2.98581,,3,overlap
+observed,342.987,1.00322,,1,overlap
+observed,345.559,2.01443,,2,overlap
+observed,345.559,1.02604,,1,overlap
+observed,345.559,0.992003,,1,overlap
+observed,345.559,0.9591,,1,overlap
+observed,346.852,2.01443,,2,overlap
+observed,346.852,1.02604,,1,overlap
+observed,346.852,0.992003,,1,overlap
+observed,346.852,0.9591,,1,overlap
+observed,348.15,1.02604,,1,overlap
+observed,348.15,0.992003,,1,overlap
+observed,348.15,0.9591,,1,overlap
+observed,349.453,2.98581,,3,overlap
+observed,349.453,1.02604,,1,overlap
+observed,349.453,0.992003,,1,overlap
+observed,349.453,0.9591,,1,overlap
+observed,350.76,1.02604,,1,overlap
+observed,350.76,0.992003,,1,overlap
+observed,350.76,0.9591,,1,overlap
+observed,352.073,1.02604,,1,overlap
+observed,352.073,0.992003,,1,overlap
+observed,352.073,0.9591,,1,overlap
+observed,353.39,2.01443,,2,overlap
+observed,353.39,1.02604,,1,overlap
+observed,353.39,0.992003,,1,overlap
+observed,353.39,0.9591,,1,overlap
+observed,354.712,2.01443,,2,overlap
+observed,354.712,1.02604,,1,overlap
+observed,354.712,0.992003,,1,overlap
+observed,354.712,0.9591,,1,overlap
+observed,356.04,2.01443,,2,overlap
+observed,356.04,1.02604,,1,overlap
+observed,356.04,0.992003,,1,overlap
+observed,356.04,0.9591,,1,overlap
+observed,357.372,1.02604,,1,overlap
+observed,357.372,0.992003,,1,overlap
+observed,357.372,0.9591,,1,overlap
+observed,358.709,1.03764,,1,overlap
+observed,358.709,1.00322,,1,overlap
+observed,358.709,0.969944,,1,overlap
+observed,360.052,1.03764,,1,overlap
+observed,360.052,1.00322,,1,overlap
+observed,360.052,0.969944,,1,overlap
+observed,361.399,1.03764,,1,overlap
+observed,361.399,1.00322,,1,overlap
+observed,361.399,0.969944,,1,overlap
+observed,362.751,2.01443,,2,overlap
+observed,362.751,1.02604,,1,overlap
+observed,362.751,0.992003,,1,overlap
+observed,362.751,0.9591,,1,overlap
+observed,364.108,2.01443,,2,overlap
+observed,364.108,1.02604,,1,overlap
+observed,364.108,0.992003,,1,overlap
+observed,364.108,0.9591,,1,overlap
+observed,365.471,1.02604,,1,overlap
+observed,365.471,0.992003,,1,overlap
+observed,365.471,0.9591,,1,overlap
+observed,366.839,1.03764,,1,overlap
+observed,366.839,1.00322,,1,overlap
+observed,366.839,0.969944,,1,overlap
+observed,368.211,1.03764,,1,overlap
+observed,368.211,1.00322,,1,overlap
+observed,368.211,0.969944,,1,overlap
+observed,369.589,1.03764,,1,overlap
+observed,369.589,1.00322,,1,overlap
+observed,369.589,0.969944,,1,overlap
+observed,370.972,1.02604,,1,overlap
+observed,370.972,0.992003,,1,overlap
+observed,370.972,0.9591,,1,overlap
+observed,372.36,1.02604,,1,overlap
+observed,372.36,0.992003,,1,overlap
+observed,372.36,0.9591,,1,overlap
+observed,373.753,1.02604,,1,overlap
+observed,373.753,0.992003,,1,overlap
+observed,373.753,0.9591,,1,overlap
+observed,375.152,1.03764,,1,overlap
+observed,375.152,1.00322,,1,overlap
+observed,375.152,0.969944,,1,overlap
+observed,376.556,2.01443,,2,overlap
+observed,376.556,1.03764,,1,overlap
+observed,376.556,1.00322,,1,overlap
+observed,376.556,0.969944,,1,overlap
+observed,377.965,2.01443,,2,overlap
+observed,377.965,1.02604,,1,overlap
+observed,377.965,0.992003,,1,overlap
+observed,377.965,0.9591,,1,overlap
+observed,379.379,1.02604,,1,overlap
+observed,379.379,0.992003,,1,overlap
+observed,379.379,0.9591,,1,overlap
+observed,380.799,1.02604,,1,overlap
+observed,380.799,0.992003,,1,overlap
+observed,380.799,0.9591,,1,overlap
+observed,382.224,1.02604,,1,overlap
+observed,382.224,0.992003,,1,overlap
+observed,382.224,0.9591,,1,overlap
+observed,383.654,1.00322,,1,overlap
+observed,387.977,1.00322,,1,overlap
+observed,392.348,2.98581,,3,overlap
+observed,392.348,2.01443,,2,overlap
+observed,396.769,2.01443,,2,overlap
+observed,401.24,2.01443,,2,overlap
+observed,407.279,2.01443,,2,overlap
+observed,411.869,1.00322,,1,overlap
+observed,416.509,1.00322,,1,overlap
+observed,421.203,1.00322,,1,overlap
+observed,425.949,1.9919,,2,overlap
+observed,433.978,1.00322,,1,overlap
+observed,438.868,1.00322,,1,overlap
+observed,442.158,0.969944,,1,overlap
+observed,443.813,1.00322,,1,overlap
+observed,448.814,1.00322,,1,overlap
+observed,455.569,1.9919,,2,overlap
+observed,460.702,1.00322,,1,overlap
+observed,465.893,1.00322,,1,overlap
+observed,469.387,0.969944,,1,overlap
+observed,471.143,1.02604,,1,overlap
+observed,471.143,0.992003,,1,overlap
+observed,472.906,1.02604,,1,overlap
+observed,472.906,0.992003,,1,overlap
+observed,474.676,1.02604,,1,overlap
+observed,474.676,0.992003,,1,overlap
+observed,476.452,1.02604,,1,overlap
+observed,476.452,0.992003,,1,overlap
+observed,478.235,1.02604,,1,overlap
+observed,478.235,0.992003,,1,overlap
+observed,480.024,1.02604,,1,overlap
+observed,480.024,0.992003,,1,overlap
+observed,481.82,1.02604,,1,overlap
+observed,481.82,0.992003,,1,overlap
+observed,483.623,1.02604,,1,overlap
+observed,483.623,0.992003,,1,overlap
+observed,483.623,0.9591,,1,overlap
+observed,485.433,1.03764,,1,overlap
+observed,485.433,1.00322,,1,overlap
+observed,485.433,0.969944,,1,overlap
+observed,487.249,1.03764,,1,overlap
+observed,487.249,1.00322,,1,overlap
+observed,487.249,0.969944,,1,overlap
+observed,489.073,1.03764,,1,overlap
+observed,489.073,1.00322,,1,overlap
+observed,489.073,0.969944,,1,overlap
+observed,490.903,1.03764,,1,overlap
+observed,490.903,1.00322,,1,overlap
+observed,490.903,0.969944,,1,overlap
+observed,492.74,1.9919,,2,overlap
+observed,492.74,1.03764,,1,overlap
+observed,492.74,1.00322,,1,overlap
+observed,492.74,0.969944,,1,overlap
+observed,494.583,1.9919,,2,overlap
+observed,494.583,1.00322,,1,overlap
+observed,500.156,1.00322,,1,overlap
+observed,503.906,2.98581,,3,overlap
+observed,513.405,1.00322,,1,overlap
+observed,519.19,1.00322,,1,overlap
+observed,523.083,0.969944,,1,overlap
+observed,525.04,1.02604,,1,overlap
+observed,525.04,0.992003,,1,overlap
+observed,530.956,1.00322,,1,overlap
+observed,545.021,1.00322,,1,overlap
+observed,570.004,1.00322,,1,overlap
+observed,596.132,1.00322,,1,overlap
+observed,607.369,1.00322,,1,overlap
+observed,644.771,1.00322,,1,overlap
+observed,684.476,1.00322,,1,overlap
+observed,699.988,1.00322,,1,overlap
+observed,707.876,1.00322,,1,overlap
+observed,737.564,1.00322,,1,overlap
+observed,759.934,1.00322,,1,overlap
+observed,777.156,1.00322,,1,overlap
+observed,809.75,1.00322,,1,overlap
+observed,828.101,1.00322,,1,overlap
+observed,869.301,1.00322,,1,overlap
+observed,926.286,1.00322,,1,overlap
+observed,950.823,1.00322,,1,overlap
+observed,979.661,1.00322,,1,overlap
+rough fit,0.802235,2.69194e+06,,,
+rough fit,0.805237,2.69194e+06,,,
+rough fit,0.80825,2.69194e+06,,,
+rough fit,0.811274,2.67685e+06,,,
+rough fit,0.81431,2.64692e+06,,,
+rough fit,0.817357,2.63208e+06,,,
+rough fit,0.820415,2.61732e+06,,,
+rough fit,0.823485,2.60265e+06,,,
+rough fit,0.826567,2.58806e+06,,,
+rough fit,0.82966,2.57355e+06,,,
+rough fit,0.832764,2.55912e+06,,,
+rough fit,0.83588,2.53051e+06,,,
+rough fit,0.839008,2.53051e+06,,,
+rough fit,0.842147,2.50221e+06,,,
+rough fit,0.845299,2.48819e+06,,,
+rough fit,0.848462,2.47424e+06,,,
+rough fit,0.851637,2.46037e+06,,,
+rough fit,0.854823,2.44657e+06,,,
+rough fit,0.858022,2.43286e+06,,,
+rough fit,0.861233,2.41922e+06,,,
+rough fit,0.864455,2.39217e+06,,,
+rough fit,0.86769,2.37876e+06,,,
+rough fit,0.870937,2.36542e+06,,,
+rough fit,0.874196,2.35216e+06,,,
+rough fit,0.877467,2.33898e+06,,,
+rough fit,0.88075,2.32586e+06,,,
+rough fit,0.884046,2.31282e+06,,,
+rough fit,0.887354,2.29986e+06,,,
+rough fit,0.890674,2.28696e+06,,,
+rough fit,0.894007,2.26139e+06,,,
+rough fit,0.897353,2.24872e+06,,,
+rough fit,0.90071,2.23611e+06,,,
+rough fit,0.904081,2.22357e+06,,,
+rough fit,0.907464,2.21111e+06,,,
+rough fit,0.910859,2.19871e+06,,,
+rough fit,0.914268,2.18639e+06,,,
+rough fit,0.917689,2.16194e+06,,,
+rough fit,0.921123,2.16194e+06,,,
+rough fit,0.92457,2.13777e+06,,,
+rough fit,0.928029,2.12578e+06,,,
+rough fit,0.931502,2.11387e+06,,,
+rough fit,0.934987,2.10201e+06,,,
+rough fit,0.938486,2.09023e+06,,,
+rough fit,0.941998,2.06686e+06,,,
+rough fit,0.945523,2.06686e+06,,,
+rough fit,0.949061,2.04375e+06,,,
+rough fit,0.952612,2.03229e+06,,,
+rough fit,0.956177,2.0209e+06,,,
+rough fit,0.959754,2.00957e+06,,,
+rough fit,0.963346,1.9983e+06,,,
+rough fit,0.966951,1.97596e+06,,,
+rough fit,0.970569,1.97596e+06,,,
+rough fit,0.974201,1.95387e+06,,,
+rough fit,0.977846,1.94291e+06,,,
+rough fit,0.981505,1.93202e+06,,,
+rough fit,0.985178,1.92119e+06,,,
+rough fit,0.988864,1.91042e+06,,,
+rough fit,0.992564,1.88906e+06,,,
+rough fit,0.996278,1.88906e+06,,,
+rough fit,1.00001,1.86794e+06,,,
+rough fit,1.00375,1.85747e+06,,,
+rough fit,1.0075,1.84705e+06,,,
+rough fit,1.01127,1.8367e+06,,,
+rough fit,1.01506,1.8264e+06,,,
+rough fit,1.01886,1.81616e+06,,,
+rough fit,1.02267,1.80598e+06,,,
+rough fit,1.0265,1.79586e+06,,,
+rough fit,1.03034,1.78579e+06,,,
+rough fit,1.03419,1.76582e+06,,,
+rough fit,1.03806,1.75592e+06,,,
+rough fit,1.04195,1.74608e+06,,,
+rough fit,1.04585,1.73629e+06,,,
+rough fit,1.04976,1.72656e+06,,,
+rough fit,1.05369,1.71688e+06,,,
+rough fit,1.05763,1.70725e+06,,,
+rough fit,1.06159,1.69768e+06,,,
+rough fit,1.06556,1.68816e+06,,,
+rough fit,1.06955,1.66929e+06,,,
+rough fit,1.07355,1.65993e+06,,,
+rough fit,1.07757,1.65062e+06,,,
+rough fit,1.0816,1.64137e+06,,,
+rough fit,1.08565,1.63217e+06,,,
+rough fit,1.08971,1.62302e+06,,,
+rough fit,1.09379,1.61392e+06,,,
+rough fit,1.09788,1.59587e+06,,,
+rough fit,1.10199,1.59587e+06,,,
+rough fit,1.10611,1.57803e+06,,,
+rough fit,1.11025,1.56918e+06,,,
+rough fit,1.1144,1.56039e+06,,,
+rough fit,1.11857,1.55164e+06,,,
+rough fit,1.12276,1.54294e+06,,,
+rough fit,1.12696,1.53429e+06,,,
+rough fit,1.13118,1.52569e+06,,,
+rough fit,1.13541,1.50863e+06,,,
+rough fit,1.13966,1.50017e+06,,,
+rough fit,1.14392,1.49176e+06,,,
+rough fit,1.1482,1.4834e+06,,,
+rough fit,1.1525,1.47508e+06,,,
+rough fit,1.15681,1.46681e+06,,,
+rough fit,1.16114,1.45859e+06,,,
+rough fit,1.16549,1.44228e+06,,,
+rough fit,1.16985,1.44228e+06,,,
+rough fit,1.17422,1.42616e+06,,,
+rough fit,1.17862,1.41816e+06,,,
+rough fit,1.18303,1.41021e+06,,,
+rough fit,1.18746,1.4023e+06,,,
+rough fit,1.1919,1.39444e+06,,,
+rough fit,1.19636,1.37885e+06,,,
+rough fit,1.20084,1.37885e+06,,,
+rough fit,1.20533,1.36343e+06,,,
+rough fit,1.20984,1.35579e+06,,,
+rough fit,1.21437,1.34819e+06,,,
+rough fit,1.21891,1.34063e+06,,,
+rough fit,1.22347,1.33312e+06,,,
+rough fit,1.22805,1.31821e+06,,,
+rough fit,1.23264,1.31821e+06,,,
+rough fit,1.23726,1.30347e+06,,,
+rough fit,1.24189,1.29616e+06,,,
+rough fit,1.24653,1.2889e+06,,,
+rough fit,1.2512,1.28167e+06,,,
+rough fit,1.25588,1.27449e+06,,,
+rough fit,1.26058,1.26734e+06,,,
+rough fit,1.2653,1.26024e+06,,,
+rough fit,1.27003,1.24615e+06,,,
+rough fit,1.27478,1.23916e+06,,,
+rough fit,1.27955,1.23221e+06,,,
+rough fit,1.28434,1.22531e+06,,,
+rough fit,1.28915,1.21844e+06,,,
+rough fit,1.29397,1.21161e+06,,,
+rough fit,1.29881,1.20481e+06,,,
+rough fit,1.30367,1.19134e+06,,,
+rough fit,1.30855,1.19134e+06,,,
+rough fit,1.31345,1.17802e+06,,,
+rough fit,1.31836,1.17142e+06,,,
+rough fit,1.3233,1.16485e+06,,,
+rough fit,1.32825,1.15832e+06,,,
+rough fit,1.33322,1.15183e+06,,,
+rough fit,1.33821,1.14537e+06,,,
+rough fit,1.34321,1.13895e+06,,,
+rough fit,1.34824,1.12621e+06,,,
+rough fit,1.35329,1.1199e+06,,,
+rough fit,1.35835,1.11362e+06,,,
+rough fit,1.36343,1.10738e+06,,,
+rough fit,1.36853,1.10117e+06,,,
+rough fit,1.37365,1.095e+06,,,
+rough fit,1.37879,1.08886e+06,,,
+rough fit,1.38395,1.07668e+06,,,
+rough fit,1.38913,1.07065e+06,,,
+rough fit,1.39433,1.06465e+06,,,
+rough fit,1.39955,1.05868e+06,,,
+rough fit,1.40479,1.05274e+06,,,
+rough fit,1.41004,1.04684e+06,,,
+rough fit,1.41532,1.04097e+06,,,
+rough fit,1.42061,1.02933e+06,,,
+rough fit,1.42593,1.02356e+06,,,
+rough fit,1.43127,1.01782e+06,,,
+rough fit,1.43662,1.01212e+06,,,
+rough fit,1.442,1.00644e+06,,,
+rough fit,1.44739,1.0008e+06,,,
+rough fit,1.45281,995190,,,
+rough fit,1.45825,984063,,,
+rough fit,1.4637,978546,,,
+rough fit,1.46918,973060,,,
+rough fit,1.47468,967605,,,
+rough fit,1.48019,962181,,,
+rough fit,1.48573,956787,,,
+rough fit,1.49129,951423,,,
+rough fit,1.49687,940785,,,
+rough fit,1.50247,935511,,,
+rough fit,1.5081,930266,,,
+rough fit,1.51374,925051,,,
+rough fit,1.5194,919865,,,
+rough fit,1.52509,914708,,,
+rough fit,1.5308,909580,,,
+rough fit,1.53652,899410,,,
+rough fit,1.54227,894368,,,
+rough fit,1.54804,889354,,,
+rough fit,1.55384,884368,,,
+rough fit,1.55965,879410,,,
+rough fit,1.56549,874480,,,
+rough fit,1.57135,869578,,,
+rough fit,1.57723,859855,,,
+rough fit,1.58313,855034,,,
+rough fit,1.58905,850241,,,
+rough fit,1.595,845474,,,
+rough fit,1.60097,840734,,,
+rough fit,1.60696,836021,,,
+rough fit,1.61297,831334,,,
+rough fit,1.619,822039,,,
+rough fit,1.62506,817431,,,
+rough fit,1.63114,812848,,,
+rough fit,1.63725,808291,,,
+rough fit,1.64337,803760,,,
+rough fit,1.64952,799254,,,
+rough fit,1.6557,794773,,,
+rough fit,1.66189,785887,,,
+rough fit,1.66811,781481,,,
+rough fit,1.67435,777100,,,
+rough fit,1.68062,772743,,,
+rough fit,1.68691,768411,,,
+rough fit,1.69322,764103,,,
+rough fit,1.69955,759820,,,
+rough fit,1.70591,751324,,,
+rough fit,1.7123,747112,,,
+rough fit,1.7187,742924,,,
+rough fit,1.72514,738759,,,
+rough fit,1.73159,734617,,,
+rough fit,1.73807,730499,,,
+rough fit,1.74457,726403,,,
+rough fit,1.7511,718282,,,
+rough fit,1.75765,714255,,,
+rough fit,1.76423,710251,,,
+rough fit,1.77083,706269,,,
+rough fit,1.77746,702309,,,
+rough fit,1.78411,698372,,,
+rough fit,1.79079,694457,,,
+rough fit,1.79749,686692,,,
+rough fit,1.80421,682843,,,
+rough fit,1.81096,679014,,,
+rough fit,1.81774,675208,,,
+rough fit,1.82454,671422,,,
+rough fit,1.83137,667658,,,
+rough fit,1.83822,663915,,,
+rough fit,1.8451,656492,,,
+rough fit,1.85201,652812,,,
+rough fit,1.85894,649152,,,
+rough fit,1.86589,645513,,,
+rough fit,1.87287,641894,,,
+rough fit,1.87988,638295,,,
+rough fit,1.88692,634717,,,
+rough fit,1.89398,631159,,,
+rough fit,1.90106,627620,,,
+rough fit,1.90818,620603,,,
+rough fit,1.91532,617124,,,
+rough fit,1.92248,613664,,,
+rough fit,1.92968,610224,,,
+rough fit,1.9369,606803,,,
+rough fit,1.94415,603401,,,
+rough fit,1.95142,600018,,,
+rough fit,1.95872,593309,,,
+rough fit,1.96605,589983,,,
+rough fit,1.97341,586676,,,
+rough fit,1.98079,583387,,,
+rough fit,1.98821,580116,,,
+rough fit,1.99565,576864,,,
+rough fit,2.00311,573630,,,
+rough fit,2.01061,567216,,,
+rough fit,2.01813,564036,,,
+rough fit,2.02568,560874,,,
+rough fit,2.03326,557730,,,
+rough fit,2.04087,554603,,,
+rough fit,2.04851,551494,,,
+rough fit,2.05617,548402,,,
+rough fit,2.06387,542270,,,
+rough fit,2.07159,539230,,,
+rough fit,2.07934,536207,,,
+rough fit,2.08712,533201,,,
+rough fit,2.09493,530212,,,
+rough fit,2.10277,527240,,,
+rough fit,2.11064,524284,,,
+rough fit,2.11854,518422,,,
+rough fit,2.12647,515516,,,
+rough fit,2.13442,512625,,,
+rough fit,2.14241,509752,,,
+rough fit,2.15043,506894,,,
+rough fit,2.15847,504052,,,
+rough fit,2.16655,501226,,,
+rough fit,2.17466,495622,,,
+rough fit,2.18279,492844,,,
+rough fit,2.19096,490081,,,
+rough fit,2.19916,487333,,,
+rough fit,2.20739,484601,,,
+rough fit,2.21565,481884,,,
+rough fit,2.22394,479183,,,
+rough fit,2.23226,473825,,,
+rough fit,2.24061,471169,,,
+rough fit,2.249,468527,,,
+rough fit,2.25741,465901,,,
+rough fit,2.26586,463289,,,
+rough fit,2.27434,460692,,,
+rough fit,2.28285,458109,,,
+rough fit,2.29139,452987,,,
+rough fit,2.29997,450447,,,
+rough fit,2.30857,447922,,,
+rough fit,2.31721,445411,,,
+rough fit,2.32588,442914,,,
+rough fit,2.33459,440431,,,
+rough fit,2.34332,437962,,,
+rough fit,2.35209,433065,,,
+rough fit,2.36089,430637,,,
+rough fit,2.36972,428223,,,
+rough fit,2.37859,425822,,,
+rough fit,2.38749,423435,,,
+rough fit,2.39643,418700,,,
+rough fit,2.40539,418700,,,
+rough fit,2.41439,414019,,,
+rough fit,2.42343,411698,,,
+rough fit,2.4325,409390,,,
+rough fit,2.4416,407095,,,
+rough fit,2.45074,404813,,,
+rough fit,2.45991,400286,,,
+rough fit,2.46911,398042,,,
+rough fit,2.47835,395811,,,
+rough fit,2.48762,393592,,,
+rough fit,2.49693,391385,,,
+rough fit,2.50628,387009,,,
+rough fit,2.51565,387009,,,
+rough fit,2.52507,382682,,,
+rough fit,2.53452,380537,,,
+rough fit,2.544,378403,,,
+rough fit,2.55352,376282,,,
+rough fit,2.56307,374173,,,
+rough fit,2.57266,369989,,,
+rough fit,2.58229,367915,,,
+rough fit,2.59195,365852,,,
+rough fit,2.60165,363801,,,
+rough fit,2.61139,361762,,,
+rough fit,2.62116,359734,,,
+rough fit,2.63097,357717,,,
+rough fit,2.64081,353717,,,
+rough fit,2.65069,351734,,,
+rough fit,2.66061,349762,,,
+rough fit,2.67057,347802,,,
+rough fit,2.68056,345852,,,
+rough fit,2.69059,343913,,,
+rough fit,2.70066,341985,,,
+rough fit,2.71077,338161,,,
+rough fit,2.72091,336265,,,
+rough fit,2.73109,334380,,,
+rough fit,2.74131,332506,,,
+rough fit,2.75157,330641,,,
+rough fit,2.76186,328788,,,
+rough fit,2.7722,326945,,,
+rough fit,2.78257,323289,,,
+rough fit,2.79298,321477,,,
+rough fit,2.80344,319674,,,
+rough fit,2.81393,317882,,,
+rough fit,2.82445,316100,,,
+rough fit,2.83502,312566,,,
+rough fit,2.84563,312566,,,
+rough fit,2.85628,309071,,,
+rough fit,2.86697,307338,,,
+rough fit,2.8777,305615,,,
+rough fit,2.88846,303902,,,
+rough fit,2.89927,302198,,,
+rough fit,2.91012,298819,,,
+rough fit,2.92101,297144,,,
+rough fit,2.93194,295478,,,
+rough fit,2.94291,293822,,,
+rough fit,2.95392,292175,,,
+rough fit,2.96498,288908,,,
+rough fit,2.97607,288908,,,
+rough fit,2.98721,285678,,,
+rough fit,2.99839,284076,,,
+rough fit,3.00961,282484,,,
+rough fit,3.02087,280900,,,
+rough fit,3.03217,279325,,,
+rough fit,3.04352,276202,,,
+rough fit,3.05491,274654,,,
+rough fit,3.06634,273114,,,
+rough fit,3.07781,271583,,,
+rough fit,3.08933,270060,,,
+rough fit,3.10089,267041,,,
+rough fit,3.11249,267041,,,
+rough fit,3.12414,264055,,,
+rough fit,3.13583,262575,,,
+rough fit,3.14756,261103,,,
+rough fit,3.15934,259639,,,
+rough fit,3.17116,258183,,,
+rough fit,3.18303,255296,,,
+rough fit,3.19494,253865,,,
+rough fit,3.20689,252442,,,
+rough fit,3.21889,251027,,,
+rough fit,3.23094,249620,,,
+rough fit,3.24303,248220,,,
+rough fit,3.25516,246829,,,
+rough fit,3.26734,244069,,,
+rough fit,3.27957,242700,,,
+rough fit,3.29184,241340,,,
+rough fit,3.30416,239987,,,
+rough fit,3.31652,238641,,,
+rough fit,3.32893,237304,,,
+rough fit,3.34139,235973,,,
+rough fit,3.35389,233335,,,
+rough fit,3.36644,232027,,,
+rough fit,3.37904,230726,,,
+rough fit,3.39168,229432,,,
+rough fit,3.40438,228146,,,
+rough fit,3.41711,225595,,,
+rough fit,3.4299,225595,,,
+rough fit,3.44274,223073,,,
+rough fit,3.45562,221822,,,
+rough fit,3.46855,220579,,,
+rough fit,3.48153,219342,,,
+rough fit,3.49455,218113,,,
+rough fit,3.50763,215674,,,
+rough fit,3.52076,214465,,,
+rough fit,3.53393,213262,,,
+rough fit,3.54715,212067,,,
+rough fit,3.56043,210878,,,
+rough fit,3.57375,208520,,,
+rough fit,3.58712,208520,,,
+rough fit,3.60055,206189,,,
+rough fit,3.61402,205033,,,
+rough fit,3.62754,203883,,,
+rough fit,3.64112,202740,,,
+rough fit,3.65474,201604,,,
+rough fit,3.66842,199350,,,
+rough fit,3.68214,198232,,,
+rough fit,3.69592,197121,,,
+rough fit,3.70975,196016,,,
+rough fit,3.72363,194917,,,
+rough fit,3.73757,192737,,,
+rough fit,3.75155,192737,,,
+rough fit,3.76559,190582,,,
+rough fit,3.77968,189514,,,
+rough fit,3.79382,188452,,,
+rough fit,3.80802,187395,,,
+rough fit,3.82227,186344,,,
+rough fit,3.83657,184261,,,
+rough fit,3.85093,183228,,,
+rough fit,3.86534,182201,,,
+rough fit,3.8798,181179,,,
+rough fit,3.89432,180164,,,
+rough fit,3.90889,178149,,,
+rough fit,3.92352,178149,,,
+rough fit,3.9382,176157,,,
+rough fit,3.95294,175170,,,
+rough fit,3.96773,174188,,,
+rough fit,3.98257,173211,,,
+rough fit,3.99748,172240,,,
+rough fit,4.01243,170314,,,
+rough fit,4.02745,169360,,,
+rough fit,4.04252,168410,,,
+rough fit,4.05765,167466,,,
+rough fit,4.07283,166527,,,
+rough fit,4.08807,164665,,,
+rough fit,4.10337,163742,,,
+rough fit,4.11872,162824,,,
+rough fit,4.13413,161911,,,
+rough fit,4.1496,161004,,,
+rough fit,4.16513,159203,,,
+rough fit,4.18072,158311,,,
+rough fit,4.19636,157423,,,
+rough fit,4.21206,156541,,,
+rough fit,4.22782,155663,,,
+rough fit,4.24364,153923,,,
+rough fit,4.25952,153060,,,
+rough fit,4.27546,152202,,,
+rough fit,4.29146,151349,,,
+rough fit,4.30752,150500,,,
+rough fit,4.32364,148817,,,
+rough fit,4.33981,148817,,,
+rough fit,4.35605,147153,,,
+rough fit,4.37235,146328,,,
+rough fit,4.38871,145508,,,
+rough fit,4.40514,143881,,,
+rough fit,4.42162,143881,,,
+rough fit,4.43817,142272,,,
+rough fit,4.45477,141475,,,
+rough fit,4.47144,140682,,,
+rough fit,4.48817,139893,,,
+rough fit,4.50497,139109,,,
+rough fit,4.52183,137553,,,
+rough fit,4.53875,136782,,,
+rough fit,4.55573,136015,,,
+rough fit,4.57278,135253,,,
+rough fit,4.58989,134495,,,
+rough fit,4.60706,132991,,,
+rough fit,4.6243,132245,,,
+rough fit,4.64161,131504,,,
+rough fit,4.65897,130767,,,
+rough fit,4.67641,130034,,,
+rough fit,4.69391,128580,,,
+rough fit,4.71147,127859,,,
+rough fit,4.7291,127142,,,
+rough fit,4.7468,126429,,,
+rough fit,4.76456,125721,,,
+rough fit,4.78239,124315,,,
+rough fit,4.80028,123618,,,
+rough fit,4.81824,122925,,,
+rough fit,4.83627,122236,,,
+rough fit,4.85437,121551,,,
+rough fit,4.87253,120191,,,
+rough fit,4.89077,120191,,,
+rough fit,4.90907,118848,,,
+rough fit,4.92744,118181,,,
+rough fit,4.94588,117519,,,
+rough fit,4.96438,116860,,,
+rough fit,4.98296,116205,,,
+rough fit,5.0016,114906,,,
+rough fit,5.02032,114261,,,
+rough fit,5.03911,113621,,,
+rough fit,5.05796,112984,,,
+rough fit,5.07689,112350,,,
+rough fit,5.09589,111094,,,
+rough fit,5.11495,110471,,,
+rough fit,5.13409,109852,,,
+rough fit,5.1533,109236,,,
+rough fit,5.17259,108624,,,
+rough fit,5.19194,107409,,,
+rough fit,5.21137,106807,,,
+rough fit,5.23087,106208,,,
+rough fit,5.25044,105613,,,
+rough fit,5.27009,105021,,,
+rough fit,5.28981,103847,,,
+rough fit,5.30961,103265,,,
+rough fit,5.32947,102686,,,
+rough fit,5.34942,102110,,,
+rough fit,5.36943,101537,,,
+rough fit,5.38952,100402,,,
+rough fit,5.40969,99839.3,,,
+rough fit,5.42993,99279.6,,,
+rough fit,5.45025,98723,,,
+rough fit,5.47065,98169.6,,,
+rough fit,5.49112,97072,,,
+rough fit,5.51167,96527.8,,,
+rough fit,5.53229,95986.6,,,
+rough fit,5.55299,95448.5,,,
+rough fit,5.57377,94913.4,,,
+rough fit,5.59463,93852.2,,,
+rough fit,5.61556,93326,,,
+rough fit,5.63657,92802.8,,,
+rough fit,5.65766,92282.6,,,
+rough fit,5.67884,91765.2,,,
+rough fit,5.70009,90739.2,,,
+rough fit,5.72141,90739.2,,,
+rough fit,5.74282,89724.6,,,
+rough fit,5.76431,89221.6,,,
+rough fit,5.78588,88721.4,,,
+rough fit,5.80753,87729.5,,,
+rough fit,5.82926,87729.5,,,
+rough fit,5.85108,86748.6,,,
+rough fit,5.87297,86262.2,,,
+rough fit,5.89495,85778.6,,,
+rough fit,5.917,85297.7,,,
+rough fit,5.93915,84819.6,,,
+rough fit,5.96137,83871.2,,,
+rough fit,5.98368,83401,,,
+rough fit,6.00607,82933.4,,,
+rough fit,6.02854,82468.5,,,
+rough fit,6.0511,82006.2,,,
+rough fit,6.07374,81089.3,,,
+rough fit,6.09647,80634.7,,,
+rough fit,6.11928,80182.6,,,
+rough fit,6.14218,79286.1,,,
+rough fit,6.16516,79286.1,,,
+rough fit,6.18823,78399.6,,,
+rough fit,6.21139,77960.1,,,
+rough fit,6.23463,77523,,,
+rough fit,6.25796,76656.3,,,
+rough fit,6.28138,76226.5,,,
+rough fit,6.30488,75799.2,,,
+rough fit,6.32847,75374.2,,,
+rough fit,6.35215,74951.7,,,
+rough fit,6.37592,74113.6,,,
+rough fit,6.39978,73698.2,,,
+rough fit,6.42373,73285,,,
+rough fit,6.44777,72465.6,,,
+rough fit,6.47189,72465.6,,,
+rough fit,6.49611,71655.4,,,
+rough fit,6.52042,71253.7,,,
+rough fit,6.54482,70854.2,,,
+rough fit,6.56931,70062,,,
+rough fit,6.59389,69669.2,,,
+rough fit,6.61856,69278.6,,,
+rough fit,6.64333,68890.2,,,
+rough fit,6.66819,68504,,,
+rough fit,6.69314,67738.1,,,
+rough fit,6.71818,67358.3,,,
+rough fit,6.74332,66980.7,,,
+rough fit,6.76855,66605.2,,,
+rough fit,6.79388,66231.8,,,
+rough fit,6.8193,65491.3,,,
+rough fit,6.84482,65124.1,,,
+rough fit,6.87043,64759,,,
+rough fit,6.89614,64396,,,
+rough fit,6.92195,64035,,,
+rough fit,6.94785,63319,,,
+rough fit,6.97385,62964,,,
+rough fit,6.99994,62611,,,
+rough fit,7.02614,62260,,,
+rough fit,7.05243,61911,,,
+rough fit,7.07882,61218.8,,,
+rough fit,7.1053,60875.6,,,
+rough fit,7.13189,60534.3,,,
+rough fit,7.15858,59857.5,,,
+rough fit,7.18537,59857.5,,,
+rough fit,7.21225,59188.2,,,
+rough fit,7.23924,58856.4,,,
+rough fit,7.26633,58526.4,,,
+rough fit,7.29352,57872,,,
+rough fit,7.32081,57547.6,,,
+rough fit,7.3482,57225,,,
+rough fit,7.3757,56904.2,,,
+rough fit,7.4033,56585.2,,,
+rough fit,7.431,55952.5,,,
+rough fit,7.45881,55638.8,,,
+rough fit,7.48672,55326.9,,,
+rough fit,7.51473,54708.3,,,
+rough fit,7.54285,54708.3,,,
+rough fit,7.57108,54096.6,,,
+rough fit,7.59941,53793.3,,,
+rough fit,7.62784,53491.7,,,
+rough fit,7.65639,52893.7,,,
+rough fit,7.68504,52597.1,,,
+rough fit,7.71379,52302.3,,,
+rough fit,7.74266,52009,,,
+rough fit,7.77163,51717.5,,,
+rough fit,7.80071,51139.2,,,
+rough fit,7.8299,50852.5,,,
+rough fit,7.8592,50567.4,,,
+rough fit,7.88861,50002.1,,,
+rough fit,7.91813,50002.1,,,
+rough fit,7.94775,49443,,,
+rough fit,7.97749,49165.8,,,
+rough fit,8.00734,48890.2,,,
+rough fit,8.03731,48343.5,,,
+rough fit,8.06738,48072.5,,,
+rough fit,8.09757,47803,,,
+rough fit,8.12787,47268.5,,,
+rough fit,8.15828,47268.5,,,
+rough fit,8.18881,46740,,,
+rough fit,8.21945,46478,,,
+rough fit,8.25021,46217.4,,,
+rough fit,8.28108,45700.7,,,
+rough fit,8.31207,45444.5,,,
+rough fit,8.34317,45189.7,,,
+rough fit,8.37439,44684.4,,,
+rough fit,8.40573,44684.4,,,
+rough fit,8.43718,44184.8,,,
+rough fit,8.46875,43937.1,,,
+rough fit,8.50044,43690.8,,,
+rough fit,8.53225,43202.3,,,
+rough fit,8.56418,42960.1,,,
+rough fit,8.59622,42719.3,,,
+rough fit,8.62839,42241.6,,,
+rough fit,8.66067,42241.6,,,
+rough fit,8.69308,41769.3,,,
+rough fit,8.72561,41535.2,,,
+rough fit,8.75826,41302.3,,,
+rough fit,8.79103,40840.5,,,
+rough fit,8.82393,40611.6,,,
+rough fit,8.85695,40383.9,,,
+rough fit,8.89009,39932.3,,,
+rough fit,8.92336,39932.3,,,
+rough fit,8.95675,39485.9,,,
+rough fit,8.99026,39264.5,,,
+rough fit,9.0239,39044.4,,,
+rough fit,9.05767,38607.8,,,
+rough fit,9.09156,38391.4,,,
+rough fit,9.12558,38176.2,,,
+rough fit,9.15973,37749.3,,,
+rough fit,9.194,37537.7,,,
+rough fit,9.22841,37327.2,,,
+rough fit,9.26294,37118,,,
+rough fit,9.2976,36909.9,,,
+rough fit,9.33239,36497.2,,,
+rough fit,9.36731,36292.6,,,
+rough fit,9.40236,36089.1,,,
+rough fit,9.43755,35685.6,,,
+rough fit,9.47286,35485.6,,,
+rough fit,9.50831,35286.6,,,
+rough fit,9.54389,34892.1,,,
+rough fit,9.5796,34892.1,,,
+rough fit,9.61544,34502,,,
+rough fit,9.65142,34308.5,,,
+rough fit,9.68754,34116.2,,,
+rough fit,9.72379,33734.8,,,
+rough fit,9.76017,33545.6,,,
+rough fit,9.7967,33357.6,,,
+rough fit,9.83335,32984.6,,,
+rough fit,9.87015,32984.6,,,
+rough fit,9.90708,32615.8,,,
+rough fit,9.94415,32433,,,
+rough fit,9.98136,32251.1,,,
+rough fit,10.0187,31890.5,,,
+rough fit,10.0562,31711.8,,,
+rough fit,10.0938,31534,,,
+rough fit,10.1316,31181.4,,,
+rough fit,10.1695,31006.6,,,
+rough fit,10.2076,30832.8,,,
+rough fit,10.2458,30488,,,
+rough fit,10.2841,30488,,,
+rough fit,10.3226,30147.1,,,
+rough fit,10.3612,29978.1,,,
+rough fit,10.4,29810.1,,,
+rough fit,10.4389,29476.8,,,
+rough fit,10.478,29311.5,,,
+rough fit,10.5172,29147.2,,,
+rough fit,10.5565,28821.3,,,
+rough fit,10.596,28659.7,,,
+rough fit,10.6357,28499,,,
+rough fit,10.6755,28180.4,,,
+rough fit,10.7154,28180.4,,,
+rough fit,10.7555,27865.3,,,
+rough fit,10.7958,27709.1,,,
+rough fit,10.8362,27553.8,,,
+rough fit,10.8767,27245.7,,,
+rough fit,10.9174,27092.9,,,
+rough fit,10.9583,26941.1,,,
+rough fit,10.9993,26639.8,,,
+rough fit,11.0404,26490.5,,,
+rough fit,11.0817,26342,,,
+rough fit,11.1232,26047.4,,,
+rough fit,11.1648,26047.4,,,
+rough fit,11.2066,25756.2,,,
+rough fit,11.2485,25611.8,,,
+rough fit,11.2906,25468.2,,,
+rough fit,11.3329,25183.5,,,
+rough fit,11.3753,25042.3,,,
+rough fit,11.4178,24901.9,,,
+rough fit,11.4606,24623.5,,,
+rough fit,11.5034,24485.4,,,
+rough fit,11.5465,24348.2,,,
+rough fit,11.5897,24075.9,,,
+rough fit,11.6331,23941,,,
+rough fit,11.6766,23806.7,,,
+rough fit,11.7203,23540.6,,,
+rough fit,11.7641,23408.6,,,
+rough fit,11.8082,23277.4,,,
+rough fit,11.8524,23017.1,,,
+rough fit,11.8967,23017.1,,,
+rough fit,11.9412,22759.7,,,
+rough fit,11.9859,22505.3,,,
+rough fit,12.0308,22505.3,,,
+rough fit,12.0758,22253.6,,,
+rough fit,12.121,22004.8,,,
+rough fit,12.1663,22004.8,,,
+rough fit,12.2118,21758.8,,,
+rough fit,12.2575,21515.5,,,
+rough fit,12.3034,21515.5,,,
+rough fit,12.3494,21274.9,,,
+rough fit,12.3956,21037.1,,,
+rough fit,12.442,21037.1,,,
+rough fit,12.4886,20801.9,,,
+rough fit,12.5353,20569.3,,,
+rough fit,12.5822,20569.3,,,
+rough fit,12.6293,20339.3,,,
+rough fit,12.6766,20225.3,,,
+rough fit,12.724,20111.9,,,
+rough fit,12.7716,19887,,,
+rough fit,12.8194,19775.5,,,
+rough fit,12.8674,19664.7,,,
+rough fit,12.9155,19444.8,,,
+rough fit,12.9638,19335.8,,,
+rough fit,13.0124,19227.4,,,
+rough fit,13.061,19012.4,,,
+rough fit,13.1099,18905.8,,,
+rough fit,13.159,18799.8,,,
+rough fit,13.2082,18589.6,,,
+rough fit,13.2576,18485.4,,,
+rough fit,13.3072,18381.8,,,
+rough fit,13.357,18176.2,,,
+rough fit,13.407,18074.3,,,
+rough fit,13.4572,17973,,,
+rough fit,13.5075,17772.1,,,
+rough fit,13.5581,17672.4,,,
+rough fit,13.6088,17573.4,,,
+rough fit,13.6597,17376.9,,,
+rough fit,13.7109,17279.5,,,
+rough fit,13.7622,17182.6,,,
+rough fit,13.8137,16990.5,,,
+rough fit,13.8654,16895.2,,,
+rough fit,13.9172,16800.5,,,
+rough fit,13.9693,16612.7,,,
+rough fit,14.0216,16519.5,,,
+rough fit,14.0741,16426.9,,,
+rough fit,14.1267,16243.2,,,
+rough fit,14.1796,16243.2,,,
+rough fit,14.2326,16061.6,,,
+rough fit,14.2859,15882,,,
+rough fit,14.3393,15882,,,
+rough fit,14.393,15704.5,,,
+rough fit,14.4469,15528.9,,,
+rough fit,14.5009,15441.8,,,
+rough fit,14.5552,15355.3,,,
+rough fit,14.6096,15183.6,,,
+rough fit,14.6643,15098.4,,,
+rough fit,14.7192,15013.8,,,
+rough fit,14.7743,14845.9,,,
+rough fit,14.8295,14762.7,,,
+rough fit,14.885,14679.9,,,
+rough fit,14.9407,14515.8,,,
+rough fit,14.9966,14434.4,,,
+rough fit,15.0528,14353.5,,,
+rough fit,15.1091,14193,,,
+rough fit,15.1656,14034.3,,,
+rough fit,15.2224,14034.3,,,
+rough fit,15.2793,13877.4,,,
+rough fit,15.3365,13722.3,,,
+rough fit,15.3939,13722.3,,,
+rough fit,15.4515,13568.8,,,
+rough fit,15.5093,13417.1,,,
+rough fit,15.5673,13417.1,,,
+rough fit,15.6256,13267.1,,,
+rough fit,15.6841,13118.8,,,
+rough fit,15.7428,13118.8,,,
+rough fit,15.8017,12972.1,,,
+rough fit,15.8608,12827,,,
+rough fit,15.9201,12827,,,
+rough fit,15.9797,12683.6,,,
+rough fit,16.0395,12541.8,,,
+rough fit,16.0995,12471.5,,,
+rough fit,16.1598,12401.6,,,
+rough fit,16.2202,12262.9,,,
+rough fit,16.2809,12194.2,,,
+rough fit,16.3419,12125.8,,,
+rough fit,16.403,11990.2,,,
+rough fit,16.4644,11923,,,
+rough fit,16.526,11856.2,,,
+rough fit,16.5878,11723.6,,,
+rough fit,16.6499,11657.9,,,
+rough fit,16.7122,11592.5,,,
+rough fit,16.7747,11462.9,,,
+rough fit,16.8375,11334.7,,,
+rough fit,16.9005,11334.7,,,
+rough fit,16.9638,11208,,,
+rough fit,17.0272,11082.7,,,
+rough fit,17.0909,11082.7,,,
+rough fit,17.1549,10958.8,,,
+rough fit,17.2191,10836.3,,,
+rough fit,17.2835,10775.5,,,
+rough fit,17.3482,10715.1,,,
+rough fit,17.4131,10595.3,,,
+rough fit,17.4783,10535.9,,,
+rough fit,17.5437,10476.8,,,
+rough fit,17.6093,10359.7,,,
+rough fit,17.6752,10243.9,,,
+rough fit,17.7414,10243.9,,,
+rough fit,17.8077,10129.3,,,
+rough fit,17.8744,10016.1,,,
+rough fit,17.9413,10016.1,,,
+rough fit,18.0084,9904.08,,,
+rough fit,18.0758,9793.34,,,
+rough fit,18.1434,9738.44,,,
+rough fit,18.2113,9683.84,,,
+rough fit,18.2795,9575.57,,,
+rough fit,18.3479,9468.51,,,
+rough fit,18.4165,9468.51,,,
+rough fit,18.4854,9362.64,,,
+rough fit,18.5546,9257.96,,,
+rough fit,18.624,9206.06,,,
+rough fit,18.6937,9154.44,,,
+rough fit,18.7637,9052.09,,,
+rough fit,18.8339,8950.88,,,
+rough fit,18.9043,8950.88,,,
+rough fit,18.9751,8850.8,,,
+rough fit,19.0461,8751.84,,,
+rough fit,19.1174,8751.84,,,
+rough fit,19.1889,8653.99,,,
+rough fit,19.2607,8557.23,,,
+rough fit,19.3328,8461.55,,,
+rough fit,19.4051,8461.55,,,
+rough fit,19.4777,8366.94,,,
+rough fit,19.5506,8273.39,,,
+rough fit,19.6238,8273.39,,,
+rough fit,19.6972,8180.89,,,
+rough fit,19.7709,8089.42,,,
+rough fit,19.8449,7998.97,,,
+rough fit,19.9191,7998.97,,,
+rough fit,19.9937,7909.54,,,
+rough fit,20.0685,7821.1,,,
+rough fit,20.1436,7821.1,,,
+rough fit,20.219,7733.65,,,
+rough fit,20.2946,7647.18,,,
+rough fit,20.3706,7561.68,,,
+rough fit,20.4468,7561.68,,,
+rough fit,20.5233,7477.14,,,
+rough fit,20.6001,7393.54,,,
+rough fit,20.6772,7393.54,,,
+rough fit,20.7545,7310.87,,,
+rough fit,20.8322,7229.13,,,
+rough fit,20.9102,7148.3,,,
+rough fit,20.9884,7148.3,,,
+rough fit,21.0669,7068.37,,,
+rough fit,21.1458,6989.34,,,
+rough fit,21.2249,6950.16,,,
+rough fit,21.3043,6911.2,,,
+rough fit,21.384,6833.92,,,
+rough fit,21.464,6757.51,,,
+rough fit,21.5444,6757.51,,,
+rough fit,21.625,6681.96,,,
+rough fit,21.7059,6607.25,,,
+rough fit,21.7871,6533.37,,,
+rough fit,21.8686,6533.37,,,
+rough fit,21.9505,6460.32,,,
+rough fit,22.0326,6388.09,,,
+rough fit,22.1151,6316.67,,,
+rough fit,22.1978,6316.67,,,
+rough fit,22.2809,6246.04,,,
+rough fit,22.3642,6176.21,,,
+rough fit,22.4479,6176.21,,,
+rough fit,22.5319,6107.15,,,
+rough fit,22.6162,6038.87,,,
+rough fit,22.7009,5971.35,,,
+rough fit,22.7858,5971.35,,,
+rough fit,22.8711,5904.58,,,
+rough fit,22.9567,5838.56,,,
+rough fit,23.0426,5773.28,,,
+rough fit,23.1288,5773.28,,,
+rough fit,23.2153,5708.73,,,
+rough fit,23.3022,5644.9,,,
+rough fit,23.3894,5581.79,,,
+rough fit,23.4769,5581.79,,,
+rough fit,23.5648,5519.38,,,
+rough fit,23.6529,5457.67,,,
+rough fit,23.7414,5396.65,,,
+rough fit,23.8303,5396.65,,,
+rough fit,23.9195,5336.31,,,
+rough fit,24.009,5276.64,,,
+rough fit,24.0988,5217.64,,,
+rough fit,24.189,5217.64,,,
+rough fit,24.2795,5159.31,,,
+rough fit,24.3703,5101.62,,,
+rough fit,24.4615,5044.58,,,
+rough fit,24.5531,5044.58,,,
+rough fit,24.6449,4988.18,,,
+rough fit,24.7372,4932.4,,,
+rough fit,24.8297,4904.75,,,
+rough fit,24.9226,4877.26,,,
+rough fit,25.0159,4822.72,,,
+rough fit,25.1095,4768.8,,,
+rough fit,25.2035,4768.8,,,
+rough fit,25.2978,4715.48,,,
+rough fit,25.3924,4662.76,,,
+rough fit,25.4874,4610.62,,,
+rough fit,25.5828,4559.07,,,
+rough fit,25.6785,4559.07,,,
+rough fit,25.7746,4508.1,,,
+rough fit,25.8711,4457.69,,,
+rough fit,25.9679,4407.85,,,
+rough fit,26.065,4407.85,,,
+rough fit,26.1626,4358.57,,,
+rough fit,26.2605,4309.84,,,
+rough fit,26.3587,4261.65,,,
+rough fit,26.4574,4261.65,,,
+rough fit,26.5564,4214,,,
+rough fit,26.6557,4166.88,,,
+rough fit,26.7555,4120.29,,,
+rough fit,26.8556,4074.23,,,
+rough fit,26.9561,4074.23,,,
+rough fit,27.057,4028.67,,,
+rough fit,27.1582,3983.63,,,
+rough fit,27.2598,3939.09,,,
+rough fit,27.3618,3939.09,,,
+rough fit,27.4642,3895.05,,,
+rough fit,27.567,3851.5,,,
+rough fit,27.6701,3808.43,,,
+rough fit,27.7737,3808.43,,,
+rough fit,27.8776,3765.85,,,
+rough fit,27.9819,3723.74,,,
+rough fit,28.0866,3682.11,,,
+rough fit,28.1917,3640.94,,,
+rough fit,28.2972,3640.94,,,
+rough fit,28.4031,3600.23,,,
+rough fit,28.5094,3559.98,,,
+rough fit,28.6161,3520.17,,,
+rough fit,28.7231,3520.17,,,
+rough fit,28.8306,3480.82,,,
+rough fit,28.9385,3441.9,,,
+rough fit,29.0468,3403.41,,,
+rough fit,29.1555,3384.33,,,
+rough fit,29.2646,3365.36,,,
+rough fit,29.3741,3327.73,,,
+rough fit,29.484,3290.53,,,
+rough fit,29.5943,3253.73,,,
+rough fit,29.7051,3235.49,,,
+rough fit,29.8162,3217.35,,,
+rough fit,29.9278,3181.38,,,
+rough fit,30.0398,3145.81,,,
+rough fit,30.1522,3110.64,,,
+rough fit,30.265,3093.2,,,
+rough fit,30.3783,3075.86,,,
+rough fit,30.4919,3041.47,,,
+rough fit,30.606,3007.46,,,
+rough fit,30.7206,2973.84,,,
+rough fit,30.8355,2957.16,,,
+rough fit,30.9509,2940.58,,,
+rough fit,31.0667,2907.71,,,
+rough fit,31.183,2875.2,,,
+rough fit,31.2996,2843.05,,,
+rough fit,31.4168,2827.11,,,
+rough fit,31.5343,2811.26,,,
+rough fit,31.6523,2779.83,,,
+rough fit,31.7708,2748.75,,,
+rough fit,31.8896,2718.01,,,
+rough fit,32.009,2687.62,,,
+rough fit,32.1287,2687.62,,,
+rough fit,32.249,2657.57,,,
+rough fit,32.3696,2627.86,,,
+rough fit,32.4908,2598.48,,,
+rough fit,32.6123,2569.42,,,
+rough fit,32.7344,2555.02,,,
+rough fit,32.8569,2540.7,,,
+rough fit,32.9798,2512.29,,,
+rough fit,33.1032,2484.2,,,
+rough fit,33.2271,2456.42,,,
+rough fit,33.3514,2442.65,,,
+rough fit,33.4762,2428.96,,,
+rough fit,33.6015,2401.8,,,
+rough fit,33.7272,2374.95,,,
+rough fit,33.8534,2348.39,,,
+rough fit,33.9801,2322.14,,,
+rough fit,34.1072,2309.12,,,
+rough fit,34.2349,2296.17,,,
+rough fit,34.363,2270.5,,,
+rough fit,34.4916,2245.11,,,
+rough fit,34.6206,2220.01,,,
+rough fit,34.7502,2195.19,,,
+rough fit,34.8802,2182.88,,,
+rough fit,35.0107,2170.64,,,
+rough fit,35.1417,2146.37,,,
+rough fit,35.2732,2122.38,,,
+rough fit,35.4052,2098.65,,,
+rough fit,35.5377,2075.18,,,
+rough fit,35.6707,2063.55,,,
+rough fit,35.8042,2051.98,,,
+rough fit,35.9381,2029.04,,,
+rough fit,36.0726,2006.35,,,
+rough fit,36.2076,1983.92,,,
+rough fit,36.3431,1961.73,,,
+rough fit,36.4791,1950.74,,,
+rough fit,36.6156,1928.93,,,
+rough fit,36.7526,1918.11,,,
+rough fit,36.8901,1896.67,,,
+rough fit,37.0281,1875.46,,,
+rough fit,37.1667,1854.49,,,
+rough fit,37.3058,1833.76,,,
+rough fit,37.4454,1823.47,,,
+rough fit,37.5855,1803.09,,,
+rough fit,37.7261,1792.98,,,
+rough fit,37.8673,1772.93,,,
+rough fit,38.009,1753.11,,,
+rough fit,38.1512,1733.51,,,
+rough fit,38.294,1714.12,,,
+rough fit,38.4373,1704.52,,,
+rough fit,38.5811,1685.46,,,
+rough fit,38.7255,1676.01,,,
+rough fit,38.8704,1657.27,,,
+rough fit,39.0158,1638.74,,,
+rough fit,39.1618,1620.42,,,
+rough fit,39.3084,1602.3,,,
+rough fit,39.4554,1593.32,,,
+rough fit,39.6031,1575.5,,,
+rough fit,39.7513,1557.89,,,
+rough fit,39.9,1549.15,,,
+rough fit,40.0493,1531.83,,,
+rough fit,40.1992,1514.7,,,
+rough fit,40.3496,1497.77,,,
+rough fit,40.5006,1481.02,,,
+rough fit,40.6521,1472.72,,,
+rough fit,40.8042,1456.25,,,
+rough fit,40.9569,1439.97,,,
+rough fit,41.1102,1431.9,,,
+rough fit,41.264,1415.89,,,
+rough fit,41.4184,1400.06,,,
+rough fit,41.5734,1384.4,,,
+rough fit,41.729,1368.92,,,
+rough fit,41.8851,1353.62,,,
+rough fit,42.0419,1346.03,,,
+rough fit,42.1992,1330.98,,,
+rough fit,42.3571,1316.1,,,
+rough fit,42.5156,1308.72,,,
+rough fit,42.6747,1294.09,,,
+rough fit,42.8343,1279.62,,,
+rough fit,42.9946,1265.31,,,
+rough fit,43.1555,1251.16,,,
+rough fit,43.317,1237.17,,,
+rough fit,43.4791,1230.24,,,
+rough fit,43.6418,1216.48,,,
+rough fit,43.8051,1202.88,,,
+rough fit,43.969,1189.43,,,
+rough fit,44.1335,1182.77,,,
+rough fit,44.2987,1169.54,,,
+rough fit,44.4644,1156.46,,,
+rough fit,44.6308,1143.53,,,
+rough fit,44.7978,1130.75,,,
+rough fit,44.9654,1118.11,,,
+rough fit,45.1337,1111.84,,,
+rough fit,45.3026,1099.41,,,
+rough fit,45.4721,1087.11,,,
+rough fit,45.6423,1074.96,,,
+rough fit,45.813,1062.94,,,
+rough fit,45.9845,1051.05,,,
+rough fit,46.1565,1045.16,,,
+rough fit,46.3293,1033.48,,,
+rough fit,46.5026,1021.92,,,
+rough fit,46.6766,1010.5,,,
+rough fit,46.8513,999.197,,,
+rough fit,47.0266,988.025,,,
+rough fit,47.2026,976.978,,,
+rough fit,47.3792,971.501,,,
+rough fit,47.5565,960.639,,,
+rough fit,47.7344,949.898,,,
+rough fit,47.9131,939.277,,,
+rough fit,48.0923,928.775,,,
+rough fit,48.2723,918.391,,,
+rough fit,48.4529,908.122,,,
+rough fit,48.6342,903.031,,,
+rough fit,48.8162,892.935,,,
+rough fit,48.9989,882.951,,,
+rough fit,49.1822,873.079,,,
+rough fit,49.3663,863.317,,,
+rough fit,49.551,853.664,,,
+rough fit,49.7364,844.12,,,
+rough fit,49.9225,834.681,,,
+rough fit,50.1093,825.349,,,
+rough fit,50.2968,820.722,,,
+rough fit,50.485,811.546,,,
+rough fit,50.6739,802.472,,,
+rough fit,50.8636,793.499,,,
+rough fit,51.0539,784.627,,,
+rough fit,51.2449,775.855,,,
+rough fit,51.4367,767.18,,,
+rough fit,51.6292,758.602,,,
+rough fit,51.8223,750.12,,,
+rough fit,52.0163,741.733,,,
+rough fit,52.2109,733.44,,,
+rough fit,52.4063,725.239,,,
+rough fit,52.6024,721.174,,,
+rough fit,52.7992,713.11,,,
+rough fit,52.9968,705.137,,,
+rough fit,53.1951,697.253,,,
+rough fit,53.3941,689.457,,,
+rough fit,53.5939,681.748,,,
+rough fit,53.7945,674.126,,,
+rough fit,53.9958,666.588,,,
+rough fit,54.1978,659.135,,,
+rough fit,54.4006,651.766,,,
+rough fit,54.6042,644.478,,,
+rough fit,54.8085,637.272,,,
+rough fit,55.0136,630.147,,,
+rough fit,55.2194,623.102,,,
+rough fit,55.4261,616.135,,,
+rough fit,55.6335,609.246,,,
+rough fit,55.8416,602.434,,,
+rough fit,56.0506,595.698,,,
+rough fit,56.2603,589.038,,,
+rough fit,56.4709,582.452,,,
+rough fit,56.6822,575.939,,,
+rough fit,56.8943,569.5,,,
+rough fit,57.1072,563.132,,,
+rough fit,57.3208,553.714,,,
+rough fit,57.5353,547.523,,,
+rough fit,57.7506,541.402,,,
+rough fit,57.9667,535.348,,,
+rough fit,58.1836,529.362,,,
+rough fit,58.4013,523.444,,,
+rough fit,58.6199,517.591,,,
+rough fit,58.8392,511.804,,,
+rough fit,59.0594,506.082,,,
+rough fit,59.2804,500.423,,,
+rough fit,59.5022,494.828,,,
+rough fit,59.7249,489.295,,,
+rough fit,59.9484,483.825,,,
+rough fit,60.1727,478.415,,,
+rough fit,60.3978,473.066,,,
+rough fit,60.6238,467.777,,,
+rough fit,60.8507,462.546,,,
+rough fit,61.0784,457.375,,,
+rough fit,61.3069,452.261,,,
+rough fit,61.5363,447.204,,,
+rough fit,61.7666,442.204,,,
+rough fit,61.9977,437.26,,,
+rough fit,62.2297,429.947,,,
+rough fit,62.4626,425.14,,,
+rough fit,62.6963,420.386,,,
+rough fit,62.9309,413.356,,,
+rough fit,63.1664,408.734,,,
+rough fit,63.4028,404.164,,,
+rough fit,63.64,399.645,,,
+rough fit,63.8781,395.177,,,
+rough fit,64.1172,390.758,,,
+rough fit,64.3571,386.389,,,
+rough fit,64.5979,382.069,,,
+rough fit,64.8396,377.797,,,
+rough fit,65.0822,373.573,,,
+rough fit,65.3258,369.396,,,
+rough fit,65.5702,365.266,,,
+rough fit,65.8156,361.182,,,
+rough fit,66.0619,355.141,,,
+rough fit,66.3091,349.202,,,
+rough fit,66.5572,345.297,,,
+rough fit,66.8062,341.437,,,
+rough fit,67.0562,337.619,,,
+rough fit,67.3071,333.844,,,
+rough fit,67.559,330.112,,,
+rough fit,67.8118,326.421,,,
+rough fit,68.0655,322.771,,,
+rough fit,68.3202,319.162,,,
+rough fit,68.5759,315.594,,,
+rough fit,68.8325,310.315,,,
+rough fit,69.09,305.126,,,
+rough fit,69.3486,301.714,,,
+rough fit,69.6081,298.341,,,
+rough fit,69.8685,295.005,,,
+rough fit,70.13,291.707,,,
+rough fit,70.3924,288.445,,,
+rough fit,70.6558,285.22,,,
+rough fit,70.9202,280.45,,,
+rough fit,71.1856,275.759,,,
+rough fit,71.4519,272.676,,,
+rough fit,71.7193,269.627,,,
+rough fit,71.9877,266.613,,,
+rough fit,72.257,263.632,,,
+rough fit,72.5274,260.684,,,
+rough fit,72.7988,257.769,,,
+rough fit,73.0712,252.038,,,
+rough fit,73.3446,249.219,,,
+rough fit,73.6191,246.433,,,
+rough fit,73.8946,243.678,,,
+rough fit,74.1711,240.953,,,
+rough fit,74.4486,238.259,,,
+rough fit,74.7272,235.595,,,
+rough fit,75.0068,231.655,,,
+rough fit,75.2875,227.781,,,
+rough fit,75.5692,225.234,,,
+rough fit,75.852,222.716,,,
+rough fit,76.1358,220.225,,,
+rough fit,76.4207,217.763,,,
+rough fit,76.7067,214.121,,,
+rough fit,76.9937,210.54,,,
+rough fit,77.2818,208.186,,,
+rough fit,77.571,205.858,,,
+rough fit,77.8612,203.557,,,
+rough fit,78.1526,201.281,,,
+rough fit,78.445,197.914,,,
+rough fit,78.7386,194.604,,,
+rough fit,79.0332,192.429,,,
+rough fit,79.3289,190.277,,,
+rough fit,79.6258,188.15,,,
+rough fit,79.9237,186.046,,,
+rough fit,80.2228,182.934,,,
+rough fit,80.523,179.875,,,
+rough fit,80.8243,177.864,,,
+rough fit,81.1267,175.875,,,
+rough fit,81.4303,173.909,,,
+rough fit,81.735,171,,,
+rough fit,82.0408,168.14,,,
+rough fit,82.3478,166.26,,,
+rough fit,82.656,164.401,,,
+rough fit,82.9653,161.652,,,
+rough fit,83.2757,159.844,,,
+rough fit,83.5873,157.171,,,
+rough fit,83.9001,155.414,,,
+rough fit,84.214,153.676,,,
+rough fit,84.5292,151.106,,,
+rough fit,84.8455,149.417,,,
+rough fit,85.1629,146.918,,,
+rough fit,85.4816,145.275,,,
+rough fit,85.8015,143.651,,,
+rough fit,86.1225,141.248,,,
+rough fit,86.4448,138.886,,,
+rough fit,86.7683,137.333,,,
+rough fit,87.0929,135.798,,,
+rough fit,87.4188,133.526,,,
+rough fit,87.746,131.293,,,
+rough fit,88.0743,129.825,,,
+rough fit,88.4039,127.654,,,
+rough fit,88.7347,126.227,,,
+rough fit,89.0667,124.116,,,
+rough fit,89.4,122.728,,,
+rough fit,89.7345,120.675,,,
+rough fit,90.0703,119.326,,,
+rough fit,90.4073,117.33,,,
+rough fit,90.7456,116.019,,,
+rough fit,91.0852,114.078,,,
+rough fit,91.426,112.803,,,
+rough fit,91.7681,110.916,,,
+rough fit,92.1115,109.676,,,
+rough fit,92.4562,107.842,,,
+rough fit,92.8021,106.038,,,
+rough fit,93.1494,104.853,,,
+rough fit,93.4979,103.099,,,
+rough fit,93.8478,101.946,,,
+rough fit,94.199,100.241,,,
+rough fit,94.5515,98.5648,,,
+rough fit,94.9053,97.4628,,,
+rough fit,95.2604,95.8328,,,
+rough fit,95.6168,94.2301,,,
+rough fit,95.9746,93.1765,,,
+rough fit,96.3338,91.6182,,,
+rough fit,96.6942,90.0859,,,
+rough fit,97.0561,89.0787,,,
+rough fit,97.4192,87.5889,,,
+rough fit,97.7838,86.124,,,
+rough fit,98.1497,85.1611,,,
+rough fit,98.5169,83.7368,,,
+rough fit,98.8856,82.3363,,,
+rough fit,99.2556,81.4158,,,
+rough fit,99.627,80.0541,,,
+rough fit,99.9998,78.7153,,,
+rough fit,100.374,77.8352,,,
+rough fit,100.75,76.1044,,,
+rough fit,101.127,75.2534,,,
+rough fit,101.505,73.9949,,,
+rough fit,101.885,72.7574,,,
+rough fit,102.266,71.9439,,,
+rough fit,102.649,70.7407,,,
+rough fit,103.033,69.5576,,,
+rough fit,103.418,68.7798,,,
+rough fit,103.805,67.2504,,,
+rough fit,104.194,66.4985,,,
+rough fit,104.584,65.3863,,,
+rough fit,104.975,64.2928,,,
+rough fit,105.368,63.5739,,,
+rough fit,105.762,62.5107,,,
+rough fit,106.158,61.4653,,,
+rough fit,106.555,60.778,,,
+rough fit,106.954,59.4265,,,
+rough fit,107.354,58.7621,,,
+rough fit,107.756,57.4554,,,
+rough fit,108.159,56.813,,,
+rough fit,108.564,56.1778,,,
+rough fit,108.97,54.9286,,,
+rough fit,109.378,54.3144,,,
+rough fit,109.787,53.1066,,,
+rough fit,110.198,52.5128,,,
+rough fit,110.61,51.3451,,,
+rough fit,111.024,50.771,,,
+rough fit,111.439,49.6421,,,
+rough fit,111.856,49.087,,,
+rough fit,112.275,48.5382,,,
+rough fit,112.695,47.4588,,,
+rough fit,113.117,46.9282,,,
+rough fit,113.54,45.8847,,,
+rough fit,113.965,45.3717,,,
+rough fit,114.391,44.3627,,,
+rough fit,114.819,43.8667,,,
+rough fit,115.249,42.8913,,,
+rough fit,115.68,42.4117,,,
+rough fit,116.113,41.7024,,,
+rough fit,116.548,41.0049,,,
+rough fit,116.984,40.0931,,,
+rough fit,117.421,39.6448,,,
+rough fit,117.861,38.7633,,,
+rough fit,118.302,38.3299,,,
+rough fit,118.745,37.4775,,,
+rough fit,119.189,37.0585,,,
+rough fit,119.635,36.2344,,,
+rough fit,120.083,35.8293,,,
+rough fit,120.532,35.0326,,,
+rough fit,120.983,34.6409,,,
+rough fit,121.436,33.8706,,,
+rough fit,121.89,33.4919,,,
+rough fit,122.346,32.7471,,,
+rough fit,122.804,32.381,,,
+rough fit,123.263,31.6609,,,
+rough fit,123.725,31.1314,,,
+rough fit,124.188,30.6108,,,
+rough fit,124.652,30.0988,,,
+rough fit,125.119,29.5954,,,
+rough fit,125.587,29.1005,,,
+rough fit,126.057,28.6138,,,
+rough fit,126.529,28.1352,,,
+rough fit,127.002,27.5096,,,
+rough fit,127.477,27.0495,,,
+rough fit,127.954,26.5971,,,
+rough fit,128.433,26.1523,,,
+rough fit,128.914,25.7149,,,
+rough fit,129.396,25.2849,,,
+rough fit,129.88,24.862,,,
+rough fit,130.366,24.3091,,,
+rough fit,130.854,23.9026,,,
+rough fit,131.344,23.5028,,,
+rough fit,131.835,23.1098,,,
+rough fit,132.328,22.7233,,,
+rough fit,132.824,22.218,,,
+rough fit,133.321,21.9696,,,
+rough fit,133.82,21.481,,,
+rough fit,134.32,21.0034,,,
+rough fit,134.823,20.7685,,,
+rough fit,135.327,20.3067,,,
+rough fit,135.834,19.8551,,,
+rough fit,136.342,19.6331,,,
+rough fit,136.852,19.1966,,,
+rough fit,137.364,18.7697,,,
+rough fit,137.878,18.5598,,,
+rough fit,138.394,18.1471,,,
+rough fit,138.912,17.8436,,,
+rough fit,139.432,17.5452,,,
+rough fit,139.954,17.1551,,,
+rough fit,140.477,16.8681,,,
+rough fit,141.003,16.586,,,
+rough fit,141.531,16.2172,,,
+rough fit,142.06,15.8566,,,
+rough fit,142.592,15.6793,,,
+rough fit,143.125,15.3306,,,
+rough fit,143.661,14.9897,,,
+rough fit,144.198,14.8221,,,
+rough fit,144.738,14.4925,,,
+rough fit,145.28,14.1703,,,
+rough fit,145.823,13.8552,,,
+rough fit,146.369,13.7003,,,
+rough fit,146.917,13.3956,,,
+rough fit,147.466,13.0977,,,
+rough fit,148.018,12.9513,,,
+rough fit,148.572,12.6633,,,
+rough fit,149.128,12.3817,,,
+rough fit,149.686,12.1064,,,
+rough fit,150.246,11.971,,,
+rough fit,150.808,11.7048,,,
+rough fit,151.373,11.4445,,,
+rough fit,151.939,11.3166,,,
+rough fit,152.508,11.0649,,,
+rough fit,153.078,10.8189,,,
+rough fit,153.651,10.5783,,,
+rough fit,154.226,10.4014,,,
+rough fit,154.803,10.1701,,,
+rough fit,155.382,10,,,
+rough fit,155.964,9.77765,,,
+rough fit,156.547,9.56023,,,
+rough fit,157.133,9.40034,,,
+rough fit,157.721,9.1913,,,
+rough fit,158.311,9.03758,,,
+rough fit,158.904,8.83662,,,
+rough fit,159.498,8.64012,,,
+rough fit,160.095,8.44799,,,
+rough fit,160.694,8.3067,,,
+rough fit,161.296,8.16778,,,
+rough fit,161.899,7.98615,,,
+rough fit,162.505,7.80857,,,
+rough fit,163.113,7.63493,,,
+rough fit,163.723,7.50724,,,
+rough fit,164.336,7.3403,,,
+rough fit,164.951,7.17708,,,
+rough fit,165.568,7.01748,,,
+rough fit,166.188,6.90012,,,
+rough fit,166.81,6.74668,,,
+rough fit,167.434,6.59666,,,
+rough fit,168.06,6.44997,,,
+rough fit,168.689,6.30655,,,
+rough fit,169.32,6.20107,,,
+rough fit,169.954,6.06318,,,
+rough fit,170.59,5.92835,,,
+rough fit,171.228,5.79653,,,
+rough fit,171.869,5.66763,,,
+rough fit,172.512,5.5416,,,
+rough fit,173.158,5.41837,,,
+rough fit,173.806,5.29789,,,
+rough fit,174.456,5.20928,,,
+rough fit,175.109,5.09345,,,
+rough fit,175.764,4.98018,,,
+rough fit,176.422,4.86944,,,
+rough fit,177.082,4.76116,,,
+rough fit,177.744,4.68153,,,
+rough fit,178.409,4.57743,,,
+rough fit,179.077,4.47564,,,
+rough fit,179.747,4.37612,,,
+rough fit,180.42,4.27881,,,
+rough fit,181.095,4.18366,,,
+rough fit,181.773,4.09063,,,
+rough fit,182.453,3.97724,,,
+rough fit,183.135,3.8888,,,
+rough fit,183.821,3.80233,,,
+rough fit,184.509,3.69694,,,
+rough fit,185.199,3.61473,,,
+rough fit,185.892,3.53435,,,
+rough fit,186.588,3.45575,,,
+rough fit,187.286,3.37891,,,
+rough fit,187.987,3.30377,,,
+rough fit,188.69,3.23031,,,
+rough fit,189.396,3.15848,,,
+rough fit,190.105,3.08824,,,
+rough fit,190.816,3.01957,,,
+rough fit,191.53,2.95242,,,
+rough fit,192.247,2.88677,,,
+rough fit,192.966,2.82258,,,
+rough fit,193.688,2.74434,,,
+rough fit,194.413,2.68332,,,
+rough fit,195.14,2.62365,,,
+rough fit,195.871,2.55093,,,
+rough fit,196.604,2.4942,,,
+rough fit,197.339,2.43874,,,
+rough fit,198.078,2.38451,,,
+rough fit,198.819,2.33149,,,
+rough fit,199.563,2.26686,,,
+rough fit,200.31,2.21645,,,
+rough fit,201.059,2.16717,,,
+rough fit,201.811,2.1071,,,
+rough fit,202.567,2.06024,,,
+rough fit,203.325,2.01443,,,
+rough fit,204.085,1.95859,,,
+rough fit,204.849,1.91504,,,
+rough fit,205.616,1.87245,,,
+rough fit,206.385,1.82055,,,
+rough fit,207.157,1.77009,,,
+rough fit,207.932,1.73073,,,
+rough fit,208.711,1.69224,,,
+rough fit,209.491,1.64534,,,
+rough fit,210.275,1.60875,,,
+rough fit,211.062,1.56416,,,
+rough fit,211.852,1.52938,,,
+rough fit,212.645,1.48698,,,
+rough fit,213.44,1.45392,,,
+rough fit,214.239,1.41362,,,
+rough fit,215.041,1.38218,,,
+rough fit,215.845,1.35145,,,
+rough fit,216.653,1.31399,,,
+rough fit,217.464,1.27757,,,
+rough fit,218.278,1.24916,,,
+rough fit,219.094,1.22138,,,
+rough fit,219.914,1.18087,,,
+rough fit,220.737,1.15461,,,
+rough fit,221.563,1.12894,,,
+rough fit,222.392,1.09149,,,
+rough fit,223.224,1.06722,,,
+rough fit,224.06,1.04349,,,
+rough fit,224.898,1.00888,,,
+rough fit,225.739,0.986442,,,
+rough fit,226.584,0.9591,,,
+rough fit,227.432,0.932515,,,
+rough fit,228.283,0.911779,,,
+rough fit,229.137,0.886506,,,
+rough fit,229.995,0.876594,,,
+rough fit,230.855,0.866793,,,
+rough fit,231.719,0.852296,,,

@@ -1,0 +1,12 @@
+# Kubota et al. 2018 Nat Commun 9:437, Fig. 4e: Haze (%) of the three tapes (main PDF p. 6).
+# Columns: tape (category axis, labels as printed: CNT-PET red bar, Kapton blue, cc-Kapton black);
+#   haze_pct_bar = height of the bar top, digitized; printed_value = the number printed above the bar in the
+#   figure (PDF text), which is the authors' value; bar_px_left/right = bar edges in source-image pixels.
+# Provenance: printed_value is printed in the figure; haze_pct_bar is tier 3, digitized from the embedded 300 ppi
+#   raster (no vector plot paths in the PDF) by fig4e_extract.py: top of each bar's outline in its centre
+#   column; y calibrated on 7 tick marks (0-12; 0 = the axis line) paired with the PDF-text
+#   labels, max residual 0.040. Uncertainty of the bar height about +-0.07 (2 px).
+tape,haze_pct_bar,printed_value,bar_px_left,bar_px_right
+CNT-PET,1.78,1.9,29,66
+Kapton,6.69,6.8,78,115
+cc-Kapton,10.51,10.6,127,164

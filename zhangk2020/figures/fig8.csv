@@ -1,0 +1,28 @@
+# zhangk2020 Fig. 8 (p. 9): Experimental results under various indentation depths.
+# Provenance: tier 2, vector paths in the PDF (PyMuPDF get_drawings); marker centre = centre of the marker's stroked outline.
+# x calibration: tick marks 213.38 pt=20, 260.72 pt=60, 308.06 pt=100, 355.40 pt=140, 402.74 pt=180; max residual 5.68e-14 nm.
+# y calibration: tick marks 294.44 pt=0, 250.28 pt=20, 205.97 pt=40, 161.81 pt=60; max residual 0.0203 nm.
+# Uncertainty: about 0.1 nm in both axes (PDF coordinate precision 0.01-0.1 pt; 1 pt = 0.85 nm in x, 0.45 nm in y).
+# series: R_tool_m = green open diamonds, R_tool = blue open squares, R_mark_m = red open circles (labels in the plot, no legend box).
+# x_indentation_depth_nm: indentation depth (nm); y_radius_nm: Evaluated Radius (nm).
+# Check (decompiler): |(R_tool_m + R_mark_m)/2 - R_tool| per depth = 0.02, 0.03, 0.02, 0.04, 0.01, 0.02 nm (Eq. 4 with xi = 0);
+# mean of the R_tool points = 30.39 nm (text: 30.38 nm).
+series,x_indentation_depth_nm,y_radius_nm
+R_tool_m,29.05,40.32
+R_tool_m,43.88,40.32
+R_tool_m,62.26,40.32
+R_tool_m,84.01,40.32
+R_tool_m,125.17,40.32
+R_tool_m,157.11,40.32
+R_tool,29.05,30.69
+R_tool,43.88,30.16
+R_tool,62.26,30.54
+R_tool,84.01,30.75
+R_tool,125.17,30.16
+R_tool,157.11,30.01
+R_mark_m,29.05,21.02
+R_mark_m,43.88,20.05
+R_mark_m,62.26,20.81
+R_mark_m,84.01,21.11
+R_mark_m,125.17,19.98
+R_mark_m,157.11,19.67

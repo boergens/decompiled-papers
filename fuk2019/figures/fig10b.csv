@@ -1,0 +1,21 @@
+# fig10b of Fu et al. 2019, Polymers 11, 975 (DGEBA-NA): MSD (15 ps per the caption) against temperature (squares), two fitted straight lines (red) and their crossing (red dot, labelled 419.46K). y = MSD in Angstrom^2; x in K.
+# Provenance: tier 3, digitized from the embedded raster image on p. 10 (Origin export, 300 ppi); no source data published.
+# Axis fit: x on the inward major ticks 300-600 K (max residual 0.108 K), y on ticks [1.0, 1.5, 2.0, 2.5, 3.0] (max residual 0.00119); frame edges x = 275.17..625.05 K, y = 0.4955..3.5021.
+# Rows: kind = marker (one per temperature; x is the measured marker centre, T_label the temperature it stands for), line_low / line_high (the two red fitted lines: one row per end point, as drawn), dot (the red dot at the crossing), crossing_of_digitized_lines (where the two digitized lines intersect; computed by the decompiler, not printed), label (the printed crossing temperature).
+# y_err_low / y_err_high: ends of the error bar (the caps), only where the figure has error bars.
+# Uncertainty: about +-1 px = +-0.0059 in y and +-0.51 K in x; partly hidden markers (note column) +-2 px.
+kind,T_label,x_K,y,y_err_low,y_err_high,px_x,px_y,note
+marker,300,299.946,0.76292,,,178.5,483.5,
+marker,350,350.000,0.95603,,,277.5,451.0,
+marker,400,400.054,1.23232,,,376.5,404.5,
+marker,450,450.108,1.58883,,,475.5,344.5,
+marker,500,499.910,2.27213,,,574.0,229.5,
+marker,550,549.964,2.84848,,,673.0,132.5,
+marker,600,600.018,3.09210,,,772.0,91.5,
+line_low,,279.975,0.60976,,,139.0,509.3,"least-squares fit on 250 columns, rms 0.23 px; slope 0.00553587 per K"
+line_low,,430.137,1.44104,,,436.0,369.4,
+line_high,,409.913,1.28310,,,396.0,396.0,"least-squares fit on 373 columns, rms 0.20 px; slope 0.0101403 per K"
+line_high,,620.242,3.41589,,,812.0,37.0,
+dot,,419.973,1.38606,,,415.9,378.6,centre of the red dot
+crossing_of_digitized_lines,,419.900,1.38436,,,,,computed
+label,,419.460,,,,,,printed next to the dot: 419.46K

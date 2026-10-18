@@ -1,0 +1,29 @@
+# Extended Data Table 3 | CAVE Tables
+# List of annotation tables that are part of the public release. Each table can be queried via the CAVE client and downloaded as a CSV from publicly available locations.
+# Transcribed by the decompiler from the page image (the table is printed as an image in the PDF, p. 31); not a text layer. Superscript reference numbers are written as ^N.
+Table Name,# of Annotations,Description
+pni_synapses_v2,"337,312,429",The locations of synapses and the segment ids of the pre and post-synaptic automated synapse detection.
+nucleus_detection_v0,"144,120",The locations of nuclei detected via a fully automated method.
+nucleus_alternative_points,"8,388",A reference annotation table marking alternative segment_id lookup locations for a subset of nuclei in nucleus_detection_v0 that is more accurate than the centroid location listed there.
+nucleus_ref_neuron_svm,"144,120",A reference annotation indicating the output of a model detecting which nucleus detections are neurons versus which are not ^6 .
+coregistration_manual_v4,"19,181","A table indicating the association between individual units in the functional imaging data and nuclei in the structural data, derived from human powered matching. Includes residual and separation scores to help assess confidence."
+coregistration_auto_phase3_fwd,"84,198","A table indicating the association between individual units in the functional imaging data and nuclei in the structural data, derived from the automated procedure using the Allen Institute EM > 2P spline based transform. Includes residuals and separation scores to help assess confidence."
+apl_functional_coreg_vess_fwd,"75,856","A table indicating the association between individual units in the functional imaging data and nuclei in the structural data, derived from the automated procedure using vessels. Includes residuals and separation scores to help assess confidence."
+proofreading_status_and_strategy,"1,621",A table indicating which neurons have been proofread on their axons or dendrites and what strategy was used.
+aibs_column_nonneuronal_ref,542,Cell type reference annotations from a human expert of non-neuronal cells located amongst the column defined by ^4.
+allen_v1_column_types_slanted_ref,"1,357",Neuron cell type reference annotations from human experts of neuronal cells located amongst the column defined by ^4.
+allen_column_mtypes_v2,"1,351",Neuron cell type reference annotations from data driven unsupervised clustering of neuronal cells
+aibs_metamodel_mtypes_v661_v2,"72,158",Reference annotations indicating the output of a model predicting cell types across the dataset based on the labels from allen_column_mtypes_v1 ^6.
+aibs_metamodel_celltypes_v661,"94,014",Reference annotations indicating the output of a model predicting cell classes based on the labels from allen_v1_column_types_slanted_ref and aibs_column_nonneuronal_ref. ^6
+baylor_log_reg_cell_type_coarse_v1,"55,063",Reference annotations indicated the output of a logistic regression model predicting whether the nucleus is part of an excitatory or inhibitory cell ^2.
+baylor_gnn_cell_type_fine_model_v2,"49,051",Reference annotations indicated the output of a graph neural network model predicting the cell type based on the human labels in allen_v1_column_types_slanted_ref. ^2
+pt_synapse_targets,"4,528",A reference annotation table on synapses that include manual corrections and identification of excitatory versus inhibitory targets used in Bodor et. al 2023.
+l5et_column,39,A reference annotation for layer 5 ET cells in the column that had fully extended axons that were used in Bodor et. al 2023
+bodor_pt_target_proofread,56,A proofread collection of numerically strong BC and MC targets downstream of the L5-ET cells in the table bodor_pt_cells.
+bodor_pt_cells,12,A list of layer 5 thick tufted neurons analyzed in Bodor et al 2023
+nucleus_functional_area_assignment,144120,A reference table on nuclei that assigns each nucleus to a functional area based on where it lives in the in visual cortex.
+functional_properties_v3_bcm,"12,094",A table that contains basic statistics about the visual response properties of neurons in the dataset for rapid analysis.
+vortex_compartment_targets,"116,282","A table of manual annotations of what kind of compartment (shaft, soma, spine) a subset of neurons makes, funded by VORTEX."
+vortex_manual_nodes_of_ranvier,32,"A table of manual annotations of locations of nodes of ranvier, funded by VORTEX."
+vortex_astrocyte_proofreading_status,26,"A table of astrocytes that have undergone cleaning to remove falsely merged objects, funded by VORTEX."
+vortex_manual_myelination_v0,"53,517","A manual table of locations along axons where a subsets of cells are myelinated, funded by VORTEX."

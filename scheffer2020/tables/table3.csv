@@ -1,0 +1,36 @@
+# Table 3 of Scheffer et al. 2020 (eLife 9:e57443), p. 24: summary of the numbers and types of the neurons in the hemibrain EM dataset.
+# Caption/legend: m-types is the number of morphology types; c-types the number of connectivity types; and c/t the average number of
+# cells per connectivity type. (Full legend in main.tex.) Values as printed; transcribed from the PDF text layer, checked against the page image.
+Brain regions (neuropils) or neuron types,Cells,m-types,c-types,C/t,Notes
+Central complex neuropil neurons,2826,224,262,10.8,
+Mushroom body neuropil neurons,2315,72,80,28.9,Including MB-associated DANs
+Mushroom body neuropil neurons,2003,51,51,39.3,Excluding MB-associated DANs
+Dopaminergic neurons (DANs),335,35,43,7.8,Including MB-associated DANs
+Dopaminergic neurons (DANs),23,14,14,1.7,Excluding MB-associated DANs
+Octopaminergic neurons,19,10,10,1.9,
+Serotonergic (5HT) neurons,9,5,5,1.8,
+Peptidergic and secretory neurons,51,12,14,3.6,
+Circadian clock neurons,27,7,7,3.9,
+Fruitless gene expressing neurons,84,29,30,2.8,
+Visual projection neurons and lobula intrinsic neurons,3723,160,160,23.3,
+Descending neurons,103,51,51,2.0,
+Sensory associated neurons,2768,67,67,41.3,
+Antennal lobe neuropil neurons,604,284,294,2.1,
+Lateral horn neuropil neurons,1496,517,683,2.2,
+Anterior optic tubercle neuropil neurons,243,77,80,3.0,
+Antler neuropil neurons,81,45,45,1.8,
+Anterior ventrolateral protocerebrum neuropil neurons,1276,596,629,2.0,
+Clamp neuropil neurons,746,364,382,2.0,
+Crepine neuropil neurons,333,108,115,2.9,
+Inferior bridge neuropil neurons,264,119,119,2.2,
+Lateral accessory lobe neuropil neurons,429,204,206,2.1,
+Posterior lateral protocerebrum neuropil neurons,480,255,260,1.8,
+Posterior slope neuropil neurons,621,303,311,2.0,
+Posterior ventrolateral protocerebrum neuropil neurons,348,151,156,2.2,
+Saddle neuropil and antennal mechanosensory and motor center neurons,219,96,99,2.2,
+Superior lateral protocerebrum neuropil neurons,1096,468,494,2.2,
+Superior intermediate protocerebrum neuropil neurons,220,90,92,2.4,
+Superior medial protocerebrum neuropil neurons,1494,605,629,2.4,
+Vest neuropil neurons,137,84,85,1.6,
+Wedge neuropil neurons,559,212,230,2.4,
+Total,"22,594",5229,5609,4.0,

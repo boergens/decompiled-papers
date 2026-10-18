@@ -1,0 +1,12 @@
+# Kubota et al. 2018 Nat Commun 9:437, Fig. 4d: Total light transmittance (%) [printed: 'Total light ransmittance (%)'] of the three tapes (main PDF p. 6).
+# Columns: tape (category axis, labels as printed: CNT-PET red bar, Kapton blue, cc-Kapton black);
+#   total_light_transmittance_pct_bar = height of the bar top, digitized; printed_value = the number printed above the bar in the
+#   figure (PDF text), which is the authors' value; bar_px_left/right = bar edges in source-image pixels.
+# Provenance: printed_value is printed in the figure; total_light_transmittance_pct_bar is tier 3, digitized from the embedded 300 ppi
+#   raster (no vector plot paths in the PDF) by fig4d_extract.py: top of each bar's outline in its centre
+#   column; y calibrated on 6 tick marks (0-100; 0 = the axis line) paired with the PDF-text
+#   labels, max residual 0.254. Uncertainty of the bar height about +-0.60 (2 px).
+tape,total_light_transmittance_pct_bar,printed_value,bar_px_left,bar_px_right
+CNT-PET,87.95,88.4,29,67
+Kapton,71.95,72.2,79,116
+cc-Kapton,47.21,47.9,128,165

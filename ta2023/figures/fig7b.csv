@@ -1,0 +1,58 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 7(b) 'Expansion': energy vs displacement for oxygen on C(110)
+#   under expansion; legend 0% (grey circles, black line), 3% (red squares), 7% (blue triangles),
+#   10% (green downward triangles).
+# Columns: series (legend names); displacement_A = x of the marker centre in Angstrom (measured, not snapped to 0.25 A);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 365); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig7b_extract.py.
+#   y calibrated on the 9 major ticks -1..7 eV (max residual 0.007 eV, 0.0141 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0012 A, 0.00346 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening of the closed colour mask; row
+#   offsets from the legend (circles 0, squares +0.5, triangles 0, downward triangles +2.0 px).
+# Uncertainty: 2 px for clear markers (0.03 eV); 4-5 px for partly hidden or hidden ones (0.06-0.07 eV).
+# The smooth curves are interpolations through the markers and are not given.
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+0%,0.001,0.006,0.06,1002.5,638.5,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+0%,0.250,0.376,0.07,1074.5,612.3,hidden,between the 3% square and the 10% triangle only a strip of the grey fill (rows 606-612) is visible (curve interpolated over 28 px from 12 columns)
+0%,0.498,1.469,0.06,1146.0,535.0,partly hidden,upper part under the 3% square (centre from its bottom edge and the typical marker height 23 px)
+0%,0.750,1.990,0.07,1219.0,498.2,hidden,under the 3% square and 7% triangle (curve interpolated over 26 px from 13 columns)
+0%,0.998,2.629,0.06,1290.5,453.0,partly hidden,upper part under the 3% square (centre from its bottom edge and the typical marker height 23 px)
+0%,1.249,2.466,0.03,1363.0,464.5,ok,
+0%,1.501,2.438,0.03,1436.0,466.5,ok,
+0%,1.750,2.466,0.03,1508.0,464.5,ok,
+0%,1.998,2.692,0.03,1579.5,448.5,ok,
+0%,2.252,3.242,0.07,1653.0,409.6,hidden,under the 3% square (curve interpolated over 28 px from 16 columns)
+0%,2.498,3.060,0.03,1724.0,422.5,ok,
+3%,0.001,0.006,0.06,1002.5,638.5,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+3%,0.250,0.635,0.03,1074.5,594.0,ok,
+3%,0.499,1.625,0.03,1146.5,524.0,ok,
+3%,0.750,2.120,0.03,1219.0,489.0,ok,
+3%,0.999,2.819,0.03,1291.0,439.5,ok,
+3%,1.254,0.953,0.03,1364.5,571.5,ok,
+3%,1.501,1.144,0.03,1436.0,558.0,ok,
+3%,1.749,1.872,0.03,1507.5,506.5,ok,
+3%,2.001,2.996,0.03,1580.5,427.0,ok,
+3%,2.252,3.321,0.03,1653.0,404.0,ok,
+3%,2.496,2.600,0.03,1723.5,455.0,ok,
+7%,0.001,0.006,0.06,1002.5,638.5,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+7%,0.245,0.126,0.06,1073.0,630.0,partly hidden,"apex under the 10% downward triangle; base row 641 visible, centre = base - 11 px (unobstructed triangles: 23 px)"
+7%,0.501,0.791,0.06,1147.0,583.0,partly hidden,"base under the 10% downward triangle; apex row 572 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,0.748,1.936,0.06,1218.5,502.0,partly hidden,"apex under the 3% square; base row 513 visible, centre = base - 11 px (unobstructed triangles: 23 px)"
+7%,0.999,3.293,0.06,1291.0,406.0,partly hidden,"base under the 10% downward triangle; apex row 395 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,1.250,3.887,0.06,1363.5,364.0,partly hidden,"apex under the 10% downward triangle; base row 375 visible, centre = base - 11 px (unobstructed triangles: 23 px)"
+7%,1.501,3.901,0.06,1436.0,363.0,partly hidden,"base under the 10% downward triangle; apex row 352 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,1.750,3.915,0.06,1508.0,362.0,partly hidden,"base under the 10% downward triangle; apex row 351 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,2.000,3.929,0.06,1580.0,361.0,partly hidden,"base under the 10% downward triangle; apex row 350 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,2.252,3.957,0.06,1653.0,359.0,partly hidden,"base under the 10% downward triangle; apex row 348 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+7%,2.498,3.971,0.06,1724.0,358.0,partly hidden,"base under the 10% downward triangle; apex row 347 visible, centre = apex + 11 px (unobstructed triangles: 23 px)"
+10%,0.001,0.006,0.03,1002.5,638.5,ok,
+10%,0.255,0.225,0.03,1076.0,623.0,ok,
+10%,0.501,0.671,0.06,1147.0,591.5,partly hidden,"the 10% curve merges with the marker's right edge; top edge row 580.5 and left edge column 1136 visible, centre = top + 11 px"
+10%,0.752,1.590,0.07,1219.5,526.5,partly hidden,"visible blob 16x20 px, typical 20x19"
+10%,1.001,3.031,0.03,1291.5,424.5,ok,
+10%,1.250,4.056,0.03,1363.5,352.0,ok,
+10%,1.496,3.759,0.03,1434.5,373.0,ok,
+10%,1.752,3.781,0.03,1508.5,371.5,ok,
+10%,2.000,3.795,0.03,1580.0,370.5,ok,
+10%,2.250,3.823,0.03,1652.5,368.5,ok,
+10%,2.503,3.837,0.03,1725.5,367.5,ok,

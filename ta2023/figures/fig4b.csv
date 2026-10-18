@@ -1,0 +1,35 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 4(b): energy change vs out-of-plane displacement of the ketone O atom
+#   on C(110) with an additional O adatom: O3 (red squares) or O4 (blue circles) (legend names).
+# Columns: series; displacement_A = x of the marker centre in Angstrom (measured, not snapped to the 0.25 A grid);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 315); status ok / partly hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig4b_extract.py.
+#   y calibrated on the 9 major ticks -1..7 eV (max residual 0.015 eV, 0.0185 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0008 A, 0.00426 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening (9 px) of the closed colour mask;
+#   row offsets (-0.5 px squares, 0 px circles) from the legend, where the legend line passes through each marker.
+# Uncertainty: 2 px for clear markers (0.04 eV); 3-5 px for partly hidden ones.
+# The smooth curves of the figure are interpolations through the markers and are not given.
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+O3,0.003,0.019,0.06,740.0,479.0,partly hidden,"under the O4 circle; centre from the square's visible corners (columns 732-748, rows 471-488) in the red mask, minus the 0.5 px legend offset"
+O3,0.252,0.343,0.06,798.5,461.5,partly hidden,"under the O4 circle; centre from the square's visible corners (columns 791-806, rows 454-470) in the red mask, minus the 0.5 px legend offset"
+O3,0.497,1.260,0.06,856.0,412.0,partly hidden,"under the O4 circle; centre from the square's visible corners (columns 848-864, rows 404-421) in the red mask, minus the 0.5 px legend offset"
+O3,0.748,1.492,0.04,915.0,399.5,ok,
+O3,1.000,2.048,0.04,974.0,369.5,ok,
+O3,1.249,2.780,0.04,1032.5,330.0,ok,
+O3,1.501,3.160,0.04,1091.5,309.5,ok,
+O3,1.752,2.428,0.04,1150.5,349.0,ok,
+O3,2.004,3.030,0.04,1209.5,316.5,ok,
+O3,2.249,4.105,0.04,1267.0,258.5,ok,
+O3,2.500,5.309,0.04,1326.0,193.5,ok,
+O4,-0.002,-0.009,0.09,739.0,480.5,partly hidden,"visible blob 15x14 px, typical 17x17"
+O4,0.248,0.380,0.04,797.5,459.5,ok,
+O4,0.499,1.325,0.09,856.5,408.5,partly hidden,"visible blob 14x16 px, typical 17x17"
+O4,0.751,2.530,0.04,915.5,343.5,ok,
+O4,1.000,3.715,0.04,974.0,279.5,ok,
+O4,1.251,3.762,0.04,1033.0,277.0,ok,
+O4,1.499,3.762,0.04,1091.0,277.0,ok,
+O4,1.750,3.771,0.04,1150.0,276.5,ok,
+O4,2.002,3.790,0.04,1209.0,275.5,ok,
+O4,2.249,3.790,0.04,1267.0,275.5,ok,
+O4,2.500,3.817,0.04,1326.0,274.0,ok,

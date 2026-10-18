@@ -1,0 +1,15 @@
+# Wei et al. 2025, Figure 10(c): Average reduced modulus E_r (GPa), one bar per indenter system (average over h_c = 15-25 Å per the caption).
+# Category x axis: bars are evenly spaced, centred on the major x ticks, labelled (rotated) with the system names.
+# Columns: label = printed category label; bar_centre_px / tick_px = bar centre and nearest major tick, column of the
+#   1427 px wide embedded image; Er_avg_GPa = bar top (centre of the bar's black top outline);
+#   Er_avg_GPa_fill_top = top edge of the coloured fill (a check, ~1 px lower).
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG of Figure 10 by fig10_extract.py;
+#   y calibrated on the 7 labelled major ticks 1-7 (max residual 0.0100 GPa).
+# Uncertainty: about +-0.018 GPa (1 px).
+label,bar_centre_px,tick_px,Er_avg_GPa,Er_avg_GPa_fill_top
+Pyramid-0°,136,136.5,6.149,6.141
+Pyramid-45°,239,238.5,6.404,6.387
+Sphere (R=10 Å),342,341.5,1.832,1.814
+Sphere (R=14.5 Å),444,444.5,2.984,2.975
+Sphere (R=20 Å),547,547.5,5.121,5.103
+Sphere (R=25 Å),650,650.5,6.141,6.123

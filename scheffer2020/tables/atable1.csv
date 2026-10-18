@@ -1,0 +1,17 @@
+# Appendix 1-table 1 of Scheffer et al. 2020 (eLife 9:e57443), pp. 65-66: FIB-SEM imaging conditions.
+# Sample IDs are printed wrapped after the hyphen ('Z0115-' / '22_Sec22'); joined here. Values as printed;
+# transcribed from the PDF text layer, checked against the page images.
+Sample ID,Electron beam energy (kV),Sample bias (kV),Landing energy (kV),SEM current (nA),SEM scan rate (MHz),x-y pixel (nm),z-step (nm)
+Z0115-22_Sec22,1.2,0,1.2,4,4,8,2
+Z0115-22_Sec23,1.2,0,1.2,4,4,8,2
+Z0115-22_Sec24,0.6,0.6,1.2,4,2,8,2
+Z0115-22_Sec25,0.6,0.6,1.2,4,2,8,2
+Z0115-22_Sec26,0.6,0.6,1.2,4,2,8,2
+Z0115-22_Sec27,0.6,0.6,1.2,4,2,8,2
+Z0115-22_Sec28,1.2,0,1.2,4,4,8,2
+Z0115-22_Sec29,1.2,0,1.2,4,4,8,2
+Z0115-22_Sec30,1.2,0,1.2,4,4,8,2
+Z0115-22_Sec31,1.2,0,1.2,4,4,8,4
+Z0115-22_Sec32,1.2,0,1.2,4,4,8,4
+Z0115-22_Sec33,1.2,0,1.2,4,4,8,4
+Z0115-22_Sec34,1.2,0,1.2,4,4,8,4

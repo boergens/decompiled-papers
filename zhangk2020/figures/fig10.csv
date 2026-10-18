@@ -1,0 +1,20 @@
+# zhangk2020 Fig. 10 (p. 10): The theoretical elastic recovery under various indentation depths.
+# Provenance: tier 2, vector paths in the PDF (PyMuPDF get_drawings); marker centre = centre of the square's stroked outline;
+# The red line joins the markers: its filled thick segments start and end at the marker centres (checked in the path data), so only the markers are given.
+# x calibration: tick marks 205.02 pt=20, 262.40 pt=60, 319.93 pt=100, 377.31 pt=140, 434.70 pt=180; max residual 0.0401 nm.
+# y calibration: tick marks 93.99 pt=0.006, 147.52 pt=0.004, 200.80 pt=0.002, 254.15 pt=0; max residual 3.51e-06 nm.
+# Unlabelled right-frame ticks at 0.00600, 0.00480, 0.00360, 0.00240, 0.00120, 0.00000 nm (y scale of the left axis).
+# Uncertainty: about 0.05 nm in x and 0.00002 nm in y (PDF coordinate precision).
+# Markers: red squares, lower right half filled. x_indentation_depth_nm: Indentation depth (nm); y_elastic_recovery_nm: Theoretical elastic recovery (nm).
+series,x_indentation_depth_nm,y_elastic_recovery_nm
+theoretical elastic recovery,20.05,2e-06
+theoretical elastic recovery,36.073,0.001751
+theoretical elastic recovery,51.996,0.002444
+theoretical elastic recovery,68.069,0.002973
+theoretical elastic recovery,83.967,0.003426
+theoretical elastic recovery,99.99,0.003822
+theoretical elastic recovery,116.063,0.004185
+theoretical elastic recovery,131.961,0.004518
+theoretical elastic recovery,148.009,0.004826
+theoretical elastic recovery,163.932,0.00512
+theoretical elastic recovery,180.005,0.005398

@@ -1,0 +1,5 @@
+# Xu et al. 2017 eLife, Figure 9(a), lower table (printed as an image; transcribed by the decompiler).
+# Caption: Figure 9. Major challenges to long-term reliability and stability of FIB-SEM systems. (a) System failure modes with different frequencies of occurrence and resume challenges. (b) Corresponding customized solutions.
+Challenges,Potential Impact to Image Data Set
+Uneven FIB Milling,"Irregular Z-step, Waves, Sample Damage"
+Loss of Static State,Out of Focus Images

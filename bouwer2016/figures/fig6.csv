@@ -1,0 +1,36 @@
+# Bouwer et al. 2016 Adv Struct Chem Imag 2:11, Fig. 6: 'Gatan BS Detector and FEI CBS Detector / Normalized Gold BS
+#   Signal Vs. / Electron Probe Beam Landing Energy'.
+# Columns: series = legend entry ('FEI CBS' open black circles, 'Gatan BS' open blue squares, 'FEI CBS 3keV HT with
+#   Deceleration' filled green diamonds, 'FEI CBS 4keV HT with Deceleration' filled black down-triangles);
+#   landing_energy_keV = Landing Energy (keV), x axis; signal = Normalized Gold BS Signal (Arbitrary Units), y axis;
+#   signal_ink_centroid = for the triangles only, y of the centroid of the filled triangle (signal uses the centre of
+#   its bounding box; which point of the symbol marks the value is not known, the two differ by about 0.005).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig6_extract.py.
+#   Axes fitted on the frame and grid lines at the labelled ticks, max residual x 0.0024 keV, y 0.0003.
+#   Circle centres: least-squares circle fit to the ring; squares: centre of the outline's bounding box; diamonds:
+#   centroid of the filled shape. At 5 keV the circle and the square overlap at (5, 1) on the right frame line.
+#   flag: markers cut by the frame lines; marker_w_px/marker_h_px: size of the marker's ink (a check only).
+# Uncertainty: about +-0.0072 keV in x and +-0.0014 in y (1 source pixel); about 3 px for flagged markers.
+series,landing_energy_keV,signal,signal_ink_centroid,flag,marker_w_px,marker_h_px
+FEI CBS,0.995,0.0335,,,12,12
+FEI CBS,1.495,0.1451,,,12,12
+FEI CBS,1.997,0.2897,,,12,12
+FEI CBS,2.496,0.4167,,,12,12
+FEI CBS,2.995,0.5367,,,12,13
+FEI CBS,3.495,0.6630,,,12,12
+FEI CBS,3.996,0.7657,,,12,13
+FEI CBS,4.496,0.8662,,,12,9
+FEI CBS,4.997,1.0006,,cut by the frame lines,10,10
+Gatan BS,1.001,0.0942,,,14,13
+Gatan BS,1.499,0.2360,,,13,13
+Gatan BS,2.000,0.3877,,,13,13
+Gatan BS,2.502,0.5023,,,13,13
+Gatan BS,3.003,0.6053,,,13,13
+Gatan BS,3.501,0.7113,,,14,13
+Gatan BS,4.002,0.7986,,,14,13
+Gatan BS,4.500,0.8802,,,13,13
+Gatan BS,5.002,0.9998,,cut by the frame lines,13,14
+FEI CBS 3keV HT with Deceleration,1.002,0.5467,,,13,11
+FEI CBS 3keV HT with Deceleration,1.501,0.6549,,,13,12
+FEI CBS 4keV HT with Deceleration,1.001,0.7814,0.7839,,14,13
+FEI CBS 4keV HT with Deceleration,1.503,0.9439,0.9465,,14,14

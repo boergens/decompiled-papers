@@ -1,0 +1,59 @@
+# Extended Data Figure 3b (PDF page 43): explained variance of face features (%) vs feature index, sessions from monkey A only; states inferred from one half of the neurons, features predicted from the held-out half.
+# Source: vector paths in the PDF. Clip region (PDF pt, origin top-left) x 27-128, y 328-452.
+# x axis: tick marks at features 10,20,30,40,50 -> slope 0.518537 pt^-1, max residual 1.61e-03; every series has one vertex per feature 1..50 (checked against the solid strokes, max dev <0.01 pt).
+# y axis: tick marks at -100,-50,0,50,100 % -> slope -1.801848, max residual 1.43e-03. 1 pt = 1.802 %.
+# feature_set: features 1-20 = 20 principal shape features, 21-50 = 30 principal appearance features ('Shape'/'Appearance' brackets in the figure).
+# Solid lines (stroke vertices, precision ~0.01 pt): priming_average (black #1c0f29), binocular_conscious_state1 (orange #fcae34), binocular_conscious_state2 (purple #543379; the legend swatch uses #6d429c).
+# Dashed lines binocular_suppressed_state1 (orange dashed) and binocular_suppressed_state2 (purple dashed) are stored as filled dash outlines (4 pt dash / 4 pt gap, 1 pt wide); centreline recovered from the dash polygons (see README). *_qc codes: direct = vertex inside a dash (precision ~0.05 pt = 0.1 %); extrap = vertex in a gap, extrapolated along the adjacent straight segment (~0.1-0.4 pt); extrap_offscale = same but outside the -100..100 range (line clipped by the axes box; ~1-2 pt); interp = both adjacent segments inside one dash gap, linear interpolation of the neighbours (bound ~1.2 pt = 2.2 %); clipped = line outside the axis range (empty); gap = not recoverable (empty).
+# Values are rounded to 0.01 %.
+feature_index,feature_set,priming_average,binocular_conscious_state1,binocular_conscious_state2,binocular_suppressed_state1,binocular_suppressed_state1_qc,binocular_suppressed_state2,binocular_suppressed_state2_qc
+1,shape,67.57,42.51,-26.40,-45.21,direct,36.26,direct
+2,shape,78.92,53.42,-42.89,-53.46,extrap,47.83,extrap
+3,shape,78.05,55.55,-14.91,-29.78,direct,51.98,direct
+4,shape,54.25,11.37,2.74,-27.37,extrap,5.52,direct
+5,shape,39.62,-2.68,-27.18,-33.42,direct,2.68,extrap
+6,shape,27.33,-12.35,-11.36,-22.31,direct,7.22,direct
+7,shape,10.02,-4.11,-4.01,-9.53,extrap,-4.52,direct
+8,shape,43.15,14.52,-18.87,-24.82,extrap,-11.67,direct
+9,shape,47.78,23.01,-14.66,-32.15,direct,-9.56,direct
+10,shape,24.81,18.29,-14.74,-23.15,direct,15.54,direct
+11,shape,29.97,-5.51,-8.85,-21.05,direct,-8.48,direct
+12,shape,12.06,5.08,-4.90,-12.24,direct,-1.16,extrap
+13,shape,15.05,-9.97,-14.44,-25.04,direct,-14.16,extrap
+14,shape,36.38,13.89,-4.52,-34.22,extrap,6.16,direct
+15,shape,-1.85,-23.52,-28.18,-54.57,direct,-10.59,direct
+16,shape,14.72,16.72,-33.72,-25.19,direct,17.86,direct
+17,shape,12.60,-14.12,-6.20,-11.97,direct,-4.07,direct
+18,shape,16.27,-0.41,-12.42,-9.80,direct,-11.29,direct
+19,shape,15.79,-1.85,-4.65,-5.93,extrap,-9.87,interp
+20,shape,10.56,-12.99,10.99,0.59,direct,-8.45,direct
+21,appearance,89.44,21.86,-63.84,-81.52,direct,18.96,extrap
+22,appearance,89.03,24.42,-64.31,-77.79,direct,22.48,direct
+23,appearance,89.57,22.24,-55.80,-84.73,direct,17.13,extrap
+24,appearance,52.72,41.42,-21.08,-34.07,direct,29.11,direct
+25,appearance,86.65,20.51,-71.50,-96.34,direct,16.97,direct
+26,appearance,58.29,7.57,-37.20,-34.43,direct,20.95,extrap
+27,appearance,65.23,16.47,-35.62,-39.56,direct,12.82,direct
+28,appearance,57.23,25.26,-32.17,-49.90,direct,11.08,extrap
+29,appearance,68.99,18.45,-22.88,-33.22,direct,19.47,direct
+30,appearance,84.36,13.03,-62.86,-76.14,direct,15.21,extrap
+31,appearance,36.97,12.16,-12.28,-20.28,direct,6.43,direct
+32,appearance,65.51,8.67,-59.61,-85.81,direct,18.94,direct
+33,appearance,58.07,-12.74,-60.16,-76.18,direct,-8.62,direct
+34,appearance,69.33,17.57,-50.83,-61.68,direct,16.25,direct
+35,appearance,56.81,-12.84,-45.34,-52.63,direct,2.49,extrap
+36,appearance,37.55,1.82,-36.72,-50.22,direct,4.59,direct
+37,appearance,68.33,23.93,-56.48,-66.16,direct,21.92,direct
+38,appearance,87.84,19.03,-60.99,-77.41,direct,19.78,extrap
+39,appearance,83.14,15.25,-60.33,-85.54,direct,9.52,direct
+40,appearance,24.38,-6.81,-23.61,-20.98,direct,-23.34,direct
+41,appearance,46.31,-5.15,-16.58,-30.57,direct,-4.52,direct
+42,appearance,87.57,25.52,-67.88,-80.96,direct,24.13,direct
+43,appearance,47.46,-9.41,-22.82,-13.93,direct,0.99,direct
+44,appearance,73.33,27.19,-53.39,-75.23,direct,21.12,direct
+45,appearance,67.91,14.40,-41.16,-61.01,extrap,14.98,extrap
+46,appearance,60.40,2.70,-60.44,-88.82,direct,8.99,direct
+47,appearance,56.34,13.10,-68.19,-76.74,direct,20.13,extrap
+48,appearance,56.24,25.61,-59.50,-71.52,direct,19.97,direct
+49,appearance,86.68,21.55,-65.17,-82.71,direct,21.76,direct
+50,appearance,30.18,-3.36,-9.49,-18.15,direct,-15.54,direct

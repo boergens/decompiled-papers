@@ -1,0 +1,26 @@
+# Zhao et al. 2025, Nat. Commun. 16:3203, Fig. 4b: dimensionless damage surface density Sigma-bar vs lambda.
+# Columns: series (red squares = Cutting-induced; the last point, at lambda ~1.45 in region III, carries the blue
+#   'Tearing-induced' icon drawn over a red square and a blue error bar drawn over a red one of the same length);
+#   x = lambda; y = Sigma-bar (dimensionless, printed as a Sigma with an overbar); x_err_* empty (no horizontal bars); y_err_low/high = ends of the error bar (standard
+#   deviation per the caption) at the cap lines; marker_box_centre_* = centre of the square's bounding box;
+#   centre_from: x from the vertical error-bar line (vbar) / y from the junction of the two half-bars (vjunction);
+#   these agree with the square centres to <0.1 pt.
+# Provenance: tier 2, vector paths in the PDF (page 5), exact to ~0.01 pt (~0.0001 in lambda, ~0.001 in Sigma-bar).
+#   x: linear fit through 3 ticks 1@324.830pt, 1.2@386.960pt, 1.4@449.030pt; max residual 6.4e-05 data units
+#   y: linear fit through 5 ticks 0@177.220pt, 2@149.780pt, 4@122.340pt, 6@94.810pt, 8@67.370pt; max residual 0.0026 data units
+#   The frame's left edge (324.83 pt) carries the '1' label; it fits the 1.2/1.4 tick spacing (residual above).
+#   The legend's text layer also holds the word 'PDMS', hidden under the legend entry (not visible on the page).
+#   Background shading: region I lambda < 1.1429, II 1.1429-1.4281, III > 1.4281 (fill edges).
+# Fit line (red dash-dot, drawn as filled dash polygons; least-squares line through all their vertices, max
+#   vertex offset 1.20 pt = line half-width): from lambda = 1.162 to 1.45, i.e. Sigma_bar = 8.3775 * lambda + (-7.6651).
+#   The paper prints no equation for this line; these numbers are read off the drawing.
+series,x,y,x_err_low,x_err_high,y_err_low,y_err_high,marker_box_centre_x,marker_box_centre_y,centre_from
+Cutting-induced,1.08197,5.43932,,,4.95038,5.93519,1.08181,5.44459,vbar/vjunction
+Cutting-induced,1.12242,2.40375,,,1.96403,2.8504,1.12242,2.40551,vbar/vjunction
+Cutting-induced,1.16365,2.03444,,,1.59471,2.47402,1.16341,2.03439,vbar/vjunction
+Cutting-induced,1.2041,2.21735,,,1.64743,2.78705,1.2041,2.21729,vbar/vjunction
+Cutting-induced,1.24501,2.85753,,,2.40368,3.31117,1.24509,2.85929,vbar/vjunction
+Cutting-induced,1.28578,3.33942,,,2.92074,3.75789,1.28578,3.34293,vbar/vjunction
+Cutting-induced,1.34708,3.77209,,,3.19511,4.34179,1.347,3.77553,vbar/vjunction
+Cutting-induced,1.40837,4.19769,,,3.35341,5.0347,1.40829,4.19765,vbar/vjunction
+Tearing-induced,1.44914,4.25747,,,3.22678,5.28795,1.44914,4.25923,vbar/vjunction

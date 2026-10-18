@@ -1,0 +1,73 @@
+# Wei et al. 2024 (Acta Geotech. 20:1599-1620), Fig. 17 a-d: average forces along three directions vs sliding velocity
+# at h_c = 5, 10, 15, 20 Angstrom (averaged over sliding distance 15-30 Angstrom, per caption).
+# Columns: panel; hc_A = indentation depth h_c (Angstrom); component Fx/Fy/Fz; velocity_A_per_ps = sliding velocity
+#   (category position, printed label); force_nN = bar value (nN, from the zero line); err_low_nN/err_high_nN = lower/upper
+#   error-bar ends (nN); err_half_nN = half length of the error bar; err_mid_nN = its midpoint (should equal force_nN if
+#   the bar is symmetric); flag = notes (clipped error bars at the axis limits 6 / -10 nN, tiny bars).
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG (PDF page 20, xref 271) by figures/fig17_extract.py:
+#   y axis fitted linearly on the 9 major ticks (6 to -10 nN); bar ends from the colour fraction of the bar columns
+#   (sub-pixel); error-bar ends = extremes of the dark vertical line at the bar centre.
+# Calibration (residual = max tick residual in nN; scale in nN per pixel): (a) 0.017, 0.0265; (b) 0.017, 0.0265; (c) 0.013, 0.0265; (d) 0.013, 0.0265
+# Uncertainty: bar values about +-0.03 nN (1 px); error-bar ends about +-0.05 nN (line ends, caps 2-3 px thick).
+# The paper does not say what the error bars are (presumably the scatter of the force along 15-30 Angstrom).
+panel,hc_A,component,velocity_A_per_ps,force_nN,err_low_nN,err_high_nN,err_half_nN,err_mid_nN,flag
+a,5,Fx,0.1,0.428,-0.23,1.041,0.636,0.406,
+a,5,Fx,0.5,0.635,-0.151,1.359,0.755,0.604,
+a,5,Fx,1.0,0.958,0.379,1.491,0.556,0.935,
+a,5,Fx,1.5,0.164,-0.548,0.856,0.702,0.154,
+a,5,Fx,2.0,0.453,-0.521,1.386,0.953,0.432,
+a,5,Fy,0.1,-1.157,-1.687,-0.548,0.569,-1.117,
+a,5,Fy,0.5,-1.55,-2.216,-0.839,0.689,-1.528,
+a,5,Fy,1.0,-1.814,-2.693,-0.866,0.914,-1.779,
+a,5,Fy,1.5,-1.498,-2.057,-0.866,0.596,-1.461,
+a,5,Fy,2.0,-2.341,-3.143,-1.448,0.847,-2.296,
+a,5,Fz,0.1,0.536,-0.124,1.174,0.649,0.525,
+a,5,Fz,0.5,0.985,0.326,1.624,0.649,0.975,
+a,5,Fz,1.0,0.829,0.167,1.386,0.609,0.776,
+a,5,Fz,1.5,1.037,0.273,1.756,0.742,1.015,
+a,5,Fz,2.0,1.407,0.512,2.26,0.874,1.386,
+b,10,Fx,0.1,-0.495,-1.157,0.22,0.689,-0.468,
+b,10,Fx,0.5,0.22,-0.521,0.962,0.742,0.22,
+b,10,Fx,1.0,-0.383,-1.157,0.459,0.808,-0.349,
+b,10,Fx,1.5,0.851,-0.389,1.995,1.192,0.803,
+b,10,Fx,2.0,0.615,-0.548,1.624,1.086,0.538,
+b,10,Fy,0.1,-1.683,-2.428,-0.866,0.781,-1.647,
+b,10,Fy,0.5,-3.456,-4.256,-2.587,0.834,-3.421,
+b,10,Fy,1.0,-3.828,-5.315,-2.269,1.523,-3.792,
+b,10,Fy,1.5,-4.042,-5.103,-2.905,1.099,-4.004,
+b,10,Fy,2.0,-5.313,-6.639,-3.911,1.364,-5.275,
+b,10,Fz,0.1,0.67,-0.045,1.28,0.662,0.618,
+b,10,Fz,0.5,1.992,0.856,3.081,1.112,1.968,
+b,10,Fz,1.0,1.915,1.333,2.498,0.583,1.915,
+b,10,Fz,1.5,2.232,1.041,3.398,1.179,2.22,
+b,10,Fz,2.0,2.836,1.65,3.981,1.165,2.816,
+c,15,Fx,0.1,-0.162,-0.779,0.545,0.662,-0.117,
+c,15,Fx,0.5,0.537,-0.779,1.789,1.284,0.505,
+c,15,Fx,1.0,0.116,-1.07,1.259,1.165,0.094,
+c,15,Fx,1.5,0.194,-1.017,1.365,1.191,0.174,
+c,15,Fx,2.0,0.83,-0.7,2.318,1.509,0.809,
+c,15,Fy,0.1,-3.082,-4.38,-1.732,1.324,-3.056,
+c,15,Fy,0.5,-4.243,-5.254,-3.136,1.059,-4.195,
+c,15,Fy,1.0,-4.957,-6.048,-3.771,1.138,-4.909,
+c,15,Fy,1.5,-6.146,-7.319,-4.909,1.205,-6.114,
+c,15,Fy,2.0,-6.068,-7.477,-4.565,1.456,-6.021,
+c,15,Fz,0.1,2.128,1.127,3.086,0.98,2.107,
+c,15,Fz,0.5,2.523,1.604,3.404,0.9,2.504,
+c,15,Fz,1.0,3.186,2.371,3.96,0.794,3.166,
+c,15,Fz,1.5,3.741,2.133,4.489,1.178,3.311,
+c,15,Fz,2.0,4.303,2.795,5.76,1.483,4.278,
+d,20,Fx,0.1,0.765,-0.594,2.054,1.324,0.73,
+d,20,Fx,0.5,0.646,-0.594,1.868,1.231,0.637,
+d,20,Fx,1.0,-0.271,-1.626,1.154,1.39,-0.236,
+d,20,Fx,1.5,0.246,-1.309,1.709,1.509,0.2,
+d,20,Fx,2.0,1.31,-0.488,3.086,1.787,1.299,
+d,20,Fy,0.1,-5.252,-6.445,-4.009,1.218,-5.227,
+d,20,Fy,0.5,-7.129,-8.669,-5.518,1.575,-7.094,
+d,20,Fy,1.0,-7.581,-9.145,-5.968,1.589,-7.557,
+d,20,Fy,1.5,-9.296,-9.966,-7.398,1.284,-8.682,lower error-bar end at the axis limit (clipped)
+d,20,Fy,2.0,-8.846,-9.993,-6.418,1.787,-8.206,lower error-bar end at the axis limit (clipped)
+d,20,Fz,0.1,4.298,2.98,5.575,1.297,4.278,
+d,20,Fz,0.5,4.725,3.563,5.84,1.138,4.701,
+d,20,Fz,1.0,5.096,3.298,5.972,1.337,4.635,upper error-bar end at the axis limit (clipped)
+d,20,Fz,1.5,5.151,3.616,5.972,1.178,4.794,upper error-bar end at the axis limit (clipped)
+d,20,Fz,2.0,5.359,3.642,5.972,1.165,4.807,upper error-bar end at the axis limit (clipped)

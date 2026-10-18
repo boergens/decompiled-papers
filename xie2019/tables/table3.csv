@@ -1,0 +1,13 @@
+# Table 3 Effect of atomic sizing effect and cutting-edge effect on material removal during ACS cutting (Xie & Fang 2019, p. 12).
+# Two-way table: rows = ranges of the ratio of cutting depth to edge radius (a/R), columns = ranges of the ratio of
+# cutting depth to atomic radius (a/rw). In the paper, the (0, C1) and (C1, C2) entries are printed in the (T1, ∞) row only; the
+# (C2, ∞) column is split into two sub-columns for the (T1, ∞) row ('Elastic deformation, chip formation by dislocation
+# motion' | 'Slip of 1 atomic layer (case 3)'); the (T2, T1) row has only 'Slip of over 2 atomic layers (case 4)' in
+# the right sub-column; the (0, T2) row's (C2, ∞) text runs across both sub-columns (written in the left one).
+# Empty cells are empty in the paper. Last row: 'Material removal behaviour': 'Sliding' printed under (0, C1),
+# 'Cutting' under (C2, ∞).
+a/R range,"(0, C1)","(C1, C2)","(C2, ∞) left","(C2, ∞) right"
+"(T1, ∞)","Elastic deformation, no material removal (case 1)","Noncontinuous material removal, chip formation (case 2)","Elastic deformation, chip formation by dislocation motion",Slip of 1 atomic layer (case 3)
+"(T2, T1)",,,,Slip of over 2 atomic layers (case 4)
+"(0, T2)",,,"No or extremely small chip formation, elastic-plastic deformation (case 5)",
+Material removal behaviour,Sliding,,Cutting,

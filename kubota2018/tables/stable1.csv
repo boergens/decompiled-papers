@@ -1,0 +1,15 @@
+# Supplementary Table 1 | Specification of Tapes (Supplementary Information p. 25)
+# Transcribed from the table IMAGE (no text layer) at 250 dpi. Merged cells (Tape material, Coated material, Company for copper foil, URL for copper foil) repeated on every row they span.
+# Superscripts written with ^: 1x10^16 = 1×10¹⁶; 6,530x10^6 = 6,530×10⁶. 'Ω □-1' = ohms per square. Empty Product name cells are empty in the table.
+# The carbon-coated Kapton sheet resistance cell reads '19.2/107' over '6,530x10^6' (two lines; units Ω □-1 per the header; the main text gives 19.2, 107 and 6,530 MΩ □-1).
+Tape material,Coated material,Company,Thickness (µm),Commercial product: Tape (8mm width),Commercial product: Film,Commercial product: Product name,Sheet resistance (Ω □-1),Total light transmission (%),URL
+Kapton HN,none,DuPont,50,n/a,available,Kapton HN,1x10^16,72.2,http://www.dupont.com/products-and-services/membranes-films/polyimide-films/brands/kapton-polyimide-film.html/
+Kapton HN,carbon,RMC Boeckeler,50,available,none,,"19.2/107 6,530x10^6",47.9,http://www.rmcboeckeler.com
+Kapton HN,germanium,Sheldahl,50,n/a,available,IP# C903907-1,n/a,none,http://www.sheldahl.com/default.aspx
+Copper foil,none,Takeuchi Metal Foil & Powder,20,n/a,available,,0.1,none,http://www.etakeuchi.co.jp
+Copper foil,none,Takeuchi Metal Foil & Powder,40,n/a,available,,0.1,none,http://www.etakeuchi.co.jp
+Open reel,magnetic crystals,EMG International,50,available,n/a,Studio Master SM911 1/4 inch width,n/a,none,www.rmgi.nl http://www.recordingdataservice.com/default.asp
+PET,ITO,TDK,53,n/a,available,Fleclear,155,90.1,http://www.tdk.co.jp/index.htm
+PET,ITO,Teijin,50,n/a,available,Eleclear,150,89.6,https://www.teijin.com
+PET,CNT,Toray,50,n/a,not on sale,,240/500,88.4,http://www.toray.com
+PET,CNT,Teijin,50,n/a,not on sale,,"800/1,000",86.2,"https://www.teijin.com, commercially available by RMC in 2018"

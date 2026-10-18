@@ -1,0 +1,1231 @@
+# Supplementary Figure 9c (kubota2018 SI): 'Estimated numbers of the electrons found at different depths by the Monte Carlo simulation'; two panels, 'Backscattered electrons' and 'Primary (absorbed) electrons'
+# columns: panel, series (legend text), style (solid/dashed as drawn), depth_nm (y axis 'depth (nm)'), x_lo, x_hi, x (number of electrons, top x axis; ends and mean of the colour run in that pixel row), flag, pixel_row, pixel_col_lo, pixel_col_hi (embedded image)
+# provenance: tier 3, digitized from the embedded raster image of SI page 19 (987 x 1225 px JPEG, 167 ppi) at native resolution, script sfig9c_extract.py; colour classes in HSV, curves traced row by row (solid curve = large connected components of the colour, dashed curve = its small components, the dashes)
+# axis fits: BSE panel y on 6 ticks 0..-500 nm (1 px = 2.8 nm), x on 5 ticks 0..200 (1 px = 1.55 electrons); PE panel y on 8 ticks 0..-1400 nm (1 px = 7.3 nm), x on 7 ticks 0..3000 (1 px = 18.6 electrons)
+# uncertainty: about 1-2 px (BSE: 3-6 nm, 2-3 electrons; PE: 7-15 nm, 20-40 electrons) where the curve is steep; where it is nearly horizontal the run x_lo..x_hi is the honest range
+# BSE panel: the top x axis is broken ('//') after 200 and ends at '3000'; values in the break region are not calibrated (flagged). A grey horizontal line at -50 nm is labelled '50 nm' (not data)
+# limits: near depth 0 all curves converge and cross; there pieces of curves are missing or attributed to the wrong member of a colour pair (a solid fragment < 40 px counted as a dash, a dash touching the solid curve merged into it). The pale dashed curves (especially 3.5 keV) are partly lost in the colour classification, and where solid and dashed curves of one colour touch, both are traced as one. Treat this as an approximate trace; check the overlays (work/supp_sfig9c_overlay_*.png)
+# known misassignments (checked on the overlays): single stray points of another curve with a similar hue (BSE '2.5 keV' at -267 nm, PE '2.5 keV' at -443 nm); near the y axis, where a solid curve and the dashes of its partner run down the axis together, the dashes merge into the solid trace (PE '3 keV' below about -400 nm and BSE '5 keV' below about -480 nm are probably the 3.5 keV and 5.5 keV curves)
+panel,series,style,depth_nm,x_lo,x_hi,x,flag,pixel_row,pixel_col_lo,pixel_col_hi
+Backscattered electrons,1 keV,solid,-5.8,107.5,107.5,107.5,solid trace,754,313,313
+Backscattered electrons,1 keV,solid,-8.6,84.2,109.0,96.6,solid trace,755,298,314
+Backscattered electrons,1 keV,solid,-11.3,51.6,109.0,80.3,solid trace,756,277,314
+Backscattered electrons,1 keV,solid,-14.1,26.7,105.9,66.3,solid trace,757,261,312
+Backscattered electrons,1 keV,solid,-16.9,11.2,67.1,39.1,solid trace,758,251,287
+Backscattered electrons,1 keV,solid,-16.9,99.7,105.9,102.8,solid trace,758,308,312
+Backscattered electrons,1 keV,solid,-19.6,9.6,46.9,28.3,solid trace,759,250,274
+Backscattered electrons,1 keV,solid,-22.4,6.5,18.9,12.7,solid trace,760,248,256
+Backscattered electrons,1 keV,solid,-25.1,3.4,11.2,7.3,solid trace,761,246,251
+Backscattered electrons,1 keV,solid,-27.9,0.3,8.1,4.2,solid trace,762,244,249
+Backscattered electrons,1 keV,solid,-30.7,0.3,5.0,2.6,solid trace,763,244,247
+Backscattered electrons,1.5 keV,dashed,-48.3,3.4,9.6,6.5,dash centroid,769.4,246,250
+Backscattered electrons,1.5 keV,dashed,-39.5,17.4,22.1,19.7,dash centroid,766.2,255,258
+Backscattered electrons,1.5 keV,dashed,-37.1,31.4,36.0,33.8,dash centroid,765.3,264,267
+Backscattered electrons,1.5 keV,dashed,-33.4,45.3,50.0,47.7,dash centroid,764.0,273,276
+Backscattered electrons,1.5 keV,dashed,-29.3,59.3,64.0,61.6,dash centroid,762.5,282,285
+Backscattered electrons,1.5 keV,dashed,-26.3,137.0,141.6,139.4,dash centroid,761.4,332,335
+Backscattered electrons,1.5 keV,dashed,-25.5,71.7,76.4,74.7,dash centroid,761.1,290,293
+Backscattered electrons,1.5 keV,dashed,-21.0,87.3,91.9,89.6,dash centroid,759.5,300,303
+Backscattered electrons,1.5 keV,dashed,-8.8,118.3,129.2,122.7,dash centroid,755.1,320,327
+Backscattered electrons,1.5 keV,dashed,-6.1,169.6,206.8,186.4,dash centroid,754.1,353,377
+Backscattered electrons,2 keV,solid,-25.1,99.7,102.8,101.2,solid trace,761,308,310
+Backscattered electrons,2 keV,solid,-27.9,93.5,104.3,98.9,solid trace,762,304,311
+Backscattered electrons,2 keV,solid,-30.7,81.1,104.3,92.7,solid trace,763,296,311
+Backscattered electrons,2 keV,solid,-33.4,73.3,96.6,84.9,solid trace,764,291,306
+Backscattered electrons,2 keV,solid,-36.2,65.5,95.0,80.3,solid trace,765,286,305
+Backscattered electrons,2 keV,solid,-39.0,54.7,81.1,67.9,solid trace,766,279,296
+Backscattered electrons,2 keV,solid,-39.0,88.8,95.0,91.9,solid trace,766,301,305
+Backscattered electrons,2 keV,solid,-41.7,45.3,70.2,57.8,solid trace,767,273,289
+Backscattered electrons,2 keV,solid,-41.7,76.4,81.1,78.7,solid trace,767,293,296
+Backscattered electrons,2 keV,solid,-41.7,90.4,90.4,90.4,solid trace,767,302,302
+Backscattered electrons,2 keV,solid,-44.5,37.6,59.3,48.4,solid trace,768,268,282
+Backscattered electrons,2 keV,solid,-44.5,74.8,81.1,78.0,solid trace,768,292,296
+Backscattered electrons,2 keV,solid,-47.3,28.3,51.6,39.9,solid trace,769,262,277
+Backscattered electrons,2 keV,solid,-47.3,74.8,79.5,77.2,solid trace,769,292,295
+Backscattered electrons,2 keV,solid,-50.0,22.1,48.4,35.3,solid trace,770,258,275
+Backscattered electrons,2 keV,solid,-50.0,76.4,76.4,76.4,solid trace,770,293,293
+Backscattered electrons,2 keV,solid,-52.8,15.8,36.0,25.9,solid trace,771,254,267
+Backscattered electrons,2 keV,solid,-55.6,15.8,26.7,21.3,solid trace,772,254,261
+Backscattered electrons,2 keV,solid,-58.3,14.3,23.6,18.9,solid trace,773,253,259
+Backscattered electrons,2 keV,solid,-61.1,11.2,18.9,15.1,solid trace,774,251,256
+Backscattered electrons,2 keV,solid,-63.9,8.1,15.8,12.0,solid trace,775,249,254
+Backscattered electrons,2 keV,solid,-66.6,6.5,12.7,9.6,solid trace,776,248,252
+Backscattered electrons,2 keV,solid,-69.4,6.5,11.2,8.9,solid trace,777,248,251
+Backscattered electrons,2 keV,solid,-72.1,5.0,8.1,6.5,solid trace,778,247,249
+Backscattered electrons,2 keV,solid,-74.9,3.4,8.1,5.7,solid trace,779,246,249
+Backscattered electrons,2 keV,solid,-77.7,3.4,6.5,5.0,solid trace,780,246,248
+Backscattered electrons,2 keV,solid,-80.4,1.9,6.5,4.2,solid trace,781,245,248
+Backscattered electrons,2 keV,solid,-83.2,1.9,5.0,3.4,solid trace,782,245,247
+Backscattered electrons,2 keV,solid,-86.0,0.3,3.4,1.9,solid trace,783,244,246
+Backscattered electrons,2 keV,solid,-88.7,0.3,3.4,1.9,solid trace,784,244,246
+Backscattered electrons,2 keV,solid,-91.5,1.9,1.9,1.9,solid trace,785,245,245
+Backscattered electrons,2.5 keV,dashed,-267.0,40.7,42.2,41.9,dash centroid,848.5,270,271
+Backscattered electrons,2.5 keV,dashed,-131.6,0.3,3.4,1.9,dash centroid,799.5,244,246
+Backscattered electrons,2.5 keV,dashed,-107.3,3.4,5.0,4.3,dash centroid,790.7,246,247
+Backscattered electrons,2.5 keV,dashed,-89.8,11.2,14.3,12.4,dash centroid,784.4,251,253
+Backscattered electrons,2.5 keV,dashed,-77.0,22.1,26.7,24.6,dash centroid,779.8,258,261
+Backscattered electrons,2.5 keV,dashed,-66.3,36.0,39.1,37.4,dash centroid,775.9,267,269
+Backscattered electrons,2.5 keV,dashed,-57.9,50.0,53.1,51.1,dash centroid,772.9,276,278
+Backscattered electrons,2.5 keV,dashed,-52.2,62.4,67.1,64.8,dash centroid,770.8,284,287
+Backscattered electrons,2.5 keV,dashed,-24.3,112.1,118.3,115.7,dash centroid,760.7,316,320
+Backscattered electrons,2.5 keV,dashed,-5.8,154.0,158.7,156.4,dash centroid,754.0,343,346
+Backscattered electrons,3 keV,solid,-5.8,164.9,166.5,165.7,solid trace,754,350,351
+Backscattered electrons,3 keV,solid,-8.6,163.4,166.5,164.9,solid trace,755,349,351
+Backscattered electrons,3 keV,solid,-11.3,155.6,163.4,159.5,solid trace,756,344,349
+Backscattered electrons,3 keV,solid,-14.1,152.5,161.8,157.1,solid trace,757,342,348
+Backscattered electrons,3 keV,solid,-16.9,149.4,158.7,154.0,solid trace,758,340,346
+Backscattered electrons,3 keV,solid,-19.6,144.7,157.1,150.9,solid trace,759,337,345
+Backscattered electrons,3 keV,solid,-22.4,144.7,152.5,148.6,solid trace,760,337,342
+Backscattered electrons,3 keV,solid,-25.1,144.7,150.9,147.8,solid trace,761,337,341
+Backscattered electrons,3 keV,solid,-55.6,79.5,82.6,81.1,solid trace,772,295,297
+Backscattered electrons,3 keV,solid,-58.3,78.0,82.6,80.3,solid trace,773,294,297
+Backscattered electrons,3 keV,solid,-61.1,73.3,81.1,77.2,solid trace,774,291,296
+Backscattered electrons,3 keV,solid,-63.9,71.7,79.5,75.6,solid trace,775,290,295
+Backscattered electrons,3 keV,solid,-66.6,70.2,78.0,74.1,solid trace,776,289,294
+Backscattered electrons,3 keV,solid,-69.4,67.1,78.0,72.5,solid trace,777,287,294
+Backscattered electrons,3 keV,solid,-72.1,64.0,74.8,69.4,solid trace,778,285,292
+Backscattered electrons,3 keV,solid,-74.9,62.4,70.2,66.3,solid trace,779,284,289
+Backscattered electrons,3 keV,solid,-77.7,60.9,68.6,64.8,solid trace,780,283,288
+Backscattered electrons,3 keV,solid,-80.4,57.8,67.1,62.4,solid trace,781,281,287
+Backscattered electrons,3 keV,solid,-83.2,53.1,67.1,60.1,solid trace,782,278,287
+Backscattered electrons,3 keV,solid,-86.0,50.0,62.4,56.2,solid trace,783,276,284
+Backscattered electrons,3 keV,solid,-88.7,46.9,57.8,52.3,solid trace,784,274,281
+Backscattered electrons,3 keV,solid,-91.5,45.3,56.2,50.8,solid trace,785,273,280
+Backscattered electrons,3 keV,solid,-94.3,43.8,53.1,48.4,solid trace,786,272,278
+Backscattered electrons,3 keV,solid,-97.0,39.1,50.0,44.6,solid trace,787,269,276
+Backscattered electrons,3 keV,solid,-99.8,37.6,46.9,42.2,solid trace,788,268,274
+Backscattered electrons,3 keV,solid,-102.6,34.5,43.8,39.1,solid trace,789,266,272
+Backscattered electrons,3 keV,solid,-105.3,32.9,42.2,37.6,solid trace,790,265,271
+Backscattered electrons,3 keV,solid,-108.1,29.8,42.2,36.0,solid trace,791,263,271
+Backscattered electrons,3 keV,solid,-110.8,28.3,36.0,32.1,solid trace,792,262,267
+Backscattered electrons,3 keV,solid,-110.8,40.7,40.7,40.7,solid trace,792,270,270
+Backscattered electrons,3 keV,solid,-113.6,26.7,34.5,30.6,solid trace,793,261,266
+Backscattered electrons,3 keV,solid,-116.4,23.6,32.9,28.3,solid trace,794,259,265
+Backscattered electrons,3 keV,solid,-119.1,22.1,29.8,25.9,solid trace,795,258,263
+Backscattered electrons,3 keV,solid,-121.9,20.5,28.3,24.4,solid trace,796,257,262
+Backscattered electrons,3 keV,solid,-124.7,18.9,26.7,22.8,solid trace,797,256,261
+Backscattered electrons,3 keV,solid,-127.4,17.4,25.2,21.3,solid trace,798,255,260
+Backscattered electrons,3 keV,solid,-130.2,15.8,23.6,19.7,solid trace,799,254,259
+Backscattered electrons,3 keV,solid,-133.0,12.7,20.5,16.6,solid trace,800,252,257
+Backscattered electrons,3 keV,solid,-135.7,11.2,23.6,17.4,solid trace,801,251,259
+Backscattered electrons,3 keV,solid,-138.5,9.6,23.6,16.6,solid trace,802,250,259
+Backscattered electrons,3 keV,solid,-141.3,8.1,14.3,11.2,solid trace,803,249,253
+Backscattered electrons,3 keV,solid,-141.3,18.9,23.6,21.3,solid trace,803,256,259
+Backscattered electrons,3 keV,solid,-144.0,5.0,12.7,8.9,solid trace,804,247,252
+Backscattered electrons,3 keV,solid,-144.0,20.5,22.1,21.3,solid trace,804,257,258
+Backscattered electrons,3 keV,solid,-146.8,3.4,11.2,7.3,solid trace,805,246,251
+Backscattered electrons,3 keV,solid,-149.6,3.4,12.7,8.1,solid trace,806,246,252
+Backscattered electrons,3 keV,solid,-152.3,1.9,12.7,7.3,solid trace,807,245,252
+Backscattered electrons,3 keV,solid,-155.1,1.9,12.7,7.3,solid trace,808,245,252
+Backscattered electrons,3 keV,solid,-157.8,1.9,11.2,6.5,solid trace,809,245,251
+Backscattered electrons,3 keV,solid,-160.6,1.9,9.6,5.7,solid trace,810,245,250
+Backscattered electrons,3 keV,solid,-163.4,0.3,5.0,2.6,solid trace,811,244,247
+Backscattered electrons,3 keV,solid,-166.1,0.3,5.0,2.6,solid trace,812,244,247
+Backscattered electrons,3 keV,solid,-168.9,0.3,5.0,2.6,solid trace,813,244,247
+Backscattered electrons,3 keV,solid,-171.7,-1.2,6.5,2.6,solid trace,814,243,248
+Backscattered electrons,3 keV,solid,-174.4,-1.2,8.1,3.4,solid trace,815,243,249
+Backscattered electrons,3 keV,solid,-177.2,-1.2,6.5,2.6,solid trace,816,243,248
+Backscattered electrons,3 keV,solid,-180.0,-1.2,6.5,2.6,solid trace,817,243,248
+Backscattered electrons,3 keV,solid,-182.7,0.3,5.0,2.6,solid trace,818,244,247
+Backscattered electrons,3.5 keV,dashed,-201.0,0.3,3.4,2.1,dash centroid,824.6,244,246
+Backscattered electrons,3.5 keV,dashed,-47.4,99.7,115.2,107.4,dash centroid,769.1,308,318
+Backscattered electrons,3.5 keV,dashed,-31.8,129.2,137.0,132.6,dash centroid,763.4,327,332
+Backscattered electrons,4 keV,solid,-11.3,132.3,135.4,133.8,solid trace,756,329,331
+Backscattered electrons,4 keV,solid,-14.1,129.2,135.4,132.3,solid trace,757,327,331
+Backscattered electrons,4 keV,solid,-16.9,119.9,123.0,121.4,solid trace,758,321,323
+Backscattered electrons,4 keV,solid,-16.9,127.6,135.4,131.5,solid trace,758,326,331
+Backscattered electrons,4 keV,solid,-19.6,109.0,135.4,122.2,solid trace,759,314,331
+Backscattered electrons,4 keV,solid,-22.4,102.8,110.6,106.7,solid trace,760,310,315
+Backscattered electrons,4 keV,solid,-22.4,119.9,126.1,123.0,solid trace,760,321,325
+Backscattered electrons,4 keV,solid,-22.4,133.8,133.8,133.8,solid trace,760,330,330
+Backscattered electrons,4 keV,solid,-25.1,104.3,110.6,107.5,solid trace,761,311,315
+Backscattered electrons,4 keV,solid,-25.1,119.9,124.5,122.2,solid trace,761,321,324
+Backscattered electrons,4 keV,solid,-27.9,105.9,110.6,108.2,solid trace,762,312,315
+Backscattered electrons,4 keV,solid,-27.9,118.3,121.4,119.9,solid trace,762,320,322
+Backscattered electrons,4 keV,solid,-30.7,105.9,109.0,107.5,solid trace,763,312,314
+Backscattered electrons,4 keV,solid,-33.4,102.8,105.9,104.3,solid trace,764,310,312
+Backscattered electrons,4 keV,solid,-36.2,102.8,105.9,104.3,solid trace,765,310,312
+Backscattered electrons,4 keV,solid,-39.0,102.8,105.9,104.3,solid trace,766,310,312
+Backscattered electrons,4 keV,solid,-41.7,99.7,102.8,101.2,solid trace,767,308,310
+Backscattered electrons,4 keV,solid,-66.6,85.7,85.7,85.7,solid trace,776,299,299
+Backscattered electrons,4 keV,solid,-69.4,84.2,85.7,84.9,solid trace,777,298,299
+Backscattered electrons,4 keV,solid,-72.1,82.6,84.2,83.4,solid trace,778,297,298
+Backscattered electrons,4 keV,solid,-74.9,82.6,82.6,82.6,solid trace,779,297,297
+Backscattered electrons,4 keV,solid,-77.7,78.0,81.1,79.5,solid trace,780,294,296
+Backscattered electrons,4 keV,solid,-80.4,73.3,79.5,76.4,solid trace,781,291,295
+Backscattered electrons,4 keV,solid,-83.2,71.7,78.0,74.8,solid trace,782,290,294
+Backscattered electrons,4 keV,solid,-86.0,70.2,74.8,72.5,solid trace,783,289,292
+Backscattered electrons,4 keV,solid,-88.7,68.6,71.7,70.2,solid trace,784,288,290
+Backscattered electrons,4 keV,solid,-91.5,60.9,70.2,65.5,solid trace,785,283,289
+Backscattered electrons,4 keV,solid,-94.3,59.3,65.5,62.4,solid trace,786,282,286
+Backscattered electrons,4 keV,solid,-97.0,57.8,62.4,60.1,solid trace,787,281,284
+Backscattered electrons,4 keV,solid,-99.8,54.7,59.3,57.0,solid trace,788,279,282
+Backscattered electrons,4 keV,solid,-102.6,51.6,54.7,53.1,solid trace,789,277,279
+Backscattered electrons,4 keV,solid,-105.3,48.4,53.1,50.8,solid trace,790,275,278
+Backscattered electrons,4 keV,solid,-108.1,46.9,51.6,49.2,solid trace,791,274,277
+Backscattered electrons,4 keV,solid,-110.8,45.3,50.0,47.7,solid trace,792,273,276
+Backscattered electrons,4 keV,solid,-113.6,43.8,48.4,46.1,solid trace,793,272,275
+Backscattered electrons,4 keV,solid,-116.4,40.7,46.9,43.8,solid trace,794,270,274
+Backscattered electrons,4 keV,solid,-119.1,39.1,43.8,41.5,solid trace,795,269,272
+Backscattered electrons,4 keV,solid,-121.9,37.6,42.2,39.9,solid trace,796,268,271
+Backscattered electrons,4 keV,solid,-124.7,37.6,40.7,39.1,solid trace,797,268,270
+Backscattered electrons,4 keV,solid,-127.4,37.6,39.1,38.4,solid trace,798,268,269
+Backscattered electrons,4 keV,solid,-130.2,36.0,37.6,36.8,solid trace,799,267,268
+Backscattered electrons,4 keV,solid,-133.0,32.9,36.0,34.5,solid trace,800,265,267
+Backscattered electrons,4 keV,solid,-135.7,31.4,36.0,33.7,solid trace,801,264,267
+Backscattered electrons,4 keV,solid,-138.5,31.4,34.5,32.9,solid trace,802,264,266
+Backscattered electrons,4 keV,solid,-141.3,29.8,34.5,32.1,solid trace,803,263,266
+Backscattered electrons,4 keV,solid,-144.0,28.3,32.9,30.6,solid trace,804,262,265
+Backscattered electrons,4 keV,solid,-146.8,28.3,31.4,29.8,solid trace,805,262,264
+Backscattered electrons,4 keV,solid,-149.6,26.7,29.8,28.3,solid trace,806,261,263
+Backscattered electrons,4 keV,solid,-152.3,25.2,29.8,27.5,solid trace,807,260,263
+Backscattered electrons,4 keV,solid,-155.1,23.6,28.3,25.9,solid trace,808,259,262
+Backscattered electrons,4 keV,solid,-157.8,22.1,26.7,24.4,solid trace,809,258,261
+Backscattered electrons,4 keV,solid,-160.6,22.1,25.2,23.6,solid trace,810,258,260
+Backscattered electrons,4 keV,solid,-163.4,20.5,23.6,22.1,solid trace,811,257,259
+Backscattered electrons,4 keV,solid,-166.1,20.5,23.6,22.1,solid trace,812,257,259
+Backscattered electrons,4 keV,solid,-168.9,20.5,23.6,22.1,solid trace,813,257,259
+Backscattered electrons,4 keV,solid,-171.7,18.9,22.1,20.5,solid trace,814,256,258
+Backscattered electrons,4 keV,solid,-174.4,18.9,22.1,20.5,solid trace,815,256,258
+Backscattered electrons,4 keV,solid,-177.2,17.4,22.1,19.7,solid trace,816,255,258
+Backscattered electrons,4 keV,solid,-180.0,15.8,20.5,18.2,solid trace,817,254,257
+Backscattered electrons,4 keV,solid,-182.7,15.8,18.9,17.4,solid trace,818,254,256
+Backscattered electrons,4 keV,solid,-185.5,14.3,17.4,15.8,solid trace,819,253,255
+Backscattered electrons,4 keV,solid,-188.3,12.7,15.8,14.3,solid trace,820,252,254
+Backscattered electrons,4 keV,solid,-191.0,11.2,14.3,12.7,solid trace,821,251,253
+Backscattered electrons,4 keV,solid,-193.8,11.2,12.7,12.0,solid trace,822,251,252
+Backscattered electrons,4 keV,solid,-196.6,9.6,12.7,11.2,solid trace,823,250,252
+Backscattered electrons,4 keV,solid,-199.3,9.6,12.7,11.2,solid trace,824,250,252
+Backscattered electrons,4 keV,solid,-202.1,9.6,11.2,10.4,solid trace,825,250,251
+Backscattered electrons,4 keV,solid,-204.8,8.1,11.2,9.6,solid trace,826,249,251
+Backscattered electrons,4 keV,solid,-207.6,8.1,11.2,9.6,solid trace,827,249,251
+Backscattered electrons,4 keV,solid,-210.4,6.5,9.6,8.1,solid trace,828,248,250
+Backscattered electrons,4 keV,solid,-213.1,6.5,9.6,8.1,solid trace,829,248,250
+Backscattered electrons,4 keV,solid,-215.9,6.5,8.1,7.3,solid trace,830,248,249
+Backscattered electrons,4 keV,solid,-218.7,5.0,8.1,6.5,solid trace,831,247,249
+Backscattered electrons,4 keV,solid,-221.4,3.4,8.1,5.7,solid trace,832,246,249
+Backscattered electrons,4 keV,solid,-224.2,3.4,6.5,5.0,solid trace,833,246,248
+Backscattered electrons,4 keV,solid,-227.0,3.4,6.5,5.0,solid trace,834,246,248
+Backscattered electrons,4 keV,solid,-229.7,3.4,5.0,4.2,solid trace,835,246,247
+Backscattered electrons,4 keV,solid,-232.5,1.9,5.0,3.4,solid trace,836,245,247
+Backscattered electrons,4 keV,solid,-235.3,1.9,5.0,3.4,solid trace,837,245,247
+Backscattered electrons,4 keV,solid,-238.0,1.9,8.1,5.0,solid trace,838,245,249
+Backscattered electrons,4 keV,solid,-240.8,0.3,9.6,5.0,solid trace,839,244,250
+Backscattered electrons,4 keV,solid,-243.5,0.3,8.1,4.2,solid trace,840,244,249
+Backscattered electrons,4 keV,solid,-246.3,0.3,8.1,4.2,solid trace,841,244,249
+Backscattered electrons,4 keV,solid,-249.1,0.3,3.4,1.9,solid trace,842,244,246
+Backscattered electrons,4 keV,solid,-251.8,0.3,3.4,1.9,solid trace,843,244,246
+Backscattered electrons,4 keV,solid,-254.6,0.3,3.4,1.9,solid trace,844,244,246
+Backscattered electrons,4 keV,solid,-257.4,0.3,3.4,1.9,solid trace,845,244,246
+Backscattered electrons,4 keV,solid,-260.1,0.3,3.4,1.9,solid trace,846,244,246
+Backscattered electrons,4 keV,solid,-262.9,0.3,3.4,1.9,solid trace,847,244,246
+Backscattered electrons,4 keV,solid,-265.7,0.3,3.4,1.9,solid trace,848,244,246
+Backscattered electrons,4 keV,solid,-268.4,0.3,3.4,1.9,solid trace,849,244,246
+Backscattered electrons,4 keV,solid,-271.2,0.3,3.4,1.9,solid trace,850,244,246
+Backscattered electrons,4 keV,solid,-274.0,0.3,3.4,1.9,solid trace,851,244,246
+Backscattered electrons,4 keV,solid,-276.7,0.3,3.4,1.9,solid trace,852,244,246
+Backscattered electrons,4 keV,solid,-279.5,0.3,1.9,1.1,solid trace,853,244,245
+Backscattered electrons,4.5 keV,dashed,-288.5,0.3,3.4,1.9,dash centroid,856.2,244,246
+Backscattered electrons,4.5 keV,dashed,-223.0,12.7,17.4,15.3,dash centroid,832.6,252,255
+Backscattered electrons,4.5 keV,dashed,-202.1,22.1,25.2,23.6,dash centroid,825.0,258,260
+Backscattered electrons,4.5 keV,dashed,-180.0,26.7,31.4,29.0,dash centroid,817.0,261,264
+Backscattered electrons,4.5 keV,dashed,-160.6,37.6,40.7,39.1,dash centroid,810.0,268,270
+Backscattered electrons,4.5 keV,dashed,-146.0,48.4,51.6,49.8,dash centroid,804.7,275,277
+Backscattered electrons,4.5 keV,dashed,-130.2,59.3,62.4,60.9,dash centroid,799.0,282,284
+Backscattered electrons,4.5 keV,dashed,-116.1,68.6,73.3,71.2,dash centroid,793.9,288,291
+Backscattered electrons,4.5 keV,dashed,-102.6,81.1,85.7,83.4,dash centroid,789.0,296,299
+Backscattered electrons,4.5 keV,dashed,-70.3,107.5,115.2,110.6,dash centroid,777.3,313,318
+Backscattered electrons,4.5 keV,dashed,-52.3,90.4,96.6,93.9,dash centroid,770.8,302,306
+Backscattered electrons,4.5 keV,dashed,-40.4,124.5,126.1,125.3,dash centroid,766.5,324,325
+Backscattered electrons,4.5 keV,dashed,-9.9,141.6,149.4,145.9,dash centroid,755.5,335,340
+Backscattered electrons,5 keV,solid,-27.9,124.5,124.5,124.5,solid trace,762,324,324
+Backscattered electrons,5 keV,solid,-30.7,123.0,124.5,123.8,solid trace,763,323,324
+Backscattered electrons,5 keV,solid,-33.4,119.9,124.5,122.2,solid trace,764,321,324
+Backscattered electrons,5 keV,solid,-36.2,118.3,126.1,122.2,solid trace,765,320,325
+Backscattered electrons,5 keV,solid,-39.0,119.9,121.4,120.7,solid trace,766,321,322
+Backscattered electrons,5 keV,solid,-41.7,118.3,121.4,119.9,solid trace,767,320,322
+Backscattered electrons,5 keV,solid,-44.5,115.2,121.4,118.3,solid trace,768,318,322
+Backscattered electrons,5 keV,solid,-47.3,113.7,121.4,117.5,solid trace,769,317,322
+Backscattered electrons,5 keV,solid,-50.0,112.1,118.3,115.2,solid trace,770,316,320
+Backscattered electrons,5 keV,solid,-52.8,110.6,116.8,113.7,solid trace,771,315,319
+Backscattered electrons,5 keV,solid,-55.6,109.0,115.2,112.1,solid trace,772,314,318
+Backscattered electrons,5 keV,solid,-58.3,107.5,113.7,110.6,solid trace,773,313,317
+Backscattered electrons,5 keV,solid,-61.1,105.9,113.7,109.8,solid trace,774,312,317
+Backscattered electrons,5 keV,solid,-63.9,105.9,112.1,109.0,solid trace,775,312,316
+Backscattered electrons,5 keV,solid,-66.6,104.3,109.0,106.7,solid trace,776,311,314
+Backscattered electrons,5 keV,solid,-69.4,102.8,107.5,105.1,solid trace,777,310,313
+Backscattered electrons,5 keV,solid,-72.1,101.2,105.9,103.6,solid trace,778,309,312
+Backscattered electrons,5 keV,solid,-74.9,99.7,105.9,102.8,solid trace,779,308,312
+Backscattered electrons,5 keV,solid,-77.7,98.1,104.3,101.2,solid trace,780,307,311
+Backscattered electrons,5 keV,solid,-80.4,96.6,101.2,98.9,solid trace,781,306,309
+Backscattered electrons,5 keV,solid,-83.2,95.0,99.7,97.4,solid trace,782,305,308
+Backscattered electrons,5 keV,solid,-86.0,95.0,99.7,97.4,solid trace,783,305,308
+Backscattered electrons,5 keV,solid,-88.7,95.0,98.1,96.6,solid trace,784,305,307
+Backscattered electrons,5 keV,solid,-91.5,93.5,98.1,95.8,solid trace,785,304,307
+Backscattered electrons,5 keV,solid,-94.3,93.5,101.2,97.4,solid trace,786,304,309
+Backscattered electrons,5 keV,solid,-97.0,91.9,101.2,96.6,solid trace,787,303,309
+Backscattered electrons,5 keV,solid,-99.8,90.4,99.7,95.0,solid trace,788,302,308
+Backscattered electrons,5 keV,solid,-102.6,90.4,98.1,94.3,solid trace,789,302,307
+Backscattered electrons,5 keV,solid,-105.3,88.8,93.5,91.1,solid trace,790,301,304
+Backscattered electrons,5 keV,solid,-108.1,87.3,91.9,89.6,solid trace,791,300,303
+Backscattered electrons,5 keV,solid,-110.8,87.3,91.9,89.6,solid trace,792,300,303
+Backscattered electrons,5 keV,solid,-113.6,84.2,90.4,87.3,solid trace,793,298,302
+Backscattered electrons,5 keV,solid,-116.4,82.6,88.8,85.7,solid trace,794,297,301
+Backscattered electrons,5 keV,solid,-119.1,82.6,87.3,84.9,solid trace,795,297,300
+Backscattered electrons,5 keV,solid,-121.9,81.1,85.7,83.4,solid trace,796,296,299
+Backscattered electrons,5 keV,solid,-124.7,79.5,84.2,81.8,solid trace,797,295,298
+Backscattered electrons,5 keV,solid,-127.4,78.0,82.6,80.3,solid trace,798,294,297
+Backscattered electrons,5 keV,solid,-130.2,76.4,82.6,79.5,solid trace,799,293,297
+Backscattered electrons,5 keV,solid,-133.0,74.8,81.1,78.0,solid trace,800,292,296
+Backscattered electrons,5 keV,solid,-135.7,73.3,79.5,76.4,solid trace,801,291,295
+Backscattered electrons,5 keV,solid,-138.5,71.7,78.0,74.8,solid trace,802,290,294
+Backscattered electrons,5 keV,solid,-141.3,70.2,74.8,72.5,solid trace,803,289,292
+Backscattered electrons,5 keV,solid,-144.0,68.6,73.3,71.0,solid trace,804,288,291
+Backscattered electrons,5 keV,solid,-146.8,67.1,71.7,69.4,solid trace,805,287,290
+Backscattered electrons,5 keV,solid,-149.6,65.5,71.7,68.6,solid trace,806,286,290
+Backscattered electrons,5 keV,solid,-152.3,65.5,70.2,67.9,solid trace,807,286,289
+Backscattered electrons,5 keV,solid,-155.1,64.0,68.6,66.3,solid trace,808,285,288
+Backscattered electrons,5 keV,solid,-157.8,62.4,67.1,64.8,solid trace,809,284,287
+Backscattered electrons,5 keV,solid,-160.6,60.9,65.5,63.2,solid trace,810,283,286
+Backscattered electrons,5 keV,solid,-163.4,60.9,65.5,63.2,solid trace,811,283,286
+Backscattered electrons,5 keV,solid,-166.1,60.9,64.0,62.4,solid trace,812,283,285
+Backscattered electrons,5 keV,solid,-168.9,59.3,64.0,61.6,solid trace,813,282,285
+Backscattered electrons,5 keV,solid,-171.7,56.2,64.0,60.1,solid trace,814,280,285
+Backscattered electrons,5 keV,solid,-174.4,53.1,62.4,57.8,solid trace,815,278,284
+Backscattered electrons,5 keV,solid,-177.2,50.0,59.3,54.7,solid trace,816,276,282
+Backscattered electrons,5 keV,solid,-180.0,46.9,56.2,51.6,solid trace,817,274,280
+Backscattered electrons,5 keV,solid,-182.7,45.3,53.1,49.2,solid trace,818,273,278
+Backscattered electrons,5 keV,solid,-185.5,43.8,50.0,46.9,solid trace,819,272,276
+Backscattered electrons,5 keV,solid,-188.3,40.7,46.9,43.8,solid trace,820,270,274
+Backscattered electrons,5 keV,solid,-191.0,39.1,45.3,42.2,solid trace,821,269,273
+Backscattered electrons,5 keV,solid,-193.8,37.6,43.8,40.7,solid trace,822,268,272
+Backscattered electrons,5 keV,solid,-196.6,36.0,42.2,39.1,solid trace,823,267,271
+Backscattered electrons,5 keV,solid,-199.3,36.0,39.1,37.6,solid trace,824,267,269
+Backscattered electrons,5 keV,solid,-202.1,34.5,39.1,36.8,solid trace,825,266,269
+Backscattered electrons,5 keV,solid,-204.8,34.5,37.6,36.0,solid trace,826,266,268
+Backscattered electrons,5 keV,solid,-207.6,34.5,37.6,36.0,solid trace,827,266,268
+Backscattered electrons,5 keV,solid,-210.4,32.9,37.6,35.3,solid trace,828,265,268
+Backscattered electrons,5 keV,solid,-213.1,32.9,36.0,34.5,solid trace,829,265,267
+Backscattered electrons,5 keV,solid,-215.9,32.9,36.0,34.5,solid trace,830,265,267
+Backscattered electrons,5 keV,solid,-218.7,32.9,36.0,34.5,solid trace,831,265,267
+Backscattered electrons,5 keV,solid,-221.4,31.4,36.0,33.7,solid trace,832,264,267
+Backscattered electrons,5 keV,solid,-224.2,28.3,34.5,31.4,solid trace,833,262,266
+Backscattered electrons,5 keV,solid,-227.0,26.7,32.9,29.8,solid trace,834,261,265
+Backscattered electrons,5 keV,solid,-229.7,25.2,29.8,27.5,solid trace,835,260,263
+Backscattered electrons,5 keV,solid,-232.5,25.2,28.3,26.7,solid trace,836,260,262
+Backscattered electrons,5 keV,solid,-235.3,23.6,28.3,25.9,solid trace,837,259,262
+Backscattered electrons,5 keV,solid,-238.0,23.6,26.7,25.2,solid trace,838,259,261
+Backscattered electrons,5 keV,solid,-240.8,23.6,26.7,25.2,solid trace,839,259,261
+Backscattered electrons,5 keV,solid,-243.5,22.1,26.7,24.4,solid trace,840,258,261
+Backscattered electrons,5 keV,solid,-246.3,22.1,25.2,23.6,solid trace,841,258,260
+Backscattered electrons,5 keV,solid,-249.1,22.1,25.2,23.6,solid trace,842,258,260
+Backscattered electrons,5 keV,solid,-251.8,20.5,25.2,22.8,solid trace,843,257,260
+Backscattered electrons,5 keV,solid,-254.6,20.5,23.6,22.1,solid trace,844,257,259
+Backscattered electrons,5 keV,solid,-257.4,18.9,23.6,21.3,solid trace,845,256,259
+Backscattered electrons,5 keV,solid,-260.1,18.9,23.6,21.3,solid trace,846,256,259
+Backscattered electrons,5 keV,solid,-262.9,18.9,22.1,20.5,solid trace,847,256,258
+Backscattered electrons,5 keV,solid,-265.7,17.4,22.1,19.7,solid trace,848,255,258
+Backscattered electrons,5 keV,solid,-268.4,17.4,20.5,18.9,solid trace,849,255,257
+Backscattered electrons,5 keV,solid,-271.2,15.8,20.5,18.2,solid trace,850,254,257
+Backscattered electrons,5 keV,solid,-274.0,15.8,18.9,17.4,solid trace,851,254,256
+Backscattered electrons,5 keV,solid,-276.7,15.8,18.9,17.4,solid trace,852,254,256
+Backscattered electrons,5 keV,solid,-279.5,14.3,17.4,15.8,solid trace,853,253,255
+Backscattered electrons,5 keV,solid,-282.3,12.7,17.4,15.1,solid trace,854,252,255
+Backscattered electrons,5 keV,solid,-285.0,12.7,17.4,15.1,solid trace,855,252,255
+Backscattered electrons,5 keV,solid,-287.8,11.2,15.8,13.5,solid trace,856,251,254
+Backscattered electrons,5 keV,solid,-290.5,11.2,14.3,12.7,solid trace,857,251,253
+Backscattered electrons,5 keV,solid,-293.3,9.6,14.3,12.0,solid trace,858,250,253
+Backscattered electrons,5 keV,solid,-296.1,9.6,12.7,11.2,solid trace,859,250,252
+Backscattered electrons,5 keV,solid,-298.8,9.6,12.7,11.2,solid trace,860,250,252
+Backscattered electrons,5 keV,solid,-301.6,8.1,12.7,10.4,solid trace,861,249,252
+Backscattered electrons,5 keV,solid,-304.4,8.1,11.2,9.6,solid trace,862,249,251
+Backscattered electrons,5 keV,solid,-307.1,8.1,11.2,9.6,solid trace,863,249,251
+Backscattered electrons,5 keV,solid,-309.9,6.5,11.2,8.9,solid trace,864,248,251
+Backscattered electrons,5 keV,solid,-312.7,6.5,9.6,8.1,solid trace,865,248,250
+Backscattered electrons,5 keV,solid,-315.4,5.0,9.6,7.3,solid trace,866,247,250
+Backscattered electrons,5 keV,solid,-318.2,5.0,8.1,6.5,solid trace,867,247,249
+Backscattered electrons,5 keV,solid,-321.0,3.4,8.1,5.7,solid trace,868,246,249
+Backscattered electrons,5 keV,solid,-323.7,3.4,6.5,5.0,solid trace,869,246,248
+Backscattered electrons,5 keV,solid,-326.5,3.4,6.5,5.0,solid trace,870,246,248
+Backscattered electrons,5 keV,solid,-329.3,3.4,6.5,5.0,solid trace,871,246,248
+Backscattered electrons,5 keV,solid,-332.0,1.9,5.0,3.4,solid trace,872,245,247
+Backscattered electrons,5 keV,solid,-334.8,1.9,5.0,3.4,solid trace,873,245,247
+Backscattered electrons,5 keV,solid,-337.5,1.9,5.0,3.4,solid trace,874,245,247
+Backscattered electrons,5 keV,solid,-340.3,1.9,5.0,3.4,solid trace,875,245,247
+Backscattered electrons,5 keV,solid,-343.1,1.9,5.0,3.4,solid trace,876,245,247
+Backscattered electrons,5 keV,solid,-345.8,1.9,5.0,3.4,solid trace,877,245,247
+Backscattered electrons,5 keV,solid,-348.6,1.9,5.0,3.4,solid trace,878,245,247
+Backscattered electrons,5 keV,solid,-351.4,1.9,5.0,3.4,solid trace,879,245,247
+Backscattered electrons,5 keV,solid,-354.1,1.9,5.0,3.4,solid trace,880,245,247
+Backscattered electrons,5 keV,solid,-356.9,1.9,5.0,3.4,solid trace,881,245,247
+Backscattered electrons,5 keV,solid,-359.7,1.9,5.0,3.4,solid trace,882,245,247
+Backscattered electrons,5 keV,solid,-362.4,1.9,5.0,3.4,solid trace,883,245,247
+Backscattered electrons,5 keV,solid,-365.2,1.9,5.0,3.4,solid trace,884,245,247
+Backscattered electrons,5 keV,solid,-368.0,1.9,5.0,3.4,solid trace,885,245,247
+Backscattered electrons,5 keV,solid,-370.7,1.9,5.0,3.4,solid trace,886,245,247
+Backscattered electrons,5 keV,solid,-373.5,1.9,5.0,3.4,solid trace,887,245,247
+Backscattered electrons,5 keV,solid,-376.2,0.3,5.0,2.6,solid trace,888,244,247
+Backscattered electrons,5 keV,solid,-379.0,0.3,5.0,2.6,solid trace,889,244,247
+Backscattered electrons,5 keV,solid,-381.8,0.3,3.4,1.9,solid trace,890,244,246
+Backscattered electrons,5 keV,solid,-384.5,0.3,3.4,1.9,solid trace,891,244,246
+Backscattered electrons,5 keV,solid,-387.3,0.3,3.4,1.9,solid trace,892,244,246
+Backscattered electrons,5 keV,solid,-390.1,0.3,3.4,1.9,solid trace,893,244,246
+Backscattered electrons,5 keV,solid,-392.8,0.3,3.4,1.9,solid trace,894,244,246
+Backscattered electrons,5 keV,solid,-395.6,0.3,3.4,1.9,solid trace,895,244,246
+Backscattered electrons,5 keV,solid,-398.4,0.3,3.4,1.9,solid trace,896,244,246
+Backscattered electrons,5 keV,solid,-401.1,0.3,3.4,1.9,solid trace,897,244,246
+Backscattered electrons,5 keV,solid,-403.9,0.3,3.4,1.9,solid trace,898,244,246
+Backscattered electrons,5 keV,solid,-403.9,9.6,9.6,9.6,solid trace,898,250,250
+Backscattered electrons,5 keV,solid,-406.7,0.3,3.4,1.9,solid trace,899,244,246
+Backscattered electrons,5 keV,solid,-406.7,9.6,9.6,9.6,solid trace,899,250,250
+Backscattered electrons,5 keV,solid,-409.4,0.3,9.6,5.0,solid trace,900,244,250
+Backscattered electrons,5 keV,solid,-412.2,0.3,9.6,5.0,solid trace,901,244,250
+Backscattered electrons,5 keV,solid,-415.0,0.3,8.1,4.2,solid trace,902,244,249
+Backscattered electrons,5 keV,solid,-417.7,0.3,8.1,4.2,solid trace,903,244,249
+Backscattered electrons,5 keV,solid,-420.5,0.3,3.4,1.9,solid trace,904,244,246
+Backscattered electrons,5 keV,solid,-420.5,8.1,8.1,8.1,solid trace,904,249,249
+Backscattered electrons,5 keV,solid,-423.2,0.3,3.4,1.9,solid trace,905,244,246
+Backscattered electrons,5 keV,solid,-423.2,8.1,9.6,8.9,solid trace,905,249,250
+Backscattered electrons,5 keV,solid,-426.0,0.3,3.4,1.9,solid trace,906,244,246
+Backscattered electrons,5 keV,solid,-426.0,8.1,9.6,8.9,solid trace,906,249,250
+Backscattered electrons,5 keV,solid,-428.8,0.3,9.6,5.0,solid trace,907,244,250
+Backscattered electrons,5 keV,solid,-431.5,0.3,8.1,4.2,solid trace,908,244,249
+Backscattered electrons,5 keV,solid,-434.3,0.3,6.5,3.4,solid trace,909,244,248
+Backscattered electrons,5 keV,solid,-437.1,0.3,6.5,3.4,solid trace,910,244,248
+Backscattered electrons,5 keV,solid,-439.8,0.3,6.5,3.4,solid trace,911,244,248
+Backscattered electrons,5 keV,solid,-442.6,0.3,5.0,2.6,solid trace,912,244,247
+Backscattered electrons,5 keV,solid,-445.4,0.3,3.4,1.9,solid trace,913,244,246
+Backscattered electrons,5 keV,solid,-448.1,0.3,3.4,1.9,solid trace,914,244,246
+Backscattered electrons,5 keV,solid,-450.9,0.3,3.4,1.9,solid trace,915,244,246
+Backscattered electrons,5 keV,solid,-453.7,0.3,3.4,1.9,solid trace,916,244,246
+Backscattered electrons,5 keV,solid,-456.4,0.3,3.4,1.9,solid trace,917,244,246
+Backscattered electrons,5 keV,solid,-459.2,0.3,3.4,1.9,solid trace,918,244,246
+Backscattered electrons,5 keV,solid,-462.0,0.3,3.4,1.9,solid trace,919,244,246
+Backscattered electrons,5 keV,solid,-464.7,0.3,3.4,1.9,solid trace,920,244,246
+Backscattered electrons,5 keV,solid,-467.5,0.3,3.4,1.9,solid trace,921,244,246
+Backscattered electrons,5 keV,solid,-470.2,0.3,3.4,1.9,solid trace,922,244,246
+Backscattered electrons,5 keV,solid,-473.0,0.3,3.4,1.9,solid trace,923,244,246
+Backscattered electrons,5 keV,solid,-475.8,0.3,3.4,1.9,solid trace,924,244,246
+Backscattered electrons,5 keV,solid,-478.5,0.3,3.4,1.9,solid trace,925,244,246
+Backscattered electrons,5 keV,solid,-481.3,0.3,3.4,1.9,solid trace,926,244,246
+Backscattered electrons,5 keV,solid,-484.1,0.3,3.4,1.9,solid trace,927,244,246
+Backscattered electrons,5 keV,solid,-486.8,1.9,5.0,3.4,solid trace,928,245,247
+Backscattered electrons,5 keV,solid,-489.6,1.9,5.0,3.4,solid trace,929,245,247
+Backscattered electrons,5 keV,solid,-492.4,1.9,3.4,2.6,solid trace,930,245,246
+Backscattered electrons,5 keV,solid,-495.1,1.9,3.4,2.6,solid trace,931,245,246
+Backscattered electrons,5 keV,solid,-497.9,1.9,3.4,2.6,solid trace,932,245,246
+Backscattered electrons,5 keV,solid,-500.7,1.9,1.9,1.9,solid trace,933,245,245
+Backscattered electrons,5 keV,solid,-503.4,0.3,1.9,1.1,solid trace,934,244,245
+Backscattered electrons,5 keV,solid,-506.2,0.3,1.9,1.1,solid trace,935,244,245
+Backscattered electrons,5 keV,solid,-508.9,0.3,1.9,1.1,solid trace,936,244,245
+Backscattered electrons,5 keV,solid,-511.7,0.3,1.9,1.1,solid trace,937,244,245
+Backscattered electrons,5.5 keV,dashed,-380.6,11.2,14.3,12.9,dash centroid,889.6,251,253
+Backscattered electrons,5.5 keV,dashed,-297.3,23.6,26.7,25.0,dash centroid,859.4,259,261
+Backscattered electrons,5.5 keV,dashed,-270.1,26.7,31.4,28.9,dash centroid,849.6,261,264
+Backscattered electrons,5.5 keV,dashed,-253.1,37.6,40.7,38.6,dash centroid,843.4,268,270
+Backscattered electrons,5.5 keV,dashed,-236.1,43.8,53.1,48.4,dash centroid,837.3,272,278
+Backscattered electrons,5.5 keV,dashed,-213.1,50.0,57.8,53.5,dash centroid,829.0,276,281
+Backscattered electrons,5.5 keV,dashed,-192.4,57.8,60.9,59.3,dash centroid,821.5,281,283
+Backscattered electrons,5.5 keV,dashed,-165.3,67.1,82.6,75.7,dash centroid,811.7,287,297
+Backscattered electrons,5.5 keV,dashed,-139.7,87.3,91.9,90.1,dash centroid,802.4,300,303
+Backscattered electrons,5.5 keV,dashed,-127.4,99.7,102.8,101.2,dash centroid,798.0,308,310
+Backscattered electrons,5.5 keV,dashed,-106.5,107.5,110.6,108.8,dash centroid,790.4,313,315
+Backscattered electrons,5.5 keV,dashed,-86.3,115.2,118.3,116.4,dash centroid,783.1,318,320
+Backscattered electrons,5.5 keV,dashed,-72.8,76.4,81.1,78.7,dash centroid,778.2,293,296
+Backscattered electrons,5.5 keV,dashed,-65.5,121.4,126.1,123.4,dash centroid,775.6,322,325
+Backscattered electrons,5.5 keV,dashed,-59.2,82.6,91.9,87.7,dash centroid,773.3,297,303
+Backscattered electrons,5.5 keV,dashed,-46.7,98.1,102.8,100.6,dash centroid,768.8,307,310
+Backscattered electrons,5.5 keV,dashed,-44.5,127.6,132.3,130.3,dash centroid,768.0,326,329
+Backscattered electrons,5.5 keV,dashed,-29.3,140.1,141.6,140.8,dash centroid,762.5,334,335
+Backscattered electrons,5.5 keV,dashed,-12.9,99.7,116.8,111.5,dash centroid,756.6,308,319
+Backscattered electrons,5.5 keV,dashed,-9.4,124.5,143.2,134.6,dash centroid,755.3,324,336
+Backscattered electrons,6 keV,solid,-5.8,130.7,130.7,130.7,solid trace,754,328,328
+Backscattered electrons,6 keV,solid,-8.6,129.2,130.7,130.0,solid trace,755,327,328
+Backscattered electrons,6 keV,solid,-11.3,129.2,129.2,129.2,solid trace,756,327,327
+Backscattered electrons,6 keV,solid,-14.1,127.6,129.2,128.4,solid trace,757,326,327
+Backscattered electrons,6 keV,solid,-16.9,126.1,127.6,126.9,solid trace,758,325,326
+Backscattered electrons,6 keV,solid,-19.6,126.1,127.6,126.9,solid trace,759,325,326
+Backscattered electrons,6 keV,solid,-22.4,126.1,126.1,126.1,solid trace,760,325,325
+Backscattered electrons,6 keV,solid,-25.1,124.5,126.1,125.3,solid trace,761,324,325
+Backscattered electrons,6 keV,solid,-27.9,124.5,126.1,125.3,solid trace,762,324,325
+Backscattered electrons,6 keV,solid,-30.7,124.5,124.5,124.5,solid trace,763,324,324
+Backscattered electrons,6 keV,solid,-33.4,123.0,124.5,123.8,solid trace,764,323,324
+Backscattered electrons,6 keV,solid,-36.2,123.0,126.1,124.5,solid trace,765,323,325
+Backscattered electrons,6 keV,solid,-39.0,121.4,123.0,122.2,solid trace,766,322,323
+Backscattered electrons,6 keV,solid,-41.7,119.9,121.4,120.7,solid trace,767,321,322
+Backscattered electrons,6 keV,solid,-44.5,119.9,121.4,120.7,solid trace,768,321,322
+Backscattered electrons,6 keV,solid,-47.3,119.9,121.4,120.7,solid trace,769,321,322
+Backscattered electrons,6 keV,solid,-50.0,118.3,121.4,119.9,solid trace,770,320,322
+Backscattered electrons,6 keV,solid,-52.8,116.8,119.9,118.3,solid trace,771,319,321
+Backscattered electrons,6 keV,solid,-55.6,116.8,118.3,117.5,solid trace,772,319,320
+Backscattered electrons,6 keV,solid,-58.3,115.2,116.8,116.0,solid trace,773,318,319
+Backscattered electrons,6 keV,solid,-61.1,115.2,116.8,116.0,solid trace,774,318,319
+Backscattered electrons,6 keV,solid,-63.9,113.7,115.2,114.4,solid trace,775,317,318
+Backscattered electrons,6 keV,solid,-63.9,196.0,196.0,196.0,solid trace,775,370,370
+Backscattered electrons,6 keV,solid,-66.6,112.1,115.2,113.7,solid trace,776,316,318
+Backscattered electrons,6 keV,solid,-66.6,194.4,194.4,194.4,solid trace,776,369,369
+Backscattered electrons,6 keV,solid,-69.4,112.1,113.7,112.9,solid trace,777,316,317
+Backscattered electrons,6 keV,solid,-69.4,194.4,194.4,194.4,solid trace,777,369,369
+Backscattered electrons,6 keV,solid,-72.1,110.6,112.1,111.3,solid trace,778,315,316
+Backscattered electrons,6 keV,solid,-72.1,194.4,196.0,195.2,solid trace,778,369,370
+Backscattered electrons,6 keV,solid,-74.9,109.0,110.6,109.8,solid trace,779,314,315
+Backscattered electrons,6 keV,solid,-77.7,109.0,110.6,109.8,solid trace,780,314,315
+Backscattered electrons,6 keV,solid,-80.4,107.5,109.0,108.2,solid trace,781,313,314
+Backscattered electrons,6 keV,solid,-83.2,105.9,107.5,106.7,solid trace,782,312,313
+Backscattered electrons,6 keV,solid,-86.0,104.3,105.9,105.1,solid trace,783,311,312
+Backscattered electrons,6 keV,solid,-88.7,102.8,105.9,104.3,solid trace,784,310,312
+Backscattered electrons,6 keV,solid,-91.5,102.8,104.3,103.6,solid trace,785,310,311
+Backscattered electrons,6 keV,solid,-94.3,101.2,104.3,102.8,solid trace,786,309,311
+Backscattered electrons,6 keV,solid,-97.0,101.2,102.8,102.0,solid trace,787,309,310
+Backscattered electrons,6 keV,solid,-99.8,99.7,101.2,100.5,solid trace,788,308,309
+Backscattered electrons,6 keV,solid,-102.6,99.7,101.2,100.5,solid trace,789,308,309
+Backscattered electrons,6 keV,solid,-105.3,98.1,99.7,98.9,solid trace,790,307,308
+Backscattered electrons,6 keV,solid,-108.1,98.1,99.7,98.9,solid trace,791,307,308
+Backscattered electrons,6 keV,solid,-110.8,96.6,98.1,97.4,solid trace,792,306,307
+Backscattered electrons,6 keV,solid,-113.6,95.0,98.1,96.6,solid trace,793,305,307
+Backscattered electrons,6 keV,solid,-116.4,93.5,96.6,95.0,solid trace,794,304,306
+Backscattered electrons,6 keV,solid,-119.1,91.9,95.0,93.5,solid trace,795,303,305
+Backscattered electrons,6 keV,solid,-121.9,91.9,93.5,92.7,solid trace,796,303,304
+Backscattered electrons,6 keV,solid,-124.7,91.9,93.5,92.7,solid trace,797,303,304
+Backscattered electrons,6 keV,solid,-127.4,90.4,93.5,91.9,solid trace,798,302,304
+Backscattered electrons,6 keV,solid,-130.2,90.4,91.9,91.1,solid trace,799,302,303
+Backscattered electrons,6 keV,solid,-133.0,88.8,91.9,90.4,solid trace,800,301,303
+Backscattered electrons,6 keV,solid,-135.7,87.3,90.4,88.8,solid trace,801,300,302
+Backscattered electrons,6 keV,solid,-138.5,85.7,88.8,87.3,solid trace,802,299,301
+Backscattered electrons,6 keV,solid,-141.3,84.2,87.3,85.7,solid trace,803,298,300
+Backscattered electrons,6 keV,solid,-144.0,81.1,85.7,83.4,solid trace,804,296,299
+Backscattered electrons,6 keV,solid,-146.8,79.5,84.2,81.8,solid trace,805,295,298
+Backscattered electrons,6 keV,solid,-149.6,78.0,81.1,79.5,solid trace,806,294,296
+Backscattered electrons,6 keV,solid,-152.3,78.0,79.5,78.7,solid trace,807,294,295
+Backscattered electrons,6 keV,solid,-155.1,76.4,78.0,77.2,solid trace,808,293,294
+Backscattered electrons,6 keV,solid,-157.8,74.8,76.4,75.6,solid trace,809,292,293
+Backscattered electrons,6 keV,solid,-160.6,74.8,76.4,75.6,solid trace,810,292,293
+Backscattered electrons,6 keV,solid,-163.4,74.8,74.8,74.8,solid trace,811,292,292
+Backscattered electrons,6 keV,solid,-166.1,73.3,74.8,74.1,solid trace,812,291,292
+Backscattered electrons,6 keV,solid,-168.9,73.3,74.8,74.1,solid trace,813,291,292
+Backscattered electrons,6 keV,solid,-171.7,73.3,74.8,74.1,solid trace,814,291,292
+Backscattered electrons,6 keV,solid,-174.4,71.7,74.8,73.3,solid trace,815,290,292
+Backscattered electrons,6 keV,solid,-177.2,71.7,73.3,72.5,solid trace,816,290,291
+Backscattered electrons,6 keV,solid,-180.0,71.7,73.3,72.5,solid trace,817,290,291
+Backscattered electrons,6 keV,solid,-182.7,70.2,73.3,71.7,solid trace,818,289,291
+Backscattered electrons,6 keV,solid,-185.5,70.2,71.7,71.0,solid trace,819,289,290
+Backscattered electrons,6 keV,solid,-188.3,68.6,70.2,69.4,solid trace,820,288,289
+Backscattered electrons,6 keV,solid,-191.0,67.1,70.2,68.6,solid trace,821,287,289
+Backscattered electrons,6 keV,solid,-193.8,65.5,68.6,67.1,solid trace,822,286,288
+Backscattered electrons,6 keV,solid,-196.6,65.5,67.1,66.3,solid trace,823,286,287
+Backscattered electrons,6 keV,solid,-199.3,64.0,67.1,65.5,solid trace,824,285,287
+Backscattered electrons,6 keV,solid,-202.1,64.0,65.5,64.8,solid trace,825,285,286
+Backscattered electrons,6 keV,solid,-204.8,62.4,64.0,63.2,solid trace,826,284,285
+Backscattered electrons,6 keV,solid,-207.6,60.9,64.0,62.4,solid trace,827,283,285
+Backscattered electrons,6 keV,solid,-210.4,59.3,62.4,60.9,solid trace,828,282,284
+Backscattered electrons,6 keV,solid,-213.1,57.8,60.9,59.3,solid trace,829,281,283
+Backscattered electrons,6 keV,solid,-215.9,56.2,59.3,57.8,solid trace,830,280,282
+Backscattered electrons,6 keV,solid,-218.7,54.7,57.8,56.2,solid trace,831,279,281
+Backscattered electrons,6 keV,solid,-221.4,53.1,56.2,54.7,solid trace,832,278,280
+Backscattered electrons,6 keV,solid,-224.2,53.1,54.7,53.9,solid trace,833,278,279
+Backscattered electrons,6 keV,solid,-227.0,53.1,54.7,53.9,solid trace,834,278,279
+Backscattered electrons,6 keV,solid,-229.7,51.6,54.7,53.1,solid trace,835,277,279
+Backscattered electrons,6 keV,solid,-232.5,51.6,53.1,52.3,solid trace,836,277,278
+Backscattered electrons,6 keV,solid,-235.3,50.0,53.1,51.6,solid trace,837,276,278
+Backscattered electrons,6 keV,solid,-238.0,50.0,51.6,50.8,solid trace,838,276,277
+Backscattered electrons,6 keV,solid,-240.8,48.4,50.0,49.2,solid trace,839,275,276
+Backscattered electrons,6 keV,solid,-243.5,46.9,50.0,48.4,solid trace,840,274,276
+Backscattered electrons,6 keV,solid,-246.3,45.3,48.4,46.9,solid trace,841,273,275
+Backscattered electrons,6 keV,solid,-249.1,45.3,46.9,46.1,solid trace,842,273,274
+Backscattered electrons,6 keV,solid,-251.8,43.8,46.9,45.3,solid trace,843,272,274
+Backscattered electrons,6 keV,solid,-254.6,43.8,45.3,44.6,solid trace,844,272,273
+Backscattered electrons,6 keV,solid,-257.4,43.8,45.3,44.6,solid trace,845,272,273
+Backscattered electrons,6 keV,solid,-260.1,42.2,45.3,43.8,solid trace,846,271,273
+Backscattered electrons,6 keV,solid,-262.9,42.2,43.8,43.0,solid trace,847,271,272
+Backscattered electrons,6 keV,solid,-265.7,42.2,43.8,43.0,solid trace,848,271,272
+Backscattered electrons,6 keV,solid,-268.4,40.7,42.2,41.5,solid trace,849,270,271
+Backscattered electrons,6 keV,solid,-271.2,39.1,42.2,40.7,solid trace,850,269,271
+Backscattered electrons,6 keV,solid,-274.0,39.1,40.7,39.9,solid trace,851,269,270
+Backscattered electrons,6 keV,solid,-276.7,37.6,39.1,38.4,solid trace,852,268,269
+Backscattered electrons,6 keV,solid,-279.5,36.0,39.1,37.6,solid trace,853,267,269
+Backscattered electrons,6 keV,solid,-282.3,36.0,37.6,36.8,solid trace,854,267,268
+Backscattered electrons,6 keV,solid,-285.0,34.5,36.0,35.3,solid trace,855,266,267
+Backscattered electrons,6 keV,solid,-287.8,32.9,36.0,34.5,solid trace,856,265,267
+Backscattered electrons,6 keV,solid,-290.5,32.9,34.5,33.7,solid trace,857,265,266
+Backscattered electrons,6 keV,solid,-293.3,31.4,34.5,32.9,solid trace,858,264,266
+Backscattered electrons,6 keV,solid,-296.1,31.4,32.9,32.1,solid trace,859,264,265
+Backscattered electrons,6 keV,solid,-298.8,31.4,32.9,32.1,solid trace,860,264,265
+Backscattered electrons,6 keV,solid,-301.6,29.8,32.9,31.4,solid trace,861,263,265
+Backscattered electrons,6 keV,solid,-304.4,28.3,31.4,29.8,solid trace,862,262,264
+Backscattered electrons,6 keV,solid,-307.1,28.3,29.8,29.0,solid trace,863,262,263
+Backscattered electrons,6 keV,solid,-309.9,26.7,29.8,28.3,solid trace,864,261,263
+Backscattered electrons,6 keV,solid,-312.7,26.7,28.3,27.5,solid trace,865,261,262
+Backscattered electrons,6 keV,solid,-315.4,25.2,28.3,26.7,solid trace,866,260,262
+Backscattered electrons,6 keV,solid,-318.2,25.2,28.3,26.7,solid trace,867,260,262
+Backscattered electrons,6 keV,solid,-321.0,25.2,28.3,26.7,solid trace,868,260,262
+Backscattered electrons,6 keV,solid,-323.7,23.6,26.7,25.2,solid trace,869,259,261
+Backscattered electrons,6 keV,solid,-326.5,23.6,25.2,24.4,solid trace,870,259,260
+Backscattered electrons,6 keV,solid,-329.3,22.1,25.2,23.6,solid trace,871,258,260
+Backscattered electrons,6 keV,solid,-332.0,22.1,23.6,22.8,solid trace,872,258,259
+Backscattered electrons,6 keV,solid,-334.8,20.5,22.1,21.3,solid trace,873,257,258
+Backscattered electrons,6 keV,solid,-337.5,18.9,22.1,20.5,solid trace,874,256,258
+Backscattered electrons,6 keV,solid,-340.3,18.9,20.5,19.7,solid trace,875,256,257
+Backscattered electrons,6 keV,solid,-343.1,17.4,20.5,18.9,solid trace,876,255,257
+Backscattered electrons,6 keV,solid,-345.8,17.4,18.9,18.2,solid trace,877,255,256
+Backscattered electrons,6 keV,solid,-348.6,17.4,18.9,18.2,solid trace,878,255,256
+Backscattered electrons,6 keV,solid,-351.4,15.8,18.9,17.4,solid trace,879,254,256
+Backscattered electrons,6 keV,solid,-354.1,15.8,17.4,16.6,solid trace,880,254,255
+Backscattered electrons,6 keV,solid,-356.9,15.8,17.4,16.6,solid trace,881,254,255
+Backscattered electrons,6 keV,solid,-359.7,15.8,17.4,16.6,solid trace,882,254,255
+Backscattered electrons,6 keV,solid,-362.4,15.8,17.4,16.6,solid trace,883,254,255
+Backscattered electrons,6 keV,solid,-365.2,14.3,17.4,15.8,solid trace,884,253,255
+Backscattered electrons,6 keV,solid,-368.0,14.3,17.4,15.8,solid trace,885,253,255
+Backscattered electrons,6 keV,solid,-370.7,14.3,17.4,15.8,solid trace,886,253,255
+Backscattered electrons,6 keV,solid,-373.5,14.3,15.8,15.1,solid trace,887,253,254
+Backscattered electrons,6 keV,solid,-376.2,12.7,15.8,14.3,solid trace,888,252,254
+Backscattered electrons,6 keV,solid,-379.0,12.7,14.3,13.5,solid trace,889,252,253
+Backscattered electrons,6 keV,solid,-381.8,11.2,12.7,12.0,solid trace,890,251,252
+Backscattered electrons,6 keV,solid,-384.5,11.2,12.7,12.0,solid trace,891,251,252
+Backscattered electrons,6 keV,solid,-387.3,11.2,12.7,12.0,solid trace,892,251,252
+Backscattered electrons,6 keV,solid,-390.1,11.2,12.7,12.0,solid trace,893,251,252
+Backscattered electrons,6 keV,solid,-392.8,11.2,12.7,12.0,solid trace,894,251,252
+Backscattered electrons,6 keV,solid,-395.6,9.6,12.7,11.2,solid trace,895,250,252
+Backscattered electrons,6 keV,solid,-398.4,9.6,11.2,10.4,solid trace,896,250,251
+Backscattered electrons,6 keV,solid,-401.1,9.6,11.2,10.4,solid trace,897,250,251
+Backscattered electrons,6 keV,solid,-403.9,9.6,11.2,10.4,solid trace,898,250,251
+Backscattered electrons,6 keV,solid,-406.7,8.1,11.2,9.6,solid trace,899,249,251
+Backscattered electrons,6 keV,solid,-409.4,8.1,9.6,8.9,solid trace,900,249,250
+Backscattered electrons,6 keV,solid,-412.2,8.1,9.6,8.9,solid trace,901,249,250
+Backscattered electrons,6 keV,solid,-415.0,8.1,9.6,8.9,solid trace,902,249,250
+Backscattered electrons,6 keV,solid,-417.7,8.1,9.6,8.9,solid trace,903,249,250
+Backscattered electrons,6 keV,solid,-420.5,8.1,9.6,8.9,solid trace,904,249,250
+Backscattered electrons,6 keV,solid,-423.2,8.1,9.6,8.9,solid trace,905,249,250
+Backscattered electrons,6 keV,solid,-426.0,8.1,9.6,8.9,solid trace,906,249,250
+Backscattered electrons,6 keV,solid,-428.8,8.1,9.6,8.9,solid trace,907,249,250
+Backscattered electrons,6 keV,solid,-431.5,8.1,9.6,8.9,solid trace,908,249,250
+Backscattered electrons,6 keV,solid,-434.3,6.5,9.6,8.1,solid trace,909,248,250
+Backscattered electrons,6 keV,solid,-437.1,6.5,8.1,7.3,solid trace,910,248,249
+Backscattered electrons,6 keV,solid,-439.8,5.0,6.5,5.7,solid trace,911,247,248
+Backscattered electrons,6 keV,solid,-442.6,3.4,6.5,5.0,solid trace,912,246,248
+Backscattered electrons,6 keV,solid,-445.4,3.4,5.0,4.2,solid trace,913,246,247
+Backscattered electrons,6 keV,solid,-448.1,3.4,5.0,4.2,solid trace,914,246,247
+Backscattered electrons,6 keV,solid,-450.9,3.4,5.0,4.2,solid trace,915,246,247
+Backscattered electrons,6 keV,solid,-453.7,3.4,5.0,4.2,solid trace,916,246,247
+Backscattered electrons,6 keV,solid,-456.4,3.4,5.0,4.2,solid trace,917,246,247
+Backscattered electrons,6 keV,solid,-459.2,3.4,5.0,4.2,solid trace,918,246,247
+Backscattered electrons,6 keV,solid,-462.0,3.4,5.0,4.2,solid trace,919,246,247
+Backscattered electrons,6 keV,solid,-464.7,3.4,5.0,4.2,solid trace,920,246,247
+Backscattered electrons,6 keV,solid,-467.5,3.4,5.0,4.2,solid trace,921,246,247
+Backscattered electrons,6 keV,solid,-470.2,3.4,5.0,4.2,solid trace,922,246,247
+Backscattered electrons,6 keV,solid,-473.0,3.4,5.0,4.2,solid trace,923,246,247
+Backscattered electrons,6 keV,solid,-475.8,3.4,5.0,4.2,solid trace,924,246,247
+Backscattered electrons,6 keV,solid,-478.5,3.4,5.0,4.2,solid trace,925,246,247
+Backscattered electrons,6 keV,solid,-481.3,3.4,5.0,4.2,solid trace,926,246,247
+Backscattered electrons,6 keV,solid,-484.1,3.4,5.0,4.2,solid trace,927,246,247
+Backscattered electrons,6 keV,solid,-486.8,3.4,5.0,4.2,solid trace,928,246,247
+Backscattered electrons,6 keV,solid,-489.6,1.9,5.0,3.4,solid trace,929,245,247
+Backscattered electrons,6 keV,solid,-492.4,1.9,5.0,3.4,solid trace,930,245,247
+Backscattered electrons,6 keV,solid,-495.1,1.9,3.4,2.6,solid trace,931,245,246
+Backscattered electrons,6 keV,solid,-497.9,1.9,3.4,2.6,solid trace,932,245,246
+Backscattered electrons,6 keV,solid,-500.7,0.3,3.4,1.9,solid trace,933,244,246
+Backscattered electrons,6 keV,solid,-503.4,0.3,1.9,1.1,solid trace,934,244,245
+Backscattered electrons,6 keV,solid,-506.2,0.3,1.9,1.1,solid trace,935,244,245
+Backscattered electrons,6 keV,solid,-508.9,0.3,1.9,1.1,solid trace,936,244,245
+Backscattered electrons,6 keV,solid,-511.7,0.3,1.9,1.1,solid trace,937,244,245
+Primary (absorbed) electrons,1 keV,solid,-14.7,2377.4,2715.0,2546.2,solid trace,753,679,697
+Primary (absorbed) electrons,1 keV,solid,-22.0,2039.8,2677.5,2358.6,solid trace,754,661,695
+Primary (absorbed) electrons,1 keV,solid,-29.3,1439.7,2508.7,1974.2,solid trace,755,629,686
+Primary (absorbed) electrons,1 keV,solid,-29.3,2639.9,2677.5,2658.7,solid trace,755,693,695
+Primary (absorbed) electrons,1 keV,solid,-36.7,745.8,2339.9,1542.9,solid trace,756,592,677
+Primary (absorbed) electrons,1 keV,solid,-36.7,2471.2,2527.4,2499.3,solid trace,756,684,687
+Primary (absorbed) electrons,1 keV,solid,-36.7,2621.2,2696.2,2658.7,solid trace,756,692,696
+Primary (absorbed) electrons,1 keV,solid,-44.0,164.5,1927.3,1045.9,solid trace,757,561,655
+Primary (absorbed) electrons,1 keV,solid,-44.0,2189.9,2189.9,2189.9,solid trace,757,669,669
+Primary (absorbed) electrons,1 keV,solid,-44.0,2302.4,2358.6,2330.5,solid trace,757,675,678
+Primary (absorbed) electrons,1 keV,solid,-44.0,2471.2,2527.4,2499.3,solid trace,757,684,687
+Primary (absorbed) electrons,1 keV,solid,-51.3,89.5,1064.7,577.1,solid trace,758,557,609
+Primary (absorbed) electrons,1 keV,solid,-51.3,2114.8,2189.9,2152.4,solid trace,758,665,669
+Primary (absorbed) electrons,1 keV,solid,-51.3,2283.6,2358.6,2321.1,solid trace,758,674,678
+Primary (absorbed) electrons,1 keV,solid,-51.3,2471.2,2527.4,2499.3,solid trace,758,684,687
+Primary (absorbed) electrons,1 keV,solid,-58.7,33.2,577.1,305.1,solid trace,759,554,583
+Primary (absorbed) electrons,1 keV,solid,-58.7,2133.6,2189.9,2161.7,solid trace,759,666,669
+Primary (absorbed) electrons,1 keV,solid,-58.7,2302.4,2339.9,2321.1,solid trace,759,675,677
+Primary (absorbed) electrons,1 keV,solid,-66.0,-4.3,127.0,61.3,solid trace,760,552,559
+Primary (absorbed) electrons,1 keV,solid,-66.0,2133.6,2152.4,2143.0,solid trace,760,666,667
+Primary (absorbed) electrons,1 keV,solid,-73.3,-4.3,70.7,33.2,solid trace,761,552,556
+Primary (absorbed) electrons,1.5 keV,dashed,-110.8,108.2,164.5,137.4,dash centroid,766.1,558,561
+Primary (absorbed) electrons,1.5 keV,dashed,-102.6,277.0,314.5,295.8,dash centroid,765.0,567,569
+Primary (absorbed) electrons,1.5 keV,dashed,-97.1,445.8,502.0,469.2,dash centroid,764.2,576,579
+Primary (absorbed) electrons,1.5 keV,dashed,-95.3,595.8,670.8,633.3,dash centroid,764.0,584,588
+Primary (absorbed) electrons,1.5 keV,dashed,-90.4,783.3,839.6,810.4,dash centroid,763.3,594,597
+Primary (absorbed) electrons,1.5 keV,dashed,-88.0,933.4,989.6,967.1,dash centroid,763.0,602,605
+Primary (absorbed) electrons,1.5 keV,dashed,-85.3,1102.2,1177.2,1139.7,dash centroid,762.6,611,615
+Primary (absorbed) electrons,1.5 keV,dashed,-84.3,1289.7,1346.0,1317.8,dash centroid,762.5,621,624
+Primary (absorbed) electrons,1.5 keV,dashed,-77.5,1458.5,1514.7,1482.6,dash centroid,761.6,630,633
+Primary (absorbed) electrons,1.5 keV,dashed,-77.0,2846.2,2846.2,2846.2,dash centroid,761.5,704,704
+Primary (absorbed) electrons,1.5 keV,dashed,-75.8,1627.3,1683.5,1656.4,dash centroid,761.3,639,642
+Primary (absorbed) electrons,1.5 keV,dashed,-72.5,1796.0,1852.3,1827.3,dash centroid,760.9,648,651
+Primary (absorbed) electrons,1.5 keV,dashed,-66.8,1964.8,2021.1,1989.8,dash centroid,760.1,657,660
+Primary (absorbed) electrons,1.5 keV,dashed,-19.3,2752.5,2846.2,2813.8,dash centroid,753.6,699,704
+Primary (absorbed) electrons,2 keV,solid,-36.7,2771.2,2790.0,2780.6,solid trace,756,700,701
+Primary (absorbed) electrons,2 keV,solid,-44.0,2733.7,2790.0,2761.8,solid trace,757,698,701
+Primary (absorbed) electrons,2 keV,solid,-51.3,2696.2,2790.0,2743.1,solid trace,758,696,701
+Primary (absorbed) electrons,2 keV,solid,-58.7,2621.2,2771.2,2696.2,solid trace,759,692,700
+Primary (absorbed) electrons,2 keV,solid,-66.0,2546.2,2696.2,2621.2,solid trace,760,688,696
+Primary (absorbed) electrons,2 keV,solid,-66.0,2752.5,2771.2,2761.8,solid trace,760,699,700
+Primary (absorbed) electrons,2 keV,solid,-73.3,2414.9,2658.7,2536.8,solid trace,761,681,694
+Primary (absorbed) electrons,2 keV,solid,-80.6,2246.1,2621.2,2433.7,solid trace,762,672,692
+Primary (absorbed) electrons,2 keV,solid,-88.0,2096.1,2527.4,2311.8,solid trace,763,664,687
+Primary (absorbed) electrons,2 keV,solid,-88.0,2602.4,2658.7,2630.6,solid trace,763,691,694
+Primary (absorbed) electrons,2 keV,solid,-95.3,1927.3,2339.9,2133.6,solid trace,764,655,677
+Primary (absorbed) electrons,2 keV,solid,-95.3,2602.4,2658.7,2630.6,solid trace,764,691,694
+Primary (absorbed) electrons,2 keV,solid,-102.6,1814.8,2227.4,2021.1,solid trace,765,649,671
+Primary (absorbed) electrons,2 keV,solid,-102.6,2621.2,2658.7,2639.9,solid trace,765,692,694
+Primary (absorbed) electrons,2 keV,solid,-110.0,1702.3,2002.3,1852.3,solid trace,766,643,659
+Primary (absorbed) electrons,2 keV,solid,-117.3,1496.0,1871.1,1683.5,solid trace,767,632,652
+Primary (absorbed) electrons,2 keV,solid,-124.6,1233.4,1758.5,1496.0,solid trace,768,618,646
+Primary (absorbed) electrons,2 keV,solid,-131.9,989.6,1627.3,1308.4,solid trace,769,605,639
+Primary (absorbed) electrons,2 keV,solid,-139.3,745.8,1421.0,1083.4,solid trace,770,592,628
+Primary (absorbed) electrons,2 keV,solid,-146.6,558.3,1177.2,867.7,solid trace,771,582,615
+Primary (absorbed) electrons,2 keV,solid,-153.9,427.0,914.6,670.8,solid trace,772,575,601
+Primary (absorbed) electrons,2 keV,solid,-161.3,295.8,689.6,492.7,solid trace,773,568,589
+Primary (absorbed) electrons,2 keV,solid,-168.6,127.0,483.3,305.1,solid trace,774,559,578
+Primary (absorbed) electrons,2 keV,solid,-175.9,52.0,389.5,220.7,solid trace,775,555,573
+Primary (absorbed) electrons,2 keV,solid,-183.3,14.5,239.5,127.0,solid trace,776,553,565
+Primary (absorbed) electrons,2 keV,solid,-190.6,-4.3,127.0,61.3,solid trace,777,552,559
+Primary (absorbed) electrons,2 keV,solid,-197.9,-4.3,33.2,14.5,solid trace,778,552,554
+Primary (absorbed) electrons,2 keV,solid,-205.2,-4.3,14.5,5.1,solid trace,779,552,553
+Primary (absorbed) electrons,2.5 keV,dashed,-442.7,2696.2,2715.0,2703.7,dash centroid,811.4,696,697
+Primary (absorbed) electrons,2.5 keV,dashed,-293.2,-4.3,14.5,5.1,dash centroid,791.0,552,553
+Primary (absorbed) electrons,2.5 keV,dashed,-260.2,108.2,164.5,136.4,dash centroid,786.5,558,561
+Primary (absorbed) electrons,2.5 keV,dashed,-242.8,258.2,333.3,295.8,dash centroid,784.1,566,570
+Primary (absorbed) electrons,2.5 keV,dashed,-233.7,445.8,502.0,466.6,dash centroid,782.9,576,579
+Primary (absorbed) electrons,2.5 keV,dashed,-227.2,595.8,670.8,633.3,dash centroid,782.0,584,588
+Primary (absorbed) electrons,2.5 keV,dashed,-218.6,764.6,839.6,803.8,dash centroid,780.8,593,597
+Primary (absorbed) electrons,2.5 keV,dashed,-213.2,933.4,1008.4,967.8,dash centroid,780.1,602,606
+Primary (absorbed) electrons,2.5 keV,dashed,-199.2,1102.2,1177.2,1138.0,dash centroid,778.2,611,615
+Primary (absorbed) electrons,2.5 keV,dashed,-190.6,1270.9,1327.2,1304.7,dash centroid,777.0,620,623
+Primary (absorbed) electrons,2.5 keV,dashed,-182.4,1439.7,1496.0,1471.0,dash centroid,775.9,629,632
+Primary (absorbed) electrons,2.5 keV,dashed,-175.1,1608.5,1664.8,1635.6,dash centroid,774.9,638,641
+Primary (absorbed) electrons,2.5 keV,dashed,-164.9,1796.0,1833.5,1814.8,dash centroid,773.5,648,650
+Primary (absorbed) electrons,2.5 keV,dashed,-150.3,1946.1,2002.3,1974.2,dash centroid,771.5,656,659
+Primary (absorbed) electrons,2.5 keV,dashed,-131.3,2264.9,2339.9,2305.5,dash centroid,768.9,673,677
+Primary (absorbed) electrons,3 keV,solid,-51.3,2827.5,2827.5,2827.5,solid trace,758,703,703
+Primary (absorbed) electrons,3 keV,solid,-58.7,2808.7,2827.5,2818.1,solid trace,759,702,703
+Primary (absorbed) electrons,3 keV,solid,-66.0,2808.7,2827.5,2818.1,solid trace,760,702,703
+Primary (absorbed) electrons,3 keV,solid,-73.3,2808.7,2827.5,2818.1,solid trace,761,702,703
+Primary (absorbed) electrons,3 keV,solid,-80.6,2808.7,2827.5,2818.1,solid trace,762,702,703
+Primary (absorbed) electrons,3 keV,solid,-88.0,2790.0,2827.5,2808.7,solid trace,763,701,703
+Primary (absorbed) electrons,3 keV,solid,-95.3,2733.7,2808.7,2771.2,solid trace,764,698,702
+Primary (absorbed) electrons,3 keV,solid,-102.6,2715.0,2771.2,2743.1,solid trace,765,697,700
+Primary (absorbed) electrons,3 keV,solid,-110.0,2696.2,2771.2,2733.7,solid trace,766,696,700
+Primary (absorbed) electrons,3 keV,solid,-117.3,2677.5,2771.2,2724.3,solid trace,767,695,700
+Primary (absorbed) electrons,3 keV,solid,-124.6,2621.2,2808.7,2715.0,solid trace,768,692,702
+Primary (absorbed) electrons,3 keV,solid,-131.9,2564.9,2808.7,2686.8,solid trace,769,689,702
+Primary (absorbed) electrons,3 keV,solid,-139.3,2527.4,2677.5,2602.4,solid trace,770,687,695
+Primary (absorbed) electrons,3 keV,solid,-139.3,2752.5,2790.0,2771.2,solid trace,770,699,701
+Primary (absorbed) electrons,3 keV,solid,-146.6,2471.2,2639.9,2555.6,solid trace,771,684,693
+Primary (absorbed) electrons,3 keV,solid,-153.9,2433.7,2583.7,2508.7,solid trace,772,682,690
+Primary (absorbed) electrons,3 keV,solid,-161.3,2396.2,2546.2,2471.2,solid trace,773,680,688
+Primary (absorbed) electrons,3 keV,solid,-168.6,2321.1,2471.2,2396.2,solid trace,774,676,684
+Primary (absorbed) electrons,3 keV,solid,-175.9,2246.1,2452.4,2349.3,solid trace,775,672,683
+Primary (absorbed) electrons,3 keV,solid,-183.3,2171.1,2377.4,2274.3,solid trace,776,668,679
+Primary (absorbed) electrons,3 keV,solid,-190.6,2096.1,2339.9,2218.0,solid trace,777,664,677
+Primary (absorbed) electrons,3 keV,solid,-197.9,2058.6,2246.1,2152.4,solid trace,778,662,672
+Primary (absorbed) electrons,3 keV,solid,-205.2,1946.1,2189.9,2068.0,solid trace,779,656,669
+Primary (absorbed) electrons,3 keV,solid,-212.6,1852.3,2114.8,1983.6,solid trace,780,651,665
+Primary (absorbed) electrons,3 keV,solid,-219.9,1777.3,2077.3,1927.3,solid trace,781,647,663
+Primary (absorbed) electrons,3 keV,solid,-227.2,1608.5,2002.3,1805.4,solid trace,782,638,659
+Primary (absorbed) electrons,3 keV,solid,-234.6,1496.0,1908.6,1702.3,solid trace,783,632,654
+Primary (absorbed) electrons,3 keV,solid,-241.9,1439.7,1777.3,1608.5,solid trace,784,629,647
+Primary (absorbed) electrons,3 keV,solid,-249.2,1346.0,1721.0,1533.5,solid trace,785,624,644
+Primary (absorbed) electrons,3 keV,solid,-256.6,1233.4,1552.2,1392.8,solid trace,786,618,635
+Primary (absorbed) electrons,3 keV,solid,-263.9,1177.2,1458.5,1317.8,solid trace,787,615,630
+Primary (absorbed) electrons,3 keV,solid,-271.2,933.4,1364.7,1149.0,solid trace,788,602,625
+Primary (absorbed) electrons,3 keV,solid,-278.5,839.6,1270.9,1055.3,solid trace,789,597,620
+Primary (absorbed) electrons,3 keV,solid,-285.9,727.1,1139.7,933.4,solid trace,790,591,613
+Primary (absorbed) electrons,3 keV,solid,-293.2,633.3,989.6,811.5,solid trace,791,586,605
+Primary (absorbed) electrons,3 keV,solid,-300.5,558.3,858.4,708.3,solid trace,792,582,598
+Primary (absorbed) electrons,3 keV,solid,-307.9,427.0,745.8,586.4,solid trace,793,575,592
+Primary (absorbed) electrons,3 keV,solid,-315.2,333.3,670.8,502.0,solid trace,794,570,588
+Primary (absorbed) electrons,3 keV,solid,-322.5,239.5,595.8,417.7,solid trace,795,565,584
+Primary (absorbed) electrons,3 keV,solid,-329.8,202.0,427.0,314.5,solid trace,796,563,575
+Primary (absorbed) electrons,3 keV,solid,-337.2,183.2,352.0,267.6,solid trace,797,562,571
+Primary (absorbed) electrons,3 keV,solid,-344.5,127.0,277.0,202.0,solid trace,798,559,567
+Primary (absorbed) electrons,3 keV,solid,-351.8,70.7,239.5,155.1,solid trace,799,556,565
+Primary (absorbed) electrons,3 keV,solid,-359.2,14.5,183.2,98.8,solid trace,800,553,562
+Primary (absorbed) electrons,3 keV,solid,-366.5,-4.3,145.7,70.7,solid trace,801,552,560
+Primary (absorbed) electrons,3 keV,solid,-373.8,-4.3,108.2,52.0,solid trace,802,552,558
+Primary (absorbed) electrons,3 keV,solid,-381.2,-4.3,52.0,23.8,solid trace,803,552,555
+Primary (absorbed) electrons,3 keV,solid,-388.5,-23.1,33.2,5.1,solid trace,804,551,554
+Primary (absorbed) electrons,3 keV,solid,-395.8,-23.1,33.2,5.1,solid trace,805,551,554
+Primary (absorbed) electrons,3 keV,solid,-403.1,-41.8,33.2,-4.3,solid trace,806,550,554
+Primary (absorbed) electrons,3 keV,solid,-410.5,-23.1,33.2,5.1,solid trace,807,551,554
+Primary (absorbed) electrons,3 keV,solid,-417.8,-41.8,14.5,-13.7,solid trace,808,550,553
+Primary (absorbed) electrons,3 keV,solid,-425.1,-23.1,33.2,5.1,solid trace,809,551,554
+Primary (absorbed) electrons,3 keV,solid,-432.5,-23.1,33.2,5.1,solid trace,810,551,554
+Primary (absorbed) electrons,3 keV,solid,-439.8,-4.3,33.2,14.5,solid trace,811,552,554
+Primary (absorbed) electrons,3 keV,solid,-447.1,-4.3,33.2,14.5,solid trace,812,552,554
+Primary (absorbed) electrons,3 keV,solid,-454.5,-4.3,33.2,14.5,solid trace,813,552,554
+Primary (absorbed) electrons,3 keV,solid,-454.5,89.5,89.5,89.5,solid trace,813,557,557
+Primary (absorbed) electrons,3 keV,solid,-461.8,-4.3,108.2,52.0,solid trace,814,552,558
+Primary (absorbed) electrons,3 keV,solid,-469.1,-4.3,108.2,52.0,solid trace,815,552,558
+Primary (absorbed) electrons,3 keV,solid,-476.4,70.7,70.7,70.7,solid trace,816,556,556
+Primary (absorbed) electrons,3.5 keV,dashed,-520.4,-4.3,33.2,9.1,dash centroid,822.0,552,554
+Primary (absorbed) electrons,3.5 keV,dashed,-446.3,202.0,258.2,233.2,dash centroid,811.9,563,566
+Primary (absorbed) electrons,3.5 keV,dashed,-424.5,370.8,427.0,401.5,dash centroid,808.9,572,575
+Primary (absorbed) electrons,3.5 keV,dashed,-406.8,539.6,595.8,567.7,dash centroid,806.5,581,584
+Primary (absorbed) electrons,3.5 keV,dashed,-389.7,727.1,764.6,742.7,dash centroid,804.2,591,593
+Primary (absorbed) electrons,3.5 keV,dashed,-376.6,858.4,914.6,888.7,dash centroid,802.4,598,601
+Primary (absorbed) electrons,3.5 keV,dashed,-364.7,1027.1,1102.2,1060.0,dash centroid,800.8,607,611
+Primary (absorbed) electrons,3.5 keV,dashed,-350.4,1195.9,1252.2,1225.9,dash centroid,798.8,616,619
+Primary (absorbed) electrons,3.5 keV,dashed,-333.1,1346.0,1421.0,1379.3,dash centroid,796.4,624,628
+Primary (absorbed) electrons,3.5 keV,dashed,-318.9,1533.5,1589.7,1561.6,dash centroid,794.5,634,637
+Primary (absorbed) electrons,3.5 keV,dashed,-307.9,1664.8,1739.8,1707.4,dash centroid,793.0,641,645
+Primary (absorbed) electrons,3.5 keV,dashed,-285.9,1852.3,1908.6,1880.4,dash centroid,790.0,651,654
+Primary (absorbed) electrons,3.5 keV,dashed,-271.7,2002.3,2077.3,2042.5,dash centroid,788.1,659,663
+Primary (absorbed) electrons,3.5 keV,dashed,-250.6,2171.1,2227.4,2205.2,dash centroid,785.2,668,671
+Primary (absorbed) electrons,3.5 keV,dashed,-230.9,2339.9,2396.2,2368.0,dash centroid,782.5,677,680
+Primary (absorbed) electrons,3.5 keV,dashed,-210.1,2489.9,2564.9,2523.7,dash centroid,779.7,685,689
+Primary (absorbed) electrons,3.5 keV,dashed,-175.9,2621.2,2696.2,2660.1,dash centroid,775.0,692,696
+Primary (absorbed) electrons,4 keV,solid,-161.3,2808.7,2808.7,2808.7,solid trace,773,702,702
+Primary (absorbed) electrons,4 keV,solid,-168.6,2790.0,2827.5,2808.7,solid trace,774,701,703
+Primary (absorbed) electrons,4 keV,solid,-175.9,2790.0,2827.5,2808.7,solid trace,775,701,703
+Primary (absorbed) electrons,4 keV,solid,-183.3,2771.2,2827.5,2799.4,solid trace,776,700,703
+Primary (absorbed) electrons,4 keV,solid,-190.6,2733.7,2808.7,2771.2,solid trace,777,698,702
+Primary (absorbed) electrons,4 keV,solid,-197.9,2733.7,2808.7,2771.2,solid trace,778,698,702
+Primary (absorbed) electrons,4 keV,solid,-205.2,2715.0,2790.0,2752.5,solid trace,779,697,701
+Primary (absorbed) electrons,4 keV,solid,-212.6,2677.5,2752.5,2715.0,solid trace,780,695,699
+Primary (absorbed) electrons,4 keV,solid,-219.9,2658.7,2733.7,2696.2,solid trace,781,694,698
+Primary (absorbed) electrons,4 keV,solid,-227.2,2621.2,2715.0,2668.1,solid trace,782,692,697
+Primary (absorbed) electrons,4 keV,solid,-234.6,2583.7,2677.5,2630.6,solid trace,783,690,695
+Primary (absorbed) electrons,4 keV,solid,-241.9,2564.9,2639.9,2602.4,solid trace,784,689,693
+Primary (absorbed) electrons,4 keV,solid,-249.2,2546.2,2602.4,2574.3,solid trace,785,688,691
+Primary (absorbed) electrons,4 keV,solid,-256.6,2508.7,2583.7,2546.2,solid trace,786,686,690
+Primary (absorbed) electrons,4 keV,solid,-263.9,2471.2,2564.9,2518.0,solid trace,787,684,689
+Primary (absorbed) electrons,4 keV,solid,-271.2,2433.7,2546.2,2489.9,solid trace,788,682,688
+Primary (absorbed) electrons,4 keV,solid,-278.5,2377.4,2508.7,2443.0,solid trace,789,679,686
+Primary (absorbed) electrons,4 keV,solid,-285.9,2339.9,2452.4,2396.2,solid trace,790,677,683
+Primary (absorbed) electrons,4 keV,solid,-293.2,2302.4,2414.9,2358.6,solid trace,791,675,681
+Primary (absorbed) electrons,4 keV,solid,-300.5,2264.9,2358.6,2311.8,solid trace,792,673,678
+Primary (absorbed) electrons,4 keV,solid,-307.9,2227.4,2321.1,2274.3,solid trace,793,671,676
+Primary (absorbed) electrons,4 keV,solid,-315.2,2171.1,2283.6,2227.4,solid trace,794,668,674
+Primary (absorbed) electrons,4 keV,solid,-322.5,2133.6,2264.9,2199.2,solid trace,795,666,673
+Primary (absorbed) electrons,4 keV,solid,-329.8,2096.1,2208.6,2152.4,solid trace,796,664,670
+Primary (absorbed) electrons,4 keV,solid,-337.2,2077.3,2152.4,2114.8,solid trace,797,663,667
+Primary (absorbed) electrons,4 keV,solid,-344.5,2039.8,2133.6,2086.7,solid trace,798,661,666
+Primary (absorbed) electrons,4 keV,solid,-351.8,2002.3,2096.1,2049.2,solid trace,799,659,664
+Primary (absorbed) electrons,4 keV,solid,-359.2,1889.8,2077.3,1983.6,solid trace,800,653,663
+Primary (absorbed) electrons,4 keV,solid,-366.5,1833.5,2021.1,1927.3,solid trace,801,650,660
+Primary (absorbed) electrons,4 keV,solid,-373.8,1758.5,1946.1,1852.3,solid trace,802,646,656
+Primary (absorbed) electrons,4 keV,solid,-381.2,1721.0,1871.1,1796.0,solid trace,803,644,652
+Primary (absorbed) electrons,4 keV,solid,-388.5,1664.8,1796.0,1730.4,solid trace,804,641,648
+Primary (absorbed) electrons,4 keV,solid,-395.8,1627.3,1739.8,1683.5,solid trace,805,639,645
+Primary (absorbed) electrons,4 keV,solid,-403.1,1552.2,1702.3,1627.3,solid trace,806,635,643
+Primary (absorbed) electrons,4 keV,solid,-410.5,1477.2,1646.0,1561.6,solid trace,807,631,640
+Primary (absorbed) electrons,4 keV,solid,-417.8,1383.5,1608.5,1496.0,solid trace,808,626,638
+Primary (absorbed) electrons,4 keV,solid,-425.1,1289.7,1514.7,1402.2,solid trace,809,621,633
+Primary (absorbed) electrons,4 keV,solid,-432.5,1233.4,1439.7,1336.6,solid trace,810,618,629
+Primary (absorbed) electrons,4 keV,solid,-439.8,1177.2,1346.0,1261.6,solid trace,811,615,624
+Primary (absorbed) electrons,4 keV,solid,-447.1,1102.2,1252.2,1177.2,solid trace,812,611,619
+Primary (absorbed) electrons,4 keV,solid,-454.5,1008.4,1214.7,1111.5,solid trace,813,606,617
+Primary (absorbed) electrons,4 keV,solid,-461.8,933.4,1158.4,1045.9,solid trace,814,602,614
+Primary (absorbed) electrons,4 keV,solid,-469.1,877.1,1064.7,970.9,solid trace,815,599,609
+Primary (absorbed) electrons,4 keV,solid,-476.4,820.9,970.9,895.9,solid trace,816,596,604
+Primary (absorbed) electrons,4 keV,solid,-483.8,783.3,914.6,849.0,solid trace,817,594,601
+Primary (absorbed) electrons,4 keV,solid,-491.1,689.6,858.4,774.0,solid trace,818,589,598
+Primary (absorbed) electrons,4 keV,solid,-498.4,633.3,802.1,717.7,solid trace,819,586,595
+Primary (absorbed) electrons,4 keV,solid,-505.8,539.6,745.8,642.7,solid trace,820,581,592
+Primary (absorbed) electrons,4 keV,solid,-513.1,464.5,670.8,567.7,solid trace,821,577,588
+Primary (absorbed) electrons,4 keV,solid,-520.4,427.0,595.8,511.4,solid trace,822,575,584
+Primary (absorbed) electrons,4 keV,solid,-527.8,408.3,502.0,455.2,solid trace,823,574,579
+Primary (absorbed) electrons,4 keV,solid,-535.1,370.8,445.8,408.3,solid trace,824,572,576
+Primary (absorbed) electrons,4 keV,solid,-542.4,295.8,427.0,361.4,solid trace,825,568,575
+Primary (absorbed) electrons,4 keV,solid,-549.7,258.2,389.5,323.9,solid trace,826,566,573
+Primary (absorbed) electrons,4 keV,solid,-557.1,202.0,333.3,267.6,solid trace,827,563,570
+Primary (absorbed) electrons,4 keV,solid,-564.4,145.7,277.0,211.4,solid trace,828,560,567
+Primary (absorbed) electrons,4 keV,solid,-571.7,108.2,220.7,164.5,solid trace,829,558,564
+Primary (absorbed) electrons,4 keV,solid,-579.1,89.5,164.5,127.0,solid trace,830,557,561
+Primary (absorbed) electrons,4 keV,solid,-586.4,70.7,127.0,98.8,solid trace,831,556,559
+Primary (absorbed) electrons,4 keV,solid,-593.7,52.0,108.2,80.1,solid trace,832,555,558
+Primary (absorbed) electrons,4 keV,solid,-601.0,33.2,89.5,61.3,solid trace,833,554,557
+Primary (absorbed) electrons,4 keV,solid,-608.4,14.5,70.7,42.6,solid trace,834,553,556
+Primary (absorbed) electrons,4 keV,solid,-615.7,14.5,52.0,33.2,solid trace,835,553,555
+Primary (absorbed) electrons,4 keV,solid,-623.0,14.5,52.0,33.2,solid trace,836,553,555
+Primary (absorbed) electrons,4 keV,solid,-630.4,-4.3,33.2,14.5,solid trace,837,552,554
+Primary (absorbed) electrons,4 keV,solid,-637.7,-4.3,33.2,14.5,solid trace,838,552,554
+Primary (absorbed) electrons,4 keV,solid,-645.0,-4.3,33.2,14.5,solid trace,839,552,554
+Primary (absorbed) electrons,4 keV,solid,-652.4,-4.3,14.5,5.1,solid trace,840,552,553
+Primary (absorbed) electrons,4 keV,solid,-659.7,-4.3,14.5,5.1,solid trace,841,552,553
+Primary (absorbed) electrons,4 keV,solid,-667.0,-4.3,14.5,5.1,solid trace,842,552,553
+Primary (absorbed) electrons,4 keV,solid,-674.3,-4.3,14.5,5.1,solid trace,843,552,553
+Primary (absorbed) electrons,4 keV,solid,-681.7,14.5,14.5,14.5,solid trace,844,553,553
+Primary (absorbed) electrons,4.5 keV,dashed,-881.7,-4.3,14.5,3.7,dash centroid,871.3,552,553
+Primary (absorbed) electrons,4.5 keV,dashed,-815.7,-4.3,14.5,6.4,dash centroid,862.3,552,553
+Primary (absorbed) electrons,4.5 keV,dashed,-756.4,33.2,52.0,44.5,dash centroid,854.2,554,555
+Primary (absorbed) electrons,4.5 keV,dashed,-701.8,127.0,164.5,145.7,dash centroid,846.8,559,561
+Primary (absorbed) electrons,4.5 keV,dashed,-673.1,258.2,295.8,280.1,dash centroid,842.8,566,568
+Primary (absorbed) electrons,4.5 keV,dashed,-645.0,408.3,445.8,427.0,dash centroid,839.0,574,576
+Primary (absorbed) electrons,4.5 keV,dashed,-619.4,558.3,614.6,586.4,dash centroid,835.5,582,585
+Primary (absorbed) electrons,4.5 keV,dashed,-597.9,727.1,783.3,751.2,dash centroid,832.6,591,594
+Primary (absorbed) electrons,4.5 keV,dashed,-578.2,877.1,933.4,904.2,dash centroid,829.9,599,602
+Primary (absorbed) electrons,4.5 keV,dashed,-560.7,1045.9,1083.4,1064.7,dash centroid,827.5,608,610
+Primary (absorbed) electrons,4.5 keV,dashed,-539.5,1214.7,1252.2,1237.2,dash centroid,824.6,617,619
+Primary (absorbed) electrons,4.5 keV,dashed,-518.6,1346.0,1402.2,1376.4,dash centroid,821.8,624,627
+Primary (absorbed) electrons,4.5 keV,dashed,-501.4,1533.5,1571.0,1548.5,dash centroid,819.4,634,636
+Primary (absorbed) electrons,4.5 keV,dashed,-471.9,1664.8,1721.0,1699.9,dash centroid,815.4,641,644
+Primary (absorbed) electrons,4.5 keV,dashed,-450.8,1833.5,1889.8,1861.7,dash centroid,812.5,650,653
+Primary (absorbed) electrons,4.5 keV,dashed,-422.7,1983.6,2039.8,2010.7,dash centroid,808.7,658,661
+Primary (absorbed) electrons,4.5 keV,dashed,-397.6,2152.4,2189.9,2168.8,dash centroid,805.2,667,669
+Primary (absorbed) electrons,4.5 keV,dashed,-366.5,2283.6,2339.9,2316.4,dash centroid,801.0,674,677
+Primary (absorbed) electrons,4.5 keV,dashed,-333.5,2433.7,2471.2,2452.4,dash centroid,796.5,682,684
+Primary (absorbed) electrons,4.5 keV,dashed,-294.4,2564.9,2602.4,2580.6,dash centroid,791.2,689,691
+Primary (absorbed) electrons,4.5 keV,dashed,-253.3,2696.2,2733.7,2717.0,dash centroid,785.6,696,698
+Primary (absorbed) electrons,4.5 keV,dashed,-30.1,2902.5,2921.2,2913.7,dash centroid,755.1,707,708
+Primary (absorbed) electrons,5 keV,solid,-14.7,2883.7,2883.7,2883.7,solid trace,753,706,706
+Primary (absorbed) electrons,5 keV,solid,-22.0,2883.7,2883.7,2883.7,solid trace,754,706,706
+Primary (absorbed) electrons,5 keV,solid,-29.3,2883.7,2883.7,2883.7,solid trace,755,706,706
+Primary (absorbed) electrons,5 keV,solid,-36.7,2883.7,2883.7,2883.7,solid trace,756,706,706
+Primary (absorbed) electrons,5 keV,solid,-44.0,2883.7,2883.7,2883.7,solid trace,757,706,706
+Primary (absorbed) electrons,5 keV,solid,-51.3,2883.7,2883.7,2883.7,solid trace,758,706,706
+Primary (absorbed) electrons,5 keV,solid,-58.7,2865.0,2883.7,2874.4,solid trace,759,705,706
+Primary (absorbed) electrons,5 keV,solid,-66.0,2865.0,2883.7,2874.4,solid trace,760,705,706
+Primary (absorbed) electrons,5 keV,solid,-73.3,2865.0,2902.5,2883.7,solid trace,761,705,707
+Primary (absorbed) electrons,5 keV,solid,-80.6,2865.0,2902.5,2883.7,solid trace,762,705,707
+Primary (absorbed) electrons,5 keV,solid,-88.0,2865.0,2902.5,2883.7,solid trace,763,705,707
+Primary (absorbed) electrons,5 keV,solid,-95.3,2846.2,2883.7,2865.0,solid trace,764,704,706
+Primary (absorbed) electrons,5 keV,solid,-102.6,2846.2,2883.7,2865.0,solid trace,765,704,706
+Primary (absorbed) electrons,5 keV,solid,-110.0,2846.2,2883.7,2865.0,solid trace,766,704,706
+Primary (absorbed) electrons,5 keV,solid,-117.3,2846.2,2883.7,2865.0,solid trace,767,704,706
+Primary (absorbed) electrons,5 keV,solid,-124.6,2846.2,2883.7,2865.0,solid trace,768,704,706
+Primary (absorbed) electrons,5 keV,solid,-131.9,2846.2,2883.7,2865.0,solid trace,769,704,706
+Primary (absorbed) electrons,5 keV,solid,-139.3,2846.2,2883.7,2865.0,solid trace,770,704,706
+Primary (absorbed) electrons,5 keV,solid,-146.6,2827.5,2883.7,2855.6,solid trace,771,703,706
+Primary (absorbed) electrons,5 keV,solid,-153.9,2846.2,2883.7,2865.0,solid trace,772,704,706
+Primary (absorbed) electrons,5 keV,solid,-161.3,2846.2,2883.7,2865.0,solid trace,773,704,706
+Primary (absorbed) electrons,5 keV,solid,-168.6,2865.0,2883.7,2874.4,solid trace,774,705,706
+Primary (absorbed) electrons,5 keV,solid,-175.9,2865.0,2883.7,2874.4,solid trace,775,705,706
+Primary (absorbed) electrons,5 keV,solid,-183.3,2865.0,2883.7,2874.4,solid trace,776,705,706
+Primary (absorbed) electrons,5 keV,solid,-190.6,2865.0,2865.0,2865.0,solid trace,777,705,705
+Primary (absorbed) electrons,5 keV,solid,-197.9,2865.0,2865.0,2865.0,solid trace,778,705,705
+Primary (absorbed) electrons,5 keV,solid,-205.2,2846.2,2865.0,2855.6,solid trace,779,704,705
+Primary (absorbed) electrons,5 keV,solid,-212.6,2827.5,2865.0,2846.2,solid trace,780,703,705
+Primary (absorbed) electrons,5 keV,solid,-219.9,2790.0,2865.0,2827.5,solid trace,781,701,705
+Primary (absorbed) electrons,5 keV,solid,-227.2,2808.7,2865.0,2836.9,solid trace,782,702,705
+Primary (absorbed) electrons,5 keV,solid,-234.6,2790.0,2865.0,2827.5,solid trace,783,701,705
+Primary (absorbed) electrons,5 keV,solid,-241.9,2790.0,2865.0,2827.5,solid trace,784,701,705
+Primary (absorbed) electrons,5 keV,solid,-249.2,2771.2,2846.2,2808.7,solid trace,785,700,704
+Primary (absorbed) electrons,5 keV,solid,-256.6,2771.2,2846.2,2808.7,solid trace,786,700,704
+Primary (absorbed) electrons,5 keV,solid,-263.9,2752.5,2846.2,2799.4,solid trace,787,699,704
+Primary (absorbed) electrons,5 keV,solid,-271.2,2733.7,2846.2,2790.0,solid trace,788,698,704
+Primary (absorbed) electrons,5 keV,solid,-278.5,2715.0,2846.2,2780.6,solid trace,789,697,704
+Primary (absorbed) electrons,5 keV,solid,-285.9,2696.2,2771.2,2733.7,solid trace,790,696,700
+Primary (absorbed) electrons,5 keV,solid,-293.2,2696.2,2752.5,2724.3,solid trace,791,696,699
+Primary (absorbed) electrons,5 keV,solid,-300.5,2696.2,2733.7,2715.0,solid trace,792,696,698
+Primary (absorbed) electrons,5 keV,solid,-307.9,2677.5,2752.5,2715.0,solid trace,793,695,699
+Primary (absorbed) electrons,5 keV,solid,-315.2,2658.7,2771.2,2715.0,solid trace,794,694,700
+Primary (absorbed) electrons,5 keV,solid,-322.5,2639.9,2771.2,2705.6,solid trace,795,693,700
+Primary (absorbed) electrons,5 keV,solid,-329.8,2639.9,2790.0,2715.0,solid trace,796,693,701
+Primary (absorbed) electrons,5 keV,solid,-337.2,2621.2,2677.5,2649.3,solid trace,797,692,695
+Primary (absorbed) electrons,5 keV,solid,-337.2,2733.7,2808.7,2771.2,solid trace,797,698,702
+Primary (absorbed) electrons,5 keV,solid,-344.5,2621.2,2658.7,2639.9,solid trace,798,692,694
+Primary (absorbed) electrons,5 keV,solid,-351.8,2602.4,2658.7,2630.6,solid trace,799,691,694
+Primary (absorbed) electrons,5 keV,solid,-359.2,2564.9,2639.9,2602.4,solid trace,800,689,693
+Primary (absorbed) electrons,5 keV,solid,-366.5,2546.2,2621.2,2583.7,solid trace,801,688,692
+Primary (absorbed) electrons,5 keV,solid,-373.8,2508.7,2602.4,2555.6,solid trace,802,686,691
+Primary (absorbed) electrons,5 keV,solid,-381.2,2508.7,2564.9,2536.8,solid trace,803,686,689
+Primary (absorbed) electrons,5 keV,solid,-388.5,2489.9,2546.2,2518.0,solid trace,804,685,688
+Primary (absorbed) electrons,5 keV,solid,-395.8,2471.2,2527.4,2499.3,solid trace,805,684,687
+Primary (absorbed) electrons,5 keV,solid,-403.1,2433.7,2508.7,2471.2,solid trace,806,682,686
+Primary (absorbed) electrons,5 keV,solid,-410.5,2414.9,2489.9,2452.4,solid trace,807,681,685
+Primary (absorbed) electrons,5 keV,solid,-417.8,2396.2,2471.2,2433.7,solid trace,808,680,684
+Primary (absorbed) electrons,5 keV,solid,-425.1,2358.6,2433.7,2396.2,solid trace,809,678,682
+Primary (absorbed) electrons,5 keV,solid,-432.5,2339.9,2414.9,2377.4,solid trace,810,677,681
+Primary (absorbed) electrons,5 keV,solid,-439.8,2321.1,2377.4,2349.3,solid trace,811,676,679
+Primary (absorbed) electrons,5 keV,solid,-447.1,2283.6,2358.6,2321.1,solid trace,812,674,678
+Primary (absorbed) electrons,5 keV,solid,-454.5,2246.1,2358.6,2302.4,solid trace,813,672,678
+Primary (absorbed) electrons,5 keV,solid,-461.8,2227.4,2321.1,2274.3,solid trace,814,671,676
+Primary (absorbed) electrons,5 keV,solid,-469.1,2189.9,2283.6,2236.7,solid trace,815,669,674
+Primary (absorbed) electrons,5 keV,solid,-476.4,2171.1,2246.1,2208.6,solid trace,816,668,672
+Primary (absorbed) electrons,5 keV,solid,-483.8,2152.4,2227.4,2189.9,solid trace,817,667,671
+Primary (absorbed) electrons,5 keV,solid,-491.1,2096.1,2208.6,2152.4,solid trace,818,664,670
+Primary (absorbed) electrons,5 keV,solid,-498.4,2058.6,2171.1,2114.8,solid trace,819,662,668
+Primary (absorbed) electrons,5 keV,solid,-505.8,2021.1,2152.4,2086.7,solid trace,820,660,667
+Primary (absorbed) electrons,5 keV,solid,-513.1,1964.8,2096.1,2030.5,solid trace,821,657,664
+Primary (absorbed) electrons,5 keV,solid,-520.4,1927.3,2058.6,1992.9,solid trace,822,655,662
+Primary (absorbed) electrons,5 keV,solid,-527.8,1908.6,2021.1,1964.8,solid trace,823,654,660
+Primary (absorbed) electrons,5 keV,solid,-535.1,1871.1,1964.8,1917.9,solid trace,824,652,657
+Primary (absorbed) electrons,5 keV,solid,-542.4,1814.8,1946.1,1880.4,solid trace,825,649,656
+Primary (absorbed) electrons,5 keV,solid,-549.7,1758.5,1908.6,1833.5,solid trace,826,646,654
+Primary (absorbed) electrons,5 keV,solid,-557.1,1721.0,1871.1,1796.0,solid trace,827,644,652
+Primary (absorbed) electrons,5 keV,solid,-564.4,1683.5,1814.8,1749.2,solid trace,828,642,649
+Primary (absorbed) electrons,5 keV,solid,-571.7,1646.0,1758.5,1702.3,solid trace,829,640,646
+Primary (absorbed) electrons,5 keV,solid,-579.1,1627.3,1721.0,1674.1,solid trace,830,639,644
+Primary (absorbed) electrons,5 keV,solid,-586.4,1571.0,1683.5,1627.3,solid trace,831,636,642
+Primary (absorbed) electrons,5 keV,solid,-593.7,1496.0,1646.0,1571.0,solid trace,832,632,640
+Primary (absorbed) electrons,5 keV,solid,-601.0,1458.5,1627.3,1542.9,solid trace,833,630,639
+Primary (absorbed) electrons,5 keV,solid,-608.4,1421.0,1571.0,1496.0,solid trace,834,628,636
+Primary (absorbed) electrons,5 keV,solid,-615.7,1383.5,1514.7,1449.1,solid trace,835,626,633
+Primary (absorbed) electrons,5 keV,solid,-623.0,1346.0,1439.7,1392.8,solid trace,836,624,629
+Primary (absorbed) electrons,5 keV,solid,-630.4,1289.7,1402.2,1346.0,solid trace,837,621,627
+Primary (absorbed) electrons,5 keV,solid,-637.7,1233.4,1383.5,1308.4,solid trace,838,618,626
+Primary (absorbed) electrons,5 keV,solid,-645.0,1195.9,1346.0,1270.9,solid trace,839,616,624
+Primary (absorbed) electrons,5 keV,solid,-652.4,1139.7,1289.7,1214.7,solid trace,840,613,621
+Primary (absorbed) electrons,5 keV,solid,-659.7,1102.2,1252.2,1177.2,solid trace,841,611,619
+Primary (absorbed) electrons,5 keV,solid,-667.0,1064.7,1195.9,1130.3,solid trace,842,609,616
+Primary (absorbed) electrons,5 keV,solid,-674.3,1027.1,1139.7,1083.4,solid trace,843,607,613
+Primary (absorbed) electrons,5 keV,solid,-681.7,970.9,1102.2,1036.5,solid trace,844,604,611
+Primary (absorbed) electrons,5 keV,solid,-689.0,914.6,1083.4,999.0,solid trace,845,601,610
+Primary (absorbed) electrons,5 keV,solid,-696.3,839.6,1027.1,933.4,solid trace,846,597,607
+Primary (absorbed) electrons,5 keV,solid,-703.7,820.9,952.1,886.5,solid trace,847,596,603
+Primary (absorbed) electrons,5 keV,solid,-711.0,764.6,895.9,830.2,solid trace,848,593,600
+Primary (absorbed) electrons,5 keV,solid,-718.3,745.8,858.4,802.1,solid trace,849,592,598
+Primary (absorbed) electrons,5 keV,solid,-725.7,689.6,802.1,745.8,solid trace,850,589,595
+Primary (absorbed) electrons,5 keV,solid,-733.0,633.3,764.6,699.0,solid trace,851,586,593
+Primary (absorbed) electrons,5 keV,solid,-740.3,558.3,727.1,642.7,solid trace,852,582,591
+Primary (absorbed) electrons,5 keV,solid,-747.6,520.8,689.6,605.2,solid trace,853,580,589
+Primary (absorbed) electrons,5 keV,solid,-755.0,483.3,614.6,548.9,solid trace,854,578,585
+Primary (absorbed) electrons,5 keV,solid,-762.3,464.5,539.6,502.0,solid trace,855,577,581
+Primary (absorbed) electrons,5 keV,solid,-769.6,445.8,520.8,483.3,solid trace,856,576,580
+Primary (absorbed) electrons,5 keV,solid,-777.0,389.5,502.0,445.8,solid trace,857,573,579
+Primary (absorbed) electrons,5 keV,solid,-784.3,333.3,464.5,398.9,solid trace,858,570,577
+Primary (absorbed) electrons,5 keV,solid,-791.6,295.8,427.0,361.4,solid trace,859,568,575
+Primary (absorbed) electrons,5 keV,solid,-799.0,258.2,389.5,323.9,solid trace,860,566,573
+Primary (absorbed) electrons,5 keV,solid,-806.3,239.5,333.3,286.4,solid trace,861,565,570
+Primary (absorbed) electrons,5 keV,solid,-813.6,202.0,295.8,248.9,solid trace,862,563,568
+Primary (absorbed) electrons,5 keV,solid,-820.9,164.5,258.2,211.4,solid trace,863,561,566
+Primary (absorbed) electrons,5 keV,solid,-828.3,145.7,239.5,192.6,solid trace,864,560,565
+Primary (absorbed) electrons,5 keV,solid,-835.6,127.0,202.0,164.5,solid trace,865,559,563
+Primary (absorbed) electrons,5 keV,solid,-842.9,108.2,183.2,145.7,solid trace,866,558,562
+Primary (absorbed) electrons,5 keV,solid,-850.3,108.2,164.5,136.4,solid trace,867,558,561
+Primary (absorbed) electrons,5 keV,solid,-857.6,89.5,127.0,108.2,solid trace,868,557,559
+Primary (absorbed) electrons,5 keV,solid,-864.9,70.7,127.0,98.8,solid trace,869,556,559
+Primary (absorbed) electrons,5 keV,solid,-872.2,52.0,108.2,80.1,solid trace,870,555,558
+Primary (absorbed) electrons,5 keV,solid,-879.6,33.2,108.2,70.7,solid trace,871,554,558
+Primary (absorbed) electrons,5 keV,solid,-886.9,33.2,89.5,61.3,solid trace,872,554,557
+Primary (absorbed) electrons,5 keV,solid,-894.2,33.2,89.5,61.3,solid trace,873,554,557
+Primary (absorbed) electrons,5 keV,solid,-901.6,33.2,70.7,52.0,solid trace,874,554,556
+Primary (absorbed) electrons,5 keV,solid,-908.9,33.2,70.7,52.0,solid trace,875,554,556
+Primary (absorbed) electrons,5 keV,solid,-916.2,14.5,70.7,42.6,solid trace,876,553,556
+Primary (absorbed) electrons,5 keV,solid,-923.6,14.5,52.0,33.2,solid trace,877,553,555
+Primary (absorbed) electrons,5 keV,solid,-930.9,-4.3,52.0,23.8,solid trace,878,552,555
+Primary (absorbed) electrons,5 keV,solid,-938.2,-4.3,33.2,14.5,solid trace,879,552,554
+Primary (absorbed) electrons,5 keV,solid,-945.5,-4.3,33.2,14.5,solid trace,880,552,554
+Primary (absorbed) electrons,5 keV,solid,-952.9,-4.3,33.2,14.5,solid trace,881,552,554
+Primary (absorbed) electrons,5 keV,solid,-960.2,-4.3,14.5,5.1,solid trace,882,552,553
+Primary (absorbed) electrons,5 keV,solid,-967.5,-4.3,14.5,5.1,solid trace,883,552,553
+Primary (absorbed) electrons,5 keV,solid,-974.9,-23.1,14.5,-4.3,solid trace,884,551,553
+Primary (absorbed) electrons,5 keV,solid,-982.2,-23.1,14.5,-4.3,solid trace,885,551,553
+Primary (absorbed) electrons,5 keV,solid,-989.5,-23.1,14.5,-4.3,solid trace,886,551,553
+Primary (absorbed) electrons,5 keV,solid,-996.9,-23.1,14.5,-4.3,solid trace,887,551,553
+Primary (absorbed) electrons,5 keV,solid,-1004.2,-23.1,14.5,-4.3,solid trace,888,551,553
+Primary (absorbed) electrons,5 keV,solid,-1011.5,-4.3,14.5,5.1,solid trace,889,552,553
+Primary (absorbed) electrons,5 keV,solid,-1018.8,-4.3,14.5,5.1,solid trace,890,552,553
+Primary (absorbed) electrons,5.5 keV,dashed,-1239.9,-4.3,70.7,31.0,dash centroid,920.2,552,556
+Primary (absorbed) electrons,5.5 keV,dashed,-1161.8,-4.3,14.5,5.1,dash centroid,909.5,552,553
+Primary (absorbed) electrons,5.5 keV,dashed,-1100.1,-4.3,33.2,21.3,dash centroid,901.1,552,554
+Primary (absorbed) electrons,5.5 keV,dashed,-1040.1,33.2,70.7,57.6,dash centroid,892.9,554,556
+Primary (absorbed) electrons,5.5 keV,dashed,-988.8,145.7,183.2,160.7,dash centroid,885.9,560,562
+Primary (absorbed) electrons,5.5 keV,dashed,-952.1,258.2,314.5,289.5,dash centroid,880.9,566,569
+Primary (absorbed) electrons,5.5 keV,dashed,-924.3,408.3,464.5,442.0,dash centroid,877.1,574,577
+Primary (absorbed) electrons,5.5 keV,dashed,-889.4,558.3,633.3,592.7,dash centroid,872.3,582,586
+Primary (absorbed) electrons,5.5 keV,dashed,-857.6,708.3,764.6,736.5,dash centroid,868.0,590,593
+Primary (absorbed) electrons,5.5 keV,dashed,-836.3,858.4,914.6,889.0,dash centroid,865.1,598,601
+Primary (absorbed) electrons,5.5 keV,dashed,-807.2,1027.1,1064.7,1048.2,dash centroid,861.1,607,609
+Primary (absorbed) electrons,5.5 keV,dashed,-783.6,1177.2,1233.4,1202.7,dash centroid,857.9,615,618
+Primary (absorbed) electrons,5.5 keV,dashed,-755.0,1327.2,1383.5,1355.3,dash centroid,854.0,623,626
+Primary (absorbed) electrons,5.5 keV,dashed,-725.7,1477.2,1533.5,1505.4,dash centroid,850.0,631,634
+Primary (absorbed) electrons,5.5 keV,dashed,-697.0,1627.3,1683.5,1657.9,dash centroid,846.1,639,642
+Primary (absorbed) electrons,5.5 keV,dashed,-662.4,1758.5,1814.8,1789.2,dash centroid,841.4,646,649
+Primary (absorbed) electrons,5.5 keV,dashed,-632.8,1927.3,1964.8,1948.1,dash centroid,837.3,655,657
+Primary (absorbed) electrons,5.5 keV,dashed,-600.4,2058.6,2133.6,2091.0,dash centroid,832.9,662,666
+Primary (absorbed) electrons,5.5 keV,dashed,-574.7,2452.4,2489.9,2474.9,dash centroid,829.4,683,685
+Primary (absorbed) electrons,5.5 keV,dashed,-563.6,2189.9,2246.1,2221.1,dash centroid,827.9,669,672
+Primary (absorbed) electrons,5.5 keV,dashed,-522.9,2339.9,2377.4,2358.6,dash centroid,822.3,677,679
+Primary (absorbed) electrons,5.5 keV,dashed,-478.9,2452.4,2508.7,2483.7,dash centroid,816.3,683,686
+Primary (absorbed) electrons,5.5 keV,dashed,-432.5,2564.9,2602.4,2583.7,dash centroid,810.0,689,691
+Primary (absorbed) electrons,5.5 keV,dashed,-386.7,2752.5,2790.0,2771.2,dash centroid,803.8,699,701
+Primary (absorbed) electrons,5.5 keV,dashed,-378.7,2658.7,2696.2,2677.5,dash centroid,802.7,694,696
+Primary (absorbed) electrons,5.5 keV,dashed,-44.0,2639.9,2696.2,2668.1,dash centroid,757.0,693,696
+Primary (absorbed) electrons,6 keV,solid,-14.7,2865.0,2883.7,2874.4,solid trace,753,705,706
+Primary (absorbed) electrons,6 keV,solid,-22.0,2865.0,2883.7,2874.4,solid trace,754,705,706
+Primary (absorbed) electrons,6 keV,solid,-29.3,2865.0,2883.7,2874.4,solid trace,755,705,706
+Primary (absorbed) electrons,6 keV,solid,-36.7,2865.0,2902.5,2883.7,solid trace,756,705,707
+Primary (absorbed) electrons,6 keV,solid,-44.0,2883.7,2902.5,2893.1,solid trace,757,706,707
+Primary (absorbed) electrons,6 keV,solid,-51.3,2883.7,2902.5,2893.1,solid trace,758,706,707
+Primary (absorbed) electrons,6 keV,solid,-58.7,2883.7,2902.5,2893.1,solid trace,759,706,707
+Primary (absorbed) electrons,6 keV,solid,-66.0,2865.0,2902.5,2883.7,solid trace,760,705,707
+Primary (absorbed) electrons,6 keV,solid,-73.3,2865.0,2902.5,2883.7,solid trace,761,705,707
+Primary (absorbed) electrons,6 keV,solid,-80.6,2865.0,2902.5,2883.7,solid trace,762,705,707
+Primary (absorbed) electrons,6 keV,solid,-88.0,2865.0,2883.7,2874.4,solid trace,763,705,706
+Primary (absorbed) electrons,6 keV,solid,-95.3,2865.0,2883.7,2874.4,solid trace,764,705,706
+Primary (absorbed) electrons,6 keV,solid,-102.6,2865.0,2883.7,2874.4,solid trace,765,705,706
+Primary (absorbed) electrons,6 keV,solid,-110.0,2865.0,2883.7,2874.4,solid trace,766,705,706
+Primary (absorbed) electrons,6 keV,solid,-117.3,2865.0,2883.7,2874.4,solid trace,767,705,706
+Primary (absorbed) electrons,6 keV,solid,-124.6,2865.0,2883.7,2874.4,solid trace,768,705,706
+Primary (absorbed) electrons,6 keV,solid,-131.9,2865.0,2883.7,2874.4,solid trace,769,705,706
+Primary (absorbed) electrons,6 keV,solid,-139.3,2865.0,2883.7,2874.4,solid trace,770,705,706
+Primary (absorbed) electrons,6 keV,solid,-146.6,2865.0,2883.7,2874.4,solid trace,771,705,706
+Primary (absorbed) electrons,6 keV,solid,-153.9,2865.0,2883.7,2874.4,solid trace,772,705,706
+Primary (absorbed) electrons,6 keV,solid,-161.3,2865.0,2883.7,2874.4,solid trace,773,705,706
+Primary (absorbed) electrons,6 keV,solid,-168.6,2865.0,2883.7,2874.4,solid trace,774,705,706
+Primary (absorbed) electrons,6 keV,solid,-175.9,2865.0,2883.7,2874.4,solid trace,775,705,706
+Primary (absorbed) electrons,6 keV,solid,-183.3,2865.0,2883.7,2874.4,solid trace,776,705,706
+Primary (absorbed) electrons,6 keV,solid,-190.6,2865.0,2883.7,2874.4,solid trace,777,705,706
+Primary (absorbed) electrons,6 keV,solid,-197.9,2846.2,2865.0,2855.6,solid trace,778,704,705
+Primary (absorbed) electrons,6 keV,solid,-205.2,2846.2,2865.0,2855.6,solid trace,779,704,705
+Primary (absorbed) electrons,6 keV,solid,-212.6,2846.2,2865.0,2855.6,solid trace,780,704,705
+Primary (absorbed) electrons,6 keV,solid,-219.9,2846.2,2865.0,2855.6,solid trace,781,704,705
+Primary (absorbed) electrons,6 keV,solid,-227.2,2846.2,2865.0,2855.6,solid trace,782,704,705
+Primary (absorbed) electrons,6 keV,solid,-234.6,2846.2,2865.0,2855.6,solid trace,783,704,705
+Primary (absorbed) electrons,6 keV,solid,-241.9,2846.2,2865.0,2855.6,solid trace,784,704,705
+Primary (absorbed) electrons,6 keV,solid,-249.2,2846.2,2865.0,2855.6,solid trace,785,704,705
+Primary (absorbed) electrons,6 keV,solid,-256.6,2846.2,2865.0,2855.6,solid trace,786,704,705
+Primary (absorbed) electrons,6 keV,solid,-263.9,2846.2,2865.0,2855.6,solid trace,787,704,705
+Primary (absorbed) electrons,6 keV,solid,-271.2,2846.2,2865.0,2855.6,solid trace,788,704,705
+Primary (absorbed) electrons,6 keV,solid,-278.5,2846.2,2865.0,2855.6,solid trace,789,704,705
+Primary (absorbed) electrons,6 keV,solid,-285.9,2846.2,2865.0,2855.6,solid trace,790,704,705
+Primary (absorbed) electrons,6 keV,solid,-293.2,2846.2,2865.0,2855.6,solid trace,791,704,705
+Primary (absorbed) electrons,6 keV,solid,-300.5,2846.2,2865.0,2855.6,solid trace,792,704,705
+Primary (absorbed) electrons,6 keV,solid,-307.9,2846.2,2865.0,2855.6,solid trace,793,704,705
+Primary (absorbed) electrons,6 keV,solid,-315.2,2827.5,2846.2,2836.9,solid trace,794,703,704
+Primary (absorbed) electrons,6 keV,solid,-322.5,2827.5,2846.2,2836.9,solid trace,795,703,704
+Primary (absorbed) electrons,6 keV,solid,-329.8,2808.7,2827.5,2818.1,solid trace,796,702,703
+Primary (absorbed) electrons,6 keV,solid,-337.2,2808.7,2827.5,2818.1,solid trace,797,702,703
+Primary (absorbed) electrons,6 keV,solid,-344.5,2790.0,2827.5,2808.7,solid trace,798,701,703
+Primary (absorbed) electrons,6 keV,solid,-351.8,2790.0,2808.7,2799.4,solid trace,799,701,702
+Primary (absorbed) electrons,6 keV,solid,-359.2,2790.0,2808.7,2799.4,solid trace,800,701,702
+Primary (absorbed) electrons,6 keV,solid,-366.5,2790.0,2808.7,2799.4,solid trace,801,701,702
+Primary (absorbed) electrons,6 keV,solid,-373.8,2771.2,2790.0,2780.6,solid trace,802,700,701
+Primary (absorbed) electrons,6 keV,solid,-381.2,2771.2,2790.0,2780.6,solid trace,803,700,701
+Primary (absorbed) electrons,6 keV,solid,-388.5,2771.2,2790.0,2780.6,solid trace,804,700,701
+Primary (absorbed) electrons,6 keV,solid,-395.8,2752.5,2771.2,2761.8,solid trace,805,699,700
+Primary (absorbed) electrons,6 keV,solid,-403.1,2733.7,2771.2,2752.5,solid trace,806,698,700
+Primary (absorbed) electrons,6 keV,solid,-410.5,2733.7,2771.2,2752.5,solid trace,807,698,700
+Primary (absorbed) electrons,6 keV,solid,-417.8,2715.0,2752.5,2733.7,solid trace,808,697,699
+Primary (absorbed) electrons,6 keV,solid,-425.1,2715.0,2752.5,2733.7,solid trace,809,697,699
+Primary (absorbed) electrons,6 keV,solid,-432.5,2696.2,2733.7,2715.0,solid trace,810,696,698
+Primary (absorbed) electrons,6 keV,solid,-439.8,2696.2,2715.0,2705.6,solid trace,811,696,697
+Primary (absorbed) electrons,6 keV,solid,-447.1,2677.5,2715.0,2696.2,solid trace,812,695,697
+Primary (absorbed) electrons,6 keV,solid,-454.5,2677.5,2696.2,2686.8,solid trace,813,695,696
+Primary (absorbed) electrons,6 keV,solid,-461.8,2658.7,2696.2,2677.5,solid trace,814,694,696
+Primary (absorbed) electrons,6 keV,solid,-469.1,2639.9,2677.5,2658.7,solid trace,815,693,695
+Primary (absorbed) electrons,6 keV,solid,-476.4,2639.9,2658.7,2649.3,solid trace,816,693,694
+Primary (absorbed) electrons,6 keV,solid,-483.8,2621.2,2658.7,2639.9,solid trace,817,692,694
+Primary (absorbed) electrons,6 keV,solid,-491.1,2621.2,2639.9,2630.6,solid trace,818,692,693
+Primary (absorbed) electrons,6 keV,solid,-498.4,2621.2,2639.9,2630.6,solid trace,819,692,693
+Primary (absorbed) electrons,6 keV,solid,-505.8,2602.4,2621.2,2611.8,solid trace,820,691,692
+Primary (absorbed) electrons,6 keV,solid,-513.1,2583.7,2621.2,2602.4,solid trace,821,690,692
+Primary (absorbed) electrons,6 keV,solid,-520.4,2564.9,2602.4,2583.7,solid trace,822,689,691
+Primary (absorbed) electrons,6 keV,solid,-527.8,2546.2,2583.7,2564.9,solid trace,823,688,690
+Primary (absorbed) electrons,6 keV,solid,-535.1,2527.4,2564.9,2546.2,solid trace,824,687,689
+Primary (absorbed) electrons,6 keV,solid,-542.4,2527.4,2564.9,2546.2,solid trace,825,687,689
+Primary (absorbed) electrons,6 keV,solid,-549.7,2527.4,2546.2,2536.8,solid trace,826,687,688
+Primary (absorbed) electrons,6 keV,solid,-557.1,2508.7,2546.2,2527.4,solid trace,827,686,688
+Primary (absorbed) electrons,6 keV,solid,-564.4,2471.2,2527.4,2499.3,solid trace,828,684,687
+Primary (absorbed) electrons,6 keV,solid,-571.7,2452.4,2508.7,2480.5,solid trace,829,683,686
+Primary (absorbed) electrons,6 keV,solid,-579.1,2433.7,2471.2,2452.4,solid trace,830,682,684
+Primary (absorbed) electrons,6 keV,solid,-586.4,2433.7,2452.4,2443.0,solid trace,831,682,683
+Primary (absorbed) electrons,6 keV,solid,-593.7,2414.9,2452.4,2433.7,solid trace,832,681,683
+Primary (absorbed) electrons,6 keV,solid,-601.0,2377.4,2433.7,2405.5,solid trace,833,679,682
+Primary (absorbed) electrons,6 keV,solid,-608.4,2358.6,2414.9,2386.8,solid trace,834,678,681
+Primary (absorbed) electrons,6 keV,solid,-615.7,2339.9,2377.4,2358.6,solid trace,835,677,679
+Primary (absorbed) electrons,6 keV,solid,-623.0,2321.1,2358.6,2339.9,solid trace,836,676,678
+Primary (absorbed) electrons,6 keV,solid,-630.4,2302.4,2339.9,2321.1,solid trace,837,675,677
+Primary (absorbed) electrons,6 keV,solid,-637.7,2264.9,2321.1,2293.0,solid trace,838,673,676
+Primary (absorbed) electrons,6 keV,solid,-645.0,2246.1,2302.4,2274.3,solid trace,839,672,675
+Primary (absorbed) electrons,6 keV,solid,-652.4,2189.9,2264.9,2227.4,solid trace,840,669,673
+Primary (absorbed) electrons,6 keV,solid,-659.7,2152.4,2227.4,2189.9,solid trace,841,667,671
+Primary (absorbed) electrons,6 keV,solid,-667.0,2152.4,2189.9,2171.1,solid trace,842,667,669
+Primary (absorbed) electrons,6 keV,solid,-674.3,2133.6,2171.1,2152.4,solid trace,843,666,668
+Primary (absorbed) electrons,6 keV,solid,-681.7,2114.8,2152.4,2133.6,solid trace,844,665,667
+Primary (absorbed) electrons,6 keV,solid,-689.0,2096.1,2133.6,2114.8,solid trace,845,664,666
+Primary (absorbed) electrons,6 keV,solid,-696.3,2039.8,2114.8,2077.3,solid trace,846,661,665
+Primary (absorbed) electrons,6 keV,solid,-703.7,2002.3,2077.3,2039.8,solid trace,847,659,663
+Primary (absorbed) electrons,6 keV,solid,-711.0,1983.6,2039.8,2011.7,solid trace,848,658,661
+Primary (absorbed) electrons,6 keV,solid,-718.3,1964.8,2002.3,1983.6,solid trace,849,657,659
+Primary (absorbed) electrons,6 keV,solid,-725.7,1946.1,1983.6,1964.8,solid trace,850,656,658
+Primary (absorbed) electrons,6 keV,solid,-733.0,1908.6,1964.8,1936.7,solid trace,851,654,657
+Primary (absorbed) electrons,6 keV,solid,-740.3,1871.1,1946.1,1908.6,solid trace,852,652,656
+Primary (absorbed) electrons,6 keV,solid,-747.6,1833.5,1908.6,1871.1,solid trace,853,650,654
+Primary (absorbed) electrons,6 keV,solid,-755.0,1814.8,1871.1,1842.9,solid trace,854,649,652
+Primary (absorbed) electrons,6 keV,solid,-762.3,1796.0,1833.5,1814.8,solid trace,855,648,650
+Primary (absorbed) electrons,6 keV,solid,-769.6,1758.5,1814.8,1786.7,solid trace,856,646,649
+Primary (absorbed) electrons,6 keV,solid,-777.0,1721.0,1796.0,1758.5,solid trace,857,644,648
+Primary (absorbed) electrons,6 keV,solid,-784.3,1702.3,1758.5,1730.4,solid trace,858,643,646
+Primary (absorbed) electrons,6 keV,solid,-791.6,1664.8,1721.0,1692.9,solid trace,859,641,644
+Primary (absorbed) electrons,6 keV,solid,-799.0,1627.3,1702.3,1664.8,solid trace,860,639,643
+Primary (absorbed) electrons,6 keV,solid,-806.3,1589.7,1664.8,1627.3,solid trace,861,637,641
+Primary (absorbed) electrons,6 keV,solid,-813.6,1589.7,1627.3,1608.5,solid trace,862,637,639
+Primary (absorbed) electrons,6 keV,solid,-820.9,1571.0,1608.5,1589.7,solid trace,863,636,638
+Primary (absorbed) electrons,6 keV,solid,-828.3,1533.5,1589.7,1561.6,solid trace,864,634,637
+Primary (absorbed) electrons,6 keV,solid,-835.6,1496.0,1571.0,1533.5,solid trace,865,632,636
+Primary (absorbed) electrons,6 keV,solid,-842.9,1458.5,1533.5,1496.0,solid trace,866,630,634
+Primary (absorbed) electrons,6 keV,solid,-850.3,1421.0,1496.0,1458.5,solid trace,867,628,632
+Primary (absorbed) electrons,6 keV,solid,-857.6,1383.5,1439.7,1411.6,solid trace,868,626,629
+Primary (absorbed) electrons,6 keV,solid,-864.9,1364.7,1421.0,1392.8,solid trace,869,625,628
+Primary (absorbed) electrons,6 keV,solid,-872.2,1327.2,1383.5,1355.3,solid trace,870,623,626
+Primary (absorbed) electrons,6 keV,solid,-879.6,1289.7,1364.7,1327.2,solid trace,871,621,625
+Primary (absorbed) electrons,6 keV,solid,-886.9,1252.2,1327.2,1289.7,solid trace,872,619,623
+Primary (absorbed) electrons,6 keV,solid,-894.2,1214.7,1289.7,1252.2,solid trace,873,617,621
+Primary (absorbed) electrons,6 keV,solid,-901.6,1177.2,1252.2,1214.7,solid trace,874,615,619
+Primary (absorbed) electrons,6 keV,solid,-908.9,1158.4,1214.7,1186.5,solid trace,875,614,617
+Primary (absorbed) electrons,6 keV,solid,-916.2,1120.9,1177.2,1149.0,solid trace,876,612,615
+Primary (absorbed) electrons,6 keV,solid,-923.6,1083.4,1158.4,1120.9,solid trace,877,610,614
+Primary (absorbed) electrons,6 keV,solid,-930.9,1045.9,1120.9,1083.4,solid trace,878,608,612
+Primary (absorbed) electrons,6 keV,solid,-938.2,1027.1,1083.4,1055.3,solid trace,879,607,610
+Primary (absorbed) electrons,6 keV,solid,-945.5,989.6,1045.9,1017.8,solid trace,880,605,608
+Primary (absorbed) electrons,6 keV,solid,-952.9,970.9,1027.1,999.0,solid trace,881,604,607
+Primary (absorbed) electrons,6 keV,solid,-960.2,933.4,989.6,961.5,solid trace,882,602,605
+Primary (absorbed) electrons,6 keV,solid,-967.5,895.9,970.9,933.4,solid trace,883,600,604
+Primary (absorbed) electrons,6 keV,solid,-974.9,839.6,933.4,886.5,solid trace,884,597,602
+Primary (absorbed) electrons,6 keV,solid,-982.2,802.1,895.9,849.0,solid trace,885,595,600
+Primary (absorbed) electrons,6 keV,solid,-989.5,764.6,839.6,802.1,solid trace,886,593,597
+Primary (absorbed) electrons,6 keV,solid,-996.9,745.8,802.1,774.0,solid trace,887,592,595
+Primary (absorbed) electrons,6 keV,solid,-1004.2,708.3,764.6,736.5,solid trace,888,590,593
+Primary (absorbed) electrons,6 keV,solid,-1011.5,670.8,727.1,699.0,solid trace,889,588,591
+Primary (absorbed) electrons,6 keV,solid,-1018.8,633.3,708.3,670.8,solid trace,890,586,590
+Primary (absorbed) electrons,6 keV,solid,-1026.2,577.1,670.8,623.9,solid trace,891,583,588
+Primary (absorbed) electrons,6 keV,solid,-1033.5,539.6,633.3,586.4,solid trace,892,581,586
+Primary (absorbed) electrons,6 keV,solid,-1040.8,520.8,577.1,548.9,solid trace,893,580,583
+Primary (absorbed) electrons,6 keV,solid,-1048.2,502.0,539.6,520.8,solid trace,894,579,581
+Primary (absorbed) electrons,6 keV,solid,-1055.5,464.5,520.8,492.7,solid trace,895,577,580
+Primary (absorbed) electrons,6 keV,solid,-1062.8,427.0,502.0,464.5,solid trace,896,575,579
+Primary (absorbed) electrons,6 keV,solid,-1070.2,389.5,464.5,427.0,solid trace,897,573,577
+Primary (absorbed) electrons,6 keV,solid,-1077.5,370.8,427.0,398.9,solid trace,898,572,575
+Primary (absorbed) electrons,6 keV,solid,-1084.8,352.0,389.5,370.8,solid trace,899,571,573
+Primary (absorbed) electrons,6 keV,solid,-1092.1,333.3,370.8,352.0,solid trace,900,570,572
+Primary (absorbed) electrons,6 keV,solid,-1099.5,295.8,352.0,323.9,solid trace,901,568,571
+Primary (absorbed) electrons,6 keV,solid,-1106.8,258.2,333.3,295.8,solid trace,902,566,570
+Primary (absorbed) electrons,6 keV,solid,-1114.1,239.5,314.5,277.0,solid trace,903,565,569
+Primary (absorbed) electrons,6 keV,solid,-1121.5,220.7,277.0,248.9,solid trace,904,564,567
+Primary (absorbed) electrons,6 keV,solid,-1128.8,202.0,239.5,220.7,solid trace,905,563,565
+Primary (absorbed) electrons,6 keV,solid,-1136.1,183.2,220.7,202.0,solid trace,906,562,564
+Primary (absorbed) electrons,6 keV,solid,-1143.4,164.5,202.0,183.2,solid trace,907,561,563
+Primary (absorbed) electrons,6 keV,solid,-1150.8,164.5,183.2,173.9,solid trace,908,561,562
+Primary (absorbed) electrons,6 keV,solid,-1158.1,145.7,183.2,164.5,solid trace,909,560,562
+Primary (absorbed) electrons,6 keV,solid,-1165.4,127.0,164.5,145.7,solid trace,910,559,561
+Primary (absorbed) electrons,6 keV,solid,-1172.8,108.2,145.7,127.0,solid trace,911,558,560
+Primary (absorbed) electrons,6 keV,solid,-1180.1,89.5,127.0,108.2,solid trace,912,557,559
+Primary (absorbed) electrons,6 keV,solid,-1187.4,89.5,108.2,98.8,solid trace,913,557,558
+Primary (absorbed) electrons,6 keV,solid,-1194.8,70.7,108.2,89.5,solid trace,914,556,558
+Primary (absorbed) electrons,6 keV,solid,-1202.1,70.7,89.5,80.1,solid trace,915,556,557
+Primary (absorbed) electrons,6 keV,solid,-1209.4,70.7,89.5,80.1,solid trace,916,556,557
+Primary (absorbed) electrons,6 keV,solid,-1216.7,52.0,70.7,61.3,solid trace,917,555,556
+Primary (absorbed) electrons,6 keV,solid,-1224.1,52.0,70.7,61.3,solid trace,918,555,556
+Primary (absorbed) electrons,6 keV,solid,-1231.4,33.2,52.0,42.6,solid trace,919,554,555
+Primary (absorbed) electrons,6 keV,solid,-1238.7,33.2,52.0,42.6,solid trace,920,554,555
+Primary (absorbed) electrons,6 keV,solid,-1246.1,33.2,52.0,42.6,solid trace,921,554,555
+Primary (absorbed) electrons,6 keV,solid,-1253.4,14.5,33.2,23.8,solid trace,922,553,554
+Primary (absorbed) electrons,6 keV,solid,-1260.7,14.5,33.2,23.8,solid trace,923,553,554
+Primary (absorbed) electrons,6 keV,solid,-1268.1,14.5,33.2,23.8,solid trace,924,553,554
+Primary (absorbed) electrons,6 keV,solid,-1275.4,14.5,33.2,23.8,solid trace,925,553,554
+Primary (absorbed) electrons,6 keV,solid,-1282.7,14.5,33.2,23.8,solid trace,926,553,554
+Primary (absorbed) electrons,6 keV,solid,-1290.0,14.5,33.2,23.8,solid trace,927,553,554
+Primary (absorbed) electrons,6 keV,solid,-1297.4,14.5,33.2,23.8,solid trace,928,553,554
+Primary (absorbed) electrons,6 keV,solid,-1304.7,-4.3,33.2,14.5,solid trace,929,552,554
+Primary (absorbed) electrons,6 keV,solid,-1312.0,-4.3,14.5,5.1,solid trace,930,552,553
+Primary (absorbed) electrons,6 keV,solid,-1319.4,-4.3,14.5,5.1,solid trace,931,552,553
+Primary (absorbed) electrons,6 keV,solid,-1326.7,-4.3,14.5,5.1,solid trace,932,552,553
+Primary (absorbed) electrons,6 keV,solid,-1334.0,-4.3,14.5,5.1,solid trace,933,552,553
+Primary (absorbed) electrons,6 keV,solid,-1341.3,-4.3,14.5,5.1,solid trace,934,552,553
+Primary (absorbed) electrons,6 keV,solid,-1348.7,-4.3,14.5,5.1,solid trace,935,552,553
+Primary (absorbed) electrons,6 keV,solid,-1356.0,-4.3,14.5,5.1,solid trace,936,552,553
+Primary (absorbed) electrons,6 keV,solid,-1363.3,-4.3,14.5,5.1,solid trace,937,552,553
+Primary (absorbed) electrons,6 keV,solid,-1370.7,-4.3,14.5,5.1,solid trace,938,552,553
+Primary (absorbed) electrons,6 keV,solid,-1378.0,-4.3,14.5,5.1,solid trace,939,552,553

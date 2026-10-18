@@ -1,0 +1,26 @@
+# Xu et al. 2017 eLife 6:e25916, Figure 12(e): the short vertical lines in each histogram that mark Nc and Nm (text, p. 22:
+#   'These values are also indicated as short vertical lines on the signal histograms in Figure 12e').
+# Columns: sample_bias_V; counts_per_pixel = position of the line (log x calibration as in fig12e.csv); height_frac = its height
+#   as a fraction of the box height; table_Nc / table_Nm = the values printed in panel f for that bias (for comparison).
+# Provenance: tier 3, digitized by fig12e_extract.py (dark runs rising from the bottom frame below the histogram outline).
+#   Lines that coincide with the steep sides of the histogram cannot be separated from the outline and are missing.
+sample_bias_V,counts_per_pixel,height_frac,table_Nc,table_Nm
+-600,1257,0.120,1270,1380
+-600,1366,0.116,1270,1380
+-400,1567,0.193,1570,1740
+-400,1738,0.193,1570,1740
+-200,1835,0.076,1949,2161
+-200,1945,0.189,1949,2161
+-200,2148,0.193,1949,2161
+0,2590,0.327,2594,2896
+0,2886,0.327,2594,2896
+200,2898,0.327,2911,3229
+200,3215,0.327,2911,3229
+400,2959,0.327,2983,3337
+400,3324,0.327,2983,3337
+500,1206,0.156,1211,1338
+500,1338,0.156,1211,1338
+600,628,0.095,630,720
+600,723,0.095,630,720
+800,443,0.076,458,536
+800,521,0.076,458,536

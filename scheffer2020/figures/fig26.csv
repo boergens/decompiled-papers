@@ -1,0 +1,2705 @@
+# Fig. 26 of Scheffer et al. 2020 (eLife 9:e57443), p. 49: 'Rent's rule for hemibrain'.
+# x = Tbars (log axis, 100 to 1e6); y = Neurons shared with other compartments (log axis, 1 to 1e6).
+# Provenance: tier 3 (digitized from the embedded 1194 x 875 px JPEG raster); compartment positions in the crowded clusters are
+# less certain (status overlapping). The authors' Figure 26-source data 1 was not available locally.
+# Calibration: decade tick marks on the frame (max residual x 0.0000, y 0.0036 decades).
+# kind compartment: label = compartment name as printed (a/b/g = alpha/beta/gamma, as in the figure); x, y = centre of the printed
+# label (taken as the data point); score = fraction of the rendered label's ink found dark in the image; status isolated/overlapping/
+# uncertain (identity not certain: partly hidden), with notes for renamed or low-threshold matches (curation listed in the script).
+# Labels that could not be matched (illegible in the crowded clusters) are missing; see figures/fig26_extract.py for the candidate list.
+# kind line: traced points of the bound lines and band edges (every 2nd column, outliers removed); kind line_fit: p = exponent, c = prefactor.
+# 3D top (light grey upper edge): log10 N = -0.0053 + 0.7874 log10 T (fit on 402 columns, outliers removed), i.e. N = 0.9879 * T^0.787
+# 2D top (mid grey upper edge): log10 N = -0.0030 + 0.7082 log10 T (fit on 405 columns, outliers removed), i.e. N = 0.9932 * T^0.708
+# 3D bottom (mid grey lower edge): log10 N = 0.0019 + 0.6623 log10 T (fit on 470 columns, outliers removed), i.e. N = 1.004 * T^0.662
+# 2D bottom (olive lower edge): log10 N = 0.0000 + 0.5535 log10 T (fit on 395 columns, outliers removed), i.e. N = 1 * T^0.553
+# green line (upper bound): log10 N = -0.0009 + 1.0002 log10 T (fit on 469 columns, outliers removed), i.e. N = 0.9979 * T^1.000
+# blue line (lower bound): log10 N = 0.6007 + 0.0000 log10 T (fit on 504 columns, outliers removed), i.e. N = 3.987 * T^0.000
+# The blue reference labels (30x30, 100x100, 300x300 on the green line; ST7LUS5, LPC1102, STM32 near the bottom) are annotations with arrows,
+# not plotted points, and are described in the alttext only.
+# Columns: kind, label, x, y, p, c, score, status.
+kind,label,x,y,p,c,score,status
+compartment,AB(L),574.738,102.749,,,0.972,isolated
+compartment,AB(R),2738.42,184.018,,,0.99,isolated
+compartment,BU(R),9407.73,329.565,,,0.985,isolated
+compartment,ATL(R),25650.2,1402.2,,,0.991,overlapping; renamed: '(R)' hidden by an overlapping label
+compartment,GOR(R),27146.4,1614.96,,,0.996,overlapping
+compartment,ATL(L),28233,1702.82,,,0.963,uncertain
+compartment,EPA(R),31485.2,1893.15,,,0.983,overlapping
+compartment,NO,36677,569.749,,,1,isolated
+compartment,a'L(R),39327.6,825.535,,,0.977,overlapping
+compartment,PB,46415.9,796.887,,,0.99,overlapping
+compartment,PED(R),55261.7,2104.74,,,0.988,overlapping
+compartment,b'L(R),68129.2,1114.58,,,0.989,overlapping
+compartment,CA(R),69631.1,2299.03,,,0.995,overlapping
+compartment,bL(R),71166,1154.65,,,0.983,overlapping
+compartment,AOTU(R),93260.3,934.155,,,0.884,overlapping; found with threshold 0.85
+compartment,aL(R),95732.8,1329.85,,,0.982,overlapping
+compartment,CRE(R),138690,3331.16,,,0.996,overlapping
+compartment,EB,165121,452.882,,,1,isolated; found with threshold 0.85
+compartment,gL(R),177828,1658.31,,,0.984,isolated
+compartment,SIP(R),187382,5179.93,,,0.991,overlapping
+compartment,SCL(R),189849,6516.62,,,0.981,overlapping
+compartment,IB,200049,4045.35,,,1,uncertain
+compartment,ICL(R),202683,4912.66,,,0.995,overlapping
+compartment,LH(R),233037,3103.98,,,0.984,overlapping
+compartment,WED(R),234055,3836.62,,,0.993,overlapping
+compartment,LAL(R),235078,3215.57,,,0.995,overlapping
+compartment,SPS(R),255386,4912.66,,,0.987,overlapping
+compartment,PLP(R),432876,7775.24,,,1,overlapping; renamed: '(R)' hidden by an overlapping label
+compartment,FB,452171,2104.74,,,1,isolated
+compartment,SMP(L),462139,4418.78,,,0.974,overlapping
+compartment,PVLP(R),478547,5179.93,,,0.994,overlapping; renamed: '(R)' hidden by an overlapping label
+compartment,SLP(R),489096,6871.16,,,0.986,overlapping
+compartment,SMP(R),513130,6871.16,,,0.992,overlapping
+compartment,AVLP(R),632610,5758.89,,,0.994,overlapping; renamed: '(R)' hidden by an overlapping label
+line,3D top (light grey upper edge),103.55,38.5605,,,,trace
+line,3D top (light grey upper edge),105.372,38.5605,,,,trace
+line,3D top (light grey upper edge),107.227,39.2475,,,,trace
+line,3D top (light grey upper edge),109.114,39.9467,,,,trace
+line,3D top (light grey upper edge),111.034,40.6583,,,,trace
+line,3D top (light grey upper edge),112.987,40.6583,,,,trace
+line,3D top (light grey upper edge),114.976,41.3827,,,,trace
+line,3D top (light grey upper edge),116.999,42.12,,,,trace
+line,3D top (light grey upper edge),119.058,42.8704,,,,trace
+line,3D top (light grey upper edge),121.153,43.6341,,,,trace
+line,3D top (light grey upper edge),123.285,43.6341,,,,trace
+line,3D top (light grey upper edge),125.454,44.4115,,,,trace
+line,3D top (light grey upper edge),127.662,45.2027,,,,trace
+line,3D top (light grey upper edge),129.908,46.008,,,,trace
+line,3D top (light grey upper edge),132.194,46.8277,,,,trace
+line,3D top (light grey upper edge),134.52,46.8277,,,,trace
+line,3D top (light grey upper edge),136.887,47.662,,,,trace
+line,3D top (light grey upper edge),139.296,48.5111,,,,trace
+line,3D top (light grey upper edge),141.747,49.3753,,,,trace
+line,3D top (light grey upper edge),144.242,49.3753,,,,trace
+line,3D top (light grey upper edge),146.78,50.255,,,,trace
+line,3D top (light grey upper edge),149.363,51.1503,,,,trace
+line,3D top (light grey upper edge),151.991,52.0616,,,,trace
+line,3D top (light grey upper edge),154.666,52.0616,,,,trace
+line,3D top (light grey upper edge),157.387,52.9891,,,,trace
+line,3D top (light grey upper edge),160.157,53.9331,,,,trace
+line,3D top (light grey upper edge),162.975,54.894,,,,trace
+line,3D top (light grey upper edge),165.843,55.872,,,,trace
+line,3D top (light grey upper edge),168.761,56.8674,,,,trace
+line,3D top (light grey upper edge),171.731,56.8674,,,,trace
+line,3D top (light grey upper edge),174.753,57.8805,,,,trace
+line,3D top (light grey upper edge),177.828,58.9117,,,,trace
+line,3D top (light grey upper edge),180.957,58.9117,,,,trace
+line,3D top (light grey upper edge),184.141,59.9612,,,,trace
+line,3D top (light grey upper edge),187.382,61.0295,,,,trace
+line,3D top (light grey upper edge),190.679,62.1167,,,,trace
+line,3D top (light grey upper edge),194.034,63.2234,,,,trace
+line,3D top (light grey upper edge),197.449,63.2234,,,,trace
+line,3D top (light grey upper edge),200.923,64.3498,,,,trace
+line,3D top (light grey upper edge),204.459,65.4962,,,,trace
+line,3D top (light grey upper edge),208.057,66.6631,,,,trace
+line,3D top (light grey upper edge),211.718,66.6631,,,,trace
+line,3D top (light grey upper edge),215.443,67.8507,,,,trace
+line,3D top (light grey upper edge),219.235,69.0595,,,,trace
+line,3D top (light grey upper edge),223.092,70.2898,,,,trace
+line,3D top (light grey upper edge),227.018,70.2898,,,,trace
+line,3D top (light grey upper edge),231.013,71.5421,,,,trace
+line,3D top (light grey upper edge),235.078,72.8167,,,,trace
+line,3D top (light grey upper edge),239.215,74.1139,,,,trace
+line,3D top (light grey upper edge),243.424,75.4343,,,,trace
+line,3D top (light grey upper edge),247.708,75.4343,,,,trace
+line,3D top (light grey upper edge),252.067,76.7782,,,,trace
+line,3D top (light grey upper edge),256.502,78.1461,,,,trace
+line,3D top (light grey upper edge),261.016,79.5383,,,,trace
+line,3D top (light grey upper edge),265.609,79.5383,,,,trace
+line,3D top (light grey upper edge),270.283,80.9553,,,,trace
+line,3D top (light grey upper edge),275.039,82.3976,,,,trace
+line,3D top (light grey upper edge),279.879,83.8656,,,,trace
+line,3D top (light grey upper edge),284.804,85.3597,,,,trace
+line,3D top (light grey upper edge),289.815,85.3597,,,,trace
+line,3D top (light grey upper edge),294.915,86.8804,,,,trace
+line,3D top (light grey upper edge),300.105,88.4283,,,,trace
+line,3D top (light grey upper edge),305.386,90.0037,,,,trace
+line,3D top (light grey upper edge),310.759,91.6072,,,,trace
+line,3D top (light grey upper edge),316.228,91.6072,,,,trace
+line,3D top (light grey upper edge),321.792,93.2392,,,,trace
+line,3D top (light grey upper edge),327.455,94.9003,,,,trace
+line,3D top (light grey upper edge),333.217,96.591,,,,trace
+line,3D top (light grey upper edge),339.081,96.591,,,,trace
+line,3D top (light grey upper edge),345.047,98.3119,,,,trace
+line,3D top (light grey upper edge),351.119,100.063,,,,trace
+line,3D top (light grey upper edge),357.298,101.846,,,,trace
+line,3D top (light grey upper edge),363.585,103.66,,,,trace
+line,3D top (light grey upper edge),369.983,103.66,,,,trace
+line,3D top (light grey upper edge),376.494,105.507,,,,trace
+line,3D top (light grey upper edge),383.119,107.387,,,,trace
+line,3D top (light grey upper edge),389.86,109.3,,,,trace
+line,3D top (light grey upper edge),396.721,109.3,,,,trace
+line,3D top (light grey upper edge),403.702,111.247,,,,trace
+line,3D top (light grey upper edge),410.806,113.229,,,,trace
+line,3D top (light grey upper edge),418.034,115.247,,,,trace
+line,3D top (light grey upper edge),425.391,117.3,,,,trace
+line,3D top (light grey upper edge),432.876,117.3,,,,trace
+line,3D top (light grey upper edge),440.493,119.39,,,,trace
+line,3D top (light grey upper edge),448.245,121.517,,,,trace
+line,3D top (light grey upper edge),456.132,123.681,,,,trace
+line,3D top (light grey upper edge),464.159,125.885,,,,trace
+line,3D top (light grey upper edge),472.327,125.885,,,,trace
+line,3D top (light grey upper edge),480.638,128.128,,,,trace
+line,3D top (light grey upper edge),489.096,130.41,,,,trace
+line,3D top (light grey upper edge),497.702,132.734,,,,trace
+line,3D top (light grey upper edge),506.46,132.734,,,,trace
+line,3D top (light grey upper edge),515.372,135.098,,,,trace
+line,3D top (light grey upper edge),524.441,137.505,,,,trace
+line,3D top (light grey upper edge),533.67,139.955,,,,trace
+line,3D top (light grey upper edge),543.061,139.955,,,,trace
+line,3D top (light grey upper edge),552.617,142.448,,,,trace
+line,3D top (light grey upper edge),562.341,144.986,,,,trace
+line,3D top (light grey upper edge),572.237,147.569,,,,trace
+line,3D top (light grey upper edge),582.306,150.198,,,,trace
+line,3D top (light grey upper edge),592.553,152.874,,,,trace
+line,3D top (light grey upper edge),602.98,152.874,,,,trace
+line,3D top (light grey upper edge),613.591,155.598,,,,trace
+line,3D top (light grey upper edge),624.388,158.37,,,,trace
+line,3D top (light grey upper edge),635.375,158.37,,,,trace
+line,3D top (light grey upper edge),681.292,169.961,,,,trace
+line,3D top (light grey upper edge),705.48,176.071,,,,trace
+line,3D top (light grey upper edge),717.894,172.989,,,,trace
+line,3D top (light grey upper edge),730.527,179.207,,,,trace
+line,3D top (light grey upper edge),743.382,179.207,,,,trace
+line,3D top (light grey upper edge),756.463,182.4,,,,trace
+line,3D top (light grey upper edge),783.32,188.957,,,,trace
+line,3D top (light grey upper edge),797.104,192.324,,,,trace
+line,3D top (light grey upper edge),811.131,195.75,,,,trace
+line,3D top (light grey upper edge),825.404,195.75,,,,trace
+line,3D top (light grey upper edge),839.929,195.75,,,,trace
+line,3D top (light grey upper edge),869.749,206.4,,,,trace
+line,3D top (light grey upper edge),885.054,206.4,,,,trace
+line,3D top (light grey upper edge),900.628,210.077,,,,trace
+line,3D top (light grey upper edge),916.476,213.82,,,,trace
+line,3D top (light grey upper edge),932.603,217.629,,,,trace
+line,3D top (light grey upper edge),949.014,213.82,,,,trace
+line,3D top (light grey upper edge),982.707,225.452,,,,trace
+line,3D top (light grey upper edge),1035.5,229.469,,,,trace
+line,3D top (light grey upper edge),1110.34,246.264,,,,trace
+line,3D top (light grey upper edge),1129.87,250.651,,,,trace
+line,3D top (light grey upper edge),1169.99,259.662,,,,trace
+line,3D top (light grey upper edge),1321.94,283.631,,,,trace
+line,3D top (light grey upper edge),1345.2,288.684,,,,trace
+line,3D top (light grey upper edge),1368.87,293.827,,,,trace
+line,3D top (light grey upper edge),1392.96,293.827,,,,trace
+line,3D top (light grey upper edge),1417.47,299.062,,,,trace
+line,3D top (light grey upper edge),1467.8,309.812,,,,trace
+line,3D top (light grey upper edge),1519.91,315.332,,,,trace
+line,3D top (light grey upper edge),1546.66,320.95,,,,trace
+line,3D top (light grey upper edge),1573.87,326.668,,,,trace
+line,3D top (light grey upper edge),1601.57,332.488,,,,trace
+line,3D top (light grey upper edge),1717.31,344.44,,,,trace
+line,3D top (light grey upper edge),1747.53,356.822,,,,trace
+line,3D top (light grey upper edge),1778.28,356.822,,,,trace
+line,3D top (light grey upper edge),1809.57,363.179,,,,trace
+line,3D top (light grey upper edge),1841.41,369.65,,,,trace
+line,3D top (light grey upper edge),1873.82,376.235,,,,trace
+line,3D top (light grey upper edge),1906.79,376.235,,,,trace
+line,3D top (light grey upper edge),1940.34,382.938,,,,trace
+line,3D top (light grey upper edge),1974.49,389.76,,,,trace
+line,3D top (light grey upper edge),2009.23,396.704,,,,trace
+line,3D top (light grey upper edge),2080.57,403.772,,,,trace
+line,3D top (light grey upper edge),2192.35,425.739,,,,trace
+line,3D top (light grey upper edge),2230.92,425.739,,,,trace
+line,3D top (light grey upper edge),2270.18,433.323,,,,trace
+line,3D top (light grey upper edge),2310.13,441.043,,,,trace
+line,3D top (light grey upper edge),2392.15,448.901,,,,trace
+line,3D top (light grey upper edge),2434.24,456.898,,,,trace
+line,3D top (light grey upper edge),2477.08,465.038,,,,trace
+line,3D top (light grey upper edge),2520.67,473.323,,,,trace
+line,3D top (light grey upper edge),2610.16,481.756,,,,trace
+line,3D top (light grey upper edge),2798.79,507.966,,,,trace
+line,3D top (light grey upper edge),2848.04,517.015,,,,trace
+line,3D top (light grey upper edge),3001.05,545.144,,,,trace
+line,3D top (light grey upper edge),3162.28,564.741,,,,trace
+line,3D top (light grey upper edge),3217.92,574.802,,,,trace
+line,3D top (light grey upper edge),3274.55,574.802,,,,trace
+line,3D top (light grey upper edge),3332.17,585.042,,,,trace
+line,3D top (light grey upper edge),3390.81,595.465,,,,trace
+line,3D top (light grey upper edge),3450.47,606.074,,,,trace
+line,3D top (light grey upper edge),3511.19,616.871,,,,trace
+line,3D top (light grey upper edge),3572.98,616.871,,,,trace
+line,3D top (light grey upper edge),3635.85,627.861,,,,trace
+line,3D top (light grey upper edge),3699.83,639.047,,,,trace
+line,3D top (light grey upper edge),3764.94,650.432,,,,trace
+line,3D top (light grey upper edge),3831.19,662.02,,,,trace
+line,3D top (light grey upper edge),3967.21,673.814,,,,trace
+line,3D top (light grey upper edge),4108.06,698.037,,,,trace
+line,3D top (light grey upper edge),4180.34,698.037,,,,trace
+line,3D top (light grey upper edge),4253.91,710.473,,,,trace
+line,3D top (light grey upper edge),4328.76,723.131,,,,trace
+line,3D top (light grey upper edge),4404.93,736.014,,,,trace
+line,3D top (light grey upper edge),4482.45,749.126,,,,trace
+line,3D top (light grey upper edge),4561.32,749.126,,,,trace
+line,3D top (light grey upper edge),4641.59,762.472,,,,trace
+line,3D top (light grey upper edge),4723.27,776.056,,,,trace
+line,3D top (light grey upper edge),4806.38,789.882,,,,trace
+line,3D top (light grey upper edge),4890.96,789.882,,,,trace
+line,3D top (light grey upper edge),4977.02,803.955,,,,trace
+line,3D top (light grey upper edge),5153.72,832.856,,,,trace
+line,3D top (light grey upper edge),5244.41,847.694,,,,trace
+line,3D top (light grey upper edge),5336.7,847.694,,,,trace
+line,3D top (light grey upper edge),5526.17,878.167,,,,trace
+line,3D top (light grey upper edge),5623.41,878.167,,,,trace
+line,3D top (light grey upper edge),5722.37,893.812,,,,trace
+line,3D top (light grey upper edge),5925.53,925.944,,,,trace
+line,3D top (light grey upper edge),6029.8,925.944,,,,trace
+line,3D top (light grey upper edge),6135.91,959.23,,,,trace
+line,3D top (light grey upper edge),6243.88,959.23,,,,trace
+line,3D top (light grey upper edge),6353.75,976.319,,,,trace
+line,3D top (light grey upper edge),6465.56,993.713,,,,trace
+line,3D top (light grey upper edge),6932.81,1047.78,,,,trace
+line,3D top (light grey upper edge),7054.8,1066.44,,,,trace
+line,3D top (light grey upper edge),7305.27,1085.44,,,,trace
+line,3D top (light grey upper edge),7564.63,1124.46,,,,trace
+line,3D top (light grey upper edge),7833.2,1144.5,,,,trace
+line,3D top (light grey upper edge),8399.29,1228.26,,,,trace
+line,3D top (light grey upper edge),8697.49,1250.14,,,,trace
+line,3D top (light grey upper edge),8850.54,1272.41,,,,trace
+line,3D top (light grey upper edge),9326.03,1318.16,,,,trace
+line,3D top (light grey upper edge),10722.7,1465.49,,,,trace
+line,3D top (light grey upper edge),10911.4,1491.59,,,,trace
+line,3D top (light grey upper edge),11103.4,1518.17,,,,trace
+line,3D top (light grey upper edge),11497.6,1545.22,,,,trace
+line,3D top (light grey upper edge),11699.9,1572.74,,,,trace
+line,3D top (light grey upper edge),12990.8,1717.92,,,,trace
+line,3D top (light grey upper edge),13219.4,1748.53,,,,trace
+line,3D top (light grey upper edge),13452,1779.68,,,,trace
+line,3D top (light grey upper edge),13688.7,1779.68,,,,trace
+line,3D top (light grey upper edge),13929.6,1811.39,,,,trace
+line,3D top (light grey upper edge),14424.2,1843.66,,,,trace
+line,3D top (light grey upper edge),14678,1876.5,,,,trace
+line,3D top (light grey upper edge),15199.1,1943.96,,,,trace
+line,3D top (light grey upper edge),15738.7,2013.84,,,,trace
+line,3D top (light grey upper edge),16015.7,2013.84,,,,trace
+line,3D top (light grey upper edge),16297.5,2049.72,,,,trace
+line,3D top (light grey upper edge),16876.1,2123.41,,,,trace
+line,3D top (light grey upper edge),17173.1,2123.41,,,,trace
+line,3D top (light grey upper edge),17475.3,2161.24,,,,trace
+line,3D top (light grey upper edge),17782.8,2199.74,,,,trace
+line,3D top (light grey upper edge),18095.7,2238.93,,,,trace
+line,3D top (light grey upper edge),18414.1,2278.82,,,,trace
+line,3D top (light grey upper edge),18738.2,2278.82,,,,trace
+line,3D top (light grey upper edge),19403.4,2360.74,,,,trace
+line,3D top (light grey upper edge),20092.3,2402.8,,,,trace
+line,3D top (light grey upper edge),20445.9,2445.6,,,,trace
+line,3D top (light grey upper edge),21544.3,2578.66,,,,trace
+line,3D top (light grey upper edge),21923.5,2578.66,,,,trace
+line,3D top (light grey upper edge),23507.8,2718.95,,,,trace
+line,3D top (light grey upper edge),25206.7,2917.95,,,,trace
+line,3D top (light grey upper edge),26101.6,2969.93,,,,trace
+line,3D top (light grey upper edge),26560.9,3022.84,,,,trace
+line,3D top (light grey upper edge),27028.3,3076.7,,,,trace
+line,3D top (light grey upper edge),27503.9,3076.7,,,,trace
+line,3D top (light grey upper edge),27987.9,3131.51,,,,trace
+line,3D top (light grey upper edge),28480.4,3187.3,,,,trace
+line,3D top (light grey upper edge),28981.5,3244.09,,,,trace
+line,3D top (light grey upper edge),30010.5,3301.88,,,,trace
+line,3D top (light grey upper edge),31075.9,3420.58,,,,trace
+line,3D top (light grey upper edge),31622.8,3481.52,,,,trace
+line,3D top (light grey upper edge),32745.5,3543.54,,,,trace
+line,3D top (light grey upper edge),33321.7,3606.68,,,,trace
+line,3D top (light grey upper edge),34504.7,3670.93,,,,trace
+line,3D top (light grey upper edge),35111.9,3736.33,,,,trace
+line,3D top (light grey upper edge),37649.4,3939.6,,,,trace
+line,3D top (light grey upper edge),38311.9,4009.79,,,,trace
+line,3D top (light grey upper edge),38986,4081.23,,,,trace
+line,3D top (light grey upper edge),39672.1,4153.94,,,,trace
+line,3D top (light grey upper edge),40370.2,4153.94,,,,trace
+line,3D top (light grey upper edge),41080.6,4227.94,,,,trace
+line,3D top (light grey upper edge),41803.4,4303.27,,,,trace
+line,3D top (light grey upper edge),43287.6,4457.96,,,,trace
+line,3D top (light grey upper edge),44049.3,4457.96,,,,trace
+line,3D top (light grey upper edge),45613.2,4618.22,,,,trace
+line,3D top (light grey upper edge),48063.8,4784.24,,,,trace
+line,3D top (light grey upper edge),49770.2,4956.23,,,,trace
+line,3D top (light grey upper edge),51537.2,5044.53,,,,trace
+line,3D top (light grey upper edge),52444.1,5134.4,,,,trace
+line,3D top (light grey upper edge),53367,5225.87,,,,trace
+line,3D top (light grey upper edge),54306.1,5318.97,,,,trace
+line,3D top (light grey upper edge),55261.7,5413.73,,,,trace
+line,3D top (light grey upper edge),56234.1,5413.73,,,,trace
+line,3D top (light grey upper edge),57223.7,5510.18,,,,trace
+line,3D top (light grey upper edge),58230.6,5608.35,,,,trace
+line,3D top (light grey upper edge),59255.3,5708.27,,,,trace
+line,3D top (light grey upper edge),60298,5708.27,,,,trace
+line,3D top (light grey upper edge),61359.1,5809.96,,,,trace
+line,3D top (light grey upper edge),62438.8,5913.47,,,,trace
+line,3D top (light grey upper edge),63537.5,6018.82,,,,trace
+line,3D top (light grey upper edge),65793.3,6126.05,,,,trace
+line,3D top (light grey upper edge),69328.1,6459.34,,,,trace
+line,3D top (light grey upper edge),79710.4,7181.3,,,,trace
+line,3D top (light grey upper edge),82540.4,7309.24,,,,trace
+line,3D top (light grey upper edge),83992.9,7439.45,,,,trace
+line,3D top (light grey upper edge),86974.9,7706.89,,,,trace
+line,3D top (light grey upper edge),90062.8,7844.2,,,,trace
+line,3D top (light grey upper edge),93260.3,8126.18,,,,trace
+line,3D top (light grey upper edge),94901.4,8270.96,,,,trace
+line,3D top (light grey upper edge),100000,8568.29,,,,trace
+line,3D top (light grey upper edge),101760,8720.94,,,,trace
+line,3D top (light grey upper edge),109114,9195.4,,,,trace
+line,3D top (light grey upper edge),112987,9359.22,,,,trace
+line,3D top (light grey upper edge),114976,9525.96,,,,trace
+line,3D top (light grey upper edge),116999,9695.67,,,,trace
+line,3D top (light grey upper edge),123285,10044.2,,,,trace
+line,3D top (light grey upper edge),125454,10223.2,,,,trace
+line,3D top (light grey upper edge),127662,10405.3,,,,trace
+line,3D top (light grey upper edge),129908,10590.7,,,,trace
+line,3D top (light grey upper edge),132194,10590.7,,,,trace
+line,3D top (light grey upper edge),134520,10779.4,,,,trace
+line,3D top (light grey upper edge),136887,10971.4,,,,trace
+line,3D top (light grey upper edge),139296,11166.9,,,,trace
+line,3D top (light grey upper edge),141747,11166.9,,,,trace
+line,3D top (light grey upper edge),144242,11365.8,,,,trace
+line,3D top (light grey upper edge),149363,11774.4,,,,trace
+line,3D top (light grey upper edge),151991,11774.4,,,,trace
+line,3D top (light grey upper edge),154666,11984.2,,,,trace
+line,3D top (light grey upper edge),157387,12197.7,,,,trace
+line,3D top (light grey upper edge),160157,12415,,,,trace
+line,3D top (light grey upper edge),162975,12636.1,,,,trace
+line,3D top (light grey upper edge),168761,12861.3,,,,trace
+line,3D top (light grey upper edge),171731,13090.4,,,,trace
+line,3D top (light grey upper edge),174753,13323.6,,,,trace
+line,3D top (light grey upper edge),177828,13323.6,,,,trace
+line,3D top (light grey upper edge),184141,13802.6,,,,trace
+line,3D top (light grey upper edge),187382,14048.5,,,,trace
+line,3D top (light grey upper edge),194034,14553.5,,,,trace
+line,3D top (light grey upper edge),200923,14812.8,,,,trace
+line,3D top (light grey upper edge),204459,15076.7,,,,trace
+line,3D top (light grey upper edge),211718,15345.3,,,,trace
+line,3D top (light grey upper edge),215443,15618.7,,,,trace
+line,3D top (light grey upper edge),219235,15896.9,,,,trace
+line,3D top (light grey upper edge),223092,16180.1,,,,trace
+line,3D top (light grey upper edge),227018,16180.1,,,,trace
+line,3D top (light grey upper edge),235078,16761.8,,,,trace
+line,3D top (light grey upper edge),239215,17060.4,,,,trace
+line,3D top (light grey upper edge),243424,17364.4,,,,trace
+line,3D top (light grey upper edge),247708,17364.4,,,,trace
+line,3D top (light grey upper edge),252067,17673.7,,,,trace
+line,3D top (light grey upper edge),256502,17988.6,,,,trace
+line,3D top (light grey upper edge),261016,17988.6,,,,trace
+line,3D top (light grey upper edge),265609,18635.3,,,,trace
+line,3D top (light grey upper edge),270283,18635.3,,,,trace
+line,3D top (light grey upper edge),275039,18967.3,,,,trace
+line,3D top (light grey upper edge),279879,19305.2,,,,trace
+line,3D top (light grey upper edge),284804,19305.2,,,,trace
+line,3D top (light grey upper edge),289815,19649.1,,,,trace
+line,3D top (light grey upper edge),294915,19999.2,,,,trace
+line,3D top (light grey upper edge),300105,20355.5,,,,trace
+line,3D top (light grey upper edge),305386,20718.1,,,,trace
+line,3D top (light grey upper edge),310759,21087.2,,,,trace
+line,3D top (light grey upper edge),316228,21087.2,,,,trace
+line,3D top (light grey upper edge),321792,21462.9,,,,trace
+line,3D top (light grey upper edge),327455,21845.3,,,,trace
+line,3D top (light grey upper edge),333217,21845.3,,,,trace
+line,3D top (light grey upper edge),339081,22234.5,,,,trace
+line,3D top (light grey upper edge),345047,22630.6,,,,trace
+line,3D top (light grey upper edge),351119,23033.8,,,,trace
+line,3D top (light grey upper edge),357298,23444.1,,,,trace
+line,3D top (light grey upper edge),363585,23444.1,,,,trace
+line,3D top (light grey upper edge),369983,23861.8,,,,trace
+line,3D top (light grey upper edge),376494,24286.9,,,,trace
+line,3D top (light grey upper edge),383119,24719.6,,,,trace
+line,3D top (light grey upper edge),389860,25160,,,,trace
+line,3D top (light grey upper edge),396721,25160,,,,trace
+line,3D top (light grey upper edge),403702,25608.2,,,,trace
+line,3D top (light grey upper edge),410806,26064.5,,,,trace
+line,3D top (light grey upper edge),418034,26528.8,,,,trace
+line,3D top (light grey upper edge),425391,26528.8,,,,trace
+line,3D top (light grey upper edge),432876,27001.4,,,,trace
+line,3D top (light grey upper edge),440493,27482.5,,,,trace
+line,3D top (light grey upper edge),448245,27972.1,,,,trace
+line,3D top (light grey upper edge),456132,28470.5,,,,trace
+line,3D top (light grey upper edge),464159,28470.5,,,,trace
+line,3D top (light grey upper edge),472327,28977.7,,,,trace
+line,3D top (light grey upper edge),480638,29493.9,,,,trace
+line,3D top (light grey upper edge),489096,30019.4,,,,trace
+line,3D top (light grey upper edge),497702,30019.4,,,,trace
+line,3D top (light grey upper edge),506460,30554.2,,,,trace
+line,3D top (light grey upper edge),515372,31098.5,,,,trace
+line,3D top (light grey upper edge),524441,31652.6,,,,trace
+line,3D top (light grey upper edge),533670,31652.6,,,,trace
+line,3D top (light grey upper edge),543061,32216.5,,,,trace
+line,3D top (light grey upper edge),552617,32790.5,,,,trace
+line,3D top (light grey upper edge),562341,33374.6,,,,trace
+line,3D top (light grey upper edge),572237,33969.2,,,,trace
+line,3D top (light grey upper edge),582306,34574.4,,,,trace
+line,3D top (light grey upper edge),592553,34574.4,,,,trace
+line,3D top (light grey upper edge),602980,35190.4,,,,trace
+line,3D top (light grey upper edge),613591,35817.3,,,,trace
+line,3D top (light grey upper edge),624388,35817.3,,,,trace
+line,3D top (light grey upper edge),635375,36455.4,,,,trace
+line,3D top (light grey upper edge),646556,37104.9,,,,trace
+line,3D top (light grey upper edge),657933,37765.9,,,,trace
+line,3D top (light grey upper edge),669511,37765.9,,,,trace
+line,3D top (light grey upper edge),681292,39123.6,,,,trace
+line,3D top (light grey upper edge),693281,39123.6,,,,trace
+line,3D top (light grey upper edge),705480,39820.6,,,,trace
+line,3D top (light grey upper edge),717894,40530,,,,trace
+line,3D top (light grey upper edge),730527,41252.1,,,,trace
+line,3D top (light grey upper edge),743382,41252.1,,,,trace
+line,3D top (light grey upper edge),756463,41987,,,,trace
+line,3D top (light grey upper edge),769775,42735.1,,,,trace
+line,3D top (light grey upper edge),783320,43496.4,,,,trace
+line,3D top (light grey upper edge),797104,43496.4,,,,trace
+line,3D top (light grey upper edge),811131,44271.3,,,,trace
+line,3D top (light grey upper edge),825404,45060,,,,trace
+line,3D top (light grey upper edge),839929,45862.8,,,,trace
+line,3D top (light grey upper edge),854709,46679.9,,,,trace
+line,3D top (light grey upper edge),869749,46679.9,,,,trace
+line,3D top (light grey upper edge),885054,47511.5,,,,trace
+line,3D top (light grey upper edge),900628,48358,,,,trace
+line,3D top (light grey upper edge),916476,48358,,,,trace
+line,3D top (light grey upper edge),932603,50096.4,,,,trace
+line,3D top (light grey upper edge),949014,50096.4,,,,trace
+line,3D top (light grey upper edge),965714,50988.9,,,,trace
+line,2D top (mid grey upper edge),103.55,26.6128,,,,trace
+line,2D top (mid grey upper edge),105.372,26.6128,,,,trace
+line,2D top (mid grey upper edge),107.227,27.0869,,,,trace
+line,2D top (mid grey upper edge),109.114,27.5695,,,,trace
+line,2D top (mid grey upper edge),111.034,28.0607,,,,trace
+line,2D top (mid grey upper edge),112.987,28.0607,,,,trace
+line,2D top (mid grey upper edge),114.976,28.5606,,,,trace
+line,2D top (mid grey upper edge),116.999,29.0694,,,,trace
+line,2D top (mid grey upper edge),119.058,29.5873,,,,trace
+line,2D top (mid grey upper edge),121.153,29.5873,,,,trace
+line,2D top (mid grey upper edge),123.285,30.1144,,,,trace
+line,2D top (mid grey upper edge),125.454,30.6509,,,,trace
+line,2D top (mid grey upper edge),127.662,30.6509,,,,trace
+line,2D top (mid grey upper edge),129.908,31.197,,,,trace
+line,2D top (mid grey upper edge),132.194,31.7528,,,,trace
+line,2D top (mid grey upper edge),134.52,31.7528,,,,trace
+line,2D top (mid grey upper edge),136.887,32.3185,,,,trace
+line,2D top (mid grey upper edge),139.296,32.8943,,,,trace
+line,2D top (mid grey upper edge),141.747,32.8943,,,,trace
+line,2D top (mid grey upper edge),144.242,33.4803,,,,trace
+line,2D top (mid grey upper edge),146.78,34.0768,,,,trace
+line,2D top (mid grey upper edge),149.363,34.0768,,,,trace
+line,2D top (mid grey upper edge),151.991,34.6839,,,,trace
+line,2D top (mid grey upper edge),154.666,35.3018,,,,trace
+line,2D top (mid grey upper edge),157.387,35.9307,,,,trace
+line,2D top (mid grey upper edge),160.157,35.9307,,,,trace
+line,2D top (mid grey upper edge),162.975,36.5708,,,,trace
+line,2D top (mid grey upper edge),165.843,37.2224,,,,trace
+line,2D top (mid grey upper edge),168.761,37.8855,,,,trace
+line,2D top (mid grey upper edge),171.731,37.8855,,,,trace
+line,2D top (mid grey upper edge),174.753,38.5605,,,,trace
+line,2D top (mid grey upper edge),177.828,39.2475,,,,trace
+line,2D top (mid grey upper edge),180.957,39.2475,,,,trace
+line,2D top (mid grey upper edge),184.141,39.9467,,,,trace
+line,2D top (mid grey upper edge),187.382,40.6583,,,,trace
+line,2D top (mid grey upper edge),190.679,40.6583,,,,trace
+line,2D top (mid grey upper edge),194.034,41.3827,,,,trace
+line,2D top (mid grey upper edge),197.449,42.12,,,,trace
+line,2D top (mid grey upper edge),200.923,42.8704,,,,trace
+line,2D top (mid grey upper edge),204.459,42.8704,,,,trace
+line,2D top (mid grey upper edge),208.057,43.6341,,,,trace
+line,2D top (mid grey upper edge),211.718,43.6341,,,,trace
+line,2D top (mid grey upper edge),215.443,44.4115,,,,trace
+line,2D top (mid grey upper edge),219.235,45.2027,,,,trace
+line,2D top (mid grey upper edge),223.092,46.008,,,,trace
+line,2D top (mid grey upper edge),227.018,46.008,,,,trace
+line,2D top (mid grey upper edge),231.013,46.8277,,,,trace
+line,2D top (mid grey upper edge),235.078,47.662,,,,trace
+line,2D top (mid grey upper edge),239.215,47.662,,,,trace
+line,2D top (mid grey upper edge),243.424,48.5111,,,,trace
+line,2D top (mid grey upper edge),247.708,49.3753,,,,trace
+line,2D top (mid grey upper edge),252.067,50.255,,,,trace
+line,2D top (mid grey upper edge),256.502,50.255,,,,trace
+line,2D top (mid grey upper edge),261.016,51.1503,,,,trace
+line,2D top (mid grey upper edge),265.609,52.0616,,,,trace
+line,2D top (mid grey upper edge),270.283,52.0616,,,,trace
+line,2D top (mid grey upper edge),275.039,52.9891,,,,trace
+line,2D top (mid grey upper edge),279.879,53.9331,,,,trace
+line,2D top (mid grey upper edge),284.804,53.9331,,,,trace
+line,2D top (mid grey upper edge),289.815,54.894,,,,trace
+line,2D top (mid grey upper edge),294.915,55.872,,,,trace
+line,2D top (mid grey upper edge),300.105,56.8674,,,,trace
+line,2D top (mid grey upper edge),305.386,56.8674,,,,trace
+line,2D top (mid grey upper edge),310.759,57.8805,,,,trace
+line,2D top (mid grey upper edge),316.228,58.9117,,,,trace
+line,2D top (mid grey upper edge),321.792,58.9117,,,,trace
+line,2D top (mid grey upper edge),327.455,59.9612,,,,trace
+line,2D top (mid grey upper edge),333.217,61.0295,,,,trace
+line,2D top (mid grey upper edge),339.081,61.0295,,,,trace
+line,2D top (mid grey upper edge),345.047,62.1167,,,,trace
+line,2D top (mid grey upper edge),351.119,63.2234,,,,trace
+line,2D top (mid grey upper edge),357.298,64.3498,,,,trace
+line,2D top (mid grey upper edge),363.585,64.3498,,,,trace
+line,2D top (mid grey upper edge),369.983,65.4962,,,,trace
+line,2D top (mid grey upper edge),376.494,66.6631,,,,trace
+line,2D top (mid grey upper edge),383.119,66.6631,,,,trace
+line,2D top (mid grey upper edge),389.86,67.8507,,,,trace
+line,2D top (mid grey upper edge),396.721,69.0595,,,,trace
+line,2D top (mid grey upper edge),403.702,70.2898,,,,trace
+line,2D top (mid grey upper edge),410.806,70.2898,,,,trace
+line,2D top (mid grey upper edge),418.034,71.5421,,,,trace
+line,2D top (mid grey upper edge),425.391,71.5421,,,,trace
+line,2D top (mid grey upper edge),432.876,72.8167,,,,trace
+line,2D top (mid grey upper edge),440.493,74.1139,,,,trace
+line,2D top (mid grey upper edge),448.245,75.4343,,,,trace
+line,2D top (mid grey upper edge),456.132,75.4343,,,,trace
+line,2D top (mid grey upper edge),464.159,76.7782,,,,trace
+line,2D top (mid grey upper edge),472.327,78.1461,,,,trace
+line,2D top (mid grey upper edge),480.638,79.5383,,,,trace
+line,2D top (mid grey upper edge),489.096,79.5383,,,,trace
+line,2D top (mid grey upper edge),506.46,82.3976,,,,trace
+line,2D top (mid grey upper edge),515.372,82.3976,,,,trace
+line,2D top (mid grey upper edge),524.441,83.8656,,,,trace
+line,2D top (mid grey upper edge),533.67,85.3597,,,,trace
+line,2D top (mid grey upper edge),543.061,85.3597,,,,trace
+line,2D top (mid grey upper edge),552.617,86.8804,,,,trace
+line,2D top (mid grey upper edge),562.341,88.4283,,,,trace
+line,2D top (mid grey upper edge),572.237,90.0037,,,,trace
+line,2D top (mid grey upper edge),602.98,93.2392,,,,trace
+line,2D top (mid grey upper edge),613.591,93.2392,,,,trace
+line,2D top (mid grey upper edge),624.388,94.9003,,,,trace
+line,2D top (mid grey upper edge),635.375,94.9003,,,,trace
+line,2D top (mid grey upper edge),657.933,96.591,,,,trace
+line,2D top (mid grey upper edge),669.511,100.063,,,,trace
+line,2D top (mid grey upper edge),693.281,101.846,,,,trace
+line,2D top (mid grey upper edge),705.48,103.66,,,,trace
+line,2D top (mid grey upper edge),717.894,103.66,,,,trace
+line,2D top (mid grey upper edge),730.527,105.507,,,,trace
+line,2D top (mid grey upper edge),756.463,109.3,,,,trace
+line,2D top (mid grey upper edge),769.775,109.3,,,,trace
+line,2D top (mid grey upper edge),797.104,113.229,,,,trace
+line,2D top (mid grey upper edge),839.929,117.3,,,,trace
+line,2D top (mid grey upper edge),854.709,117.3,,,,trace
+line,2D top (mid grey upper edge),869.749,119.39,,,,trace
+line,2D top (mid grey upper edge),885.054,121.517,,,,trace
+line,2D top (mid grey upper edge),900.628,123.681,,,,trace
+line,2D top (mid grey upper edge),932.603,125.885,,,,trace
+line,2D top (mid grey upper edge),949.014,128.128,,,,trace
+line,2D top (mid grey upper edge),965.714,128.128,,,,trace
+line,2D top (mid grey upper edge),1000,132.734,,,,trace
+line,2D top (mid grey upper edge),1017.6,135.098,,,,trace
+line,2D top (mid grey upper edge),1035.5,135.098,,,,trace
+line,2D top (mid grey upper edge),1053.72,137.505,,,,trace
+line,2D top (mid grey upper edge),1091.14,139.955,,,,trace
+line,2D top (mid grey upper edge),1129.87,144.986,,,,trace
+line,2D top (mid grey upper edge),1169.99,147.569,,,,trace
+line,2D top (mid grey upper edge),1232.85,152.874,,,,trace
+line,2D top (mid grey upper edge),1254.54,155.598,,,,trace
+line,2D top (mid grey upper edge),1276.62,158.37,,,,trace
+line,2D top (mid grey upper edge),1321.94,161.191,,,,trace
+line,2D top (mid grey upper edge),1345.2,164.063,,,,trace
+line,2D top (mid grey upper edge),1368.87,164.063,,,,trace
+line,2D top (mid grey upper edge),1392.96,166.986,,,,trace
+line,2D top (mid grey upper edge),1417.47,169.961,,,,trace
+line,2D top (mid grey upper edge),1442.42,172.989,,,,trace
+line,2D top (mid grey upper edge),1519.91,179.207,,,,trace
+line,2D top (mid grey upper edge),1601.57,185.65,,,,trace
+line,2D top (mid grey upper edge),1629.75,185.65,,,,trace
+line,2D top (mid grey upper edge),1658.43,188.957,,,,trace
+line,2D top (mid grey upper edge),1687.61,192.324,,,,trace
+line,2D top (mid grey upper edge),1717.31,192.324,,,,trace
+line,2D top (mid grey upper edge),1747.53,195.75,,,,trace
+line,2D top (mid grey upper edge),1841.41,202.787,,,,trace
+line,2D top (mid grey upper edge),1873.82,206.4,,,,trace
+line,2D top (mid grey upper edge),1940.34,213.82,,,,trace
+line,2D top (mid grey upper edge),1974.49,213.82,,,,trace
+line,2D top (mid grey upper edge),2009.23,217.629,,,,trace
+line,2D top (mid grey upper edge),2080.57,221.506,,,,trace
+line,2D top (mid grey upper edge),2117.18,225.452,,,,trace
+line,2D top (mid grey upper edge),2154.43,229.469,,,,trace
+line,2D top (mid grey upper edge),2230.92,233.557,,,,trace
+line,2D top (mid grey upper edge),2270.18,237.718,,,,trace
+line,2D top (mid grey upper edge),2310.13,237.718,,,,trace
+line,2D top (mid grey upper edge),2350.78,241.953,,,,trace
+line,2D top (mid grey upper edge),2392.15,246.264,,,,trace
+line,2D top (mid grey upper edge),2434.24,246.264,,,,trace
+line,2D top (mid grey upper edge),2477.08,250.651,,,,trace
+line,2D top (mid grey upper edge),2520.67,255.116,,,,trace
+line,2D top (mid grey upper edge),2565.02,259.662,,,,trace
+line,2D top (mid grey upper edge),2656.09,264.288,,,,trace
+line,2D top (mid grey upper edge),2750.39,273.788,,,,trace
+line,2D top (mid grey upper edge),2798.79,273.788,,,,trace
+line,2D top (mid grey upper edge),2898.15,283.631,,,,trace
+line,2D top (mid grey upper edge),2949.15,283.631,,,,trace
+line,2D top (mid grey upper edge),3001.05,288.684,,,,trace
+line,2D top (mid grey upper edge),3053.86,293.827,,,,trace
+line,2D top (mid grey upper edge),3107.59,293.827,,,,trace
+line,2D top (mid grey upper edge),3162.28,299.062,,,,trace
+line,2D top (mid grey upper edge),3217.92,304.39,,,,trace
+line,2D top (mid grey upper edge),3332.17,309.812,,,,trace
+line,2D top (mid grey upper edge),3450.47,315.332,,,,trace
+line,2D top (mid grey upper edge),3511.19,320.95,,,,trace
+line,2D top (mid grey upper edge),3572.98,326.668,,,,trace
+line,2D top (mid grey upper edge),3635.85,332.488,,,,trace
+line,2D top (mid grey upper edge),3699.83,332.488,,,,trace
+line,2D top (mid grey upper edge),3764.94,338.411,,,,trace
+line,2D top (mid grey upper edge),3831.19,344.44,,,,trace
+line,2D top (mid grey upper edge),3967.21,350.576,,,,trace
+line,2D top (mid grey upper edge),4037.02,356.822,,,,trace
+line,2D top (mid grey upper edge),4108.06,356.822,,,,trace
+line,2D top (mid grey upper edge),4180.34,363.179,,,,trace
+line,2D top (mid grey upper edge),4253.91,369.65,,,,trace
+line,2D top (mid grey upper edge),4328.76,369.65,,,,trace
+line,2D top (mid grey upper edge),4404.93,376.235,,,,trace
+line,2D top (mid grey upper edge),4482.45,382.938,,,,trace
+line,2D top (mid grey upper edge),4561.32,389.76,,,,trace
+line,2D top (mid grey upper edge),4641.59,389.76,,,,trace
+line,2D top (mid grey upper edge),4723.27,396.704,,,,trace
+line,2D top (mid grey upper edge),4806.38,403.772,,,,trace
+line,2D top (mid grey upper edge),4890.96,403.772,,,,trace
+line,2D top (mid grey upper edge),4977.02,410.965,,,,trace
+line,2D top (mid grey upper edge),5153.72,425.739,,,,trace
+line,2D top (mid grey upper edge),5244.41,425.739,,,,trace
+line,2D top (mid grey upper edge),5336.7,433.323,,,,trace
+line,2D top (mid grey upper edge),5526.17,441.043,,,,trace
+line,2D top (mid grey upper edge),5722.37,456.898,,,,trace
+line,2D top (mid grey upper edge),5925.53,465.038,,,,trace
+line,2D top (mid grey upper edge),6029.8,473.323,,,,trace
+line,2D top (mid grey upper edge),6135.91,481.756,,,,trace
+line,2D top (mid grey upper edge),6243.88,481.756,,,,trace
+line,2D top (mid grey upper edge),6353.75,490.339,,,,trace
+line,2D top (mid grey upper edge),6465.56,499.074,,,,trace
+line,2D top (mid grey upper edge),6579.33,499.074,,,,trace
+line,2D top (mid grey upper edge),6695.11,507.966,,,,trace
+line,2D top (mid grey upper edge),6812.92,517.015,,,,trace
+line,2D top (mid grey upper edge),6932.81,517.015,,,,trace
+line,2D top (mid grey upper edge),7054.8,526.226,,,,trace
+line,2D top (mid grey upper edge),7178.94,535.601,,,,trace
+line,2D top (mid grey upper edge),7305.27,545.144,,,,trace
+line,2D top (mid grey upper edge),7433.82,545.144,,,,trace
+line,2D top (mid grey upper edge),7564.63,554.856,,,,trace
+line,2D top (mid grey upper edge),7833.2,574.802,,,,trace
+line,2D top (mid grey upper edge),7971.04,574.802,,,,trace
+line,2D top (mid grey upper edge),8254.04,585.042,,,,trace
+line,2D top (mid grey upper edge),8399.29,595.465,,,,trace
+line,2D top (mid grey upper edge),8547.09,606.074,,,,trace
+line,2D top (mid grey upper edge),8697.49,616.871,,,,trace
+line,2D top (mid grey upper edge),8850.54,616.871,,,,trace
+line,2D top (mid grey upper edge),9006.28,627.861,,,,trace
+line,2D top (mid grey upper edge),9164.76,639.047,,,,trace
+line,2D top (mid grey upper edge),9490.14,650.432,,,,trace
+line,2D top (mid grey upper edge),9827.07,662.02,,,,trace
+line,2D top (mid grey upper edge),10000,673.814,,,,trace
+line,2D top (mid grey upper edge),10355,698.037,,,,trace
+line,2D top (mid grey upper edge),10537.2,698.037,,,,trace
+line,2D top (mid grey upper edge),10911.4,723.131,,,,trace
+line,2D top (mid grey upper edge),11103.4,736.014,,,,trace
+line,2D top (mid grey upper edge),11298.7,736.014,,,,trace
+line,2D top (mid grey upper edge),11497.6,749.126,,,,trace
+line,2D top (mid grey upper edge),11699.9,749.126,,,,trace
+line,2D top (mid grey upper edge),11905.8,762.472,,,,trace
+line,2D top (mid grey upper edge),12115.3,776.056,,,,trace
+line,2D top (mid grey upper edge),12328.5,789.882,,,,trace
+line,2D top (mid grey upper edge),12545.4,789.882,,,,trace
+line,2D top (mid grey upper edge),12766.2,803.955,,,,trace
+line,2D top (mid grey upper edge),12990.8,818.278,,,,trace
+line,2D top (mid grey upper edge),13452,832.856,,,,trace
+line,2D top (mid grey upper edge),13688.7,847.694,,,,trace
+line,2D top (mid grey upper edge),13929.6,847.694,,,,trace
+line,2D top (mid grey upper edge),14424.2,878.167,,,,trace
+line,2D top (mid grey upper edge),14678,893.812,,,,trace
+line,2D top (mid grey upper edge),15199.1,909.736,,,,trace
+line,2D top (mid grey upper edge),15466.6,925.944,,,,trace
+line,2D top (mid grey upper edge),15738.7,925.944,,,,trace
+line,2D top (mid grey upper edge),16015.7,942.44,,,,trace
+line,2D top (mid grey upper edge),16297.5,959.23,,,,trace
+line,2D top (mid grey upper edge),16584.3,959.23,,,,trace
+line,2D top (mid grey upper edge),16876.1,976.319,,,,trace
+line,2D top (mid grey upper edge),17173.1,993.713,,,,trace
+line,2D top (mid grey upper edge),17475.3,993.713,,,,trace
+line,2D top (mid grey upper edge),18095.7,1029.44,,,,trace
+line,2D top (mid grey upper edge),18414.1,1047.78,,,,trace
+line,2D top (mid grey upper edge),18738.2,1047.78,,,,trace
+line,2D top (mid grey upper edge),19403.4,1085.44,,,,trace
+line,2D top (mid grey upper edge),19744.9,1104.78,,,,trace
+line,2D top (mid grey upper edge),20092.3,1104.78,,,,trace
+line,2D top (mid grey upper edge),20445.9,1124.46,,,,trace
+line,2D top (mid grey upper edge),21923.5,1185.64,,,,trace
+line,2D top (mid grey upper edge),22309.2,1185.64,,,,trace
+line,2D top (mid grey upper edge),22701.8,1206.76,,,,trace
+line,2D top (mid grey upper edge),23507.8,1250.14,,,,trace
+line,2D top (mid grey upper edge),24770.8,1272.41,,,,trace
+line,2D top (mid grey upper edge),26101.6,1341.64,,,,trace
+line,2D top (mid grey upper edge),27503.9,1389.87,,,,trace
+line,2D top (mid grey upper edge),30538.6,1491.59,,,,trace
+line,2D top (mid grey upper edge),31622.8,1545.22,,,,trace
+line,2D top (mid grey upper edge),36358.5,1687.85,,,,trace
+line,2D top (mid grey upper edge),36998.3,1717.92,,,,trace
+line,2D top (mid grey upper edge),39672.1,1779.68,,,,trace
+line,2D top (mid grey upper edge),40370.2,1811.39,,,,trace
+line,2D top (mid grey upper edge),41080.6,1843.66,,,,trace
+line,2D top (mid grey upper edge),41803.4,1843.66,,,,trace
+line,2D top (mid grey upper edge),42539.1,1876.5,,,,trace
+line,2D top (mid grey upper edge),44049.3,1943.96,,,,trace
+line,2D top (mid grey upper edge),46415.9,2013.84,,,,trace
+line,2D top (mid grey upper edge),48909.6,2086.24,,,,trace
+line,2D top (mid grey upper edge),49770.2,2086.24,,,,trace
+line,2D top (mid grey upper edge),50646,2123.41,,,,trace
+line,2D top (mid grey upper edge),51537.2,2161.24,,,,trace
+line,2D top (mid grey upper edge),53367,2199.74,,,,trace
+line,2D top (mid grey upper edge),54306.1,2238.93,,,,trace
+line,2D top (mid grey upper edge),55261.7,2278.82,,,,trace
+line,2D top (mid grey upper edge),57223.7,2360.74,,,,trace
+line,2D top (mid grey upper edge),63537.5,2489.17,,,,trace
+line,2D top (mid grey upper edge),66951.1,2624.6,,,,trace
+line,2D top (mid grey upper edge),68129.2,2624.6,,,,trace
+line,2D top (mid grey upper edge),69328.1,2671.36,,,,trace
+line,2D top (mid grey upper edge),71789.4,2718.95,,,,trace
+line,2D top (mid grey upper edge),73052.7,2767.39,,,,trace
+line,2D top (mid grey upper edge),74338.2,2816.69,,,,trace
+line,2D top (mid grey upper edge),75646.3,2816.69,,,,trace
+line,2D top (mid grey upper edge),76977.5,2866.87,,,,trace
+line,2D top (mid grey upper edge),79710.4,2917.95,,,,trace
+line,2D top (mid grey upper edge),81113.1,2969.93,,,,trace
+line,2D top (mid grey upper edge),82540.4,3022.84,,,,trace
+line,2D top (mid grey upper edge),86974.9,3131.51,,,,trace
+line,2D top (mid grey upper edge),88505.4,3187.3,,,,trace
+line,2D top (mid grey upper edge),90062.8,3187.3,,,,trace
+line,2D top (mid grey upper edge),91647.6,3244.09,,,,trace
+line,2D top (mid grey upper edge),96571.4,3360.71,,,,trace
+line,2D top (mid grey upper edge),98270.7,3420.58,,,,trace
+line,2D top (mid grey upper edge),100000,3481.52,,,,trace
+line,2D top (mid grey upper edge),101760,3481.52,,,,trace
+line,2D top (mid grey upper edge),105372,3606.68,,,,trace
+line,2D top (mid grey upper edge),107227,3606.68,,,,trace
+line,2D top (mid grey upper edge),109114,3670.93,,,,trace
+line,2D top (mid grey upper edge),119058,3870.65,,,,trace
+line,2D top (mid grey upper edge),123285,4009.79,,,,trace
+line,2D top (mid grey upper edge),125454,4081.23,,,,trace
+line,2D top (mid grey upper edge),127662,4081.23,,,,trace
+line,2D top (mid grey upper edge),132194,4227.94,,,,trace
+line,2D top (mid grey upper edge),134520,4227.94,,,,trace
+line,2D top (mid grey upper edge),136887,4303.27,,,,trace
+line,2D top (mid grey upper edge),139296,4379.93,,,,trace
+line,2D top (mid grey upper edge),141747,4379.93,,,,trace
+line,2D top (mid grey upper edge),144242,4457.96,,,,trace
+line,2D top (mid grey upper edge),146780,4537.38,,,,trace
+line,2D top (mid grey upper edge),149363,4537.38,,,,trace
+line,2D top (mid grey upper edge),154666,4700.5,,,,trace
+line,2D top (mid grey upper edge),160157,4784.24,,,,trace
+line,2D top (mid grey upper edge),171731,5134.4,,,,trace
+line,2D top (mid grey upper edge),215443,5913.47,,,,trace
+line,2D top (mid grey upper edge),219235,6018.82,,,,trace
+line,2D top (mid grey upper edge),223092,6018.82,,,,trace
+line,2D top (mid grey upper edge),227018,6126.05,,,,trace
+line,2D top (mid grey upper edge),239215,6346.28,,,,trace
+line,2D top (mid grey upper edge),243424,6459.34,,,,trace
+line,2D top (mid grey upper edge),247708,6574.42,,,,trace
+line,2D top (mid grey upper edge),252067,6691.54,,,,trace
+line,2D top (mid grey upper edge),256502,6691.54,,,,trace
+line,2D top (mid grey upper edge),261016,6810.76,,,,trace
+line,2D top (mid grey upper edge),265609,6932.1,,,,trace
+line,2D top (mid grey upper edge),270283,6932.1,,,,trace
+line,2D top (mid grey upper edge),275039,7055.6,,,,trace
+line,2D top (mid grey upper edge),279879,7181.3,,,,trace
+line,2D top (mid grey upper edge),284804,7181.3,,,,trace
+line,2D top (mid grey upper edge),289815,7309.24,,,,trace
+line,2D top (mid grey upper edge),294915,7439.45,,,,trace
+line,2D top (mid grey upper edge),300105,7571.99,,,,trace
+line,2D top (mid grey upper edge),305386,7571.99,,,,trace
+line,2D top (mid grey upper edge),310759,7706.89,,,,trace
+line,2D top (mid grey upper edge),316228,7844.2,,,,trace
+line,2D top (mid grey upper edge),321792,7844.2,,,,trace
+line,2D top (mid grey upper edge),327455,7983.95,,,,trace
+line,2D top (mid grey upper edge),333217,8126.18,,,,trace
+line,2D top (mid grey upper edge),339081,8126.18,,,,trace
+line,2D top (mid grey upper edge),345047,8270.96,,,,trace
+line,2D top (mid grey upper edge),357298,8418.31,,,,trace
+line,2D top (mid grey upper edge),363585,8418.31,,,,trace
+line,2D top (mid grey upper edge),369983,8720.94,,,,trace
+line,2D top (mid grey upper edge),376494,8876.31,,,,trace
+line,2D top (mid grey upper edge),383119,8876.31,,,,trace
+line,2D top (mid grey upper edge),389860,9034.44,,,,trace
+line,2D top (mid grey upper edge),396721,9195.4,,,,trace
+line,2D top (mid grey upper edge),403702,9195.4,,,,trace
+line,2D top (mid grey upper edge),410806,9359.22,,,,trace
+line,2D top (mid grey upper edge),418034,9525.96,,,,trace
+line,2D top (mid grey upper edge),425391,9695.67,,,,trace
+line,2D top (mid grey upper edge),432876,9695.67,,,,trace
+line,2D top (mid grey upper edge),440493,9868.41,,,,trace
+line,2D top (mid grey upper edge),448245,10044.2,,,,trace
+line,2D top (mid grey upper edge),456132,10044.2,,,,trace
+line,2D top (mid grey upper edge),464159,10223.2,,,,trace
+line,2D top (mid grey upper edge),472327,10405.3,,,,trace
+line,2D top (mid grey upper edge),480638,10590.7,,,,trace
+line,2D top (mid grey upper edge),489096,10590.7,,,,trace
+line,2D top (mid grey upper edge),497702,10779.4,,,,trace
+line,2D top (mid grey upper edge),506460,10971.4,,,,trace
+line,2D top (mid grey upper edge),515372,10971.4,,,,trace
+line,2D top (mid grey upper edge),524441,11166.9,,,,trace
+line,2D top (mid grey upper edge),533670,11365.8,,,,trace
+line,2D top (mid grey upper edge),543061,11365.8,,,,trace
+line,2D top (mid grey upper edge),552617,11568.3,,,,trace
+line,2D top (mid grey upper edge),562341,11774.4,,,,trace
+line,2D top (mid grey upper edge),572237,11774.4,,,,trace
+line,2D top (mid grey upper edge),582306,11984.2,,,,trace
+line,2D top (mid grey upper edge),592553,12197.7,,,,trace
+line,2D top (mid grey upper edge),602980,12415,,,,trace
+line,2D top (mid grey upper edge),613591,12415,,,,trace
+line,2D top (mid grey upper edge),624388,12636.1,,,,trace
+line,2D top (mid grey upper edge),635375,12861.3,,,,trace
+line,2D top (mid grey upper edge),646556,12861.3,,,,trace
+line,2D top (mid grey upper edge),657933,13090.4,,,,trace
+line,2D top (mid grey upper edge),669511,13323.6,,,,trace
+line,2D top (mid grey upper edge),681292,13561,,,,trace
+line,2D top (mid grey upper edge),693281,13561,,,,trace
+line,2D top (mid grey upper edge),705480,13802.6,,,,trace
+line,2D top (mid grey upper edge),717894,14048.5,,,,trace
+line,2D top (mid grey upper edge),730527,14048.5,,,,trace
+line,2D top (mid grey upper edge),743382,14298.8,,,,trace
+line,2D top (mid grey upper edge),756463,14553.5,,,,trace
+line,2D top (mid grey upper edge),769775,14553.5,,,,trace
+line,2D top (mid grey upper edge),783320,14812.8,,,,trace
+line,2D top (mid grey upper edge),797104,15076.7,,,,trace
+line,2D top (mid grey upper edge),811131,15076.7,,,,trace
+line,2D top (mid grey upper edge),825404,15345.3,,,,trace
+line,2D top (mid grey upper edge),839929,15618.7,,,,trace
+line,2D top (mid grey upper edge),854709,15618.7,,,,trace
+line,2D top (mid grey upper edge),869749,15896.9,,,,trace
+line,2D top (mid grey upper edge),885054,16180.1,,,,trace
+line,2D top (mid grey upper edge),900628,16468.4,,,,trace
+line,2D top (mid grey upper edge),916476,16468.4,,,,trace
+line,2D top (mid grey upper edge),932603,16761.8,,,,trace
+line,2D top (mid grey upper edge),949014,17060.4,,,,trace
+line,2D top (mid grey upper edge),965714,17060.4,,,,trace
+line,3D bottom (mid grey lower edge),103.55,21.5309,,,,trace
+line,3D bottom (mid grey lower edge),105.372,21.9144,,,,trace
+line,3D bottom (mid grey lower edge),107.227,22.3049,,,,trace
+line,3D bottom (mid grey lower edge),109.114,22.3049,,,,trace
+line,3D bottom (mid grey lower edge),111.034,22.7022,,,,trace
+line,3D bottom (mid grey lower edge),112.987,23.1067,,,,trace
+line,3D bottom (mid grey lower edge),114.976,23.1067,,,,trace
+line,3D bottom (mid grey lower edge),116.999,23.5184,,,,trace
+line,3D bottom (mid grey lower edge),119.058,23.9373,,,,trace
+line,3D bottom (mid grey lower edge),121.153,23.9373,,,,trace
+line,3D bottom (mid grey lower edge),123.285,24.3638,,,,trace
+line,3D bottom (mid grey lower edge),125.454,24.7979,,,,trace
+line,3D bottom (mid grey lower edge),127.662,24.7979,,,,trace
+line,3D bottom (mid grey lower edge),129.908,25.2397,,,,trace
+line,3D bottom (mid grey lower edge),132.194,25.2397,,,,trace
+line,3D bottom (mid grey lower edge),134.52,25.6893,,,,trace
+line,3D bottom (mid grey lower edge),136.887,26.147,,,,trace
+line,3D bottom (mid grey lower edge),139.296,26.6128,,,,trace
+line,3D bottom (mid grey lower edge),141.747,26.6128,,,,trace
+line,3D bottom (mid grey lower edge),144.242,27.0869,,,,trace
+line,3D bottom (mid grey lower edge),146.78,27.5695,,,,trace
+line,3D bottom (mid grey lower edge),149.363,27.5695,,,,trace
+line,3D bottom (mid grey lower edge),151.991,28.0607,,,,trace
+line,3D bottom (mid grey lower edge),154.666,28.0607,,,,trace
+line,3D bottom (mid grey lower edge),157.387,28.5606,,,,trace
+line,3D bottom (mid grey lower edge),160.157,29.0694,,,,trace
+line,3D bottom (mid grey lower edge),162.975,29.5873,,,,trace
+line,3D bottom (mid grey lower edge),165.843,29.5873,,,,trace
+line,3D bottom (mid grey lower edge),168.761,30.1144,,,,trace
+line,3D bottom (mid grey lower edge),171.731,30.1144,,,,trace
+line,3D bottom (mid grey lower edge),174.753,30.6509,,,,trace
+line,3D bottom (mid grey lower edge),177.828,31.197,,,,trace
+line,3D bottom (mid grey lower edge),180.957,31.197,,,,trace
+line,3D bottom (mid grey lower edge),184.141,31.7528,,,,trace
+line,3D bottom (mid grey lower edge),187.382,32.3185,,,,trace
+line,3D bottom (mid grey lower edge),190.679,32.3185,,,,trace
+line,3D bottom (mid grey lower edge),194.034,33.4803,,,,trace
+line,3D bottom (mid grey lower edge),197.449,33.4803,,,,trace
+line,3D bottom (mid grey lower edge),200.923,33.4803,,,,trace
+line,3D bottom (mid grey lower edge),204.459,34.0768,,,,trace
+line,3D bottom (mid grey lower edge),208.057,34.6839,,,,trace
+line,3D bottom (mid grey lower edge),211.718,34.6839,,,,trace
+line,3D bottom (mid grey lower edge),215.443,35.3018,,,,trace
+line,3D bottom (mid grey lower edge),219.235,35.9307,,,,trace
+line,3D bottom (mid grey lower edge),223.092,35.9307,,,,trace
+line,3D bottom (mid grey lower edge),227.018,36.5708,,,,trace
+line,3D bottom (mid grey lower edge),231.013,37.2224,,,,trace
+line,3D bottom (mid grey lower edge),235.078,37.2224,,,,trace
+line,3D bottom (mid grey lower edge),239.215,37.8855,,,,trace
+line,3D bottom (mid grey lower edge),243.424,37.8855,,,,trace
+line,3D bottom (mid grey lower edge),247.708,38.5605,,,,trace
+line,3D bottom (mid grey lower edge),252.067,39.2475,,,,trace
+line,3D bottom (mid grey lower edge),256.502,39.2475,,,,trace
+line,3D bottom (mid grey lower edge),261.016,39.9467,,,,trace
+line,3D bottom (mid grey lower edge),265.609,40.6583,,,,trace
+line,3D bottom (mid grey lower edge),270.283,40.6583,,,,trace
+line,3D bottom (mid grey lower edge),275.039,41.3827,,,,trace
+line,3D bottom (mid grey lower edge),279.879,42.12,,,,trace
+line,3D bottom (mid grey lower edge),284.804,42.8704,,,,trace
+line,3D bottom (mid grey lower edge),289.815,42.8704,,,,trace
+line,3D bottom (mid grey lower edge),294.915,44.4115,,,,trace
+line,3D bottom (mid grey lower edge),300.105,43.6341,,,,trace
+line,3D bottom (mid grey lower edge),305.386,44.4115,,,,trace
+line,3D bottom (mid grey lower edge),310.759,45.2027,,,,trace
+line,3D bottom (mid grey lower edge),316.228,45.2027,,,,trace
+line,3D bottom (mid grey lower edge),321.792,46.008,,,,trace
+line,3D bottom (mid grey lower edge),327.455,46.8277,,,,trace
+line,3D bottom (mid grey lower edge),333.217,46.8277,,,,trace
+line,3D bottom (mid grey lower edge),339.081,48.5111,,,,trace
+line,3D bottom (mid grey lower edge),345.047,48.5111,,,,trace
+line,3D bottom (mid grey lower edge),351.119,49.3753,,,,trace
+line,3D bottom (mid grey lower edge),357.298,49.3753,,,,trace
+line,3D bottom (mid grey lower edge),363.585,49.3753,,,,trace
+line,3D bottom (mid grey lower edge),369.983,50.255,,,,trace
+line,3D bottom (mid grey lower edge),376.494,51.1503,,,,trace
+line,3D bottom (mid grey lower edge),383.119,51.1503,,,,trace
+line,3D bottom (mid grey lower edge),389.86,52.0616,,,,trace
+line,3D bottom (mid grey lower edge),396.721,52.9891,,,,trace
+line,3D bottom (mid grey lower edge),403.702,53.9331,,,,trace
+line,3D bottom (mid grey lower edge),410.806,53.9331,,,,trace
+line,3D bottom (mid grey lower edge),418.034,55.872,,,,trace
+line,3D bottom (mid grey lower edge),425.391,54.894,,,,trace
+line,3D bottom (mid grey lower edge),432.876,56.8674,,,,trace
+line,3D bottom (mid grey lower edge),440.493,56.8674,,,,trace
+line,3D bottom (mid grey lower edge),448.245,56.8674,,,,trace
+line,3D bottom (mid grey lower edge),456.132,57.8805,,,,trace
+line,3D bottom (mid grey lower edge),464.159,58.9117,,,,trace
+line,3D bottom (mid grey lower edge),472.327,58.9117,,,,trace
+line,3D bottom (mid grey lower edge),480.638,59.9612,,,,trace
+line,3D bottom (mid grey lower edge),489.096,61.0295,,,,trace
+line,3D bottom (mid grey lower edge),497.702,61.0295,,,,trace
+line,3D bottom (mid grey lower edge),506.46,62.1167,,,,trace
+line,3D bottom (mid grey lower edge),524.441,63.2234,,,,trace
+line,3D bottom (mid grey lower edge),533.67,64.3498,,,,trace
+line,3D bottom (mid grey lower edge),543.061,65.4962,,,,trace
+line,3D bottom (mid grey lower edge),552.617,65.4962,,,,trace
+line,3D bottom (mid grey lower edge),562.341,66.6631,,,,trace
+line,3D bottom (mid grey lower edge),572.237,67.8507,,,,trace
+line,3D bottom (mid grey lower edge),582.306,67.8507,,,,trace
+line,3D bottom (mid grey lower edge),592.553,70.2898,,,,trace
+line,3D bottom (mid grey lower edge),602.98,70.2898,,,,trace
+line,3D bottom (mid grey lower edge),613.591,70.2898,,,,trace
+line,3D bottom (mid grey lower edge),624.388,71.5421,,,,trace
+line,3D bottom (mid grey lower edge),635.375,71.5421,,,,trace
+line,3D bottom (mid grey lower edge),646.556,72.8167,,,,trace
+line,3D bottom (mid grey lower edge),657.933,74.1139,,,,trace
+line,3D bottom (mid grey lower edge),669.511,74.1139,,,,trace
+line,3D bottom (mid grey lower edge),681.292,75.4343,,,,trace
+line,3D bottom (mid grey lower edge),693.281,76.7782,,,,trace
+line,3D bottom (mid grey lower edge),705.48,76.7782,,,,trace
+line,3D bottom (mid grey lower edge),717.894,78.1461,,,,trace
+line,3D bottom (mid grey lower edge),730.527,79.5383,,,,trace
+line,3D bottom (mid grey lower edge),743.382,79.5383,,,,trace
+line,3D bottom (mid grey lower edge),756.463,80.9553,,,,trace
+line,3D bottom (mid grey lower edge),769.775,82.3976,,,,trace
+line,3D bottom (mid grey lower edge),783.32,82.3976,,,,trace
+line,3D bottom (mid grey lower edge),797.104,83.8656,,,,trace
+line,3D bottom (mid grey lower edge),811.131,85.3597,,,,trace
+line,3D bottom (mid grey lower edge),825.404,85.3597,,,,trace
+line,3D bottom (mid grey lower edge),839.929,86.8804,,,,trace
+line,3D bottom (mid grey lower edge),854.709,86.8804,,,,trace
+line,3D bottom (mid grey lower edge),869.749,90.0037,,,,trace
+line,3D bottom (mid grey lower edge),885.054,90.0037,,,,trace
+line,3D bottom (mid grey lower edge),900.628,91.6072,,,,trace
+line,3D bottom (mid grey lower edge),916.476,91.6072,,,,trace
+line,3D bottom (mid grey lower edge),932.603,93.2392,,,,trace
+line,3D bottom (mid grey lower edge),949.014,93.2392,,,,trace
+line,3D bottom (mid grey lower edge),965.714,94.9003,,,,trace
+line,3D bottom (mid grey lower edge),982.707,96.591,,,,trace
+line,3D bottom (mid grey lower edge),1000,98.3119,,,,trace
+line,3D bottom (mid grey lower edge),1017.6,98.3119,,,,trace
+line,3D bottom (mid grey lower edge),1035.5,100.063,,,,trace
+line,3D bottom (mid grey lower edge),1053.72,100.063,,,,trace
+line,3D bottom (mid grey lower edge),1072.27,101.846,,,,trace
+line,3D bottom (mid grey lower edge),1091.14,103.66,,,,trace
+line,3D bottom (mid grey lower edge),1110.34,105.507,,,,trace
+line,3D bottom (mid grey lower edge),1129.87,105.507,,,,trace
+line,3D bottom (mid grey lower edge),1149.76,107.387,,,,trace
+line,3D bottom (mid grey lower edge),1169.99,107.387,,,,trace
+line,3D bottom (mid grey lower edge),1232.85,111.247,,,,trace
+line,3D bottom (mid grey lower edge),1254.54,113.229,,,,trace
+line,3D bottom (mid grey lower edge),1276.62,115.247,,,,trace
+line,3D bottom (mid grey lower edge),1299.08,115.247,,,,trace
+line,3D bottom (mid grey lower edge),1321.94,117.3,,,,trace
+line,3D bottom (mid grey lower edge),1345.2,119.39,,,,trace
+line,3D bottom (mid grey lower edge),1368.87,119.39,,,,trace
+line,3D bottom (mid grey lower edge),1392.96,121.517,,,,trace
+line,3D bottom (mid grey lower edge),1417.47,123.681,,,,trace
+line,3D bottom (mid grey lower edge),1442.42,123.681,,,,trace
+line,3D bottom (mid grey lower edge),1467.8,125.885,,,,trace
+line,3D bottom (mid grey lower edge),1519.91,128.128,,,,trace
+line,3D bottom (mid grey lower edge),1546.66,130.41,,,,trace
+line,3D bottom (mid grey lower edge),1573.87,132.734,,,,trace
+line,3D bottom (mid grey lower edge),1601.57,132.734,,,,trace
+line,3D bottom (mid grey lower edge),1629.75,135.098,,,,trace
+line,3D bottom (mid grey lower edge),1658.43,137.505,,,,trace
+line,3D bottom (mid grey lower edge),1687.61,137.505,,,,trace
+line,3D bottom (mid grey lower edge),1717.31,139.955,,,,trace
+line,3D bottom (mid grey lower edge),1747.53,139.955,,,,trace
+line,3D bottom (mid grey lower edge),1778.28,142.448,,,,trace
+line,3D bottom (mid grey lower edge),1809.57,144.986,,,,trace
+line,3D bottom (mid grey lower edge),1841.41,144.986,,,,trace
+line,3D bottom (mid grey lower edge),1873.82,147.569,,,,trace
+line,3D bottom (mid grey lower edge),1906.79,150.198,,,,trace
+line,3D bottom (mid grey lower edge),1940.34,150.198,,,,trace
+line,3D bottom (mid grey lower edge),1974.49,152.874,,,,trace
+line,3D bottom (mid grey lower edge),2009.23,152.874,,,,trace
+line,3D bottom (mid grey lower edge),2044.59,155.598,,,,trace
+line,3D bottom (mid grey lower edge),2080.57,158.37,,,,trace
+line,3D bottom (mid grey lower edge),2117.18,158.37,,,,trace
+line,3D bottom (mid grey lower edge),2154.43,161.191,,,,trace
+line,3D bottom (mid grey lower edge),2192.35,164.063,,,,trace
+line,3D bottom (mid grey lower edge),2230.92,166.986,,,,trace
+line,3D bottom (mid grey lower edge),2270.18,166.986,,,,trace
+line,3D bottom (mid grey lower edge),2310.13,169.961,,,,trace
+line,3D bottom (mid grey lower edge),2350.78,169.961,,,,trace
+line,3D bottom (mid grey lower edge),2392.15,172.989,,,,trace
+line,3D bottom (mid grey lower edge),2477.08,176.071,,,,trace
+line,3D bottom (mid grey lower edge),2565.02,182.4,,,,trace
+line,3D bottom (mid grey lower edge),2702.83,188.957,,,,trace
+line,3D bottom (mid grey lower edge),2848.04,195.75,,,,trace
+line,3D bottom (mid grey lower edge),3107.59,210.077,,,,trace
+line,3D bottom (mid grey lower edge),3162.28,210.077,,,,trace
+line,3D bottom (mid grey lower edge),3217.92,213.82,,,,trace
+line,3D bottom (mid grey lower edge),3274.55,213.82,,,,trace
+line,3D bottom (mid grey lower edge),3390.81,221.506,,,,trace
+line,3D bottom (mid grey lower edge),3450.47,221.506,,,,trace
+line,3D bottom (mid grey lower edge),3511.19,221.506,,,,trace
+line,3D bottom (mid grey lower edge),3572.98,225.452,,,,trace
+line,3D bottom (mid grey lower edge),3635.85,229.469,,,,trace
+line,3D bottom (mid grey lower edge),3699.83,229.469,,,,trace
+line,3D bottom (mid grey lower edge),3764.94,233.557,,,,trace
+line,3D bottom (mid grey lower edge),3831.19,237.718,,,,trace
+line,3D bottom (mid grey lower edge),3898.6,241.953,,,,trace
+line,3D bottom (mid grey lower edge),3967.21,241.953,,,,trace
+line,3D bottom (mid grey lower edge),4037.02,246.264,,,,trace
+line,3D bottom (mid grey lower edge),4108.06,246.264,,,,trace
+line,3D bottom (mid grey lower edge),4180.34,250.651,,,,trace
+line,3D bottom (mid grey lower edge),4253.91,255.116,,,,trace
+line,3D bottom (mid grey lower edge),4328.76,255.116,,,,trace
+line,3D bottom (mid grey lower edge),4404.93,259.662,,,,trace
+line,3D bottom (mid grey lower edge),4482.45,264.288,,,,trace
+line,3D bottom (mid grey lower edge),4561.32,264.288,,,,trace
+line,3D bottom (mid grey lower edge),4641.59,268.996,,,,trace
+line,3D bottom (mid grey lower edge),4723.27,273.788,,,,trace
+line,3D bottom (mid grey lower edge),4806.38,273.788,,,,trace
+line,3D bottom (mid grey lower edge),4890.96,278.666,,,,trace
+line,3D bottom (mid grey lower edge),4977.02,278.666,,,,trace
+line,3D bottom (mid grey lower edge),5064.6,283.631,,,,trace
+line,3D bottom (mid grey lower edge),5153.72,288.684,,,,trace
+line,3D bottom (mid grey lower edge),5244.41,293.827,,,,trace
+line,3D bottom (mid grey lower edge),5336.7,293.827,,,,trace
+line,3D bottom (mid grey lower edge),5430.61,299.062,,,,trace
+line,3D bottom (mid grey lower edge),5526.17,304.39,,,,trace
+line,3D bottom (mid grey lower edge),5623.41,304.39,,,,trace
+line,3D bottom (mid grey lower edge),5722.37,309.812,,,,trace
+line,3D bottom (mid grey lower edge),5823.06,309.812,,,,trace
+line,3D bottom (mid grey lower edge),5925.53,315.332,,,,trace
+line,3D bottom (mid grey lower edge),6029.8,320.95,,,,trace
+line,3D bottom (mid grey lower edge),6135.91,320.95,,,,trace
+line,3D bottom (mid grey lower edge),6243.88,326.668,,,,trace
+line,3D bottom (mid grey lower edge),6353.75,332.488,,,,trace
+line,3D bottom (mid grey lower edge),6465.56,332.488,,,,trace
+line,3D bottom (mid grey lower edge),6579.33,338.411,,,,trace
+line,3D bottom (mid grey lower edge),6695.11,344.44,,,,trace
+line,3D bottom (mid grey lower edge),6812.92,350.576,,,,trace
+line,3D bottom (mid grey lower edge),6932.81,350.576,,,,trace
+line,3D bottom (mid grey lower edge),7054.8,356.822,,,,trace
+line,3D bottom (mid grey lower edge),7178.94,356.822,,,,trace
+line,3D bottom (mid grey lower edge),7305.27,363.179,,,,trace
+line,3D bottom (mid grey lower edge),7433.82,363.179,,,,trace
+line,3D bottom (mid grey lower edge),7564.63,376.235,,,,trace
+line,3D bottom (mid grey lower edge),7697.75,382.938,,,,trace
+line,3D bottom (mid grey lower edge),7833.2,382.938,,,,trace
+line,3D bottom (mid grey lower edge),7971.04,389.76,,,,trace
+line,3D bottom (mid grey lower edge),8111.31,389.76,,,,trace
+line,3D bottom (mid grey lower edge),8254.04,396.704,,,,trace
+line,3D bottom (mid grey lower edge),8399.29,396.704,,,,trace
+line,3D bottom (mid grey lower edge),8547.09,403.772,,,,trace
+line,3D bottom (mid grey lower edge),8697.49,410.965,,,,trace
+line,3D bottom (mid grey lower edge),8850.54,410.965,,,,trace
+line,3D bottom (mid grey lower edge),9006.28,418.287,,,,trace
+line,3D bottom (mid grey lower edge),9164.76,425.739,,,,trace
+line,3D bottom (mid grey lower edge),9326.03,425.739,,,,trace
+line,3D bottom (mid grey lower edge),9490.14,433.323,,,,trace
+line,3D bottom (mid grey lower edge),9657.14,433.323,,,,trace
+line,3D bottom (mid grey lower edge),9827.07,441.043,,,,trace
+line,3D bottom (mid grey lower edge),10000,448.901,,,,trace
+line,3D bottom (mid grey lower edge),10176,456.898,,,,trace
+line,3D bottom (mid grey lower edge),10355,465.038,,,,trace
+line,3D bottom (mid grey lower edge),10537.2,465.038,,,,trace
+line,3D bottom (mid grey lower edge),10722.7,473.323,,,,trace
+line,3D bottom (mid grey lower edge),10911.4,473.323,,,,trace
+line,3D bottom (mid grey lower edge),11103.4,481.756,,,,trace
+line,3D bottom (mid grey lower edge),11298.7,481.756,,,,trace
+line,3D bottom (mid grey lower edge),11497.6,490.339,,,,trace
+line,3D bottom (mid grey lower edge),11699.9,499.074,,,,trace
+line,3D bottom (mid grey lower edge),11905.8,499.074,,,,trace
+line,3D bottom (mid grey lower edge),12115.3,507.966,,,,trace
+line,3D bottom (mid grey lower edge),12328.5,517.015,,,,trace
+line,3D bottom (mid grey lower edge),12545.4,517.015,,,,trace
+line,3D bottom (mid grey lower edge),12766.2,526.226,,,,trace
+line,3D bottom (mid grey lower edge),12990.8,535.601,,,,trace
+line,3D bottom (mid grey lower edge),13219.4,545.144,,,,trace
+line,3D bottom (mid grey lower edge),13452,545.144,,,,trace
+line,3D bottom (mid grey lower edge),13688.7,545.144,,,,trace
+line,3D bottom (mid grey lower edge),13929.6,554.856,,,,trace
+line,3D bottom (mid grey lower edge),14174.7,564.741,,,,trace
+line,3D bottom (mid grey lower edge),14424.2,564.741,,,,trace
+line,3D bottom (mid grey lower edge),14678,574.802,,,,trace
+line,3D bottom (mid grey lower edge),14936.3,585.042,,,,trace
+line,3D bottom (mid grey lower edge),15199.1,595.465,,,,trace
+line,3D bottom (mid grey lower edge),15466.6,595.465,,,,trace
+line,3D bottom (mid grey lower edge),15738.7,616.871,,,,trace
+line,3D bottom (mid grey lower edge),16015.7,606.074,,,,trace
+line,3D bottom (mid grey lower edge),16297.5,627.861,,,,trace
+line,3D bottom (mid grey lower edge),16584.3,627.861,,,,trace
+line,3D bottom (mid grey lower edge),16876.1,627.861,,,,trace
+line,3D bottom (mid grey lower edge),17173.1,639.047,,,,trace
+line,3D bottom (mid grey lower edge),17475.3,650.432,,,,trace
+line,3D bottom (mid grey lower edge),17782.8,650.432,,,,trace
+line,3D bottom (mid grey lower edge),18095.7,662.02,,,,trace
+line,3D bottom (mid grey lower edge),18414.1,673.814,,,,trace
+line,3D bottom (mid grey lower edge),18738.2,673.814,,,,trace
+line,3D bottom (mid grey lower edge),19067.9,685.819,,,,trace
+line,3D bottom (mid grey lower edge),19403.4,698.037,,,,trace
+line,3D bottom (mid grey lower edge),19744.9,698.037,,,,trace
+line,3D bottom (mid grey lower edge),20092.3,710.473,,,,trace
+line,3D bottom (mid grey lower edge),20445.9,723.131,,,,trace
+line,3D bottom (mid grey lower edge),20805.7,723.131,,,,trace
+line,3D bottom (mid grey lower edge),21171.8,736.014,,,,trace
+line,3D bottom (mid grey lower edge),21544.3,736.014,,,,trace
+line,3D bottom (mid grey lower edge),21923.5,749.126,,,,trace
+line,3D bottom (mid grey lower edge),22309.2,762.472,,,,trace
+line,3D bottom (mid grey lower edge),22701.8,776.056,,,,trace
+line,3D bottom (mid grey lower edge),23101.3,776.056,,,,trace
+line,3D bottom (mid grey lower edge),23507.8,789.882,,,,trace
+line,3D bottom (mid grey lower edge),23921.5,803.955,,,,trace
+line,3D bottom (mid grey lower edge),24342.4,803.955,,,,trace
+line,3D bottom (mid grey lower edge),24770.8,818.278,,,,trace
+line,3D bottom (mid grey lower edge),25206.7,818.278,,,,trace
+line,3D bottom (mid grey lower edge),25650.2,832.856,,,,trace
+line,3D bottom (mid grey lower edge),26101.6,847.694,,,,trace
+line,3D bottom (mid grey lower edge),26560.9,847.694,,,,trace
+line,3D bottom (mid grey lower edge),27028.3,862.796,,,,trace
+line,3D bottom (mid grey lower edge),27503.9,878.167,,,,trace
+line,3D bottom (mid grey lower edge),27987.9,893.812,,,,trace
+line,3D bottom (mid grey lower edge),28480.4,909.736,,,,trace
+line,3D bottom (mid grey lower edge),28981.5,909.736,,,,trace
+line,3D bottom (mid grey lower edge),29491.5,909.736,,,,trace
+line,3D bottom (mid grey lower edge),30010.5,925.944,,,,trace
+line,3D bottom (mid grey lower edge),30538.6,942.44,,,,trace
+line,3D bottom (mid grey lower edge),31075.9,942.44,,,,trace
+line,3D bottom (mid grey lower edge),31622.8,959.23,,,,trace
+line,3D bottom (mid grey lower edge),32179.2,976.319,,,,trace
+line,3D bottom (mid grey lower edge),32745.5,993.713,,,,trace
+line,3D bottom (mid grey lower edge),33321.7,993.713,,,,trace
+line,3D bottom (mid grey lower edge),33908.1,1011.42,,,,trace
+line,3D bottom (mid grey lower edge),34504.7,1011.42,,,,trace
+line,3D bottom (mid grey lower edge),35111.9,1029.44,,,,trace
+line,3D bottom (mid grey lower edge),35729.8,1047.78,,,,trace
+line,3D bottom (mid grey lower edge),36358.5,1047.78,,,,trace
+line,3D bottom (mid grey lower edge),36998.3,1066.44,,,,trace
+line,3D bottom (mid grey lower edge),37649.4,1066.44,,,,trace
+line,3D bottom (mid grey lower edge),38311.9,1085.44,,,,trace
+line,3D bottom (mid grey lower edge),38986,1104.78,,,,trace
+line,3D bottom (mid grey lower edge),39672.1,1104.78,,,,trace
+line,3D bottom (mid grey lower edge),40370.2,1124.46,,,,trace
+line,3D bottom (mid grey lower edge),41080.6,1144.5,,,,trace
+line,3D bottom (mid grey lower edge),41803.4,1144.5,,,,trace
+line,3D bottom (mid grey lower edge),42539.1,1164.89,,,,trace
+line,3D bottom (mid grey lower edge),43287.6,1185.64,,,,trace
+line,3D bottom (mid grey lower edge),44049.3,1185.64,,,,trace
+line,3D bottom (mid grey lower edge),44824.5,1206.76,,,,trace
+line,3D bottom (mid grey lower edge),45613.2,1228.26,,,,trace
+line,3D bottom (mid grey lower edge),46415.9,1250.14,,,,trace
+line,3D bottom (mid grey lower edge),47232.7,1250.14,,,,trace
+line,3D bottom (mid grey lower edge),48063.8,1272.41,,,,trace
+line,3D bottom (mid grey lower edge),48909.6,1272.41,,,,trace
+line,3D bottom (mid grey lower edge),49770.2,1295.08,,,,trace
+line,3D bottom (mid grey lower edge),50646,1318.16,,,,trace
+line,3D bottom (mid grey lower edge),51537.2,1318.16,,,,trace
+line,3D bottom (mid grey lower edge),52444.1,1341.64,,,,trace
+line,3D bottom (mid grey lower edge),53367,1365.54,,,,trace
+line,3D bottom (mid grey lower edge),54306.1,1365.54,,,,trace
+line,3D bottom (mid grey lower edge),55261.7,1389.87,,,,trace
+line,3D bottom (mid grey lower edge),56234.1,1414.63,,,,trace
+line,3D bottom (mid grey lower edge),57223.7,1414.63,,,,trace
+line,3D bottom (mid grey lower edge),58230.6,1439.83,,,,trace
+line,3D bottom (mid grey lower edge),59255.3,1465.49,,,,trace
+line,3D bottom (mid grey lower edge),60298,1465.49,,,,trace
+line,3D bottom (mid grey lower edge),61359.1,1491.59,,,,trace
+line,3D bottom (mid grey lower edge),62438.8,1518.17,,,,trace
+line,3D bottom (mid grey lower edge),63537.5,1518.17,,,,trace
+line,3D bottom (mid grey lower edge),64655.6,1545.22,,,,trace
+line,3D bottom (mid grey lower edge),65793.3,1545.22,,,,trace
+line,3D bottom (mid grey lower edge),66951.1,1572.74,,,,trace
+line,3D bottom (mid grey lower edge),68129.2,1600.76,,,,trace
+line,3D bottom (mid grey lower edge),69328.1,1600.76,,,,trace
+line,3D bottom (mid grey lower edge),70548,1629.28,,,,trace
+line,3D bottom (mid grey lower edge),71789.4,1658.31,,,,trace
+line,3D bottom (mid grey lower edge),73052.7,1687.85,,,,trace
+line,3D bottom (mid grey lower edge),74338.2,1687.85,,,,trace
+line,3D bottom (mid grey lower edge),75646.3,1717.92,,,,trace
+line,3D bottom (mid grey lower edge),76977.5,1717.92,,,,trace
+line,3D bottom (mid grey lower edge),78332,1748.53,,,,trace
+line,3D bottom (mid grey lower edge),79710.4,1779.68,,,,trace
+line,3D bottom (mid grey lower edge),81113.1,1779.68,,,,trace
+line,3D bottom (mid grey lower edge),82540.4,1811.39,,,,trace
+line,3D bottom (mid grey lower edge),83992.9,1843.66,,,,trace
+line,3D bottom (mid grey lower edge),85470.9,1843.66,,,,trace
+line,3D bottom (mid grey lower edge),86974.9,1909.93,,,,trace
+line,3D bottom (mid grey lower edge),88505.4,1876.5,,,,trace
+line,3D bottom (mid grey lower edge),90062.8,1909.93,,,,trace
+line,3D bottom (mid grey lower edge),91647.6,1943.96,,,,trace
+line,3D bottom (mid grey lower edge),93260.3,1943.96,,,,trace
+line,3D bottom (mid grey lower edge),94901.4,1978.59,,,,trace
+line,3D bottom (mid grey lower edge),96571.4,2013.84,,,,trace
+line,3D bottom (mid grey lower edge),98270.7,2013.84,,,,trace
+line,3D bottom (mid grey lower edge),100000,2049.72,,,,trace
+line,3D bottom (mid grey lower edge),101760,2086.24,,,,trace
+line,3D bottom (mid grey lower edge),103550,2086.24,,,,trace
+line,3D bottom (mid grey lower edge),105372,2123.41,,,,trace
+line,3D bottom (mid grey lower edge),107227,2161.24,,,,trace
+line,3D bottom (mid grey lower edge),109114,2161.24,,,,trace
+line,3D bottom (mid grey lower edge),111034,2199.74,,,,trace
+line,3D bottom (mid grey lower edge),112987,2238.93,,,,trace
+line,3D bottom (mid grey lower edge),114976,2238.93,,,,trace
+line,3D bottom (mid grey lower edge),116999,2278.82,,,,trace
+line,3D bottom (mid grey lower edge),119058,2319.42,,,,trace
+line,3D bottom (mid grey lower edge),121153,2319.42,,,,trace
+line,3D bottom (mid grey lower edge),123285,2402.8,,,,trace
+line,3D bottom (mid grey lower edge),125454,2402.8,,,,trace
+line,3D bottom (mid grey lower edge),127662,2445.6,,,,trace
+line,3D bottom (mid grey lower edge),129908,2445.6,,,,trace
+line,3D bottom (mid grey lower edge),132194,2445.6,,,,trace
+line,3D bottom (mid grey lower edge),134520,2489.17,,,,trace
+line,3D bottom (mid grey lower edge),136887,2533.52,,,,trace
+line,3D bottom (mid grey lower edge),139296,2578.66,,,,trace
+line,3D bottom (mid grey lower edge),141747,2578.66,,,,trace
+line,3D bottom (mid grey lower edge),144242,2624.6,,,,trace
+line,3D bottom (mid grey lower edge),146780,2671.36,,,,trace
+line,3D bottom (mid grey lower edge),149363,2671.36,,,,trace
+line,3D bottom (mid grey lower edge),151991,2718.95,,,,trace
+line,3D bottom (mid grey lower edge),157387,2767.39,,,,trace
+line,3D bottom (mid grey lower edge),160157,2816.69,,,,trace
+line,3D bottom (mid grey lower edge),162975,2866.87,,,,trace
+line,3D bottom (mid grey lower edge),165843,2866.87,,,,trace
+line,3D bottom (mid grey lower edge),171731,2917.95,,,,trace
+line,3D bottom (mid grey lower edge),174753,2969.93,,,,trace
+line,3D bottom (mid grey lower edge),180957,3022.84,,,,trace
+line,3D bottom (mid grey lower edge),184141,3076.7,,,,trace
+line,3D bottom (mid grey lower edge),187382,3131.51,,,,trace
+line,3D bottom (mid grey lower edge),200923,3244.09,,,,trace
+line,3D bottom (mid grey lower edge),204459,3301.88,,,,trace
+line,3D bottom (mid grey lower edge),219235,3420.58,,,,trace
+line,3D bottom (mid grey lower edge),235078,3670.93,,,,trace
+line,3D bottom (mid grey lower edge),239215,3670.93,,,,trace
+line,3D bottom (mid grey lower edge),256502,3802.9,,,,trace
+line,3D bottom (mid grey lower edge),261016,3870.65,,,,trace
+line,3D bottom (mid grey lower edge),284804,4153.94,,,,trace
+line,3D bottom (mid grey lower edge),289815,4153.94,,,,trace
+line,3D bottom (mid grey lower edge),300105,4303.27,,,,trace
+line,3D bottom (mid grey lower edge),305386,4303.27,,,,trace
+line,3D bottom (mid grey lower edge),316228,4379.93,,,,trace
+line,3D bottom (mid grey lower edge),321792,4457.96,,,,trace
+line,3D bottom (mid grey lower edge),327455,4537.38,,,,trace
+line,3D bottom (mid grey lower edge),333217,4537.38,,,,trace
+line,3D bottom (mid grey lower edge),339081,4700.5,,,,trace
+line,3D bottom (mid grey lower edge),345047,4700.5,,,,trace
+line,3D bottom (mid grey lower edge),351119,4700.5,,,,trace
+line,3D bottom (mid grey lower edge),357298,4784.24,,,,trace
+line,3D bottom (mid grey lower edge),363585,4869.47,,,,trace
+line,3D bottom (mid grey lower edge),396721,5134.4,,,,trace
+line,3D bottom (mid grey lower edge),410806,5225.87,,,,trace
+line,3D bottom (mid grey lower edge),418034,5318.97,,,,trace
+line,3D bottom (mid grey lower edge),432876,5413.73,,,,trace
+line,3D bottom (mid grey lower edge),456132,5608.35,,,,trace
+line,3D bottom (mid grey lower edge),464159,5708.27,,,,trace
+line,3D bottom (mid grey lower edge),472327,5809.96,,,,trace
+line,3D bottom (mid grey lower edge),480638,5809.96,,,,trace
+line,3D bottom (mid grey lower edge),489096,6018.82,,,,trace
+line,3D bottom (mid grey lower edge),562341,6459.34,,,,trace
+line,3D bottom (mid grey lower edge),592553,6691.54,,,,trace
+line,3D bottom (mid grey lower edge),613591,6932.1,,,,trace
+line,3D bottom (mid grey lower edge),624388,6932.1,,,,trace
+line,3D bottom (mid grey lower edge),635375,6932.1,,,,trace
+line,3D bottom (mid grey lower edge),657933,7309.24,,,,trace
+line,3D bottom (mid grey lower edge),669511,7181.3,,,,trace
+line,3D bottom (mid grey lower edge),681292,7309.24,,,,trace
+line,3D bottom (mid grey lower edge),693281,7439.45,,,,trace
+line,3D bottom (mid grey lower edge),705480,7439.45,,,,trace
+line,3D bottom (mid grey lower edge),717894,7571.99,,,,trace
+line,3D bottom (mid grey lower edge),730527,7706.89,,,,trace
+line,3D bottom (mid grey lower edge),743382,7706.89,,,,trace
+line,3D bottom (mid grey lower edge),756463,7983.95,,,,trace
+line,3D bottom (mid grey lower edge),769775,7983.95,,,,trace
+line,3D bottom (mid grey lower edge),783320,7983.95,,,,trace
+line,3D bottom (mid grey lower edge),797104,8126.18,,,,trace
+line,3D bottom (mid grey lower edge),811131,8270.96,,,,trace
+line,3D bottom (mid grey lower edge),825404,8270.96,,,,trace
+line,3D bottom (mid grey lower edge),839929,8568.29,,,,trace
+line,3D bottom (mid grey lower edge),854709,8568.29,,,,trace
+line,3D bottom (mid grey lower edge),869749,8568.29,,,,trace
+line,3D bottom (mid grey lower edge),885054,8720.94,,,,trace
+line,3D bottom (mid grey lower edge),900628,8876.31,,,,trace
+line,3D bottom (mid grey lower edge),916476,8876.31,,,,trace
+line,3D bottom (mid grey lower edge),932603,9034.44,,,,trace
+line,3D bottom (mid grey lower edge),949014,9195.4,,,,trace
+line,3D bottom (mid grey lower edge),965714,9195.4,,,,trace
+line,2D bottom (olive lower edge),103.55,13.1318,,,,trace
+line,2D bottom (olive lower edge),105.372,13.1318,,,,trace
+line,2D bottom (olive lower edge),107.227,13.3658,,,,trace
+line,2D bottom (olive lower edge),109.114,13.3658,,,,trace
+line,2D bottom (olive lower edge),111.034,13.6039,,,,trace
+line,2D bottom (olive lower edge),112.987,13.6039,,,,trace
+line,2D bottom (olive lower edge),114.976,13.8463,,,,trace
+line,2D bottom (olive lower edge),116.999,14.093,,,,trace
+line,2D bottom (olive lower edge),119.058,14.093,,,,trace
+line,2D bottom (olive lower edge),121.153,14.344,,,,trace
+line,2D bottom (olive lower edge),123.285,14.344,,,,trace
+line,2D bottom (olive lower edge),125.454,14.5996,,,,trace
+line,2D bottom (olive lower edge),127.662,14.5996,,,,trace
+line,2D bottom (olive lower edge),129.908,14.8597,,,,trace
+line,2D bottom (olive lower edge),132.194,14.8597,,,,trace
+line,2D bottom (olive lower edge),134.52,15.1244,,,,trace
+line,2D bottom (olive lower edge),136.887,15.1244,,,,trace
+line,2D bottom (olive lower edge),139.296,15.3939,,,,trace
+line,2D bottom (olive lower edge),141.747,15.3939,,,,trace
+line,2D bottom (olive lower edge),144.242,15.6681,,,,trace
+line,2D bottom (olive lower edge),146.78,15.9473,,,,trace
+line,2D bottom (olive lower edge),149.363,15.9473,,,,trace
+line,2D bottom (olive lower edge),151.991,16.2314,,,,trace
+line,2D bottom (olive lower edge),154.666,16.2314,,,,trace
+line,2D bottom (olive lower edge),157.387,16.5205,,,,trace
+line,2D bottom (olive lower edge),160.157,16.8149,,,,trace
+line,2D bottom (olive lower edge),162.975,16.8149,,,,trace
+line,2D bottom (olive lower edge),165.843,17.1144,,,,trace
+line,2D bottom (olive lower edge),168.761,17.1144,,,,trace
+line,2D bottom (olive lower edge),171.731,17.4193,,,,trace
+line,2D bottom (olive lower edge),174.753,17.4193,,,,trace
+line,2D bottom (olive lower edge),177.828,17.7297,,,,trace
+line,2D bottom (olive lower edge),180.957,17.7297,,,,trace
+line,2D bottom (olive lower edge),184.141,18.0455,,,,trace
+line,2D bottom (olive lower edge),187.382,18.0455,,,,trace
+line,2D bottom (olive lower edge),190.679,18.367,,,,trace
+line,2D bottom (olive lower edge),194.034,18.367,,,,trace
+line,2D bottom (olive lower edge),200.923,19.0273,,,,trace
+line,2D bottom (olive lower edge),204.459,19.0273,,,,trace
+line,2D bottom (olive lower edge),215.443,19.7113,,,,trace
+line,2D bottom (olive lower edge),219.235,19.7113,,,,trace
+line,2D bottom (olive lower edge),223.092,20.0625,,,,trace
+line,2D bottom (olive lower edge),227.018,20.0625,,,,trace
+line,2D bottom (olive lower edge),239.215,20.7837,,,,trace
+line,2D bottom (olive lower edge),243.424,21.154,,,,trace
+line,2D bottom (olive lower edge),247.708,21.154,,,,trace
+line,2D bottom (olive lower edge),256.502,21.5309,,,,trace
+line,2D bottom (olive lower edge),261.016,21.9144,,,,trace
+line,2D bottom (olive lower edge),265.609,21.9144,,,,trace
+line,2D bottom (olive lower edge),270.283,22.3049,,,,trace
+line,2D bottom (olive lower edge),275.039,22.3049,,,,trace
+line,2D bottom (olive lower edge),289.815,23.1067,,,,trace
+line,2D bottom (olive lower edge),294.915,23.5184,,,,trace
+line,2D bottom (olive lower edge),310.759,23.9373,,,,trace
+line,2D bottom (olive lower edge),316.228,24.3638,,,,trace
+line,2D bottom (olive lower edge),321.792,24.3638,,,,trace
+line,2D bottom (olive lower edge),339.081,25.2397,,,,trace
+line,2D bottom (olive lower edge),351.119,25.6893,,,,trace
+line,2D bottom (olive lower edge),357.298,26.147,,,,trace
+line,2D bottom (olive lower edge),369.983,26.6128,,,,trace
+line,2D bottom (olive lower edge),376.494,26.6128,,,,trace
+line,2D bottom (olive lower edge),383.119,27.0869,,,,trace
+line,2D bottom (olive lower edge),389.86,27.0869,,,,trace
+line,2D bottom (olive lower edge),396.721,27.5695,,,,trace
+line,2D bottom (olive lower edge),403.702,27.5695,,,,trace
+line,2D bottom (olive lower edge),410.806,28.0607,,,,trace
+line,2D bottom (olive lower edge),425.391,28.5606,,,,trace
+line,2D bottom (olive lower edge),432.876,28.5606,,,,trace
+line,2D bottom (olive lower edge),440.493,29.0694,,,,trace
+line,2D bottom (olive lower edge),448.245,29.5873,,,,trace
+line,2D bottom (olive lower edge),456.132,29.5873,,,,trace
+line,2D bottom (olive lower edge),464.159,30.1144,,,,trace
+line,2D bottom (olive lower edge),472.327,30.6509,,,,trace
+line,2D bottom (olive lower edge),480.638,30.6509,,,,trace
+line,2D bottom (olive lower edge),489.096,30.6509,,,,trace
+line,2D bottom (olive lower edge),497.702,31.197,,,,trace
+line,2D bottom (olive lower edge),506.46,31.7528,,,,trace
+line,2D bottom (olive lower edge),515.372,31.7528,,,,trace
+line,2D bottom (olive lower edge),524.441,32.3185,,,,trace
+line,2D bottom (olive lower edge),533.67,32.3185,,,,trace
+line,2D bottom (olive lower edge),543.061,32.8943,,,,trace
+line,2D bottom (olive lower edge),562.341,33.4803,,,,trace
+line,2D bottom (olive lower edge),572.237,33.4803,,,,trace
+line,2D bottom (olive lower edge),582.306,34.0768,,,,trace
+line,2D bottom (olive lower edge),602.98,34.6839,,,,trace
+line,2D bottom (olive lower edge),613.591,34.6839,,,,trace
+line,2D bottom (olive lower edge),624.388,35.3018,,,,trace
+line,2D bottom (olive lower edge),635.375,35.9307,,,,trace
+line,2D bottom (olive lower edge),646.556,35.9307,,,,trace
+line,2D bottom (olive lower edge),657.933,36.5708,,,,trace
+line,2D bottom (olive lower edge),669.511,36.5708,,,,trace
+line,2D bottom (olive lower edge),681.292,37.2224,,,,trace
+line,2D bottom (olive lower edge),705.48,37.8855,,,,trace
+line,2D bottom (olive lower edge),717.894,37.8855,,,,trace
+line,2D bottom (olive lower edge),730.527,38.5605,,,,trace
+line,2D bottom (olive lower edge),743.382,39.2475,,,,trace
+line,2D bottom (olive lower edge),769.775,39.9467,,,,trace
+line,2D bottom (olive lower edge),783.32,39.9467,,,,trace
+line,2D bottom (olive lower edge),797.104,40.6583,,,,trace
+line,2D bottom (olive lower edge),811.131,40.6583,,,,trace
+line,2D bottom (olive lower edge),839.929,41.3827,,,,trace
+line,2D bottom (olive lower edge),854.709,42.12,,,,trace
+line,2D bottom (olive lower edge),869.749,42.12,,,,trace
+line,2D bottom (olive lower edge),900.628,43.6341,,,,trace
+line,2D bottom (olive lower edge),916.476,43.6341,,,,trace
+line,2D bottom (olive lower edge),932.603,44.4115,,,,trace
+line,2D bottom (olive lower edge),949.014,44.4115,,,,trace
+line,2D bottom (olive lower edge),965.714,45.2027,,,,trace
+line,2D bottom (olive lower edge),982.707,45.2027,,,,trace
+line,2D bottom (olive lower edge),1000,46.008,,,,trace
+line,2D bottom (olive lower edge),1017.6,46.008,,,,trace
+line,2D bottom (olive lower edge),1035.5,46.8277,,,,trace
+line,2D bottom (olive lower edge),1072.27,47.662,,,,trace
+line,2D bottom (olive lower edge),1091.14,48.5111,,,,trace
+line,2D bottom (olive lower edge),1110.34,48.5111,,,,trace
+line,2D bottom (olive lower edge),1129.87,49.3753,,,,trace
+line,2D bottom (olive lower edge),1149.76,49.3753,,,,trace
+line,2D bottom (olive lower edge),1169.99,50.255,,,,trace
+line,2D bottom (olive lower edge),1190.58,50.255,,,,trace
+line,2D bottom (olive lower edge),1211.53,51.1503,,,,trace
+line,2D bottom (olive lower edge),1232.85,51.1503,,,,trace
+line,2D bottom (olive lower edge),1254.54,52.0616,,,,trace
+line,2D bottom (olive lower edge),1276.62,52.0616,,,,trace
+line,2D bottom (olive lower edge),1299.08,52.9891,,,,trace
+line,2D bottom (olive lower edge),1321.94,52.9891,,,,trace
+line,2D bottom (olive lower edge),1345.2,53.9331,,,,trace
+line,2D bottom (olive lower edge),1368.87,54.894,,,,trace
+line,2D bottom (olive lower edge),1392.96,54.894,,,,trace
+line,2D bottom (olive lower edge),1417.47,55.872,,,,trace
+line,2D bottom (olive lower edge),1442.42,55.872,,,,trace
+line,2D bottom (olive lower edge),1467.8,56.8674,,,,trace
+line,2D bottom (olive lower edge),1519.91,57.8805,,,,trace
+line,2D bottom (olive lower edge),1546.66,57.8805,,,,trace
+line,2D bottom (olive lower edge),1573.87,58.9117,,,,trace
+line,2D bottom (olive lower edge),1601.57,59.9612,,,,trace
+line,2D bottom (olive lower edge),1629.75,59.9612,,,,trace
+line,2D bottom (olive lower edge),1658.43,61.0295,,,,trace
+line,2D bottom (olive lower edge),1687.61,61.0295,,,,trace
+line,2D bottom (olive lower edge),1717.31,62.1167,,,,trace
+line,2D bottom (olive lower edge),1747.53,62.1167,,,,trace
+line,2D bottom (olive lower edge),1778.28,63.2234,,,,trace
+line,2D bottom (olive lower edge),1809.57,63.2234,,,,trace
+line,2D bottom (olive lower edge),1841.41,64.3498,,,,trace
+line,2D bottom (olive lower edge),1873.82,64.3498,,,,trace
+line,2D bottom (olive lower edge),1906.79,65.4962,,,,trace
+line,2D bottom (olive lower edge),1940.34,66.6631,,,,trace
+line,2D bottom (olive lower edge),1974.49,66.6631,,,,trace
+line,2D bottom (olive lower edge),2009.23,67.8507,,,,trace
+line,2D bottom (olive lower edge),2044.59,67.8507,,,,trace
+line,2D bottom (olive lower edge),2080.57,69.0595,,,,trace
+line,2D bottom (olive lower edge),2117.18,69.0595,,,,trace
+line,2D bottom (olive lower edge),2154.43,70.2898,,,,trace
+line,2D bottom (olive lower edge),2192.35,70.2898,,,,trace
+line,2D bottom (olive lower edge),2230.92,71.5421,,,,trace
+line,2D bottom (olive lower edge),2270.18,71.5421,,,,trace
+line,2D bottom (olive lower edge),2310.13,72.8167,,,,trace
+line,2D bottom (olive lower edge),2350.78,74.1139,,,,trace
+line,2D bottom (olive lower edge),2392.15,74.1139,,,,trace
+line,2D bottom (olive lower edge),2434.24,75.4343,,,,trace
+line,2D bottom (olive lower edge),2477.08,75.4343,,,,trace
+line,2D bottom (olive lower edge),2520.67,76.7782,,,,trace
+line,2D bottom (olive lower edge),2565.02,76.7782,,,,trace
+line,2D bottom (olive lower edge),2610.16,78.1461,,,,trace
+line,2D bottom (olive lower edge),2656.09,78.1461,,,,trace
+line,2D bottom (olive lower edge),2702.83,79.5383,,,,trace
+line,2D bottom (olive lower edge),2750.39,79.5383,,,,trace
+line,2D bottom (olive lower edge),2798.79,80.9553,,,,trace
+line,2D bottom (olive lower edge),2848.04,80.9553,,,,trace
+line,2D bottom (olive lower edge),2898.15,82.3976,,,,trace
+line,2D bottom (olive lower edge),2949.15,83.8656,,,,trace
+line,2D bottom (olive lower edge),3001.05,83.8656,,,,trace
+line,2D bottom (olive lower edge),3053.86,85.3597,,,,trace
+line,2D bottom (olive lower edge),3107.59,85.3597,,,,trace
+line,2D bottom (olive lower edge),3162.28,86.8804,,,,trace
+line,2D bottom (olive lower edge),3217.92,86.8804,,,,trace
+line,2D bottom (olive lower edge),3274.55,88.4283,,,,trace
+line,2D bottom (olive lower edge),3390.81,91.6072,,,,trace
+line,2D bottom (olive lower edge),3450.47,91.6072,,,,trace
+line,2D bottom (olive lower edge),3635.85,93.2392,,,,trace
+line,2D bottom (olive lower edge),3967.21,100.063,,,,trace
+line,2D bottom (olive lower edge),4108.06,100.063,,,,trace
+line,2D bottom (olive lower edge),4328.76,101.846,,,,trace
+line,2D bottom (olive lower edge),4482.45,105.507,,,,trace
+line,2D bottom (olive lower edge),4561.32,107.387,,,,trace
+line,2D bottom (olive lower edge),4641.59,109.3,,,,trace
+line,2D bottom (olive lower edge),4723.27,107.387,,,,trace
+line,2D bottom (olive lower edge),4977.02,111.247,,,,trace
+line,2D bottom (olive lower edge),5153.72,113.229,,,,trace
+line,2D bottom (olive lower edge),5244.41,115.247,,,,trace
+line,2D bottom (olive lower edge),5336.7,115.247,,,,trace
+line,2D bottom (olive lower edge),5623.41,119.39,,,,trace
+line,2D bottom (olive lower edge),5722.37,119.39,,,,trace
+line,2D bottom (olive lower edge),5823.06,121.517,,,,trace
+line,2D bottom (olive lower edge),6029.8,123.681,,,,trace
+line,2D bottom (olive lower edge),6135.91,123.681,,,,trace
+line,2D bottom (olive lower edge),6353.75,128.128,,,,trace
+line,2D bottom (olive lower edge),6579.33,130.41,,,,trace
+line,2D bottom (olive lower edge),6812.92,132.734,,,,trace
+line,2D bottom (olive lower edge),6932.81,132.734,,,,trace
+line,2D bottom (olive lower edge),7054.8,135.098,,,,trace
+line,2D bottom (olive lower edge),7178.94,137.505,,,,trace
+line,2D bottom (olive lower edge),7305.27,137.505,,,,trace
+line,2D bottom (olive lower edge),7433.82,139.955,,,,trace
+line,2D bottom (olive lower edge),7564.63,139.955,,,,trace
+line,2D bottom (olive lower edge),7697.75,142.448,,,,trace
+line,2D bottom (olive lower edge),7833.2,142.448,,,,trace
+line,2D bottom (olive lower edge),8111.31,144.986,,,,trace
+line,2D bottom (olive lower edge),8254.04,147.569,,,,trace
+line,2D bottom (olive lower edge),8399.29,147.569,,,,trace
+line,2D bottom (olive lower edge),8547.09,150.198,,,,trace
+line,2D bottom (olive lower edge),8697.49,150.198,,,,trace
+line,2D bottom (olive lower edge),8850.54,152.874,,,,trace
+line,2D bottom (olive lower edge),9006.28,155.598,,,,trace
+line,2D bottom (olive lower edge),9657.14,161.191,,,,trace
+line,2D bottom (olive lower edge),9827.07,161.191,,,,trace
+line,2D bottom (olive lower edge),10000,164.063,,,,trace
+line,2D bottom (olive lower edge),10537.2,169.961,,,,trace
+line,2D bottom (olive lower edge),10911.4,172.989,,,,trace
+line,2D bottom (olive lower edge),11103.4,172.989,,,,trace
+line,2D bottom (olive lower edge),11497.6,176.071,,,,trace
+line,2D bottom (olive lower edge),11699.9,179.207,,,,trace
+line,2D bottom (olive lower edge),11905.8,179.207,,,,trace
+line,2D bottom (olive lower edge),12766.2,185.65,,,,trace
+line,2D bottom (olive lower edge),13219.4,192.324,,,,trace
+line,2D bottom (olive lower edge),13688.7,195.75,,,,trace
+line,2D bottom (olive lower edge),14174.7,199.237,,,,trace
+line,2D bottom (olive lower edge),14424.2,199.237,,,,trace
+line,2D bottom (olive lower edge),14936.3,202.787,,,,trace
+line,2D bottom (olive lower edge),15199.1,206.4,,,,trace
+line,2D bottom (olive lower edge),16015.7,213.82,,,,trace
+line,2D bottom (olive lower edge),16297.5,213.82,,,,trace
+line,2D bottom (olive lower edge),16584.3,217.629,,,,trace
+line,2D bottom (olive lower edge),17475.3,221.506,,,,trace
+line,2D bottom (olive lower edge),18414.1,229.469,,,,trace
+line,2D bottom (olive lower edge),18738.2,233.557,,,,trace
+line,2D bottom (olive lower edge),19403.4,237.718,,,,trace
+line,2D bottom (olive lower edge),20445.9,241.953,,,,trace
+line,2D bottom (olive lower edge),20805.7,246.264,,,,trace
+line,2D bottom (olive lower edge),21171.8,246.264,,,,trace
+line,2D bottom (olive lower edge),21923.5,250.651,,,,trace
+line,2D bottom (olive lower edge),22309.2,255.116,,,,trace
+line,2D bottom (olive lower edge),22701.8,259.662,,,,trace
+line,2D bottom (olive lower edge),23101.3,259.662,,,,trace
+line,2D bottom (olive lower edge),24342.4,268.996,,,,trace
+line,2D bottom (olive lower edge),25650.2,273.788,,,,trace
+line,2D bottom (olive lower edge),26560.9,278.666,,,,trace
+line,2D bottom (olive lower edge),28480.4,293.827,,,,trace
+line,2D bottom (olive lower edge),28981.5,293.827,,,,trace
+line,2D bottom (olive lower edge),29491.5,299.062,,,,trace
+line,2D bottom (olive lower edge),30010.5,299.062,,,,trace
+line,2D bottom (olive lower edge),30538.6,304.39,,,,trace
+line,2D bottom (olive lower edge),31075.9,304.39,,,,trace
+line,2D bottom (olive lower edge),31622.8,309.812,,,,trace
+line,2D bottom (olive lower edge),32179.2,315.332,,,,trace
+line,2D bottom (olive lower edge),32745.5,315.332,,,,trace
+line,2D bottom (olive lower edge),33321.7,320.95,,,,trace
+line,2D bottom (olive lower edge),33908.1,320.95,,,,trace
+line,2D bottom (olive lower edge),34504.7,326.668,,,,trace
+line,2D bottom (olive lower edge),35111.9,326.668,,,,trace
+line,2D bottom (olive lower edge),35729.8,332.488,,,,trace
+line,2D bottom (olive lower edge),36358.5,332.488,,,,trace
+line,2D bottom (olive lower edge),36998.3,338.411,,,,trace
+line,2D bottom (olive lower edge),37649.4,338.411,,,,trace
+line,2D bottom (olive lower edge),39672.1,350.576,,,,trace
+line,2D bottom (olive lower edge),41080.6,356.822,,,,trace
+line,2D bottom (olive lower edge),41803.4,363.179,,,,trace
+line,2D bottom (olive lower edge),42539.1,363.179,,,,trace
+line,2D bottom (olive lower edge),43287.6,369.65,,,,trace
+line,2D bottom (olive lower edge),44049.3,369.65,,,,trace
+line,2D bottom (olive lower edge),44824.5,376.235,,,,trace
+line,2D bottom (olive lower edge),45613.2,376.235,,,,trace
+line,2D bottom (olive lower edge),47232.7,382.938,,,,trace
+line,2D bottom (olive lower edge),48063.8,389.76,,,,trace
+line,2D bottom (olive lower edge),48909.6,396.704,,,,trace
+line,2D bottom (olive lower edge),49770.2,396.704,,,,trace
+line,2D bottom (olive lower edge),50646,403.772,,,,trace
+line,2D bottom (olive lower edge),51537.2,403.772,,,,trace
+line,2D bottom (olive lower edge),52444.1,410.965,,,,trace
+line,2D bottom (olive lower edge),53367,410.965,,,,trace
+line,2D bottom (olive lower edge),57223.7,433.323,,,,trace
+line,2D bottom (olive lower edge),58230.6,433.323,,,,trace
+line,2D bottom (olive lower edge),59255.3,441.043,,,,trace
+line,2D bottom (olive lower edge),61359.1,448.901,,,,trace
+line,2D bottom (olive lower edge),63537.5,456.898,,,,trace
+line,2D bottom (olive lower edge),66951.1,465.038,,,,trace
+line,2D bottom (olive lower edge),68129.2,473.323,,,,trace
+line,2D bottom (olive lower edge),69328.1,481.756,,,,trace
+line,2D bottom (olive lower edge),71789.4,490.339,,,,trace
+line,2D bottom (olive lower edge),73052.7,490.339,,,,trace
+line,2D bottom (olive lower edge),74338.2,499.074,,,,trace
+line,2D bottom (olive lower edge),75646.3,499.074,,,,trace
+line,2D bottom (olive lower edge),76977.5,507.966,,,,trace
+line,2D bottom (olive lower edge),79710.4,517.015,,,,trace
+line,2D bottom (olive lower edge),81113.1,517.015,,,,trace
+line,2D bottom (olive lower edge),82540.4,526.226,,,,trace
+line,2D bottom (olive lower edge),85470.9,535.601,,,,trace
+line,2D bottom (olive lower edge),86974.9,545.144,,,,trace
+line,2D bottom (olive lower edge),88505.4,545.144,,,,trace
+line,2D bottom (olive lower edge),90062.8,554.856,,,,trace
+line,2D bottom (olive lower edge),91647.6,554.856,,,,trace
+line,2D bottom (olive lower edge),93260.3,564.741,,,,trace
+line,2D bottom (olive lower edge),94901.4,564.741,,,,trace
+line,2D bottom (olive lower edge),100000,585.042,,,,trace
+line,2D bottom (olive lower edge),101760,595.465,,,,trace
+line,2D bottom (olive lower edge),105372,606.074,,,,trace
+line,2D bottom (olive lower edge),107227,606.074,,,,trace
+line,2D bottom (olive lower edge),109114,616.871,,,,trace
+line,2D bottom (olive lower edge),111034,616.871,,,,trace
+line,2D bottom (olive lower edge),112987,627.861,,,,trace
+line,2D bottom (olive lower edge),114976,627.861,,,,trace
+line,2D bottom (olive lower edge),116999,639.047,,,,trace
+line,2D bottom (olive lower edge),119058,639.047,,,,trace
+line,2D bottom (olive lower edge),121153,650.432,,,,trace
+line,2D bottom (olive lower edge),123285,662.02,,,,trace
+line,2D bottom (olive lower edge),125454,662.02,,,,trace
+line,2D bottom (olive lower edge),127662,673.814,,,,trace
+line,2D bottom (olive lower edge),129908,673.814,,,,trace
+line,2D bottom (olive lower edge),132194,685.819,,,,trace
+line,2D bottom (olive lower edge),136887,698.037,,,,trace
+line,2D bottom (olive lower edge),141747,710.473,,,,trace
+line,2D bottom (olive lower edge),144242,723.131,,,,trace
+line,2D bottom (olive lower edge),146780,723.131,,,,trace
+line,2D bottom (olive lower edge),149363,736.014,,,,trace
+line,2D bottom (olive lower edge),151991,736.014,,,,trace
+line,2D bottom (olive lower edge),154666,749.126,,,,trace
+line,2D bottom (olive lower edge),160157,762.472,,,,trace
+line,2D bottom (olive lower edge),165843,776.056,,,,trace
+line,2D bottom (olive lower edge),168761,776.056,,,,trace
+line,2D bottom (olive lower edge),171731,789.882,,,,trace
+line,2D bottom (olive lower edge),180957,818.278,,,,trace
+line,2D bottom (olive lower edge),184141,818.278,,,,trace
+line,2D bottom (olive lower edge),194034,847.694,,,,trace
+line,2D bottom (olive lower edge),200923,862.796,,,,trace
+line,2D bottom (olive lower edge),204459,878.167,,,,trace
+line,2D bottom (olive lower edge),223092,909.736,,,,trace
+line,2D bottom (olive lower edge),227018,925.944,,,,trace
+line,2D bottom (olive lower edge),239215,942.44,,,,trace
+line,2D bottom (olive lower edge),247708,959.23,,,,trace
+line,2D bottom (olive lower edge),252067,976.319,,,,trace
+line,2D bottom (olive lower edge),256502,976.319,,,,trace
+line,2D bottom (olive lower edge),261016,993.713,,,,trace
+line,2D bottom (olive lower edge),265609,1011.42,,,,trace
+line,2D bottom (olive lower edge),270283,1011.42,,,,trace
+line,2D bottom (olive lower edge),275039,1029.44,,,,trace
+line,2D bottom (olive lower edge),279879,1029.44,,,,trace
+line,2D bottom (olive lower edge),284804,1047.78,,,,trace
+line,2D bottom (olive lower edge),289815,1047.78,,,,trace
+line,2D bottom (olive lower edge),305386,1085.44,,,,trace
+line,2D bottom (olive lower edge),310759,1104.78,,,,trace
+line,2D bottom (olive lower edge),316228,1104.78,,,,trace
+line,2D bottom (olive lower edge),321792,1124.46,,,,trace
+line,2D bottom (olive lower edge),327455,1124.46,,,,trace
+line,2D bottom (olive lower edge),333217,1144.5,,,,trace
+line,2D bottom (olive lower edge),345047,1164.89,,,,trace
+line,2D bottom (olive lower edge),351119,1164.89,,,,trace
+line,2D bottom (olive lower edge),363585,1185.64,,,,trace
+line,2D bottom (olive lower edge),369983,1206.76,,,,trace
+line,2D bottom (olive lower edge),376494,1206.76,,,,trace
+line,2D bottom (olive lower edge),389860,1250.14,,,,trace
+line,2D bottom (olive lower edge),396721,1250.14,,,,trace
+line,2D bottom (olive lower edge),403702,1272.41,,,,trace
+line,2D bottom (olive lower edge),418034,1295.08,,,,trace
+line,2D bottom (olive lower edge),432876,1318.16,,,,trace
+line,2D bottom (olive lower edge),440493,1341.64,,,,trace
+line,2D bottom (olive lower edge),472327,1389.87,,,,trace
+line,2D bottom (olive lower edge),480638,1389.87,,,,trace
+line,2D bottom (olive lower edge),489096,1414.63,,,,trace
+line,2D bottom (olive lower edge),506460,1439.83,,,,trace
+line,2D bottom (olive lower edge),515372,1439.83,,,,trace
+line,2D bottom (olive lower edge),524441,1465.49,,,,trace
+line,2D bottom (olive lower edge),543061,1491.59,,,,trace
+line,2D bottom (olive lower edge),552617,1491.59,,,,trace
+line,2D bottom (olive lower edge),572237,1545.22,,,,trace
+line,2D bottom (olive lower edge),582306,1545.22,,,,trace
+line,2D bottom (olive lower edge),592553,1572.74,,,,trace
+line,2D bottom (olive lower edge),602980,1572.74,,,,trace
+line,2D bottom (olive lower edge),624388,1600.76,,,,trace
+line,2D bottom (olive lower edge),646556,1658.31,,,,trace
+line,2D bottom (olive lower edge),657933,1658.31,,,,trace
+line,2D bottom (olive lower edge),669511,1687.85,,,,trace
+line,2D bottom (olive lower edge),681292,1687.85,,,,trace
+line,2D bottom (olive lower edge),693281,1717.92,,,,trace
+line,2D bottom (olive lower edge),705480,1717.92,,,,trace
+line,2D bottom (olive lower edge),730527,1748.53,,,,trace
+line,2D bottom (olive lower edge),756463,1779.68,,,,trace
+line,2D bottom (olive lower edge),769775,1811.39,,,,trace
+line,2D bottom (olive lower edge),811131,1876.5,,,,trace
+line,2D bottom (olive lower edge),839929,1909.93,,,,trace
+line,2D bottom (olive lower edge),869749,1943.96,,,,trace
+line,2D bottom (olive lower edge),885054,1943.96,,,,trace
+line,2D bottom (olive lower edge),900628,1978.59,,,,trace
+line,2D bottom (olive lower edge),916476,1978.59,,,,trace
+line,2D bottom (olive lower edge),932603,2013.84,,,,trace
+line,2D bottom (olive lower edge),949014,2049.72,,,,trace
+line,2D bottom (olive lower edge),965714,2049.72,,,,trace
+line,green line (upper bound),103.55,102.749,,,,trace
+line,green line (upper bound),105.372,104.58,,,,trace
+line,green line (upper bound),107.227,106.443,,,,trace
+line,green line (upper bound),109.114,108.339,,,,trace
+line,green line (upper bound),111.034,110.269,,,,trace
+line,green line (upper bound),112.987,112.234,,,,trace
+line,green line (upper bound),114.976,114.233,,,,trace
+line,green line (upper bound),116.999,116.269,,,,trace
+line,green line (upper bound),119.058,118.34,,,,trace
+line,green line (upper bound),121.153,120.448,,,,trace
+line,green line (upper bound),123.285,122.594,,,,trace
+line,green line (upper bound),125.454,124.778,,,,trace
+line,green line (upper bound),127.662,127.001,,,,trace
+line,green line (upper bound),129.908,129.264,,,,trace
+line,green line (upper bound),132.194,131.567,,,,trace
+line,green line (upper bound),134.52,133.911,,,,trace
+line,green line (upper bound),136.887,136.296,,,,trace
+line,green line (upper bound),139.296,138.725,,,,trace
+line,green line (upper bound),141.747,141.196,,,,trace
+line,green line (upper bound),144.242,143.712,,,,trace
+line,green line (upper bound),146.78,146.272,,,,trace
+line,green line (upper bound),149.363,148.878,,,,trace
+line,green line (upper bound),151.991,151.53,,,,trace
+line,green line (upper bound),154.666,154.23,,,,trace
+line,green line (upper bound),157.387,156.978,,,,trace
+line,green line (upper bound),160.157,159.774,,,,trace
+line,green line (upper bound),162.975,162.621,,,,trace
+line,green line (upper bound),165.843,165.518,,,,trace
+line,green line (upper bound),168.761,168.467,,,,trace
+line,green line (upper bound),171.731,171.468,,,,trace
+line,green line (upper bound),174.753,174.523,,,,trace
+line,green line (upper bound),177.828,177.632,,,,trace
+line,green line (upper bound),180.957,180.797,,,,trace
+line,green line (upper bound),184.141,184.018,,,,trace
+line,green line (upper bound),187.382,187.296,,,,trace
+line,green line (upper bound),190.679,190.633,,,,trace
+line,green line (upper bound),194.034,194.029,,,,trace
+line,green line (upper bound),197.449,197.486,,,,trace
+line,green line (upper bound),200.923,201.004,,,,trace
+line,green line (upper bound),204.459,204.585,,,,trace
+line,green line (upper bound),208.057,208.23,,,,trace
+line,green line (upper bound),211.718,211.94,,,,trace
+line,green line (upper bound),215.443,215.716,,,,trace
+line,green line (upper bound),219.235,219.559,,,,trace
+line,green line (upper bound),223.092,223.47,,,,trace
+line,green line (upper bound),227.018,227.452,,,,trace
+line,green line (upper bound),231.013,231.504,,,,trace
+line,green line (upper bound),235.078,235.628,,,,trace
+line,green line (upper bound),239.215,239.826,,,,trace
+line,green line (upper bound),243.424,244.099,,,,trace
+line,green line (upper bound),247.708,248.448,,,,trace
+line,green line (upper bound),252.067,252.874,,,,trace
+line,green line (upper bound),256.502,257.379,,,,trace
+line,green line (upper bound),261.016,261.964,,,,trace
+line,green line (upper bound),265.609,266.631,,,,trace
+line,green line (upper bound),270.283,271.382,,,,trace
+line,green line (upper bound),275.039,276.216,,,,trace
+line,green line (upper bound),279.879,281.137,,,,trace
+line,green line (upper bound),284.804,286.146,,,,trace
+line,green line (upper bound),289.815,291.244,,,,trace
+line,green line (upper bound),294.915,296.433,,,,trace
+line,green line (upper bound),300.105,301.714,,,,trace
+line,green line (upper bound),305.386,307.089,,,,trace
+line,green line (upper bound),310.759,312.56,,,,trace
+line,green line (upper bound),316.228,318.129,,,,trace
+line,green line (upper bound),321.792,323.796,,,,trace
+line,green line (upper bound),327.455,329.565,,,,trace
+line,green line (upper bound),333.217,335.436,,,,trace
+line,green line (upper bound),339.081,341.412,,,,trace
+line,green line (upper bound),345.047,347.495,,,,trace
+line,green line (upper bound),351.119,353.686,,,,trace
+line,green line (upper bound),363.585,366.4,,,,trace
+line,green line (upper bound),369.983,372.928,,,,trace
+line,green line (upper bound),389.86,386.334,,,,trace
+line,green line (upper bound),396.721,393.217,,,,trace
+line,green line (upper bound),418.034,414.61,,,,trace
+line,green line (upper bound),425.391,421.996,,,,trace
+line,green line (upper bound),432.876,429.514,,,,trace
+line,green line (upper bound),440.493,437.166,,,,trace
+line,green line (upper bound),448.245,444.955,,,,trace
+line,green line (upper bound),456.132,452.882,,,,trace
+line,green line (upper bound),464.159,460.95,,,,trace
+line,green line (upper bound),472.327,469.163,,,,trace
+line,green line (upper bound),480.638,477.521,,,,trace
+line,green line (upper bound),489.096,486.028,,,,trace
+line,green line (upper bound),497.702,494.687,,,,trace
+line,green line (upper bound),506.46,503.5,,,,trace
+line,green line (upper bound),515.372,512.471,,,,trace
+line,green line (upper bound),524.441,521.601,,,,trace
+line,green line (upper bound),533.67,530.893,,,,trace
+line,green line (upper bound),543.061,540.351,,,,trace
+line,green line (upper bound),552.617,549.978,,,,trace
+line,green line (upper bound),562.341,559.776,,,,trace
+line,green line (upper bound),572.237,569.749,,,,trace
+line,green line (upper bound),582.306,579.9,,,,trace
+line,green line (upper bound),592.553,590.231,,,,trace
+line,green line (upper bound),602.98,600.746,,,,trace
+line,green line (upper bound),613.591,611.449,,,,trace
+line,green line (upper bound),624.388,622.342,,,,trace
+line,green line (upper bound),635.375,633.43,,,,trace
+line,green line (upper bound),646.556,644.715,,,,trace
+line,green line (upper bound),657.933,656.201,,,,trace
+line,green line (upper bound),669.511,667.891,,,,trace
+line,green line (upper bound),681.292,679.79,,,,trace
+line,green line (upper bound),693.281,691.901,,,,trace
+line,green line (upper bound),705.48,704.228,,,,trace
+line,green line (upper bound),717.894,716.774,,,,trace
+line,green line (upper bound),730.527,729.544,,,,trace
+line,green line (upper bound),743.382,742.541,,,,trace
+line,green line (upper bound),756.463,755.77,,,,trace
+line,green line (upper bound),769.775,769.234,,,,trace
+line,green line (upper bound),783.32,782.939,,,,trace
+line,green line (upper bound),797.104,796.887,,,,trace
+line,green line (upper bound),811.131,811.085,,,,trace
+line,green line (upper bound),869.749,870.448,,,,trace
+line,green line (upper bound),885.054,885.955,,,,trace
+line,green line (upper bound),932.603,934.155,,,,trace
+line,green line (upper bound),949.014,950.798,,,,trace
+line,green line (upper bound),965.714,967.737,,,,trace
+line,green line (upper bound),1000,1002.53,,,,trace
+line,green line (upper bound),1017.6,1020.39,,,,trace
+line,green line (upper bound),1035.5,1038.57,,,,trace
+line,green line (upper bound),1053.72,1057.07,,,,trace
+line,green line (upper bound),1072.27,1075.9,,,,trace
+line,green line (upper bound),1091.14,1095.07,,,,trace
+line,green line (upper bound),1110.34,1114.58,,,,trace
+line,green line (upper bound),1129.87,1134.43,,,,trace
+line,green line (upper bound),1149.76,1154.65,,,,trace
+line,green line (upper bound),1169.99,1175.22,,,,trace
+line,green line (upper bound),1190.58,1196.15,,,,trace
+line,green line (upper bound),1211.53,1217.46,,,,trace
+line,green line (upper bound),1232.85,1239.15,,,,trace
+line,green line (upper bound),1254.54,1261.23,,,,trace
+line,green line (upper bound),1276.62,1283.7,,,,trace
+line,green line (upper bound),1299.08,1306.57,,,,trace
+line,green line (upper bound),1321.94,1329.85,,,,trace
+line,green line (upper bound),1345.2,1353.54,,,,trace
+line,green line (upper bound),1368.87,1377.65,,,,trace
+line,green line (upper bound),1392.96,1402.2,,,,trace
+line,green line (upper bound),1417.47,1427.18,,,,trace
+line,green line (upper bound),1442.42,1452.6,,,,trace
+line,green line (upper bound),1467.8,1478.48,,,,trace
+line,green line (upper bound),1493.63,1504.82,,,,trace
+line,green line (upper bound),1519.91,1531.63,,,,trace
+line,green line (upper bound),1629.75,1643.73,,,,trace
+line,green line (upper bound),1717.31,1702.82,,,,trace
+line,green line (upper bound),1809.57,1795.46,,,,trace
+line,green line (upper bound),1841.41,1827.45,,,,trace
+line,green line (upper bound),1873.82,1860.01,,,,trace
+line,green line (upper bound),1906.79,1893.15,,,,trace
+line,green line (upper bound),1940.34,1926.87,,,,trace
+line,green line (upper bound),1974.49,1961.2,,,,trace
+line,green line (upper bound),2009.23,1996.14,,,,trace
+line,green line (upper bound),2044.59,2031.7,,,,trace
+line,green line (upper bound),2080.57,2067.9,,,,trace
+line,green line (upper bound),2117.18,2104.74,,,,trace
+line,green line (upper bound),2154.43,2142.24,,,,trace
+line,green line (upper bound),2192.35,2180.4,,,,trace
+line,green line (upper bound),2230.92,2219.25,,,,trace
+line,green line (upper bound),2270.18,2258.79,,,,trace
+line,green line (upper bound),2310.13,2299.03,,,,trace
+line,green line (upper bound),2350.78,2339.99,,,,trace
+line,green line (upper bound),2392.15,2381.68,,,,trace
+line,green line (upper bound),2434.24,2424.11,,,,trace
+line,green line (upper bound),2477.08,2467.29,,,,trace
+line,green line (upper bound),2520.67,2511.25,,,,trace
+line,green line (upper bound),2565.02,2555.99,,,,trace
+line,green line (upper bound),2610.16,2601.53,,,,trace
+line,green line (upper bound),2656.09,2647.87,,,,trace
+line,green line (upper bound),2702.83,2695.05,,,,trace
+line,green line (upper bound),2750.39,2743.06,,,,trace
+line,green line (upper bound),2798.79,2791.93,,,,trace
+line,green line (upper bound),2848.04,2841.67,,,,trace
+line,green line (upper bound),2898.15,2892.3,,,,trace
+line,green line (upper bound),2949.15,2943.83,,,,trace
+line,green line (upper bound),3001.05,2996.27,,,,trace
+line,green line (upper bound),3053.86,3049.65,,,,trace
+line,green line (upper bound),3107.59,3103.98,,,,trace
+line,green line (upper bound),3162.28,3159.28,,,,trace
+line,green line (upper bound),3217.92,3215.57,,,,trace
+line,green line (upper bound),3274.55,3272.86,,,,trace
+line,green line (upper bound),3332.17,3331.16,,,,trace
+line,green line (upper bound),3390.81,3390.51,,,,trace
+line,green line (upper bound),3450.47,3450.91,,,,trace
+line,green line (upper bound),3511.19,3512.39,,,,trace
+line,green line (upper bound),3572.98,3574.97,,,,trace
+line,green line (upper bound),3635.85,3638.66,,,,trace
+line,green line (upper bound),3699.83,3703.49,,,,trace
+line,green line (upper bound),3764.94,3769.47,,,,trace
+line,green line (upper bound),3831.19,3836.62,,,,trace
+line,green line (upper bound),3898.6,3904.97,,,,trace
+line,green line (upper bound),3967.21,3974.54,,,,trace
+line,green line (upper bound),4037.02,4045.35,,,,trace
+line,green line (upper bound),4108.06,4117.42,,,,trace
+line,green line (upper bound),4180.34,4190.78,,,,trace
+line,green line (upper bound),4253.91,4265.44,,,,trace
+line,green line (upper bound),4328.76,4341.43,,,,trace
+line,green line (upper bound),4404.93,4418.78,,,,trace
+line,green line (upper bound),4482.45,4497.5,,,,trace
+line,green line (upper bound),4561.32,4577.62,,,,trace
+line,green line (upper bound),4641.59,4659.18,,,,trace
+line,green line (upper bound),4723.27,4742.18,,,,trace
+line,green line (upper bound),4806.38,4826.67,,,,trace
+line,green line (upper bound),4890.96,4912.66,,,,trace
+line,green line (upper bound),4977.02,5000.18,,,,trace
+line,green line (upper bound),5064.6,5089.26,,,,trace
+line,green line (upper bound),5153.72,5179.93,,,,trace
+line,green line (upper bound),5244.41,5272.22,,,,trace
+line,green line (upper bound),5336.7,5366.14,,,,trace
+line,green line (upper bound),5430.61,5461.74,,,,trace
+line,green line (upper bound),5526.17,5559.05,,,,trace
+line,green line (upper bound),5623.41,5658.09,,,,trace
+line,green line (upper bound),5722.37,5758.89,,,,trace
+line,green line (upper bound),5823.06,5861.49,,,,trace
+line,green line (upper bound),5925.53,5965.91,,,,trace
+line,green line (upper bound),6029.8,6072.2,,,,trace
+line,green line (upper bound),6135.91,6180.38,,,,trace
+line,green line (upper bound),6243.88,6290.49,,,,trace
+line,green line (upper bound),6353.75,6402.56,,,,trace
+line,green line (upper bound),6465.56,6516.62,,,,trace
+line,green line (upper bound),6579.33,6632.72,,,,trace
+line,green line (upper bound),6695.11,6750.89,,,,trace
+line,green line (upper bound),6932.81,6871.16,,,,trace
+line,green line (upper bound),7178.94,7118.17,,,,trace
+line,green line (upper bound),7433.82,7374.06,,,,trace
+line,green line (upper bound),7564.63,7505.43,,,,trace
+line,green line (upper bound),7697.75,7639.14,,,,trace
+line,green line (upper bound),7833.2,7775.24,,,,trace
+line,green line (upper bound),7971.04,7913.76,,,,trace
+line,green line (upper bound),8111.31,8054.75,,,,trace
+line,green line (upper bound),8254.04,8198.25,,,,trace
+line,green line (upper bound),8399.29,8344.31,,,,trace
+line,green line (upper bound),8547.09,8492.97,,,,trace
+line,green line (upper bound),8697.49,8644.28,,,,trace
+line,green line (upper bound),8850.54,8798.28,,,,trace
+line,green line (upper bound),9006.28,8955.03,,,,trace
+line,green line (upper bound),9657.14,9610.44,,,,trace
+line,green line (upper bound),9827.07,9781.66,,,,trace
+line,green line (upper bound),10355,10313.8,,,,trace
+line,green line (upper bound),10537.2,10497.6,,,,trace
+line,green line (upper bound),10722.7,10684.6,,,,trace
+line,green line (upper bound),11103.4,11068.7,,,,trace
+line,green line (upper bound),11298.7,11265.9,,,,trace
+line,green line (upper bound),11497.6,11466.6,,,,trace
+line,green line (upper bound),11699.9,11670.9,,,,trace
+line,green line (upper bound),11905.8,11878.8,,,,trace
+line,green line (upper bound),12115.3,12090.4,,,,trace
+line,green line (upper bound),12328.5,12305.8,,,,trace
+line,green line (upper bound),12545.4,12525.1,,,,trace
+line,green line (upper bound),12766.2,12748.2,,,,trace
+line,green line (upper bound),12990.8,12975.3,,,,trace
+line,green line (upper bound),13219.4,13206.5,,,,trace
+line,green line (upper bound),13452,13441.8,,,,trace
+line,green line (upper bound),13688.7,13681.3,,,,trace
+line,green line (upper bound),13929.6,13925,,,,trace
+line,green line (upper bound),14174.7,14173.1,,,,trace
+line,green line (upper bound),14424.2,14425.6,,,,trace
+line,green line (upper bound),14678,14682.6,,,,trace
+line,green line (upper bound),14936.3,14944.2,,,,trace
+line,green line (upper bound),15199.1,15210.4,,,,trace
+line,green line (upper bound),15466.6,15481.4,,,,trace
+line,green line (upper bound),15738.7,15757.2,,,,trace
+line,green line (upper bound),16015.7,16037.9,,,,trace
+line,green line (upper bound),16297.5,16323.6,,,,trace
+line,green line (upper bound),16584.3,16614.5,,,,trace
+line,green line (upper bound),16876.1,16910.5,,,,trace
+line,green line (upper bound),17173.1,17211.7,,,,trace
+line,green line (upper bound),17475.3,17518.4,,,,trace
+line,green line (upper bound),17782.8,17830.5,,,,trace
+line,green line (upper bound),18095.7,18148.1,,,,trace
+line,green line (upper bound),18414.1,18471.4,,,,trace
+line,green line (upper bound),18738.2,18800.5,,,,trace
+line,green line (upper bound),19067.9,19135.5,,,,trace
+line,green line (upper bound),19403.4,19476.4,,,,trace
+line,green line (upper bound),19744.9,19823.4,,,,trace
+line,green line (upper bound),20092.3,20176.5,,,,trace
+line,green line (upper bound),20445.9,20536,,,,trace
+line,green line (upper bound),20805.7,20901.9,,,,trace
+line,green line (upper bound),21171.8,21274.2,,,,trace
+line,green line (upper bound),21544.3,21653.2,,,,trace
+line,green line (upper bound),21923.5,22039,,,,trace
+line,green line (upper bound),22309.2,22431.7,,,,trace
+line,green line (upper bound),22701.8,22831.3,,,,trace
+line,green line (upper bound),23101.3,23238,,,,trace
+line,green line (upper bound),23507.8,23652,,,,trace
+line,green line (upper bound),23921.5,24073.4,,,,trace
+line,green line (upper bound),24342.4,24502.3,,,,trace
+line,green line (upper bound),24770.8,24938.8,,,,trace
+line,green line (upper bound),25206.7,25383.1,,,,trace
+line,green line (upper bound),25650.2,25835.3,,,,trace
+line,green line (upper bound),26101.6,26295.6,,,,trace
+line,green line (upper bound),26560.9,26764.1,,,,trace
+line,green line (upper bound),27028.3,27240.9,,,,trace
+line,green line (upper bound),27503.9,27726.2,,,,trace
+line,green line (upper bound),27987.9,28220.2,,,,trace
+line,green line (upper bound),28480.4,28722.9,,,,trace
+line,green line (upper bound),30010.5,30285.6,,,,trace
+line,green line (upper bound),32179.2,31933.3,,,,trace
+line,green line (upper bound),33321.7,33081.3,,,,trace
+line,green line (upper bound),34504.7,34270.5,,,,trace
+line,green line (upper bound),35111.9,34881,,,,trace
+line,green line (upper bound),35729.8,35502.5,,,,trace
+line,green line (upper bound),36358.5,36135,,,,trace
+line,green line (upper bound),36998.3,36778.7,,,,trace
+line,green line (upper bound),37649.4,37434,,,,trace
+line,green line (upper bound),38311.9,38100.9,,,,trace
+line,green line (upper bound),38986,38779.7,,,,trace
+line,green line (upper bound),39672.1,39470.6,,,,trace
+line,green line (upper bound),40370.2,40173.7,,,,trace
+line,green line (upper bound),41080.6,40889.5,,,,trace
+line,green line (upper bound),41803.4,41617.9,,,,trace
+line,green line (upper bound),42539.1,42359.4,,,,trace
+line,green line (upper bound),43287.6,43114,,,,trace
+line,green line (upper bound),44049.3,43882.2,,,,trace
+line,green line (upper bound),44824.5,44663.9,,,,trace
+line,green line (upper bound),45613.2,45459.7,,,,trace
+line,green line (upper bound),46415.9,46269.6,,,,trace
+line,green line (upper bound),47232.7,47093.9,,,,trace
+line,green line (upper bound),48063.8,47932.9,,,,trace
+line,green line (upper bound),48909.6,48786.8,,,,trace
+line,green line (upper bound),49770.2,49656,,,,trace
+line,green line (upper bound),50646,50540.7,,,,trace
+line,green line (upper bound),51537.2,51441.1,,,,trace
+line,green line (upper bound),52444.1,52357.5,,,,trace
+line,green line (upper bound),53367,53290.3,,,,trace
+line,green line (upper bound),54306.1,54239.7,,,,trace
+line,green line (upper bound),55261.7,55206,,,,trace
+line,green line (upper bound),56234.1,56189.6,,,,trace
+line,green line (upper bound),57223.7,57190.6,,,,trace
+line,green line (upper bound),58230.6,58209.5,,,,trace
+line,green line (upper bound),59255.3,59246.5,,,,trace
+line,green line (upper bound),60298,60302.1,,,,trace
+line,green line (upper bound),61359.1,61376.4,,,,trace
+line,green line (upper bound),62438.8,62469.8,,,,trace
+line,green line (upper bound),63537.5,63582.8,,,,trace
+line,green line (upper bound),64655.6,64715.5,,,,trace
+line,green line (upper bound),65793.3,65868.5,,,,trace
+line,green line (upper bound),66951.1,67042,,,,trace
+line,green line (upper bound),68129.2,68236.4,,,,trace
+line,green line (upper bound),69328.1,69452.1,,,,trace
+line,green line (upper bound),70548,70689.4,,,,trace
+line,green line (upper bound),71789.4,71948.8,,,,trace
+line,green line (upper bound),73052.7,73230.6,,,,trace
+line,green line (upper bound),74338.2,74535.2,,,,trace
+line,green line (upper bound),75646.3,75863.1,,,,trace
+line,green line (upper bound),76977.5,77214.7,,,,trace
+line,green line (upper bound),78332,78590.3,,,,trace
+line,green line (upper bound),79710.4,79990.4,,,,trace
+line,green line (upper bound),81113.1,81415.5,,,,trace
+line,green line (upper bound),86974.9,87374.3,,,,trace
+line,green line (upper bound),88505.4,88930.9,,,,trace
+line,green line (upper bound),93260.3,93769.2,,,,trace
+line,green line (upper bound),94901.4,95439.8,,,,trace
+line,green line (upper bound),96571.4,97140.1,,,,trace
+line,green line (upper bound),101760,102425,,,,trace
+line,green line (upper bound),103550,104250,,,,trace
+line,green line (upper bound),105372,106107,,,,trace
+line,green line (upper bound),107227,107997,,,,trace
+line,green line (upper bound),109114,109921,,,,trace
+line,green line (upper bound),111034,111880,,,,trace
+line,green line (upper bound),112987,113873,,,,trace
+line,green line (upper bound),114976,115902,,,,trace
+line,green line (upper bound),116999,117967,,,,trace
+line,green line (upper bound),119058,120068,,,,trace
+line,green line (upper bound),121153,122207,,,,trace
+line,green line (upper bound),129908,128856,,,,trace
+line,green line (upper bound),139296,138287,,,,trace
+line,green line (upper bound),144242,143258,,,,trace
+line,green line (upper bound),146780,145810,,,,trace
+line,green line (upper bound),149363,148408,,,,trace
+line,green line (upper bound),151991,151052,,,,trace
+line,green line (upper bound),154666,153743,,,,trace
+line,green line (upper bound),157387,156482,,,,trace
+line,green line (upper bound),160157,159270,,,,trace
+line,green line (upper bound),162975,162107,,,,trace
+line,green line (upper bound),165843,164996,,,,trace
+line,green line (upper bound),168761,167935,,,,trace
+line,green line (upper bound),171731,170927,,,,trace
+line,green line (upper bound),174753,173972,,,,trace
+line,green line (upper bound),177828,177071,,,,trace
+line,green line (upper bound),180957,180226,,,,trace
+line,green line (upper bound),184141,183437,,,,trace
+line,green line (upper bound),187382,186705,,,,trace
+line,green line (upper bound),190679,190031,,,,trace
+line,green line (upper bound),194034,193417,,,,trace
+line,green line (upper bound),197449,196863,,,,trace
+line,green line (upper bound),200923,200370,,,,trace
+line,green line (upper bound),204459,203940,,,,trace
+line,green line (upper bound),208057,207573,,,,trace
+line,green line (upper bound),211718,211271,,,,trace
+line,green line (upper bound),215443,215035,,,,trace
+line,green line (upper bound),219235,218866,,,,trace
+line,green line (upper bound),223092,222765,,,,trace
+line,green line (upper bound),227018,226734,,,,trace
+line,green line (upper bound),231013,230773,,,,trace
+line,green line (upper bound),235078,234885,,,,trace
+line,green line (upper bound),239215,239069,,,,trace
+line,green line (upper bound),243424,243328,,,,trace
+line,green line (upper bound),247708,247663,,,,trace
+line,green line (upper bound),252067,252076,,,,trace
+line,green line (upper bound),256502,256567,,,,trace
+line,green line (upper bound),261016,261138,,,,trace
+line,green line (upper bound),265609,265790,,,,trace
+line,green line (upper bound),270283,270525,,,,trace
+line,green line (upper bound),275039,275345,,,,trace
+line,green line (upper bound),279879,280250,,,,trace
+line,green line (upper bound),284804,285243,,,,trace
+line,green line (upper bound),289815,290325,,,,trace
+line,green line (upper bound),294915,295497,,,,trace
+line,green line (upper bound),300105,300762,,,,trace
+line,green line (upper bound),305386,306120,,,,trace
+line,green line (upper bound),310759,311574,,,,trace
+line,green line (upper bound),316228,317124,,,,trace
+line,green line (upper bound),321792,322774,,,,trace
+line,green line (upper bound),327455,328525,,,,trace
+line,green line (upper bound),333217,334378,,,,trace
+line,green line (upper bound),339081,340335,,,,trace
+line,green line (upper bound),345047,346398,,,,trace
+line,green line (upper bound),351119,352569,,,,trace
+line,green line (upper bound),357298,358851,,,,trace
+line,green line (upper bound),363585,365244,,,,trace
+line,green line (upper bound),369983,371751,,,,trace
+line,green line (upper bound),376494,378374,,,,trace
+line,green line (upper bound),383119,385115,,,,trace
+line,green line (upper bound),389860,391976,,,,trace
+line,green line (upper bound),396721,398959,,,,trace
+line,green line (upper bound),403702,406067,,,,trace
+line,green line (upper bound),410806,413301,,,,trace
+line,green line (upper bound),418034,420664,,,,trace
+line,green line (upper bound),425391,428159,,,,trace
+line,green line (upper bound),432876,435787,,,,trace
+line,green line (upper bound),440493,443550,,,,trace
+line,green line (upper bound),448245,451453,,,,trace
+line,green line (upper bound),456132,459496,,,,trace
+line,green line (upper bound),464159,467682,,,,trace
+line,green line (upper bound),472327,476014,,,,trace
+line,green line (upper bound),480638,484494,,,,trace
+line,green line (upper bound),489096,493126,,,,trace
+line,green line (upper bound),497702,501911,,,,trace
+line,green line (upper bound),515372,519954,,,,trace
+line,green line (upper bound),552617,558010,,,,trace
+line,green line (upper bound),562341,562958,,,,trace
+line,green line (upper bound),572237,578069,,,,trace
+line,green line (upper bound),592553,588368,,,,trace
+line,green line (upper bound),602980,598850,,,,trace
+line,green line (upper bound),646556,642680,,,,trace
+line,green line (upper bound),657933,654130,,,,trace
+line,green line (upper bound),669511,665783,,,,trace
+line,green line (upper bound),681292,677645,,,,trace
+line,green line (upper bound),693281,689717,,,,trace
+line,green line (upper bound),705480,702005,,,,trace
+line,green line (upper bound),717894,714512,,,,trace
+line,green line (upper bound),730527,727241,,,,trace
+line,green line (upper bound),743382,740198,,,,trace
+line,green line (upper bound),756463,753385,,,,trace
+line,green line (upper bound),769775,766807,,,,trace
+line,green line (upper bound),783320,780468,,,,trace
+line,green line (upper bound),797104,794372,,,,trace
+line,green line (upper bound),811131,808525,,,,trace
+line,green line (upper bound),825404,822929,,,,trace
+line,green line (upper bound),839929,837590,,,,trace
+line,green line (upper bound),854709,852512,,,,trace
+line,green line (upper bound),869749,867700,,,,trace
+line,green line (upper bound),885054,883159,,,,trace
+line,green line (upper bound),900628,898893,,,,trace
+line,green line (upper bound),916476,914907,,,,trace
+line,green line (upper bound),932603,931207,,,,trace
+line,green line (upper bound),949014,947797,,,,trace
+line,green line (upper bound),965714,964683,,,,trace
+line,blue line (lower bound),103.55,3.98713,,,,trace
+line,blue line (lower bound),105.372,3.98713,,,,trace
+line,blue line (lower bound),107.227,3.98713,,,,trace
+line,blue line (lower bound),109.114,3.98713,,,,trace
+line,blue line (lower bound),111.034,3.98713,,,,trace
+line,blue line (lower bound),112.987,3.98713,,,,trace
+line,blue line (lower bound),114.976,3.98713,,,,trace
+line,blue line (lower bound),116.999,3.98713,,,,trace
+line,blue line (lower bound),119.058,3.98713,,,,trace
+line,blue line (lower bound),121.153,3.98713,,,,trace
+line,blue line (lower bound),123.285,3.98713,,,,trace
+line,blue line (lower bound),125.454,3.98713,,,,trace
+line,blue line (lower bound),127.662,3.98713,,,,trace
+line,blue line (lower bound),129.908,3.98713,,,,trace
+line,blue line (lower bound),132.194,3.98713,,,,trace
+line,blue line (lower bound),134.52,3.98713,,,,trace
+line,blue line (lower bound),136.887,3.98713,,,,trace
+line,blue line (lower bound),139.296,3.98713,,,,trace
+line,blue line (lower bound),141.747,3.98713,,,,trace
+line,blue line (lower bound),144.242,3.98713,,,,trace
+line,blue line (lower bound),146.78,3.98713,,,,trace
+line,blue line (lower bound),149.363,3.98713,,,,trace
+line,blue line (lower bound),151.991,3.98713,,,,trace
+line,blue line (lower bound),154.666,3.98713,,,,trace
+line,blue line (lower bound),157.387,3.98713,,,,trace
+line,blue line (lower bound),160.157,3.98713,,,,trace
+line,blue line (lower bound),162.975,3.98713,,,,trace
+line,blue line (lower bound),165.843,3.98713,,,,trace
+line,blue line (lower bound),168.761,3.98713,,,,trace
+line,blue line (lower bound),171.731,3.98713,,,,trace
+line,blue line (lower bound),174.753,3.98713,,,,trace
+line,blue line (lower bound),177.828,3.98713,,,,trace
+line,blue line (lower bound),180.957,3.98713,,,,trace
+line,blue line (lower bound),184.141,3.98713,,,,trace
+line,blue line (lower bound),187.382,3.98713,,,,trace
+line,blue line (lower bound),190.679,3.98713,,,,trace
+line,blue line (lower bound),194.034,3.98713,,,,trace
+line,blue line (lower bound),197.449,3.98713,,,,trace
+line,blue line (lower bound),200.923,3.98713,,,,trace
+line,blue line (lower bound),204.459,3.98713,,,,trace
+line,blue line (lower bound),208.057,3.98713,,,,trace
+line,blue line (lower bound),211.718,3.98713,,,,trace
+line,blue line (lower bound),215.443,3.98713,,,,trace
+line,blue line (lower bound),219.235,3.98713,,,,trace
+line,blue line (lower bound),223.092,3.98713,,,,trace
+line,blue line (lower bound),227.018,3.98713,,,,trace
+line,blue line (lower bound),231.013,3.98713,,,,trace
+line,blue line (lower bound),235.078,3.98713,,,,trace
+line,blue line (lower bound),239.215,3.98713,,,,trace
+line,blue line (lower bound),243.424,3.98713,,,,trace
+line,blue line (lower bound),247.708,3.98713,,,,trace
+line,blue line (lower bound),252.067,3.98713,,,,trace
+line,blue line (lower bound),256.502,3.98713,,,,trace
+line,blue line (lower bound),261.016,3.98713,,,,trace
+line,blue line (lower bound),265.609,3.98713,,,,trace
+line,blue line (lower bound),270.283,3.98713,,,,trace
+line,blue line (lower bound),275.039,3.98713,,,,trace
+line,blue line (lower bound),279.879,3.98713,,,,trace
+line,blue line (lower bound),284.804,3.98713,,,,trace
+line,blue line (lower bound),289.815,3.98713,,,,trace
+line,blue line (lower bound),294.915,3.98713,,,,trace
+line,blue line (lower bound),300.105,3.98713,,,,trace
+line,blue line (lower bound),305.386,3.98713,,,,trace
+line,blue line (lower bound),310.759,3.98713,,,,trace
+line,blue line (lower bound),316.228,3.98713,,,,trace
+line,blue line (lower bound),321.792,3.98713,,,,trace
+line,blue line (lower bound),327.455,3.98713,,,,trace
+line,blue line (lower bound),333.217,3.98713,,,,trace
+line,blue line (lower bound),339.081,3.98713,,,,trace
+line,blue line (lower bound),345.047,3.98713,,,,trace
+line,blue line (lower bound),351.119,3.98713,,,,trace
+line,blue line (lower bound),357.298,3.98713,,,,trace
+line,blue line (lower bound),363.585,3.98713,,,,trace
+line,blue line (lower bound),369.983,3.98713,,,,trace
+line,blue line (lower bound),376.494,3.98713,,,,trace
+line,blue line (lower bound),383.119,3.98713,,,,trace
+line,blue line (lower bound),389.86,3.98713,,,,trace
+line,blue line (lower bound),396.721,3.98713,,,,trace
+line,blue line (lower bound),403.702,3.98713,,,,trace
+line,blue line (lower bound),410.806,3.98713,,,,trace
+line,blue line (lower bound),418.034,3.98713,,,,trace
+line,blue line (lower bound),425.391,3.98713,,,,trace
+line,blue line (lower bound),432.876,3.98713,,,,trace
+line,blue line (lower bound),440.493,3.98713,,,,trace
+line,blue line (lower bound),448.245,3.98713,,,,trace
+line,blue line (lower bound),456.132,3.98713,,,,trace
+line,blue line (lower bound),464.159,3.98713,,,,trace
+line,blue line (lower bound),472.327,3.98713,,,,trace
+line,blue line (lower bound),480.638,3.98713,,,,trace
+line,blue line (lower bound),489.096,3.98713,,,,trace
+line,blue line (lower bound),497.702,3.98713,,,,trace
+line,blue line (lower bound),506.46,3.98713,,,,trace
+line,blue line (lower bound),515.372,3.98713,,,,trace
+line,blue line (lower bound),524.441,3.98713,,,,trace
+line,blue line (lower bound),533.67,3.98713,,,,trace
+line,blue line (lower bound),543.061,3.98713,,,,trace
+line,blue line (lower bound),552.617,3.98713,,,,trace
+line,blue line (lower bound),562.341,3.98713,,,,trace
+line,blue line (lower bound),572.237,3.98713,,,,trace
+line,blue line (lower bound),582.306,3.98713,,,,trace
+line,blue line (lower bound),592.553,3.98713,,,,trace
+line,blue line (lower bound),602.98,3.98713,,,,trace
+line,blue line (lower bound),613.591,3.98713,,,,trace
+line,blue line (lower bound),624.388,3.98713,,,,trace
+line,blue line (lower bound),635.375,3.98713,,,,trace
+line,blue line (lower bound),646.556,3.98713,,,,trace
+line,blue line (lower bound),657.933,3.98713,,,,trace
+line,blue line (lower bound),669.511,3.98713,,,,trace
+line,blue line (lower bound),681.292,3.98713,,,,trace
+line,blue line (lower bound),693.281,3.98713,,,,trace
+line,blue line (lower bound),705.48,3.98713,,,,trace
+line,blue line (lower bound),717.894,3.98713,,,,trace
+line,blue line (lower bound),730.527,3.98713,,,,trace
+line,blue line (lower bound),743.382,3.98713,,,,trace
+line,blue line (lower bound),756.463,3.98713,,,,trace
+line,blue line (lower bound),769.775,3.98713,,,,trace
+line,blue line (lower bound),783.32,3.98713,,,,trace
+line,blue line (lower bound),797.104,3.98713,,,,trace
+line,blue line (lower bound),811.131,3.98713,,,,trace
+line,blue line (lower bound),825.404,3.98713,,,,trace
+line,blue line (lower bound),839.929,3.98713,,,,trace
+line,blue line (lower bound),854.709,3.98713,,,,trace
+line,blue line (lower bound),869.749,3.98713,,,,trace
+line,blue line (lower bound),885.054,3.98713,,,,trace
+line,blue line (lower bound),900.628,3.98713,,,,trace
+line,blue line (lower bound),916.476,3.98713,,,,trace
+line,blue line (lower bound),932.603,3.98713,,,,trace
+line,blue line (lower bound),949.014,3.98713,,,,trace
+line,blue line (lower bound),965.714,3.98713,,,,trace
+line,blue line (lower bound),982.707,3.98713,,,,trace
+line,blue line (lower bound),1000,3.98713,,,,trace
+line,blue line (lower bound),1017.6,3.98713,,,,trace
+line,blue line (lower bound),1035.5,3.98713,,,,trace
+line,blue line (lower bound),1053.72,3.98713,,,,trace
+line,blue line (lower bound),1072.27,3.98713,,,,trace
+line,blue line (lower bound),1091.14,3.98713,,,,trace
+line,blue line (lower bound),1110.34,3.98713,,,,trace
+line,blue line (lower bound),1129.87,3.98713,,,,trace
+line,blue line (lower bound),1149.76,3.98713,,,,trace
+line,blue line (lower bound),1169.99,3.98713,,,,trace
+line,blue line (lower bound),1190.58,3.98713,,,,trace
+line,blue line (lower bound),1211.53,3.98713,,,,trace
+line,blue line (lower bound),1232.85,3.98713,,,,trace
+line,blue line (lower bound),1254.54,3.98713,,,,trace
+line,blue line (lower bound),1276.62,3.98713,,,,trace
+line,blue line (lower bound),1299.08,3.98713,,,,trace
+line,blue line (lower bound),1321.94,3.98713,,,,trace
+line,blue line (lower bound),1345.2,3.98713,,,,trace
+line,blue line (lower bound),1368.87,3.98713,,,,trace
+line,blue line (lower bound),1392.96,3.98713,,,,trace
+line,blue line (lower bound),1417.47,3.98713,,,,trace
+line,blue line (lower bound),1442.42,3.98713,,,,trace
+line,blue line (lower bound),1467.8,3.98713,,,,trace
+line,blue line (lower bound),1493.63,3.98713,,,,trace
+line,blue line (lower bound),1519.91,3.98713,,,,trace
+line,blue line (lower bound),1546.66,3.98713,,,,trace
+line,blue line (lower bound),1573.87,3.98713,,,,trace
+line,blue line (lower bound),1601.57,3.98713,,,,trace
+line,blue line (lower bound),1629.75,3.98713,,,,trace
+line,blue line (lower bound),1658.43,3.98713,,,,trace
+line,blue line (lower bound),1687.61,3.98713,,,,trace
+line,blue line (lower bound),1717.31,3.98713,,,,trace
+line,blue line (lower bound),1747.53,3.98713,,,,trace
+line,blue line (lower bound),1778.28,3.98713,,,,trace
+line,blue line (lower bound),1809.57,3.98713,,,,trace
+line,blue line (lower bound),1841.41,3.98713,,,,trace
+line,blue line (lower bound),1873.82,3.98713,,,,trace
+line,blue line (lower bound),1906.79,3.98713,,,,trace
+line,blue line (lower bound),1940.34,3.98713,,,,trace
+line,blue line (lower bound),1974.49,3.98713,,,,trace
+line,blue line (lower bound),2009.23,3.98713,,,,trace
+line,blue line (lower bound),2044.59,3.98713,,,,trace
+line,blue line (lower bound),2080.57,3.98713,,,,trace
+line,blue line (lower bound),2117.18,3.98713,,,,trace
+line,blue line (lower bound),2154.43,3.98713,,,,trace
+line,blue line (lower bound),2192.35,3.98713,,,,trace
+line,blue line (lower bound),2230.92,3.98713,,,,trace
+line,blue line (lower bound),2270.18,3.98713,,,,trace
+line,blue line (lower bound),2310.13,3.98713,,,,trace
+line,blue line (lower bound),2350.78,3.98713,,,,trace
+line,blue line (lower bound),2392.15,3.98713,,,,trace
+line,blue line (lower bound),2434.24,3.98713,,,,trace
+line,blue line (lower bound),2477.08,3.98713,,,,trace
+line,blue line (lower bound),2520.67,3.98713,,,,trace
+line,blue line (lower bound),2565.02,3.98713,,,,trace
+line,blue line (lower bound),2610.16,3.98713,,,,trace
+line,blue line (lower bound),2656.09,3.98713,,,,trace
+line,blue line (lower bound),2702.83,3.98713,,,,trace
+line,blue line (lower bound),2750.39,3.98713,,,,trace
+line,blue line (lower bound),2798.79,3.98713,,,,trace
+line,blue line (lower bound),2848.04,3.98713,,,,trace
+line,blue line (lower bound),2898.15,3.98713,,,,trace
+line,blue line (lower bound),2949.15,3.98713,,,,trace
+line,blue line (lower bound),3001.05,3.98713,,,,trace
+line,blue line (lower bound),3053.86,3.98713,,,,trace
+line,blue line (lower bound),3107.59,3.98713,,,,trace
+line,blue line (lower bound),3162.28,3.98713,,,,trace
+line,blue line (lower bound),3217.92,3.98713,,,,trace
+line,blue line (lower bound),3274.55,3.98713,,,,trace
+line,blue line (lower bound),3332.17,3.98713,,,,trace
+line,blue line (lower bound),3390.81,3.98713,,,,trace
+line,blue line (lower bound),3450.47,3.98713,,,,trace
+line,blue line (lower bound),3511.19,3.98713,,,,trace
+line,blue line (lower bound),3572.98,3.98713,,,,trace
+line,blue line (lower bound),3635.85,3.98713,,,,trace
+line,blue line (lower bound),3699.83,3.98713,,,,trace
+line,blue line (lower bound),3764.94,3.98713,,,,trace
+line,blue line (lower bound),3831.19,3.98713,,,,trace
+line,blue line (lower bound),3898.6,3.98713,,,,trace
+line,blue line (lower bound),3967.21,3.98713,,,,trace
+line,blue line (lower bound),4037.02,3.98713,,,,trace
+line,blue line (lower bound),4108.06,3.98713,,,,trace
+line,blue line (lower bound),4180.34,3.98713,,,,trace
+line,blue line (lower bound),4253.91,3.98713,,,,trace
+line,blue line (lower bound),4328.76,3.98713,,,,trace
+line,blue line (lower bound),4404.93,3.98713,,,,trace
+line,blue line (lower bound),4482.45,3.98713,,,,trace
+line,blue line (lower bound),4561.32,3.98713,,,,trace
+line,blue line (lower bound),4641.59,3.98713,,,,trace
+line,blue line (lower bound),4723.27,3.98713,,,,trace
+line,blue line (lower bound),4806.38,3.98713,,,,trace
+line,blue line (lower bound),4890.96,3.98713,,,,trace
+line,blue line (lower bound),4977.02,3.98713,,,,trace
+line,blue line (lower bound),5064.6,3.98713,,,,trace
+line,blue line (lower bound),5153.72,3.98713,,,,trace
+line,blue line (lower bound),5244.41,3.98713,,,,trace
+line,blue line (lower bound),5336.7,3.98713,,,,trace
+line,blue line (lower bound),5430.61,3.98713,,,,trace
+line,blue line (lower bound),5526.17,3.98713,,,,trace
+line,blue line (lower bound),5623.41,3.98713,,,,trace
+line,blue line (lower bound),5722.37,3.98713,,,,trace
+line,blue line (lower bound),5823.06,3.98713,,,,trace
+line,blue line (lower bound),5925.53,3.98713,,,,trace
+line,blue line (lower bound),6029.8,3.98713,,,,trace
+line,blue line (lower bound),6135.91,3.98713,,,,trace
+line,blue line (lower bound),6243.88,3.98713,,,,trace
+line,blue line (lower bound),6353.75,3.98713,,,,trace
+line,blue line (lower bound),6465.56,3.98713,,,,trace
+line,blue line (lower bound),6579.33,3.98713,,,,trace
+line,blue line (lower bound),6695.11,3.98713,,,,trace
+line,blue line (lower bound),6812.92,3.98713,,,,trace
+line,blue line (lower bound),6932.81,3.98713,,,,trace
+line,blue line (lower bound),7054.8,3.98713,,,,trace
+line,blue line (lower bound),7178.94,3.98713,,,,trace
+line,blue line (lower bound),7305.27,3.98713,,,,trace
+line,blue line (lower bound),7971.04,3.98713,,,,trace
+line,blue line (lower bound),8111.31,3.98713,,,,trace
+line,blue line (lower bound),8254.04,3.98713,,,,trace
+line,blue line (lower bound),8399.29,3.98713,,,,trace
+line,blue line (lower bound),8547.09,3.98713,,,,trace
+line,blue line (lower bound),8697.49,3.98713,,,,trace
+line,blue line (lower bound),8850.54,3.98713,,,,trace
+line,blue line (lower bound),9326.03,3.98713,,,,trace
+line,blue line (lower bound),9490.14,3.98713,,,,trace
+line,blue line (lower bound),9657.14,3.98713,,,,trace
+line,blue line (lower bound),10355,3.98713,,,,trace
+line,blue line (lower bound),11298.7,3.98713,,,,trace
+line,blue line (lower bound),12328.5,3.98713,,,,trace
+line,blue line (lower bound),13452,3.98713,,,,trace
+line,blue line (lower bound),13688.7,3.98713,,,,trace
+line,blue line (lower bound),13929.6,3.98713,,,,trace
+line,blue line (lower bound),14174.7,3.98713,,,,trace
+line,blue line (lower bound),14424.2,3.98713,,,,trace
+line,blue line (lower bound),14678,3.98713,,,,trace
+line,blue line (lower bound),14936.3,3.98713,,,,trace
+line,blue line (lower bound),15199.1,3.98713,,,,trace
+line,blue line (lower bound),15466.6,3.98713,,,,trace
+line,blue line (lower bound),15738.7,3.98713,,,,trace
+line,blue line (lower bound),16015.7,3.98713,,,,trace
+line,blue line (lower bound),16297.5,3.98713,,,,trace
+line,blue line (lower bound),16584.3,3.98713,,,,trace
+line,blue line (lower bound),16876.1,3.98713,,,,trace
+line,blue line (lower bound),17173.1,3.98713,,,,trace
+line,blue line (lower bound),17475.3,3.98713,,,,trace
+line,blue line (lower bound),17782.8,3.98713,,,,trace
+line,blue line (lower bound),18095.7,3.98713,,,,trace
+line,blue line (lower bound),18414.1,3.98713,,,,trace
+line,blue line (lower bound),18738.2,3.98713,,,,trace
+line,blue line (lower bound),19067.9,3.98713,,,,trace
+line,blue line (lower bound),19403.4,3.98713,,,,trace
+line,blue line (lower bound),19744.9,3.98713,,,,trace
+line,blue line (lower bound),20092.3,3.98713,,,,trace
+line,blue line (lower bound),20445.9,3.98713,,,,trace
+line,blue line (lower bound),20805.7,3.98713,,,,trace
+line,blue line (lower bound),21171.8,3.98713,,,,trace
+line,blue line (lower bound),21544.3,3.98713,,,,trace
+line,blue line (lower bound),21923.5,3.98713,,,,trace
+line,blue line (lower bound),22309.2,3.98713,,,,trace
+line,blue line (lower bound),22701.8,3.98713,,,,trace
+line,blue line (lower bound),23101.3,3.98713,,,,trace
+line,blue line (lower bound),23507.8,3.98713,,,,trace
+line,blue line (lower bound),23921.5,3.98713,,,,trace
+line,blue line (lower bound),24342.4,3.98713,,,,trace
+line,blue line (lower bound),24770.8,3.98713,,,,trace
+line,blue line (lower bound),25206.7,3.98713,,,,trace
+line,blue line (lower bound),25650.2,3.98713,,,,trace
+line,blue line (lower bound),26101.6,3.98713,,,,trace
+line,blue line (lower bound),26560.9,3.98713,,,,trace
+line,blue line (lower bound),27028.3,3.98713,,,,trace
+line,blue line (lower bound),27503.9,3.98713,,,,trace
+line,blue line (lower bound),27987.9,3.98713,,,,trace
+line,blue line (lower bound),28480.4,3.98713,,,,trace
+line,blue line (lower bound),28981.5,3.98713,,,,trace
+line,blue line (lower bound),29491.5,3.98713,,,,trace
+line,blue line (lower bound),30010.5,3.98713,,,,trace
+line,blue line (lower bound),30538.6,3.98713,,,,trace
+line,blue line (lower bound),31075.9,3.98713,,,,trace
+line,blue line (lower bound),31622.8,3.98713,,,,trace
+line,blue line (lower bound),32179.2,3.98713,,,,trace
+line,blue line (lower bound),32745.5,3.98713,,,,trace
+line,blue line (lower bound),33321.7,3.98713,,,,trace
+line,blue line (lower bound),33908.1,3.98713,,,,trace
+line,blue line (lower bound),34504.7,3.98713,,,,trace
+line,blue line (lower bound),35111.9,3.98713,,,,trace
+line,blue line (lower bound),35729.8,3.98713,,,,trace
+line,blue line (lower bound),36358.5,3.98713,,,,trace
+line,blue line (lower bound),36998.3,3.98713,,,,trace
+line,blue line (lower bound),37649.4,3.98713,,,,trace
+line,blue line (lower bound),38311.9,3.98713,,,,trace
+line,blue line (lower bound),38986,3.98713,,,,trace
+line,blue line (lower bound),39672.1,3.98713,,,,trace
+line,blue line (lower bound),40370.2,3.98713,,,,trace
+line,blue line (lower bound),41080.6,3.98713,,,,trace
+line,blue line (lower bound),41803.4,3.98713,,,,trace
+line,blue line (lower bound),42539.1,3.98713,,,,trace
+line,blue line (lower bound),43287.6,3.98713,,,,trace
+line,blue line (lower bound),44049.3,3.98713,,,,trace
+line,blue line (lower bound),44824.5,3.98713,,,,trace
+line,blue line (lower bound),45613.2,3.98713,,,,trace
+line,blue line (lower bound),46415.9,3.98713,,,,trace
+line,blue line (lower bound),47232.7,3.98713,,,,trace
+line,blue line (lower bound),48063.8,3.98713,,,,trace
+line,blue line (lower bound),48909.6,3.98713,,,,trace
+line,blue line (lower bound),49770.2,3.98713,,,,trace
+line,blue line (lower bound),50646,3.98713,,,,trace
+line,blue line (lower bound),51537.2,3.98713,,,,trace
+line,blue line (lower bound),52444.1,3.98713,,,,trace
+line,blue line (lower bound),53367,3.98713,,,,trace
+line,blue line (lower bound),54306.1,3.98713,,,,trace
+line,blue line (lower bound),55261.7,3.98713,,,,trace
+line,blue line (lower bound),56234.1,3.98713,,,,trace
+line,blue line (lower bound),57223.7,3.98713,,,,trace
+line,blue line (lower bound),58230.6,3.98713,,,,trace
+line,blue line (lower bound),59255.3,3.98713,,,,trace
+line,blue line (lower bound),60298,3.98713,,,,trace
+line,blue line (lower bound),61359.1,3.98713,,,,trace
+line,blue line (lower bound),62438.8,3.98713,,,,trace
+line,blue line (lower bound),63537.5,3.98713,,,,trace
+line,blue line (lower bound),64655.6,3.98713,,,,trace
+line,blue line (lower bound),65793.3,3.98713,,,,trace
+line,blue line (lower bound),66951.1,3.98713,,,,trace
+line,blue line (lower bound),68129.2,3.98713,,,,trace
+line,blue line (lower bound),69328.1,3.98713,,,,trace
+line,blue line (lower bound),70548,3.98713,,,,trace
+line,blue line (lower bound),71789.4,3.98713,,,,trace
+line,blue line (lower bound),73052.7,3.98713,,,,trace
+line,blue line (lower bound),74338.2,3.98713,,,,trace
+line,blue line (lower bound),75646.3,3.98713,,,,trace
+line,blue line (lower bound),76977.5,3.98713,,,,trace
+line,blue line (lower bound),78332,3.98713,,,,trace
+line,blue line (lower bound),79710.4,3.98713,,,,trace
+line,blue line (lower bound),81113.1,3.98713,,,,trace
+line,blue line (lower bound),82540.4,3.98713,,,,trace
+line,blue line (lower bound),83992.9,3.98713,,,,trace
+line,blue line (lower bound),85470.9,3.98713,,,,trace
+line,blue line (lower bound),86974.9,3.98713,,,,trace
+line,blue line (lower bound),88505.4,3.98713,,,,trace
+line,blue line (lower bound),90062.8,3.98713,,,,trace
+line,blue line (lower bound),91647.6,3.98713,,,,trace
+line,blue line (lower bound),93260.3,3.98713,,,,trace
+line,blue line (lower bound),94901.4,3.98713,,,,trace
+line,blue line (lower bound),96571.4,3.98713,,,,trace
+line,blue line (lower bound),98270.7,3.98713,,,,trace
+line,blue line (lower bound),100000,3.98713,,,,trace
+line,blue line (lower bound),101760,3.98713,,,,trace
+line,blue line (lower bound),103550,3.98713,,,,trace
+line,blue line (lower bound),105372,3.98713,,,,trace
+line,blue line (lower bound),107227,3.98713,,,,trace
+line,blue line (lower bound),109114,3.98713,,,,trace
+line,blue line (lower bound),111034,3.98713,,,,trace
+line,blue line (lower bound),112987,3.98713,,,,trace
+line,blue line (lower bound),114976,3.98713,,,,trace
+line,blue line (lower bound),116999,3.98713,,,,trace
+line,blue line (lower bound),119058,3.98713,,,,trace
+line,blue line (lower bound),121153,3.98713,,,,trace
+line,blue line (lower bound),123285,3.98713,,,,trace
+line,blue line (lower bound),125454,3.98713,,,,trace
+line,blue line (lower bound),127662,3.98713,,,,trace
+line,blue line (lower bound),129908,3.98713,,,,trace
+line,blue line (lower bound),132194,3.98713,,,,trace
+line,blue line (lower bound),134520,3.98713,,,,trace
+line,blue line (lower bound),136887,3.98713,,,,trace
+line,blue line (lower bound),139296,3.98713,,,,trace
+line,blue line (lower bound),141747,3.98713,,,,trace
+line,blue line (lower bound),144242,3.98713,,,,trace
+line,blue line (lower bound),146780,3.98713,,,,trace
+line,blue line (lower bound),149363,3.98713,,,,trace
+line,blue line (lower bound),151991,3.98713,,,,trace
+line,blue line (lower bound),154666,3.98713,,,,trace
+line,blue line (lower bound),157387,3.98713,,,,trace
+line,blue line (lower bound),160157,3.98713,,,,trace
+line,blue line (lower bound),162975,3.98713,,,,trace
+line,blue line (lower bound),165843,3.98713,,,,trace
+line,blue line (lower bound),168761,3.98713,,,,trace
+line,blue line (lower bound),171731,3.98713,,,,trace
+line,blue line (lower bound),174753,3.98713,,,,trace
+line,blue line (lower bound),177828,3.98713,,,,trace
+line,blue line (lower bound),180957,3.98713,,,,trace
+line,blue line (lower bound),184141,3.98713,,,,trace
+line,blue line (lower bound),187382,3.98713,,,,trace
+line,blue line (lower bound),190679,3.98713,,,,trace
+line,blue line (lower bound),194034,3.98713,,,,trace
+line,blue line (lower bound),197449,3.98713,,,,trace
+line,blue line (lower bound),200923,3.98713,,,,trace
+line,blue line (lower bound),204459,3.98713,,,,trace
+line,blue line (lower bound),208057,3.98713,,,,trace
+line,blue line (lower bound),211718,3.98713,,,,trace
+line,blue line (lower bound),215443,3.98713,,,,trace
+line,blue line (lower bound),219235,3.98713,,,,trace
+line,blue line (lower bound),223092,3.98713,,,,trace
+line,blue line (lower bound),227018,3.98713,,,,trace
+line,blue line (lower bound),231013,3.98713,,,,trace
+line,blue line (lower bound),235078,3.98713,,,,trace
+line,blue line (lower bound),239215,3.98713,,,,trace
+line,blue line (lower bound),243424,3.98713,,,,trace
+line,blue line (lower bound),247708,3.98713,,,,trace
+line,blue line (lower bound),252067,3.98713,,,,trace
+line,blue line (lower bound),256502,3.98713,,,,trace
+line,blue line (lower bound),261016,3.98713,,,,trace
+line,blue line (lower bound),265609,3.98713,,,,trace
+line,blue line (lower bound),270283,3.98713,,,,trace
+line,blue line (lower bound),275039,3.98713,,,,trace
+line,blue line (lower bound),279879,3.98713,,,,trace
+line,blue line (lower bound),284804,3.98713,,,,trace
+line,blue line (lower bound),289815,3.98713,,,,trace
+line,blue line (lower bound),294915,3.98713,,,,trace
+line,blue line (lower bound),300105,3.98713,,,,trace
+line,blue line (lower bound),305386,3.98713,,,,trace
+line,blue line (lower bound),310759,3.98713,,,,trace
+line,blue line (lower bound),316228,3.98713,,,,trace
+line,blue line (lower bound),321792,3.98713,,,,trace
+line,blue line (lower bound),327455,3.98713,,,,trace
+line,blue line (lower bound),333217,3.98713,,,,trace
+line,blue line (lower bound),339081,3.98713,,,,trace
+line,blue line (lower bound),345047,3.98713,,,,trace
+line,blue line (lower bound),351119,3.98713,,,,trace
+line,blue line (lower bound),357298,3.98713,,,,trace
+line,blue line (lower bound),363585,3.98713,,,,trace
+line,blue line (lower bound),369983,3.98713,,,,trace
+line,blue line (lower bound),376494,3.98713,,,,trace
+line,blue line (lower bound),383119,3.98713,,,,trace
+line,blue line (lower bound),389860,3.98713,,,,trace
+line,blue line (lower bound),396721,3.98713,,,,trace
+line,blue line (lower bound),403702,3.98713,,,,trace
+line,blue line (lower bound),410806,3.98713,,,,trace
+line,blue line (lower bound),418034,3.98713,,,,trace
+line,blue line (lower bound),425391,3.98713,,,,trace
+line,blue line (lower bound),432876,3.98713,,,,trace
+line,blue line (lower bound),440493,3.98713,,,,trace
+line,blue line (lower bound),448245,3.98713,,,,trace
+line,blue line (lower bound),456132,3.98713,,,,trace
+line,blue line (lower bound),464159,3.98713,,,,trace
+line,blue line (lower bound),472327,3.98713,,,,trace
+line,blue line (lower bound),480638,3.98713,,,,trace
+line,blue line (lower bound),489096,3.98713,,,,trace
+line,blue line (lower bound),497702,3.98713,,,,trace
+line,blue line (lower bound),506460,3.98713,,,,trace
+line,blue line (lower bound),515372,3.98713,,,,trace
+line,blue line (lower bound),524441,3.98713,,,,trace
+line,blue line (lower bound),533670,3.98713,,,,trace
+line,blue line (lower bound),543061,3.98713,,,,trace
+line,blue line (lower bound),552617,3.98713,,,,trace
+line,blue line (lower bound),562341,3.98713,,,,trace
+line,blue line (lower bound),572237,3.98713,,,,trace
+line,blue line (lower bound),582306,3.98713,,,,trace
+line,blue line (lower bound),592553,3.98713,,,,trace
+line,blue line (lower bound),602980,3.98713,,,,trace
+line,blue line (lower bound),613591,3.98713,,,,trace
+line,blue line (lower bound),624388,3.98713,,,,trace
+line,blue line (lower bound),635375,3.98713,,,,trace
+line,blue line (lower bound),646556,3.98713,,,,trace
+line,blue line (lower bound),657933,3.98713,,,,trace
+line,blue line (lower bound),669511,3.98713,,,,trace
+line,blue line (lower bound),681292,3.98713,,,,trace
+line,blue line (lower bound),693281,3.98713,,,,trace
+line,blue line (lower bound),705480,3.98713,,,,trace
+line,blue line (lower bound),717894,3.98713,,,,trace
+line,blue line (lower bound),730527,3.98713,,,,trace
+line,blue line (lower bound),743382,3.98713,,,,trace
+line,blue line (lower bound),756463,3.98713,,,,trace
+line,blue line (lower bound),769775,3.98713,,,,trace
+line,blue line (lower bound),783320,3.98713,,,,trace
+line,blue line (lower bound),797104,3.98713,,,,trace
+line,blue line (lower bound),811131,3.98713,,,,trace
+line,blue line (lower bound),825404,3.98713,,,,trace
+line,blue line (lower bound),839929,3.98713,,,,trace
+line,blue line (lower bound),854709,3.98713,,,,trace
+line,blue line (lower bound),869749,3.98713,,,,trace
+line,blue line (lower bound),885054,3.98713,,,,trace
+line,blue line (lower bound),900628,3.98713,,,,trace
+line,blue line (lower bound),916476,3.98713,,,,trace
+line,blue line (lower bound),932603,3.98713,,,,trace
+line,blue line (lower bound),949014,3.98713,,,,trace
+line,blue line (lower bound),965714,3.98713,,,,trace
+line_fit,3D top (light grey upper edge),,,0.7874,0.9879,,N = c * T^p on 402 columns
+line_fit,2D top (mid grey upper edge),,,0.7082,0.9932,,N = c * T^p on 405 columns
+line_fit,3D bottom (mid grey lower edge),,,0.6623,1.0044,,N = c * T^p on 470 columns
+line_fit,2D bottom (olive lower edge),,,0.5535,1,,N = c * T^p on 395 columns
+line_fit,green line (upper bound),,,1.0002,0.9979,,N = c * T^p on 469 columns
+line_fit,blue line (lower bound),,,0,3.9871,,N = c * T^p on 504 columns

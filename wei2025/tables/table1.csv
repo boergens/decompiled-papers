@@ -1,0 +1,10 @@
+# Wei et al. 2025, Int J Numer Anal Methods Geomech 49:2949-2964, TABLE 1 (p. 6): "Some setting algorithms and methods for all MD simulations in this study."
+# Transcribed verbatim from the PDF text layer and checked against the page image. No footnotes.
+setting_algorithm_and_methods,purpose_parameter
+Three-dimensional periodic boundary conditions,Simulating the behavior of large systems and improving computational efficiency
+Velocity-Verlet algorithm,Integrating the motion equations
+Lennard–Jones potential model,"Calculating the van der Waals interaction, and a cutoff radius of 10 Å"
+PPPM/TIP4P method,"Calculating the long-range electrostatic interaction, and a cutoff radius of 8.5 Å, and the desired relative error in forces of 1e-4"
+Neighbor,1.0 bin
+Time step,1.0 fs
+Temperature,300 K

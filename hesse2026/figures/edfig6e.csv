@@ -1,0 +1,30 @@
+# Extended Data Figure 6, panel e (PDF page 46, clip x=388-519, y=177-317 pt): single-trial decoding accuracy (%) per session for activity averaged over the whole trial (Average), state 1 or state 2; condition = decoded identity compared to the conscious (solid lines, filled circles) or suppressed (dashed lines, open circles) stimulus.
+# Rows session 1-10: thin lines (one per session), numbered in drawing order within each condition; the conscious and suppressed lines of a given session cannot be paired from the PDF (rows with the same number are probably, but not verifiably, the same session). Row 'mean': thick lines (average across the ten sessions).
+# Conscious values: 3-point strokes read directly. Suppressed values: dashed lines exported as filled dash polygons (thin lines 0.1 pt wide, mean line 1 pt), centre line recovered geometrically; *_se_pct = estimated uncertainty in % units (coordinate precision ~0.02 pt).
+# x categories = tick marks at PDF x 429.29, 460.78, 492.28 (Average, State 1, State 2); y axis calibrated on ticks 0,20,...,100 (residual 3.38e-04 pt); 1 % = 1.110 pt.
+# Consistency check: mean of the 10 session rows = conscious [38.37, 39.88, 18.68] vs thick line [38.37, 39.88, 18.68]; suppressed [28.45, 13.35, 37.1] vs thick dashed line [28.45, 13.35, 37.1].
+# Circle markers at the mean values: #543379 filled at x-category 2 = 18.68 %; #543379 open at x-category 2 = 37.10 %; #808080 filled at x-category 0 = 38.37 %; #808080 open at x-category 0 = 28.45 %; #fcae34 filled at x-category 1 = 39.88 %; #fcae34 open at x-category 1 = 13.35 %.
+# Chance level is 10 % (ten stimulus identities), not drawn.
+session,condition,average_pct,state1_pct,state2_pct,average_se_pct,state1_se_pct,state2_se_pct
+1,conscious,35.21,42.25,18.31,,,
+2,conscious,40.62,36.25,29.75,,,
+3,conscious,34.81,34.18,12.34,,,
+4,conscious,29.68,33.55,14.01,,,
+5,conscious,45.00,35.00,30.00,,,
+6,conscious,29.13,32.04,4.04,,,
+7,conscious,54.54,53.85,23.44,,,
+8,conscious,38.36,38.36,15.45,,,
+9,conscious,31.00,37.00,18.18,,,
+10,conscious,45.39,56.29,21.29,,,
+1,suppressed,30.99,13.38,37.32,0.03,0.01,0.04
+2,suppressed,38.12,21.25,36.08,0.03,0.02,0.03
+3,suppressed,27.22,12.03,32.47,0.03,0.02,0.03
+4,suppressed,28.39,7.10,32.48,0.03,0.03,0.04
+5,suppressed,40.00,42.50,45.00,0.02,0.02,0.03
+6,suppressed,14.56,1.94,34.34,0.03,0.02,0.04
+7,suppressed,28.79,10.77,42.19,0.03,0.01,0.04
+8,suppressed,17.81,4.57,28.64,0.03,0.02,0.04
+9,suppressed,27.00,8.00,35.35,0.03,0.01,0.04
+10,suppressed,31.58,11.92,47.10,0.03,0.03,0.04
+mean,conscious,38.37,39.88,18.68,,,
+mean,suppressed,28.45,13.35,37.10,0.03,0.02,0.04

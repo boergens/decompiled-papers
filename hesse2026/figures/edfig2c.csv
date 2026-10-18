@@ -1,0 +1,79 @@
+# Extended Data Figure 2c (PDF page 42): Euclidean-distance decoding accuracy (%) vs number of faces (target + distractors), from average activity.
+# Source: vector paths in the PDF. Clip region (PDF pt, origin top-left) x 409-512, y 25-147.
+# x axis: tick marks at 0,20,40,60 faces -> slope 0.634930, max residual 6.78e-06; all series have one vertex per n_faces = 1..60 (checked against the solid strokes).
+# y axis: tick marks at 0,20,...,100 % -> slope -0.900922, max residual 6.74e-04. 1 pt = 0.901 %.
+# Columns: <series> = plotted line; <series>_lo / <series>_hi = lower / upper edge of the shaded band (filled polygon, alpha 0.2; the legend does not say what the band is - the related main-figure panels use SD across sessions/pairs).
+# priming_average (black solid, #1c0f29), binocular_conscious_average (grey solid, #808080): stroke vertices, precision ~0.01 pt (~0.01 %).
+# priming_average_predicting_flashed (black dashed), binocular_suppressed_average (grey dashed): the PDF stores these as filled dash outlines (4 pt dash / 4 pt gap). *_qc codes: band_mid = value is the midpoint of the shaded band, which is exactly symmetric about the line (precision ~0.01 pt; used wherever both band edges are unclipped);
+#   the independent recovery of the dashed line's centreline from the dash polygons agreed with the band midpoints as follows (dash-recovery code: n vertices, max |difference| in pt): priming_average_predicting_flashed: n/a (its band is clipped or absent everywhere); binocular_suppressed_average: direct (35, 0.02), extrap (13, 0.00), interp (9, 0.48).
+#   Other codes (band edge clipped there, value from the dash polygons): direct = vertex inside a dash (~0.05 pt); extrap = extrapolated along the adjacent straight segment (~0.1-0.4 pt); interp = linear interpolation of the neighbours (bound ~1.2 pt); band = band collapses onto the line / lies entirely at the 0 boundary; gap/clipped = empty.
+# Bands are clipped by the axes box (0..100 %); clipped edges are written as the clip value:
+#   priming_average band, n_faces [1, 2, 3, 4, 5, 6, 7, 8, 9]: upper edge clipped at 100 (true value above 100).
+#   priming_average band, n_faces [60]: band has zero height (upper = lower = line).
+#   priming_average_predicting_flashed band, n_faces [2, 3, 4, 5, 6, 7, 8]: lower edge clipped at 0 (true value below 0).
+#   priming_average_predicting_flashed band, n_faces [1, 9]: band has zero height (upper = lower = line).
+#   priming_average_predicting_flashed band, n_faces [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]: band not drawn (entirely at/below the 0 boundary): lo = hi = line value.
+#   binocular_conscious_average band, n_faces [1, 60]: band has zero height (upper = lower = line).
+#   binocular_suppressed_average band, n_faces [1, 60]: band has zero height (upper = lower = line).
+# Values are rounded to 0.01 %.
+n_faces,priming_average,priming_average_lo,priming_average_hi,priming_average_predicting_flashed,priming_average_predicting_flashed_lo,priming_average_predicting_flashed_hi,priming_average_predicting_flashed_qc,binocular_conscious_average,binocular_conscious_average_lo,binocular_conscious_average_hi,binocular_suppressed_average,binocular_suppressed_average_lo,binocular_suppressed_average_hi,binocular_suppressed_average_qc
+1,100.00,100.00,100.00,100.00,100.00,100.00,direct,100.00,100.00,100.00,100.00,100.00,100.00,direct
+2,99.33,93.59,100.00,22.67,0.00,49.85,direct,71.67,46.85,96.49,62.17,36.75,87.58,band_mid
+3,97.44,88.15,100.00,7.45,0.00,23.81,direct,60.23,35.93,84.51,49.11,27.07,71.15,band_mid
+4,96.00,86.59,100.00,3.08,0.00,12.50,direct,49.67,28.22,71.11,36.75,18.88,54.61,band_mid
+5,95.59,86.39,100.00,0.93,0.00,5.46,extrap,47.47,26.77,68.16,35.00,17.22,52.78,band_mid
+6,93.77,83.48,100.00,0.11,0.00,1.47,direct,42.00,22.56,61.44,29.33,14.38,44.29,band_mid
+7,92.86,82.64,100.00,0.14,0.00,1.98,direct,38.76,20.30,57.23,27.71,13.57,41.85,band_mid
+8,91.37,80.22,100.00,0.04,0.00,0.76,direct,33.46,16.67,50.25,22.63,9.45,35.80,band_mid
+9,90.85,80.61,100.00,0.00,0.00,0.00,extrap,31.11,15.58,46.64,22.26,10.60,33.91,band_mid
+10,89.30,79.46,99.13,0.00,0.00,0.00,interp,27.07,13.09,41.04,19.73,9.10,30.36,band_mid
+11,88.09,78.31,97.87,0.00,0.00,0.00,direct,27.09,12.81,41.37,18.67,8.57,28.77,band_mid
+12,88.28,78.90,97.65,0.00,0.00,0.00,direct,27.39,13.85,40.93,18.47,8.68,28.27,band_mid
+13,86.67,76.83,96.50,0.00,0.00,0.00,direct,23.41,9.45,37.37,16.26,7.34,25.18,band_mid
+14,87.42,78.39,96.47,0.00,0.00,0.00,extrap,22.50,9.98,35.02,16.24,7.04,25.43,band_mid
+15,85.44,76.56,94.32,0.00,0.00,0.00,extrap,21.71,9.37,34.06,15.49,7.41,23.57,band_mid
+16,85.21,76.25,94.16,0.00,0.00,0.00,direct,20.00,8.39,31.61,14.06,6.08,22.05,band_mid
+17,84.15,75.74,92.57,0.00,0.00,0.00,direct,18.20,7.42,28.97,13.06,5.69,20.43,band_mid
+18,83.53,74.73,92.34,0.00,0.00,0.00,direct,17.46,6.65,28.28,12.35,5.14,19.56,band_mid
+19,82.52,74.22,90.84,0.00,0.00,0.00,band,16.53,7.14,25.91,12.02,5.53,18.51,band_mid
+20,82.41,73.91,90.92,0.00,0.00,0.00,band,15.82,5.78,25.85,11.35,4.85,17.85,band_mid
+21,81.82,73.83,89.82,0.00,0.00,0.00,direct,15.17,6.25,24.11,11.38,5.06,17.71,band_mid
+22,81.03,73.14,88.92,0.00,0.00,0.00,direct,14.67,6.07,23.27,11.03,5.37,16.69,band_mid
+23,80.20,72.58,87.83,0.00,0.00,0.00,direct,13.67,6.06,21.27,10.64,5.05,16.23,band_mid
+24,79.21,71.16,87.25,0.00,0.00,0.00,extrap,13.40,5.38,21.43,10.31,5.09,15.52,band_mid
+25,79.12,72.30,85.94,0.00,0.00,0.00,interp,12.23,4.90,19.55,9.83,4.65,15.00,band_mid
+26,79.24,72.65,85.84,0.00,0.00,0.00,direct,12.37,4.77,19.97,9.99,4.64,15.34,band_mid
+27,78.50,71.91,85.10,0.00,0.00,0.00,direct,10.69,4.25,17.13,9.06,4.56,13.57,band_mid
+28,79.04,72.23,85.85,0.00,0.00,0.00,direct,10.89,4.10,17.68,8.94,3.99,13.89,band_mid
+29,77.70,71.50,83.90,0.00,0.00,0.00,extrap,9.75,4.07,15.43,8.37,4.08,12.65,band_mid
+30,76.71,70.72,82.70,0.00,0.00,0.00,interp,9.96,3.50,16.41,8.46,4.35,12.57,band_mid
+31,76.34,70.05,82.64,0.00,0.00,0.00,direct,9.85,3.80,15.90,8.39,4.13,12.64,band_mid
+32,76.05,70.60,81.50,0.00,0.00,0.00,direct,8.91,3.38,14.44,7.70,3.98,11.41,band_mid
+33,76.23,70.66,81.78,0.00,0.00,0.00,direct,8.71,3.53,13.89,7.56,3.80,11.31,band_mid
+34,75.97,70.53,81.41,0.00,0.00,0.00,extrap,8.52,3.17,13.87,7.32,3.81,10.84,band_mid
+35,75.65,70.50,80.79,0.00,0.00,0.00,interp,8.31,3.11,13.50,7.48,3.93,11.02,band_mid
+36,75.04,69.61,80.45,0.00,0.00,0.00,direct,7.80,3.38,12.22,7.18,3.77,10.59,band_mid
+37,74.87,69.99,79.74,0.00,0.00,0.00,direct,7.45,3.20,11.71,6.89,3.64,10.15,band_mid
+38,74.75,69.61,79.88,0.00,0.00,0.00,direct,7.16,2.80,11.51,6.81,3.75,9.86,band_mid
+39,73.85,69.41,78.29,0.00,0.00,0.00,extrap,6.91,2.86,10.97,6.62,3.65,9.60,band_mid
+40,73.41,69.07,77.77,0.00,0.00,0.00,interp,6.56,2.51,10.60,6.67,3.62,9.72,band_mid
+41,73.77,69.48,78.05,0.00,0.00,0.00,direct,6.37,2.83,9.92,6.41,3.86,8.97,band_mid
+42,73.52,69.50,77.54,0.00,0.00,0.00,direct,5.98,2.63,9.32,6.16,3.73,8.59,band_mid
+43,73.13,69.53,76.73,0.00,0.00,0.00,direct,5.87,2.47,9.26,5.92,3.81,8.02,band_mid
+44,72.85,69.01,76.68,0.00,0.00,0.00,extrap,5.74,2.54,8.95,6.06,3.60,8.52,band_mid
+45,72.71,68.92,76.50,0.00,0.00,0.00,interp,5.47,2.45,8.50,6.26,4.08,8.44,band_mid
+46,72.44,69.05,75.84,0.00,0.00,0.00,extrap,5.12,2.66,7.58,5.83,4.03,7.64,band_mid
+47,72.21,68.68,75.73,0.00,0.00,0.00,direct,5.14,2.32,7.95,5.85,3.98,7.73,band_mid
+48,72.28,69.20,75.35,0.00,0.00,0.00,direct,4.78,2.98,6.59,5.70,4.06,7.33,band_mid
+49,72.04,68.96,75.11,0.00,0.00,0.00,extrap,4.54,2.79,6.28,5.52,3.91,7.12,band_mid
+50,71.65,68.97,74.33,0.00,0.00,0.00,interp,4.57,2.66,6.48,5.45,4.02,6.87,band_mid
+51,71.50,68.81,74.21,0.00,0.00,0.00,extrap,4.28,2.86,5.70,5.43,4.30,6.56,band_mid
+52,71.43,68.74,74.13,0.00,0.00,0.00,direct,4.22,2.90,5.55,5.41,4.20,6.62,band_mid
+53,71.13,68.75,73.51,0.00,0.00,0.00,direct,4.16,2.71,5.62,5.30,4.21,6.38,band_mid
+54,70.87,68.87,72.89,0.00,0.00,0.00,direct,3.93,2.95,4.92,5.20,4.17,6.24,band_mid
+55,70.72,68.79,72.65,0.00,0.00,0.00,interp,3.78,3.25,4.32,5.19,4.53,5.85,band_mid
+56,70.37,68.73,72.01,0.00,0.00,0.00,extrap,3.75,2.78,4.72,5.16,4.37,5.96,band_mid
+57,70.45,68.91,72.00,0.00,0.00,0.00,direct,3.55,3.28,3.82,5.05,4.48,5.62,band_mid
+58,70.30,69.09,71.50,0.00,0.00,0.00,direct,3.49,3.19,3.79,5.07,4.66,5.48,band_mid
+59,70.21,69.37,71.05,0.00,0.00,0.00,direct,3.40,3.26,3.54,5.02,4.70,5.34,band_mid
+60,70.00,70.00,70.00,0.00,0.00,0.00,band,3.33,3.33,3.33,5.00,5.00,5.00,band

@@ -1,0 +1,46 @@
+# Xu et al. 2017 eLife 6:e25916, Figure 17(d): 'X Step Edge', Monte Carlo backscatter fraction vs step-edge position.
+# Columns: series (legend '800 V' = blue circles, '1200 V' = orange circles; the caption calls these landing energies 800 eV and 1.2 keV),
+#   x_nm = 'Nanometers' (edge position), backscatter_percent = 'Backscatter %',
+#   n_in_cluster = number of circles fitted to the blob this marker belongs to (1 = isolated marker),
+#   fit_mismatch = mismatched pixels of that blob's circle fit, in units of one marker's area (0 = perfect).
+# Provenance: tier 3, digitized from the embedded raster image (~403 ppi, no vector data in the PDF) by fig17de_extract.py.
+#   Axes calibrated on the light grey grid lines (y 8.0-12.0 every 0.5; x every 2 nm in d, every 5 nm in e); the grid is
+#   evenly spaced to within 1 px. Markers: colour masks; touching markers are split by fitting equal circles of radius
+#   10.9 px (from isolated markers) to each blob.
+# Uncertainty: about +-0.009 nm in x and +-0.0071 % in y per pixel; isolated markers ~1 px;
+#   markers inside clusters (n_in_cluster > 1) ~2-3 px.
+series,x_nm,backscatter_percent,n_in_cluster,fit_mismatch
+800 V,-4.004,8.311,1,0.05
+800 V,-3.007,8.339,1,0.05
+800 V,-2.009,8.346,1,0.05
+800 V,-1.002,8.424,1,0.05
+800 V,-0.603,8.481,1,0.05
+800 V,-0.404,8.517,1,0.05
+800 V,-0.205,8.567,3,0.1
+800 V,-0.107,8.637,3,0.1
+800 V,-0.012,8.702,3,0.1
+800 V,0.005,9.743,3,0.1
+800 V,0.094,9.835,3,0.1
+800 V,0.194,9.893,3,0.1
+800 V,0.394,9.943,1,0.05
+800 V,0.594,9.986,1,0.05
+800 V,0.993,10.043,1,0.05
+800 V,1.991,10.192,1,0.05
+800 V,2.989,10.221,1,0.05
+800 V,3.995,10.242,1,0.05
+1200 V,-4.004,8.510,1,0.05
+1200 V,-3.007,8.553,1,0.05
+1200 V,-2.008,8.667,1,0.05
+1200 V,-1.002,8.823,1,0.05
+1200 V,-0.603,8.966,1,0.05
+1200 V,-0.404,9.052,1,0.05
+1200 V,-0.204,9.173,1,0.05
+1200 V,-0.013,9.401,1,0.05
+1200 V,0.005,10.720,1,0.05
+1200 V,0.195,10.820,1,0.05
+1200 V,0.395,10.920,1,0.05
+1200 V,0.594,11.013,1,0.05
+1200 V,0.994,11.148,1,0.05
+1200 V,1.991,11.305,1,0.05
+1200 V,2.988,11.390,1,0.05
+1200 V,3.995,11.469,1,0.05

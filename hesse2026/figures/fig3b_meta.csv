@@ -1,0 +1,7 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Figure 3, PDF page 37; extracted by fig3_extract.py from vector paths (PDF points, origin top-left)
+# Panel b: number of rows (cell-transitions) per raster and the row position of the solid horizontal separator line
+# (cells above prefer the conscious face, cells below the suppressed face). separator_row_y is the y of that line in row units
+# (row k's spike marks are centred at y = k; the line is drawn at an integer row position, i.e. on top of that row).
+raster,n_rows,separator_row_y,n_spikes
+state2_to_state1,1196,368.0,1207
+state1_to_state2,988,304.0,1007

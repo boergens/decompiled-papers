@@ -1,0 +1,18 @@
+# Table 4 of Scheffer et al. 2020 (eLife 9:e57443), p. 41: regions with minimum or maximum characteristics, picked from those regions
+# lying wholly within the reconstructed volume and containing at least 100 neurons.
+# Legend: Yellow indicates a minimum value; blue a maximal value. Volume is in cubic microns. N is the number of neurons in the region,
+# L the number of connections between those neurons, <k> the average number of partners (in the region), D the network diameter (the
+# maximum length of the shortest path between neurons), <str> the average connection strength, broken up into non-reciprocal and
+# reciprocal. fracR is the fraction of connections that are reciprocal, and AvgDist the average number of hops (one hop corresponding to
+# a direct synaptic connection) between any two neurons in the compartment.
+# Column 'highlight' (added by the decompiler) lists the cells printed with a yellow (min) or blue (max) background, read from the
+# filled rectangles in the PDF. Values as printed; transcribed from the PDF text layer, checked against the page image.
+Name,Volume,N,L,<k>,D,<str>,<non-r>,<r>,fracR,AvgDist,highlight
+MB(R),309371,3514,574732,163.555,8,3.275,3.081,3.388,0.632,2.215,<k>=max
+bL(R),29695,1171,108250,92.442,8,2.019,1.856,2.122,0.613,2.090,<str>=min
+EB,93932,555,58789,105.926,5,10.087,4.610,12.215,0.720,1.798,<str>=max; fracR=max; AvgDist=min
+AB(L),526,100,1250,12.500,4,2.182,1.765,2.687,0.453,1.938,N=min; D=min
+PLP(R),367711,6913,244182,35.322,15,2.791,2.479,3.866,0.225,3.148,D=max
+SNP(R),1076257,9130,811279,88.859,13,3.026,2.552,4.539,0.239,2.724,N=max
+RUB(L),834,128,623,4.867,6,7.313,2.766,20.253,0.260,2.727,<k>=min
+EPA(R),29947,1483,18848,12.709,13,2.224,2.152,2.700,0.131,3.471,fracR=min; AvgDist=max

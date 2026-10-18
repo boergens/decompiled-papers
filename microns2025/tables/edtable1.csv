@@ -1,0 +1,18 @@
+# Extended Data Table 1 | Two-photon functional scans in the dataset release
+# List of scans used for the acquisition of the functional dataset along with their descriptive parameters.
+# Transcribed by the decompiler from the page image (the table is printed as an image in the PDF, p. 29); not a text layer. Superscript reference numbers are written as ^N.
+session,scan_idx,# frames,# fields,fps
+4,7,40000,8,6.3
+5,6,40000,8,6.3
+5,7,40000,8,6.3
+6,2,40000,8,6.3
+6,4,40000,8,6.3
+6,6,40000,8,6.3
+6,7,40000,8,6.3
+7,3,40000,8,6.3
+7,4,40000,8,6.3
+7,5,40000,8,6.3
+8,5,40000,8,6.3
+9,3,50000,6,8.6
+9,4,50000,6,8.6
+9,6,57000,4,9.6

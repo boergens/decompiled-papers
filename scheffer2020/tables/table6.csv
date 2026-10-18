@@ -1,0 +1,15 @@
+# Table 6 of Scheffer et al. 2020 (eLife 9:e57443), p. 48: values reported in the literature.
+# Columns: R_a (axial resistivity) in ohm*m, R_m (membrane resistance) with the unit printed as ohm/m^2, C_m (membrane capacitance) in F/m^2,
+# headers as printed. Values as printed; transcribed from the PDF text layer, checked against the page image.
+Reference,R_a (Ohm*m),"R_m (Ohm/m^2, as printed)",C_m (F/m^2)
+"Borst (Borst and Haag, 1996), CH cells",0.60,0.25,0.015
+"Borst (Borst and Haag, 1996), HS cells",0.40,0.20,0.009
+"Borst (Borst and Haag, 1996), VS cells",0.40,0.20,0.008
+"Gouwens (Gouwens and Wilson, 2009), DM1 cell 1",1.62,0.83,0.026
+"Gouwens (Gouwens and Wilson, 2009), DM1 cell 2",1.02,2.04,0.015
+"Gouwens (Gouwens and Wilson, 2009), DM1 cell 3",2.66,2.08,0.008
+"Gouwens (Gouwens and Wilson, 2009), dendrite 1",2.44,1.92,0.008
+"Gouwens (Gouwens and Wilson, 2009), dendrite 2",2.66,2.08,0.008
+"Gouwens (Gouwens and Wilson, 2009), dendrite 3",3.11,2.64,0.006
+"Cuntz (Cuntz et al., 2013), HS cells",4.00,0.82,0.006
+"Meier (Meier and Borst, 2019), CT1 cells",4.00,0.80,0.006

@@ -1,0 +1,56 @@
+# Figure 2 panel g, PDF page 36 of source/2026.10.15.759299v1.full.pdf (vector graphics)
+# 50 spikes; each drawn as a vertical tick (one row high); time_ms rounded to 0.01 ms
+# x axis calibrated on ticks -50, 0, 50 ms (resid 1.4e-04); rows: 22 evenly spaced rows (pitch 2.3952 pt), row_from_top = 1 at the top;
+#   row rounding error < 0.00 rows; time rounding error < 0.000 ms
+# left raster of panel g (example AM neuron preferring the suppressed face): 22 transitions State 2 -> State 1; dashed vertical line at t = 0
+row_from_top,time_ms
+1,19.0
+2,-23.0
+2,47.0
+3,-22.0
+4,-36.0
+4,-23.0
+4,-15.0
+4,-12.0
+4,-6.0
+4,-5.0
+4,20.0
+5,-39.0
+5,-9.0
+5,23.0
+6,-46.0
+6,-36.0
+6,-28.0
+6,-7.0
+7,-44.0
+7,-36.0
+7,-13.0
+7,35.0
+8,-44.0
+9,-50.0
+9,-25.0
+9,25.0
+9,49.0
+10,-47.0
+11,-20.0
+11,-4.0
+12,-36.0
+12,-29.0
+14,-22.0
+14,49.0
+17,-34.0
+17,-27.0
+17,49.0
+18,-38.0
+18,13.0
+18,30.0
+19,-34.0
+19,-10.0
+19,2.0
+20,-25.0
+20,-20.0
+20,-14.0
+20,35.0
+20,46.0
+21,-15.0
+22,-17.0

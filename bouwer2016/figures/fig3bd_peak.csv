@@ -1,0 +1,13 @@
+# Bouwer et al. 2016 Adv Struct Chem Imag 2:11, Fig. 3b and 3d: 'Line scan of a BSE signal profile' (1.5 keV, b;
+#   3 keV, d), drawn as 3D wireframe plots of 'BSE Energy Spread' over two 'Length in nm' axes.
+# This is a measurement by the decompiler, not a digitized data series: the 3D mesh cannot be read point by point.
+# Columns: panel; peak_height = height of the central spike in 'BSE Energy Spread' units above the flat background
+#   at the panel centre; apex_offset_px = horizontal offset of the apex from the centre of the mesh (a check that the
+#   spike sits at Length 0, 0); z_per_px = z-axis scale; z_fit_residual = max residual of the z tick fit.
+# Method: orthographic view assumed (vertical distances have the same scale everywhere); z calibrated on the z-axis
+#   tick marks (b: 0.2-0.8 plus the axis top at 1; d: 0-1); base level = midpoint of the mesh's left and right
+#   corners; apex = topmost line pixel above the centre. Provenance: tier 4 (geometric reading).
+# Uncertainty: about +-0.03 (the apex line is thin and faint; the base is the background level, slightly above 0).
+panel,peak_height,apex_offset_px,z_per_px,z_fit_residual
+b,0.995,-2.0,0.00350,0.0071
+d,0.996,-1.0,0.00324,0.0011

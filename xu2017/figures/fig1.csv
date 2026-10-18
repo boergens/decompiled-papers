@@ -1,0 +1,51 @@
+# Xu et al. 2017 eLife 6:e25916, Figure 1: regions of 3D imaging technologies in 'Resolution (nm)' vs 'Size (μm) [ Volume (μm3) ]'.
+# Columns: element (region named by its printed label and colour, red contour line, or star); vertex = corner number (polygon
+#   corners in order around the region; for contour lines 1 = lower-left end, 2 = upper-right end); size_um = x axis value;
+#   resolution_nm = y axis value; volume_um3 = size_um**3 (the axis prints both scales: 0.1 [1e-3], 1 [1e0], ... 1000 [1e9]).
+# Provenance: tier 3, digitized from the embedded raster image (~382 ppi, no vector data in the PDF) by fig1_extract.py.
+#   Axes: x log10 (562.5 px per decade, labelled ticks 0.1-1000); y log2 (300 px per factor 2, ticks 1-64), both exact to the pixel.
+#   Region edges from colour transitions along fixed rows/columns; the two diagonal edges are straight-line fits through 26 and
+#   25 edge points (teal: -0.8888 rows per column; green: -0.8889). Both diagonals rise by a factor of 2 in resolution
+#   per 0.600 (teal) and 0.600 (green) decades in size. Red lines: straight fits, end points at the visible ends.
+#   The left ends of the three bands fade to white; their left edge is taken at the orange box's right edge (as drawn).
+# Uncertainty: about +-1 px = +-0.002 decades in x and +-0.0033 octaves in y; region edges with soft gradients +-3 px.
+# The figure is a schematic ('in practice there is considerable overlap and only a fuzzy boundary', caption).
+element,vertex,size_um,resolution_nm,volume_um3
+Diamond Cut Section TEM with Tomography (orange),1,0.1,1,0.001
+Diamond Cut Section TEM with Tomography (orange),2,0.4651,1,0.1006
+Diamond Cut Section TEM with Tomography (orange),3,0.4651,13.44,0.1006
+Diamond Cut Section TEM with Tomography (orange),4,0.1,13.44,0.001
+Diamond Cut Serial Sections TEM with Tomography (yellow),1,0.4651,1,0.1006
+Diamond Cut Serial Sections TEM with Tomography (yellow),2,2.517,1,15.95
+Diamond Cut Serial Sections TEM with Tomography (yellow),3,2.517,11.29,15.95
+Diamond Cut Serial Sections TEM with Tomography (yellow),4,0.4651,11.29,0.1006
+Diamond Cut Serial Sections TEM or SEM (purple band),1,0.4651,29.31,0.1006
+Diamond Cut Serial Sections TEM or SEM (purple band),2,1362,29.31,2.527e+09
+Diamond Cut Serial Sections TEM or SEM (purple band),3,1362,53.76,2.527e+09
+Diamond Cut Serial Sections TEM or SEM (purple band),4,0.4651,53.76,0.1006
+Diamond Cut Block Face (blue band),1,0.4651,20.73,0.1006
+Diamond Cut Block Face (blue band),2,1362,20.73,2.527e+09
+Diamond Cut Block Face (blue band),3,1362,29.31,2.527e+09
+Diamond Cut Block Face (blue band),4,0.4651,29.31,0.1006
+Diamond Cut Block Face with SEM Energy Deconvolution (light blue band),1,0.4651,11.29,0.1006
+Diamond Cut Block Face with SEM Energy Deconvolution (light blue band),2,1362,11.29,2.527e+09
+Diamond Cut Block Face with SEM Energy Deconvolution (light blue band),3,1362,20.73,2.527e+09
+Diamond Cut Block Face with SEM Energy Deconvolution (light blue band),4,0.4651,20.73,0.1006
+Existing FIB-SEM (teal),1,2.517,2.828,15.95
+Existing FIB-SEM (teal),2,2.927,2.828,25.09
+Existing FIB-SEM (teal),3,46.2,11.29,9.859e+04
+Existing FIB-SEM (teal),4,2.517,11.29,15.95
+High Throughput / High Resolution FIB-SEM (green),1,2.517,1.995,15.95
+High Throughput / High Resolution FIB-SEM (green),2,85.8,1.995,6.315e+05
+High Throughput / High Resolution FIB-SEM (green),3,1362,7.989,2.527e+09
+High Throughput / High Resolution FIB-SEM (green),4,1362,11.29,2.527e+09
+High Throughput / High Resolution FIB-SEM (green),5,46.2,11.29,9.859e+04
+High Throughput / High Resolution FIB-SEM (green),6,2.927,2.828,25.09
+High Throughput / High Resolution FIB-SEM (green),7,2.517,2.828,15.95
+red contour '3 Days',1,4.437,2.838,87.36
+red contour '3 Days',2,34.78,7.97,4.207e+04
+red contour '3 Months',1,13.62,2.832,2527
+red contour '3 Months',2,107.6,7.986,1.247e+06
+red contour '8 Years',1,43.38,2.836,8.166e+04
+red contour '8 Years',2,341.5,7.982,3.981e+07
+yellow star,1,1006,15.96,1.017e+09

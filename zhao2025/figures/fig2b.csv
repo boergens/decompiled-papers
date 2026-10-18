@@ -1,0 +1,34 @@
+# Zhao et al. 2025, Nat. Commun. 16:3203, Fig. 2b: plateau (cutting) force f (blue squares, left axis 'f (N)') and
+#   blunting radius r_b (red squares, right axis 'r_b (um)') vs stretch ratio lambda; error bars = standard deviation
+#   (caption). The last point of each series (lambda ~1.45) carries the 'Fracture' icon (white zigzag).
+# Columns: series; lambda; value = f in N or r_b in um (see unit); err_low/err_high = the lower/upper error-bar cap
+#   (same unit; empty where no cap is visible); unit; px_x/px_y = marker centre in the embedded image (pixels);
+#   flag = notes. Points joined by straight lines in the figure (not data).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image on page 3 (1333 x 1018 px; the figure's
+#   plot areas of b and c are raster, its tick labels are PDF text). Squares found by colour mask + 5x5 opening;
+#   x centre = middle of the square's columns, y centre = middle of the run of rows fully covered around x
+#   (square plus touching caps; bars are symmetric); for the two Fracture-icon squares x = the error-bar column and
+#   y = midway between its two caps (red) or the middle of the square's rows (blue, lower cap hidden by the frame);
+#   the icon squares are ~17 px, larger than the others (14 px); caps = rows where >= 18 of 27 pixels around x are set,
+#   reached along the bar column. Calibration on the tick marks (darkness-weighted centres):
+#   x: 1@765.54px, 1.1@878.54px, 1.2@991.56px, 1.3@1104.57px, 1.4@1217.59px; max residual 6.2e-06
+#   y (f): 0@436.0px, 0.05@327.54px, 0.1@218.45px, 0.15@109.55px, 0.2@0.62px; max residual 0.00011 N
+#   y (r_b): 0@436.0px, 100@300.45px, 200@164.43px, 300@28.38px; max residual 0.14 um
+# Uncertainty: about +-1 px: +-0.001 in lambda, +-0.0005 N in f, +-0.8 um in r_b.
+series,lambda,value,err_low,err_high,unit,px_x,px_y,flag
+Cutting force,1.1230,0.18309,0.14199,,f_N,904.5,37.5,upper bar clipped at frame
+Cutting force,1.1637,0.10318,0.099739,0.10663,f_N,950.5,211.5,
+Cutting force,1.2044,0.069659,0.066674,0.072414,f_N,996.5,284.5,
+Cutting force,1.2451,0.05083,0.047615,0.054274,f_N,1042.5,325.5,
+Cutting force,1.2862,0.044401,0.042334,0.047386,f_N,1089.0,339.5,
+Cutting force,1.3468,0.033379,0.031082,0.035445,f_N,1157.5,363.5,
+Cutting force,1.4088,0.031082,0.028557,0.033608,f_N,1227.5,368.5,
+Cutting force (Fracture marker),1.4490,0.0030687,,0.014091,f_N,1273.0,429.5,no lower cap found (bar hidden behind marker or frame); icon square reaches the bottom frame; y centre uncertain by ~+-3 px (+-0.0015 N)
+Blunting radius,1.1230,66.707,64.867,68.915,r_b_um,904.5,345.5,
+Blunting radius,1.1632,75.906,72.962,79.585,r_b_um,950.0,333.0,
+Blunting radius,1.2044,132.57,129.63,135.51,r_b_um,996.5,256.0,
+Blunting radius,1.2451,160.17,154.28,166.05,r_b_um,1042.5,218.5,
+Blunting radius,1.2862,190.71,185.55,195.49,r_b_um,1089.0,177.0,
+Blunting radius,1.3468,220.51,214.26,226.4,r_b_um,1157.5,136.5,
+Blunting radius,1.4083,259.51,256.94,262.09,r_b_um,1227.0,83.5,
+Blunting radius (Fracture marker),1.4490,299.62,285.64,313.6,r_b_um,1273.0,29.0,

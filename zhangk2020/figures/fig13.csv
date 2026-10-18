@@ -1,0 +1,22 @@
+# zhangk2020 Fig. 13 (p. 12): Figure 13. Experimental results of measuring Diamond Tool 2.
+# Provenance: tier 2, vector paths in the PDF (PyMuPDF get_drawings); marker centre = centre of the marker's stroked outline; legend markers dropped.
+# x calibration: tick marks 197.94 pt=20, 245.64 pt=60, 293.28 pt=100, 340.98 pt=140, 388.62 pt=180; max residual 0.0151 nm.
+# left y axis (The actual cutting edge radius, nm): tick marks 356.23 pt=44, 490.09 pt=38, 445.54 pt=40, 400.81 pt=42; max residual 0.00255 nm.
+# right y axis (Uncertainty, nm): tick marks 356.23 pt=2.15, 490.09 pt=1.85, 445.54 pt=1.95, 400.81 pt=2.05; max residual 0.000128 nm.
+# series 'Cutting edge radius' (blue open squares) is read on the left axis, 'Uncertainty' (red open squares with an X inside) on the right axis.
+# Uncertainty of the extraction: about 0.05 nm in x, 0.002 nm (left) and 0.0003 nm (right) in y (PDF coordinate precision).
+# Check (decompiler): Cutting edge radius: n=6, mean 41.2925 nm, sample SD 0.6617 nm; Uncertainty: n=6, mean 1.9798 nm, sample SD 0.0328 nm
+# (text: average radius 41.29 nm, standard deviation 0.66 nm; standard deviation of the uncertainties 0.032 nm; indentation depths 35, 45, 77, 104, 127 and 163 nm).
+series,axis,x_indentation_depth_nm,y_nm
+Cutting edge radius,left (The actual cutting edge radius nm),35.02,41.9804
+Cutting edge radius,left (The actual cutting edge radius nm),45.04,41.3082
+Cutting edge radius,left (The actual cutting edge radius nm),77.01,41.128
+Cutting edge radius,left (The actual cutting edge radius nm),103.99,40.4276
+Cutting edge radius,left (The actual cutting edge radius nm),127.0,40.7893
+Cutting edge radius,left (The actual cutting edge radius nm),163.05,42.1215
+Uncertainty,right (Uncertainty nm),35.02,1.96
+Uncertainty,right (Uncertainty nm),45.04,1.9491
+Uncertainty,right (Uncertainty nm),77.01,1.977
+Uncertainty,right (Uncertainty nm),103.99,1.9729
+Uncertainty,right (Uncertainty nm),127.0,1.977
+Uncertainty,right (Uncertainty nm),163.05,2.043

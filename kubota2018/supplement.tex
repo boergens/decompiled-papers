@@ -1,0 +1,320 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+\decompnote{Collection markers: a cited work that is in the local collection is tagged \localcopy{<key>} after its reference entry; it is decompiled in decompiled/<key>/. A reference to another version of a local work (e.g. its preprint) is tagged \localother{<key>}. A reference without that tag is not in the local collection and needs an external pull. Tags added by \texttt{\detokenize{tools/mark_local.py}}.}
+
+
+\sourcefile{41467\_2017\_2768\_MOESM1\_ESM.pdf}
+\decompnote{Supplementary Information, 26 pages, the authors' Word document (Times; line numbers 1–425 in the left margin and a page number at the bottom of every page, both left out here). Supplementary Figures are embedded images with their legends below; Supplementary Tables 1–3 (p.~25) are images and are transcribed from them.}
+
+\pdfpage{1}
+\textbf{Supplementary Note 1.  Drawbacks of carbon coated (cc)-Kapton tape}
+
+We evaluated the cc-Kapton tape quantitatively to understand how to meet the requirements of an ATUMtome tape. The surface of Kapton tape is hydrophobic and non-conductive, and shows severe charging during SEM imaging under high-vacuum conditions. Conductive carbon coating resolves this problem \textsuperscript{1}. We embedded rat brain tissue in epoxy resin (Durcupan ACM, Sigma-Aldrich, St. Louis, U.S.A.) using a modified heavy metal staining (mHMS) histology protocol (Table 1) and obtained serial ultrathin sections of 50 nm-thickness using the ATUMtome (RMC Boeckeler, Tucson, AZ, U.S.A.). Unless otherwise stated, we used these sections for examination. We observed that the hydrophobic tape surface of cc-Kapton Tape (RMC Boeckeler, Tucson, AZ, U.S.A.) generates copious section wrinkles during section collection (Supplementary Fig. 1). This was overcome by hydrophilization of the tape surface by plasma discharge treatment (see below, Supplementary Fig. 1). Carbon coating of the tape was necessary to eliminate imaging-induced charging. However, we occasionally found significant charging problems affecting image quality, due to randomly occurring even lower conductance areas that we attributed to the variable thickness of the carbon coating, including continuously drifting images (Supplementary Fig. 1), as well as its relatively high and variant tape surface sheet resistance (19.2/107/6,530 MΩ ◻\textsuperscript{-1} for three samples of cc-Kapton tape, RMC Boeckeler). In addition, we often found scratches on the tape surface, likely generated during the tape production process (Supplementary Fig. 1), which negatively impacted image data capture. Moreover, the coated carbon layer is partially lost with plasma discharge treatment (Supplementary Fig. 1). It was examined with a home-coated carbon Kapton tape of carbon evaporated 10 nm thick deposit layer which allowed us to measure the resistance for its relatively low sheet resistance (19.3 \% reduction of conductivity; sheet resistance, 3367 ± 516 and 4172 ± 559 Ω ◻\textsuperscript{-1} without and with plasma discharge treatment, respectively, n=3 each cc-Kapton tape; estimated conductance: 5.9 and 4.8 S m\textsuperscript{-1}, respectively). Alternatively, carbon coating can be done after section collection on plasma discharge treated carbon uncoated Kapton tape \textsuperscript{2,3}, though this is generally to be avoided due to signal loss and noise generation from the overlying carbon layer, which is especially pronounced when using in-lens secondary electron (SE) detection (In-lens SE) (Supplementary Fig. 1). These problems, and the fact that ready-to-use cc-Kapton tape is not supplied in a stable manner commercially, prompted us to search for a more optimal tape for ATUM. We \pdfpage{2}
+concluded that the cc-Kapton tape varied in quality and some might not provide good imaging conditions.
+
+\textbf{Supplementary Note 2. Examinations of potential tapes}
+
+To find the best replacement of the cc-Kapton tape for ATUM use, we tested many different tapes: copper foil, 8mm video tape, ITO (indium tin oxide) coated PET, germanium-coated PET, open-reel and CNT-coated PET tapes (Supplementary Fig. 2, Supplementary Table 1). We initially thought that the copper foil tape would be a good choice for the ATUM because of its low resistance (0.1 Ω ◻\textsuperscript{-1} for 20 µm thick copper foil). Indeed, we did not notice any charging problems during image acquisition, but the tape failed to remain flat when subsequently adhered to a silicon wafer for imaging (Supplementary Fig. 2). The uneven surface made it difficult to focus the microscope across serial sections. Next, ITO-coated PET tape was tested. ITO is a transparent metal conductor and is typically used for flat-panel displays and smart windows. We imaged an EM sample on ITO-coated tape with the In-lens SE and backscattered electron (BSE) detector (BSD). We found a stripe pattern in the images (Supplementary Fig. 2). The thin ITO layers on the tape surface likely affect the images as the endogenic signal. The stripe pattern noise was probably due to cracks of the ITO layer generated at the very small angle of the ATUMtome tape guide tip end (Supplementary Fig. 2). We also tested germanium-coated PET film and found the image was fuzzy, especially with the BSD (Supplementary Fig. 2). We concluded that the tape coated with the conductive metal substance is not suitable for thin section imaging with the SEM because its strong endogenic signals may interfere with images.
+
+\textbf{Supplementary Note 3.  Open reel tape}
+
+We then tried the open-reel tape (Supplementary Fig. 2) for ultrathin section collection with the ATUM. We found that it had a good resilience for the tape guide of the ATUM (Supplementary Fig. 2) and was easy enough to handle for adherence to the flat surface of the wafer. We imaged the 50 nm-thick tissue sections on the open reel tape with In-lens SE and BSD with common acceleration voltage (2 keV and 5 keV, respectively). We found that the electron micrographs were full of bar-like magnetic particle noise (Supplementary Fig. 2). It clearly indicated that the open-reel tape has strong endogenous noise and is not suitable tape for ATUM.
+
+\pdfpage{3}
+Then, we realized that it would be advantageous to analyze electron interaction depth quantitatively. We tested the EM samples using the In-lens SE detector with different acceleration voltages (Sigma, Carl Zeiss Microscopy GmbH, Oberkochen, Germany) (Supplementary Fig. 9) to see whether the image would change with the different accelerating voltages. We found that the image without the bar-like magnetic particle noise could be obtained only using 1 keV, but images using 1.5 keV or more led to the incorporation of magnetic particle signals in the magnetic layer of the tape (Supplementary Fig. 9). It was due to the larger and deeper interaction volume at higher acceleration voltages, which was further confirmed using the simulation, Monte Carlo Simulation of electron trajectory in solids (CASINO)\textsuperscript{4} (Supplementary Fig. 9). The SE is known to be generated on two occasions: at the primary electron incidence into the block (SE1) and upon the primary electrons back-scattering from the block surface (SE2) \textsuperscript{5}. The SE1 may give information about the surface structure and the SE2 about the tissue block mainly. Therefore, the BSE trajectory line (red lines in Supplementary Fig. 9) may be the interaction volume for the generation of SE2. This indicates that it is essential to keep the electron interaction volume within the tissue section thickness (50 nm), because when the BSE interaction volume reaches the base tape beyond the tissue section, it incorporates the background endogenous noise from the tape. There are two ways to minimize this noise: either using an optimally low acceleration voltage for imaging to restrict the interaction volume depth or using a base tape with low intrinsic signal (low Z). To estimate the proportion of the signal from a brain section (50 nm-thick), we divided the number of BSEs reflected only from the section by the number of all BSEs including those from base tape, signal efficiency for a 50 nm-thick section (Supplementary Table 2). The values of signal efficiency for a 50 nm-thick section in different acceleration voltages reasonably indicated a proportion of the real signal from tissue contained in the image from the open reel tape (Supplementary Fig. 9). Therefore, we believe that the Monte Carlo simulation reproduced the images that incorporated the magnetic particle signals on the open-reel tape. These results indicate that imaging with an acceleration voltage that generates an appropriate interaction volume for a given section thickness should give the best image results.
+
+To see the performance of BSD in our Sigma SEM, we also imaged the same section using BSD with different acceleration voltages (Supplementary Fig. 9). We found that images without magnetic particle noise could be obtained using 1-2 keV, and images \pdfpage{4}
+with 2.5 keV or more increasingly led to the incorporation of magnetic particle signals (Supplementary Fig. 9). This may indicate that the BSD was not capable of efficiently detecting the lower energy BSEs, which probably travel deeper in the tissue block and have likely lost their energy due to travel over the long distance. Therefore, the BSD tends to image the magnetic particle signals using higher acceleration voltage than with the In-lens SE, which is designed to detect low energy electrons very efficiently with the 'Beambooster' of the GEMINI column to accelerate the electrons with an additional 8 keV \textsuperscript{6}.
+
+\textbf{Supplementary Note 4.  Properties of the CNT-coated PET tape}
+
+We examined SEM beam damage on the CNT tape to see the influence on imaging. Beam damage resistance was studied with direct beam radiation onto the tape surface with 6.4 µs dwell time, 3 nm pixel\textsuperscript{-1}, 4k x 4k image size, 8 mm working distance (wd), 60 µm aperture and high current mode at different acceleration voltages for imaging with the BSD. Using a side-mounted Everhart-Thornley detector (sET), which imaged mainly surface structure, and 3D laser scanning confocal microscope (SCM), which imaged surface structure in pseudo depth color (VX-250, Keyence Corporation, Osaka, Japan), we found that the tape showed depression damage, which was probably due to further crosslinking of the overcoat layer. The damage was well correlated with acceleration voltage strength and depression depth measured with the SCM (Supplementary Fig. 3). The PET film itself was stretched during manufacture to reduce deformation by heat, but the overcoat or hard coat layers were not. Therefore, the polymer used in the overcoat layer may generate additional cross-linkage with the heat from the SEM beam. On the other hand, we found that the cc-Kapton tape showed a slight expansion (Supplementary Fig. 3) and the expansion height was well correlated with acceleration voltage strength (Supplementary Fig. 3). The beam damage depression depth of the CNT tape was deep, especially for the high acceleration voltages, but only a fraction of electrons may reach the base tape beyond the 50 nm-thick tissue section. Therefore, we investigated the depression depth after imaging the tissue section.
+
+We captured images of the 50 nm-thick tissue sections with varied acceleration voltage strengths and dwell times (Supplementary Figs. 4, 5) and analyzed the beam damage using the depression depth in order to understand the possible mechanism of the depression of the CNT tape and any influence on image quality. As we predicted, the \pdfpage{5}
+damage depression depth was much smaller than the ones directly on the tape (the depression depth of tissue section with BSD/the depression depth of CNT tape surface with BSD: average 53.2 ± 8.9\%; the depression depth of tissue section with In-lens SE/the depression depth of CNT tape surface with BSD: average 63.5 ± 6.6\% for 6 keV, 5 keV, 4 keV and 3 keV). We found that the depth was determined mainly by acceleration voltage strength significantly (P<0.01) (Supplementary Figs. 4, 5). The depression depth was quite similar between BSD and In-lens SE imaging, although the electron dose for the BSD imaging was about 5 times larger than that of the In-lens SE for the aperture size difference (60 µm vs 20 µm) (Supplementary Figs. 4, 5). There was only a faint depression using an acceleration voltage of 2 keV or less, 17 – 67 nm depth (Supplementary Figs. 4, 5). It seems probable that primary electrons generated the depression and the depth of the electrons was determined by the acceleration voltage strength, which was predicted by the Monte Carlo simulation, which was tuned to the images on the open reel tape (Supplementary Fig. 9, blue lines). The primary electrons likely produced further cross-linking of the over-coat polymer of the tape surface directly under the tissue section, as well as the epoxy resin where the tissue was embedded, causing the depression. Indeed, we also found similar, but smaller depression damage with the 50 nm-thick tissue section on cc-Kapton tape (data not shown), where the Kapton tape itself showed expansion beam damage (Supplementary Fig. 3). These results indicated that the beam damage depression depth could be little especially for imaging the tissue section on the CNT tape with low acceleration voltage.
+
+Next, we determined whether the seam between tiled images was noticeable after stitching. We captured 2 x 2 tiled images with 3 nm pixel\textsuperscript{-1}, 3.2 µs dwell time, 4096 x 4096 pixel images at 7.3 mm working distance in 5 keV using BSD with our Sigma-Atlas5 SEM (Supplementary Fig. 8). Image stitching was easily and seamlessly processed (Supplementary Fig. 8). We verified that the depression damage by the electron beam during imaging did not cause subsequent problems in stitching.
+
+Mechanical strength of the CNT tape was examined. The tape is stretched, bent and wetted during ATUM operation, so the tape for the ATUM should be mechanically strong. The CNT tape was known to be strong enough to withstand bending up to 180° with 2.3 mm radius of curvature (Supplementary Fig. 2), temperatures up to 85°C, humidity up to 85\%, and high vacuum conditions. The CNT tape showed no change in its structure after passing through the water in the diamond knife boat during the
+
+\pdfpage{6}
+ATUMtome process. It showed no significant change over long term shelf storage, although PET in the base of the tape may become yellowish from ultraviolet irradiation. Therefore, it is better to keep it shaded. We believe that the CNT tape is sufficiently strong for ATUM use.
+
+Chemical strength was examined, because tissue sections on the tape may be processed with histological procedures. We tested water, 0.05 M Tris-HCl buffered saline (TBS) with 0.1\% of triton X-100, 1\% uranyl acetate solution, lead citrate staining solution, antiserum, ethanol, isopropyl alcohol and plasma discharge treatment. The tape was unaltered, at least for imaging use.
+
+We analyzed surface structure of the CNT tape. The tape surface has to be smooth and flat, so as not to influence the image. Using the BSD, In-lens SE and sET in Sigma SEM, we found that the CNT coating was relatively uniform (Supplementary Figs. 3, 6) and it did not show up at all in the tissue images of 50 nm-thick sections (Figs. 2a, b, 3, Supplementary Figs. 4, 5, 6).  The CNTs are affixed on the entire tape surface to make uniform surface resistance across the entire tape length (Fig. 1b). Using the In-lens SE detector in the Sigma SEM, which captured the surface shape, only thick CNTs were visible on the surface of the tape (Supplementary Fig. 6). In SEMs with stage bias potential, which efficiently increases signals from shallow tissue depth \textsuperscript{7,8}, the CNTs were clearly visible on the tape surface using an In-lens SE detector (GeminiSEM 300/MultiSEM 505, Carl-Zeiss Microscopy GmbH, Oberkochen, Germany) (Supplementary Fig. 6), and in relatively low contrast using a BSD optimized for low acceleration voltage (OnPoint BSD, Gatan, Inc., Pleasanton, CA, U.S.A.) in the GeminiSEM 300 (Supplementary Fig. 6). The CNTs varied in diameter (10 – 40 nm) and some of which, especially thick ones, were shown through very thin tissue sections (≤ 25-30 nm thickness) or with 50 nm-thick plastic sections lacking brain tissue (not shown), but not through 50 nm-thick tissue sections (Supplementary Fig. 6). We concluded that the surface of the CNT tape was sufficiently smooth and flat for SEM imaging with thin sections (>30 nm-thick).
+
+In contrast, the surface of the cc-Kapton tape was bumpy and scratches were frequently found (Supplementary Figs. 1, 3, 7). The irregular surface may be caused by non-uniform affixed carbon deposition. Particles (\textasciitilde{}10 nm diameter), which could be dirt produced during the pre-washing process with isopropanol of the Kapton tape, were \pdfpage{7}
+also attached to the tape surface (Supplementary Figs. 1, 3, 7), which may slightly affect images obtained with the In-lens SE, but not with the BSD (Supplementary Fig. 7).
+
+\pdfpage{8}
+\textbf{Supplementary Methods}
+
+\textbf{Simulation analysis}
+
+Monte Carlo simulations of electron trajectories for SEM imaging have been reported previously \textsuperscript{47,68}. We simulated the electron trajectory for backscattered imaging in SEM with CASINO (ver. 2.48) \textsuperscript{69}, by using the atomic fraction value of epoxy resin (nH = 0.53, nC = 0.35, nO = 0.12 \textsuperscript{68}) without metals used for staining process, because most of the brain tissue was composed of only epoxy resin without any stained membrane throughout the ultrathin section thickness. The electron beam energies were set at 1.0– 6.0 keV with a step of 0.5 keV, and the beam radius was set at 10 nm. In the present simulation, 3,000 electron trajectories were displayed for each beam energy.
+
+\textbf{Statistics}
+
+We used Kruskal-Wallis test to compare beam damage depression depth of different acceleration voltage or dwell time conditions \textbf{(}Supplementary Figs. 4, 5).
+
+\pdfpage{9}
+Supplementary figures
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig1.png}
+\end{center}
+\noindent Supplementary Figure 1\\
+Problematic features of Kapton tape and solutions using carbon coating and plasma discharge treatment
+
+\textbf{a.} Non-plasma-treated cc-Kapton tape with collected serial ultrathin sections showing extensive wrinkles (arrow heads). Scratches on the tape surface were frequently seen (arrows), and they negatively impacted image data capture. \textbf{b}. Plasma-treated cc-Kapton tape containing ultrathin sections without wrinkles. Scratches on the tape surface were frequently seen (arrows). Scale, 100 µm, is also for (a). \textbf{c}. Scratches (arrows) are frequently seen on the surface of uncoated Kapton tape. \textbf{d}. Image obtained with a BSD generates continuously drifting images (evident in the upper part) due to charging. Scale, 2 µm, is also for (c). \textbf{e, f}. Images with high magnification of a tissue section on Kapton \pdfpage{10}
+tape with a carbon layer deposited on top of the section shows good ultrastructure with the BSD (\textbf{e}) and a fuzzy image taken with the In-lens SE detector (\textbf{f}). Scale, 0.5 µm, is also for (\textbf{e}). \textbf{g}. The reel-to-reel motorized winder for atmospheric pressure plasma glow discharge treatment. \textbf{h}. The atmospheric pressure plasma glow discharge system. \textbf{i}. Bottom view of the plasma slit torch head. Glowing plasma discharge shines through the center of narrow slit (arrow). \textbf{j}. Plasma slit torch head and the CNT tape (arrows).
+
+\alttext{Composite of SEM images and photographs. \textbf{a} (``Plasma untreated'') and \textbf{b} (``Plasma treated''), common label below ``Carbon coated Kapton tape'': low-magnification SEM images of serial sections on the tape; in \textbf{a} black arrowheads mark many thin dark wrinkle lines in the sections and arrows mark long straight vertical scratch lines; in \textbf{b} the sections are flat (no wrinkles), and two arrows at the left and right edges point to scratches; black scale bar at the lower right of \textbf{b}. \textbf{c} (``sET'', label below ``Uncoated Kapton tape''): tape surface with several long parallel vertical scratch lines and a few bright debris particles. \textbf{d} (title ``In-lens SE'', label below ``Carbon coated Kapton tape''): neuropil image whose upper part is smeared/streaked (drift), lower part sharper; black scale bar at the lower right. (Note: the panel title says ``In-lens SE'' while the legend describes \textbf{d} as a BSD image.) \textbf{e} (``BSE'') and \textbf{f} (``In-lens SE''), label below ``Carbon coat over sections on Kapton tape'': \textbf{e} sharp neuropil with dark membranes and mitochondria; \textbf{f} the same kind of tissue blurred and low in contrast (``fuzzy''); black scale bar in \textbf{f}. \textbf{g} (``Reel to reel winder''): photograph of an acrylic device on a base plate with labels ``reel for 3 inches core reel'' (large disc, left), ``reel drive'' (white motor), ``slot for plasma slit torch'' (two upright acrylic posts), ``reel for inch core reel'' (right). \textbf{h}: photograph of the set-up in operation with labels ``plasma controller'' (control box with green and red buttons, lower left), ``drive controller'', ``plasma slit torch'' (with a red gas/power cable). \textbf{i} (``Plasma slit torch''): photograph of a white block-shaped torch head seen from below; a black arrow points at the narrow vertical slit. \textbf{j} (``Plasma treatment''): close-up of the torch mounted in the winder; two white arrows labelled ``CNT tape'' point to the tape passing the torch.}
+
+
+\pdfpage{11}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig2.png}
+\end{center}
+\noindent Supplementary Figure 2\\
+Wide variety of tapes examined for ATUM
+
+\textbf{a}. Kapton tape. \textbf{b}. open-reel tape. \textbf{c}. ITO-coated PET tape. \textbf{d}. CNT-coated PET tape. \textbf{e}. Serial ultrathin sections on strips of copper foil tape glued on a 4-inch silicon wafer. Ribbons of the serial ultrathin sections from a tissue block on copper foil (right). \textbf{f}. Serial ultrathin sections on strips of the CNT-coated PET tape (black strips) glued on a 4-inch silicon wafer. Conductive copper foil tape thin strips are adhered between the CNT-coated PET tape to ground the CNT layer to the wafer. Serial ultrathin sections collected on the CNT tape (right). \textbf{g}. Schematic drawing shows side view of the CNT tape with tissue section on the wafer. Possible electron pathway from the tissue section to wafer via the conductive CNT tape (yellow arrows). \textbf{h}. Tape guide tip of the ATUMtome. \textbf{i-n}, Images of mHMS-treated brain tissue captured with the In-lens SE detector at 2 keV (\textbf{i, k, m}), or the BSD at 5 keV (\textbf{j, l, n}) on ITO-coated PET tape (\textbf{i, j}), germanium-coated tape (\textbf{k, l}), or open-reel tape (\textbf{m, n}). Cracks of the ITO layer generated at the ATUMtome tape guide tip end are indicated by arrows in \textbf{i, j}. Scale in (\textbf{n}), 1 µm, is also for (\textbf{i-l}).
+
+\alttext{\textbf{a}–\textbf{d} Photographs of tape reels with a strip pulled out, labelled ``Kapton'' (amber), ``open-reel'' (black), ``ITO coated'' (light grey, transparent), ``CNT coated'' (nearly transparent, faintly grey). \textbf{e} Photograph of a silicon wafer covered with vertical copper foil strips, with an enlargement (right) of a strip carrying sections, labelled ``copper foil (40 µm)''. \textbf{f} Wafer with black strips of CNT tape alternating with thin copper foil strips, enlargement on the right labelled ``CNT coated PET'' showing small sections on the tape. \textbf{g} Side-view schematic, top to bottom: ``section'' (pink) on the ``CNT layer'' (blue) on ``PET'' on a ``hard coat layer'', on green ``double-sided tape'' on grey ``wafer''; a red ``conductive tape'' bridges from the CNT layer down to the wafer; yellow arrows (key ``electron path'') run from the section through the CNT layer and the conductive tape into the wafer. \textbf{h} Photograph of the ATUMtome tape guide (metal arm with screws) above a blue knife boat; white arrows labelled ``CNT tape''. \textbf{i}–\textbf{n} SEM images of mHMS-treated neuropil, columns ``2 keV In-lens SE'' (\textbf{i}, \textbf{k}, \textbf{m}) and ``5 keV BSD'' (\textbf{j}, \textbf{l}, \textbf{n}), rows labelled ``ITO coated'', ``germanium-Kapton'', ``open-reel''. On ITO (\textbf{i}, \textbf{j}) black-and-white arrows point to thin straight crack lines crossing the tissue; on germanium (\textbf{k}, \textbf{l}) the images are low in contrast and soft; on open-reel tape the In-lens SE image (\textbf{m}) is mottled and the BSD image (\textbf{n}) is dominated by short bar-like streaks (magnetic particles) that hide the tissue. Black scale bar at the lower right of \textbf{n}.}
+
+
+\pdfpage{12}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig3.png}
+\end{center}
+\noindent Supplementary Figure 3\\
+SEM imaging causes beam damage on the CNT and cc-Kapton tape
+
+\textbf{a}. Low magnification image captured with the sET detector shows a depression on the CNT tape surface by images captured with the BSD for 4096 x 4096 pixel image size, 6.4 µs dwell time, 3 nm pixel\textsuperscript{-1} with different acceleration voltages. Digits above the depressed square show the acceleration voltage value (keV) during imaging. Scale, 20 µm, is also for (c-d). \textbf{b}. The surface profile obtained with 3D laser SCM shows the depression depth clearly. Depression depth is indicated above the depression square. \textbf{c}. Low magnification image captured with the sET detector shows expansion of the cc-Kapton tape surface where the images were captured with the BSD. Digits above the expanded square show the acceleration voltage value (keV) during imaging. \textbf{d}. The surface profile obtained with 3D laser SCM shows the expansion height clearly. The expansion height is indicated above the depression square. \textbf{e}. Depression depth/expansion height is well correlated with acceleration voltage size. \textbf{f}. Electron dose of acceleration voltages.
+
+\alttext{\textbf{a} sET image (titles ``CNT'', ``sET'') of the CNT tape surface with a row of square depressions labelled 10, 9, 8, 7, 6, 5, 4 (getting smaller and fainter to the right) and further squares labelled 10 and 2.5; white scale bar at the lower left. \textbf{b} 3D laser SCM colour map (``3D laser SCM'') of the same row: blue/violet squares on an orange-red surface, depths printed above them: ``-808'', ``-708'', ``-614'', ``-511'', ``-419'', ``-324'', ``-232'', ``-163'', ``-140''; colour bar ``depth'' with labels ``-1200'', ``-800'', ``-400'', ``0'', ``400 nm''. \textbf{c} sET image (``ccKapton'', ``sET'') of the cc-Kapton surface with faint squares labelled 10, 9, 8, 7, 6, 5, 4, 3, 2.5 and 10, plus a bright particle and a scratch. \textbf{d} SCM colour map of \textbf{c}: green-yellow surface with numbers ``134'', ``113'', ``109'', ``85'', ``44'', ``54'', ``45'', ``21'', ``11'', ``136'' above the squares; colour bar ``depth'' with labels ``-180'', ``-100'', ``0'', ``100'', ``200'', ``300'', ``380 nm''. \textbf{e} Scatter plot, x ``EHT (keV)'' 0–10, y ``Depth/height (nm)'' labelled 0 to −800 in steps of 200 (axis to about +150), light-grey line at 0; legend ``cc-Kapton'' (open circles) and ``CNT/PET'' (filled circles), points at 2.5, 3, 4, …, 10 keV: CNT/PET falls about linearly from about −137 to −807 nm, cc-Kapton rises from about +8 to +136 nm. \textbf{f} Filled circles, y ``Electron dose (ke\textsuperscript{-} nm\textsuperscript{-2})'' 4–7, x ``EHT (keV)'' 0–10: rises linearly from about 4.7 at 2.5 keV to about 7.4 at 10 keV.}
+\figuredata{b}{figures/sfig3b.csv}{figures/sfig3b.py}{tier 3, calibrated colour map: pixels mapped to depth by hue through the printed colour bar; 3D-shaded rendering, values approximate (about ±50 nm), black and red bar ends not resolved}
+\figuredata{d}{figures/sfig3d.csv}{figures/sfig3d.py}{tier 3, calibrated colour map by hue through the colour bar; approximate, systematically below the printed heights}
+\figuredata{e}{figures/sfig3e.csv}{figures/sfig3e.py}{tier 3, digitized from the 150 ppi embedded image, about ±8 nm / ±0.08 keV; agrees with the depths printed in b and d within about 1 px}
+\figuredata{f}{figures/sfig3f.csv}{figures/sfig3f.py}{tier 3, digitized, about ±0.03 ke$^-$ nm$^{-2}$}
+
+\pdfpage{13}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig4.png}
+\end{center}
+\noindent Supplementary Figure 4\\
+Image quality varies with different acceleration voltage strengths and dwell times using a BSD with a single beam SEM.
+
+\textbf{a}. Images of mHMS-treated brain tissue are captured with a BSD for 2048 x 2048 pixel image size, 3 nm pixel\textsuperscript{-1}, aperture 60 µm, with different acceleration voltage strengths (2 keV - 6 keV) and dwell times (0.8 µs - 6.4 µs) using an optimized working distance (7.6 mm: 6 keV, 7.7 mm: 5 keV and 4 keV, 7.8 mm: 3 keV, 7.9 mm: 2 keV) on the CNT tape. Scale, 2 µm. \textbf{b}. Low magnification image captured with the sET detector shows depression of the tissue section surface by images captured with the BSD with different acceleration voltages (2 - 6 keV) and dwell time (0.8, 1.6. 3.2, 6.4 µs). Scale, 10 µm, is also for (c). \textbf{c}. The surface profile obtained with 3D laser SCM shows the depression depth clearly. Measured depth (nm) is shown below each imaged square. Inlet graph at right bottom indicates averaged depression depth for each acceleration voltage. \textbf{d}. Depression depth at different acceleration voltages with different dwell times. \textbf{e}. Electron dose for each imaging condition. \textbf{f}. Depression depth at different dwell times with different acceleration voltages. \textbf{g}. Electron dose for each imaging condition. Electron dose rate (e\textsuperscript{-} nm\textsuperscript{-2} µs\textsuperscript{-1}) is shown at right of each acceleration voltage.
+
+\alttext{\textbf{a} Grid of 4 × 5 BSE images (title ``BSE'') of mHMS-treated neuropil; columns ``0.8 µsec'', ``1.6 µsec'', ``3.2 µsec'', ``6.4 µsec''; rows (labels at right) ``6 keV'', ``5 keV'', ``4 keV'', ``3 keV'', ``2 keV''; contrast and sharpness are lowest in the 2 keV row (pale, blurred) and good at 3–6 keV; black scale bar at the lower left. \textbf{b} sET image (``sET'') of the section surface showing a grid of faint square depressions, columns ``0.8 1.6 3.2 6.4'', rows labelled ``6 keV'' to ``2 keV''; black scale bar. \textbf{c} SCM colour map (``3D laser SCM'') of the same grid, squares blue (deep) at 6 keV to yellow-green (shallow) at 2 keV, with depths printed below each square: 6 keV ``-240'', ``-245'', ``-250'', ``-265''; 5 keV ``-169'', ``-131'', ``-147'', ``-165''; 4 keV ``-80'', ``-94'', ``-95'', ``-98''; 3 keV ``-93'', ``-82'', ``-74'', ``-92''; 2 keV ``-65'', ``-63'', ``-67'', ``-67'' (small; read from the 150 ppi image); vertical colour bar ``depth'' (red at the top through yellow, green, blue to black) labelled ``430'', ``200'', ``0'', ``-200'', ``-380 nm''; a tiny inset graph at the lower right. The inset graph at the lower right of \textbf{c} (tiny, white on the map): ``Depression depth (nm)'' −50 to −250 against ``Acceleration voltage (keV)'' 1–6, points at 2–6 keV of about −62, −84, −88, −152, −253 nm, short error bars at 3 and 5 keV (labels barely legible). \textbf{d} Line plot, y ``Depression depth (nm)'' 0 to −250, x ``Acceleration voltage (keV)'' 0–6, points at 2–6 keV; legend ``6.4 µsec'' (red, solid), ``3.2 µsec'' (orange, dashed), ``1.6 µsec'' (blue, solid), ``0.8 µsec'' (magenta, dashed); the curves run close together: about −60 to −68 nm at 2 keV, −73 to −93 at 3, −80 to −101 at 4, −131 to −166 at 5 and −240 to −264 at 6 keV. \textbf{e} ``Electron dose (ke\textsuperscript{-} nm\textsuperscript{-2})'' 0–6 against acceleration voltage 2–6 keV, no legend: four nearly straight rising lines, red about 4.6→6.0, orange dashed 2.3→3.0, blue 1.1→1.45, magenta dashed 0.56→0.73. \textbf{f} ``Depression depth (nm)'' against ``Dwell time (µsec)'' (ticks 0, 0.8, 1.6, 3.2, 6.4), ``P < 0.01'' printed; values at 0.8, 1.6, 3.2, 6.4 µs: 2 keV (grey) about −67, −65, −65, −69; 3 keV (cyan, dashed) −95, −84, −76, −93; 4 keV (blue) −83, −94, −97, −101; 5 keV (orange, dashed) −171, −134, −148, −168; 6 keV (red) −242, −248, −252, −266. \textbf{g} ``Electron dose (e\textsuperscript{-} nm\textsuperscript{-2})'' (sic; values 0–6 as in \textbf{e}) against dwell time, legend ``2 keV 714.5'', ``3 keV 768.7'', ``4 keV 822.9'', ``5 keV 877.1'', ``6 keV'' / ``931.2''; straight lines from about 0.5–0.75 at 0.8 µs to about 4.5, 4.9, 5.25, 5.6, 5.9 at 6.4 µs.}
+\figuredata{c}{figures/sfig4c.csv}{figures/sfig4c.py}{tier 3, calibrated colour map by hue through the colour bar; approximate}
+\figuredata{c (inset)}{figures/sfig4c_inset.csv}{figures/sfig4c_inset.csv}{tier 4, read by eye, ±10 nm (no plot script: five values, see CSV)}
+\figuredata{d}{figures/sfig4d.csv}{figures/sfig4d.py}{tier 3, digitized, about ±2.5–5 nm; hidden markers left empty}
+\figuredata{e}{figures/sfig4e.csv}{figures/sfig4e.py}{tier 3, digitized, about ±0.05 ke$^-$ nm$^{-2}$}
+\figuredata{f}{figures/sfig4f.csv}{figures/sfig4f.py}{tier 3, digitized, about ±2.5–5 nm}
+\figuredata{g}{figures/sfig4g.csv}{figures/sfig4g.py}{tier 3, digitized, about ±0.05; some markers hidden}
+
+\pdfpage{14}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig5.png}
+\end{center}
+\noindent Supplementary Figure 5\\
+Image quality varied with different acceleration voltage strengths and dwell times using an In-lens SE with a single beam SEM.
+
+\textbf{a}. Images of mHMS-treated brain tissue are captured with an In-lens SE for 2048 x 2048 pixel image size, 3 nm pixel\textsuperscript{-1}, aperture 20 µm, with different acceleration voltage strengths (1 - 6 keV) and dwell times (0.8 µs - 6.4 µs) using an optimized working distance (4.0 mm: 6 keV - 4 keV, 4.1 mm: 3 keV - 1 keV) on the CNT tape. Some regions showing a darkening were focusing squares result of a thin layer of carbon adventitious build up, but not seen in 1.5 keV. In addition, a contrast reversal is apparent in the 1 kV images is seen. Scale, 2 µm. \textbf{b}. Low magnification image captured with the sET detector shows depression of the tissue section surface by images captured with the In-lens SE with the different acceleration voltages and the dwell time. Scale, 10 µm, is also for (c). \textbf{c}. The surface profile obtained with 3D laser SCM shows the depression depth clearly. \textbf{d}. Depression depth at different acceleration voltages with \pdfpage{15}
+different dwell times. \textbf{e}. Electron dose for each imaging condition. \textbf{f}. Depression depth at different dwell times with different acceleration voltages. \textbf{g}. Electron dose for each imaging condition. Electron dose rate (e\textsuperscript{-} nm\textsuperscript{-2} µs\textsuperscript{-1}) is shown at right of each acceleration voltage.
+
+\alttext{\textbf{a} Grid of 4 × 7 In-lens SE images (title ``In-lens SE'') of mHMS-treated neuropil; columns ``0.8 µsec'' to ``6.4 µsec''; rows (labels at right) ``6 keV'', ``5 keV'', ``4 keV'', ``3 keV'', ``2 keV'', ``1.5 keV'', ``1 keV''; at 3–6 keV the centre of each image shows a dark square (contamination/focus area), not at 1.5 keV; the 1 keV images look washed out (contrast reversal); black scale bar at the lower left. \textbf{b} sET image (``sET'') with a grid of faint squares, columns ``0.8 1.6 3.2 6.4'', rows ``6 keV'' down to ``1 keV''. \textbf{c} SCM colour map (``3D laser SCM'') of the grid with depths printed in the squares: 6 keV ``-173'', ``-241'', ``-242'', ``-252''; 5 keV ``-176'', ``-185'', ``-205'', ``-224''; 4 keV ``-82'', ``-139'', ``-123'', ``-160''; 3 keV ``-53'', ``-95'', ``-63'', ``-91''; 2 keV ``-39'', ``-45'', ``-47'', ``-60''; 1.5 keV ``-29'', ``-38'', ``-38'', ``-50''; 1 keV ``-17'', ``-25'', ``-24'', ``-32'' (small, read from the 150 ppi image); vertical colour bar ``depth (nm)'' (black at the top through blue, cyan, green, yellow to orange-red) labelled ``-480'', ``-400'', ``-200'', ``0''. \textbf{d} As Supplementary Fig.~4d, points at 1, 1.5, 2, 3, 4, 5, 6 keV: 6.4 µsec from about −34 to −255 nm, 3.2 µsec −26 to −244, 1.6 µsec (hidden at 1–2 keV) −101, −141, −187, about −237 at 3–6 keV, 0.8 µsec −17, −29, −40, −54, −84, then a plateau at about −176/−175 nm at 5–6 keV. \textbf{e} ``Electron dose (ke\textsuperscript{-} nm\textsuperscript{-2})'' 0–6 against ``Acceleration voltage (keV)'': all series below 1.2 (6.4 µs about 0.80→1.14, 3.2 µs 0.39→0.55, 1.6 µs 0.17→0.26, 0.8 µs about 0.05–0.1, partly hidden). \textbf{f} Seven series against dwell time, ``P<0.01'' printed; values at 0.8, 1.6, 3.2, 6.4 µs: 1 keV −17, −24, −23, −32; 1.5 keV −28, −36, −38, −49; 2 keV −40, −45, −47, −61; 3 keV −54, −95, −63, −92; 4 keV −83, −138, −124, −160; 5 keV about −181, −185, −206, −225; 6 keV −175, −240, −242, −253 nm. \textbf{g} Legend ``1 keV 133.8'', ``1.5 keV 139.4'', ``2 keV 144.9'', ``3 keV 155.8'', ``4 keV 166.3'', ``5 keV 177.1'', ``6 keV 187.6''; all lines overlap, rising from about 0.15 at 0.8 µs to about 0.8–1.2 at 6.4 µs.}
+\figuredata{c}{figures/sfig5c.csv}{figures/sfig5c.py}{tier 3, calibrated colour map by hue through the colour bar; approximate}
+\figuredata{d}{figures/sfig5d.csv}{figures/sfig5d.py}{tier 3, digitized, about ±1.5–3 nm}
+\figuredata{e}{figures/sfig5e.csv}{figures/sfig5e.py}{tier 3, digitized, about ±0.035–0.07; 0.8 µs markers partly hidden}
+\figuredata{f}{figures/sfig5f.csv}{figures/sfig5f.py}{tier 3, digitized, about ±1.5–3 nm}
+\figuredata{g}{figures/sfig5g.csv}{figures/sfig5g.py}{tier 3, digitized; most markers hidden, only 6 keV complete}
+
+\pdfpage{16}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig6.png}
+\end{center}
+\noindent Supplementary Figure 6\\
+The CNT tape surface is almost uniform and CNTs are observed and transparently seen under some imaging conditions.
+
+\textbf{a}. Surface structure of the CNT tape imaged with an In-lens SE detector in Sigma SEM. Only thick CNTs are observed (arrows). \textbf{b}. Surface structure of the CNT tape imaged with a BSD in Sigma SEM. \textbf{c}. Surface structure of the CNT tape imaged using In-lens SE detector with the stage bias potential in Gemini SEM. Many CNTs are observed (arrows). \textbf{d}. Surface structure of the CNT tape (left half) and brain tissue image from a 50 nm thick section on the tape (right half) captured with OnPoint-BSD in Gemini SEM. CNTs are observed in low contrast (arrows). \textbf{e}. Surface structure of the CNT tape (bottom half) and brain tissue image from a 50 nm thick section on the tape (upper left) captured with MultiSEM. CNTs are observed only on the surface of the tape (arrows). \textbf{f}. Brain tissue image from a 25 nm thick section prepared according to Hua et al. \textsuperscript{9} collected on CNT tape and captured with a 61 beam MultiSEM. CNTs are translucently observed in the tissue (arrows). Scale in (\textbf{b}), 2 µm, is also for (\textbf{a, c-f}).
+
+\alttext{Six SEM images of the CNT tape surface (and tissue), each with a title and an acquisition line below. \textbf{a} ``InLens SE/Sigma'', ``3keV, 3nm pix\textsuperscript{-1}, 6.4µsec, 30 µm ap, 7.84mm wd'': mottled grey surface; two arrows point to a thin dark line (a CNT) crossing horizontally. \textbf{b} ``BSE/Sigma'', ``5keV, 3nm pix\textsuperscript{-1}, 3.2µsec, 60 µm ap, 7.80mm wd'': uniform grainy grey, no CNTs visible; black scale bar at the lower left. \textbf{c} ``InLens SE/Gemini'', ``1.5keV, 3nm pix\textsuperscript{-1}, 3.2µsec, 30 µm ap, 4.69 mm wd'': many thin curved fibres (CNTs) over the surface, arrows. \textbf{d} ``OnPoint-BSE/Gemini'', ``1.5keV, 2.2 nm pix\textsuperscript{-1}, 3.2µsec, 30 µm ap, 4.69 mm wd'': left half bare tape with faint fibres (arrows), right half neuropil from a 50 nm section. \textbf{e} ``50 nm/MultiSEM'', ``1.5keV*, 4nm pix\textsuperscript{-1}, 0.1µsec, \textasciitilde{}570pA, 1.4 mm wd'': upper left pale tissue, lower and right part darker bare tape with fibres (arrows). \textbf{f} ``25 nm/MultiSEM'', same acquisition line: tissue from a 25 nm section with fibres visible through it (arrows).}
+
+
+\pdfpage{17}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig7.png}
+\end{center}
+\noindent Supplementary Figure 7\\
+Surface irregularities of the cc-Kapton tape have a slightly adverse effect on image quality.
+
+\textbf{a}. Tissue image captured with In-lens SE detector, \textbf{b}. with BSD, \textbf{c}. with sET, \textbf{d}. with 3D laser SCM. Some part of the tissue section show bumps presumably caused by small carbon particle balls (arrows in d), which are seen in image obtained with In-lens SE detector (\textbf{a}) and sET (\textbf{c}), but not with BSD (\textbf{b}). \textbf{e}. Bumps in the different part of the cc-Kapton tape captured with sET.  Scale in (\textbf{e}), 10 µm, is also for (\textbf{a-d})).
+
+\alttext{Five images of the same region of a tissue section on cc-Kapton tape. \textbf{a} ``In-lens SE'', \textbf{b} ``BSD'', \textbf{c} ``sET'': neuropil with oblique pale bands, crossed by a long thin dark (\textbf{a}, \textbf{b}) or bright (\textbf{c}) curved line near the bottom; a round bump is visible near the bottom left in \textbf{a} (dark ring) and \textbf{c} (bright halo) but not in \textbf{b}. \textbf{d} ``3D laser SCM'' colour map, green-blue surface with dark-red round bumps marked by three arrows (largest at the bottom); vertical colour bar ``depth'' labelled ``0'' to ``800 nm'' (0, 200, 400, 600, 800). \textbf{e} ``cc-Kapton tape'': sET image of the bare tape with a raised bump (bright crescent) and a few small particles; black scale bar at the lower right.}
+\figuredata{d}{figures/sfig7d.csv}{figures/sfig7d.py}{tier 3, calibrated colour map by hue; heights above about 400 nm (red plateau of the bar) not resolved}
+
+\pdfpage{18}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig8.png}
+\end{center}
+\noindent Supplementary Figure 8\\
+Stitching image tiles can be done without any noticeable gap or seam.
+
+\textbf{a-d.} Tile images (2 x 2) of the mHMS ultrathin section of cortex captured with BSD for 3.2 µs dwell time, 3 nm pixel\textsuperscript{-1}, 60 nm aperture at 5 keV, 2.8 ke\textsuperscript{-} nm\textsuperscript{-2} electron. \textbf{e.} Stitched tiles. Scale, 5 µm, is for (\textbf{a-d}). \textbf{f.} Enlarged image of rectangle in e shows possible seams (red arrows). No noticeable seams are observed. Scale. 1 µm.
+
+\alttext{\textbf{a}–\textbf{d} Four SEM tiles (2 × 2) of mHMS neuropil, labels ``BSD, 5 keV, 3 nm pixel\textsuperscript{-1}'' and ``4k x 4k image size''. \textbf{e} ``Stitched image'' of the four tiles with no visible seams; a green rectangle in the centre marks \textbf{f}; black scale bar. \textbf{f} Enlarged area across the tile borders, red arrowheads at the top/bottom and on both sides marking where the seams would be; the tissue is continuous; black scale bar.}
+
+
+\pdfpage{19}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig9.png}
+\end{center}
+\noindent Supplementary Figure 9\\
+Interaction volume of primary and BSEs for different acceleration voltages can be estimated with electron tracks by Monte Carlo simulation
+
+\textbf{a.} Image of an ultrathin section of mHMS-treated brain tissue on open reel tape captured with In-lens SE detector at different acceleration voltages (\textbf{a}. 1 keV - \textbf{k}. 6 keV). Scale, 1 µm, is also for (\textbf{d}). \textbf{b.} Monte Carlo simulation. Blue lines show primary \pdfpage{20}
+(absorbed) electron tracks and red lines show BSE tracks with different acceleration voltages. \textbf{c.} Estimated numbers of the electrons in different acceleration voltages found at different depth. \textbf{d.} Image of an ultrathin section of mHMS-treated brain tissue on open reel tape captured with BSD at different acceleration voltages (\textbf{a}. 1 keV - \textbf{k}. 6 keV).  BSE: backscattered electron, PE: primary electron.
+
+\alttext{\textbf{a} Title ``Electron micrographs of cortex on the open reel tape with In-lens SE'': eleven small SEM images labelled ``1 keV'' to ``6 keV'' in 0.5 keV steps showing the same profile (a dark curved membrane-bounded process); at 1 keV the tissue is clear, from 1.5 keV upwards dark streaks (magnetic particles) increasingly cover the image; scale bar at the lower right of the 6 keV image. \textbf{b} Title ``Electron trajectry of the Monte Carlo simulation (electrons = 3,000)'': eleven simulated trajectory plots, ``1 keV'' to ``6 keV'', depth axis ``depth (nm)'' 0–600 (top row) and 0–1200 (bottom row), lateral axis ``0'' to ``600 nm'' (``1200 nm'' for 6 keV); blue tracks (key ``primary (absorbed) electron'') form a pear-shaped volume growing from a few tens of nm at 1 keV to about 1,200 nm deep at 6 keV, with red tracks (key ``backscattered electron'') near the surface. \textbf{c} Title ``Estimated numbers of the electrons found at different depths by the Monte Carlo simulation'', two line plots with ``depth (nm)'' on y: ``Backscattered electrons'' (y 0 to −500; top x axis 0, 50, 100, 150, 200, broken ``//'' to 3000; a grey line at −50 labelled ``50 nm'') and ``Primary (absorbed) electrons'' (y 0 to −1400; x 0–3000); legend 1 keV red solid, 1.5 keV red dashed, 2/2.5 keV blue, 3/3.5 keV orange, 4/4.5 keV purple, 5/5.5 keV magenta (solid/dashed), 6 keV black; each curve runs from its deepest point near the y axis up to high counts at depth 0; approximate deepest points for 1, 2, 3, 4, 5, 6 keV: backscattered about −30, −90, −180, −250, −480, −520 nm; primary about −70, −200, −400, −650, −1000, −1380 nm. \textbf{d} Title ``Electron micrographs of cortex on the open reel tape with In-lens BSD'': eleven BSD images ``1 keV'' to ``6 keV''; the profile is pale and low in contrast at 1–2 keV, sharpest around 3–3.5 keV, and streak noise appears at higher voltages.}
+\figuredata{c}{figures/sfig9c.csv}{figures/sfig9c.py}{tier 3, digitized (approximate): solid curves traced per pixel row, dashed curves as dash centroids; curve tops partly missing or mis-assigned (see CSV header)}
+
+\pdfpage{21}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig10.png}
+\end{center}
+\noindent Supplementary Figure 10\\
+High-resolution brain tissue image made with the TOLA protocol and lead citrate section staining captured using a BSD optimized for low accelerating voltage (OnPoint BSD, Gatan Inc.) with 3.2 µs dwell time, 1 nm pixel\textsuperscript{-1}, 5 mm working distance, 30 µm aperture at 1.5 keV. Scale, 2 µm.
+
+\alttext{A single SEM image (BSD, TOLA + lead citrate) of neuropil at high resolution: grey cytoplasm, thin dark membranes, mitochondria with visible cristae, vesicle-filled boutons and a few myelinated axons (right); black scale bar at the lower right (2 µm per the legend).}
+
+
+\pdfpage{22}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig11.png}
+\end{center}
+\noindent Supplementary Figure 11\\
+Image quality varies with different acceleration voltage strengths and dwell times using a MultiSEM.
+
+The images were taken from a 35 nm-thick section of \emph{en-bloc} stained cortical mouse brain tissue at a pixel size of 4 nm. Scale, 1 µm.
+
+\alttext{Five MultiSEM image crops of neuropil, titled ``1.5 keV, 200 ns'' (top), ``1.5 keV, 100 ns'', ``2.2 keV, 100 ns'', ``3.0 keV, 100 ns'' (middle row) and ``1.5 keV, 50 ns'' (bottom); all show membranes, vesicles and mitochondria, the 50 ns image being noisier; black scale bar in the ``1.5 keV, 100 ns'' crop.}
+
+
+\pdfpage{23}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig12.png}
+\end{center}
+\noindent Supplementary Figure 12\\
+Multiple exposures in the MultiSEM do not greatly affect image quality
+
+The images were taken from a 35 nm-thick section of \emph{en-bloc} stained cortical mouse brain tissue using an acceleration voltage of 1.5 keV, a pixel size of 4 nm and a pixel dwell time of 100 ns. The number on the side of the image indicates instances of repeated imaging. Scale, 1 µm. wd, working distance; dt, dwell time.
+
+\alttext{Title ``Repeated images with MSEM'': ten crops of the same neuropil region, numbered 1, 2, 3, 4, 5 (left column) and 10, 15, 20, 25, 30 (right column) for the imaging instance; they look alike (no visible degradation). Line below: ``1.5 keV*, 4 nm pixel\textsuperscript{-1}, 0.1 µsec dt, \textasciitilde{}570 pA, 1.4 mm wd, 35 nm thick section''; black scale bar at the lower right.}
+
+
+\pdfpage{24}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/sfig13.png}
+\end{center}
+\noindent Supplementary Figure 13\\
+Sketch of the reel-to-reel motorized winder for plasma discharge treatment. The unit of the numerical value is mm.
+
+\alttext{Dimensioned engineering drawing (mm) of the reel-to-reel winder, top view (above) and front view (below). Top view: base plate 400 × 150; component positions from the left edge 50, 60 (first reel support, 175), 265 (motor block ``motor'', 50 wide), 330/35/7/16 (torch slot posts), 60 (right reel); offsets 80, 200, 280, 360 to the reel, motor, slot and right-reel axes; other dimensions 59, 41.5, 65, 110, 15, 25, 20, 25, 57, 282 (gap between reel discs, as printed). Front view: horizontal spacings 80, 120, 80, 80, 40 between axes; left reel discs ϕ160 and ϕ75 on a support of height 90; drive wheel ϕ75 and ϕ40 at 50 height; torch post height 105, width 25; right reel ϕ75 and ϕ32 at 50; base thickness 10; bottom dimension chain 50, 60, 175, 265, 50, 335, 25, 400, 50.}
+
+
+\pdfpage{25}
+\noindent Supplementary Tables
+
+\noindent\textbf{Supplementary Table 1 \quad Specification of Tapes}
+
+{\scriptsize\setlength{\tabcolsep}{2pt}
+\begin{longtable}{p{1.0cm}p{1.1cm}p{1.4cm}p{0.8cm}p{1.0cm}p{0.9cm}p{1.5cm}p{1.3cm}p{1.1cm}>{\raggedright\arraybackslash}p{3.6cm}}
+\toprule
+Tape material & Coated material & Company & Thickness (µm) & \multicolumn{3}{c}{Commercial product} & Sheet resistance & Total light transmission & URL \\
+ & & & & Tape (8mm width) & Film & Product name & (Ω □\textsuperscript{-1}) & (\%) & \\ \midrule
+Kapton HN & none & DuPont & 50 & n/a & available & Kapton HN & 1x10\textsuperscript{16} & 72.2 & \url{http://www.dupont.com/products-and-services/membranes-films/polyimide-films/brands/kapton-polyimide-film.html/} \\
+Kapton HN & carbon & RMC Boeckeler & 50 & available & none &  & 19.2/107\newline 6,530x10\textsuperscript{6} & 47.9 & \url{http://www.rmcboeckeler.com} \\
+Kapton HN & germanium & Sheldahl & 50 & n/a & available & IP\# C903907-1 & n/a & none & \url{http://www.sheldahl.com/default.aspx} \\
+Copper foil & none & Takeuchi Metal Foil \& Powder & 20 & n/a & available &  & 0.1 & none & \url{http://www.etakeuchi.co.jp} \\
+Copper foil & none & Takeuchi Metal Foil \& Powder & 40 & n/a & available &  & 0.1 & none & \url{http://www.etakeuchi.co.jp} \\
+Open reel & magnetic crystals & EMG International & 50 & available & n/a & Studio Master SM911 1/4 inch width & n/a & none & \url{www.rmgi.nl} http://www.recordingdataservice.com/default.asp \\
+PET & ITO & TDK & 53 & n/a & available & Fleclear & 155 & 90.1 & \url{http://www.tdk.co.jp/index.htm} \\
+PET & ITO & Teijin & 50 & n/a & available & Eleclear & 150 & 89.6 & \url{https://www.teijin.com} \\
+PET & CNT & Toray & 50 & n/a & not on sale &  & 240/500 & 88.4 & \url{http://www.toray.com} \\
+PET & CNT & Teijin & 50 & n/a & not on sale &  & 800/1,000 & 86.2 & \url{https://www.teijin.com} commercially available by RMC in 2018 \\
+\bottomrule
+\end{longtable}}
+\decompnote{Supplementary Tables 1--3 are printed as images (no text layer); transcribed from the images. Merged cells of Table 1 are repeated on each row. Also as tables/stable1.csv, stable2.csv, stable3.csv.}
+
+\noindent\textbf{Supplementary Table 2 \quad Depth of the electrons reached and signal efficiency for a 50 nm thick section}
+
+{\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrrrrrrrr}
+\toprule
+\multicolumn{2}{l}{Acceleration voltage} & 1 & 1.5 & 2 & 2.5 & 3 & 3.5 & 4 & 4.5 & 5 & 5.5 & 6 \\ \midrule
+DER (nm) & BSE & -25 & -53 & -89 & -130 & -173 & -217 & -274 & -293 & -474 & -517 & -504 \\
+ & PE & -70 & -137 & -206 & -301 & -467 & -570 & -763 & -897 & -1016 & 1231 & -1375 \\
+\multicolumn{2}{l}{SEF50 (\%)} & 100.0 & 99.5 & 83.0 & 57.4 & 40.4 & 30.3 & 15.7 & 18.9 & 14.8 & 12.8 & 9.8 \\ \bottomrule
+\end{tabular}}
+
+\noindent DER: Depth of the electrons reached; BSE: backscattered electron; PE: Primary electron\\
+SEF50: Signal efficiency for a 50 nm thick section
+\decompnote{PE at 5.5 is printed ``1231'' without a minus sign.}
+
+\noindent\textbf{Supplementary Table 3 \quad Michelson contrast and Contrast-to-noise ratio}
+
+{\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Detector & \multicolumn{6}{c}{BSE} \\ \midrule
+Acceleration voltage (keV) & 2 & 3 & 4 & 5 & 6 & 7 \\
+Michelson contrast & 0.277 & 0.374 & 0.376 & 0.272 & 0.302 & 0.273 \\
+Contrast-to-noise ratio & 0.144 & 0.209 & 0.208 & 0.211 & 0.199 & 0.193 \\ \midrule
+Detector & \multicolumn{6}{c}{In-Lens SE} \\ \midrule
+Acceleration voltage (keV) & 1 & 1.5 & 2 & 3 & 4 & 5 \\
+Michelson contrast & 0.156 & 0.231 & 0.246 & 0.211 & 0.180 & 0.168 \\
+Contrast-to-noise ratio & 0.145 & 0.202 & 0.219 & 0.195 & 0.161 & 0.141 \\ \bottomrule
+\end{tabular}}
+
+
+\pdfpage{26}
+\noindent\textbf{Supplementary References}
+
+\begin{hangpars}
+1 Hayworth, K. J., Kasthuri, N., Schalek, R. \& Lichtman, J. W. Automating the collection of ultrathin serial sections for large volume TEM reconstructions. \emph{Microsc Microanal} \textbf{13}, 86-87 (2006).
+
+2 Kasthuri, N. \emph{et al.} Saturated Reconstruction of a Volume of Neocortex. \emph{Cell} \textbf{162}, 648-661 (2015).\localcopy{kasthuri2015}
+
+3 Mikuni, T., Nishiyama, J., Sun, Y., Kamasawa, N. \& Yasuda, R. High-Throughput, High-Resolution Mapping of Protein Localization in Mammalian Brain by In Vivo Genome Editing. \emph{Cell} \textbf{165}, 1803-1817 (2016).
+
+4 Drouin, D. \emph{et al.} CASINO V2.48: a fast and easy-to-use modeling tool for scanning electron microscopy and microanalysis users. \emph{Scanning} \textbf{29}, 92-101 (2007).
+
+5 Reimer, L. \emph{Image Formation in Low-Voltage Scanning Electron Microscopy}.  2-3 (SPIE Press, 1993).
+
+6 Scipioni, R. \emph{et al.} Electron microscopy investigations of changes in morphology and conductivity of LiFePO4/C electrodes. \emph{J Power Sources} \textbf{307}, 259-269 (2016).
+
+7 Bouwer, J. C. \emph{et al.} Deceleration of probe beam by stage bias potential improves resolution of serial block-face scanning electron microscopic images. \emph{Adv Struct} \emph{Chem Imaging} \textbf{2}, 11 (2017).
+
+8 Ohta, K. \emph{et al.} Beam deceleration for block-face scanning electron microscopy of embedded biological tissue. \emph{Micron} \textbf{43}, 612-620 (2012).
+
+9 Hua, Y., Laserstein, P. \& Helmstaedter, M. Large-volume \emph{en-bloc} staining for electron microscopy-based connectomics. \emph{Nat Commun} \textbf{6}, 7923 (2015).\localcopy{hua2015}
+\end{hangpars}
+
+
+\sourcefile{41467\_2017\_2768\_MOESM3\_ESM.pdf}
+\decompnote{Separate one-page file listing the supplementary files.}
+
+\pdfpage{1}
+\noindent\textbf{Description of Supplementary Files}
+
+\noindent File Name: Supplementary Movie 1\\
+Description: Serial ultrathin section images with GABA post-embedding immunoreaction stained with 15nm colloidal gold particles of rat frontal cortex.
+\decompnote{Supplementary Movie 1 (MOESM4, mp4) was not fetched; it is not in the source folder.}
+
+\end{document}

@@ -1,0 +1,25 @@
+# Sun & Gamstedt 2019, Nanomanuf Metrol 2:45-55, Fig. 3: chip thickness and shear plane angle as a function of
+#   the cutting thickness.
+# Columns: series (paper's labels: 'chip thickness' = filled circles, solid line, left axis; 'shear plane angle' =
+#   filled squares, dashed line, right axis); cutting_thickness_nm = printed category label of the x axis;
+#   category_index = position on the x axis (0..5, evenly spaced; the axis is a category axis, NOT to scale);
+#   value = chip thickness in nm or shear plane angle in degrees.
+# Provenance: tier 3, digitized from the embedded 300 ppi greyscale raster (no vector data in the PDF) by
+#   fig3_extract.py: frame and tick marks located in the image, linear fit per y axis on the ticks and frame
+#   (left axis residual 0.44 nm, right axis 0.037 deg); marker centres from connected components
+#   after a 9 px morphological opening that removes lines and text.
+# Uncertainty: about +-1.2 nm (left) and +-0.08 deg (right), i.e. 2 px; +-1.5 px more for
+#   the two overlapping markers at 140 nm (centres from their outer edges, see note).
+series,cutting_thickness_nm,category_index,value,note
+chip thickness,60,0,80.49,
+chip thickness,85,1,101.86,
+chip thickness,110,2,134.70,
+chip thickness,140,3,175.09,marker partly covered by the square; centre from its top edge
+chip thickness,170,4,214.59,
+chip thickness,200,5,240.31,
+shear plane angle,60,0,47.32,
+shear plane angle,85,1,53.96,
+shear plane angle,110,2,52.68,
+shear plane angle,140,3,51.31,overlaps the circle; centre from its bottom edge
+shear plane angle,170,4,50.92,
+shear plane angle,200,5,53.72,

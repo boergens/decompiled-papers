@@ -1,0 +1,1845 @@
+# Kubota et al. 2018 Nat Commun 9:437, Fig. 6f: intensity histograms of the images in Fig. 6d (In-lens SE, 3 nm pixel^-1, 7354 x 7494 pixel images),
+#   one sub-panel per acceleration voltage (main PDF p. 10). The sub-panels carry no keV labels of their own;
+#   the kev column gives the voltage of the image above each, i.e. the column order of Fig. 6d.
+# Columns: kev; gray_value (x axis 'Gray scale', 0-255); counts = top of the filled histogram in this pixel column,
+#   in the units of the y axis 'Counts' as labelled (0-2.5 / 0-3.0; no multiplier is printed, so the absolute
+#   scale of the counts is not known). One row per pixel column (~2 per gray value).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector plot paths in the PDF) by
+#   fig6cf_extract.py: top edge of the black fill per pixel column. y calibrated per sub-panel on its own tick
+#   marks and axis line (the image row is tilted by ~3 px over its width), with the values of the PDF-text labels
+#   of the first sub-panel (0-3; 0 = the axis line) in the same order. Per sub-panel:
+#   sub-panel 1 (1 keV): axis rows 295-297; y on 7 ticks, max residual 0.006; x on 7 labelled ticks 0-240, max residual 0.53; axis line ends at gray value 253.8
+#   sub-panel 2 (1.5 keV): axis rows 295-297; y on 7 ticks, max residual 0.006; x on 7 labelled ticks 0-240, max residual 0.38; axis line ends at gray value 249.5
+#   sub-panel 3 (2 keV): axis rows 296-298; y on 7 ticks, max residual 0.005; x on 7 labelled ticks 0-240, max residual 0.34; axis line ends at gray value 254.5
+#   sub-panel 4 (3 keV): axis rows 296-298; y on 7 ticks, max residual 0.008; x on 7 labelled ticks 0-240, max residual 0.39; axis line ends at gray value 249.3
+#   sub-panel 5 (4 keV): axis rows 296-297; y on 7 ticks, max residual 0.006; x on 7 labelled ticks 0-240, max residual 0.62; axis line ends at gray value 250.4
+#   sub-panel 6 (5 keV): axis rows 296-297; y on 7 ticks, max residual 0.006; x on 7 labelled ticks 0-240, max residual 0.41; axis line ends at gray value 254.0
+# Uncertainty: about +-0.025 in counts and +-1.7 gray values (2 px).
+# The authors' histogram data are named in the paper (ref. 70, Kubota, 'Electron micrographs and raw data for the
+#   signal intensity histograms', figshare) but were not available here.
+kev,gray_value,counts,flag
+1,0.92,0.0000,no fill above the axis line
+1,1.75,0.0000,no fill above the axis line
+1,2.58,0.0000,no fill above the axis line
+1,3.41,0.0000,no fill above the axis line
+1,4.24,0.0000,no fill above the axis line
+1,5.06,0.0000,no fill above the axis line
+1,5.89,0.0000,no fill above the axis line
+1,6.72,0.0000,no fill above the axis line
+1,7.55,0.0000,no fill above the axis line
+1,8.38,0.0000,no fill above the axis line
+1,9.21,0.0000,no fill above the axis line
+1,10.04,0.0000,no fill above the axis line
+1,10.87,0.0000,no fill above the axis line
+1,11.70,0.0000,no fill above the axis line
+1,12.53,0.0000,no fill above the axis line
+1,13.35,0.0000,no fill above the axis line
+1,14.18,0.0000,no fill above the axis line
+1,15.01,0.0000,no fill above the axis line
+1,15.84,0.0000,no fill above the axis line
+1,16.67,0.0000,no fill above the axis line
+1,17.50,0.0000,no fill above the axis line
+1,18.33,0.0000,no fill above the axis line
+1,19.16,0.0000,no fill above the axis line
+1,19.99,0.0000,no fill above the axis line
+1,20.82,0.0000,no fill above the axis line
+1,21.64,0.0000,no fill above the axis line
+1,22.47,0.0000,no fill above the axis line
+1,23.30,0.0000,no fill above the axis line
+1,24.13,0.0000,no fill above the axis line
+1,24.96,0.0000,no fill above the axis line
+1,25.79,0.0000,no fill above the axis line
+1,26.62,0.0000,no fill above the axis line
+1,27.45,0.0000,no fill above the axis line
+1,28.28,0.0000,no fill above the axis line
+1,29.11,0.0000,no fill above the axis line
+1,29.93,0.0000,no fill above the axis line
+1,30.76,0.0000,no fill above the axis line
+1,31.59,0.0000,no fill above the axis line
+1,32.42,0.0000,no fill above the axis line
+1,33.25,0.0000,no fill above the axis line
+1,34.08,0.0000,no fill above the axis line
+1,34.91,0.0000,no fill above the axis line
+1,35.74,0.0000,no fill above the axis line
+1,36.57,0.0000,no fill above the axis line
+1,37.40,0.0000,no fill above the axis line
+1,38.22,0.0000,no fill above the axis line
+1,39.05,0.0000,no fill above the axis line
+1,39.88,0.0000,no fill above the axis line
+1,40.71,0.0000,no fill above the axis line
+1,41.54,0.0000,no fill above the axis line
+1,42.37,0.0000,no fill above the axis line
+1,43.20,0.0000,no fill above the axis line
+1,44.03,0.0000,no fill above the axis line
+1,44.86,0.0000,no fill above the axis line
+1,45.69,0.0000,no fill above the axis line
+1,46.51,0.0000,no fill above the axis line
+1,47.34,0.0000,no fill above the axis line
+1,48.17,0.0000,no fill above the axis line
+1,49.00,0.0000,no fill above the axis line
+1,49.83,0.0000,no fill above the axis line
+1,50.66,0.0000,no fill above the axis line
+1,51.49,0.0000,no fill above the axis line
+1,52.32,0.0000,no fill above the axis line
+1,53.15,0.0000,no fill above the axis line
+1,53.98,0.0000,no fill above the axis line
+1,54.80,0.0000,no fill above the axis line
+1,55.63,0.0000,no fill above the axis line
+1,56.46,0.0000,no fill above the axis line
+1,57.29,0.0000,no fill above the axis line
+1,58.12,0.0000,no fill above the axis line
+1,58.95,0.0000,no fill above the axis line
+1,59.78,0.0000,no fill above the axis line
+1,60.61,0.0000,no fill above the axis line
+1,61.44,0.0000,no fill above the axis line
+1,62.27,0.0000,no fill above the axis line
+1,63.09,0.0000,no fill above the axis line
+1,63.92,0.0000,no fill above the axis line
+1,64.75,0.0000,no fill above the axis line
+1,65.58,0.0000,no fill above the axis line
+1,66.41,0.0000,no fill above the axis line
+1,67.24,0.0000,no fill above the axis line
+1,68.07,0.0000,no fill above the axis line
+1,68.90,0.0000,no fill above the axis line
+1,69.73,0.0000,no fill above the axis line
+1,70.56,0.0000,no fill above the axis line
+1,71.38,0.0000,no fill above the axis line
+1,72.21,0.0000,no fill above the axis line
+1,73.04,0.0000,no fill above the axis line
+1,73.87,0.0000,no fill above the axis line
+1,74.70,0.0000,no fill above the axis line
+1,75.53,0.0000,no fill above the axis line
+1,76.36,0.0000,no fill above the axis line
+1,77.19,0.0000,no fill above the axis line
+1,78.02,0.0000,no fill above the axis line
+1,78.85,0.0000,no fill above the axis line
+1,79.68,0.0000,no fill above the axis line
+1,80.50,0.0000,no fill above the axis line
+1,81.33,0.0000,no fill above the axis line
+1,82.16,0.0000,no fill above the axis line
+1,82.99,0.0000,no fill above the axis line
+1,83.82,0.0000,no fill above the axis line
+1,84.65,0.0000,no fill above the axis line
+1,85.48,0.0000,no fill above the axis line
+1,86.31,0.0000,no fill above the axis line
+1,87.14,0.0000,no fill above the axis line
+1,87.97,0.0000,no fill above the axis line
+1,88.79,0.0000,no fill above the axis line
+1,89.62,0.0000,no fill above the axis line
+1,90.45,0.0000,no fill above the axis line
+1,91.28,0.0000,no fill above the axis line
+1,92.11,0.0000,no fill above the axis line
+1,92.94,0.0000,no fill above the axis line
+1,93.77,0.0000,no fill above the axis line
+1,94.60,0.0000,no fill above the axis line
+1,95.43,0.0000,no fill above the axis line
+1,96.26,0.0000,no fill above the axis line
+1,97.08,0.0000,no fill above the axis line
+1,97.91,0.0000,no fill above the axis line
+1,98.74,0.0000,no fill above the axis line
+1,99.57,0.0000,no fill above the axis line
+1,100.40,0.0000,no fill above the axis line
+1,101.23,0.0000,no fill above the axis line
+1,102.06,0.0000,no fill above the axis line
+1,102.89,0.0000,no fill above the axis line
+1,103.72,0.0000,no fill above the axis line
+1,104.55,0.0000,no fill above the axis line
+1,105.37,0.0000,no fill above the axis line
+1,106.20,0.0000,no fill above the axis line
+1,107.03,0.0000,no fill above the axis line
+1,107.86,0.0000,no fill above the axis line
+1,108.69,0.0000,no fill above the axis line
+1,109.52,0.0000,no fill above the axis line
+1,110.35,0.0000,no fill above the axis line
+1,111.18,0.0000,no fill above the axis line
+1,112.01,0.0000,no fill above the axis line
+1,112.84,0.0000,no fill above the axis line
+1,113.66,0.0000,no fill above the axis line
+1,114.49,0.0000,no fill above the axis line
+1,115.32,0.0000,no fill above the axis line
+1,116.15,0.0000,no fill above the axis line
+1,116.98,0.0000,no fill above the axis line
+1,117.81,0.0000,no fill above the axis line
+1,118.64,0.0000,no fill above the axis line
+1,119.47,0.0000,no fill above the axis line
+1,120.30,0.0000,no fill above the axis line
+1,121.13,0.0000,no fill above the axis line
+1,121.95,0.0000,no fill above the axis line
+1,122.78,0.0000,no fill above the axis line
+1,123.61,0.0000,no fill above the axis line
+1,124.44,0.0000,no fill above the axis line
+1,125.27,0.0000,no fill above the axis line
+1,126.10,0.0000,no fill above the axis line
+1,126.93,0.0000,no fill above the axis line
+1,127.76,0.0000,no fill above the axis line
+1,128.59,0.0000,no fill above the axis line
+1,129.42,0.0000,no fill above the axis line
+1,130.24,0.0000,no fill above the axis line
+1,131.07,0.0000,no fill above the axis line
+1,131.90,0.0000,no fill above the axis line
+1,132.73,0.0355,
+1,133.56,0.0355,
+1,134.39,0.0000,no fill above the axis line
+1,135.22,0.0355,
+1,136.05,0.0480,
+1,136.88,0.0480,
+1,137.71,0.0604,
+1,138.53,0.0604,
+1,139.36,0.0728,
+1,140.19,0.0728,
+1,141.02,0.0728,
+1,141.85,0.0853,
+1,142.68,0.0977,
+1,143.51,0.0977,
+1,144.34,0.1101,
+1,145.17,0.1226,
+1,146.00,0.1226,
+1,146.82,0.1350,
+1,147.65,0.1474,
+1,148.48,0.1723,
+1,149.31,0.1723,
+1,150.14,0.1847,
+1,150.97,0.2096,
+1,151.80,0.2096,
+1,152.63,0.2220,
+1,153.46,0.2469,
+1,154.29,0.2718,
+1,155.11,0.2842,
+1,155.94,0.2966,
+1,156.77,0.3339,
+1,157.60,0.3588,
+1,158.43,0.3712,
+1,159.26,0.3961,
+1,160.09,0.4210,
+1,160.92,0.4583,
+1,161.75,0.4831,
+1,162.58,0.4956,
+1,163.40,0.5329,
+1,164.23,0.5577,
+1,165.06,0.5950,
+1,165.89,0.6199,
+1,166.72,0.6696,
+1,167.55,0.6821,
+1,168.38,0.7194,
+1,169.21,0.7567,
+1,170.04,0.7940,
+1,170.87,0.8188,
+1,171.69,0.8561,
+1,172.52,0.9059,
+1,173.35,0.9059,
+1,174.18,0.9432,
+1,175.01,0.9929,
+1,175.84,1.0302,
+1,176.67,1.0426,
+1,177.50,1.0924,
+1,178.33,1.1172,
+1,179.16,1.1545,
+1,179.98,1.1794,
+1,180.81,1.2167,
+1,181.64,1.2664,
+1,182.47,1.2664,
+1,183.30,1.2913,
+1,184.13,1.3410,
+1,184.96,1.3659,
+1,185.79,1.3783,
+1,186.62,1.4156,
+1,187.45,1.4405,
+1,188.27,1.4654,
+1,189.10,1.4654,
+1,189.93,1.5027,
+1,190.76,1.5151,
+1,191.59,1.5400,
+1,192.42,1.5648,
+1,193.25,1.5773,
+1,194.08,1.5897,
+1,194.91,1.6021,
+1,195.74,1.6270,
+1,196.56,1.6270,
+1,197.39,1.6394,
+1,198.22,1.6519,
+1,199.05,1.6767,
+1,199.88,1.6767,
+1,200.71,1.6892,
+1,201.54,1.7016,
+1,202.37,1.7016,
+1,203.20,1.7140,
+1,204.03,1.7265,
+1,204.85,1.7265,
+1,205.68,1.7389,
+1,206.51,1.7389,
+1,207.34,1.7513,
+1,208.17,1.7638,
+1,209.00,1.7638,
+1,209.83,1.7762,
+1,210.66,1.7762,
+1,211.49,1.7886,
+1,212.32,1.7886,
+1,213.14,1.8011,
+1,213.97,1.8135,
+1,214.80,1.8259,
+1,215.63,1.8259,
+1,216.46,1.8508,
+1,217.29,1.8632,
+1,218.12,1.8632,
+1,218.95,1.8881,
+1,219.78,1.9130,
+1,220.61,1.9254,
+1,221.43,1.9378,
+1,222.26,1.9503,
+1,223.09,1.9751,
+1,223.92,2.0124,
+1,224.75,2.0249,
+1,225.58,2.0497,
+1,226.41,2.0746,
+1,227.24,2.1119,
+1,228.07,2.1368,
+1,228.90,2.1616,
+1,229.72,2.2114,
+1,230.55,2.2238,
+1,231.38,2.2735,
+1,232.21,2.2984,
+1,233.04,2.3357,
+1,233.87,2.3481,
+1,234.70,2.3979,
+1,235.53,2.4725,
+1,236.36,2.4849,
+1,237.19,2.5346,
+1,238.01,2.5844,
+1,238.84,2.6092,
+1,239.67,2.6217,
+1,240.50,2.6714,
+1,241.33,2.7087,
+1,242.16,2.7211,
+1,242.99,2.7460,
+1,243.82,2.7460,
+1,244.65,2.7460,
+1,245.48,2.7460,
+1,246.30,2.7460,
+1,247.13,2.7087,
+1,247.96,2.6590,
+1,248.79,2.5719,
+1,249.62,2.5595,
+1,250.45,2.4352,
+1,251.28,2.2238,
+1,252.11,1.9378,
+1,252.94,1.5648,
+1,253.77,1.5524,
+1.5,0.28,0.0000,no fill above the axis line
+1.5,1.11,0.0000,no fill above the axis line
+1.5,1.94,0.0000,no fill above the axis line
+1.5,2.77,0.0000,no fill above the axis line
+1.5,3.59,0.0000,no fill above the axis line
+1.5,4.42,0.0000,no fill above the axis line
+1.5,5.25,0.0000,no fill above the axis line
+1.5,6.08,0.0000,no fill above the axis line
+1.5,6.91,0.0000,no fill above the axis line
+1.5,7.73,0.0000,no fill above the axis line
+1.5,8.56,0.0000,no fill above the axis line
+1.5,9.39,0.0000,no fill above the axis line
+1.5,10.22,0.0000,no fill above the axis line
+1.5,11.05,0.0000,no fill above the axis line
+1.5,11.88,0.0000,no fill above the axis line
+1.5,12.70,0.0000,no fill above the axis line
+1.5,13.53,0.0000,no fill above the axis line
+1.5,14.36,0.0000,no fill above the axis line
+1.5,15.19,0.0000,no fill above the axis line
+1.5,16.02,0.0000,no fill above the axis line
+1.5,16.84,0.0000,no fill above the axis line
+1.5,17.67,0.0000,no fill above the axis line
+1.5,18.50,0.0000,no fill above the axis line
+1.5,19.33,0.0000,no fill above the axis line
+1.5,20.16,0.0000,no fill above the axis line
+1.5,20.98,0.0000,no fill above the axis line
+1.5,21.81,0.0000,no fill above the axis line
+1.5,22.64,0.0000,no fill above the axis line
+1.5,23.47,0.0000,no fill above the axis line
+1.5,24.30,0.0000,no fill above the axis line
+1.5,25.12,0.0000,no fill above the axis line
+1.5,25.95,0.0000,no fill above the axis line
+1.5,26.78,0.0000,no fill above the axis line
+1.5,27.61,0.0000,no fill above the axis line
+1.5,28.44,0.0000,no fill above the axis line
+1.5,29.27,0.0000,no fill above the axis line
+1.5,30.09,0.0000,no fill above the axis line
+1.5,30.92,0.0000,no fill above the axis line
+1.5,31.75,0.0000,no fill above the axis line
+1.5,32.58,0.0000,no fill above the axis line
+1.5,33.41,0.0000,no fill above the axis line
+1.5,34.23,0.0000,no fill above the axis line
+1.5,35.06,0.0000,no fill above the axis line
+1.5,35.89,0.0000,no fill above the axis line
+1.5,36.72,0.0000,no fill above the axis line
+1.5,37.55,0.0000,no fill above the axis line
+1.5,38.37,0.0000,no fill above the axis line
+1.5,39.20,0.0000,no fill above the axis line
+1.5,40.03,0.0000,no fill above the axis line
+1.5,40.86,0.0000,no fill above the axis line
+1.5,41.69,0.0000,no fill above the axis line
+1.5,42.51,0.0000,no fill above the axis line
+1.5,43.34,0.0000,no fill above the axis line
+1.5,44.17,0.0000,no fill above the axis line
+1.5,45.00,0.0000,no fill above the axis line
+1.5,45.83,0.0000,no fill above the axis line
+1.5,46.66,0.0000,no fill above the axis line
+1.5,47.48,0.0000,no fill above the axis line
+1.5,48.31,0.0000,no fill above the axis line
+1.5,49.14,0.0000,no fill above the axis line
+1.5,49.97,0.0000,no fill above the axis line
+1.5,50.80,0.0000,no fill above the axis line
+1.5,51.62,0.0000,no fill above the axis line
+1.5,52.45,0.0000,no fill above the axis line
+1.5,53.28,0.0000,no fill above the axis line
+1.5,54.11,0.0000,no fill above the axis line
+1.5,54.94,0.0000,no fill above the axis line
+1.5,55.76,0.0000,no fill above the axis line
+1.5,56.59,0.0000,no fill above the axis line
+1.5,57.42,0.0000,no fill above the axis line
+1.5,58.25,0.0000,no fill above the axis line
+1.5,59.08,0.0000,no fill above the axis line
+1.5,59.90,0.0000,no fill above the axis line
+1.5,60.73,0.0000,no fill above the axis line
+1.5,61.56,0.0000,no fill above the axis line
+1.5,62.39,0.0000,no fill above the axis line
+1.5,63.22,0.0000,no fill above the axis line
+1.5,64.04,0.0000,no fill above the axis line
+1.5,64.87,0.0000,no fill above the axis line
+1.5,65.70,0.0000,no fill above the axis line
+1.5,66.53,0.0000,no fill above the axis line
+1.5,67.36,0.0000,no fill above the axis line
+1.5,68.19,0.0000,no fill above the axis line
+1.5,69.01,0.0000,no fill above the axis line
+1.5,69.84,0.0000,no fill above the axis line
+1.5,70.67,0.0000,no fill above the axis line
+1.5,71.50,0.0000,no fill above the axis line
+1.5,72.33,0.0000,no fill above the axis line
+1.5,73.15,0.0000,no fill above the axis line
+1.5,73.98,0.0000,no fill above the axis line
+1.5,74.81,0.0000,no fill above the axis line
+1.5,75.64,0.0000,no fill above the axis line
+1.5,76.47,0.0000,no fill above the axis line
+1.5,77.29,0.0000,no fill above the axis line
+1.5,78.12,0.0000,no fill above the axis line
+1.5,78.95,0.0000,no fill above the axis line
+1.5,79.78,0.0000,no fill above the axis line
+1.5,80.61,0.0000,no fill above the axis line
+1.5,81.43,0.0000,no fill above the axis line
+1.5,82.26,0.0000,no fill above the axis line
+1.5,83.09,0.0000,no fill above the axis line
+1.5,83.92,0.0000,no fill above the axis line
+1.5,84.75,0.0000,no fill above the axis line
+1.5,85.58,0.0000,no fill above the axis line
+1.5,86.40,0.0000,no fill above the axis line
+1.5,87.23,0.0000,no fill above the axis line
+1.5,88.06,0.0000,no fill above the axis line
+1.5,88.89,0.0000,no fill above the axis line
+1.5,89.72,0.0000,no fill above the axis line
+1.5,90.54,0.0355,
+1.5,91.37,0.0355,
+1.5,92.20,0.0355,
+1.5,93.03,0.0355,
+1.5,93.86,0.0355,
+1.5,94.68,0.0355,
+1.5,95.51,0.0355,
+1.5,96.34,0.0480,
+1.5,97.17,0.0480,
+1.5,98.00,0.0480,
+1.5,98.82,0.0480,
+1.5,99.65,0.0604,
+1.5,100.48,0.0604,
+1.5,101.31,0.0604,
+1.5,102.14,0.0728,
+1.5,102.97,0.0853,
+1.5,103.79,0.0853,
+1.5,104.62,0.0853,
+1.5,105.45,0.0853,
+1.5,106.28,0.0977,
+1.5,107.11,0.0977,
+1.5,107.93,0.1101,
+1.5,108.76,0.1226,
+1.5,109.59,0.1226,
+1.5,110.42,0.1350,
+1.5,111.25,0.1350,
+1.5,112.07,0.1474,
+1.5,112.90,0.1474,
+1.5,113.73,0.1599,
+1.5,114.56,0.1723,
+1.5,115.39,0.1847,
+1.5,116.21,0.1972,
+1.5,117.04,0.2096,
+1.5,117.87,0.2345,
+1.5,118.70,0.2345,
+1.5,119.53,0.2469,
+1.5,120.35,0.2593,
+1.5,121.18,0.2842,
+1.5,122.01,0.2966,
+1.5,122.84,0.3091,
+1.5,123.67,0.3215,
+1.5,124.50,0.3464,
+1.5,125.32,0.3588,
+1.5,126.15,0.3712,
+1.5,126.98,0.3961,
+1.5,127.81,0.3961,
+1.5,128.64,0.4334,
+1.5,129.46,0.4583,
+1.5,130.29,0.4707,
+1.5,131.12,0.4831,
+1.5,131.95,0.5080,
+1.5,132.78,0.5329,
+1.5,133.60,0.5453,
+1.5,134.43,0.5577,
+1.5,135.26,0.5826,
+1.5,136.09,0.6199,
+1.5,136.92,0.6323,
+1.5,137.74,0.6448,
+1.5,138.57,0.6696,
+1.5,139.40,0.6945,
+1.5,140.23,0.7069,
+1.5,141.06,0.7318,
+1.5,141.89,0.7691,
+1.5,142.71,0.7815,
+1.5,143.54,0.7940,
+1.5,144.37,0.8188,
+1.5,145.20,0.8313,
+1.5,146.03,0.8437,
+1.5,146.85,0.8686,
+1.5,147.68,0.8934,
+1.5,148.51,0.9183,
+1.5,149.34,0.9307,
+1.5,150.17,0.9432,
+1.5,150.99,0.9805,
+1.5,151.82,0.9805,
+1.5,152.65,1.0053,
+1.5,153.48,1.0302,
+1.5,154.31,1.0426,
+1.5,155.13,1.0551,
+1.5,155.96,1.0675,
+1.5,156.79,1.0924,
+1.5,157.62,1.0924,
+1.5,158.45,1.0924,
+1.5,159.28,1.1048,
+1.5,160.10,1.1172,
+1.5,160.93,1.1297,
+1.5,161.76,1.1421,
+1.5,162.59,1.1545,
+1.5,163.42,1.1670,
+1.5,164.24,1.1670,
+1.5,165.07,1.1794,
+1.5,165.90,1.1918,
+1.5,166.73,1.1918,
+1.5,167.56,1.2043,
+1.5,168.38,1.2043,
+1.5,169.21,1.2043,
+1.5,170.04,1.2167,
+1.5,170.87,1.2167,
+1.5,171.70,1.2291,
+1.5,172.52,1.2291,
+1.5,173.35,1.2291,
+1.5,174.18,1.2291,
+1.5,175.01,1.2416,
+1.5,175.84,1.2416,
+1.5,176.66,1.2416,
+1.5,177.49,1.2416,
+1.5,178.32,1.2416,
+1.5,179.15,1.2416,
+1.5,179.98,1.2416,
+1.5,180.81,1.2416,
+1.5,181.63,1.2416,
+1.5,182.46,1.2416,
+1.5,183.29,1.2540,
+1.5,184.12,1.2540,
+1.5,184.95,1.2540,
+1.5,185.77,1.2540,
+1.5,186.60,1.2664,
+1.5,187.43,1.2664,
+1.5,188.26,1.2664,
+1.5,189.09,1.2664,
+1.5,189.91,1.2789,
+1.5,190.74,1.2789,
+1.5,191.57,1.2789,
+1.5,192.40,1.2913,
+1.5,193.23,1.2913,
+1.5,194.05,1.2913,
+1.5,194.88,1.3037,
+1.5,195.71,1.3037,
+1.5,196.54,1.3162,
+1.5,197.37,1.3286,
+1.5,198.20,1.3410,
+1.5,199.02,1.3535,
+1.5,199.85,1.3535,
+1.5,200.68,1.3659,
+1.5,201.51,1.3783,
+1.5,202.34,1.3908,
+1.5,203.16,1.4032,
+1.5,203.99,1.4281,
+1.5,204.82,1.4405,
+1.5,205.65,1.4529,
+1.5,206.48,1.4654,
+1.5,207.30,1.4778,
+1.5,208.13,1.5151,
+1.5,208.96,1.5275,
+1.5,209.79,1.5524,
+1.5,210.62,1.5648,
+1.5,211.44,1.5897,
+1.5,212.27,1.6146,
+1.5,213.10,1.6394,
+1.5,213.93,1.6643,
+1.5,214.76,1.6643,
+1.5,215.59,1.7016,
+1.5,216.41,1.7513,
+1.5,217.24,1.7638,
+1.5,218.07,1.7638,
+1.5,218.90,1.8135,
+1.5,219.73,1.8508,
+1.5,220.55,1.8632,
+1.5,221.38,1.8632,
+1.5,222.21,1.8881,
+1.5,223.04,1.9254,
+1.5,223.87,1.9378,
+1.5,224.69,1.9751,
+1.5,225.52,1.9876,
+1.5,226.35,2.0000,
+1.5,227.18,2.0124,
+1.5,228.01,2.0373,
+1.5,228.83,2.0497,
+1.5,229.66,2.0622,
+1.5,230.49,2.0622,
+1.5,231.32,2.0622,
+1.5,232.15,2.0746,
+1.5,232.97,2.0746,
+1.5,233.80,2.0746,
+1.5,234.63,2.0622,
+1.5,235.46,2.0497,
+1.5,236.29,2.0497,
+1.5,237.12,2.0373,
+1.5,237.94,2.0124,
+1.5,238.77,1.9751,
+1.5,239.60,1.9378,
+1.5,240.43,1.8632,
+1.5,241.26,1.7638,
+1.5,242.08,1.6519,
+1.5,242.91,1.6394,
+1.5,243.74,1.4902,
+1.5,244.57,1.3162,
+1.5,245.40,1.1297,
+1.5,246.22,1.1172,
+1.5,247.05,0.9183,
+1.5,247.88,0.5329,
+1.5,248.71,0.5329,
+1.5,249.54,0.3588,
+2,0.96,0.0000,no fill above the axis line
+2,1.79,0.0000,no fill above the axis line
+2,2.62,0.0000,no fill above the axis line
+2,3.45,0.0000,no fill above the axis line
+2,4.28,0.0000,no fill above the axis line
+2,5.11,0.0000,no fill above the axis line
+2,5.93,0.0000,no fill above the axis line
+2,6.76,0.0000,no fill above the axis line
+2,7.59,0.0000,no fill above the axis line
+2,8.42,0.0000,no fill above the axis line
+2,9.25,0.0000,no fill above the axis line
+2,10.08,0.0000,no fill above the axis line
+2,10.91,0.0000,no fill above the axis line
+2,11.74,0.0000,no fill above the axis line
+2,12.56,0.0000,no fill above the axis line
+2,13.39,0.0000,no fill above the axis line
+2,14.22,0.0000,no fill above the axis line
+2,15.05,0.0000,no fill above the axis line
+2,15.88,0.0000,no fill above the axis line
+2,16.71,0.0000,no fill above the axis line
+2,17.54,0.0000,no fill above the axis line
+2,18.37,0.0000,no fill above the axis line
+2,19.19,0.0000,no fill above the axis line
+2,20.02,0.0000,no fill above the axis line
+2,20.85,0.0000,no fill above the axis line
+2,21.68,0.0000,no fill above the axis line
+2,22.51,0.0000,no fill above the axis line
+2,23.34,0.0000,no fill above the axis line
+2,24.17,0.0000,no fill above the axis line
+2,24.99,0.0000,no fill above the axis line
+2,25.82,0.0000,no fill above the axis line
+2,26.65,0.0000,no fill above the axis line
+2,27.48,0.0000,no fill above the axis line
+2,28.31,0.0000,no fill above the axis line
+2,29.14,0.0000,no fill above the axis line
+2,29.97,0.0000,no fill above the axis line
+2,30.80,0.0000,no fill above the axis line
+2,31.62,0.0000,no fill above the axis line
+2,32.45,0.0000,no fill above the axis line
+2,33.28,0.0000,no fill above the axis line
+2,34.11,0.0000,no fill above the axis line
+2,34.94,0.0000,no fill above the axis line
+2,35.77,0.0000,no fill above the axis line
+2,36.60,0.0000,no fill above the axis line
+2,37.43,0.0000,no fill above the axis line
+2,38.25,0.0000,no fill above the axis line
+2,39.08,0.0000,no fill above the axis line
+2,39.91,0.0000,no fill above the axis line
+2,40.74,0.0000,no fill above the axis line
+2,41.57,0.0000,no fill above the axis line
+2,42.40,0.0000,no fill above the axis line
+2,43.23,0.0000,no fill above the axis line
+2,44.06,0.0000,no fill above the axis line
+2,44.88,0.0000,no fill above the axis line
+2,45.71,0.0000,no fill above the axis line
+2,46.54,0.0000,no fill above the axis line
+2,47.37,0.0000,no fill above the axis line
+2,48.20,0.0000,no fill above the axis line
+2,49.03,0.0000,no fill above the axis line
+2,49.86,0.0000,no fill above the axis line
+2,50.68,0.0000,no fill above the axis line
+2,51.51,0.0000,no fill above the axis line
+2,52.34,0.0000,no fill above the axis line
+2,53.17,0.0000,no fill above the axis line
+2,54.00,0.0000,no fill above the axis line
+2,54.83,0.0000,no fill above the axis line
+2,55.66,0.0000,no fill above the axis line
+2,56.49,0.0000,no fill above the axis line
+2,57.31,0.0000,no fill above the axis line
+2,58.14,0.0000,no fill above the axis line
+2,58.97,0.0000,no fill above the axis line
+2,59.80,0.0000,no fill above the axis line
+2,60.63,0.0000,no fill above the axis line
+2,61.46,0.0000,no fill above the axis line
+2,62.29,0.0000,no fill above the axis line
+2,63.12,0.0000,no fill above the axis line
+2,63.94,0.0000,no fill above the axis line
+2,64.77,0.0000,no fill above the axis line
+2,65.60,0.0000,no fill above the axis line
+2,66.43,0.0000,no fill above the axis line
+2,67.26,0.0000,no fill above the axis line
+2,68.09,0.0000,no fill above the axis line
+2,68.92,0.0000,no fill above the axis line
+2,69.74,0.0000,no fill above the axis line
+2,70.57,0.0000,no fill above the axis line
+2,71.40,0.0000,no fill above the axis line
+2,72.23,0.0000,no fill above the axis line
+2,73.06,0.0000,no fill above the axis line
+2,73.89,0.0000,no fill above the axis line
+2,74.72,0.0000,no fill above the axis line
+2,75.55,0.0000,no fill above the axis line
+2,76.37,0.0000,no fill above the axis line
+2,77.20,0.0000,no fill above the axis line
+2,78.03,0.0000,no fill above the axis line
+2,78.86,0.0000,no fill above the axis line
+2,79.69,0.0000,no fill above the axis line
+2,80.52,0.0333,
+2,81.35,0.0333,
+2,82.18,0.0333,
+2,83.00,0.0333,
+2,83.83,0.0333,
+2,84.66,0.0333,
+2,85.49,0.0333,
+2,86.32,0.0333,
+2,87.15,0.0457,
+2,87.98,0.0457,
+2,88.81,0.0457,
+2,89.63,0.0457,
+2,90.46,0.0581,
+2,91.29,0.0581,
+2,92.12,0.0581,
+2,92.95,0.0581,
+2,93.78,0.0706,
+2,94.61,0.0706,
+2,95.43,0.0706,
+2,96.26,0.0706,
+2,97.09,0.0706,
+2,97.92,0.0830,
+2,98.75,0.0830,
+2,99.58,0.0954,
+2,100.41,0.0954,
+2,101.24,0.1078,
+2,102.06,0.1078,
+2,102.89,0.1078,
+2,103.72,0.1202,
+2,104.55,0.1202,
+2,105.38,0.1327,
+2,106.21,0.1327,
+2,107.04,0.1451,
+2,107.87,0.1575,
+2,108.69,0.1699,
+2,109.52,0.1699,
+2,110.35,0.1699,
+2,111.18,0.1948,
+2,112.01,0.2072,
+2,112.84,0.2072,
+2,113.67,0.2196,
+2,114.50,0.2320,
+2,115.32,0.2569,
+2,116.15,0.2569,
+2,116.98,0.2693,
+2,117.81,0.2942,
+2,118.64,0.3066,
+2,119.47,0.3066,
+2,120.30,0.3438,
+2,121.12,0.3687,
+2,121.95,0.3687,
+2,122.78,0.3811,
+2,123.61,0.4060,
+2,124.44,0.4308,
+2,125.27,0.4308,
+2,126.10,0.4556,
+2,126.93,0.4805,
+2,127.75,0.5053,
+2,128.58,0.5302,
+2,129.41,0.5426,
+2,130.24,0.5674,
+2,131.07,0.5799,
+2,131.90,0.6047,
+2,132.73,0.6296,
+2,133.56,0.6544,
+2,134.38,0.6668,
+2,135.21,0.6917,
+2,136.04,0.7289,
+2,136.87,0.7414,
+2,137.70,0.7662,
+2,138.53,0.7910,
+2,139.36,0.8035,
+2,140.18,0.8283,
+2,141.01,0.8532,
+2,141.84,0.8780,
+2,142.67,0.8904,
+2,143.50,0.9277,
+2,144.33,0.9525,
+2,145.16,0.9650,
+2,145.99,0.9774,
+2,146.81,1.0022,
+2,147.64,1.0271,
+2,148.47,1.0519,
+2,149.30,1.0643,
+2,150.13,1.0892,
+2,150.96,1.1140,
+2,151.79,1.1264,
+2,152.62,1.1389,
+2,153.44,1.1513,
+2,154.27,1.1761,
+2,155.10,1.1886,
+2,155.93,1.2134,
+2,156.76,1.2258,
+2,157.59,1.2258,
+2,158.42,1.2382,
+2,159.25,1.2631,
+2,160.07,1.2755,
+2,160.90,1.2879,
+2,161.73,1.2879,
+2,162.56,1.3004,
+2,163.39,1.3128,
+2,164.22,1.3128,
+2,165.05,1.3252,
+2,165.87,1.3376,
+2,166.70,1.3500,
+2,167.53,1.3500,
+2,168.36,1.3625,
+2,169.19,1.3625,
+2,170.02,1.3749,
+2,170.85,1.3749,
+2,171.68,1.3749,
+2,172.50,1.3749,
+2,173.33,1.3873,
+2,174.16,1.3873,
+2,174.99,1.3997,
+2,175.82,1.3997,
+2,176.65,1.3997,
+2,177.48,1.3997,
+2,178.31,1.3997,
+2,179.13,1.3997,
+2,179.96,1.4122,
+2,180.79,1.4122,
+2,181.62,1.4122,
+2,182.45,1.4122,
+2,183.28,1.4246,
+2,184.11,1.4246,
+2,184.93,1.4370,
+2,185.76,1.4370,
+2,186.59,1.4370,
+2,187.42,1.4494,
+2,188.25,1.4494,
+2,189.08,1.4618,
+2,189.91,1.4743,
+2,190.74,1.4743,
+2,191.56,1.4867,
+2,192.39,1.4867,
+2,193.22,1.4991,
+2,194.05,1.5115,
+2,194.88,1.5115,
+2,195.71,1.5240,
+2,196.54,1.5364,
+2,197.37,1.5488,
+2,198.19,1.5488,
+2,199.02,1.5736,
+2,199.85,1.5861,
+2,200.68,1.5985,
+2,201.51,1.6109,
+2,202.34,1.6233,
+2,203.17,1.6358,
+2,204.00,1.6730,
+2,204.82,1.6854,
+2,205.65,1.6979,
+2,206.48,1.7227,
+2,207.31,1.7476,
+2,208.14,1.7600,
+2,208.97,1.7724,
+2,209.80,1.7972,
+2,210.62,1.8221,
+2,211.45,1.8221,
+2,212.28,1.8345,
+2,213.11,1.8469,
+2,213.94,1.8718,
+2,214.77,1.8842,
+2,215.60,1.9090,
+2,216.43,1.9215,
+2,217.25,1.9215,
+2,218.08,1.9215,
+2,218.91,1.9339,
+2,219.74,1.9463,
+2,220.57,1.9463,
+2,221.40,1.9463,
+2,222.23,1.9463,
+2,223.06,1.9463,
+2,223.88,1.9339,
+2,224.71,1.9215,
+2,225.54,1.9215,
+2,226.37,1.8966,
+2,227.20,1.8718,
+2,228.03,1.8594,
+2,228.86,1.8221,
+2,229.68,1.7848,
+2,230.51,1.7351,
+2,231.34,1.6730,
+2,232.17,1.6109,
+2,233.00,1.5364,
+2,233.83,1.5240,
+2,234.66,1.4370,
+2,235.49,1.3376,
+2,236.31,1.2258,
+2,237.14,1.2134,
+2,237.97,1.1016,
+2,238.80,0.9650,
+2,239.63,0.8532,
+2,240.46,0.8407,
+2,241.29,0.5923,
+2,242.12,0.4681,
+2,242.94,0.4681,
+2,243.77,0.3563,
+2,244.60,0.2693,
+2,245.43,0.1948,
+2,246.26,0.1699,
+2,247.09,0.0830,
+2,247.92,0.0457,
+2,248.75,0.0333,
+2,249.57,0.0333,
+2,250.40,0.0000,no fill above the axis line
+2,251.23,0.0000,no fill above the axis line
+2,252.06,0.0000,no fill above the axis line
+2,252.89,0.0000,no fill above the axis line
+2,253.72,0.0000,no fill above the axis line
+2,254.55,0.0000,no fill above the axis line
+3,0.27,0.0000,no fill above the axis line
+3,1.10,0.0000,no fill above the axis line
+3,1.93,0.0000,no fill above the axis line
+3,2.76,0.0000,no fill above the axis line
+3,3.59,0.0000,no fill above the axis line
+3,4.42,0.0000,no fill above the axis line
+3,5.25,0.0000,no fill above the axis line
+3,6.08,0.0000,no fill above the axis line
+3,6.91,0.0000,no fill above the axis line
+3,7.74,0.0000,no fill above the axis line
+3,8.57,0.0000,no fill above the axis line
+3,9.40,0.0000,no fill above the axis line
+3,10.23,0.0000,no fill above the axis line
+3,11.06,0.0000,no fill above the axis line
+3,11.89,0.0000,no fill above the axis line
+3,12.72,0.0000,no fill above the axis line
+3,13.55,0.0000,no fill above the axis line
+3,14.38,0.0000,no fill above the axis line
+3,15.21,0.0000,no fill above the axis line
+3,16.04,0.0000,no fill above the axis line
+3,16.87,0.0000,no fill above the axis line
+3,17.70,0.0000,no fill above the axis line
+3,18.53,0.0000,no fill above the axis line
+3,19.36,0.0000,no fill above the axis line
+3,20.19,0.0000,no fill above the axis line
+3,21.02,0.0000,no fill above the axis line
+3,21.85,0.0000,no fill above the axis line
+3,22.68,0.0000,no fill above the axis line
+3,23.51,0.0000,no fill above the axis line
+3,24.34,0.0000,no fill above the axis line
+3,25.17,0.0000,no fill above the axis line
+3,26.01,0.0000,no fill above the axis line
+3,26.84,0.0000,no fill above the axis line
+3,27.67,0.0000,no fill above the axis line
+3,28.50,0.0000,no fill above the axis line
+3,29.33,0.0000,no fill above the axis line
+3,30.16,0.0000,no fill above the axis line
+3,30.99,0.0000,no fill above the axis line
+3,31.82,0.0000,no fill above the axis line
+3,32.65,0.0000,no fill above the axis line
+3,33.48,0.0000,no fill above the axis line
+3,34.31,0.0000,no fill above the axis line
+3,35.14,0.0000,no fill above the axis line
+3,35.97,0.0000,no fill above the axis line
+3,36.80,0.0000,no fill above the axis line
+3,37.63,0.0000,no fill above the axis line
+3,38.46,0.0000,no fill above the axis line
+3,39.29,0.0000,no fill above the axis line
+3,40.12,0.0000,no fill above the axis line
+3,40.95,0.0000,no fill above the axis line
+3,41.78,0.0000,no fill above the axis line
+3,42.61,0.0000,no fill above the axis line
+3,43.44,0.0000,no fill above the axis line
+3,44.27,0.0000,no fill above the axis line
+3,45.10,0.0000,no fill above the axis line
+3,45.93,0.0000,no fill above the axis line
+3,46.76,0.0000,no fill above the axis line
+3,47.59,0.0000,no fill above the axis line
+3,48.42,0.0000,no fill above the axis line
+3,49.25,0.0000,no fill above the axis line
+3,50.08,0.0000,no fill above the axis line
+3,50.91,0.0000,no fill above the axis line
+3,51.74,0.0000,no fill above the axis line
+3,52.57,0.0000,no fill above the axis line
+3,53.40,0.0000,no fill above the axis line
+3,54.23,0.0000,no fill above the axis line
+3,55.06,0.0000,no fill above the axis line
+3,55.89,0.0000,no fill above the axis line
+3,56.72,0.0000,no fill above the axis line
+3,57.55,0.0000,no fill above the axis line
+3,58.38,0.0000,no fill above the axis line
+3,59.21,0.0000,no fill above the axis line
+3,60.04,0.0000,no fill above the axis line
+3,60.88,0.0000,no fill above the axis line
+3,61.71,0.0000,no fill above the axis line
+3,62.54,0.0000,no fill above the axis line
+3,63.37,0.0000,no fill above the axis line
+3,64.20,0.0000,no fill above the axis line
+3,65.03,0.0000,no fill above the axis line
+3,65.86,0.0000,no fill above the axis line
+3,66.69,0.0000,no fill above the axis line
+3,67.52,0.0000,no fill above the axis line
+3,68.35,0.0000,no fill above the axis line
+3,69.18,0.0000,no fill above the axis line
+3,70.01,0.0000,no fill above the axis line
+3,70.84,0.0000,no fill above the axis line
+3,71.67,0.0000,no fill above the axis line
+3,72.50,0.0000,no fill above the axis line
+3,73.33,0.0000,no fill above the axis line
+3,74.16,0.0000,no fill above the axis line
+3,74.99,0.0000,no fill above the axis line
+3,75.82,0.0000,no fill above the axis line
+3,76.65,0.0000,no fill above the axis line
+3,77.48,0.0000,no fill above the axis line
+3,78.31,0.0000,no fill above the axis line
+3,79.14,0.0000,no fill above the axis line
+3,79.97,0.0000,no fill above the axis line
+3,80.80,0.0000,no fill above the axis line
+3,81.63,0.0000,no fill above the axis line
+3,82.46,0.0000,no fill above the axis line
+3,83.29,0.0000,no fill above the axis line
+3,84.12,0.0288,
+3,84.95,0.0288,
+3,85.78,0.0288,
+3,86.61,0.0288,
+3,87.44,0.0288,
+3,88.27,0.0288,
+3,89.10,0.0288,
+3,89.93,0.0412,
+3,90.76,0.0412,
+3,91.59,0.0412,
+3,92.42,0.0412,
+3,93.25,0.0536,
+3,94.08,0.0536,
+3,94.91,0.0536,
+3,95.75,0.0536,
+3,96.58,0.0660,
+3,97.41,0.0660,
+3,98.24,0.0660,
+3,99.07,0.0784,
+3,99.90,0.0784,
+3,100.73,0.0908,
+3,101.56,0.0908,
+3,102.39,0.0908,
+3,103.22,0.1032,
+3,104.05,0.1032,
+3,104.88,0.1156,
+3,105.71,0.1280,
+3,106.54,0.1280,
+3,107.37,0.1280,
+3,108.20,0.1404,
+3,109.03,0.1528,
+3,109.86,0.1528,
+3,110.69,0.1652,
+3,111.52,0.1776,
+3,112.35,0.1776,
+3,113.18,0.1900,
+3,114.01,0.2148,
+3,114.84,0.2272,
+3,115.67,0.2272,
+3,116.50,0.2520,
+3,117.33,0.2644,
+3,118.16,0.2892,
+3,118.99,0.2892,
+3,119.82,0.3140,
+3,120.65,0.3264,
+3,121.48,0.3388,
+3,122.31,0.3636,
+3,123.14,0.3884,
+3,123.97,0.4008,
+3,124.80,0.4132,
+3,125.63,0.4380,
+3,126.46,0.4752,
+3,127.29,0.4876,
+3,128.12,0.4876,
+3,128.95,0.5248,
+3,129.78,0.5744,
+3,130.62,0.5868,
+3,131.45,0.5992,
+3,132.28,0.6364,
+3,133.11,0.6612,
+3,133.94,0.6736,
+3,134.77,0.7108,
+3,135.60,0.7604,
+3,136.43,0.7728,
+3,137.26,0.7976,
+3,138.09,0.8224,
+3,138.92,0.8720,
+3,139.75,0.8844,
+3,140.58,0.9216,
+3,141.41,0.9464,
+3,142.24,0.9836,
+3,143.07,0.9960,
+3,143.90,1.0456,
+3,144.73,1.0704,
+3,145.56,1.0952,
+3,146.39,1.1324,
+3,147.22,1.1696,
+3,148.05,1.2068,
+3,148.88,1.2192,
+3,149.71,1.2440,
+3,150.54,1.2812,
+3,151.37,1.3060,
+3,152.20,1.3308,
+3,153.03,1.3556,
+3,153.86,1.3928,
+3,154.69,1.4052,
+3,155.52,1.4424,
+3,156.35,1.4796,
+3,157.18,1.4920,
+3,158.01,1.5044,
+3,158.84,1.5416,
+3,159.67,1.5788,
+3,160.50,1.5912,
+3,161.33,1.6160,
+3,162.16,1.6284,
+3,162.99,1.6656,
+3,163.82,1.6656,
+3,164.65,1.6780,
+3,165.49,1.7028,
+3,166.32,1.7400,
+3,167.15,1.7524,
+3,167.98,1.7648,
+3,168.81,1.7772,
+3,169.64,1.7896,
+3,170.47,1.8020,
+3,171.30,1.8268,
+3,172.13,1.8516,
+3,172.96,1.8516,
+3,173.79,1.8764,
+3,174.62,1.8888,
+3,175.45,1.9012,
+3,176.28,1.9012,
+3,177.11,1.9136,
+3,177.94,1.9384,
+3,178.77,1.9508,
+3,179.60,1.9508,
+3,180.43,1.9632,
+3,181.26,1.9756,
+3,182.09,1.9880,
+3,182.92,2.0004,
+3,183.75,2.0128,
+3,184.58,2.0252,
+3,185.41,2.0376,
+3,186.24,2.0500,
+3,187.07,2.0624,
+3,187.90,2.0748,
+3,188.73,2.0872,
+3,189.56,2.0996,
+3,190.39,2.0996,
+3,191.22,2.1244,
+3,192.05,2.1368,
+3,192.88,2.1492,
+3,193.71,2.1616,
+3,194.54,2.1616,
+3,195.37,2.1616,
+3,196.20,2.1740,
+3,197.03,2.1740,
+3,197.86,2.1740,
+3,198.69,2.1864,
+3,199.52,2.1864,
+3,200.36,2.1864,
+3,201.19,2.1864,
+3,202.02,2.1740,
+3,202.85,2.1616,
+3,203.68,2.1616,
+3,204.51,2.1616,
+3,205.34,2.1368,
+3,206.17,2.1120,
+3,207.00,2.0996,
+3,207.83,2.0748,
+3,208.66,2.0500,
+3,209.49,2.0128,
+3,210.32,1.9756,
+3,211.15,1.9136,
+3,211.98,1.8516,
+3,212.81,1.8516,
+3,213.64,1.7896,
+3,214.47,1.7152,
+3,215.30,1.6532,
+3,216.13,1.5540,
+3,216.96,1.5416,
+3,217.79,1.3928,
+3,218.62,1.3804,
+3,219.45,1.3060,
+3,220.28,1.2192,
+3,221.11,1.1076,
+3,221.94,1.0952,
+3,222.77,0.9960,
+3,223.60,0.8968,
+3,224.43,0.8100,
+3,225.26,0.7976,
+3,226.09,0.6488,
+3,226.92,0.5496,
+3,227.75,0.5372,
+3,228.58,0.4628,
+3,229.41,0.3884,
+3,230.24,0.3264,
+3,231.07,0.3264,
+3,231.90,0.2520,
+3,232.73,0.2024,
+3,233.56,0.1652,
+3,234.39,0.1528,
+3,235.23,0.1032,
+3,236.06,0.0784,
+3,236.89,0.0660,
+3,237.72,0.0536,
+3,238.55,0.0412,
+3,239.38,0.0288,
+3,240.21,0.0000,no fill above the axis line
+3,241.04,0.0000,no fill above the axis line
+3,241.87,0.0000,no fill above the axis line
+3,242.70,0.0000,no fill above the axis line
+3,243.53,0.0000,no fill above the axis line
+3,244.36,0.0000,no fill above the axis line
+3,245.19,0.0000,no fill above the axis line
+3,246.02,0.0000,no fill above the axis line
+3,246.85,0.0000,no fill above the axis line
+3,247.68,0.0000,no fill above the axis line
+3,248.51,0.0000,no fill above the axis line
+3,249.34,0.0000,no fill above the axis line
+4,0.82,0.0016,no fill above the axis line
+4,1.65,0.0016,no fill above the axis line
+4,2.48,0.0016,no fill above the axis line
+4,3.31,0.0016,no fill above the axis line
+4,4.13,0.0016,no fill above the axis line
+4,4.96,0.0016,no fill above the axis line
+4,5.79,0.0016,no fill above the axis line
+4,6.62,0.0016,no fill above the axis line
+4,7.45,0.0016,no fill above the axis line
+4,8.28,0.0016,no fill above the axis line
+4,9.11,0.0016,no fill above the axis line
+4,9.94,0.0016,no fill above the axis line
+4,10.77,0.0016,no fill above the axis line
+4,11.60,0.0016,no fill above the axis line
+4,12.43,0.0016,no fill above the axis line
+4,13.26,0.0016,no fill above the axis line
+4,14.09,0.0016,no fill above the axis line
+4,14.92,0.0016,no fill above the axis line
+4,15.74,0.0016,no fill above the axis line
+4,16.57,0.0016,no fill above the axis line
+4,17.40,0.0016,no fill above the axis line
+4,18.23,0.0016,no fill above the axis line
+4,19.06,0.0016,no fill above the axis line
+4,19.89,0.0016,no fill above the axis line
+4,20.72,0.0016,no fill above the axis line
+4,21.55,0.0016,no fill above the axis line
+4,22.38,0.0016,no fill above the axis line
+4,23.21,0.0016,no fill above the axis line
+4,24.04,0.0016,no fill above the axis line
+4,24.87,0.0016,no fill above the axis line
+4,25.70,0.0016,no fill above the axis line
+4,26.53,0.0016,no fill above the axis line
+4,27.35,0.0016,no fill above the axis line
+4,28.18,0.0016,no fill above the axis line
+4,29.01,0.0016,no fill above the axis line
+4,29.84,0.0016,no fill above the axis line
+4,30.67,0.0016,no fill above the axis line
+4,31.50,0.0016,no fill above the axis line
+4,32.33,0.0016,no fill above the axis line
+4,33.16,0.0016,no fill above the axis line
+4,33.99,0.0016,no fill above the axis line
+4,34.82,0.0016,no fill above the axis line
+4,35.65,0.0016,no fill above the axis line
+4,36.48,0.0016,no fill above the axis line
+4,37.31,0.0016,no fill above the axis line
+4,38.14,0.0016,no fill above the axis line
+4,38.97,0.0016,no fill above the axis line
+4,39.79,0.0016,no fill above the axis line
+4,40.62,0.0016,no fill above the axis line
+4,41.45,0.0016,no fill above the axis line
+4,42.28,0.0016,no fill above the axis line
+4,43.11,0.0016,no fill above the axis line
+4,43.94,0.0016,no fill above the axis line
+4,44.77,0.0016,no fill above the axis line
+4,45.60,0.0016,no fill above the axis line
+4,46.43,0.0016,no fill above the axis line
+4,47.26,0.0016,no fill above the axis line
+4,48.09,0.0016,no fill above the axis line
+4,48.92,0.0016,no fill above the axis line
+4,49.75,0.0016,no fill above the axis line
+4,50.58,0.0016,no fill above the axis line
+4,51.40,0.0016,no fill above the axis line
+4,52.23,0.0016,no fill above the axis line
+4,53.06,0.0016,no fill above the axis line
+4,53.89,0.0016,no fill above the axis line
+4,54.72,0.0016,no fill above the axis line
+4,55.55,0.0016,no fill above the axis line
+4,56.38,0.0016,no fill above the axis line
+4,57.21,0.0016,no fill above the axis line
+4,58.04,0.0016,no fill above the axis line
+4,58.87,0.0016,no fill above the axis line
+4,59.70,0.0016,no fill above the axis line
+4,60.53,0.0016,no fill above the axis line
+4,61.36,0.0016,no fill above the axis line
+4,62.19,0.0016,no fill above the axis line
+4,63.01,0.0016,no fill above the axis line
+4,63.84,0.0016,no fill above the axis line
+4,64.67,0.0016,no fill above the axis line
+4,65.50,0.0016,no fill above the axis line
+4,66.33,0.0016,no fill above the axis line
+4,67.16,0.0016,no fill above the axis line
+4,67.99,0.0016,no fill above the axis line
+4,68.82,0.0016,no fill above the axis line
+4,69.65,0.0016,no fill above the axis line
+4,70.48,0.0016,no fill above the axis line
+4,71.31,0.0016,no fill above the axis line
+4,72.14,0.0016,no fill above the axis line
+4,72.97,0.0016,no fill above the axis line
+4,73.80,0.0016,no fill above the axis line
+4,74.63,0.0016,no fill above the axis line
+4,75.45,0.0016,no fill above the axis line
+4,76.28,0.0016,no fill above the axis line
+4,77.11,0.0016,no fill above the axis line
+4,77.94,0.0016,no fill above the axis line
+4,78.77,0.0016,no fill above the axis line
+4,79.60,0.0016,no fill above the axis line
+4,80.43,0.0016,no fill above the axis line
+4,81.26,0.0016,no fill above the axis line
+4,82.09,0.0016,no fill above the axis line
+4,82.92,0.0016,no fill above the axis line
+4,83.75,0.0016,no fill above the axis line
+4,84.58,0.0016,no fill above the axis line
+4,85.41,0.0016,no fill above the axis line
+4,86.24,0.0016,no fill above the axis line
+4,87.06,0.0016,no fill above the axis line
+4,87.89,0.0016,no fill above the axis line
+4,88.72,0.0016,no fill above the axis line
+4,89.55,0.0016,no fill above the axis line
+4,90.38,0.0016,no fill above the axis line
+4,91.21,0.0016,no fill above the axis line
+4,92.04,0.0016,no fill above the axis line
+4,92.87,0.0327,
+4,93.70,0.0327,
+4,94.53,0.0327,
+4,95.36,0.0327,
+4,96.19,0.0452,
+4,97.02,0.0452,
+4,97.85,0.0452,
+4,98.68,0.0576,
+4,99.50,0.0576,
+4,100.33,0.0701,
+4,101.16,0.0701,
+4,101.99,0.0701,
+4,102.82,0.0825,
+4,103.65,0.0950,
+4,104.48,0.0950,
+4,105.31,0.0950,
+4,106.14,0.1074,
+4,106.97,0.1074,
+4,107.80,0.1199,
+4,108.63,0.1323,
+4,109.46,0.1448,
+4,110.29,0.1448,
+4,111.11,0.1572,
+4,111.94,0.1696,
+4,112.77,0.1821,
+4,113.60,0.1945,
+4,114.43,0.2070,
+4,115.26,0.2194,
+4,116.09,0.2443,
+4,116.92,0.2443,
+4,117.75,0.2817,
+4,118.58,0.3066,
+4,119.41,0.3066,
+4,120.24,0.3315,
+4,121.07,0.3564,
+4,121.90,0.3688,
+4,122.72,0.3937,
+4,123.55,0.4311,
+4,124.38,0.4560,
+4,125.21,0.4684,
+4,126.04,0.5058,
+4,126.87,0.5431,
+4,127.70,0.5680,
+4,128.53,0.5929,
+4,129.36,0.6427,
+4,130.19,0.6676,
+4,131.02,0.7050,
+4,131.85,0.7423,
+4,132.68,0.7797,
+4,133.51,0.8295,
+4,134.34,0.8419,
+4,135.16,0.8917,
+4,135.99,0.9415,
+4,136.82,0.9789,
+4,137.65,1.0411,
+4,138.48,1.0909,
+4,139.31,1.1034,
+4,140.14,1.1532,
+4,140.97,1.2030,
+4,141.80,1.2528,
+4,142.63,1.3150,
+4,143.46,1.3275,
+4,144.29,1.4271,
+4,145.12,1.4893,
+4,145.95,1.5018,
+4,146.77,1.5267,
+4,147.60,1.5889,
+4,148.43,1.6512,
+4,149.26,1.6636,
+4,150.09,1.7134,
+4,150.92,1.7757,
+4,151.75,1.8130,
+4,152.58,1.8379,
+4,153.41,1.9126,
+4,154.24,1.9375,
+4,155.07,1.9624,
+4,155.90,2.0122,
+4,156.73,2.0620,
+4,157.56,2.0994,
+4,158.38,2.1243,
+4,159.21,2.1492,
+4,160.04,2.1990,
+4,160.87,2.2239,
+4,161.70,2.2488,
+4,162.53,2.2986,
+4,163.36,2.3110,
+4,164.19,2.3235,
+4,165.02,2.3484,
+4,165.85,2.3857,
+4,166.68,2.4106,
+4,167.51,2.4231,
+4,168.34,2.4480,
+4,169.17,2.4729,
+4,170.00,2.4853,
+4,170.82,2.5102,
+4,171.65,2.5351,
+4,172.48,2.5476,
+4,173.31,2.5476,
+4,174.14,2.5725,
+4,174.97,2.5849,
+4,175.80,2.5974,
+4,176.63,2.6098,
+4,177.46,2.6098,
+4,178.29,2.6223,
+4,179.12,2.6223,
+4,179.95,2.6223,
+4,180.78,2.6347,
+4,181.61,2.6347,
+4,182.43,2.6223,
+4,183.26,2.6223,
+4,184.09,2.6223,
+4,184.92,2.5974,
+4,185.75,2.5974,
+4,186.58,2.5849,
+4,187.41,2.5600,
+4,188.24,2.5351,
+4,189.07,2.5102,
+4,189.90,2.4853,
+4,190.73,2.4480,
+4,191.56,2.4106,
+4,192.39,2.3982,
+4,193.22,2.3359,
+4,194.05,2.2737,
+4,194.87,2.2114,
+4,195.70,2.1616,
+4,196.53,2.1367,
+4,197.36,2.0620,
+4,198.19,1.9749,
+4,199.02,1.9002,
+4,199.85,1.8006,
+4,200.68,1.7010,
+4,201.51,1.7010,
+4,202.34,1.6014,
+4,203.17,1.5018,
+4,204.00,1.3897,
+4,204.83,1.3275,
+4,205.66,1.1905,
+4,206.48,1.0785,
+4,207.31,1.0660,
+4,208.14,0.9664,
+4,208.97,0.8793,
+4,209.80,0.7797,
+4,210.63,0.7672,
+4,211.46,0.6801,
+4,212.29,0.5805,
+4,213.12,0.5182,
+4,213.95,0.4560,
+4,214.78,0.3937,
+4,215.61,0.3190,
+4,216.44,0.3066,
+4,217.27,0.2568,
+4,218.09,0.2070,
+4,218.92,0.1696,
+4,219.75,0.1572,
+4,220.58,0.1199,
+4,221.41,0.0950,
+4,222.24,0.0825,
+4,223.07,0.0701,
+4,223.90,0.0452,
+4,224.73,0.0327,
+4,225.56,0.0327,
+4,226.39,0.0016,no fill above the axis line
+4,227.22,0.0016,no fill above the axis line
+4,228.05,0.0016,no fill above the axis line
+4,228.88,0.0016,no fill above the axis line
+4,229.71,0.0016,no fill above the axis line
+4,230.53,0.0016,no fill above the axis line
+4,231.36,0.0016,no fill above the axis line
+4,232.19,0.0016,no fill above the axis line
+4,233.02,0.0016,no fill above the axis line
+4,233.85,0.0016,no fill above the axis line
+4,234.68,0.0016,no fill above the axis line
+4,235.51,0.0016,no fill above the axis line
+4,236.34,0.0016,no fill above the axis line
+4,237.17,0.0016,no fill above the axis line
+4,238.00,0.0016,no fill above the axis line
+4,238.83,0.0016,no fill above the axis line
+4,239.66,0.0016,no fill above the axis line
+4,240.49,0.0016,no fill above the axis line
+4,241.32,0.0016,no fill above the axis line
+4,242.14,0.0016,no fill above the axis line
+4,242.97,0.0016,no fill above the axis line
+4,243.80,0.0016,no fill above the axis line
+4,244.63,0.0016,no fill above the axis line
+4,245.46,0.0016,no fill above the axis line
+4,246.29,0.0016,no fill above the axis line
+4,247.12,0.0016,no fill above the axis line
+4,247.95,0.0016,no fill above the axis line
+4,248.78,0.0016,no fill above the axis line
+4,249.61,0.0016,no fill above the axis line
+4,250.44,0.0016,no fill above the axis line
+5,0.47,0.0000,no fill above the axis line
+5,1.30,0.0000,no fill above the axis line
+5,2.13,0.0000,no fill above the axis line
+5,2.96,0.0000,no fill above the axis line
+5,3.79,0.0000,no fill above the axis line
+5,4.62,0.0000,no fill above the axis line
+5,5.44,0.0000,no fill above the axis line
+5,6.27,0.0000,no fill above the axis line
+5,7.10,0.0000,no fill above the axis line
+5,7.93,0.0000,no fill above the axis line
+5,8.76,0.0000,no fill above the axis line
+5,9.59,0.0000,no fill above the axis line
+5,10.42,0.0000,no fill above the axis line
+5,11.24,0.0000,no fill above the axis line
+5,12.07,0.0000,no fill above the axis line
+5,12.90,0.0000,no fill above the axis line
+5,13.73,0.0000,no fill above the axis line
+5,14.56,0.0000,no fill above the axis line
+5,15.39,0.0000,no fill above the axis line
+5,16.21,0.0000,no fill above the axis line
+5,17.04,0.0000,no fill above the axis line
+5,17.87,0.0000,no fill above the axis line
+5,18.70,0.0000,no fill above the axis line
+5,19.53,0.0000,no fill above the axis line
+5,20.36,0.0000,no fill above the axis line
+5,21.18,0.0000,no fill above the axis line
+5,22.01,0.0000,no fill above the axis line
+5,22.84,0.0000,no fill above the axis line
+5,23.67,0.0000,no fill above the axis line
+5,24.50,0.0000,no fill above the axis line
+5,25.33,0.0000,no fill above the axis line
+5,26.15,0.0000,no fill above the axis line
+5,26.98,0.0000,no fill above the axis line
+5,27.81,0.0000,no fill above the axis line
+5,28.64,0.0000,no fill above the axis line
+5,29.47,0.0000,no fill above the axis line
+5,30.30,0.0000,no fill above the axis line
+5,31.13,0.0000,no fill above the axis line
+5,31.95,0.0000,no fill above the axis line
+5,32.78,0.0000,no fill above the axis line
+5,33.61,0.0000,no fill above the axis line
+5,34.44,0.0000,no fill above the axis line
+5,35.27,0.0000,no fill above the axis line
+5,36.10,0.0000,no fill above the axis line
+5,36.92,0.0000,no fill above the axis line
+5,37.75,0.0000,no fill above the axis line
+5,38.58,0.0000,no fill above the axis line
+5,39.41,0.0000,no fill above the axis line
+5,40.24,0.0000,no fill above the axis line
+5,41.07,0.0000,no fill above the axis line
+5,41.89,0.0000,no fill above the axis line
+5,42.72,0.0000,no fill above the axis line
+5,43.55,0.0000,no fill above the axis line
+5,44.38,0.0000,no fill above the axis line
+5,45.21,0.0000,no fill above the axis line
+5,46.04,0.0000,no fill above the axis line
+5,46.86,0.0000,no fill above the axis line
+5,47.69,0.0000,no fill above the axis line
+5,48.52,0.0000,no fill above the axis line
+5,49.35,0.0000,no fill above the axis line
+5,50.18,0.0000,no fill above the axis line
+5,51.01,0.0000,no fill above the axis line
+5,51.83,0.0000,no fill above the axis line
+5,52.66,0.0000,no fill above the axis line
+5,53.49,0.0000,no fill above the axis line
+5,54.32,0.0000,no fill above the axis line
+5,55.15,0.0000,no fill above the axis line
+5,55.98,0.0000,no fill above the axis line
+5,56.81,0.0000,no fill above the axis line
+5,57.63,0.0000,no fill above the axis line
+5,58.46,0.0000,no fill above the axis line
+5,59.29,0.0000,no fill above the axis line
+5,60.12,0.0000,no fill above the axis line
+5,60.95,0.0000,no fill above the axis line
+5,61.78,0.0000,no fill above the axis line
+5,62.60,0.0000,no fill above the axis line
+5,63.43,0.0000,no fill above the axis line
+5,64.26,0.0000,no fill above the axis line
+5,65.09,0.0000,no fill above the axis line
+5,65.92,0.0000,no fill above the axis line
+5,66.75,0.0000,no fill above the axis line
+5,67.57,0.0000,no fill above the axis line
+5,68.40,0.0000,no fill above the axis line
+5,69.23,0.0000,no fill above the axis line
+5,70.06,0.0000,no fill above the axis line
+5,70.89,0.0000,no fill above the axis line
+5,71.72,0.0000,no fill above the axis line
+5,72.54,0.0000,no fill above the axis line
+5,73.37,0.0000,no fill above the axis line
+5,74.20,0.0000,no fill above the axis line
+5,75.03,0.0000,no fill above the axis line
+5,75.86,0.0000,no fill above the axis line
+5,76.69,0.0000,no fill above the axis line
+5,77.52,0.0000,no fill above the axis line
+5,78.34,0.0000,no fill above the axis line
+5,79.17,0.0000,no fill above the axis line
+5,80.00,0.0260,
+5,80.83,0.0260,
+5,81.66,0.0260,
+5,82.49,0.0260,
+5,83.31,0.0384,
+5,84.14,0.0384,
+5,84.97,0.0384,
+5,85.80,0.0508,
+5,86.63,0.0508,
+5,87.46,0.0508,
+5,88.28,0.0632,
+5,89.11,0.0632,
+5,89.94,0.0756,
+5,90.77,0.0756,
+5,91.60,0.0881,
+5,92.43,0.1005,
+5,93.25,0.1005,
+5,94.08,0.1005,
+5,94.91,0.1129,
+5,95.74,0.1253,
+5,96.57,0.1501,
+5,97.40,0.1501,
+5,98.23,0.1626,
+5,99.05,0.1750,
+5,99.88,0.1874,
+5,100.71,0.1998,
+5,101.54,0.2122,
+5,102.37,0.2371,
+5,103.20,0.2495,
+5,104.02,0.2743,
+5,104.85,0.2991,
+5,105.68,0.3364,
+5,106.51,0.3488,
+5,107.34,0.3861,
+5,108.17,0.4109,
+5,108.99,0.4357,
+5,109.82,0.4730,
+5,110.65,0.4978,
+5,111.48,0.5599,
+5,112.31,0.5723,
+5,113.14,0.6220,
+5,113.96,0.6716,
+5,114.79,0.7337,
+5,115.62,0.7461,
+5,116.45,0.7958,
+5,117.28,0.8579,
+5,118.11,0.9200,
+5,118.93,0.9945,
+5,119.76,1.0690,
+5,120.59,1.1310,
+5,121.42,1.1435,
+5,122.25,1.2180,
+5,123.08,1.2925,
+5,123.91,1.3794,
+5,124.73,1.4663,
+5,125.56,1.4911,
+5,126.39,1.6401,
+5,127.22,1.6401,
+5,128.05,1.7146,
+5,128.88,1.8140,
+5,129.70,1.9009,
+5,130.53,1.9133,
+5,131.36,2.0126,
+5,132.19,2.0871,
+5,133.02,2.1616,
+5,133.85,2.2237,
+5,134.67,2.3106,
+5,135.50,2.3975,
+5,136.33,2.4100,
+5,137.16,2.4720,
+5,137.99,2.5465,
+5,138.82,2.6210,
+5,139.64,2.6335,
+5,140.47,2.7328,
+5,141.30,2.7576,
+5,142.13,2.8073,
+5,142.96,2.8197,
+5,143.79,2.9066,
+5,144.62,2.9439,
+5,145.44,2.9563,
+5,146.27,2.9935,
+5,147.10,3.0308,
+5,147.93,3.0556,
+5,148.76,3.0805,
+5,149.59,3.0929,
+5,150.41,3.1301,
+5,151.24,3.1301,
+5,152.07,3.1425,
+5,152.90,3.1550,
+5,153.73,3.1674,
+5,154.56,3.1674,
+5,155.38,3.1674,
+5,156.21,3.1550,
+5,157.04,3.1550,
+5,157.87,3.1301,
+5,158.70,3.1177,
+5,159.53,3.1053,
+5,160.35,3.0680,
+5,161.18,3.0556,
+5,162.01,3.0432,
+5,162.84,2.9687,
+5,163.67,2.8942,
+5,164.50,2.8942,
+5,165.32,2.8321,
+5,166.15,2.7576,
+5,166.98,2.6831,
+5,167.81,2.6583,
+5,168.64,2.5838,
+5,169.47,2.4348,
+5,170.30,2.4100,
+5,171.12,2.3230,
+5,171.95,2.2237,
+5,172.78,2.0871,
+5,173.61,2.0747,
+5,174.44,1.9754,
+5,175.27,1.8388,
+5,176.09,1.7395,
+5,176.92,1.6029,
+5,177.75,1.5905,
+5,178.58,1.3670,
+5,179.41,1.3545,
+5,180.24,1.2304,
+5,181.06,1.1186,
+5,181.89,1.0193,
+5,182.72,0.9200,
+5,183.55,0.8951,
+5,184.38,0.7958,
+5,185.21,0.7089,
+5,186.03,0.6220,
+5,186.86,0.5351,
+5,187.69,0.4730,
+5,188.52,0.4606,
+5,189.35,0.3985,
+5,190.18,0.3364,
+5,191.01,0.2867,
+5,191.83,0.2743,
+5,192.66,0.2246,
+5,193.49,0.1750,
+5,194.32,0.1626,
+5,195.15,0.1253,
+5,195.98,0.1005,
+5,196.80,0.0881,
+5,197.63,0.0756,
+5,198.46,0.0632,
+5,199.29,0.0384,
+5,200.12,0.0384,
+5,200.95,0.0260,
+5,201.77,0.0000,no fill above the axis line
+5,202.60,0.0000,no fill above the axis line
+5,203.43,0.0000,no fill above the axis line
+5,204.26,0.0000,no fill above the axis line
+5,205.09,0.0000,no fill above the axis line
+5,205.92,0.0000,no fill above the axis line
+5,206.74,0.0000,no fill above the axis line
+5,207.57,0.0000,no fill above the axis line
+5,208.40,0.0000,no fill above the axis line
+5,209.23,0.0000,no fill above the axis line
+5,210.06,0.0000,no fill above the axis line
+5,210.89,0.0000,no fill above the axis line
+5,211.72,0.0000,no fill above the axis line
+5,212.54,0.0000,no fill above the axis line
+5,213.37,0.0000,no fill above the axis line
+5,214.20,0.0000,no fill above the axis line
+5,215.03,0.0000,no fill above the axis line
+5,215.86,0.0000,no fill above the axis line
+5,216.69,0.0000,no fill above the axis line
+5,217.51,0.0000,no fill above the axis line
+5,218.34,0.0000,no fill above the axis line
+5,219.17,0.0000,no fill above the axis line
+5,220.00,0.0000,no fill above the axis line
+5,220.83,0.0000,no fill above the axis line
+5,221.66,0.0000,no fill above the axis line
+5,222.48,0.0000,no fill above the axis line
+5,223.31,0.0000,no fill above the axis line
+5,224.14,0.0000,no fill above the axis line
+5,224.97,0.0000,no fill above the axis line
+5,225.80,0.0000,no fill above the axis line
+5,226.63,0.0000,no fill above the axis line
+5,227.45,0.0000,no fill above the axis line
+5,228.28,0.0000,no fill above the axis line
+5,229.11,0.0000,no fill above the axis line
+5,229.94,0.0000,no fill above the axis line
+5,230.77,0.0000,no fill above the axis line
+5,231.60,0.0000,no fill above the axis line
+5,232.42,0.0000,no fill above the axis line
+5,233.25,0.0000,no fill above the axis line
+5,234.08,0.0000,no fill above the axis line
+5,234.91,0.0000,no fill above the axis line
+5,235.74,0.0000,no fill above the axis line
+5,236.57,0.0000,no fill above the axis line
+5,237.40,0.0000,no fill above the axis line
+5,238.22,0.0000,no fill above the axis line
+5,239.05,0.0000,no fill above the axis line
+5,239.88,0.0000,no fill above the axis line
+5,240.71,0.0000,no fill above the axis line
+5,241.54,0.0000,no fill above the axis line
+5,242.37,0.0000,no fill above the axis line
+5,243.19,0.0000,no fill above the axis line
+5,244.02,0.0000,no fill above the axis line
+5,244.85,0.0000,no fill above the axis line
+5,245.68,0.0000,no fill above the axis line
+5,246.51,0.0000,no fill above the axis line
+5,247.34,0.0000,no fill above the axis line
+5,248.16,0.0000,no fill above the axis line
+5,248.99,0.0000,no fill above the axis line
+5,249.82,0.0000,no fill above the axis line
+5,250.65,0.0000,no fill above the axis line
+5,251.48,0.0000,no fill above the axis line
+5,252.31,0.0000,no fill above the axis line
+5,253.13,0.0000,no fill above the axis line
+5,253.96,0.0000,no fill above the axis line

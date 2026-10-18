@@ -1,0 +1,37 @@
+# Supplementary Figure 5e (kubota2018 SI): electron dose vs acceleration voltage, one series per dwell time (no legend in e; colours as in d)
+# columns: series (legend text), x_nominal (acceleration voltage, keV), x_digitized, y (electron dose, ke- nm-2 (axis label 'Electron dose (ke- nm-2)')), marker_px (pixels in the colour blob found), status, printed_panel_c (the depth printed under the imaged square in panel c of the same figure, where it belongs to this point; empty otherwise), pixel_x, pixel_y (marker centre in the embedded image)
+# provenance: tier 3, digitized from the embedded raster image of SI page 14 (1084 x 951 px JPEG, 184 ppi), native resolution; script sfig5_extract.py
+# method: ticks found in the image and fitted to the printed tick labels; at each nominal x the pixels of each series colour (HSV class) in a 7-px-wide column window are grouped into blobs and the centroid of the largest blob is the marker centre
+# axis fit: y on 7 ticks 6..0, max residual 0.0197; x on 7 ticks 0..6, max residual 0.0122
+# uncertainty: about 1-2 source pixels = 0.034-0.069 in y (1 px = 0.0344); markers that overlap other markers are less certain
+# status 'hidden under other markers': the series colour was not found at that x (the marker is covered by another series' marker); 'partly hidden': fewer than 8 pixels of its colour visible
+# decompiler's consistency check (arithmetic, not printed in panel e): dose = dose rate (5g legend) x dwell time gives 0.86-1.20 (6.4 µs), 0.43-0.60 (3.2 µs), 0.21-0.30 (1.6 µs), 0.11-0.15 ke- nm-2 (0.8 µs) for 1-6 keV; the digitized values run about 0.03-0.06 lower (1-2 px), and the 0.8 µs markers lie partly under the 1.6 µs markers, so their visible lower halves give values that are too low by up to about 0.1
+series,x_nominal,x_digitized,y,marker_px,status,printed_panel_c,pixel_x,pixel_y
+6.4 µsec,1,1.030,0.8011,40,ok,,923.60,420.65
+6.4 µsec,1.5,1.512,0.8483,40,ok,,937.62,419.27
+6.4 µsec,2,2.007,0.8856,42,ok,,952.07,418.19
+6.4 µsec,3,3.012,0.9659,41,ok,,981.34,415.85
+6.4 µsec,4,4.014,1.012,40,ok,,1010.55,414.50
+6.4 µsec,5,4.999,1.098,41,ok,,1039.24,412.00
+6.4 µsec,6,6.001,1.137,41,ok,,1068.46,410.88
+3.2 µsec,1,1.029,0.3915,35,ok,,923.57,432.57
+3.2 µsec,1.5,1.527,0.4254,29,ok,,938.07,431.59
+3.2 µsec,2,2.002,0.4261,39,ok,,951.92,431.56
+3.2 µsec,3,3.013,0.4711,39,ok,,981.38,430.26
+3.2 µsec,4,4.014,0.5091,40,ok,,1010.55,429.15
+3.2 µsec,5,4.999,0.5142,41,ok,,1039.24,429.00
+3.2 µsec,6,6.006,0.5486,39,ok,,1068.62,428.00
+1.6 µsec,1,1.026,0.1684,30,ok,,923.47,439.07
+1.6 µsec,1.5,1.506,0.1825,35,ok,,937.46,438.66
+1.6 µsec,2,2.003,0.1812,39,ok,,951.95,438.69
+1.6 µsec,3,3.007,0.2162,37,ok,,981.22,437.68
+1.6 µsec,4,4.010,0.2199,37,ok,,1010.43,437.57
+1.6 µsec,5,5.000,0.2529,38,ok,,1039.29,436.61
+1.6 µsec,6,6.002,0.2598,37,ok,,1068.49,436.41
+0.8 µsec,1,1.030,0.005775,15,ok,,923.60,443.80
+0.8 µsec,1.5,1.529,0.001358,14,ok,,938.14,443.93
+0.8 µsec,2,1.999,0.01036,18,ok,,951.83,443.67
+0.8 µsec,3,3.009,0.02878,23,ok,,981.26,443.13
+0.8 µsec,4,4.006,0.03326,25,ok,,1010.32,443.00
+0.8 µsec,5,5.002,0.04434,31,ok,,1039.35,442.68
+0.8 µsec,6,5.993,0.07359,23,ok,,1068.22,441.83

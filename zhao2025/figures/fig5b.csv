@@ -1,0 +1,21 @@
+# Zhao et al. 2025, Nat. Commun. 16:3203, Fig. 5b: blunting radius r_b (um) vs damage zone depth d (um).
+# Columns: series (red squares = Cutting-induced; the last point, highest r_b, carries the red/white
+#   'Tearing-induced' icon over a red square); x = d (um); y = r_b (um); x_err_low/high and y_err_low/high =
+#   ends of the horizontal and vertical error bars at their caps; marker_box_centre_* = centre of the square's
+#   bounding box; centre_from: x from the vertical bar line (vbar), y from the horizontal bar line (hbar);
+#   these agree with the square centres to <0.1 pt.
+# Provenance: tier 2, vector paths in the PDF (page 6), exact to ~0.01 pt (~0.005 um in d, ~0.04 um in r_b).
+#   x: linear fit through 7 ticks 0@93.080pt, 10@115.600pt, 20@138.005pt, 30@160.440pt, 40@182.960pt, 50@205.360pt, 60@227.910pt; max residual 0.021 data units
+#   y: linear fit through 4 ticks 0@293.925pt, 100@264.925pt, 200@236.040pt, 300@207.035pt; max residual 0.13 data units
+# The black open right triangle at lower right of the panel is a slope sketch without numbers (not data).
+# Fit line (red dash-dot, drawn as filled dash polygons; least-squares line through all their vertices, max
+#   vertex offset 1.54 pt = line half-width): from d = 21.05 to 42.64, i.e. r_b = 9.8608 * d + (-109.5).
+#   The paper prints no equation for this line; these numbers are read off the drawing.
+series,x,y,x_err_low,x_err_high,y_err_low,y_err_high,marker_box_centre_x,marker_box_centre_y,centre_from
+Cutting-induced,21.29745,75.65233,16.4701,26.11215,72.28166,79.71029,21.29749,75.84911,vbar/hbar
+Cutting-induced,24.52822,132.42034,18.47517,30.59463,130.83699,133.80706,24.54102,132.41865,hjunction/hbar
+Cutting-induced,24.77115,160.95205,19.995,29.49638,155.00854,166.89574,24.74565,160.75338,vbar/hbar
+Cutting-induced,29.87947,190.27801,23.72379,36.04758,185.42416,195.42916,29.87905,190.47658,vbar/hbar
+Cutting-induced,33.37875,220.29821,26.68688,40.00653,214.05428,226.24194,33.37876,220.39665,vbar/hbar
+Cutting-induced,36.76298,259.23375,27.15921,46.35384,258.1426,260.42195,36.75007,259.23375,hjunction/hbar
+Tearing-induced,42.34392,299.3574,31.6034,53.09603,285.19098,313.13039,42.3437,299.16063,vbar/hbar

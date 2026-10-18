@@ -1,0 +1,113 @@
+# wei2025 (Wei et al. 2025, Int J Numer Anal Methods Geomech 49:2949-2964), Figure 11(e): Evolution of forces on spherical quartz indenter (R = 14.5 A) with sliding distance under different indentation depths (hc) of hc = 22 A (panel e)
+# Columns: series = Fx, Fy or Fz (legend names; force on the indenter along x, y, z);
+#   x_nominal_A = sliding distance of the sample in angstrom, snapped to the integer-angstrom sampling grid (see below);
+#   x_measured_A = sliding distance of the located marker centre (angstrom); force_nN = marker centre in nN;
+#   match_score = normalized cross-correlation of the marker template (0-1); flag = notes.
+# Provenance: tier 3, digitized from the 300 ppi embedded raster image (PDF p. 11; no vector data) by fig11_extract.py.
+#   Markers (Fx open black squares, Fy filled red circles, Fz open magenta triangles) located by template matching:
+#   a template learned from the clearly matched markers of all panels of this figure (Fx 181, Fy 257, Fz 50) is correlated with the colour's ink map;
+#   marker position = correlation maximum shifted to the template's ink centroid. Fy circles: only positions that survive a
+#   morphological opening of the red mask with a 4 px disk (removes the dashes, keeps the filled circles) are allowed.
+#   The dashed lines joining the markers are not given separately: they are straight segments through the markers or
+#   (in some panels) smoothed curves passing near them, so they carry no extra data.
+#   x axis calibrated on 7 labelled major ticks (0..30): max residual 0.011 A; frame check: left/right frame at -2.50/32.49 A.
+#   y axis calibrated on 6 labelled major ticks (10..-15): max residual 0.022 nN; frame check: bottom/top frame at -16.01/11.01 nN.
+# Sampling: the 87 confidently matched markers (score >= 0.65) sit at integer angstrom (offset from the integer: rms 0.049 A, max 0.108 A),
+#   so one sample per 1 A from 1 to 30 A (sphere R = 14.5 A) is assumed and each series is searched at each.
+# Markers found: Fx 30, Fy 30, Fz 30 of 30 each; rows without a value are samples whose marker is hidden by another series or merged with the dashed line (not found).
+# Uncertainty: about +-0.09 nN in force (1.5 px; 1 px = 0.061 nN) and +-0.09 A in x_measured.
+#   'weak match' rows (score 0.30-0.55: marker partly covered by a dash or another marker; open markers kept only if their open
+#   centre is seen and the match lies within 0.2 A of the sample position) are less certain; they are cyan on the overlay
+#   work/fig11e_overlay.png (other markers: green Fx, blue Fy, orange Fz).
+#   'at top frame' rows: the marker touches the top of the plot frame and may be cut off there (value is a lower bound).
+series,x_nominal_A,x_measured_A,force_nN,match_score,flag
+Fx,1,0.96,2.791,0.79,
+Fx,2,1.96,0.253,0.96,
+Fx,3,2.95,2.466,0.98,
+Fx,4,3.98,0.835,0.85,
+Fx,5,4.96,0.374,0.65,
+Fx,6,5.96,1.263,0.89,
+Fx,7,6.96,2.930,0.97,
+Fx,8,7.94,0.601,0.86,
+Fx,9,8.93,1.377,0.81,
+Fx,10,9.97,1.314,0.84,
+Fx,11,10.95,3.810,0.98,
+Fx,12,11.95,-2.237,0.97,
+Fx,13,12.94,-1.367,0.66,
+Fx,14,13.93,-0.260,0.68,
+Fx,15,14.98,0.372,0.84,
+Fx,16,15.95,0.784,0.86,
+Fx,17,16.95,-3.918,0.96,
+Fx,18,17.93,-0.950,0.97,
+Fx,19,18.94,-3.425,0.92,
+Fx,20,19.93,-0.958,0.95,
+Fx,21,20.93,-1.920,0.89,
+Fx,22,21.95,-1.870,0.74,
+Fx,23,22.92,2.010,0.77,
+Fx,24,23.92,1.612,0.83,
+Fx,25,24.89,0.444,0.87,
+Fx,26,25.93,-3.785,0.93,
+Fx,27,26.94,1.656,0.92,
+Fx,28,27.93,-1.568,0.92,
+Fx,29,28.94,1.872,0.96,
+Fx,30,29.92,0.235,0.75,
+Fy,1,0.99,-3.887,0.88,
+Fy,2,1.97,-1.226,0.96,
+Fy,3,2.98,-5.655,0.96,
+Fy,4,3.98,-2.722,0.96,
+Fy,5,4.95,-6.615,0.74,
+Fy,6,5.98,-6.421,0.89,
+Fy,7,6.98,-9.246,0.82,
+Fy,8,7.99,-9.845,0.83,
+Fy,9,8.96,-8.400,0.70,
+Fy,10,10.00,-8.335,0.73,
+Fy,11,10.96,-8.853,0.72,
+Fy,12,11.96,-7.200,0.95,
+Fy,13,12.96,-8.866,0.74,
+Fy,14,13.96,-8.523,0.82,
+Fy,15,14.97,-5.583,0.97,
+Fy,16,15.95,-6.592,0.77,
+Fy,17,16.96,-10.088,0.96,
+Fy,18,17.97,-7.719,0.97,
+Fy,19,18.96,-10.002,0.97,
+Fy,20,19.96,-6.629,0.98,
+Fy,21,20.96,-9.277,0.93,
+Fy,22,21.96,-11.118,0.95,
+Fy,23,22.96,-7.545,0.97,
+Fy,24,23.96,-10.506,0.65,
+Fy,25,24.95,-11.890,0.96,
+Fy,26,25.93,-9.450,0.76,
+Fy,27,26.96,-9.062,0.82,
+Fy,28,27.96,-10.946,0.97,
+Fy,29,28.95,-8.877,0.97,
+Fy,30,29.95,-12.939,0.86,
+Fz,1,1.07,10.829,0.56,at top frame (may be clipped)
+Fz,2,1.96,7.369,0.93,
+Fz,3,2.98,8.329,0.61,
+Fz,4,3.96,9.633,0.98,
+Fz,5,4.96,6.759,0.96,
+Fz,6,5.97,8.104,0.87,
+Fz,7,6.97,7.095,0.57,
+Fz,8,7.98,5.424,0.77,
+Fz,9,8.96,5.370,0.86,
+Fz,10,9.96,3.920,0.93,
+Fz,11,10.96,5.860,0.95,
+Fz,12,11.96,3.745,0.93,
+Fz,13,12.95,5.028,0.73,
+Fz,14,13.96,4.300,0.67,
+Fz,15,14.96,5.483,0.79,
+Fz,16,15.96,4.454,0.89,
+Fz,17,16.95,6.759,0.96,
+Fz,18,17.95,4.896,0.96,
+Fz,19,18.96,6.444,0.91,
+Fz,20,19.95,3.393,0.91,
+Fz,21,20.96,6.696,0.96,
+Fz,22,21.95,2.445,0.98,
+Fz,23,22.95,4.741,0.88,
+Fz,24,23.94,6.047,0.72,
+Fz,25,24.97,6.442,0.88,
+Fz,26,25.95,6.703,0.79,
+Fz,27,26.94,5.303,0.98,
+Fz,28,27.95,9.612,0.94,
+Fz,29,28.94,4.334,0.95,
+Fz,30,29.94,7.465,0.77,

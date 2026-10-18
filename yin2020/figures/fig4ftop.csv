@@ -1,0 +1,42 @@
+# Yin et al. 2020 Nat. Commun. 11:4949, Fig. 4f, top histogram: x 'Montage rate with 20 MPixel tiles (fps)', y 'Counts'.
+# Columns: bin_left, bin_right, bin_centre = bin edges and centre in frames per second (fps), from the bar edges;
+#   count_read = bar height read off the image in Counts (sub-pixel top edge mapped through the y ticks);
+#   count = count_read rounded to the nearest integer (histogram counts are whole numbers).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image of the bars (no vector data in the PDF; the
+#   tick labels are PDF text) by the matching _extract.py with tools/hist4f.py. Axis calibration: linear fit on the
+#   8 x tick marks and 7 y tick marks in the image (max residual 0.0021 fps, 0.206 counts); the
+#   PDF-text label centres agree with the tick marks to within 0.7 px (x) and 1.6 px (y).
+# Bins: 29 equal bins of 12.00 px = 0.0700 fps found from the steps of the bar tops; empty bins inside
+#   the range are listed with count 0. The paper gives no bin settings.
+# Uncertainty: bin edges about +-0.006 fps (1 px); counts about +-0.50 per px, so +-1 count after rounding.
+# Sum of the rounded counts: 1325 (caption: 'a sample size of over 1000 sections').
+bin_left_fps,bin_right_fps,bin_centre_fps,count_read,count
+1.9189,1.9889,1.9539,2.34,2
+1.9889,2.0589,2.0239,4.35,4
+2.0589,2.1290,2.0940,4.35,4
+2.1290,2.1990,2.1640,5.31,5
+2.1990,2.2690,2.2340,3.29,3
+2.2690,2.3390,2.3040,14.39,14
+2.3390,2.4090,2.3740,13.35,13
+2.4090,2.4791,2.4440,30.44,30
+2.4791,2.5491,2.5141,10.33,10
+2.5491,2.6191,2.5841,18.38,18
+2.6191,2.6891,2.6541,26.42,26
+2.6891,2.7591,2.7241,25.41,25
+2.7591,2.8292,2.7941,22.08,22
+2.8292,2.8992,2.8642,57.29,57
+2.8992,2.9692,2.9342,49.17,49
+2.9692,3.0392,3.0042,84.23,84
+3.0392,3.1092,3.0742,121.18,121
+3.1092,3.1793,3.1442,103.33,103
+3.1793,3.2493,3.2143,95.30,95
+3.2493,3.3193,3.2843,157.19,157
+3.3193,3.3893,3.3543,96.29,96
+3.3893,3.4593,3.4243,95.30,95
+3.4593,3.5293,3.4943,122.02,122
+3.5293,3.5994,3.5644,61.22,61
+3.5994,3.6694,3.6344,65.17,65
+3.6694,3.7394,3.7044,23.41,23
+3.7394,3.8094,3.7744,7.32,7
+3.8094,3.8794,3.8444,8.33,8
+3.8794,3.9495,3.9145,6.32,6

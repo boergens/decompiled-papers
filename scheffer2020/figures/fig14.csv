@@ -1,0 +1,22 @@
+# Figure 14 (p. 31 of elife-57443-v4.pdf): cells of nine types plotted by connectivity after UMAP; dim1 (AU) vs dim2 (AU).
+# Provenance: tier 3, digitized from the embedded JPEG (1067 x 998 px) by fig14_extract.py. No source data named for this figure.
+# Calibration: gridlines; dim1 41.84 px/AU (residuals [-0.001, 0.004, -0.004, 0.001]), dim2 39.32 px/AU (residuals [0.01, -0.005, -0.02, 0.015, -0.0]).
+# Markers are translucent squares (~16 px = ~0.38 AU wide) overlapping inside clusters: individual cells cannot be separated.
+#   One row per connected blob of one colour ('stack'): x_centroid/y_centroid = blob centroid; x_min..x_max, y_min..y_max =
+#   centres of the outermost markers of the blob (blob extent minus half a marker width); area_px = blob area in image px;
+#   est_markers = area_px / 265 (area of one isolated marker), a LOWER bound when markers lie on top of each other;
+#   status = single (one marker) or stack. Pixels where two series overlap (e.g. ER2_d/ER2_b, ER2_d/ER2_a, EPG/ExR6)
+#   are not assigned, so touching clusters of different series are slightly eroded at their contact.
+# Uncertainty: centroid +-0.05 AU; outer-marker centres +-0.1 AU.
+series,x_centroid,y_centroid,x_min,x_max,y_min,y_max,area_px,est_markers,status
+ER3p_a,-10.497,-0.431,-10.847,-10.082,-0.717,-0.158,1214,5,stack
+ER2_c,-3.597,7.516,-3.916,-3.271,7.319,7.675,978,4,stack
+ER2_c,-2.809,6.039,-3.103,-2.434,5.844,6.251,1028,4,stack
+ER2_d,0.139,6.557,0.004,0.219,6.429,6.633,387,1,stack
+ExR7,7.604,-10.544,7.484,7.723,-10.636,-10.458,455,2,stack
+EPG,6.932,-7.084,6.6,7.341,-7.991,-6.109,2963,11,stack
+EPG,6.565,-9.909,6.098,7.006,-10.814,-8.932,2625,10,stack
+ER3p_b,-10.349,-1.525,-10.465,-10.25,-1.607,-1.429,450,2,stack
+ER2_a,-0.814,6.275,-1.311,-0.259,6.073,6.455,1167,4,stack
+ExR6,7.517,-9.951,7.484,7.556,-9.949,-9.949,281,1,single
+ER2_b,0.618,6.958,0.553,0.792,6.633,7.192,722,3,stack

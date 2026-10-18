@@ -1,0 +1,44 @@
+# Figure 6b: feature values that lie below the -100 % axis limit (not drawn in the original; the line leaves the axes).
+# Values are extrapolated from the visible straight line segments that enter/leave the clipped region (least-squares fit of the polyline);
+# precision_pct = 1-sigma propagated from 0.005 pt coordinate rounding. Use only to redraw the excursions; they are not plotted data points.
+# Rows with an empty value: both adjacent segments are entirely below -100 %, so nothing constrains the vertex.
+series,feature_index,extrapolated_value_pct,precision_pct,note
+binocular_conscious_state2_pct,21,-137.84,0.46,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,22,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_conscious_state2_pct,23,-138.41,0.47,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,25,-124.12,0.23,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,30,-133.63,0.25,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,33,-111.75,0.14,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,34,-103.61,0.09,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,38,-130.98,0.63,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,39,-116.79,0.30,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,42,-128.46,0.23,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,44,-100.14,0.08,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,45,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_conscious_state2_pct,46,-104.97,0.08,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_conscious_state2_pct,49,-127.07,0.20,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,21,-192.86,0.43,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,22,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,23,-188.34,0.65,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,25,-159.21,0.36,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,27,-100.09,0.06,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,28,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,29,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,30,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,31,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,32,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,33,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,34,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,35,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,36,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,37,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,38,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,39,-169.87,0.38,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,42,-181.29,0.64,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,44,-141.81,0.45,extrapolated from the straight line segment(s) entering the clipped region; not drawn in the figure
+binocular_suppressed_state1_pct,45,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,46,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,47,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,48,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,49,,,below -100 and both adjacent segments fully clipped: value not recoverable
+binocular_suppressed_state1_pct,50,,,below -100 and both adjacent segments fully clipped: value not recoverable

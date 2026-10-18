@@ -1,0 +1,23 @@
+# source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Extended Data Figure 10, PDF page 50 (vector graphics; bars, error bars and in-bar labels are drawn inside form XObjects), panel d
+# value = bar height read from the bar rectangle (top edge mapped through the y axis); for bars clipped at the lower axis limit the value is the number printed inside the bar (transcribed by eye from a 300-dpi render) and bar_drawn_to gives the drawn extent
+# err_lo / err_hi = ends of the black error bar (vertical 0.5-pt strokes at the bar centre; the geometry is unclipped even where the figure clips it at the axis limit); n_error_bar_segments = 2 normally (one segment each way from the bar top)
+# x axis: 4 tick marks calibrated to the four model positions 0..3 (Real, 2-state, Average, Uncoord) (resid 6.8e-05)
+# y axis: 5 tick marks calibrated to [-100, -50, 0, 50, 100] (resid 3.0e-03)
+# bar colours as in the PDF: #fcae34 orange (state 1), #543379 purple (state 2); light variants are the same colour at fill opacity 0.35
+model,series,value_ev_pct,bar_drawn_to_ev_pct,err_lo_ev_pct,err_hi_ev_pct,printed_label,bar_colour_rgbhex,bar_fill_opacity,n_error_bar_segments
+Real,state1_conscious,46.104,46.104,42.712,49.509,,fcae34,1.0,2
+Real,state1_suppressed,-60.098,-60.098,-68.032,-52.166,,fcae34,0.35,2
+Real,state2_conscious,-29.477,-29.477,-35.892,-23.06,,543379,0.35,2
+Real,state2_suppressed,32.364,32.364,28.74,35.999,,543379,1.0,2
+2-state,state1_conscious,74.238,74.238,72.642,75.829,,fcae34,1.0,2
+2-state,state1_suppressed,-124.0,-99.998,nan,nan,-124,fcae34,0.35,0
+2-state,state2_conscious,-128.0,-99.998,nan,nan,-128,543379,0.35,0
+2-state,state2_suppressed,73.169,73.169,71.283,75.064,,543379,1.0,2
+Average,state1_conscious,14.083,14.083,10.654,17.514,,fcae34,1.0,2
+Average,state1_suppressed,15.869,15.869,12.322,19.417,,fcae34,0.35,2
+Average,state2_conscious,13.075,13.075,9.346,16.806,,543379,0.35,2
+Average,state2_suppressed,14.655,14.655,11.103,18.208,,543379,1.0,2
+Uncoord,state1_conscious,15.233,15.233,11.906,18.563,,fcae34,1.0,2
+Uncoord,state1_suppressed,12.861,12.861,9.484,16.239,,fcae34,0.35,2
+Uncoord,state2_conscious,15.922,15.922,12.806,19.039,,543379,0.35,2
+Uncoord,state2_suppressed,12.504,12.504,8.9,16.112,,543379,1.0,2

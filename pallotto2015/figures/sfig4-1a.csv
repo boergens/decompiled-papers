@@ -1,0 +1,107 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 4-figure supplement 1A: Convex hull volume (voxels) vs Surface area (voxels).
+# Columns: series, surface_area_voxels, convex_hull_volume_voxels, match_score (template correlation).
+# Provenance: tier 3, digitized from elife_figure_supplements/elife-08206-fig4-figsupp1-v3.jpg; figures/sfig4-1a_extract.py.
+# x axis (log10) fitted on ticks 10@123.25px, 100@264.5px, 1000@406.5px, 10000@547.5px, 100000@689px; max residual 0.00247 decades.
+# y axis (log10) fitted on ticks 10@614.5px, 100@473.5px, 1000@331.5px, 10000@190.5px, 100000@48.5px; max residual 0.00212 decades.
+# Uncertainty: +-1 px = +-0.0071 decade on either axis (about +-1.6 %).
+# Markers found: {'AII amacrine cell tight contact (blue)': 3, 'cone bipolar cell tight contact (green)': 16, 'cleft contact (grey x)': 79}. Expected from the text: 150 cleft, 4 AII, 17 cone bipolar contacts. Missing x marks are hidden
+#   under dots or under other x marks in the dense band; two overlapping dots may be counted as one (or vice versa).
+series,surface_area_voxels,convex_hull_volume_voxels,match_score
+AII amacrine cell tight contact (blue),1852,7989,0.86
+AII amacrine cell tight contact (blue),487.4,1334,0.82
+AII amacrine cell tight contact (blue),414.2,1171,0.75
+cone bipolar cell tight contact (green),3067,1.832e+04,0.95
+cone bipolar cell tight contact (green),246,1190,0.93
+cone bipolar cell tight contact (green),3790,2.416e+04,0.92
+cone bipolar cell tight contact (green),1294,4594,0.91
+cone bipolar cell tight contact (green),1359,6361,0.91
+cone bipolar cell tight contact (green),2288,1.323e+04,0.90
+cone bipolar cell tight contact (green),528.7,1519,0.90
+cone bipolar cell tight contact (green),528.7,2729,0.90
+cone bipolar cell tight contact (green),84.01,215.6,0.88
+cone bipolar cell tight contact (green),226.8,441.1,0.88
+cone bipolar cell tight contact (green),219.5,581.7,0.87
+cone bipolar cell tight contact (green),674.9,2036,0.74
+cone bipolar cell tight contact (green),299.1,1171,0.74
+cone bipolar cell tight contact (green),674.9,2209,0.65
+cone bipolar cell tight contact (green),346.3,1062,0.55
+cone bipolar cell tight contact (green),314,1045,0.46
+cleft contact (grey x),114.5,873.7,1.00
+cleft contact (grey x),143.8,81.2,0.95
+cleft contact (grey x),674.9,5319,0.93
+cleft contact (grey x),1273,2.087e+04,0.88
+cleft contact (grey x),2649,1.323e+04,0.82
+cleft contact (grey x),128.3,651.8,0.80
+cleft contact (grey x),834,4669,0.79
+cleft contact (grey x),2564,1.773e+04,0.79
+cleft contact (grey x),2874,7364,0.78
+cleft contact (grey x),4111,4.707e+04,0.78
+cleft contact (grey x),2874,2.053e+04,0.78
+cleft contact (grey x),1852,1.532e+04,0.77
+cleft contact (grey x),166.4,205.3,0.76
+cleft contact (grey x),205.7,198.7,0.75
+cleft contact (grey x),5164,4.001e+04,0.72
+cleft contact (grey x),2215,9555,0.72
+cleft contact (grey x),1031,6789,0.71
+cleft contact (grey x),177.6,979.1,0.71
+cleft contact (grey x),209.1,779.6,0.70
+cleft contact (grey x),622.2,2516,0.70
+cleft contact (grey x),98.87,279.7,0.69
+cleft contact (grey x),1427,7733,0.68
+cleft contact (grey x),653.3,3318,0.68
+cleft contact (grey x),456.7,1648,0.68
+cleft contact (grey x),86.8,160.8,0.65
+cleft contact (grey x),352,2003,0.65
+cleft contact (grey x),148.5,470.8,0.63
+cleft contact (grey x),146.1,212.1,0.63
+cleft contact (grey x),388.1,832,0.61
+cleft contact (grey x),1976,1.2e+04,0.61
+cleft contact (grey x),1574,1.281e+04,0.60
+cleft contact (grey x),192.7,298.5,0.59
+cleft contact (grey x),2364,2.496e+04,0.59
+cleft contact (grey x),289.5,600.9,0.59
+cleft contact (grey x),109,233.8,0.58
+cleft contact (grey x),1273,8666,0.58
+cleft contact (grey x),564.3,2138,0.58
+cleft contact (grey x),1253,4033,0.57
+cleft contact (grey x),456.7,2173,0.57
+cleft contact (grey x),1882,1.003e+04,0.56
+cleft contact (grey x),151,275.2,0.56
+cleft contact (grey x),756.4,3904,0.55
+cleft contact (grey x),602.3,1675,0.53
+cleft contact (grey x),314,792.4,0.53
+cleft contact (grey x),1764,1.281e+04,0.53
+cleft contact (grey x),919.6,3318,0.52
+cleft contact (grey x),1031,4235,0.52
+cleft contact (grey x),250,888,0.52
+cleft contact (grey x),1427,9249,0.52
+cleft contact (grey x),381.8,1703,0.52
+cleft contact (grey x),122.2,245.5,0.51
+cleft contact (grey x),143.8,334.5,0.50
+cleft contact (grey x),369.6,1378,0.49
+cleft contact (grey x),161.1,441.1,0.49
+cleft contact (grey x),1852,9249,0.49
+cleft contact (grey x),107.3,192.4,0.49
+cleft contact (grey x),202.4,651.8,0.48
+cleft contact (grey x),1404,4983,0.48
+cleft contact (grey x),94.15,174.5,0.48
+cleft contact (grey x),456.7,1971,0.48
+cleft contact (grey x),262.6,641.3,0.47
+cleft contact (grey x),205.7,707.1,0.47
+cleft contact (grey x),174.8,368.8,0.46
+cleft contact (grey x),114.5,313.4,0.46
+cleft contact (grey x),1136,3968,0.46
+cleft contact (grey x),1253,5406,0.45
+cleft contact (grey x),400.9,1028,0.45
+cleft contact (grey x),555.2,1939,0.45
+cleft contact (grey x),352,1730,0.44
+cleft contact (grey x),834,2729,0.43
+cleft contact (grey x),280.2,888,0.43
+cleft contact (grey x),834,3484,0.43
+cleft contact (grey x),1574,8666,0.42
+cleft contact (grey x),363.6,1569,0.42
+cleft contact (grey x),421,1378,0.42
+cleft contact (grey x),394.4,947.7,0.41
+cleft contact (grey x),602.3,1544,0.41
+cleft contact (grey x),847.7,4167,0.41
+cleft contact (grey x),107.3,253.7,0.41

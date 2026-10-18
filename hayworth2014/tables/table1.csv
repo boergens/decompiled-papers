@@ -1,0 +1,29 @@
+# Table 1 | Breakdown of the time required for each step of data acquisition using ATUM-SEM and WaferMapper.
+# Footnote: Asterisks indicate steps that could significantly benefit from further software development.
+# Hayworth et al. 2014, Front. Neural Circuits 8:68, p. 17. Transcribed verbatim from the PDF.
+# Columns: group = the bold group heading row of the table; group_time_heading = the bold right-hand heading of
+#   that group (what the time column means for it; empty for 'Montage time'); step; time (as printed).
+group,group_time_heading,step,time
+Sample preparation,Time (varies with tissue size and staining method),Tissue processing,1–2 weeks
+Sample preparation,Time (varies with tissue size and staining method),Sectioning,8–30 s/section
+Sample preparation,Time (varies with tissue size and staining method),Constructing wafers,∼30 min/wafer (100–500 sections per wafer)
+Wafer mapping,Time per wafer,Full wafer image (optical),3 min/wafer
+Wafer mapping,Time per wafer,Wafer loading into chamber,5 or ∼45 min/wafer (with or without load lock)
+Wafer mapping,Time per wafer,Full wafer image (EM alternative to optical),"20, 60 min/wafer (Merlin, Sigma)"
+Wafer mapping,Time per wafer,Section mapping,∼10 min/wafer
+Wafer mapping,Time per wafer,Section overview image acquisition,30–120 min/wafer (depending on desired image quality)
+Offline wafer mapping*,Time per wafer (using 2 Intel Xeon x5672 3.2 GHz 4 core processors),Section overview alignment (automatic)*,10–30 min/wafer
+Offline wafer mapping*,Time per wafer (using 2 Intel Xeon x5672 3.2 GHz 4 core processors),Manual correction of overview alignment,0–20 min/wafer
+Offline wafer mapping*,Time per wafer (using 2 Intel Xeon x5672 3.2 GHz 4 core processors),Target point alignment*,10–30 min/wafer
+Offline wafer mapping*,Time per wafer (using 2 Intel Xeon x5672 3.2 GHz 4 core processors),Manual correction of target point alignment,0–20 min/wafer
+High resolution imaging,Time per wafer,Wafer load into microscope,5 or ∼45 min/wafer (with or without load lock)
+High resolution imaging,Time per wafer,WaferMapper reload procedure,∼10 min/wafer
+High resolution imaging,Time per wafer,Montage setup,∼5 min/wafer
+Montage time,,Movement to section,∼10 s
+Montage time,,Image based stage correction,∼1 min
+Montage time,,Focus-stigmation-focus*,∼2 min
+Montage time,,Pixel dwell time,50–3000 ns (depending on tissue signal and detector)
+Montage time,,Time between tiles (with quality check),8 s
+Estimated project breakdown,"High speed imaging of 10,000 sections using 100,000 × 100,000 pixel montages",Raw pixel scan time (minimum),57 days
+Estimated project breakdown,"High speed imaging of 10,000 sections using 100,000 × 100,000 pixel montages",Montage acquisition time (with overhead),104 days
+Estimated project breakdown,"High speed imaging of 10,000 sections using 100,000 × 100,000 pixel montages",Total data acquisition time (start to finish),130 days

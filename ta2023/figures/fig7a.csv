@@ -1,0 +1,58 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 7(a) 'Compression': energy vs displacement for oxygen on C(110)
+#   under compressive stress; legend 0% (grey circles, black line), 3% (red squares), 7% (blue triangles),
+#   10% (green downward triangles).
+# Columns: series (legend names); displacement_A = x of the marker centre in Angstrom (measured, not snapped to 0.25 A);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 365); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig7a_extract.py.
+#   y calibrated on the 14 major ticks -6..7 eV (max residual 0.013 eV, 0.0230 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0013 A, 0.00345 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening of the closed colour mask; row
+#   offsets from the legend (circles 0, squares +0.5, triangles 0, downward triangles +2.0 px).
+# Uncertainty: 2 px for clear markers (0.05 eV); 3-4 px for partly hidden or hidden ones (0.07-0.09 eV).
+# The smooth curves are interpolations through the markers and are not given.
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+0%,-0.000,-0.014,0.09,141.0,448.0,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+0%,0.250,0.331,0.09,213.5,433.0,partly hidden,"under the 3% square; lower rim visible, bottom row 444 - 11 px"
+0%,0.500,1.481,0.09,286.0,383.0,partly hidden,"under the 3% square; lower rim visible, bottom row 394 - 11 px"
+0%,0.753,2.010,0.09,359.0,360.0,partly hidden,"under the 3% square; lower rim visible, bottom row 371 - 11 px"
+0%,1.003,2.632,0.09,431.5,333.0,partly hidden,"under the 3% square; lower rim visible, bottom row 344 - 11 px"
+0%,1.250,2.459,0.05,503.0,340.5,ok,
+0%,1.499,2.436,0.05,575.0,341.5,ok,
+0%,1.751,2.459,0.05,648.0,340.5,ok,
+0%,2.000,2.701,0.09,720.0,330.0,partly hidden,"under the 3% square; lower rim visible, bottom row 341 - 11 px (also under the 7% triangle)"
+0%,2.252,3.276,0.09,793.0,305.0,partly hidden,"under the 3% square; lower rim visible, bottom row 316 - 11 px"
+0%,2.497,3.046,0.09,864.0,315.0,partly hidden,lower part under the 3% square (centre from its top edge and the typical marker height 23 px)
+3%,-0.000,-0.014,0.09,141.0,448.0,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+3%,0.252,0.618,0.05,214.0,420.5,ok,
+3%,0.500,1.619,0.05,286.0,377.0,ok,
+3%,0.753,2.114,0.05,359.0,355.5,ok,
+3%,1.003,2.816,0.05,431.5,325.0,ok,
+3%,1.253,0.952,0.05,504.0,406.0,ok,
+3%,1.502,1.159,0.05,576.0,397.0,ok,
+3%,1.754,1.918,0.12,649.0,364.0,partly hidden,"visible blob 25x18 px, typical 26x24"
+3%,2.001,2.977,0.07,720.5,318.0,partly hidden,"the 7% triangle lies on top; square edges columns 709-732, rows 306-329 (+0.5 px legend offset)"
+3%,2.252,3.310,0.05,793.0,303.5,ok,
+3%,2.499,2.609,0.05,864.5,334.0,ok,
+7%,-0.000,-0.014,0.09,141.0,448.0,hidden,"all four markers overlap at the origin under the 10% marker; the curves leave the cluster at its centre, so the 10% marker's centre is given"
+7%,0.260,1.182,0.05,216.5,396.0,ok,
+7%,0.500,-0.175,0.05,286.0,455.0,ok,
+7%,0.742,0.917,0.05,356.0,407.5,ok,
+7%,1.006,0.446,0.05,432.5,428.0,ok,
+7%,1.245,0.572,0.05,501.5,422.5,ok,
+7%,1.495,0.779,0.05,574.0,413.5,ok,
+7%,1.744,1.573,0.05,646.0,379.0,ok,
+7%,1.991,2.827,0.05,717.5,324.5,ok,
+7%,2.252,1.780,0.05,793.0,370.0,ok,
+7%,2.499,0.342,0.05,864.5,432.5,ok,
+10%,-0.000,-0.014,0.05,141.0,448.0,ok,
+10%,0.245,-1.959,0.05,212.0,532.5,ok,
+10%,0.507,-1.867,0.05,288.0,528.5,ok,
+10%,0.747,-1.521,0.05,357.5,513.5,ok,
+10%,0.998,-4.961,0.05,430.0,663.0,ok,
+10%,1.257,-4.858,0.05,505.0,658.5,ok,
+10%,1.506,-4.536,0.05,577.0,644.5,ok,
+10%,1.751,-3.661,0.05,648.0,606.5,ok,
+10%,2.001,-2.315,0.05,720.5,548.0,ok,
+10%,2.243,-2.453,0.05,790.5,554.0,ok,
+10%,2.499,-2.442,0.05,864.5,553.5,ok,

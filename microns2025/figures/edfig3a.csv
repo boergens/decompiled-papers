@@ -1,0 +1,39 @@
+# Extended Data Fig. 3A (p. 26 of microns2025.pdf): distribution of multi-soma root IDs by number of neurons per ID,
+# before (9/30/20, dark blue) and after (4/4/23, light blue) APL proofreading.
+# Provenance: tier 2, vector paths (bar tops exact to ~0.01 pt); printed_label = count printed above each bar,
+# read by eye from a 300 dpi render (exact integers; they agree with bar_height to within 1.5).
+# Columns: date (legend); neurons_per_id (x category; the axis skips 16); bar_height (count from the bar top);
+# printed_label; axis_part (upper = read on the 1000-6000 part of the broken axis, lower = on the 0-200 part).
+# upper y: value = -62.2674 * page_coord + 10347.9; max |residual| on the ticks 0.0032 data units
+# lower y: value = -2.14715 * page_coord + 569.928; max |residual| on the ticks 0.00021 data units
+date,neurons_per_id,bar_height,printed_label,axis_part
+9/30/20,2,5099.99,5100,upper
+9/30/20,3,1176.03,1176,upper
+9/30/20,4,366.05,366,upper
+9/30/20,5,179.00,179,lower
+9/30/20,6,95.00,95,lower
+9/30/20,7,67.00,67,lower
+9/30/20,8,31.00,31,lower
+9/30/20,9,15.00,15,lower
+9/30/20,10,7.00,7,lower
+9/30/20,11,7.00,7,lower
+9/30/20,12,2.00,2,lower
+9/30/20,13,1.00,1,lower
+9/30/20,14,2.00,2,lower
+9/30/20,15,1.00,1,lower
+9/30/20,17,1.00,1,lower
+4/4/23,2,29.00,29,lower
+4/4/23,3,3.00,3,lower
+4/4/23,4,5.00,5,lower
+4/4/23,5,1.00,1,lower
+4/4/23,6,1.00,1,lower
+4/4/23,7,-0.00,0,lower
+4/4/23,8,-0.00,0,lower
+4/4/23,9,-0.00,0,lower
+4/4/23,10,-0.00,0,lower
+4/4/23,11,-0.00,0,lower
+4/4/23,12,-0.00,0,lower
+4/4/23,13,-0.00,0,lower
+4/4/23,14,-0.00,0,lower
+4/4/23,15,-0.00,0,lower
+4/4/23,17,-0.00,0,lower

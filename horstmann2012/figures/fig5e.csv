@@ -1,0 +1,30 @@
+# Horstmann et al. 2012 PLoS ONE 7: e35172, Figure 5E: histogram of the distribution of distances between
+#   the presynaptic membrane and the synaptic vesicle membranes, for the release site shown in Fig. 5D.
+# Columns: bin_centre_nm = centre of the bar on the x axis 'Distance SV to AZ [nm]' (bars are 20 nm apart and
+#   centred on multiples of 20 nm; neither the figure nor the caption gives the bin edges or bin width);
+#   count_digitized = height of the bar's top edge in units of the y axis 'No. SVs'; count = count_digitized
+#   rounded to the nearest integer (counts of vesicles are integers); note = 'no bar drawn' for empty bins.
+# Provenance: tier 3, digitized from the embedded 200 ppi JPEG of Figure 5 (no vector paths in the PDF) by
+#   fig5e_extract.py. y calibrated on the 3 labelled ticks 0, 5, 10 (max residual 0.009 counts,
+#   18.35 px per count); x calibrated on the 9 labelled ticks 0-320 nm (max residual 0.40 nm).
+# Uncertainty: about +-0.054 counts (1 px) on count_digitized, +-1 nm on bin positions.
+# Sum of counts = 82 (the text on p. 5 gives n = 82 synaptic vesicles for this release site).
+bin_centre_nm,count_digitized,count,note
+0,3.002,3,
+20,11.994,12,
+40,3.983,4,
+60,7.007,7,
+80,10.005,10,
+100,8.996,9,
+120,5.018,5,
+140,5.018,5,
+160,7.988,8,
+180,3.002,3,
+200,5.999,6,
+220,3.002,3,
+240,1.994,2,
+260,0.000,0,no bar drawn
+280,3.002,3,
+300,1.013,1,
+320,0.000,0,no bar drawn
+340,1.013,1,

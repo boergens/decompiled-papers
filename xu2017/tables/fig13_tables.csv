@@ -1,0 +1,15 @@
+# Xu et al. 2017 eLife, Figure 13: the three tables printed below the three scatter plots (transcribed by the decompiler).
+# Only the left table prints row labels; the middle (epoxy) and right (Pt Tetrakis) tables have the same three rows. The left side of the tables is labelled '1.2 KeV'.
+# Row label 'In 0-45o & 0.1-1.2KeV Window': the 'o' is a superscript degree sign in the figure. Values as printed (some with a space before %).
+# Decompiler note: these model values differ from Figure 15(a) at 1.2 keV for epoxy (3.9% / 47% here vs 4.2% / 50.6%) and Pt Tetrakis (10.4% / 5.2% / 50% here vs 10.3% / 5.5% / 53.1%);
+#   measured Pt detection efficiency 60% here and in Fig. 15(a) although 7.3/12.7 = 57.5%.
+material,quantity,Model,Measured
+Gold,Total Back Scatter Electrons,40 %,27% from Sample Current
+Gold,In 0-45o & 0.1-1.2KeV Window,22%,15% from In Column Detector
+Gold,Detection efficiency,55%,55%
+Epoxy C21H25O5,Total Back Scatter Electrons,8.3 %,9.1% from Sample Current
+Epoxy C21H25O5,In 0-45o & 0.1-1.2KeV Window,3.9%,5.5% from In Column Detector
+Epoxy C21H25O5,Detection efficiency,47%,60%
+Pt Tetrakis Pt[(C6H5)3P]4,Total Back Scatter Electrons,10.4 %,12.7% from Sample Current
+Pt Tetrakis Pt[(C6H5)3P]4,In 0-45o & 0.1-1.2KeV Window,5.2%,7.3% from In Column Detector
+Pt Tetrakis Pt[(C6H5)3P]4,Detection efficiency,50%,60%

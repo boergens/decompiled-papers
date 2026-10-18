@@ -1,0 +1,13 @@
+# Table 2. Cutting model and condition parameters used in the FE cutting model.
+# Transcribed from p. 9 of the PDF.
+Parameter,Value
+Cutting speed,1.0 mm/s
+Cutting thickness,"60, 80, 100, 120, 150, 200 nm"
+Tool rake angle,45.0°
+Tool clearance angle,5.0°
+Content of nanoparticles,"0.1 wt%, 0.2 wt%, 0.5 wt%, 1.0 wt%"
+Surface area fraction of nanoparticles,"0.05%, 0.1%, 0.25%, 0.5%"
+Length of nanoparticle,100 nm
+Width of nanoparticle,10 nm
+Length of model,1.6 μm
+Height of model,0.5 μm

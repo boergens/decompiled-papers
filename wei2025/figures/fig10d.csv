@@ -1,0 +1,15 @@
+# Wei et al. 2025, Figure 10(d): Average hardness (GPa), one bar per indenter system (average over h_c = 15-25 Å per the caption).
+# Category x axis: bars are evenly spaced, centred on the major x ticks, labelled (rotated) with the system names.
+# Columns: label = printed category label; bar_centre_px / tick_px = bar centre and nearest major tick, column of the
+#   1427 px wide embedded image; H_avg_GPa = bar top (centre of the bar's black top outline);
+#   H_avg_GPa_fill_top = top edge of the coloured fill (a check, ~1 px lower).
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG of Figure 10 by fig10_extract.py;
+#   y calibrated on the 4 labelled major ticks 0.5-2.0 (max residual 0.0008 GPa).
+# Uncertainty: about +-0.006 GPa (1 px).
+label,bar_centre_px,tick_px,H_avg_GPa,H_avg_GPa_fill_top
+Pyramid-0°,864,864,1.902,1.899
+Pyramid-45°,965,965.5,1.981,1.978
+Sphere (R=10 Å),1067,1067,2.037,2.034
+Sphere (R=14.5 Å),1168,1168,2.009,2.006
+Sphere (R=20 Å),1270,1270,2.14,2.135
+Sphere (R=25 Å),1371,1372,1.919,1.916

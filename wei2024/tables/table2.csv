@@ -1,0 +1,20 @@
+# Table 2 (p. 7 of source/wei2024.pdf): Epoxy-quartz pair interactions potential parameters
+# Columns: model; atom species; symbol; ε (kcal/mol); σ (Å) -- lj/cut (12–6 LJ potential). Values verbatim.
+model,atom_species,symbol,eps_kcal_per_mol,sigma_A
+Epoxy,Carbon in the methyl group,c3,0.056,3.479
+Epoxy,"Hydrogen, bonded to carbon",hc,0.02,2.589
+Epoxy,Generic carbon,c,0.056,3.479
+Epoxy,Aromatic carbon,cp,0.066,3.479
+Epoxy,Oxygen in ether,oc,0.246,3.065
+Epoxy,Carbon bonded to 2 H’s,c2,0.056,3.479
+Epoxy,Carbon bonded to 1 H,c1,0.056,3.479
+Epoxy,Hydroxyl oxygen,oh,0.246,3.065
+Epoxy,Carbon in 3-membered ring with hydrogens,c3h,0.056,3.479
+Epoxy,Oxygen in 3-membered ring,o3e,0.246,3.065
+Epoxy,Hydroxyl hydrogen,ho,0.013,0.949
+Epoxy,Nitrogen in aromatic amines,nb,0.065,3.524
+Epoxy,Hydrogen bonded to nitrogen,hn,0.013,0.949
+Quartz,Silicon in silicate,sz,0.040,4.053
+Quartz,Hydroxyl oxygen,oh,0.228,2.860
+Quartz,Hydroxyl hydrogen,ho,0.000,0.000
+Quartz,Oxygen,oz,0.228,2.860

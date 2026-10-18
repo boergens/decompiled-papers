@@ -1,0 +1,43 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 2(b) 'Ether': energy vs displacement of the pulled O atom.
+# Columns: series (legend names of Figure 2(a): C(001) green squares, C(110) red triangles, C(111) blue circles);
+#   displacement_A = x of the marker centre in Angstrom (measured, not snapped to the 0.25 A step grid);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 284); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig2b_extract.py.
+#   y calibrated on the 12 major ticks -1..10 eV (max residual 0.014 eV, 0.0274 eV/px);
+#   x on the 5 major ticks 0..2 A (max residual 0.0024 A, 0.00435 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening of the closed colour mask;
+#   row offsets (-0.5, -1.0, +0.5 px) from the legend of Figure 2(a) (same plot style).
+#   Red triangles and blue circles are semi-transparent here; the red triangles lie on top of the green squares.
+# Uncertainty: 2 px for clear markers (0.05 eV); 4-5 px for partly hidden or hidden ones (0.11-0.14 eV).
+#   'hidden': value read from the marker on top or from the series' curve on both sides (straight-line fit).
+# The smooth curves of the figure are interpolations through the markers and are not given.
+# The arrows (first O detachment per the text) point at C(001) x~1.25 (green), C(110) x~1.25 (red), C(111) x~1.0 (blue).
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+C(001),0.003,0.015,0.05,666.5,475.5,ok,
+C(001),0.251,0.440,0.05,723.5,460.0,ok,
+C(001),0.499,1.521,0.05,780.5,420.5,ok,
+C(001),0.751,2.905,0.05,838.5,370.0,ok,
+C(001),1.004,4.274,0.05,896.5,320.0,ok,
+C(001),1.252,5.014,0.05,953.5,293.0,ok,
+C(001),1.505,4.644,0.05,1011.5,306.5,ok,
+C(001),1.753,4.781,0.05,1068.5,301.5,ok,
+C(001),1.999,4.863,0.05,1125.0,298.5,ok,
+C(110),0.000,-0.040,0.14,666.0,477.5,partly hidden,"visible blob 9x10 px, typical 13x12"
+C(110),0.246,0.563,0.05,722.5,455.5,ok,
+C(110),0.499,1.535,0.14,780.5,420.0,partly hidden,"visible blob 10x11 px, typical 13x12"
+C(110),0.749,2.727,0.14,838.0,376.5,partly hidden,"visible blob 11x10 px, typical 13x12"
+C(110),0.995,3.754,0.05,894.5,339.0,ok,
+C(110),1.246,4.315,0.05,952.0,318.5,ok,
+C(110),1.502,4.370,0.05,1011.0,316.5,ok,
+C(110),1.746,4.521,0.05,1067.0,311.0,ok,
+C(110),1.999,4.616,0.05,1125.0,307.5,ok,
+C(111),0.003,0.015,0.11,666.5,475.5,hidden,"under the C(001) square and C(110) triangle drawn on top; the C(111) curve leaves them at their centre, so the C(001) square's centre is given"
+C(111),0.251,0.373,0.11,723.5,462.4,hidden,under the C(001) square and C(110) triangle drawn on top (curve interpolated over 20 px from 16 columns)
+C(111),0.499,1.261,0.11,780.5,430.0,partly hidden,upper part under the C(001) square (centre from its bottom edge and the typical marker height 16 px)
+C(111),0.751,2.234,0.05,838.5,394.5,ok,
+C(111),0.997,3.507,0.11,895.0,348.0,partly hidden,upper part under the C(110) triangle (centre from its bottom edge and the typical marker height 16 px)
+C(111),1.250,3.699,0.05,953.0,341.0,ok,
+C(111),1.500,3.795,0.05,1010.5,337.5,ok,
+C(111),1.751,3.877,0.05,1068.0,334.5,ok,
+C(111),1.999,3.973,0.11,1125.0,331.0,partly hidden,lower edge touches call-out 2 (centre from its top edge and the typical marker height 16 px)

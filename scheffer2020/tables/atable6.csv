@@ -1,0 +1,176 @@
+# Appendix 1-table 6 of Scheffer et al. 2020 (eLife 9:e57443), pp. 79-83: naming scheme for neurons.
+# Legend: The neuron types that are known to exist but are not yet identified conclusively in the hemibrain data are not shown in the list.
+# One printed row per CSV row, in printed order. section = 'Connectivity types' or 'Morphology types'; category = bold group heading
+# (rows with an empty entry are the headings themselves); level = indentation (1 = first indent). Transcribed from the PDF text layer,
+# checked against the page images. Wrapped rows joined; p. 82 prints 'Projec' / 'tion' across a line break without a hyphen (joined).
+page,section,category,entry,level
+79,Connectivity types,,,0
+79,Connectivity types,,"_a, _b, _c, _d, etc. at the end of the morphology type names shown below",1
+79,Morphology types,,,0
+79,Morphology types,Central complex neuropil neurons,,0
+79,Morphology types,Central complex neuropil neurons,Delta7 (protocerebral bridge Delta seven between glomeruli),1
+79,Morphology types,Central complex neuropil neurons,vDeltaA-M (fan-shaped body vertical Delta within a single column [type ID]),1
+79,Morphology types,Central complex neuropil neurons,hDeltaA-M (fan-shaped body horizontal Delta across columns [type ID]),1
+79,Morphology types,Central complex neuropil neurons,EL (Ellipsoid body - Lateral accessory lobe),1
+79,Morphology types,Central complex neuropil neurons,EPG (Ellipsoid body - Protocerebral bridge - Gall),1
+79,Morphology types,Central complex neuropil neurons,EPGt (Ellipsoid body - Protocerebral bridge - Gall tip),1
+79,Morphology types,Central complex neuropil neurons,ER1-6 (Ellipsoid body Ring neuron [type ID]),1
+79,Morphology types,Central complex neuropil neurons,ExR1-8 (Extrinsic Ring neuron [type ID]),1
+79,Morphology types,Central complex neuropil neurons,FB1A-9C (Fan-shaped Body [layer ID][type ID]),1
+80,Morphology types,Central complex neuropil neurons,FC1A-3 (Fan-shaped body - Crepine [type ID]),1
+80,Morphology types,Central complex neuropil neurons,"FR1, 2 (Fan-shaped body - Rubus [type ID])",1
+80,Morphology types,Central complex neuropil neurons,FS1A-4C (Fan-shaped body - Superior medial protocerebrum [type ID]),1
+80,Morphology types,Central complex neuropil neurons,IbSpsP (Inferior bridge - Superior posterior slope - Protocerebral bridge),1
+80,Morphology types,Central complex neuropil neurons,"LCNOp, pm (Lateral accessory lobe - Crepine - NOduli [compartment ID])",1
+80,Morphology types,Central complex neuropil neurons,LNOa (Lateral accessory lobe - NOduli [compartment ID]),1
+80,Morphology types,Central complex neuropil neurons,LNO1-3 (Lateral accessory lobe - NOduli [type ID]),1
+80,Morphology types,Central complex neuropil neurons,GLNO (Gall - Lateral accessory lobe - Noduli),1
+80,Morphology types,Central complex neuropil neurons,LPsP (Lateral accessory lobe - Posterior slope - Protocerebral bridge),1
+80,Morphology types,Central complex neuropil neurons,P1-9 (Protocerebral bridge [glomerulus ID]),1
+80,Morphology types,Central complex neuropil neurons,P6-8P9 (Protocerebral bridge [glomerulus ID1] Protocerebral bridge [glomerulus ID2]),1
+80,Morphology types,Central complex neuropil neurons,PEG (Protocerebral bridge - Ellipsoid body - Gall),1
+80,Morphology types,Central complex neuropil neurons,"PEN_a(PEN1), _b(PEN2) (Protocerebral bridge - Ellipsoid body - Noduli [subtype ID])",1
+80,Morphology types,Central complex neuropil neurons,PFGs (Protocerebral bridge - Fan-shaped body - Gall surrounding region),1
+80,Morphology types,Central complex neuropil neurons,PFL1-3 (Protocerebral bridge - Fan-shaped body - Lateral accessory lobe [type ID]),1
+80,Morphology types,Central complex neuropil neurons,"PFNa, d, m, p, v (Protocerebral bridge - Fan-shaped body - Noduli [compartment ID])",1
+80,Morphology types,Central complex neuropil neurons,PFR (Protocerebral bridge - Fan-shaped body - Round body),1
+80,Morphology types,Central complex neuropil neurons,SA1-3 (Superior medial protocerebrum - Asymmetrical body [type ID]),1
+80,Morphology types,Central complex neuropil neurons,SAF (Superior medial protocerebrum - Asymmetrical body - Fan-shaped body),1
+80,Morphology types,Central complex neuropil neurons,SpsP (Superior posterior slope - Protocerebral bridge),1
+80,Morphology types,Mushroom body neuropil neurons,,0
+80,Morphology types,Mushroom body neuropil neurons,"KCab-c, m, p, s (Kenyon Cell alpha-beta lobe - [layer ID])",1
+80,Morphology types,Mushroom body neuropil neurons,"KCa’b’-ap1, ap2, m (Kenyon Cell alpha’-beta’ lobe - [layer ID])",1
+80,Morphology types,Mushroom body neuropil neurons,"KCg-d, m, s, t (Kenyon Cell gamma lobe - [layer ID])",1
+80,Morphology types,Mushroom body neuropil neurons,MBON01-35 (Mushroom Body Output Neuron [type ID]),1
+80,Morphology types,Mushroom body neuropil neurons,APL (Anterior Paired Lateral),1
+80,Morphology types,Mushroom body neuropil neurons,DPM (Dorsal Paired Medial),1
+80,Morphology types,Mushroom body neuropil neurons,MB-C1 (Mushroom Body - Calyx [type ID]),1
+80,Morphology types,Mushroom body neuropil neurons,"PAM01-15 (MB-associated DAN, Protocerebral Anterior Medial cluster [type ID])",1
+80,Morphology types,Mushroom body neuropil neurons,"PPL101-106 (MB-associated DAN, Protocerebral Posterior Lateral 1 cluster [type ID])",1
+80,Morphology types,Dopaminergic neurons (DANs),,0
+80,Morphology types,Dopaminergic neurons (DANs),"PPL107, 08 (Protocerebral Posterior Lateral 1 cluster [type ID])",1
+80,Morphology types,Dopaminergic neurons (DANs),PPL201-04 (Protocerebral Posterior Lateral 2 cluster [type ID]),1
+80,Morphology types,Dopaminergic neurons (DANs),PPM1201-05 (Protocerebral Posterior Medial 1/2 clusters [type ID]),1
+80,Morphology types,Dopaminergic neurons (DANs),PAL01-03 (Protocerebral/paired Anterior Lateral cluster [type ID]),1
+80,Morphology types,Octopaminergic neurons,,0
+80,Morphology types,Octopaminergic neurons,OA-ASM1-3 (OctopAmine - Anterior Superior Medial [type ID]),1
+80,Morphology types,Octopaminergic neurons,"OA-VPM3, 4 (OctopAmine - ventral paired median [type ID])",1
+80,Morphology types,Octopaminergic neurons,OA-VUMa1-7 (OctopAmine - ventral unpaired median anterior [type ID]),1
+80,Morphology types,Serotonergic (5HT) neurons,,0
+80,Morphology types,Serotonergic (5HT) neurons,5-HTPLP01 (5-HT Posterior lateral protocerebrum [type ID]),1
+80,Morphology types,Serotonergic (5HT) neurons,"5-HTPMPD01 (Posterior medial protocerebrum, dorsal [type ID])",1
+80,Morphology types,Serotonergic (5HT) neurons,"5-HTPMPV01, 03 (Posterior medial protocerebrum, ventral [type ID])",1
+80,Morphology types,Serotonergic (5HT) neurons,CSD (Serotonin-immunoreactive Deutocerebral neuron),1
+80,Morphology types,Peptidergic and secretory neurons,,0
+81,Morphology types,Peptidergic and secretory neurons,AstA1 (Allatostatin A),1
+81,Morphology types,Peptidergic and secretory neurons,"CRZ01, 02 (Corazonin [type ID])",1
+81,Morphology types,Peptidergic and secretory neurons,"DSKMP1A, 1B, 3 (Drosulfakinin medial protocerebrum [type ID])",1
+81,Morphology types,Peptidergic and secretory neurons,NPFL1-I (Neuropeptide F lateral large),1
+81,Morphology types,Peptidergic and secretory neurons,NPFP1 (Neuropeptide F dorso median),1
+81,Morphology types,Peptidergic and secretory neurons,PI1-3 (Pars Intercerebralis [type ID] Insulin Producing Cell candidates),1
+81,Morphology types,Peptidergic and secretory neurons,SIFa (SIFamide),1
+81,Morphology types,Circadian clock neurons,,0
+81,Morphology types,Circadian clock neurons,DN1a (Dorsal Neuron 1 anterior),1
+81,Morphology types,Circadian clock neurons,"DN1pA, B (Dorsal Neuron 1 posterior [type ID])",1
+81,Morphology types,Circadian clock neurons,l-LNv (large Lateral Neuron ventral),1
+81,Morphology types,Circadian clock neurons,LNd (Lateral Neuron dorsal),1
+81,Morphology types,Circadian clock neurons,LPN (Lateral Posterior Neuron),1
+81,Morphology types,Circadian clock neurons,s-LNv (small Lateral Neuron ventral),1
+81,Morphology types,Fruitless gene expressing neurons,,0
+81,Morphology types,Fruitless gene expressing neurons,aDT4 (anterior DeuTocerebrum [type ID]),1
+81,Morphology types,Fruitless gene expressing neurons,aIPg1-4 (anterior Inferior Protocerebrum [type ID]),1
+81,Morphology types,Fruitless gene expressing neurons,"aSP-f1-4, g1-3B (anterior Superior Protocerebrum [type ID])",1
+81,Morphology types,Fruitless gene expressing neurons,"aSP8, 10A-10C (anterior Superior Protocerebrum [type ID])",1
+81,Morphology types,Fruitless gene expressing neurons,pC1a-e (doublesex-expressing posterior Cells [type ID]),1
+81,Morphology types,Fruitless gene expressing neurons,"oviDNa, b (Oviposition Descending Neuron [type ID])",1
+81,Morphology types,Fruitless gene expressing neurons,oviIN (Oviposition Inhibitory Neuron),1
+81,Morphology types,Fruitless gene expressing neurons,SAG (Sex peptide Abdominal Ganglion),1
+81,Morphology types,Fruitless gene expressing neurons,vpoDN (vaginal plate opening descending neuron),1
+81,Morphology types,Fruitless gene expressing neurons,vpoEN (vaginal plate opening excitatory neuron),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,,0
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,aMe1-26 (accessory Medulla [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,CT1 (Complex neuropils Tangential [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,"LC4, 6, 9–46 (Lobula Columnar [type ID])",1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,LLPC1-3 (Lobula - Lobula Plate Columnar [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,"LPC1, 2 (Lobula Plate Columnar [type ID])",1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,LPLC1-4 (Lobula Plate - Lobula Columnar [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,"LT1, 11, 33–47, 51–87 (Lobula Tangential [type ID])",1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,MC61-66 (Medulla Columnar [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,DCH (Dorsal Centrifugal Horizontal),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,"H1, 2 (Horizontal [type ID])",1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,"HSN, E, S (Horizontal System North, Equatorial, South)",1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,VS (Vertical System),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,VCH (Ventral Centrifugal Horizontal),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,Li11-20 (Lobula intrinsic [type ID]),1
+81,Morphology types,Visual projection neurons and intrinsic neurons of the optic lobe,HBeyelet (Hofbauer-Buchner eyelet),1
+81,Morphology types,Descending neurons,,0
+81,Morphology types,Descending neurons,DNa01-10 (Descending Neuron cell body anterior dorsal [type ID]),1
+81,Morphology types,Descending neurons,DNb01-06 (Descending Neuron cell body anterior ventral [type ID]),1
+81,Morphology types,Descending neurons,DNd01 (Descending Neuron outside cell cluster on the anterior surface [type ID]),1
+82,Morphology types,Descending neurons,DNg30 (Descending Neuron cell body in the gnathal ganglion [type ID]),1
+82,Morphology types,Descending neurons,DNp02-49 (Descending Neuron cell body on the posterior surface of the brain [type ID]),1
+82,Morphology types,Descending neurons,DNES1-3 (Descending Neuron going out to ESophagus [type ID]),1
+82,Morphology types,Descending neurons,Giant_Fiber descending neuron,1
+82,Morphology types,Descending neurons,MDN (Moonwalker Descending Neuron),1
+82,Morphology types,Sensory associated neurons,,0
+82,Morphology types,Sensory associated neurons,"ORN_D, DA1-4, DC1-4, DL1-5, DM1-6, DP1l, m, V, VA1-7m, VC1-5, VL1-2p, VM1-7v (Olfactory Receptor Neuron_ [glomerulus ID])",1
+82,Morphology types,Sensory associated neurons,"TRN_VP1m, 2, 3 (Thermo-Receptor Neuron_ [glomerulus ID])",1
+82,Morphology types,Sensory associated neurons,"HRN_VP1d, 1 l, 4, 5 (Hygro-Receptor Neuron_ [glomerulus ID])",1
+82,Morphology types,Sensory associated neurons,JO-ABC (Johnston’s Organ auditory receptor neuron- [AMMC zone ID]),1
+82,Morphology types,Sensory associated neurons,OCG01-08 (OCellar Ganglion neuron [type ID]),1
+82,Morphology types,Antennal lobe neuropil neurons,,0
+82,Morphology types,Antennal lobe neuropil neurons,"D_adPN, DA1_lPN, DC2_adPN, DL3_lPN, DM4_vPN, DP1l_adPN, VA1d_adPN, VC2_lPN, VL2p_vPN, VM7d_adPN, VP2_l2PN, etc. (uniglomerular [glomerulus ID] _ [cell cluster ID] Projection Neuron)",1
+82,Morphology types,Antennal lobe neuropil neurons,"VP1l+_lvPN, VP3+_vPN, etc. (uni+glomerular [glomerulus ID]+ _ [cell cluster ID] Projection Neuron, arborizing in a glomerulus and a few neighboring areas)",1
+82,Morphology types,Antennal lobe neuropil neurons,"VP1m+VP2_lvPN1, 2, VP4+VL1_l2PN, etc. (biglomerular [glomerulus ID1]+[glomerulus ID2] _ [cell cluster ID] Projection Neuron, arborizing in two glomeruli)",1
+82,Morphology types,Antennal lobe neuropil neurons,"M_smPNm1, 6t2, adPNm3-8, spPN4t9, 5t10, lPNm11A-13, l2PNm14-16, 3t17, 10t18, l19-22, m23, lvPNm24-48, lv2PN9t49, vPNml50-89, ilPNm90, 8t91, imPNl92 (Multiglomerular_ [cell cluster ID] Projection Neuron [antennal lobe tract ID][type ID])",1
+82,Morphology types,Antennal lobe neuropil neurons,"MZ_lvPN, lv2PN (Multiglomerular and subesophageal Zone _ [cell cluster ID] Projection Neuron)",1
+82,Morphology types,Antennal lobe neuropil neurons,"Z_lvPNm1, Z_vPNml1 (subesophageal Zone only _ [cell cluster ID] Projection Neuron [antennal lobe tract ID][type ID])",1
+82,Morphology types,Antennal lobe neuropil neurons,"lLN1, 2, 7–17, v2LN2-5, 30–50, il3LN6, l2LN18-23, vLN24-29 ([cell cluster ID] Local Neuron [type ID])",1
+82,Morphology types,Antennal lobe neuropil neurons,"mAL1-6, B1-5, C1-6, D1-4 (mediodorsal Antennal Lobe neuron [type ID])",1
+82,Morphology types,Antennal lobe neuropil neurons,AL-AST1 (Antennal Lobe - Antenno-Subesophageal Tract [type ID]),1
+82,Morphology types,Antennal lobe neuropil neurons,AL-MBDL1 (Antennal Lobe - Median BunDLe [type ID]),1
+82,Morphology types,Antennal lobe neuropil neurons,ALBN1 (Antennal Lobe Bilateral Neuron [type ID]),1
+82,Morphology types,Antennal lobe neuropil neurons,ALIN1-3 (Antennal Lobe INput neuron [type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,,0
+82,Morphology types,Lateral horn neuropil neurons,LHAD1a1-4a1 (Lateral Horn Anterior Dorsal cell cluster [cell cluster ID][anatomy group ID][type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,LHAV1a1-9a1 (Lateral Horn Anterior Ventral cell cluster [cell cluster ID][anatomy group ID][type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,LHPD1a1-5f1 (Lateral Horn Posterior Dorsal cell cluster [cell cluster ID][anatomy group ID][type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,LHPV1c1-12a1 (Lateral Horn Posterior Ventral cell cluster [cell cluster ID][anatomy group ID][type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,LHCENT1-14 (Lateral Horn CENTrifugal [type ID]),1
+82,Morphology types,Lateral horn neuropil neurons,LHMB1 (Lateral Horn - Mushroom Body [type ID]),1
+82,Morphology types,Anterior optic tubercle neuropil neurons,,0
+82,Morphology types,Anterior optic tubercle neuropil neurons,AOTU001-065 (Anterior Optic TUbercle [type ID]),1
+82,Morphology types,Anterior optic tubercle neuropil neurons,"TuBu01-10, A, B (anterior optic Tubercle - Bulb [type ID])",1
+82,Morphology types,Antler neuropil neurons,,0
+82,Morphology types,Antler neuropil neurons,ATL001-045 (Antler [type ID]),1
+82,Morphology types,Anterior ventrolateral protocerebrum neuropil neurons,,0
+82,Morphology types,Anterior ventrolateral protocerebrum neuropil neurons,AVLP001-596 (Anterior VentroLateral Protocerebrum [type ID]),1
+82,Morphology types,Clamp neuropil neurons,,0
+82,Morphology types,Clamp neuropil neurons,CL001-364 (CLamp [type ID]),1
+82,Morphology types,Crepine neuropil neurons,,0
+83,Morphology types,Crepine neuropil neurons,CRE001-108 (CREpine [type ID]),1
+83,Morphology types,Inferior bridge neuropil neurons,,0
+83,Morphology types,Inferior bridge neuropil neurons,IB001-119 (Inferior Bridge [type ID]),1
+83,Morphology types,Lateral accessory lobe neuropil neurons,,0
+83,Morphology types,Lateral accessory lobe neuropil neurons,LAL001-204 (Lateral Accessory Lobe [type ID]),1
+83,Morphology types,Posterior lateral protocerebrum neurons,,0
+83,Morphology types,Posterior lateral protocerebrum neurons,PLP001-255 (Posterior Lateral Protocerebrum [type ID]),1
+83,Morphology types,Posterior slope neuropil neurons,,0
+83,Morphology types,Posterior slope neuropil neurons,PS001-303 (Posterior Slope [type ID]),1
+83,Morphology types,Posterior ventrolateral protocerebrum neuropil neurons,,0
+83,Morphology types,Posterior ventrolateral protocerebrum neuropil neurons,PVLP001-151 (Posterior VentroLateral Protocerebrum [type ID]),1
+83,Morphology types,Saddle neuropil and antennal mechanosensory and motor center neurons,,0
+83,Morphology types,Saddle neuropil and antennal mechanosensory and motor center neurons,SAD001-095 (SADdle [type ID]),1
+83,Morphology types,Saddle neuropil and antennal mechanosensory and motor center neurons,AMMC-A1 (Antennal Mechanosensory and Motor Center- [type ID]),1
+83,Morphology types,Superior lateral protocerebrum neuropil neurons,,0
+83,Morphology types,Superior lateral protocerebrum neuropil neurons,SLP001-468 (Superior Lateral Protocerebrum [type ID]),1
+83,Morphology types,Superior intermediate protocerebrum neuropil neurons,,0
+83,Morphology types,Superior intermediate protocerebrum neuropil neurons,SIP001-90 (Superior Intermediate Protocerebrum [type ID]),1
+83,Morphology types,Superior medial protocerebrum neuropil neurons,,0
+83,Morphology types,Superior medial protocerebrum neuropil neurons,SMP001-604 (Superior Medial Protocerebrum [type ID]),1
+83,Morphology types,Superior medial protocerebrum neuropil neurons,DGI (Dorsal Giant Interneuron),1
+83,Morphology types,Vest neuropil neurons,,0
+83,Morphology types,Vest neuropil neurons,VES001-84 (VESt [type ID]),1
+83,Morphology types,Wedge neuropil neurons,,0
+83,Morphology types,Wedge neuropil neurons,WED001-183 (WEDge [type ID]),1
+83,Morphology types,Wedge neuropil neurons,WEDPN1-19 (WEDge Projection Neuron [type ID]),1

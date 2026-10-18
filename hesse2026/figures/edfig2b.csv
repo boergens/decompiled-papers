@@ -1,0 +1,62 @@
+# Extended Data Figure 2b (PDF page 42): explained variance of face features (%) predicted from average neural activity, vs feature index.
+# Source: vector paths in the PDF. Clip region (PDF pt, origin top-left) x 284-390, y 25-148.
+# x axis: tick marks at features 10,20,30,40,50 -> Axis slope 0.518537 pt^-1, max residual 1.61e-03; vertices of every series sit on x = feature 1..50 (checked against the solid strokes, max dev <0.01 pt).
+# y axis: tick marks at -100,-50,0,50,100 % -> slope -1.801848, max residual 1.44e-03. 1 pt = 1.802 %.
+# feature_set: features 1-20 are the 20 principal shape features, 21-50 the 30 principal appearance features (bracket labels 'Shape'/'Appearance' in the figure).
+# priming_average (black solid, #1c0f29) and binocular_conscious_average (grey solid, #808080): stroke path vertices, precision ~0.01 pt (~0.02 %).
+# priming_average_predicting_flashed (black dashed) and binocular_suppressed_average (grey dashed): the PDF stores these as filled dash outlines (4 pt dash / 4 pt gap, 1 pt wide); the centreline was recovered from the dash polygons (see README). Quality code per value in the *_qc column:
+#   direct = vertex inside a dash (precision ~0.05 pt = 0.1 %); extrap = vertex in a gap, extrapolated along the adjacent straight segment (~0.1-0.4 pt);
+#   extrap_offscale = same but the value is outside the -100..100 axis range (the line is clipped by the axes box there; precision ~1-2 pt); interp = both adjacent segments fall in one dash gap, value is the linear interpolation of the neighbours (bound: within ~1.2 pt = 2.2 % of the truth);
+#   clipped = the line is below -100 % here (not drawn, value unknown: empty); gap = not recoverable (empty).
+# Values are rounded to 0.01 %.
+feature_index,feature_set,priming_average,priming_average_predicting_flashed,priming_average_predicting_flashed_qc,binocular_conscious_average,binocular_suppressed_average,binocular_suppressed_average_qc
+1,shape,76.11,-66.19,direct,38.11,32.00,direct
+2,shape,85.37,-83.84,direct,29.98,24.94,direct
+3,shape,85.82,-70.24,direct,40.25,29.87,direct
+4,shape,59.84,-67.91,direct,23.77,14.19,direct
+5,shape,49.41,-42.77,direct,19.39,18.88,direct
+6,shape,34.51,-25.48,direct,18.20,16.51,extrap
+7,shape,31.41,-6.35,direct,20.70,14.39,direct
+8,shape,40.18,-35.18,extrap,10.61,10.74,direct
+9,shape,55.91,-44.79,direct,16.94,1.67,direct
+10,shape,35.57,-16.74,direct,20.11,11.89,extrap
+11,shape,38.13,-36.08,direct,7.77,2.19,direct
+12,shape,25.97,-12.63,direct,17.26,11.84,direct
+13,shape,16.24,-11.22,direct,11.06,9.90,direct
+14,shape,41.98,-36.79,direct,16.87,5.44,direct
+15,shape,-7.34,-31.79,direct,-14.01,-22.48,direct
+16,shape,15.26,-20.80,extrap,-1.15,-3.79,direct
+17,shape,20.63,-9.83,direct,2.90,9.66,direct
+18,shape,21.28,-10.57,extrap,4.25,-0.16,extrap
+19,shape,9.35,-2.09,direct,3.55,1.34,direct
+20,shape,8.52,-0.94,direct,7.46,8.15,extrap
+21,appearance,97.50,-269.14,extrap_offscale,11.01,-21.54,direct
+22,appearance,97.51,,clipped,13.01,-20.74,direct
+23,appearance,98.29,-265.48,extrap_offscale,12.97,-19.06,direct
+24,appearance,87.05,-57.84,direct,49.75,24.97,direct
+25,appearance,95.87,-246.24,extrap_offscale,13.39,-13.71,direct
+26,appearance,73.35,,clipped,19.37,2.99,direct
+27,appearance,84.07,,clipped,28.72,7.91,extrap
+28,appearance,76.11,,clipped,21.26,15.50,direct
+29,appearance,75.91,,clipped,18.99,1.10,direct
+30,appearance,95.69,,clipped,15.86,-22.41,direct
+31,appearance,59.46,,clipped,2.67,-7.82,extrap
+32,appearance,78.00,,clipped,14.33,-9.95,direct
+33,appearance,77.30,,clipped,14.29,-1.50,direct
+34,appearance,86.11,,clipped,13.55,-17.33,direct
+35,appearance,71.69,,clipped,14.27,-3.73,extrap
+36,appearance,64.13,,clipped,9.64,-5.90,direct
+37,appearance,83.32,,clipped,7.75,-14.35,extrap
+38,appearance,93.64,,clipped,9.91,-19.85,direct
+39,appearance,94.18,-249.08,extrap_offscale,14.76,-20.06,direct
+40,appearance,32.24,-29.25,direct,15.88,-0.53,extrap
+41,appearance,68.45,-99.21,direct,17.46,2.11,direct
+42,appearance,94.61,,gap,13.21,-17.65,direct
+43,appearance,68.14,,gap,9.50,-9.74,direct
+44,appearance,79.01,,clipped,13.32,-9.28,direct
+45,appearance,72.11,,clipped,9.21,-12.63,extrap
+46,appearance,72.81,,clipped,11.43,-10.93,direct
+47,appearance,65.59,,clipped,6.52,-2.12,extrap
+48,appearance,68.70,,clipped,1.66,-5.08,direct
+49,appearance,93.66,,clipped,12.65,-19.64,direct
+50,appearance,56.25,,clipped,5.52,-19.24,direct

@@ -1,0 +1,9 @@
+# Table 2 Atom displacement behaviour versus cutting edge radius (Xie & Fang 2019, p. 11).
+# Transcribed verbatim. The first column has no printed header (named 'cutting_edge_radius' here).
+# The 'Deformation regimes' column is printed only in the first row (Elastic deformation) and the last row
+# (Elastic-plastic deformation); empty cells are empty in the paper. 'R > =10 nm' as printed.
+cutting_edge_radius,Number of slipped atomic layers,Deformation regimes on the processed surface
+R < 3 nm,1,Elastic deformation
+R > 3 nm and R < 7.5 nm,2,
+R > 7.5 nm and R < 10 nm,3,
+R > =10 nm,4,Elastic-plastic deformation

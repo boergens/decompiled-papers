@@ -1,0 +1,21 @@
+# fig11a of Fu et al. 2019, Polymers 11, 975 (DGEBA-MTHPA): specific volume against temperature (squares with error bars), two fitted straight lines (red) and their crossing (red dot, labelled 399.03K). y = specific volume in cm^3/g; x in K.
+# Provenance: tier 3, digitized from the embedded raster image on p. 11 (Origin export, 300 ppi); no source data published.
+# Axis fit: x on the inward major ticks 300-600 K (max residual 1.14e-13 K), y on ticks [0.88, 0.9, 0.92, 0.94, 0.96] (max residual 3.33e-16); frame edges x = 275.00..625.00 K, y = 0.8600..0.9800.
+# Rows: kind = marker (one per temperature; x is the measured marker centre, T_label the temperature it stands for), line_low / line_high (the two red fitted lines: one row per end point, as drawn), dot (the red dot at the crossing), crossing_of_digitized_lines (where the two digitized lines intersect; computed by the decompiler, not printed), label (the printed crossing temperature).
+# y_err_low / y_err_high: ends of the error bar (the caps), only where the figure has error bars.
+# Uncertainty: about +-1 px = +-0.0002 in y and +-0.46 K in x; partly hidden markers (note column) +-2 px.
+kind,T_label,x_K,y,y_err_low,y_err_high,px_x,px_y,note
+marker,300,299.769,0.87457,0.87250,0.87641,159.0,501.5,
+marker,350,349.769,0.87554,0.87359,0.87728,267.0,497.0,
+marker,400,400.000,0.88380,0.88228,0.88641,375.5,459.0,
+marker,450,450.000,0.90978,0.90576,0.91359,483.5,339.5,
+marker,500,500.000,0.92587,0.92228,0.92859,591.5,265.5,bottom part hidden by red; centre = top edge + half the marker width
+marker,550,550.000,0.94924,0.94641,0.95185,699.5,158.0,
+marker,600,600.000,0.96522,0.95989,0.97011,807.5,84.5,
+line_low,,300.231,0.87336,,,160.0,507.1,"least-squares fit on 188 columns, rms 0.23 px; slope 8.28263e-05 per K"
+line_low,,408.102,0.88229,,,393.0,466.0,
+line_high,,390.046,0.87750,,,354.0,488.0,"least-squares fit on 396 columns, rms 0.20 px; slope 0.000440233 per K"
+line_high,,599.769,0.96983,,,807.0,63.3,
+dot,,398.896,0.88166,,,373.1,468.9,centre of the red dot
+crossing_of_digitized_lines,,399.272,0.88156,,,,,computed
+label,,399.030,,,,,,printed next to the dot: 399.03K

@@ -1,0 +1,6 @@
+# Table 4. Simulation and experimental results of the Tg calculated by the specific volume-temperature method (SV) and the MSD-temperature method (M).
+# Fu et al. 2019, Polymers 11, 975, p. 11. Tg in K.
+Method,Sub-method,DGEBA-MTHPA Tg (K),DGEBA-NA Tg (K)
+Simulation,SV,399.03,421.02
+Simulation,M,398.26,419.46
+Experiment,,401.62,427.48

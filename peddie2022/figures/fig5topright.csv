@@ -1,0 +1,16 @@
+# Peddie et al. 2022 (Nat Rev Methods Primers, Europe PMC author manuscript), Figure 5, top-right panel:
+# histogram of mitochondria volumes, x 'Mitochondria volume (10^3 pixels)', y 'Count'. Both axes linear.
+# Provenance: tier 3, digitized from the embedded raster image on PDF p. 49 (2096 x 923 px, ~4.16 px per pt),
+# region x 1450-2096, y 0-420 px. Axis fits on the labelled tick marks: x 6 ticks (0-100), max residual 0.047 units, 5.046 px per unit; y 6 ticks (0-25), max residual 0.034, 11.526 px per count.
+# Bars found with a blue colour mask; bin edges = outer edges of each bar's pixel run along a row just above the x axis;
+# count = top of the bar. Uncertainty: about +-0.3 units on the bin edges (1 px), +-0.1 on the counts (1 px).
+# count_rounded is the nearest integer (counts are integers). Empty bins between the bars are not drawn and not listed;
+# the bars have about equal widths, so the bins between ~40 and ~78 have count 0.
+# Columns: bin_left, bin_right (10^3 pixels), count (as read), count_rounded.
+bin_left,bin_right,count,count_rounded
+1.14,10.45,27.97,28
+10.45,20.16,16.00,16
+20.16,29.67,4.03,4
+29.67,39.18,2.03,2
+77.63,86.94,2.99,3
+86.94,96.65,0.99,1

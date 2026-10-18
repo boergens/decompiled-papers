@@ -1,0 +1,16 @@
+# Table 5 (p. 14 of source/wei2024.pdf): The indentation hardness (H) of the epoxy resin obtained by Eq. (9) in MD nanoindentation simulation at different loading rates and in previous experimental works
+# Columns: methods; conditions and other notes (text); loading rate (Å/ps); Pmax (nN); H (GPa), verbatim (ranges as printed).
+# Footnote: RTM resin transfer molding, SWNT single-walled carbon nanotube, CNF: carbon nanofiber
+methods,conditions,loading_rate_A_per_ps,Pmax_nN,H_GPa
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,0.25,9.757,1.492
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,0.5,10.594,1.620
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,0.75,13.052,1.997
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,1.0,13.115,2.006
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,1.5,14.813,2.266
+"MD nanoindentation simulation in this work, where nanoindenter is rigid quartz",,2.0,14.215,2.174
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",Epoxy-reinforced nanocomposites with fumed silica of 0 ∼ 3% [40],,,0.256 ∼ 0.318
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",RTM6 Epoxy resin with strain rate of 0.01 ∼ 0.25 and 25 °C [12],,,0.23 ∼ 0.35
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",SWNT of 0% ∼ 1.0% reinforced epoxy composites [9],,,0.23 ∼ 0.31
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",Epoxy resin at different loading rate of 0.25 ∼ 6.0 mN/s [14],,,0.26 ∼ 0.276
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",Epoxy resin with 0.78 wt% Polyaniline added by 0 ∼ 1.0 wt% ZnO nanoparticles [31],,,0.18 (0 wt%) ∼ 0.206 (1.0 wt%)
+"Nanoindentation experiments in previous works, where nanoindenter is usually diamond",Epoxy composite with 0 ∼ 5% CNF [32],,,0.26 ∼ 0.67

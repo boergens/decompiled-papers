@@ -1,0 +1,19 @@
+# Table 3 (p. 9 of source/wei2024.pdf): Young’s modulus of epoxy resin in this work and similar materials in previous studies at room temperature
+# Columns: method group; Young’s modulus of epoxy (GPa) row description; Ex, Ey, Ez, overall (Ē), reduced modulus Er (GPa) for this work;
+# value_text: the value printed across the numeric columns for the other rows, verbatim.
+# Footnote: The overall Young’s modulus (Ē) is the square average value of Young’s modulus along three directions (i.e., Ex, Ey, Ez). The reduced modulus Er was calculated through Eq. (10)
+# Footnote: DGEBA Diglycidyl Ether of Bisphenol A, mPDA m-phenylenediamine, DETDA Diethyltoluenediamine, EPON862 Bisphenol F diglycidyl ether, TETA triethylenetetramine, TEPA tetraethylenepentamine, D230 Jeffamine D230, AGE Allyl glycidyl ether, GMA glycidyl methacrylate, CNF carbon nanofiber
+methods,description,Ex_GPa,Ey_GPa,Ez_GPa,E_overall_GPa,Er_GPa,value_text
+MD simulations,Epoxy resin (containing 2000 DGEBA + 1000 mPDA) with a conversion percentage of 84% through uniaxial tension using MD simulation in this work,2.203,1.906,2.105,2.075,2.419,
+MD simulations,Epoxy resin (containing 200 DGEBA + 100 mPDA) with a conversion percentage of 86% through uniaxial tension using MD simulation [46],,,,,,2.61 ± 0.28
+MD simulations,Epoxy resin composed of EPON862 and curing agent DETDA with conversion degrees of 0% ∼ 86% using MD simulation [21],,,,,,1.0 ∼ 3.0
+MD simulations,Epoxy resin (containing EPON862 + DETDA) [39],,,,,,"2.56 (experimental), 1.61 (MD simulation)"
+Various experiments in previous works,"DGEBA epoxy networks (containing DGEBA/D230, DGEBA/TETA, DGEBA/TEPA) through dynamic mechanical analyses experiments [3]",,,,,,2.21 ∼ 2.72
+Various experiments in previous works,A DGEBA-based epoxy resin through tensile test [51],,,,,,"3.5 (unmodified epoxy resin), 3.85 (epoxy + 8.5% nanofiller)"
+Various experiments in previous works,Matrix epoxy Epon 862 [25],,,,,,2.83
+Various experiments in previous works,Epoxy resin composite by ultrasonic velocity Measurement [27],,,,,,"3.441 ∼ 4.601 (DGEBA/AGE), 3.441 ∼ 6.293 (DGEBA/GMA)"
+Various experiments in previous works,Epoxy resin through uniaxial tension and nanoindentation test [40],,,,,,"3.3 ± 0.12 (uniaxial tension), 3.9 ± 0.12 (nanoindentation test)"
+Various experiments in previous works,Epoxy resin with 0.78 wt% Polyaniline added by 0 ∼ 1.0 wt% ZnO nanoparticles using nanoindentation test [31],,,,,,"3.76 (0 wt%), 3.49 (0.5 wt%), 3.47 (1.0 wt%)"
+Various experiments in previous works,Epoxy composite with 0 ∼ 5% CNF using nanoindentation test [32],,,,,,4.0 ∼ 7.1
+Various experiments in previous works,Er of epoxy resin at different loading rates of 0.25 ∼ 6.0 mN/s using nanoindentation test [14],,,,,,4.78 ∼ 5.35
+Various experiments in previous works,Er of nanoclay/epoxy composite at 40 °C [20],,,,,,1.5 ∼ 7.5

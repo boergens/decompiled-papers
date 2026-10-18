@@ -1,0 +1,62 @@
+# Figure 2 panel i, PDF page 36 of source/2026.10.15.759299v1.full.pdf (vector graphics)
+# Solid lines = stroke paths (50 vertices, one per feature); dashed lines = outlined dash polygons, recovered by fitting a
+#   dash centre lines (midway between the two antiparallel long sides of each dash polygon, stroke width 1 pt) and extending the pieces on each segment to the vertices (feature #)
+# x axis calibrated on ticks 10..50 (resid 1.6e-03); y axis on ticks -100..100 % (resid 7.3e-04)
+# *_clipped = 1: the line leaves the axes below -100 % at this feature (the figure clips the line at -100 %); the value is
+#   then left EMPTY (it is below -100 % and not shown in the figure); the redraw script draws these vertices at -100 %
+# series: priming_average = black #1c0f29 solid; binocular_conscious_state1 = orange #fcae34 solid; binocular_conscious_state2 =
+#   purple #543379 solid; binocular_suppressed_state1 = orange dashed; binocular_suppressed_state2 = purple dashed
+# legend says shape features 1-20 (bracket 'Shape' over 1-20) and appearance features 21-50 (bracket 'Appearance')
+# precision: solid ~0.1 % units; dashed ~0.5 % units (joints of steep segments less certain)
+# Corrections 2026-10-18 with tools/dashlines.py: the dashed values had been fitted from dash centre lines (precision ~0.3-0.5 % units); dashlines.py reads vertices that lie inside a dash exactly from the outline (the outline contains the vertex point, se 0.01 % units) and solves gap vertices with the dash-pattern constraint (end-cap -> vertex -> start-cap path = 4.000 pt). Exact vertex reads: binocular_suppressed_state1 features 40 (-52.07 -> -51.82), 48 (-94.4 -> -94.34); binocular_suppressed_state2 features 20 (2.5 -> 2.56), 38 (69.52 -> 69.6), 40 (14.01 -> 13.93), 44 (58.41 -> 58.47), 48 (44.96 -> 45.03), 49 (72.5 -> 72.34). Pattern-constraint solutions (se 0.01-0.03): state1 feature 20 (2.15 -> 2.25), state2 features 31 (31.28 -> 31.21), 39 (66.0 -> 66.49), 43 (35.08 -> 35.21). Values differing by <= 0.05 % units, and vertices where neither method is decisive (state1 10, 29, 31; state2 32, 41, 50; differences < 0.3), were left as they were; clipped vertices stay empty.
+feature_index,feature_type,priming_average_pct,binocular_conscious_state1_pct,binocular_conscious_state2_pct,binocular_conscious_state2_clipped,binocular_suppressed_state1_pct,binocular_suppressed_state1_clipped,binocular_suppressed_state2_pct
+1,shape,76.11,70.16,-55.06,0,-60.14,0,70.74
+2,shape,85.37,65.21,-66.79,0,-80.38,0,67.25
+3,shape,85.82,73.01,-51.85,0,-71.62,0,73.2
+4,shape,59.84,47.68,-30.93,0,-55.6,0,47.37
+5,shape,49.41,29.46,-24.94,0,-30.39,0,29.17
+6,shape,34.51,20.67,-23.3,0,-31.26,0,29.12
+7,shape,31.41,20.94,1.68,0,-10.1,0,19.31
+8,shape,40.18,30.85,-46.83,0,-39.46,0,28.88
+9,shape,55.91,36.23,-28.4,0,-60.14,0,31.33
+10,shape,35.57,40.45,-28.77,0,-42.0,0,32.68
+11,shape,38.13,16.92,-32.39,0,-39.67,0,18.4
+12,shape,25.96,19.78,-4.89,0,-17.12,0,17.75
+13,shape,16.24,10.87,-5.73,0,-11.35,0,9.93
+14,shape,41.98,27.06,-28.83,0,-61.6,0,31.1
+15,shape,-7.34,-11.49,-36.19,0,-41.09,0,-22.75
+16,shape,15.28,14.67,-33.03,0,-30.53,0,3.44
+17,shape,20.63,-2.31,-20.05,0,-17.52,0,6.73
+18,shape,21.28,7.41,-17.05,0,-21.9,0,5.04
+19,shape,9.35,3.87,-7.35,0,-5.6,0,2.92
+20,shape,8.52,-5.57,4.45,0,2.25,0,2.56
+21,appearance,97.5,82.16,,1,,1,70.73
+22,appearance,97.53,81.91,,1,,1,68.81
+23,appearance,98.29,85.12,,1,,1,74.88
+24,appearance,87.05,69.69,-20.67,0,-60.51,0,61.68
+25,appearance,95.87,86.36,,1,,1,77.53
+26,appearance,73.35,46.38,,1,,1,44.8
+27,appearance,84.07,77.6,-90.03,0,,1,71.72
+28,appearance,76.11,55.17,-47.48,0,-59.54,0,51.46
+29,appearance,75.91,54.61,-66.12,0,-94.77,0,49.86
+30,appearance,95.69,82.56,,1,,1,69.74
+31,appearance,59.46,37.59,-79.31,0,-86.97,0,31.21
+32,appearance,78.0,66.56,,1,,1,59.45
+33,appearance,77.32,64.9,-81.95,0,,1,57.08
+34,appearance,86.11,72.27,-99.3,0,,1,60.49
+35,appearance,71.69,55.21,-62.72,0,-97.34,0,46.45
+36,appearance,64.13,43.35,,1,,1,43.93
+37,appearance,83.32,60.72,-90.99,0,,1,52.74
+38,appearance,93.64,78.7,,1,,1,69.6
+39,appearance,94.18,77.19,,1,,1,66.49
+40,appearance,32.25,18.49,-22.32,0,-51.82,0,13.93
+41,appearance,68.45,48.65,-60.53,0,-87.02,0,44.29
+42,appearance,94.61,80.83,,1,,1,69.46
+43,appearance,68.14,42.41,-62.67,0,-97.3,0,35.21
+44,appearance,79.01,65.89,,1,,1,58.47
+45,appearance,72.13,56.31,-90.02,0,,1,50.12
+46,appearance,72.81,64.58,,1,,1,62.55
+47,appearance,65.59,55.01,,1,,1,53.19
+48,appearance,68.7,48.4,-80.04,0,-94.34,0,45.03
+49,appearance,93.66,83.51,,1,,1,72.34
+50,appearance,56.21,26.25,-64.09,0,,1,23.24

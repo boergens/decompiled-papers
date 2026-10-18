@@ -1,0 +1,833 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\sourcefile{source/wei2024.pdf}
+\decompnote{Publisher version of record (Springer Acta Geotechnica typeset PDF, 22 pages, open access, CC BY 4.0). Running headers (journal, volume and page range), page numbers, the ``Check for updates'' button, the Springer logo and the ``123'' footer marks are left out. Equations are transcribed from the page images: the PDF text layer uses Elsevier/Springer ``Adv'' symbol fonts (θ stored as ``h'', φ as ``u'' or ``/'', η as ``g'', ε as ``e'', σ as ``r'', χ as ``v'', ∼ as ``*'', × as ``9'', + as ``?'' in tables, = as ``¼'', and minus signs, ° and · as unmapped glyphs).}
+
+\pdfpage{1}
+\noindent Acta Geotechnica (2025) 20:1599–1620\\
+https://doi.org/10.1007/s11440-024-02503-9\par
+
+\noindent RESEARCH PAPER\par
+
+\section*{Interfacial mechanical behavior of epoxy-quartz: MD nanoindentation and nanoscratching study}
+
+\noindent Pengchang Wei\textsuperscript{1} · Zhen-Yu Yin\textsuperscript{1} · Pierre-Yves Hicher\textsuperscript{2} · Wangqi Xu\textsuperscript{1}\par
+
+\begin{quote}\small
+\noindent {\sffamily ✉} Zhen-Yu Yin\\
+zhenyu.yin@polyu.edu.hk
+
+\noindent Pengchang Wei\\
+pengchang.wei@polyu.edu.hk
+
+\noindent Pierre-Yves Hicher\\
+pierre-yves.hicher@ec-nantes.fr
+
+\noindent Wangqi Xu\\
+wangqi.xu@connect.polyu.hk
+
+\noindent \textsuperscript{1}\quad Department of Civil and Environmental Engineering, Research·Centre·for Nature-based. Urban Infrastructure Solutions, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong, China
+
+\noindent \textsuperscript{2}\quad Ecole Centrale de Nantes, UMR CNRS 6183, Research Institute of Civil Engineering and Mechanics (GeM), Nantes, France
+\end{quote}
+\decompnote{The corresponding-author block (envelope symbol) and the affiliations are printed as a footnote at the bottom of the left column of p.\,1; they are placed here after the author list. ``Research·Centre·for Nature-based. Urban'' is printed so, with middle dots and a full stop.}
+
+\noindent Received: 18 June 2024 / Accepted: 5 December 2024 / Published online: 27 December 2024\\
+© The Author(s) 2024\par
+
+\subsection*{Abstract}
+Fiber-reinforced polymer (FRP) is widely used in various engineering fields due to its several outstanding properties. In geotechnical engineering, the interactions between FRP and soil play an essential role. In this paper, molecular dynamics (MD) simulation method has been performed to study the interfacial mechanical behavior of epoxy-quartz interface as a subsystem of FRP-soil structure. Uniaxial traction on bulk epoxy was conducted to verify the accuracy of the model. The nanoindentation and nanoscratching mechanisms of epoxy-quartz interface were analyzed, considering the effect of loading rate, sliding velocity, and indentation depth. Abrasion models have been proposed based on the relationship between forces and displacements. Simulation results indicated that the indenter force and the indentation hardness of epoxy substrate increased with the loading rate during nanoindentation, and the relationship between indenter force and indentation depths could be expressed by a power law. The forces along three directions increased with the sliding velocity or indentation depths during nanoscratching, the sliding force and the sliding distance following an exponential function. The numerical simulations demonstrated that the surface wear of the epoxy substrate had the shape of a groove in nanoindentation and a fan-shaped distribution during the nanoscratching process.
+
+\noindent \textbf{Keywords} FRP-soil interface · Loading rate · Molecular dynamics · Nanoindentation · Nanoscratching · Sand
+
+\section*{1 Introduction}
+
+Fiber-reinforced polymer (FRP) composites are composed of fibers within a polymer matrix, where fibers are usually made of glass, carbon, or aramid, and polymer matrix are epoxy resin, polyester resin, or polypropylene, etc. Due to several outstanding properties, such as high-strength, low weight, corrosion resistance, electromagnetic transparency, and ease of handling, FRP composites have been widely used in various fields, such as marine engineering, building structures, aerospace, and civil and hydraulic engineering. [2, 19] In civil engineering, FRP composites are effectively applied to protect, reinforce, and repair structures. For example, compared to traditional concrete and steel piles with poor corrosion resistance, FRP piles are constantly used in corrosive environments (e.g., marine geotechnical engineering) due to their corrosion and chemical resistance properties [41], such as concrete-filled FRP tube (CFFT) pile [1] and FRP seawater sea-sand concrete (SSC) pile [7]. Thus, it could be an alternative construction material for piles in hostile environments [35]. Moreover, the interface friction coefficient between FRP composite and sand was higher than that between conventional mild steel and sand [35]. However, it should be noted that the stiffness and surface hardness of FRP composites are significantly lower than those of concrete and steel structures, which can affect the pile-soil interaction characteristics for FRP piles. Furthermore, with the promotion and application of FRP piles \pdfpage{2}in foundations, the interfacial characteristics between FRP composites and soil significantly impact the integrity and stability of the structure-soil system [41, 42, 46]. Therefore, the interfacial properties between FRP and soil are worth investigating.
+
+The mechanical behavior between FRP and soil has been mainly studied through experiments [13, 28, 35] and numerical analysis [1] at the macroscale. Based on direct shear and interface shear tests, Frost et al. [13] reported that the interface shear behavior between FRP composites and granular materials depended on the relative roughness (surface roughness/particle mean size), the normal stress level, the initial density of the soil mass, and the angularity of the particles. Pando et al. [28] indicated that the interface friction of FRP composite piles depended on the values of relative roughness parameters through interface shear tests. A similar shear test with a modified direct shear apparatus was also used to study the interfacial friction between FRP composites and granular materials from Shaia et al. [35]. Moreover, more studies [4, 5, 51] focused on the mechanical properties of FRP and soil/sand mixes, rather than on their interface. The previous studies help us understand the mechanical behavior of FRP composite and other materials at the macroscale, but the main mechanisms at the microscale remain still unclear. Moreover, the macroscale properties of materials are significantly affected by their structural features and properties at the micro-/nano-scale where the deterioration, failure initiation, and micro-mechanical behavior of the constituents control the macroscopic behavior [15, 56]. Obtaining the mechanical properties of materials from a microscale study is the first step toward understanding the mechanical properties at a larger scale [24].
+
+The molecular dynamics (MD) simulation method is an excellent tool for investigating the interfacial mechanical behavior of materials at the microscale, revealing their fundamental mechanisms [37, 43, 50, 54, 55]. Epoxy resin, an important FRP component, has been commonly studied in MD simulations [46, 50]. Since quartz/silica is a dominant component of the soil fraction [41], the atomistic model of epoxy-quartz/silica interface has often been established to simulate the FRP-soil interactions at the microscale [41, 46]. So far, the adhesion [50], interfacial friction [41], and creep [46] behavior of epoxy-silica interface have been recently investigated using MD simulation, but the interfacial studies between epoxy and silica at the microscale remain relatively scarce.
+
+Nanoindentation and nanoscratching methods are effective tools for measuring the microscale elastic properties and deformation behavior of materials at a length scale of nanometers (10\textsuperscript{−9} m). The nanoindentation method has several advantages compared with other conventional laboratory tests, such as low price, less-time consuming, non-destructive features, higher accuracy, and small sample demand. [22, 49] Previous studies of nanoindentation in MD simulations and experiments focused on the pure epoxy resin [12, 14], the mixtures epoxy composites and other modified materials (such as nanoclay, fumed silica, single-walled carbon nanotube, and graphene) [9, 20, 40], and quartz [18]. These results have shown that their nanoindentation mechanical properties were significantly affected by loading rate, temperature, content of modified material, size of the indenter tip radius, penetration depth, etc. To our knowledge, the interface mechanical behavior between epoxy and quartz has never been investigated through MD nanoindentation and nanoscratching.
+
+In this study, to explore the interfacial properties of FRP-soil at the microscale, MD nanoindentation and nanoscratching simulations were performed to investigate the interfacial mechanical behavior between epoxy and quartz. A cross-linked epoxy resin was set as the substrate and quartz as the indenter. Uniaxial traction of the bulk epoxy was first conducted to obtain its tensile stress–strain curve, density, Young’s modulus, and Poisson’s ratio. These mechanical parameters of the bulk epoxy were compared with previous experimental and simulation results to verify the accuracy of the model. Finally, MD nanoindentation and nanoscratching simulations for epoxy-quartz system were conducted, considering the effect of loading rate, sliding velocity, and indentation depth, to explore the corresponding mechanical mechanisms. An abrasion model could be suggested depending on the indenter force \emph{F}\textsubscript{z} and indentation hardness \emph{H} for nanoindentation, as well as a relationship between the sliding force \emph{F}\textsubscript{y} and the sliding distance \emph{d} for nanoscratching.
+
+\section*{2 Simulation procedure}
+
+\subsection*{2.1 System setup}
+
+As shown in Fig. 1a, the pyramid type quartz model with a simulation box of 35.99 Å × 33.71 Å × 34.05 Å is established via VMD software, including 1380 atoms. Figure 1b displays an epoxy resin with a simulation box of 72.4612 Å × 72.4612 Å × 55.8246 Å, which is composed of 500 diglycidyl ether of bisphenol A (DGEBA) as an organic compound commonly used as a constituent of epoxy and 250 m-phenylenediamine (mPDA) as a curing agent, where the cross-linking reaction takes place between the epoxy group and an amino group (C-O bonds broke and C-N bonds formed) at 600 K. Thereafter, the conversion percentage of 84\% for the epoxy resin was obtained, which was the ratio of the number of reacted carbon atoms to the number of epoxy groups [46].
+
+\pdfpage{3}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Fig. 1} Epoxy-quartz model: \textbf{a} pyramid type quartz model, \textbf{b} epoxy resin [46], \textbf{c} epoxy resin-quartz system for nanoindentation and nanoscratching simulation, where the quartz model is set as an indenter, and the epoxy as a substrate(Note that d1, d2, l1, l2, φ, θ are corresponding length and angle in the simulation box of quartz,where φ and θ are set as 27.87°and 26.35°, respectively. hc, hz, hoare indentation depth (i.e., contact depth between the epoxy substrate and the quartz indenter), displacement of quartz indenter along the z-direction, and initial distance between epoxy and quartz, respectively.)
+\alttext{Composite of molecular renderings and schematics, three labelled parts. (a) ``Pyramid type quartz model (1380 atoms)'', ``35.99 Å × 33.71 Å × 34.05 Å'': three views of an inverted pyramid of spheres (legend: tan Si, red O, white H). Left, x–z view (axes z up, x right): an inverted triangle with top corners D and D′, apex O at the bottom, top edge labelled $d_1$, slanted side $l_1$, vertical height $h_c$ (dashed), and the angle ``φ ≈ 27.87°'' marked at the side. Middle, y–z view: corners E′ and E, apex O, top edge $d_2$, side $l_2$, height $h_c$, angle ``θ ≈ 26.35°''. Right: perspective drawing of the pyramid inside a wire-frame box, with labelled points A, C, D, D′, E, E′, O′, B and apex O, edges $d_1$, $d_2$, $l_1$, $l_2$ and height $h_c$, and x, y, z axes. A large curved blue arrow leads from (a) to (c). (b) ``Epoxy resin (28500 atoms)'', ``Conversion percentage 84\%'', ``72.4612 Å × 72.4612 Å × 55.8246'' (no unit printed after the last number): ball-and-stick and line drawings of DGEBA (with two terminal epoxide rings) ``+'' mPDA (a benzene ring with two amine groups), an orange arrow to a ``Crosslinked'' fragment drawing, and an orange arrow to a cube filled with a thin-line rendering of the cross-linked network. A curved arrow labelled ``Supercell 2a × 2b × 1c'' leads from the cube to (c). (c) ``Epoxy resin-quartz system (115380 atoms)'', ``144.922 Å × 144.922 Å × 150.26 Å'': side view (z up, y right) of the quartz pyramid (red spheres) above an epoxy slab (grey, red, white and a few blue spheres), with a red arrow ``Indented force $F_z$'' pointing down onto the pyramid. A dashed inverted triangle drawn into the slab marks the indentation; vertical arrows mark $h_z$ (from the pyramid tip level down into the slab), $h_0$ ≈ 20 Å (gap between the tip and the slab surface) and $h_c$ (depth below the surface). The slab is labelled from top to bottom ``Newtonian layer'', ``Thermostat layer'' (a reddish band) and ``Boundary layer''; braces on the right give ``≈ 40 Å'', ``10 Å'' and ``12 Å'' for the three layers. Yellow shading marks the slab sides and bottom.}
+
+Figure 1c shows the epoxy resin-quartz system with 115,380 atoms composed of a pyramid type quartz model (Fig. 1a) as an indenter and a 2a × 2b × 1c supercell of epoxy resin (Fig. 1b) as a substrate. The epoxy substrate in the epoxy-quartz system was divided into three layers, a Newtonian layer, a thermostat layer, and a boundary layer, where (1) the Newtonian layer with micro-canonical (NVE) ensemble was free to move, and this Newtonian layer interacted with the quartz indenter during nanoindentation and nanoscratching processes. (2) The thermostat layer was set as a temperature-controlled layer to keep the whole system at a targeted temperature, by Langevin thermostat [34] and NVE ensemble for this atom group. (3) The boundary layer was fixed in its position during the whole simulation to maintain the stability of the whole system. Moreover, the quartz indenter was set as a rigid body (i.e., a single entity) during the whole simulation.
+
+\subsection*{2.2 Force fields}
+
+\subsubsection*{2.2.1 PCFF force field used for epoxy}
+
+The Polymer Consistent Force Field (PCFF) force field has been successfully used to describe the interaction of atoms or molecules for organic compounds, especially polymers [6, 30, 38], and it has been successfully employed for epoxy system in previous works [38, 46]. Thus, the PCFF force field was also used for the epoxy resin system in this study, where the potential parameters of several atoms are shown in Table S1-S5 (see \emph{Supplementary materials}), and its formula was expressed as follows:
+\begin{equation*}
+\begin{aligned}
+E_{\mathrm{total}} ={}& \sum_b\Big[k_2(b-b_0)^2+k_3(b-b_0)^2+k_4(b-b_0)^2\Big]\\
+&+\sum_\theta\Big[H_2(\theta-\theta_0)^2+H_3(\theta-\theta_0)^2+H_4(\theta-\theta_0)^2\Big]\\
+&+\sum_\phi\big\{V_1\big[1-\mathrm{cos}\big(\phi-\phi_1^0\big)\big]\\
+&+V_2\big[1-\mathrm{cos}\big(\phi-\phi_2^0\big)\big]+V_3\big[1-\mathrm{cos}\big(\phi-\phi_3^0\big)\big]\big\}\\
+&+\sum_\chi k_\chi\chi^2+\sum_b\sum_{b'}(b-b_0)(b'-b'_0)\\
+&+\sum_\theta\sum_{\theta'}(\theta-\theta_0)(\theta'-\theta'_0)\\
+&+\sum_b\sum_\theta(b-b_0)(\theta-\theta_0)\\
+&+\sum_b\sum_\phi(b-b_0)(V_1\mathrm{cos}\phi+V_2\mathrm{cos}2\phi+V_3\mathrm{cos}3\phi)\\
+&+\sum_{b'}\sum_\phi(b'-b'_0)(V_1\mathrm{cos}\phi+V_2\mathrm{cos}2\phi+V_3\mathrm{cos}3\phi)\\
+&+\sum_\theta\sum_\phi(\theta-\theta_0)(V_1\mathrm{cos}\phi+V_2\mathrm{cos}2\phi+V_3\mathrm{cos}3\phi)\\
+&+\sum_\phi\sum_\theta\sum_{\theta'}k_{\phi\theta\theta'}\mathrm{cos}\phi(\theta-\theta_0)\big(\theta'-\theta'_0\big)\\
+&+\frac{e^2}{4\pi\varepsilon_0}\sum_{ij}\frac{q_iq_j}{r_{ij}}+\sum_{ij}\varepsilon_{ij}\left[2\left(\frac{\sigma_{ij}}{r_{ij}}\right)^9-3\left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]
+\end{aligned}\tag{1}
+\end{equation*}
+\decompnote{Eq. (1) as printed: the three bond-stretching terms carry the exponent 2 each ($k_2$, $k_3$, $k_4$), and likewise the three angle-bending terms ($H_2$, $H_3$, $H_4$).}
+where Terms 1–3 represent the bond stretching b, the angle bending (θ), and the torsion angle rotation (φ) energy, \pdfpage{4}respectively. The out-of-plane (χ) energy is defined in Term 4. Terms 5–11 are the cross-interaction terms, among which the bond-bond, bond-angle, and bond-torsion angle are the most frequently used terms. Term 12 is the Coulombic interaction between the atomic charges, where \emph{q}\textsubscript{i} and \emph{q}\textsubscript{j} are the charges of atoms \emph{i} and \emph{j}, ε\textsubscript{0} is the dielectric constant, and \emph{r}\textsubscript{ij} is the distance between them. Term 13 represents the van der Waals interactions with a 9–6 Lennard–Jones (LJ) potential function, where σ\textsubscript{ij} and ε\textsubscript{ij} are the size and energy parameters between atoms \emph{i} and \emph{j}, respectively. Moreover, σ\textsubscript{ij} and ε\textsubscript{ij} can be obtained by Mixing Lorentz-Berthelot’s law [11], as shown in Eqs. (2) and (3).
+\begin{equation}
+\sigma_{ij}=\frac{\sigma_i+\sigma_j}{2}\tag{2}
+\end{equation}
+\begin{equation}
+\varepsilon_{ij}=\sqrt{\varepsilon_i\varepsilon_j}\tag{3}
+\end{equation}
+
+\subsubsection*{2.2.2 CVFF force field used for quartz}
+
+The Consistent Valence Force Field (CVFF) force field [17] has been successfully used for inorganic materials, such as quartz [10, 47], where their potential parameters are displayed in Table S6-S9, and its formula is given by the following equation:
+\begin{equation*}
+\begin{aligned}
+E_{\mathrm{total}} ={}& \sum_b D_b\Big[1-\mathrm{e}^{-\alpha(b-b_0)}\Big]+\sum_\theta H_\theta(\theta-\theta_0)^2\\
+&+\sum_\phi H_\phi[1+s\mathrm{cos}(n\phi)]+\sum_\chi k_\chi\chi^2\\
+&+\sum_b\sum_{b'}F_{bb'}(b-b_0)(b'-b'_0)+\sum_\theta\sum_{\theta'}F_{\theta\theta'}(\theta\\
+&-\theta_0)(\theta'-\theta'_0)+\sum_b\sum_\theta F_{b\theta}(b-b_0)(\theta-\theta_0)\\
+&+\sum_\phi F_{\phi\theta\theta'}\mathit{cos}\phi(\theta-\theta_0)(\theta'-\theta'_0)\\
+&+\sum_\chi\sum_{\chi'}F_{\chi\chi'}\chi\chi'+\frac{e^2}{4\pi\varepsilon_0}\sum_{ij}\frac{q_iq_j}{r_{ij}}\\
+&+\sum_{ij}4\varepsilon_{ij}\left[\left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12}-\left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]
+\end{aligned}\tag{4}
+\end{equation*}
+\decompnote{Eq. (4) as printed: the first (bond) term has no exponent on the bracket, and ``cos'' in the $F_{\phi\theta\theta'}$ term is set in italics.}
+where Terms 1–4 represent the energy of deformation of bond lengths, bond angles, torsion angles, and out-of-plane interactions, respectively. Terms 5–9 describe the couplings between deformations of internal coordinates. For example, Term 5 corresponds to the coupling between the stretching of adjacent bonds. Terms 10–11 describe the non-bonded interactions. Term 10 is the Coulombic representation of electrostatic interactions, and Term 11 represents the van der Waals interactions with a 12–6 LJ potential function.
+
+\subsubsection*{2.2.3 Hybrid force field used for the interaction between epoxy and quartz}
+
+The hybrid force field was used to describe the epoxy-quartz system, where PCFF and CVFF were for epoxy and quartz, respectively. Moreover, the standard 12–6 LJ potential was chosen for the interaction between epoxy and quartz. However, based on the above Eqs. (1) and (4), it should be noted that the terms corresponding to van der Waals interactions in PCFF and CVFF force fields are different, PCFF force field depends on 9–6 LJ potential, whereas CVFF force field depends on 12–6 LJ potential.
+
+To determine the non-bonded interaction between epoxy and quartz due to different LJ potentials, based on the 9–6 LJ potential parameters of each atom in epoxy system, a fitting method was proposed to obtain their corresponding 12–6 LJ potential parameters. As shown in Fig. 2 and Table 1, to obtain the best fitting result, the atomic radius and the position of the first peak of RDF of atom pairs were first considered, determining the range of the starting point position. Thereafter, based on the total deviation, the effects of each atom pair at various distance intervals were compared (see Fig. 3), so that the position of the final selected fitting starting point could be determined. Finally, the corresponding new 12–6 LJ potential parameters along suitable distance intervals were obtained, as shown in Table 1.
+
+Then, the non-bonded interaction between epoxy and quartz could be calculated by the same 12–6 LJ potential (i.e., term 10 in Eq. 4), where σ\textsubscript{ij} and ε\textsubscript{ij} between atom \emph{i} and atom \emph{j} were calculated by Mixing Lorentz-Berthelot’s law [11] (see Eqs. (2) and (3)). This fitting method could also be used in similar studies for materials with different LJ potentials. Furthermore, the pair interaction potential parameters between epoxy and quartz systems are shown in Table 2.
+
+\subsection*{2.3 MD nanoindentation simulations}
+
+All MD simulations were performed using LAMMPS code [29]. Three-dimensional periodic boundary conditions and the velocity-Verlet algorithm for integrating motion equations were applied in all simulations. The cut-off radius for the van der Waals forces was 10 Å, and that for long-range electrostatic interactions using the PPPM method was 8.5 Å. The time step was 1.0 fs, and the temperature was 300 K in all simulations.
+
+As shown in Fig. 4a, MD nanoindentation simulation for epoxy-quartz system was divided into two stages: the relaxation process and the loading process. (1) The relaxation process was performed with Langevin thermostat at 300 K and NVE ensemble (the layered setting method see Sect. 2.1) for 2 ns, the quartz indenter kept still during this \pdfpage{5}process. Thereafter, (2) there are usually two loading modes for the loading process of nanoindentation: displacement-controlled mode and load-controlled mode. The displacement-controlled mode was used during the loading process in this work, where the displacement of the quartz indenter was controlled by the constant displacement rate (i.e., loading rate), which was 0.1 ∼ 2.0 Å/1000 steps (i.e., 0.1 ∼ 2.0 Å/ps, based on the timestep of 1.0 fs). The quartz indenter was initially located 20 Å (\emph{h}\textsubscript{o}) above the epoxy substrate surface (see Fig. 1c), and then gradually approached and indented into the epoxy substrate during the loading process. The final displacement (\emph{h}\textsubscript{z}) of the quartz indenter along \emph{z}-direction was set at 45 Å, and the corresponding final indentation depth (\emph{h}\textsubscript{c}) was 25 Å.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Fig. 2} Flowchart of the fitting method to obtain new potential parameters
+\alttext{Flowchart, left to right, with hollow blue arrows between stages. Left: ``Initial potential parameters'' → a blue ellipse ``σ, ε of atom in 9-6 lj potential'', with the formula $\sum_{ij}\varepsilon_{ij}\left[2\left(\frac{\sigma_{ij}}{r_{ij}}\right)^9-3\left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]$ below it. Second stage (a shaded rounded box): three ellipses joined by downward arrows: ``Atomic radius'' → ``The position of the first peak of RDF'' → ``The range of starting point positions for fitting''. Third stage (shaded box): ``Fitting various distance intervals via 12-6 lj function'' → (thin arrow) a dotted box ``Total deviation'' → ``Position of the final selected fitting starting point''. Right: ``New potential Parameters after fitting'' → a blue ellipse ``σ, ε in 12-6 lj potential'', with $\sum_{ij}4\varepsilon_{ij}\left[\left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12}-\left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]$ below it.}
+
+\noindent\textbf{Table 1} Based on the 9–6 LJ potential parameters of each atom in epoxy system, its 12–6 LJ potential parameters were obtained through the fitting method
+\begin{center}\footnotesize
+\begin{tabular}{p{1.3cm}llllp{1.0cm}p{1.8cm}p{1.9cm}p{2.0cm}}
+\toprule
+Atom type of epoxy resin & \multicolumn{2}{l}{9–6 LJ potential} & \multicolumn{2}{l}{12–6 LJ potential} & Atomic radius (Å) & The position of the first peak of RDF (Å) & The range of starting point positions for fitting (Å) & The position of the final selected fitting starting point (Å)\\
+ & ε (kcal/mol) & σ (Å) & ε (kcal/mol) & σ (Å) & & & & \\
+\midrule
+c3 & 0.054 & 4.01 & 0.056 & 3.479 & 0.7 & 4.05 & 1.4 ∼ 4.05 & 3.3\\
+hc & 0.02 & 2.995 & 0.020 & 2.589 & 0.25 & 2.45 & 0.5 ∼ 2.45 & 2.4\\
+c & 0.054 & 4.01 & 0.056 & 3.479 & 0.7 & 5.65 & 1.4 ∼ 4.05 & 3.3\\
+cp & 0.064 & 4.01 & 0.066 & 3.479 & 0.7 & 6.05 & 1.4 ∼ 6.05 & 3.3\\
+oc & 0.24 & 3.535 & 0.246 & 3.065 & 0.6 & 4.85 & 1.2 ∼ 4.85 & 2.9\\
+c2 & 0.054 & 4.01 & 0.056 & 3.479 & 0.7 & 4.35 & 1.4 ∼ 4.05 & 3.3\\
+c1 & 0.054 & 4.01 & 0.056 & 3.479 & 0.7 & 4.45 & 1.4 ∼ 4.05 & 3.3\\
+oh & 0.24 & 3.535 & 0.246 & 3.065 & 0.6 & 2.85 & 1.2 ∼ 4.85 & 2.9\\
+c3h & 0.054 & 4.01 & 0.056 & 3.479 & 0.7 & 3.75 & 1.4 ∼ 4.05 & 3.3\\
+o3e & 0.24 & 3.535 & 0.246 & 3.065 & 0.6 & 4.35 & 1.2 ∼ 4.85 & 2.9\\
+ho & 0.013 & 1.098 & 0.013 & 0.949 & 0.25 & 2.35 & 0.5 ∼ 2.35 & 0.9\\
+nb & 0.065 & 4.07 & 0.065 & 3.524 & 0.65 & 3.55 & 1.3 ∼ 3.55 & 3.3\\
+hn & 0.013 & 1.098 & 0.013 & 0.949 & 0.25 & 2.45 & 0.5 ∼ 2.35 & 0.9\\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 1 is printed at the top of p.\,5, below Fig. 2. Also in \texttt{tables/table1.csv}.}
+
+Moreover, the indentation depth (i.e., contact depth, \emph{h}\textsubscript{c}) was calculated by the following equation:
+\begin{equation}
+h_c=h_z-h_0=\Delta h\times n_{\mathrm{step}}^{\mathrm{loading}}-h_0\tag{5}
+\end{equation}
+where \emph{h}\textsubscript{c}, \emph{h}\textsubscript{z}, \emph{h}\textsubscript{o} are the indentation depth (corresponding to the depth of indentation into the epoxy resin substrate), the displacement of the quartz indenter along \emph{z}-direction, and the initial distance between epoxy and quartz (\emph{h}\textsubscript{o} = 20 Å), respectively. $n_{\mathrm{step}}^{\mathrm{loading}}$ is the number of loading steps, where the timestep is 1 fs.Δ\emph{h} is the displacement rate (i.e., loading rate) of the quartz indenter, which is equal to 0.1 ∼ 2.0 Å/1000 steps (i.e., 0.1 ∼ 2.0 Å/ps = 10 ∼ 200 m/s). Note that in the actual nanoindentation experiments, the loading rate is in the order of μm/s (10\textsuperscript{−6} ∼ 10\textsuperscript{−9} m/s) instead of m/s [23]. However, in MD nanoindentation simulations, the loading rate is in the order of m/s (0.5 ∼ 400 m/s for various materials [22]) and is \pdfpage{6}usually used due to the limitation of computational capacity [16].
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Fig. 3} Evolution of van der Waals potential energy of C–C atom pairs with its distance based on different distance intervals: \textbf{a} 1.6 ∼ 12.5 Å; \textbf{b} 2.0 ∼ 12.5 Å; \textbf{c} 2.6 ∼ 12.5 Å; \textbf{d} 2.8 ∼ 12.5 Å; \textbf{e} 3.0 ∼ 12.5 Å; \textbf{f} 3.2 ∼ 12.5 Å; \textbf{g} 3.3 ∼ 12.5 Å; \textbf{h} 3.4 ∼ 12.5 Å. (The blue line refers to the original 9–6 LJ potential, and the orange line is the 12–6 LJ potential obtained from the fitting method. Note that the van der Waals potential energy of other atom pairs (such as H–H, O–O, N–N, etc.) were also analyzed, their fitting curves are not shown here to reduce the length of this article.)
+\alttext{Eight line charts (Excel style, light-grey gridlines, no frame), arranged three, three and two; each has its own legend above the plot: ``9-6 LJ'' (blue line with round blue markers) and ``12-6 LJ (Fitting)'' (orange line with round orange markers), and a panel label below the r axis: (a) 1.6 ∼ 12.5 Å, (b) 2.0 ∼ 12.5 Å, (c) 2.6 ∼ 12.5 Å, (d) 2.8 ∼ 12.5 Å, (e) 3.0 ∼ 12.5 Å, (f) 3.2 ∼ 12.5 Å, (g) 3.3 ∼ 12.5 Å, (h) 3.4 ∼ 12.5 Å. All panels have the same axes: x ``r (Å)'', linear, 0 to 15 with labels every 3 (the labels sit just below the E = 0 gridline); y ``E (kcal/mol)'', linear, −0.1 to 0.5 in steps of 0.1. In every panel both curves have the shape of a pair potential: a nearly vertical repulsive wall that leaves the plot at its top (0.5 kcal/mol), a well, and a flat tail at E ≈ 0 up to the last point at r ≈ 12.4–12.5 Å. Markers are visible as separate dots only on the steep wall, where they are spaced about 0.1 Å apart in r; elsewhere they merge into a thick band. The orange curve is drawn over the blue one and hides it where the two coincide.
+(a) The orange wall lies left of the blue one (E ≈ 0.2 kcal/mol at r ≈ 3.0 Å for orange, ≈ 3.2 Å for blue). The blue curve crosses zero at r ≈ 3.5 Å and has a well with its minimum ≈ −0.054 kcal/mol at r ≈ 3.9–4.0 Å, rising back towards 0 by r ≈ 8 Å; the orange curve has no visible well and flattens onto E ≈ 0 from r ≈ 4.5 Å.
+(b) Same picture shifted to larger r: blue E ≈ 0.2 at r ≈ 3.6 Å, zero crossing ≈ 3.9 Å, minimum ≈ −0.053 at r ≈ 4.3–4.4 Å; orange wall just left of the blue one (E ≈ 0.2 at r ≈ 3.5 Å), no visible well.
+(c) The two walls nearly coincide (orange E ≈ 0.2 at r ≈ 4.2 Å); blue minimum ≈ −0.053 at r ≈ 5.0 Å; the orange curve now has a shallow well, about −0.006 kcal/mol at r ≈ 5.2 Å.
+(d) Walls coincide (E ≈ 0.2 at r ≈ 4.4 Å); blue minimum ≈ −0.05 at r ≈ 5.1 Å; orange well ≈ −0.025 kcal/mol at about the same r.
+(e) Walls coincide (E ≈ 0.2 at r ≈ 4.6 Å); orange well ≈ −0.04 kcal/mol at r ≈ 5.3 Å, the blue well slightly deeper (≈ −0.055) just below it.
+(f) Walls coincide (E ≈ 0.2 at r ≈ 4.8 Å); orange well ≈ −0.05 kcal/mol at r ≈ 5.5 Å; the blue curve is almost entirely hidden under the orange one, showing only as a thin blue edge in the well and the tail.
+(g) As (f): walls at E ≈ 0.2 near r ≈ 4.8–4.9 Å, orange well ≈ −0.054 kcal/mol at r ≈ 5.6 Å, the curves practically on top of each other.
+(h) Walls at E ≈ 0.2 near r ≈ 5.0 Å; orange well ≈ −0.057 kcal/mol at r ≈ 5.9–6.0 Å, the orange curve slightly below the blue one in the well; tails coincide.
+Across the panels the blue (9-6 LJ) wall moves to larger r as the interval start in the panel label increases (E ≈ 0.2 kcal/mol at r ≈ 3.2, 3.6, 4.2, 4.4, 4.6, 4.8, 4.8, 5.0 Å in a–h). Values read from the digitized curves; the minima of the blue curve in (e)–(h) are uncertain because it is mostly hidden.}
+\figuredata{a}{figures/fig3a.csv}{figures/fig3a.py}{tier 3, digitized from the embedded 300 ppi JPEG (colour masks, skeleton of each line, isolated markers), gridline calibration; figures/fig3\_extract.py}
+\figuredata{b}{figures/fig3b.csv}{figures/fig3b.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{c}{figures/fig3c.csv}{figures/fig3c.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{d}{figures/fig3d.csv}{figures/fig3d.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{e}{figures/fig3e.csv}{figures/fig3e.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{f}{figures/fig3f.csv}{figures/fig3f.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{g}{figures/fig3g.csv}{figures/fig3g.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+\figuredata{h}{figures/fig3h.csv}{figures/fig3h.py}{tier 3, digitized as for (a); figures/fig3\_extract.py}
+
+The indentation hardness (\emph{H}) represents the ability of the tested material to withstand contact loads [22], and is defined as the ratio of the maximum indentation force (\emph{P}\textsubscript{max}) to the projected contact area (\emph{A}\textsubscript{c}) of the indenter as follows:
+\begin{equation}
+d_1=2h_c\times\mathrm{tan}\varphi\tag{6}
+\end{equation}
+\begin{equation}
+d_2=2h_c\times\mathrm{tan}\theta\tag{7}
+\end{equation}
+\begin{equation}
+A_c=d_2\times d_1=4{h_c}^2\times\mathrm{tan}\varphi\times\mathrm{tan}\theta\tag{8}
+\end{equation}
+\begin{equation}
+H=\frac{P_{\mathrm{max}}}{A_c}\tag{9}
+\end{equation}
+where \emph{A}\textsubscript{c} is the projected contact area of the indenter at the indentation depth of \emph{h}\textsubscript{c}. \emph{H} and \emph{P}\textsubscript{max} are the indentation hardness of epoxy substrate and maximum indentation force at maximum indentation depth, respectively. Moreover, other physical quantities are introduced in the caption of Fig. 1.
+
+The reduced modulus (alias indentation modulus, \emph{E}\textsubscript{r}) is applicable to various axisymmetric shapes of the indenter and elastic–plastic contact, where the relationship between \pdfpage{7}Young’s modulus (\emph{E}) of the substrate epoxy and \emph{E}\textsubscript{r} is expressed as follows [23]:
+\begin{equation}
+\frac{1}{E_r}=\frac{1-v^2}{E}+\frac{1-v_i^2}{E_i}\tag{10}
+\end{equation}
+where \emph{E} and \emph{v} are Young’s modulus and Poisson’s ratio of the substrate material (epoxy in this work), and \emph{E}\textsubscript{i}, \emph{v}\textsubscript{i} are Young’s modulus and Poisson’s ratio of the indenter material (quartz in this work). The quartz indenter being set as a rigid body, \emph{E}\textsubscript{i} and \emph{v}\textsubscript{i} in Eq. (10) are equal to ∞ and 0, respectively, and Eq. (10) could be further expressed as follows:
+\begin{equation}
+\frac{1}{E_r}=\frac{1-v^2}{E}\tag{11}
+\end{equation}
+
+\noindent\textbf{Table 2} Epoxy-quartz pair interactions potential parameters
+\begin{center}\footnotesize
+\begin{tabular}{llllp{1.5cm}l}
+\toprule
+Model & \multicolumn{2}{l}{lj/cut (12–6 LJ potential)} & & ε (kcal/mol) & σ (Å)\\
+ & Atom species & Symbol & & & \\
+\midrule
+Epoxy & Carbon in the methyl group & c3 & & 0.056 & 3.479\\
+ & Hydrogen, bonded to carbon & hc & & 0.02 & 2.589\\
+ & Generic carbon & c & & 0.056 & 3.479\\
+ & Aromatic carbon & cp & & 0.066 & 3.479\\
+ & Oxygen in ether & oc & & 0.246 & 3.065\\
+ & Carbon bonded to 2 H’s & c2 & & 0.056 & 3.479\\
+ & Carbon bonded to 1 H & c1 & & 0.056 & 3.479\\
+ & Hydroxyl oxygen & oh & & 0.246 & 3.065\\
+ & Carbon in 3-membered ring with hydrogens & c3h & & 0.056 & 3.479\\
+ & Oxygen in 3-membered ring & o3e & & 0.246 & 3.065\\
+ & Hydroxyl hydrogen & ho & & 0.013 & 0.949\\
+ & Nitrogen in aromatic amines & nb & & 0.065 & 3.524\\
+ & Hydrogen bonded to nitrogen & hn & & 0.013 & 0.949\\
+Quartz & Silicon in silicate & sz & & 0.040 & 4.053\\
+ & Hydroxyl oxygen & oh & & 0.228 & 2.860\\
+ & Hydroxyl hydrogen & ho & & 0.000 & 0.000\\
+ & Oxygen & oz & & 0.228 & 2.860\\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 2 is printed at the top of the left column of p.\,7. Also in \texttt{tables/table2.csv}.}
+
+To quantify the plastic deformation behavior of atoms in the whole system, the shear strain (i.e., von mises strain, $\eta_i^{\mathrm{Mises}}$) and volumetric strain ($\eta_i^{\mathrm{Vol}}$) of atoms were calculated using OVITO from the atomic Green-Lagrangian strain tensor (\boldmath$\eta$\unboldmath) and the atomic deformation gradient tensor (\textbf{\emph{J}}) for each atom, as shown in Eqs. (12–14) [36]. Note that this atomic-level deformation gradient and the strain tensor at each particle could be calculated from the relative motion of its neighbors.
+\begin{equation}
+\boldsymbol{\eta}=\frac{\boldsymbol{J}^{\mathrm{T}}\boldsymbol{J}-\boldsymbol{I}}{2}\tag{12}
+\end{equation}
+\begin{equation}
+\eta_i^{\mathrm{Mises}}=\sqrt{\eta_{xy}^2+\eta_{xz}^2+\eta_{yz}^2+\frac{\left(\eta_{xx}-\eta_{yy}\right)^2+\left(\eta_{xx}-\eta_{zz}\right)^2+\left(\eta_{yy}-\eta_{zz}\right)^2}{6}}\tag{13}
+\end{equation}
+\begin{equation}
+\eta_i^{\mathrm{Vol}}=\frac{\eta_{xx}+\eta_{yy}+\eta_{zz}}{3}\tag{14}
+\end{equation}
+where \boldmath$\eta$\unboldmath{} and \textbf{\emph{J}} are the atomic Green-Lagrangian strain tensor and atomic deformation gradient tensor for each particle, respectively. $\eta_i^{\mathrm{Mises}}$ and $\eta_i^{\mathrm{Vol}}$ are the shear strain and volumetric strain of the atom. $\eta_{xx}$, $\eta_{yy}$, $\eta_{zz}$, $\eta_{xy}$, $\eta_{xz}$, and $\eta_{yz}$ are the six components of strain for each atom.
+
+The displacement magnitude of atoms during nanoindentation and nanoscratching processes is computed by subtracting its reference (or initial) position from its current position, as shown in Figures 6d, 8a, and 14a.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Fig. 4} Epoxy-quartz system for \textbf{a} nanoindentation and \textbf{b} nanoscratching simulation
+\alttext{Two perspective renderings of the epoxy-quartz simulation box (spheres: grey, red, white and a few blue for the epoxy; the quartz indenter as a red-and-white patch at the top centre), axes x, y, z shown at lower left. (a) ``Nanoindentation'': a red arrow labelled ``Indented force $F_z$'' points straight down onto the indenter, which sits in the surface. (b) ``Nanoscratching'': the same downward arrow ``Indented force $F_z$'' plus a second red arrow pointing diagonally to the lower right (along the in-plane y direction of the perspective) labelled ``Sliding force $F_y$''.}
+
+\pdfpage{8}
+\subsection*{2.4 MD nanoscratching simulations}
+
+As shown in Fig. 4b, MD nanoscratching simulation was also divided into two stages: the holding process and the sliding process. (1) after MD nanoindentation simulation, the holding process was conducted for 100 ps, where the quartz indenter was held in the target indentation depth without displacement. Five target indentation depths (\emph{h}\textsubscript{c}: 5, 10, 15, 20, and 25 Å) were considered. Thereafter, (2) during the sliding process, the quartz indenter was slid along \emph{y}-direction in displacement-controlled mode at a given velocity. Five sliding velocities (0.1, 0.5, 1.0, 1.5, and 2.0 Å/ps) were applied, and the final sliding distance of the quartz indenter along \emph{y}-direction was set at 30 Å.
+
+\section*{3 Results and discussion}
+
+\subsection*{3.1 Uniaxial traction on bulk epoxy}
+
+The bulk epoxy system with 114,000 atoms (see Fig. 5d) was further relaxed with NPT ensemble for 1.0 ns, with the temperature and pressure equal to 300 K and 1.0 atm, respectively. Thereafter, the tensile mechanical properties of epoxy system along three directions were evaluated by applying uniaxial traction at 300 K, under a strain-controlled loading approach [52] at a tensile strain rate of 5 × 10\textsuperscript{−7}/fs.
+
+Figure 5a–c shows the evolution of the tensile stress, total energy, and density of the bulk epoxy system with a tensile strain along three directions. The calculation method of the tensile stress, tensile strain, and Poisson’s ratio (\emph{v}) in MD simulation using LAMMPS can be found in Eqs. S3–S5 (see \emph{Supplementary materials}).
+
+As shown in Fig. 5a, compared to the mechanical behavior of crystal materials in MD simulations, such as clay minerals [44, 48, 52], the tensile stress–strain curve of the bulk epoxy presents a high discreteness without an obvious yield failure point, which agrees well with the MD simulation results from Xu et al. [46]. This can be explained by the fact that the epoxy resin, as an amorphous material, did not present obvious pores during the whole tensile process in the simulation box (Fig. 5d). The density of the bulk epoxy system decreased from 1.13 to around 1.10 kg/m\textsuperscript{3} at a tensile strain equal to 0.3, demonstrating that the difference in density (∼ 0.03 kg/m\textsuperscript{3}) was very small, as shown in Fig. 5c. Moreover, Fig. 5b shows that the total energy of the whole system increased with the tensile strain.
+
+Tables 3 and 4 give Young’s modulus and Poisson’s ratio of the epoxy resin, which was calculated by linear regression of the tensile stress–strain curve for a tensile strain of 0 ∼ 0.04 (Fig. 5a). As shown in Tables 3 and 4, the overall Young’s modulus ($\overline{E}$) of 2.075 GPa and the average Poisson’s ratio ($\overline{\upsilon}$) of 0.377 are both within the range of previous experimental and simulation results, indicating that the model built in this work appears well \pdfpage{9}suited for modeling the mechanical behavior of epoxy resin. Note that the data in Tables 3 and 4 were not the same, because the epoxy resin composition was diverse with different matrixes and curing agents, and various test conditions and methods were used in the experiments. In MD simulation, the sizes of the epoxy model, the conversion percentage of cross-linking, the equilibrium process, etc., were also somewhat different.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Fig. 5} \textbf{a–c} Evolution of tensile stress, total energy, and density of the bulk epoxy system with tensile strain along three directions. \textbf{d} Epoxy structure and its displacement magnitude under different tensile strains along \emph{x}-direction
+\decompnote{Fig. 5 is printed at the bottom of p.\,8; it is placed after the paragraph that runs on to p.\,9, so it follows the [p.\,9] marker.}
+\alttext{(a) Scatter plot with fitted curves, Origin style (black frame, inward ticks), labelled ``(a) Tensile stress-strain'' below. x axis ``Tensile strain'', linear, 0.00 to 0.30 (labels every 0.05, frame from about −0.025 to 0.315); y axis ``Tensile stress (MPa)'', linear, −50 to 250 in steps of 50. Legend at lower right, headed ``Tensile direction'': x, black open squares, ``y = -158.95e\textsuperscript{(-x/0.045)} + 151.39, R\textsuperscript{2} = 0.66''; y, red open circles, ``y = -152.11e\textsuperscript{(-x/0.041)} + 139.91, R\textsuperscript{2} = 0.63''; z, magenta open triangles, ``y = -139.06e\textsuperscript{(-x/0.040)} + 143.88, R\textsuperscript{2} = 0.51'' (each equation in its series' colour; the exponents are tiny and read at magnification). Each series has one marker about every 0.005 of strain. Near zero strain the stresses are about −11 to +5 MPa; they rise steeply to about 100 MPa at a strain of 0.05 and then scatter widely between about 50 and 240 MPa (highest: a magenta triangle ≈ 235 MPa at 0.20; black squares up to ≈ 199 MPa at ≈ 0.245, red circles up to ≈ 191 MPa; lowest beyond 0.1: a magenta triangle ≈ 52 MPa at 0.10 and a red circle ≈ 71 MPa at 0.20). Three dashed curves in the series' colours follow the printed equations: they start at about −8 (x), −12 (y) and +5 MPa (z) at zero strain, bend over near a strain of 0.1 and level off at about 151 (black), 144 (magenta) and 140 MPa (red), the magenta curve being highest at small strains. \par (b) Line plot with small markers (x black squares, y red circles, z magenta triangles), labelled ``(b) Total energy-tensile strain''. x axis ``Tensile strain'' 0.00 to 0.30 (labels every 0.05, minor ticks between); y axis ``Total energy (kcal/mol)'', linear, labelled 0 (top frame) down to −3500 in steps of 500, minor ticks every 250, bottom frame at about −3750. Legend ``Tensile direction'' with x, y, z in the right half. All three curves start near −3400 to −3450 kcal/mol at zero strain (black dipping to ≈ −3500 at ≈ 0.01), rise roughly together and jaggedly to about −2600 at 0.05 and −1400 to −1700 at 0.10 (magenta highest from about 0.08 on, ≈ −1000 by 0.125). Beyond 0.17 the red y curve stays near −1000 to −700 (a dip to ≈ −1230 at ≈ 0.245, a peak ≈ −720 at ≈ 0.28, ending ≈ −1030 at 0.30), while the black x and magenta z curves keep rising to about −400 kcal/mol at 0.30 (highest points ≈ −320 to −350 near 0.295). \par (c) Line plot with small markers, same symbols, labelled ``(c) Density-tensile strain''. x axis ``Tensile strain'' 0.00 to 0.30; y axis ``Density (kg/m\textsuperscript{3})'', linear, 1.090 to 1.130 in steps of 0.005. Legend ``Tensile direction'' at top right. All three start at ≈ 1.129 at zero strain and fall together, nearly linearly, to ≈ 1.117–1.118 at 0.05 and ≈ 1.107–1.110 at 0.10 (magenta lowest from about 0.06), then flatten: ≈ 1.103–1.105 at 0.15 and ≈ 1.100–1.103 at 0.20. At the end (0.30) the red y curve is ≈ 1.1025, having risen slightly after 0.21, while black x and magenta z end at ≈ 1.097 (magenta's lowest marker ≈ 1.095–1.096 at ≈ 0.295).}
+\figuredata{a}{figures/fig5a.csv}{figures/fig5a.py}{tier 3, digitized from the embedded 300 ppi JPEG: markers by template matching with the legend markers on a 0.005-strain grid, flagged where uncertain; dashed fit curves traced and checked against the printed equations; figures/fig5\_extract.py}
+\figuredata{b}{figures/fig5b.csv}{figures/fig5b.py}{tier 3, digitized from the embedded 300 ppi JPEG: line centre (and its upper and lower ends) per pixel column by colour mask; figures/fig5\_extract.py}
+\figuredata{c}{figures/fig5c.csv}{figures/fig5c.py}{tier 3, digitized as for (b); figures/fig5\_extract.py}
+\alttext{Panel d. Left: perspective rendering of a rectangular block of atoms (grey, with red and a few blue atoms), labelled “Bulk epoxy system (114000 atoms)”, with two orange arrows labelled $\varepsilon_x$ pointing outward from opposite faces along x, and an axis triad z (up), x, y. Right, under the title “(d) Epoxy structure under different tensile strain at tension along x-direction”: an axis pair z (up) and x (right), then two rows of four side views of the same slab, each with a thin black outline. Top row: atoms in grey, red and a few blue (not colour-keyed). Bottom row: “Displacement magnitude” with a colour key from 0 Å (blue) through cyan, green and yellow to 20 Å (red); the columns are labelled “0 (initial state)”, “0.1”, “0.2” and “0.3”. At 0 the slab is uniformly dark blue. At 0.1 it is blue to cyan, darkest blue in the middle and lighter cyan towards both ends. At 0.2 it is mostly green and yellow-green with a bluer patch in the middle. At 0.3 the left and right ends are orange to red and the middle is green with a blue patch. At 0.1–0.3 small red specks are scattered throughout. The slabs look slightly thinner (in z) at higher strain.}
+\figuredata{d (0, initial state)}{figures/fig5d_strain0.csv}{figures/fig5d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 8): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (0.1)}{figures/fig5d_strain0p1.csv}{figures/fig5d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 8): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (0.2)}{figures/fig5d_strain0p2.csv}{figures/fig5d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 8): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (0.3)}{figures/fig5d_strain0p3.csv}{figures/fig5d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 8): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+\noindent\textbf{Table 3} Young’s modulus of epoxy resin in this work and similar materials in previous studies at room temperature
+\begin{center}\footnotesize
+\begin{tabular}{p{2.0cm}p{5.6cm}lllp{0.9cm}p{1.0cm}}
+\toprule
+Methods & Young’s modulus of epoxy (GPa) & \emph{E}\textsubscript{x} & \emph{E}\textsubscript{y} & \emph{E}\textsubscript{z} & Overall ($\overline{E}$) & Reduced modulus \emph{E}\textsubscript{r}\\
+\midrule
+MD simulations & Epoxy resin (containing 2000 DGEBA + 1000 mPDA) with a conversion percentage of 84\% through uniaxial tension using MD simulation in this work & 2.203 & 1.906 & 2.105 & 2.075 & 2.419\\
+ & Epoxy resin (containing 200 DGEBA + 100 mPDA) with a conversion percentage of 86\% through uniaxial tension using MD simulation [46] & \multicolumn{5}{l}{2.61 ± 0.28}\\
+ & Epoxy resin composed of EPON862 and curing agent DETDA with conversion degrees of 0\% ∼ 86\% using MD simulation [21] & \multicolumn{5}{l}{1.0 ∼ 3.0}\\
+ & Epoxy resin (containing EPON862 + DETDA) [39] & \multicolumn{5}{l}{2.56 (experimental), 1.61 (MD simulation)}\\
+Various experiments in previous works & DGEBA epoxy networks (containing DGEBA/D230, DGEBA/TETA, DGEBA/TEPA) through dynamic mechanical analyses experiments [3] & \multicolumn{5}{l}{2.21 ∼ 2.72}\\
+ & A DGEBA-based epoxy resin through tensile test [51] & \multicolumn{5}{p{4.5cm}}{3.5 (unmodified epoxy resin), 3.85 (epoxy + 8.5\% nanofiller)}\\
+ & Matrix epoxy Epon 862 [25] & \multicolumn{5}{l}{2.83}\\
+ & Epoxy resin composite by ultrasonic velocity Measurement [27] & \multicolumn{5}{p{4.5cm}}{3.441 ∼ 4.601 (DGEBA/AGE), 3.441 ∼ 6.293 (DGEBA/GMA)}\\
+ & Epoxy resin through uniaxial tension and nanoindentation test [40] & \multicolumn{5}{p{4.5cm}}{3.3 ± 0.12 (uniaxial tension), 3.9 ± 0.12 (nanoindentation test)}\\
+ & Epoxy resin with 0.78 wt\% Polyaniline added by 0 ∼ 1.0 wt\% ZnO nanoparticles using nanoindentation test [31] & \multicolumn{5}{p{4.5cm}}{3.76 (0 wt\%), 3.49 (0.5 wt\%), 3.47 (1.0 wt\%)}\\
+ & Epoxy composite with 0 ∼ 5\% CNF using nanoindentation test [32] & \multicolumn{5}{l}{4.0 ∼ 7.1}\\
+ & \emph{E}\textsubscript{r} of epoxy resin at different loading rates of 0.25 ∼ 6.0 mN/s using nanoindentation test [14] & \multicolumn{5}{l}{4.78 ∼ 5.35}\\
+ & \emph{E}\textsubscript{r} of nanoclay/epoxy composite at 40 °C [20] & \multicolumn{5}{l}{1.5 ∼ 7.5}\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\footnotesize\noindent The overall Young’s modulus ($\overline{E}$) is the square average value of Young’s modulus along three directions (i.e., \emph{E}\textsubscript{x}, \emph{E}\textsubscript{y}, \emph{E}\textsubscript{z}). The reduced modulus \emph{E}\textsubscript{r} was calculated through Eq. (10)
+
+\noindent \emph{DGEBA} Diglycidyl Ether of Bisphenol A, \emph{mPDA} m-phenylenediamine, \emph{DETDA} Diethyltoluenediamine, \emph{EPON862} Bisphenol F diglycidyl ether, \emph{TETA} triethylenetetramine, \emph{TEPA} tetraethylenepentamine, \emph{D230} Jeffamine D230, \emph{AGE} Allyl glycidyl ether, \emph{GMA} glycidyl methacrylate, \emph{CNF} carbon nanofiber\par}
+\decompnote{Table 3 fills the top of p.\,9. Also in \texttt{tables/table3.csv}.}
+
+Moreover, as shown in Fig. 5, Tables 3, and 4, the tensile stress, density, Young’s modulus, and Poisson’s ratio along three directions for the bulk epoxy system are relatively close, indicating that the epoxy resin can be considered as an isotropic material [8, 53].
+
+\subsection*{3.2 MD nanoindentation behavior}
+
+Figure 6(a, b) shows the evolution of the indentation force (\emph{F}\textsubscript{z}) with the displacement of the quartz indenter (\emph{h}\textsubscript{z}) and the indentation depth (\emph{h}\textsubscript{c}) at different loading rates. The indentation force gradually increased with \emph{h}\textsubscript{z} and the loading rate. As shown in Fig. 6b, the relationship between \emph{F}\textsubscript{z} and \emph{h}\textsubscript{c} follows a power law, which has been proven to be suitable for most cases in nanoindentation via MD and experiments [23, 26]:
+\begin{equation}
+F_{\mathrm{z}}=\alpha h_c^{\mathrm{m}}\tag{15}
+\end{equation}
+where \emph{F}\textsubscript{z} and \emph{h}\textsubscript{c} are the indentation force of the quartz indenter and the indentation depth, respectively. α and \emph{m} are constants.
+
+During MD nanoindentation, the epoxy-quartz structure and the surface mesh of the epoxy at different \emph{h}\textsubscript{z} are shown in Figs. 6b and 7, respectively. The quartz indenter was pressed into the interior of the epoxy substrate, squeezing the atoms on the epoxy substrate surface and forming significant pits. The surface wear of the epoxy substrate during MD indentation was an obvious “groove.” Figure 8 shows that the displacement magnitude, shear strain, and volumetric strain of atoms within the whole system at a loading rate of 1.0 Å/ps constantly increased with the increase of \emph{h}\textsubscript{z}, and the surface wear (i.e., the deformation area) in the whole system gradually expanded when \emph{h}\textsubscript{z} increased. The higher \emph{h}\textsubscript{z}, the more atoms of the epoxy \pdfpage{10}substrate were displaced by the quartz indenter, and the greater the resistance the indenter had to overcome. This is why the indentation force gradually increased with \emph{h}\textsubscript{z}.
+\decompnote{``Figs. 6b and 7'': the epoxy-quartz structure at different $h_z$ is shown in Fig. 6c; Fig. 6b is the force–depth plot.}
+
+\noindent\textbf{Table 4} Poisson’s ratio of epoxy resin in this work and similar materials in previous studies at room temperature
+\begin{center}\footnotesize
+\begin{tabular}{p{6.2cm}lllllll}
+\toprule
+Poisson’s ratio of epoxy & \emph{v}\textsubscript{xy} & \emph{v}\textsubscript{xz} & \emph{v}\textsubscript{yx} & \emph{v}\textsubscript{yz} & \emph{v}\textsubscript{zx} & \emph{v}\textsubscript{zy} & $\overline{\upsilon}$\\
+\midrule
+Uniaxial tension using MD simulation in this work & 0.351 & 0.407 & 0.338 & 0.420 & 0.368 & 0.378 & 0.377\\
+Epoxy resin composed of EPON862 and curing agent DETDA (conversion degrees of 0\% ∼ 86\%) [21] & \multicolumn{7}{l}{0.27 ∼ 0.475}\\
+Epoxy resin (containing EPON862 + DETDA) [39] & \multicolumn{7}{l}{0.353 (experimental), 0.448 (MD simulation)}\\
+Matrix epoxy Epon 862 [25] & \multicolumn{7}{l}{0.3}\\
+Epoxy resin composite by ultrasonic velocity Measurement [27] & \multicolumn{7}{p{6cm}}{0.3461 ∼ 0.3911 (DGEBA/AGE), 0.341 ∼ 0.346 (DGEBA/GMA)}\\
+Araldite LY5052 epoxy resin by uniaxial relaxation tests [33] & \multicolumn{7}{l}{0.32 ∼ 0.44}\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\footnotesize\noindent The average Poisson’s ratio ($\overline{\upsilon}$) is the geometric average value of the six components of the matrix\par}
+\decompnote{Table 4 is printed at the top of p.\,10. Also in \texttt{tables/table4.csv}.}
+
+The indentation force had a significant dispersion at a loading rate of 0.1 Å/ps (see Fig. 6(a, b)), and the fitting coefficient R\textsuperscript{2} was 0.78, which was significantly lower than the ones obtained for the other loading rates (see Fig. 6b). Thus, the loading rate of 0.1 Å/ps was not considered to calculate the indentation hardness of the epoxy substrate. As shown in Table 5, the indentation hardness of the epoxy substrate obtained by Eq. (9) increased with the increase in the loading rate from 0.25 to 0.75 Å/ps, and then tended to stabilize in the interval 0.75 ∼ 2.0 Å/ps. These results agree well with some previous nanoindentation experimental works [12, 14], which reported that the hardness of epoxy resin increased with the loading rate.
+
+As shown in Table 3, the value of the reduced modulus \emph{E}\textsubscript{r} of 2.419 GPa is consistent with previous experimental results [20]. However, as shown in Table 5, the indentation hardness of the epoxy resin in MD simulations appears to be one order of magnitude larger than the one obtained experimentally, which is fully discussed in Sect. 3.4.1.
+
+To understand the interaction between quartz and epoxy during nanoindentation, Fig. 9a shows the pairwise interaction force between quartz and epoxy groups with \emph{h}\textsubscript{z} at a loading rate of 1.0 Å/ps. At \emph{h}\textsubscript{z} of 15 ∼ 20 Å, the pairwise interaction between quartz and epoxy groups originated from their non-bonded interactions, including coulombic and van der Waals interactions. Furthermore, the pairwise interaction force along \emph{z}-direction increased significantly with rising \emph{h}\textsubscript{z} at 20 ∼ 45 Å, while the pairwise interaction force along \emph{x}- and \emph{y}-directions fluctuated around 0 nN, and the fluctuation increased with increasing \emph{h}\textsubscript{z}, especially at 35 ∼ 45 Å.
+
+Figure 10a–c shows the evolution of various energy terms with \emph{h}\textsubscript{z}. The potential energy, kinetic energy, and total energy of the whole system gradually increased with \emph{h}\textsubscript{z}. During the process of the quartz indenter entering into the epoxy substrate, some atoms within the epoxy substrate could move and rearrange, increasing various energy terms (Fig. 10b, c). At the same time, this MD nanoindentation process required overcoming the attraction between atoms or molecules, thus requiring energy consumption. Therefore, an absorbing energy process is performed during MD nanoindentation.
+
+Figures 10a, d, 6b, 9, and Table 5 illustrate that the loading rate could affect the energy of the whole system and the mechanical parameters of nanoindentation: the higher the loading rate, the lower all the energy terms, the higher the indented force, the indentation hardness of the epoxy, and the average overall pairwise interaction force between quartz and epoxy groups.
+
+To explore the underlying mechanisms of the above phenomenon, Fig. 11 presents the MD nanoindentation scheme: the initial model (Fig. 1c) would gradually deform with the increase of \emph{h}\textsubscript{z} when the quartz indenter constantly moves into the epoxy substrate (see Figs. 7 and 8). Then, to try to reach a new equilibrium state, the movement and rearrangement of atoms in the whole system occurred, but at a high loading rate, there was not enough time to complete this equilibrium process at a given timestep, leading to a smaller movement and displacement of atoms in the epoxy corresponding to a non-equilibrium state (see Fig. 6d). Thus, at a higher loading rate, the distance of the surface connecting atoms between quartz and epoxy was smaller, causing \emph{F}\textsubscript{z} and \emph{H} to be higher. Moreover, at a higher loading rate, more atoms in the whole system could not undergo sufficient movement and rearrangement in time, so the change of potential and kinetic energy of the whole system was relatively smaller. Thus, the higher the loading rate, the lower the total energy of the whole system.
+
+\subsection*{3.3 MD nanoscratching behavior}
+
+Several MD nanoscratching simulations along \emph{y}-direction (i.e., sliding direction) were performed with five indentation depths (\emph{h}\textsubscript{c}: 5, 10, 15, 20, and 25 Å) and five sliding velocities (0.1, 0.5, 1.0, 1.5, and 2.0 Å/ps).
+
+\pdfpage{11}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Fig. 6} \textbf{a}, \textbf{b} Evolution of the indentation force (\emph{F}\textsubscript{z}) of the whole system with the displacement of the indenter (\emph{h}\textsubscript{z}) and the indentation depth (\emph{h}\textsubscript{c}) at different loading rates. \textbf{c} Epoxy-quartz structure at different \emph{h}\textsubscript{z} and \emph{h}\textsubscript{c}. \textbf{d} Displacement magnitude of atoms within the whole system at different loading rates and \emph{h}\textsubscript{c} = 25 Å
+\alttext{(a) Line-and-scatter plot of indenter force $F_z$ (nN, y axis $-2$ to 14, linear, ticks every 2) against displacement of indenter $h_z$ (Å, x axis 0 to 45, ticks every 5). Seven loading rates, each shown as shaded ball markers with a dashed curve of the same colour; legend at upper left: 0.10 Å/ps black, 0.25 Å/ps red, 0.50 Å/ps magenta, 0.75 Å/ps blue, 1.00 Å/ps olive, 1.50 Å/ps dark red, 2.00 Å/ps orange. The region from $h_z$ = 20 to 45 Å has a pale pink background. For $h_z$ below about 17 Å all series lie at $F_z \approx 0$ and their markers overlap into one band (only the top orange and dark-red balls are visible). From about 20 Å the forces rise, with scatter of about $\pm$1--2 nN around the dashed curves; near 45 Å the points of the six faster rates lie between about 9.7 nN (0.25 Å/ps) and 14.8 nN (1.50 Å/ps, at the top frame), and the dashed curves end between about 10.4 and 14.3 nN. The 0.10 Å/ps series stays lowest: its dashed curve flattens at about 5 nN between 37 and 41 Å and ends at about 8.2 nN at 45 Å, while its last markers lie at about 5--6 nN. The markers overlap heavily between 20 and 40 Å, where individual points are hard to make out. Inset (upper middle, white and pink background, axes $h_z$ 20 to 50 Å and $F_z$ 0 to 12 nN, label ``0.1 Å/ps''): the 0.1 Å/ps data alone as black dots at 1 Å steps with a dotted black curve; the points rise from about 0 nN at 21--22 Å to about 1.5 nN at 27 Å, stay between about 1 and 2.8 nN up to 34 Å, jump to about 4.8 nN at 35 Å, reach about 7.2 nN at 40 Å, fall back to about 5 nN at 41--43 Å, and end at about 10.5 nN at 45 Å; the dotted curve passes from 0 to about 8 nN at 45 Å with a plateau near 1.5 nN (27--31 Å) and near 5 nN (37--40 Å). A blue outlined arrow points from panel (a) to panel (b). \par (b) Scatter plot with dashed power-law fits: indenter force $F_z$ (nN, y axis 0 to 20, labels every 4) against indentation depths $h_c$ (Å, x axis 0 to 25, ticks every 5). Same seven loading rates and colours as (a). The legend (upper left) gives a dashed line and fit for each rate: 0.10 Å/ps $y = 0.069x^{1.47}$, R\textsuperscript{2} = 0.78 (black); 0.25 Å/ps $y = 0.034x^{1.80}$, R\textsuperscript{2} = 0.91 (red); 0.50 Å/ps $y = 0.097x^{1.46}$, R\textsuperscript{2} = 0.95 (magenta); 0.75 Å/ps $y = 0.056x^{1.65}$, R\textsuperscript{2} = 0.92 (blue); 1.00 Å/ps $y = 0.041x^{1.77}$, R\textsuperscript{2} = 0.94 (olive); 1.50 Å/ps $y = 0.064x^{1.68}$, R\textsuperscript{2} = 0.96 (dark red); 2.00 Å/ps $y = 0.094x^{1.56}$, R\textsuperscript{2} = 0.94 (orange). All curves start at 0 at $h_c$ = 0 and rise convexly; at 25 Å the black (0.10 Å/ps) curve reaches about 7.8 nN and the other six lie between about 10.7 and 14.3 nN, the dark-red (1.50) and orange (2.00) highest. The points scatter around the curves; the black 0.10 Å/ps points between 21 and 24 Å lie at about 5 nN, below their curve, and a few points at low $h_c$ (about 10--14 Å) lie near 1--1.5 nN. The highest points are about 15.2 nN (1.50 Å/ps, 24 Å) and 13.7 nN (2.00 Å/ps, 21 Å).}
+\figuredata{a}{figures/fig6a.csv}{figures/fig6a.py}{digitized from the 300 ppi raster (tier 3): markers on the 1 Å / 0.75 Å $h_z$ grid by colour class, markers hidden under others missing; dashed curves traced for $h_z \geq$ 32 Å only}
+\figuredata{a (inset)}{figures/fig6a_inset.csv}{figures/fig6a_inset.py}{digitized from the 300 ppi raster (tier 3): 25 markers and the dotted curve}
+\figuredata{b}{figures/fig6b.csv}{figures/fig6b.py}{digitized from the 300 ppi raster (tier 3): markers, those hidden under others missing; fit curves computed from the printed legend equations}
+\alttext{(c) ``epoxy-quartz structure at different $h_z$ and $h_c$'': eight side views (axes z up, y right) of the epoxy slab (grey, red, white and a few blue spheres) with the quartz indenter (red spheres) above or in it, in two rows of four, labelled ``$h_z$ = 0 Å'', ``$h_z$ = 10 Å'', ``$h_z$ = 20 Å, $h_c$ = 0 Å'', ``$h_z$ = 25 Å, $h_c$ = 5 Å'' (top row) and ``$h_z$ = 30 Å, $h_c$ = 10 Å'', ``$h_z$ = 35 Å, $h_c$ = 15 Å'', ``$h_z$ = 40 Å, $h_c$ = 20 Å'', ``$h_z$ = 45 Å, $h_c$ = 25 Å'' (bottom row). A red arrow ``Indented force $F_z$'' points down onto the first indenter. The inverted pyramid is fully visible above the slab at 0 Å, touches the surface at 20 Å, and shows a shrinking visible part (the rest sunk into the slab) as $h_z$ grows; at 45 Å only a thin band of the pyramid's base remains above the surface.}
+\alttext{Panel d, “(d) Displacement magnitude at different loading rates and $h_\mathrm{c}$ of 25 Å”: four square top views of the epoxy (axes y up, x right, at lower left) with a colour key from 0 Å (blue) to 5 Å (red), labelled “0.10 Å/ps”, “0.5 Å/ps”, “1.50 Å/ps” and “2.0 Å/ps”. Each square has a dark blue rim and a mottled blue, cyan and green interior with a red, roughly circular cluster of atoms at the centre. At 0.10 Å/ps the red cluster is the largest and most ragged, and more red and green patches are scattered across the square; it is encircled by a yellow dashed circle with a yellow arrow to the label “More movement and rearrangement of atoms”. At 0.5 and 1.50 Å/ps the central red cluster is smaller and more compact. At 2.0 Å/ps the red cluster is a compact disc, encircled by a yellow dashed circle with a yellow arrow to “Little movement and rearrangement of atoms”.}
+\figuredata{d (0.10 Å/ps)}{figures/fig6d_0p10.csv}{figures/fig6d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 11): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (0.5 Å/ps)}{figures/fig6d_0p5.csv}{figures/fig6d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 11): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (1.50 Å/ps)}{figures/fig6d_1p50.csv}{figures/fig6d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 11): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (2.0 Å/ps)}{figures/fig6d_2p0.csv}{figures/fig6d.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 11): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+To explore the effect of indentation depths on the nanoscratching behavior, Fig. 12(a-e) presents the evolution of the forces on the quartz indenter along three directions with the sliding distance for different \emph{h}\textsubscript{c} and a sliding velocity of 1.0 Å/ps. As shown in Fig. 12a, for the case of \emph{h}\textsubscript{c} = 5 Å, the forces along the three directions fluctuated around a stable value, and this fluctuation was relatively small. However, as shown in Fig. 12b–e, the fluctuation of the three forces gradually increased when \emph{h}\textsubscript{c} increased. With the growth of \emph{h}\textsubscript{c}, the contact area between the quartz indenter and the epoxy gradually rose, indicating that the quartz indenter needed to overcome more interaction between atoms, resulting in a higher resistance during nanoscratching process. Thus, the higher the \emph{h}\textsubscript{c}, the higher the shear strain of atoms and the surface wear of the epoxy substrate (Fig. 13), and the higher the total energy of the whole system (Fig. 12f).
+
+\pdfpage{12}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Fig. 7} Surface mesh of the epoxy system under different displacements of the indenter (\emph{h}\textsubscript{z}) at a loading rate of 1.0 Å/ps (the indenter is hidden for better visual clarity)
+\alttext{Eight perspective renderings of the epoxy slab (axes x, y, z at lower left) with its top surface drawn as a translucent grey mesh over small coloured atoms (mostly blue along the sides; green, yellow and red specks on the surface), indenter hidden. Labels: ``$h_z$ = 0 Å'', ``$h_z$ = 10 Å'', ``$h_z$ = 20 Å, $h_c$ = 0 Å'', ``$h_z$ = 25 Å, $h_c$ = 5 Å'', ``$h_z$ = 30 Å, $h_c$ = 10 Å'' (top row), ``$h_z$ = 35 Å, $h_c$ = 15 Å'', ``$h_z$ = 40 Å, $h_c$ = 20 Å'', ``$h_z$ = 45 Å, $h_c$ = 25 Å'' (bottom row). The surface is undulating at 0–20 Å; from about 30 Å a small dip with red atoms appears at the centre and deepens. At 45 Å the dip is circled in red and shown enlarged in an inset (red rounded frame, connected by dashed red lines): a roughly circular depression ringed by red, yellow and green atoms, labelled ``groove''. The surface atoms are coloured without a colour key.}
+
+As shown in Fig. 12d–f, the three forces and the total energy of the whole system gradually increased with the sliding distance at \emph{h}\textsubscript{c} equal to 20 and 25 Å. Figure 14 displays the deformation pattern of the epoxy system under different sliding distances at \emph{h}\textsubscript{c} equal to 20 Å and the sliding velocity equal to 1.0 Å/ps. The surface wear gradually expanded with the increase of the sliding distance, showing higher displacement, shear and volumetric strain for more atoms within the epoxy. As shown in Fig. 14a, with the increase in the sliding distance, more atoms were packed in front of the indenter during the nanoscratching process, causing more resistance to slide. Meanwhile, there was a fan-shaped distribution of the displacement magnitude and surface mesh of atoms (see Fig. 14a, b). Thus, for \emph{h}\textsubscript{c} of 20 and 25 Å, the higher the sliding distance, the higher the sliding force \emph{F}\textsubscript{y}.
+
+Figure 12f shows that the total energy of the whole system increases with rising the sliding distance, illustrating that MD nanoscratching is also an energy absorption process, and the higher the sliding distance, the higher the total energy.
+
+To study the effect of the sliding velocity on nanoscratching behavior, Fig. 15a–e shows the evolution of the forces along three directions with the sliding distance at five sliding velocities from 0.1 to 2.0 Å/ps at \emph{h}\textsubscript{c} of 20 Å. It can be concluded that the higher the sliding velocity, the higher the forces along the three directions and their fluctuation, especially the force along \emph{y}-direction. Moreover, as shown in Fig. 16, based on the shear strain and displacement magnitude of atoms, the sliding velocity has little effect on the surface wear of the epoxy substrate during nanoscratching.
+
+During the nanoscratching process, the forces along the sliding direction (\emph{F}\textsubscript{y}) are the main forces. Figure 15f shows the evolution of \emph{F}\textsubscript{y} with the sliding distance at 0.1 ∼ 2.0 Å/ps and \emph{h}\textsubscript{c} of 20 Å. A relationship between the sliding force and the sliding distance could be established in the form of an exponential function (see Eq. 16), but the coefficient of correlation (R\textsuperscript{2}) of 0.42 ∼ 0.63 is not very high due to the high dispersivity of \emph{F}\textsubscript{y} values.
+\begin{equation}
+F_{\mathrm{y}}=ae^{(-d/b)}+c\tag{16}
+\end{equation}
+where \emph{F}\textsubscript{y} and \emph{d} are the sliding force and sliding distance, respectively. \emph{a}, \emph{b}, and \emph{c} are constants.
+
+Figure 17a–d shows the evolution of the average forces along three directions with sliding velocity at different \emph{h}\textsubscript{c}, where the forces are averaged along the sliding distance between 15 and 30 Å (see Figs. 12a–e and 15a–e). As shown in Fig. 17, the average forces along \emph{y}- and \emph{z}-directions are significantly higher than that along \emph{x}-direction, since the indenter was sliding along \emph{y}-direction, causing the influence of wear in \emph{x}-direction to be relatively small. Moreover, the higher the sliding velocity or indentation depths, the higher the force along the three directions. Based on the above discussion, the MD nanoscratching mechanism diagram could be obtained, as shown in Fig. 18.
+
+\subsection*{3.4 Discussion}
+
+According to the above research results, the nanoindentation and nanoscratching mechanisms of epoxy-quartz interface are deeply discussed, considering the effect of loading rate, sliding velocity, and indentation depth. Moreover, there are some limitations and prospects of this study, which are discussed as follows:
+
+\subsubsection*{3.4.1 Indentation hardness of epoxy in MD simulation and experiments}
+
+As shown in Table 5, although the indentation hardness of epoxy resin in MD simulation is one order of magnitude \pdfpage{13}greater than that obtained from previous nanoindentation experiments, it does not mean that the MD simulation results are unreasonable.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Fig. 8} \textbf{a} Displacement magnitude of atoms for the whole system at different displacements of the indenter (\emph{h}\textsubscript{z}) under two different slices: one slice along \emph{x}-direction from 0 to 74 Å, and another one from 64 to 74 Å. \textbf{b} Shear strain and \textbf{c} volumetric strain of atoms at different depths under the slice along \emph{x}-direction from 64 to 74 Å. (The above figures refer to the case of a loading rate of 1.0 Å/ps. The indenter is hidden for better visual clarity.)
+\alttext{OVITO renderings of the epoxy substrate (atoms coloured by value; indenter hidden), in three parts.
+(a) Displacement magnitude, colour key 0 Å (blue) to 5 Å (red). Top left: a perspective view of the square slab, blue with cyan and green speckle and a red patch at the centre, cut by a translucent grey slice plane; a blue arrow points from the plane to the label “Slice plane”, and another blue arrow from the label to the top view below. Below it, a top view (axes y up, x right) of the slab, blue rim, mottled interior and a red cluster at the centre, with a red double arrow labelled “0 ∼ 74 Å” spanning from the left edge to a narrow vertical red rectangle through the centre, which is marked “64 ∼ 74 Å” below; beneath it the caption “Slice along x-direction from 64 Å to 74 Å”. Right, under the heading “Slice along x-direction from 0 to 74 Å” (axes z up, y right): eight side views labelled (i) 0 Å, (ii) 10 Å, (iii) 20 Å, (iv) 25 Å, (v) 30 Å, (vi) 35 Å, (vii) 40 Å, (viii) 45 Å. (i) is uniformly dark blue; (ii)–(iv) are blue with increasing cyan and green speckle and a dark blue band along the bottom and sides; from (v) a red cluster appears at the top centre and grows downward and sideways through (vi) and (vii) to a large red and orange plume reaching about halfway down the slab in (viii), surrounded by green. Inside a red dashed box labelled “Slice along x-direction from 64 Å to 74 Å”: three thinner slices (i) 35 Å, (ii) 40 Å, (iii) 45 Å, sparser (white gaps between atoms), showing a red V-shaped cluster at the top centre that widens and deepens from (i) to (iii), bordered by yellow and green atoms, on a blue and cyan background.
+(b) Shear strain, colour key 0 (blue) to 0.4 (red), slices (i) 0 Å, (ii) 20 Å, (iii) 30 Å, (iv) 40 Å, (v) 45 Å. (i) is all dark blue with an uneven top surface (a hump right of centre). (ii) is blue and light blue with some green, yellow and red atoms along the top surface. (iii) shows a small red and yellow patch at the top centre over a cyan zone. (iv) and (v) show a red V-shaped groove at the top centre, larger in (v), surrounded by green and cyan atoms that fan out below it.
+(c) Volumetric strain, colour key 0 (blue) to 0.2 (red), slices (i) 0 Å, (ii) 20 Å, (iii) 30 Å, (iv) 40 Å, (v) 45 Å. Mostly dark blue throughout; (ii) has a few cyan to red atoms on the top surface; (iii) a small cyan patch at the top centre; (iv) and (v) a thin red and yellow layer lining a V-shaped groove at the top centre, wider in (v), with a little cyan below it.}
+\figuredata{a (i) 0 Å, slice 0–74 Å}{figures/fig8a_top_i.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (ii) 10 Å}{figures/fig8a_top_ii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (iii) 20 Å}{figures/fig8a_top_iii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (iv) 25 Å}{figures/fig8a_top_iv.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (v) 30 Å}{figures/fig8a_top_v.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (vi) 35 Å}{figures/fig8a_top_vi.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (vii) 40 Å}{figures/fig8a_top_vii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (viii) 45 Å}{figures/fig8a_top_viii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (i) 35 Å, slice 64–74 Å}{figures/fig8a_slice_i.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (ii) 40 Å, slice 64–74 Å}{figures/fig8a_slice_ii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (iii) 45 Å, slice 64–74 Å}{figures/fig8a_slice_iii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (i) 0 Å}{figures/fig8b_i.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (ii) 20 Å}{figures/fig8b_ii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (iii) 30 Å}{figures/fig8b_iii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (iv) 40 Å}{figures/fig8b_iv.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (v) 45 Å}{figures/fig8b_v.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (i) 0 Å}{figures/fig8c_i.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (ii) 20 Å}{figures/fig8c_ii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (iii) 30 Å}{figures/fig8c_iii.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (iv) 40 Å}{figures/fig8c_iv.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (v) 45 Å}{figures/fig8c_v.csv}{figures/fig8.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 13): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+On the one hand, this is due to the difference of nanoindenter materials, such as rigid quartz as nanoindenter in this MD simulations and diamond (its chemical formula: C) as nanoindenter in conventional nanoindentation experiments [12]. Since diamond is very hard, but the quartz indenter is set as a rigid body in this MD simulation, the influence of the nanoindenter hardness could be eliminated. However, the molecular interface interactions between diamond nanoindenter and epoxy are significantly different from those between quartz nanoindenter and epoxy, so their friction coefficients and adhesion effect are also different, which will affect the mechanical response during the indentation process. Meanwhile, the defects of epoxy resin in experiment are also an important reason, which could cuase the decrease of hardness. In MD simulations, the defects in epoxy resins are usually reduced due to size effects.
+
+On the other hand, this may be due to the type of applied force field, which is a more critical influencing factor because the potential function parameters of materials significantly affect calculating the maximum indentation force (\emph{P}\textsubscript{max}). In this work, PCFF and CVFF forcefield are performed for epoxy and quartz, respectively. This PCFF-CVFF force field combination has been successfully used to study the friction and creep behavior of epoxy-quartz \pdfpage{14}systems [46]. Moreover, other force field combinations have been used to investigate the physio-chemical properties of epoxy-quartz systems, such as CVFF-CVFF [41, 50] and ReaxFF [45]. So far, no other MD nanoindentation simulation of epoxy has been performed, which prevents us from comparing our simulations’ results.
+
+\noindent\textbf{Table 5} The indentation hardness (\emph{H}) of the epoxy resin obtained by Eq. (9) in MD nanoindentation simulation at different loading rates and in previous experimental works
+\begin{center}\footnotesize
+\begin{tabular}{p{4.0cm}p{1.6cm}p{1.2cm}p{2.4cm}}
+\toprule
+Methods & \multicolumn{2}{l}{Conditions and other notes} & \emph{H} (GPa)\\
+\cmidrule{2-3}
+ & Loading rate (Å/ps) & \emph{P}\textsubscript{max} (nN) & \\
+\midrule
+MD nanoindentation simulation in this work, where nanoindenter is rigid quartz & 0.25 & 9.757 & 1.492\\
+ & 0.5 & 10.594 & 1.620\\
+ & 0.75 & 13.052 & 1.997\\
+ & 1.0 & 13.115 & 2.006\\
+ & 1.5 & 14.813 & 2.266\\
+ & 2.0 & 14.215 & 2.174\\
+Nanoindentation experiments in previous works, where nanoindenter is usually diamond & \multicolumn{2}{p{3.0cm}}{Epoxy-reinforced nanocomposites with fumed silica of 0 ∼ 3\% [40]} & 0.256 ∼ 0.318\\
+ & \multicolumn{2}{p{3.0cm}}{RTM6 Epoxy resin with strain rate of 0.01 ∼ 0.25 and 25 °C [12]} & 0.23 ∼ 0.35\\
+ & \multicolumn{2}{p{3.0cm}}{SWNT of 0\% ∼ 1.0\% reinforced epoxy composites [9]} & 0.23 ∼ 0.31\\
+ & \multicolumn{2}{p{3.0cm}}{Epoxy resin at different loading rate of 0.25 ∼ 6.0 mN/s [14]} & 0.26 ∼ 0.276\\
+ & \multicolumn{2}{p{3.0cm}}{Epoxy resin with 0.78 wt\% Polyaniline added by 0 ∼ 1.0 wt\% ZnO nanoparticles [31]} & 0.18 (0 wt\%) ∼ 0.206 (1.0 wt\%)\\
+ & \multicolumn{2}{p{3.0cm}}{Epoxy composite with 0 ∼ 5\% CNF [32]} & 0.26 ∼ 0.67\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\footnotesize\noindent \emph{RTM} resin transfer molding, \emph{SWNT} single-walled carbon nanotube, \emph{CNF}: carbon nanofiber\par}
+\decompnote{Table 5 is printed at the top of the left column of p.\,14. Also in \texttt{tables/table5.csv}.}
+
+\subsubsection*{3.4.2 Scale difference between MD nanoindentation simulation and experiments}
+
+The macroscopic results often reflect the overall mechanical properties of the epoxy resin and quartz mixture, but the microscopic nanoindentation and nanoscratching studies can better observe the interaction and deformation characteristics of the epoxy resin-quartz interface, reflecting their local deformation behavior, such as the strength, toughness, and indentation response of the interface.
+
+It is noted that there is a scale difference (i.e., time and space scales) between MD nanoindentation simulation and experiments [23]. For example, in MD nanoindentation simulations, its time and space scales are ∼ ps to ∼ ns, and ∼ nm for nanoindenter, respectively. In nanoindentation experiments, its time and space scales are ∼ s, and ∼ ten-hundreds nm for the standard nanoindenter, respectively. Moreover, due to the computational limitations, the loading rate of nanoindenters is ∼ Å/ps (approximate ∼ m/s) for MD simulations, but ∼ μm/s (10\textsuperscript{−6} ∼ 10\textsuperscript{−9} m/s) for nanoindentation experiments.
+
+\subsubsection*{3.4.3 Elastic–plastic deformation analysis at macro–micro scales}
+
+\begin{hangpars}
+1.\quad Elastic–plastic deformation of epoxy resin in MD nanoindentation
+
+The MD nanoindentation process of epoxy resin can usually be analyzed by the relationship between indentation depth and load, which is mainly divided into two stages: elastic and plastic deformation stages (Fig. 6b).
+
+•\quad Elastic deformation stage: When the indenter initially contacts the epoxy resin and begins to apply pressure, exhibiting elastic deformation. The load-depth curve in this stage usually shows a linear relationship, which follows Hooke’s law.
+
+•\quad Plastic deformation stage: As the indentation depth increases, the epoxy resin begins to show plastic deformation characteristics. Meanwhile, the load-depth curve deviates from linearity and the hysteresis occurs. Plastic deformation involves irreversible processes, such as sliding and deformation of molecular chains, and breaking or reorganization of crosslinking points.
+
+2.\quad Elasticity of intermolecular interaction potential and permanent deformation of materials in MD
+
+The interaction potentials in MD simulations (such as Lennard–Jones potential, bond length and bond angle potential) behave elastically within a small deformation range. Because these potential energy functions are parabolic near the equilibrium position, \pdfpage{15}following Hooke’s law.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Fig. 9} \textbf{a} Evolution of pairwise interaction force between quartz and epoxy groups with \emph{h}\textsubscript{z} at a loading rate of 1.0 Å/ps, where the overall pairwise interaction force is the square average of the forces in the three directions. The right sketch map shows the quartz-epoxy system containing the two groups and the pairwise interaction energy/force between them. \textbf{b} Relationship between the average overall pairwise interaction force between the two groups and the loading rate at two different intervals of \emph{h}\textsubscript{z}, i.e., 40 ∼ 45 Å and 20 ∼ 45 Å
+% Fig. 9 (written by fork F2): \alttext body and \figuredata lines, ready to paste after the caption.
+\alttext{(a) Left: a sketch. An atomistic snapshot of the epoxy substrate (grey, red and some blue atoms; a wide block outlined by a blue dashed rounded rectangle) with the pyramid-shaped quartz indenter (red and white atoms, apex down) above it, circled by a blue dashed ellipse. Blue arrows lead from the indenter to an ellipse ``Group 1: quartz'' and from the substrate to an ellipse ``Group 2: epoxy''. Between them a central ellipse ``pairwise interaction energy/force'' has outlined double arrows pointing up to Group 1 and down to Group 2. Right: line plot of the pairwise interaction force (nN, y axis $-3$ to 15, ticks every 3) against displacement of indenter $h_z$ (Å, x axis 0 to 45, ticks every 5), title ``Loading rate of 1.0 Å/ps''. Four series, each as open markers at 1 Å steps with a smooth line of the same colour: $x$-direction (black, open squares), $y$-direction (red, open circles), $z$-direction (magenta, open up-triangles) and \emph{overall} (orange, open down-triangles). From $h_z$ = 1 to about 18 Å all four stay at about 0 nN. The $z$-direction force then rises with oscillations (local peaks near 29, 33, 38 and 41 Å) to about 13.4 nN at 45 Å; the overall force follows the same pattern at a lower level, reaching about 7.9 nN at 44--45 Å. The $x$- and $y$-direction forces fluctuate around 0 nN, mostly between about $-1$ and $+1.2$ nN up to 37 Å, with larger swings at 38--45 Å: the $y$ line dips to about $-1.7$ nN near 42 Å (marker about $-2.4$ nN) and peaks near 2.9 nN at 44 Å (marker about 4.7 nN), and the $x$ line ends at about 2.2--2.6 nN at 45 Å. A blue dashed box around $h_z$ 15--26 Å and $-0.7$ to 0.7 nN, with an outlined blue arrow, marks the zoomed region. Inset (upper middle): the same four series for $h_z$ 15 to 25 Å, y axis $-0.2$ to 0.6 nN (labels every 0.2): all near 0 up to 18 Å (the magenta $z$ line dips to about $-0.1$ nN at 17 Å); between 18 and 20 Å the $z$ force rises to about 0.45 nN and the overall force to about 0.3 nN; the $y$ line rises from about 0.05 nN at 19 Å to a peak of about 0.65 nN at 23 Å and falls to about 0.17 nN at 24 Å; the $x$ line peaks at about 0.08 nN at 19 Å and declines to about $-0.17$ nN at 25 Å.
+(b) Scatter plot with two dashed exponential fits: average overall pairwise interaction force (nN, y axis about 1.5 to 9, labels 2 to 9) against loading rate (Å/ps, x axis 0.0 to 2.0, ticks every 0.5). Legend: blue balls ``average: $h_z$ of 40 ∼ 45 Å'' with blue dashed ``Fitting''; red balls ``average: $h_z$ of 20 ∼ 45 Å'' with red dashed ``Fitting''. Points at the seven loading rates 0.1, 0.25, 0.5, 0.75, 1.0, 1.5 and 2.0 Å/ps: blue about 3.9, 5.6, 5.4, 6.1, 6.0, 7.3 and 7.4 nN; red about 1.9, 2.5, 2.6, 2.8, 2.7, 3.3 and 3.4 nN. Printed fit equations: blue $y$ = -3.87e\textsuperscript{(-$x$/0.99)} + 7.89, R\textsuperscript{2} = 0.82; red $y$ = -1.75e\textsuperscript{(-$x$/1.12)} + 3.67, R\textsuperscript{2} = 0.86. Both dashed curves rise and level off, the blue from about 4.4 nN at 0.1 Å/ps to about 7.4 nN at 2.0 Å/ps and the red from about 2.1 to about 3.4 nN.}
+\figuredata{a}{figures/fig9a.csv}{figures/fig9a.py}{digitized from the 300 ppi raster (tier 3): open markers found from their holes on the 1 Å $h_z$ grid, lines traced column by column; below $h_z \approx$ 18 Å only the top (orange) markers are visible}
+\figuredata{a (inset)}{figures/fig9a_inset.csv}{figures/fig9a_inset.py}{digitized from the 300 ppi raster (tier 3): the four lines traced; 21 of the small open markers found (off-line blobs and line thickenings), the rest missing}
+\figuredata{b}{figures/fig9b.csv}{figures/fig9b.py}{digitized from the 300 ppi raster (tier 3): 14 markers; fit curves computed from the printed equations}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Fig. 10} \textbf{a} Relationship between total energy of the whole system and \emph{h}\textsubscript{z} at different loading rates. \textbf{b}, \textbf{c} Evolution of energy increment of energy terms with \emph{h}\textsubscript{z} at a loading rate of 1.0 Å/ps. \textbf{d} Energy difference (Δ\emph{E}) between the cases of \emph{h}\textsubscript{z} = 45 Å and \emph{h}\textsubscript{z} = 0 Å at different loading rates, including potential energy (pe), kinetic energy (ke), and total energy (total)
+% Fig. 10 (written by fork F2): \alttext body and \figuredata lines, ready to paste after the caption.
+\alttext{(a) Scatter plot with dashed curves: total energy (kcal/mol, y axis 5000 to about 10500, labels every 1000) against displacement of indenter $h_z$ (Å, x axis $-5$ to 50, labels every 5). Seven loading rates with points at 1 Å steps and a dashed curve of the same colour; legend (two columns, upper left): 0.10 Å/ps black filled circles, 0.25 Å/ps red open circles, 0.50 Å/ps green open up-triangles, 0.75 Å/ps blue open down-triangles, 1.00 Å/ps cyan open diamonds, 1.50 Å/ps olive open squares, 2.00 Å/ps orange open pentagons. All series start near 5500 kcal/mol at $h_z \approx$ 1 Å. The 0.10 Å/ps series rises fastest: to about 6800 kcal/mol by 3--5 Å, about 7800 by 10 Å, about 8700 by 20 Å, about 9200 at 35--40 Å and about 9700 at 45 Å, with scattered points about $\pm$300 kcal/mol around its curve. The 0.25 Å/ps series lies next, rising roughly steadily from about 6000 at 5 Å to about 8800 (curve) and 9050 (last point) at 45 Å. The other five series stay close together below about 6500--7000 kcal/mol up to $h_z \approx$ 30 Å, the 0.50 Å/ps highest (about 6000--6600) and the 2.00 Å/ps lowest (dipping to about 5300 at 8--10 Å), and then rise steeply together to about 8000--8650 kcal/mol at 45 Å (0.50 Å/ps about 8650, 0.75 about 8300, 1.50 about 8100, 2.00 about 8000). In this lower group the markers overlap heavily and are hard to tell apart.
+(b) Line plot of energy increment (kcal/mol, y axis about $-300$ to 2800, labels every 400 from 0 to 2800) against displacement of indenter $h_z$ (Å, $-5$ to 50), title ``Loading rate of 1.0 Å/ps''; legend: E\_pe black, E\_ke red, E\_total blue. All three start at 0 at $h_z \approx$ 1 Å. E\_total and E\_pe rise together to about 290 kcal/mol at 2--3 Å and stay between about 150 and 500 kcal/mol up to about 25 Å (E\_total with peaks of about 700 at 15.5 and 20 Å); from 25 Å both rise with small oscillations, E\_pe to a peak of about 1590 at 44 Å and about 1500 at 45 Å, E\_total to a peak of about 2480 at 44 Å and about 2430 at 45 Å. E\_ke stays between about $-30$ and 70 kcal/mol up to 14 Å, has bumps of about 210 and 260 at 15.5 and 20 Å, and rises from about 110 at 23--25 Å to about 930 at 45 Å. E\_total lies above E\_pe by about the E\_ke value throughout.
+(c) Line plot of energy increment (kcal/mol, y axis $-300$ to 700, labels every 100) against $h_z$ (Å, $-5$ to 50), title ``Loading rate of 1.0 Å/ps''; legend in two columns: E\_vdwl black, E\_coul red, E\_bond olive, E\_angle blue, E\_dihed cyan, E\_imp magenta. All six start at 0 at $h_z \approx$ 1 Å. E\_vdwl is negative almost throughout, oscillating between about $-220$ kcal/mol (minima near 4, 12.5 and 24 Å) and about 0, with a peak of about 20 at 44 Å and a drop to about $-150$ at 45 Å. E\_coul oscillates between about 120 and 300 up to 30 Å (peaks of about 300 near 12.5 Å) and rises to about 380 at 34.5 Å and about 500 at 43--45 Å. E\_angle rises from 0 to about 150 at 4--5 Å, falls to about 0 near 14 and 23 Å, and climbs from 23 Å to about 380 at 39.5 Å and a peak of about 570 at 44 Å (about 500 at 45 Å). E\_dihed oscillates between about 30 and 360 with an overall rise, ending at about 375 at 45 Å. E\_bond oscillates between about $-160$ (near 6 Å) and about 100 up to 35 Å, then rises to about 180 at 38 Å and about 250 at 45 Å. E\_imp stays small, between about $-5$ and 45 kcal/mol, rising slowly to about 40 at 45 Å.
+(d) Grouped bar chart: $\Delta E$ (kcal/mol, y axis 0 to 4500, labels every 500) for the loading rates 0.1, 0.25, 0.5, 0.75, 1.0, 1.5 and 2.0 Å/ps (category axis ``Loading rate (Å/ps)''); three bars per rate: pe (orange), ke (red), total (blue), legend at upper right. Bar heights read from the plot: pe about 2260, 1920, 1890, 1710, 1460, 1600 and 1550; ke about 1930, 1650, 1270, 1110, 1010, 1030 and 960; total about 4170, 3550, 3130, 2790, 2450, 2620 and 2490 kcal/mol. All three fall from 0.1 to 1.0 Å/ps and change little from 1.0 to 2.0 Å/ps; in each group the total bar is about the sum of the pe and ke bars.}
+\figuredata{a}{figures/fig10a.csv}{figures/fig10a.py}{digitized from the 300 ppi raster (tier 3): markers on the 1 Å $h_z$ grid (open symbols from their holes), many hidden ones missing; dashed curves traced for 0.25 Å/ps (most of its length) and 0.10 Å/ps ($h_z \gtrsim$ 37 Å) only}
+\figuredata{b}{figures/fig10b.csv}{figures/fig10b.py}{digitized from the 300 ppi raster (tier 3): three lines traced column by column}
+\figuredata{c}{figures/fig10c.csv}{figures/fig10c.py}{digitized from the 300 ppi raster (tier 3): six lines traced column by column; small jumps where lines cross}
+\figuredata{d}{figures/fig10d.csv}{figures/fig10d.py}{digitized from the 300 ppi raster (tier 3): 21 bar tops}
+
+\begin{hangpars}
+\hspace*{1.5em}Although those interaction potentials itself is elastic, the microstructure inside the material will undergo plastic deformation under large deformation or high stress, resulting in permanent deformation. These irreversible processes are beyond the scope of simple \pdfpage{16}elastic potential description, and the microstructure and dynamic behavior of the material need to be considered.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Fig. 11} MD nanoindentation mechanism diagram. \emph{d}\textsubscript{A-B}, \emph{F}\textsubscript{z}, and \emph{H} are the distance of the surface connecting atoms between quartz and epoxy, the indenter force, and the indentation hardness of the epoxy substrate, respectively
+\alttext{Flowchart. Top left: a red dashed ellipse ``high loading rate'' → a dotted box ``the same timestep'' → a red dashed ellipse ``Less total time''; from ``high loading rate'' an arrow down to a dotted box ``external force'', then a hollow blue arrow down. Middle left: ``Initial state'' (labelled ``Initial model'' below) → a red dashed box (labelled ``During nanoindentation process'') containing ``Movement and rearrangement of atoms'' with an arrow crossed out by a yellow ``×'' to ``New equilibrium state'' and a plain arrow to ``Non-equilibrium state''; ``Less total time'' points into this box with a hollow arrow. A hollow arrow leads from the box to a red dashed box at upper right with ``Higher Movement of quartz atom'' and ``Lower Movement of epoxy atom'', then down to a box with ``Lower $d_{\mathrm{A\text{-}B}}$'' → ``Higher $F_z$ and $H$'' and ``Lower $E_{ke}$ and $E_{pe}$'' → ``Lower $E_{\mathrm{total}}$''.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Fig. 12} Evolution of \textbf{a–e} forces along three directions, \textbf{f} total energy, \textbf{g} epoxy-quartz structure and shear strain of atoms with sliding distance at different indentation depths (\emph{h}\textsubscript{c}) and the same sliding velocities of 1.0 Å/ps
+\decompnote{The caption names a panel \textbf{g}; the printed figure has panels a–f only. The epoxy-quartz structure and shear strain at different $h_c$ are shown in Fig. 13, whose caption repeats this wording.}
+\alttext{Six line-and-scatter plots in two rows of three, labelled (a) to (f) under each panel. The caption's panel g (structure and shear strain) is not part of this figure; those images are in Fig. 13.
+Panels (a)--(e): force on the quartz indenter against sliding distance. Each has the y axis ``Force (nN)'' from $-15$ to 10 (labels every 5, minor ticks between), the x axis ``Sliding distance (Å)'' from 0 to 30 (labels every 5), and a legend at lower left: $F_x$ black open squares, $F_y$ red filled circles, $F_z$ magenta open triangles, each series' markers (one every 1 Å, from 1 to 30 Å) joined by a dashed line of its colour. The dashed lines are smoothed and do not always pass through the markers.
+(a) Text in the panel: ``$h_\mathrm{c}$ = 5 Å, 1.0 Å/ps''. All three forces stay small: $F_x$ and $F_z$ fluctuate between about 0 and 2 nN (both near 1 nN on average), $F_y$ between about $-0.5$ and $-2.5$ nN, with one dip to about $-4.3$ nN at 18 Å.
+(b) ``$h_\mathrm{c}$ = 10 Å, 1.0 Å/ps''. $F_z$ about 0.3 to 3.4 nN (peak at 15 Å); $F_x$ about $-1.8$ to 2 nN around 0; $F_y$ falls from about $-1$ nN at the start to $-3$ to $-5$ nN, lowest about $-7$ nN at 21 Å, and rises back to about $-1.7$ nN at 30 Å.
+(c) ``$h_\mathrm{c}$ = 15 Å, 1.0 Å/ps''. $F_z$ rises from about 1.5 nN to 3--4 nN (up to about 4.2 nN near 18 Å); $F_x$ around 0 (about $-2.4$ to 2.4 nN); $F_y$ drops from about $-1.5$ nN at 1--2 Å to about $-6.5$ nN at 6 Å and then stays mostly between $-4$ and $-6$ nN (lowest about $-7.5$ nN at 28 Å).
+(d) ``$h_\mathrm{c}$ = 20 Å, 1.0 Å/ps''. $F_z$ increases from about 2--3 nN to 4--6.5 nN; $F_x$ fluctuates between about $-3$ and 2.3 nN; $F_y$ drops from about $-1.7$ nN at 1 Å to about $-6$ to $-7$ nN by 6 Å and to $-8$ to $-10$ nN after 22 Å (lowest about $-10.2$ nN at 27 Å). Near 28--29 Å the $F_z$ dashed line rises from the marker at 28 Å (about 4 nN) and breaks off at about 7 nN; there is no $F_z$ marker at 29 Å.
+(e) ``$h_\mathrm{c}$ = 25 Å, 1.0 Å/ps'' (upper left). $F_z$ rises from about 1.8 nN at 1 Å to 5--10 nN (highest about 10.5 nN at 21 Å, a drop to about 4 nN at 29 Å); $F_x$ fluctuates between about $-3.5$ and 1.7 nN; $F_y$ falls from about $-4$ nN at 1 Å to about $-8$ to $-13$ nN, reaching about $-15$ nN at 27 Å and at 30 Å, with large oscillations of the dashed line.
+(f) Total energy against sliding distance: y axis ``Total energy (kcal/mol)'' from 7000 to 13000 (labels every 1000), x axis ``Sliding distance (Å)'' 0 to 30. Text ``1.0 Å/ps'' at the top; legend headed ``$h_\mathrm{c}$'': 5 Å black open squares, 10 Å red filled circles, 15 Å green up-triangles, 20 Å blue down-triangles, 25 Å magenta diamonds, markers every 1 Å joined by dashed lines. At 1--3 Å the curves start between about 7400 and 8600 kcal/mol in the order 20 Å (highest, about 8600), 10, 15, 25 Å, 5 Å (lowest, about 7450); they cross at 5--10 Å, and at 30 Å they are ordered by $h_\mathrm{c}$: about 8400 (5 Å), 9560 (10 Å), 10240 (15 Å), 11310 (20 Å) and 12230 kcal/mol (25 Å). The 5 Å curve dips to about 7200 at 5 Å before rising slowly; the 25 Å curve rises most steeply. Many markers overlap at 1--11 Å.}
+\figuredata{a}{figures/fig12a.csv}{figures/fig12a.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{b}{figures/fig12b.csv}{figures/fig12b.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{c}{figures/fig12c.csv}{figures/fig12c.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{d}{figures/fig12d.csv}{figures/fig12d.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±0.06 nN; $F_z$ at 29 Å not drawn in the panel}
+\figuredata{e}{figures/fig12e.csv}{figures/fig12e.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{f}{figures/fig12f.csv}{figures/fig12f.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig12\_extract.py, template matching, about ±0.06 Å and ±15 kcal/mol (overlapping markers at 1--11 Å flagged)}
+
+\begin{hangpars}
+3.\quad The connection and differences between elastic–plastic theory at micro- and macro-scales
+
+The classical elastic–plastic theory at the macroscale is based on continuum mechanics, where the stress–strain relationship is used to describe the elastic and plastic behavior of materials. The connection and differences between elastic–plastic theory at micro- and macro-scales are as follows:
+
+•\quad Connection: In MD simulation, the elastic behavior can be quantified by the second-order derivative of the potential energy function (i.e., elastic modulus), which corresponds to the concept of elastic modulus in classical theory at the macroscale. Furthermore, the plastic behavior is manifested as irreversible changes in the microstructure of the \pdfpage{17}material during MD simulations, such as molecular chain slip (amorphous materials) and dislocation movement (crystalline materials). These microscopic mechanisms correspond to the yield and hardening phenomena in classical theory.
+\end{hangpars}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent\textbf{Fig. 13} Epoxy-quartz structure and shear strain of atoms with sliding distance at different indentation depths (\emph{h}\textsubscript{c}) and the same sliding velocities of 1.0 Å/ps
+\alttext{Two rows of five side views of the epoxy-quartz system, one column per indentation depth, labelled below the bottom row (i) $h_\mathrm{c}$ = 5 Å, (ii) $h_\mathrm{c}$ = 10 Å, (iii) $h_\mathrm{c}$ = 15 Å, (iv) $h_\mathrm{c}$ = 20 Å, (v) $h_\mathrm{c}$ = 25 Å; axes z (up) and y (right) at the lower left. Top row: atoms in grey, white, red and a few blue (not colour-keyed); the quartz indenter is a red-and-white trapezoidal cluster on the top surface. Above the first panel a red downward arrow is labelled “Indented force $\boldsymbol{F}_z$”, and a red arrow pointing right is labelled “Sliding force $F_y$”. The part of the indenter visible above the surface shrinks from (i), where it stands well above the surface left of centre, through (ii) and (iii) (right of centre) to a thin strip in (iv) and almost nothing in (v). Bottom row, headed “Shear strain at 1.0 Å/ps and sliding distance of 30 Å under different $h_\mathrm{c}$” with a colour key 0 (blue) to 0.4 (red): the substrate is blue and light blue below; red atoms lie along the top surface from the centre to the right, in a band that becomes thicker and deeper from (i) to (v), with green and cyan atoms beneath; in (iii)–(v) the red band rises at its right end into a raised lip of atoms above the original surface.}
+\figuredata{bottom (i) $h_c$ = 5 Å}{figures/fig13_shear_i.csv}{figures/fig13.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 17): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{bottom (ii) $h_c$ = 10 Å}{figures/fig13_shear_ii.csv}{figures/fig13.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 17): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{bottom (iii) $h_c$ = 15 Å}{figures/fig13_shear_iii.csv}{figures/fig13.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 17): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{bottom (iv) $h_c$ = 20 Å}{figures/fig13_shear_iv.csv}{figures/fig13.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 17): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{bottom (v) $h_c$ = 25 Å}{figures/fig13_shear_v.csv}{figures/fig13.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 17): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+\begin{hangpars}
+•\quad Differences: MD simulations could provide the ability to observe and understand material behavior from the atomic insights, and reveal the microscopic mechanisms that cannot be directly described by the classical theory, such as molecular chain slip and dislocation formation. On the other hand, the classical theory is applicable to the macroscopic scale and relies on empirical formulas and assumptions.
+\end{hangpars}
+
+\subsubsection*{3.4.4 Future works}
+
+To sum up, this study is an exploratory work, and there is still more research work worth carrying out in the future.
+
+\begin{hangpars}
+1.\quad To determine the most appropriate force field combination, an analysis comparing multiple force fields may elucidate which force fields are closer to the experimental data, improving the reliability of the research results. Various force field combinations could be worth investigating, such as CVFF, Tersoff, BKS, ClayFF, Morse, ReaxFF for quartz nanoindenter, and CVFF, PCFF, ReaxFF for epoxy.
+
+2.\quad There is a different adhesion effect between various quartz nanoindenters and epoxy substrate due to different molecular interfacial interactions [50]. Thus, the diamond and virtual nanoindenters are necessary to be investigated and compared to the quartz nanoindenter in MD nanoindentation simulation, where the diamond nanoindenter is usually used in nanoindentation experiments, and there is without adhesion effect between virtual nanoindenter and epoxy substrate. Furthermore, the adhesion effect between nanoindenter and epoxy substrate is further investigated during the loading, holding, and unloading stage in nanoindentation process.
+
+3.\quad There are several nanoindenter shapes in nanoindentation experiments, such as Vickers and spherical indenters. Moreover, the shape and size of soil particles are usually diverse and complex in practical geotechnical engineering, so various shapes and sizes of nanoindenters are necessary to simulate the actual contact conditions between soil particles and FRP. Furthermore, the angle of the pyramid-shaped quartz nanoindenter is also worth studying.
+
+4.\quad To conduct the MD simulations that are a twin of the experiments, the coarse-graining MD simulation method for the epoxy-quartz system is necessary to establish the large MD model size and large time scale, which is worth investigating.
+\end{hangpars}
+
+\section*{4 Conclusions}
+
+The molecular dynamics (MD) simulation method was used to investigate the interfacial mechanical behavior of epoxy and quartz, considering the effect of loading rate on their nanoindentation behavior, and the effect of sliding velocity and indentation depths on their nanoscratching behavior. The main conclusions of this study are as follows:
+
+\begin{hangpars}
+1.\quad The fitting method developed in this study is used to obtain the consistent pair interaction potential parameters between epoxy and quartz, when different force fields with different LJ potentials (e.g., 12–6 and 9–6 LJ potentials) are performed for epoxy and quartz, respectively. Moreover, the fitting method could also be applied to various materials using different LJ potentials in MD simulations.
+\end{hangpars}
+
+\pdfpage{18}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig14.png}
+\end{center}
+\noindent\textbf{Fig. 14} \textbf{a} Displacement magnitude, \textbf{b} surface mesh, \textbf{c} shear strain, and \textbf{d} volumetric strain of atoms within the whole system at different sliding distances under one slice along \emph{x}-direction from 64 to 74 Å for the case of indentation depths (\emph{h}\textsubscript{c}) of 20 Å and sliding velocity of 1.0 Å/ps (the quartz indenter is hidden for better visual clarity)
+\alttext{OVITO renderings of the epoxy at sliding distances (i) 0 Å, (ii) 10 Å, (iii) 20 Å, (iv) 30 Å, slice along x from 64 to 74 Å, $h_c$ = 20 Å, 1.0 Å/ps.
+(a) Displacement magnitude, colour key 0 Å (blue) to 5 Å (red) at the left, labelled “Displacement magnitude”. Row “Hidden quartz” (axes z up, y right): (i) 0 Å, dark blue slab whose top surface has a notch left of centre where the indenter sits; (ii) 10 Å, red atoms along the top surface right of the notch with green and cyan atoms below; (iii) 20 Å and (iv) 30 Å, the red band along the surface extends further right, and red atoms pile up above the surface ahead of the indenter at the right; these piles are circled by blue dashed ellipses with blue dashed arrows to a beige label “atom packing” in a blue dashed ellipse. Row “No hidden quartz”: (i) 0 Å, the quartz indenter is visible as a blue lattice of V-shaped units sitting in the notch; (ii) 30 Å, the indenter is red (displaced) at the upper right, with red, yellow and green epoxy atoms around and in front of it. (iii) 30 Å, top view (axes y up, x right): blue square with mottled cyan and green interior and a red region in the upper middle shaped like a fan, wide at the top and narrowing downward to a stem, outlined by a yellow dotted line; a red dashed arrow leads to a beige fan-shaped drawing outlined in yellow, labelled “Fan-shaped distribution”; a black arrow pointing up is labelled “Sliding direction”.
+(b) Surface mesh of epoxy system (no colour key): four perspective views of the slab (axis triad x, y, z) with a white-grey surface mesh over atoms shown as blue dots, with green, yellow and red dots near the scratch. (i) 0 Å shows a small dip in the surface; in (ii)–(iv) a groove traced by red atoms lengthens. In (iv) a red dashed ellipse marks the groove, and red lines lead to an enlarged inset (rounded red frame) in which a yellow dotted fan outline surrounds the groove; axes y up, x right and a black “Sliding direction” arrow pointing up beside it; a red dashed arrow leads from the inset up to the fan-shaped drawing of (a).
+(c) Shear strain, colour key 0 (blue) to 0.4 (red): (i) all blue with the notched surface; (ii)–(iv) a red layer along the top surface, growing in length and thickness and moving right with sliding distance, with a raised red lip at its right end in (iii) and (iv), green and cyan below.
+(d) Volumetric strain, colour key 0 (blue) to 0.2 (red): (i) all blue; (ii)–(iv) a thinner red and yellow layer lining the groove surface, growing with sliding distance, otherwise blue.}
+\figuredata{a Hidden quartz (i) 0 Å}{figures/fig14a_hidden_i.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a Hidden quartz (ii) 10 Å}{figures/fig14a_hidden_ii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a Hidden quartz (iii) 20 Å}{figures/fig14a_hidden_iii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a Hidden quartz (iv) 30 Å}{figures/fig14a_hidden_iv.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a No hidden quartz (i) 0 Å}{figures/fig14a_nohidden_i.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a No hidden quartz (ii) 30 Å}{figures/fig14a_nohidden_ii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a (iii) 30 Å, top view}{figures/fig14a_xy_iii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (i) 0 Å}{figures/fig14c_i.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (ii) 10 Å}{figures/fig14c_ii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (iii) 20 Å}{figures/fig14c_iii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{c (iv) 30 Å}{figures/fig14c_iv.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (i) 0 Å}{figures/fig14d_i.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (ii) 10 Å}{figures/fig14d_ii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (iii) 20 Å}{figures/fig14d_iii.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{d (iv) 30 Å}{figures/fig14d_iv.csv}{figures/fig14.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 18): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+\begin{hangpars}
+2.\quad The overall Young’s modulus of 2.075 GPa and average Poisson’s ratio of 0.377 of the bulk epoxy were obtained through uniaxial traction, and these values are consistent with previous simulation and experimental works, validating the accuracy of the epoxy model.
+
+3.\quad Values of the reduced modulus \emph{E}\textsubscript{r} = 2.419 GPa and the indentation hardness \emph{H} = 1.492 ∼ 2.174 Gpa were obtained. The value of \emph{H} was one order of magnitude larger than the one obtained by experimental nanoindentation, which might be due to the difference in nanoindenter materials, the defects of epoxy resion, and the type of applied force field. Thus, this work suggests that various force field combinations for epoxy-quartz systems, and various nanoindenter materials for comparison are worth investigating in the future.
+
+4.\quad From the simulation results, abrasion models could be derived. The relationship between the indentation force \emph{F}\textsubscript{z} and the indentation depth \emph{h}\textsubscript{c} followed a power law for the nanoindentation process. The relationship between the sliding force \emph{F}\textsubscript{y} and the sliding distance \emph{d} followed an exponential function for the nanoscratching process. The surface wear of the epoxy \pdfpage{19}substrate was an obvious “groove” in nanoindentation and a “fan-shaped distribution” during the nanoscratching process.
+\end{hangpars}
+\decompnote{Item 3: Table 5 lists \emph{H} from 1.492 GPa (0.25 Å/ps) to 2.266 GPa (1.5 Å/ps); 2.174 GPa is the value at 2.0 Å/ps, not the maximum.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig15.png}
+\end{center}
+\noindent\textbf{Fig. 15} Evolution of \textbf{a–e} forces along three directions and \textbf{f} sliding force (\emph{F}\textsubscript{y}) with sliding distance at different sliding velocities of 0.1 ∼ 2.0 Å/ps and \emph{h}\textsubscript{c} of 20 Å
+\alttext{Six plots in two rows of three, labelled under each panel: ``(a) 0.1 Å/ps'', ``(b) 0.5 Å/ps'', ``(c) 1.0 Å/ps'', ``(d) 1.5 Å/ps'', ``(e) 2.0 Å/ps'', ``(f) $F_\mathrm{y}$ and sliding distance curve''.
+Panels (a)--(e): force on the quartz indenter against sliding distance at $h_c$ = 20 Å, one sliding velocity per panel. Each has the y axis ``Force (nN)'' from $-15$ to 10 (labels every 5), the x axis ``Sliding distance (Å)'' from 0 to 30 (labels every 5), and a legend at lower left: $F_x$ black open squares, $F_y$ red filled circles, $F_z$ magenta open triangles, markers joined by smoothed dashed lines of the same colour (many markers lie off the dashed lines). The in-panel text is ``$h_c$ = 20 Å, 0.1 Å/ps'' (upper left of a), ``$h_c$ = 20 Å, 0.5 Å/ps'' (lower right of b, near $-12$ nN), ``$h_c$ = 20 Å, 1.0 Å/ps'', ``$h_c$ = 20 Å, 1.5 Å/ps'' and ``$h_c$ = 20 Å, 2.0 Å/ps'' (upper left of c, d, e). Markers stand every 0.5 Å in (a), (b) and (e), every 1 Å in (c) and about every 0.4 Å in (d), from the first step to 30 Å.
+In all five panels $F_z$ is positive (mostly 2 to 8 nN), $F_x$ fluctuates around 0 (mostly between $-3$ and 3.5 nN), and $F_y$ is negative and falls from near 0 to $-5$ nN at the start towards lower values with growing scatter.
+(a) 0.1 Å/ps: $F_y$ from about $+0.9$ nN at 0.5 Å down to about $-4$ to $-6.5$ nN after 5 Å, single markers down to about $-8.2$ nN (20 Å) and $-8$ nN (27 Å); $F_z$ about 0.7 to 6.6 nN, higher after 20 Å; $F_x$ about $-3$ to 3.4 nN.
+(b) 0.5 Å/ps: $F_y$ from about $-0.5$ nN to about $-5$ nN at 5 Å and $-6$ to $-9$ nN after 10 Å (lowest marker about $-10.8$ nN at 27 Å); $F_z$ about 1.5 to 7.8 nN; $F_x$ about $-1.5$ to 3.5 nN.
+(c) 1.0 Å/ps: $F_y$ from about $-1.7$ nN to $-6$ to $-7$ nN after 6 Å and $-8$ to $-10$ nN after 22 Å; $F_z$ about 1.6 to 6.5 nN, with a highest marker of about 9.1 nN at 29 Å; $F_x$ about $-2.9$ to 2.3 nN.
+(d) 1.5 Å/ps: $F_y$ from about $-3.4$ nN to $-8$ to $-11$ nN with dips to about $-14$ nN (near 19.5 Å) and $-12.6$ nN at 30 Å; $F_z$ about 1 to 8.6 nN; $F_x$ about $-2.7$ to 3 nN.
+(e) 2.0 Å/ps: $F_y$ from about $-4.8$ nN (highest about $-1.6$ nN near 2.5 Å) to $-7$ to $-10$ nN, dips to about $-13$ nN near 23.5 Å and to about $-15$ nN (on the bottom frame) near 27.5 Å, then a rise to about $-4$ nN at 29 Å; $F_z$ about 1.6 to 8.4 nN; $F_x$ about $-2.2$ to 4.9 nN.
+(f) Scatter of $F_y$ for all five sliding velocities with fitted curves: y axis ``Force along $y$-direction $F_\mathrm{y}$ (nN)'' from $-20$ to about 2 (labels 0, $-4$, $-8$, $-12$, $-16$, $-20$), x axis ``Sliding distance (Å)'' 0 to 30. Open markers: 0.1 Å/ps black squares, 0.5 Å/ps red up-triangles, 1.0 Å/ps orange down-triangles, 1.5 Å/ps blue diamonds, 2.0 Å/ps magenta circles; many overlap. Dashed curves in the same colours, with the legend (equations in the series colour, the 0.1 Å/ps one in black): ``0.1 Å/ps $y$ = 6.31e$^{(-x/3.68)}$ - 5.22, R$^2$ = 0.53'', ``0.5 Å/ps $y$ = 6.46e$^{(-x/5.78)}$ - 7.26, R$^2$ = 0.60'' (top right), and ``1.0 Å/ps $y$ = 7.0e$^{(-x/7.51)}$ - 8.06, R$^2$ = 0.62'', ``1.5 Å/ps $y$ = 8.39e$^{(-x/9.34)}$ - 10.01, R$^2$ = 0.61'', ``2.0 Å/ps $y$ = 6.45e$^{(-x/8.44)}$ - 9.36, R$^2$ = 0.42'' (bottom left). The curves start at 0.5 Å at about $+0.3$ (0.1 Å/ps), $-1.3$ (0.5), $-1.5$ (1.0), $-2.1$ (1.5) and $-3.3$ nN (2.0), fall steeply over the first 5--10 Å and level off at about $-5.2$, $-7.2$, $-7.9$, $-9.7$ and $-9.2$ nN at 30 Å; the 1.5 and 2.0 Å/ps curves stay within about 0.5 nN of each other after 12 Å.}
+\figuredata{a}{figures/fig15a.csv}{figures/fig15a.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig15\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{b}{figures/fig15b.csv}{figures/fig15b.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig15\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{c}{figures/fig15c.csv}{figures/fig15c.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig15\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{d}{figures/fig15d.csv}{figures/fig15d.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig15\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{e}{figures/fig15e.csv}{figures/fig15e.py}{digitized (tier 3): marker centres from the 300 ppi JPEG by figures/fig15\_extract.py, template matching, about ±0.06 Å and ±0.06 nN}
+\figuredata{f (markers)}{figures/fig15f.csv}{figures/fig15f.py}{digitized (tier 3) by figures/fig15f\_extract.py, search guided by the values of panels a--e (overlapping markers), about ±0.05 nN for clean markers}
+\figuredata{f (fitted curves)}{figures/fig15f_fits.csv}{figures/fig15f.py}{the five legend equations printed in the panel, evaluated every 0.25 Å; checked against the dashed curves by overlay}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig16.png}
+\end{center}
+\noindent\textbf{Fig. 16} Evolution of \textbf{a} shear strain and \textbf{b} displacement magnitude of atoms with sliding distance at different sliding velocities
+\alttext{Two rows of five OVITO renderings, one column per sliding velocity; the columns are labelled under row b: 0.1 Å/ps, 0.5 Å/ps, 1.0 Å/ps, 1.5 Å/ps, 2.0 Å/ps (row a has no labels of its own).
+(a) “Shear strain at sliding distance of 30 Å and $h_c$ of 20 Å”, colour key 0 (blue) to 0.4 (red): side views of the slab; in every column a red layer lies along the top surface from about the centre to the right, ending in a raised red lip of piled-up atoms at the right, with green and cyan atoms below it and blue elsewhere. The five panels look much alike.
+(b) “Displacement magnitude at sliding distance of 30 Å and $h_c$ of 20 Å”, colour key 0 Å (blue) to 5 Å (red): square top views with a dark blue rim and a mottled blue, cyan and green interior; in every column a large red region in the upper middle, wide at the top and narrowing downward into a stem (mushroom- or fan-like), surrounded by green and yellow. The shape varies a little between columns but no clear trend with velocity is visible.}
+\figuredata{a column 1 (0.1 Å/ps)}{figures/fig16a_col1.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a column 2 (0.5 Å/ps)}{figures/fig16a_col2.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a column 3 (1.0 Å/ps)}{figures/fig16a_col3.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a column 4 (1.5 Å/ps)}{figures/fig16a_col4.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{a column 5 (2.0 Å/ps)}{figures/fig16a_col5.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (0.1 Å/ps)}{figures/fig16b_0p1.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (0.5 Å/ps)}{figures/fig16b_0p5.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (1.0 Å/ps)}{figures/fig16b_1p0.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (1.5 Å/ps)}{figures/fig16b_1p5.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+\figuredata{b (2.0 Å/ps)}{figures/fig16b_2p0.csv}{figures/fig16.py}{tier 3, colour-key mapping of the embedded 300 ppi raster (page 19): each pixel's colour, scaled to brightest channel 255, mapped to the nearest colour of the figure's own key bar; pixels not near a key colour left empty; values are the colours of rendered atoms in image-pixel coordinates (no length scale), not a continuous field}
+
+\begin{hangpars}
+5.\quad MD nanoindentation and nanoscratching mechanisms between epoxy substrate and quartz indenter were revealed. During the nanoindentation process, the higher the loading rate, the smaller the distance of surface connecting atoms between quartz and epoxy, and the higher the indentation force \emph{F}\textsubscript{z} and hardness \emph{H} of the epoxy substrate. Furthermore, for the nanoscratching process, the higher the sliding velocity or the higher the indentation depths were, the higher the forces along the three directions were.
+\end{hangpars}
+
+\noindent\textbf{Supplementary Information} The online version contains supplementary material available at https://doi.org/10.1007/s11440-024-02503-9.
+
+\noindent\textbf{Acknowledgements} We are very grateful to Dr. Lu-Yu WANG for his invaluable discussion and suggestions in this work. This research was financially supported by the Research Grants Council (RGC) of \pdfpage{20}Hong Kong Special Administrative Region Government (HKSARG) of China (Grant No.: N\_PolyU534/20, 15217220), Research·Centre·for. Nature-based. Urban Infrastructure Solutions·(Project no. P0053045) of· The Hong· Kong Polytechnic University, and. theProject·of RCRE (grantNo.:1-BBEM) of The Hong Kong Polytechnic University.
+\decompnote{Acknowledgements as printed, including the stray middle dots and full stops (``Research·Centre·for.'', ``of·'', ``Hong·'', ``and.'', ``theProject·of'').}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig17.png}
+\end{center}
+\noindent\textbf{Fig. 17} Evolution of the average forces along three directions with sliding velocity at different indentation depths (\emph{h}\textsubscript{c}) for sliding distance between 15 and 30 Å (see Fig. 12a–e and Fig. 15a–e)
+\alttext{Four grouped bar charts (a–d), one per indentation depth, printed in each plot as “$h_c$ = 5 Å”, “$h_c$ = 10 Å”, “$h_c$ = 15 Å” and “$h_c$ = 20 Å” and below each as “(a) $h_\mathrm{c}$ = 5 Å” to “(d) $h_\mathrm{c}$ = 20 Å”. Each panel: vertical axis “Force (nN)”, linear, −10 to 6 with labelled ticks every 2 (minor ticks every 1); no ticks on the horizontal axis, which is the zero line; the axis title “Sliding velocity (Å/ps)” is printed inside the plot area (in a and c below the bars, in b and d at the level of the red bars). Five groups of three bars, labelled 0.1, 0.5, 1.0, 1.5 and 2.0 just above the zero line; in each group a blue bar $F_x$, a red bar $F_y$ and a magenta bar $F_z$ (legend at lower left), each with a dark grey error bar with caps.
+(a) $h_c$ = 5 Å: all bars small. $F_x$ about 0.4, 0.6, 1.0, 0.2, 0.5 nN; $F_y$ about −1.2, −1.6, −1.8, −1.5, −2.3 nN; $F_z$ about 0.5, 1.0, 0.8, 1.0, 1.4 nN (velocities 0.1 to 2.0 Å/ps); error bars about ±0.6 to ±0.9 nN.
+(b) $h_c$ = 10 Å: $F_x$ about −0.5, 0.2, −0.4, 0.9, 0.6 nN; $F_y$ about −1.7, −3.5, −3.8, −4.0, −5.3 nN; $F_z$ about 0.7, 2.0, 1.9, 2.2, 2.8 nN; error bars about ±0.6 to ±1.5 nN.
+(c) $h_c$ = 15 Å: $F_x$ near zero (about −0.2, 0.5, 0.1, 0.2, 0.8 nN) with error bars of about ±0.7 to ±1.5 nN; $F_y$ about −3.1, −4.2, −5.0, −6.1, −6.1 nN; $F_z$ about 2.1, 2.5, 3.2, 3.7, 4.3 nN.
+(d) $h_c$ = 20 Å: $F_x$ about 0.8, 0.6, −0.3, 0.2, 1.3 nN with error bars of about ±1.2 to ±1.8 nN; $F_y$ about −5.3, −7.1, −7.6, −9.3, −8.8 nN; $F_z$ about 4.3, 4.7, 5.1, 5.2, 5.4 nN. The error bars of $F_z$ at 1.0–2.0 Å/ps reach the top of the axis (6 nN) and those of $F_y$ at 1.5 and 2.0 Å/ps reach the bottom (−10 nN), so they are cut off.
+Overall, $F_y$ is negative and grows in magnitude with $h_c$ and, mostly, with sliding velocity; $F_z$ is positive and grows likewise; $F_x$ stays within about ±1.3 nN. Values read from the digitized figure (figures/fig17.csv).}
+\figuredata{a, b, c, d}{figures/fig17.csv}{figures/fig17.py}{tier 3, digitized from the embedded 300 ppi raster (page 20): y axis fitted on the major ticks, bar ends from the bar colour run (sub-pixel), error-bar ends from the dark line at the bar centre; about ±0.03 nN for bars, ±0.05 nN for error-bar ends; clipped error bars flagged}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig18.png}
+\end{center}
+\noindent\textbf{Fig. 18} MD nanoscratching mechanism diagram. (\emph{d}\textsubscript{A-B}: the distance of surface connecting atoms between quartz and epoxy; A: quartz indenter; B: epoxy substrate; \emph{v}: sliding velocity; \emph{F}\textsubscript{y}: sliding force.)
+\alttext{Flowchart in two rows converging on one result. Top row: ``High $h_c$, the same $v$'' → ``High connect area of A and B'' → ``High surface wear of epoxy'' → ``More resistance to overcome'' → ``High $F_y$''. Bottom row: ``High $v$, the same $h_c$'' → a dotted box ``the same timestep'' → ``Less total time'' → a shaded box containing ``Lower movement of epoxy atom'' and ``Higher movement of quartz atom'' → ``Lower $d_{\mathrm{A\text{-}B}}$'' → (upward arrow) ``High $F_y$''. Start and end ellipses are red dashed, intermediate ones blue dashed.}
+
+\noindent\textbf{Author’s contribution} PW: Conceptualization, Methodology, Investigation, Data Curation, Writing—Review and Editing, Writing—Original Draft, Visualization; ZYY: Conceptualization, Writing-Review and Editing, Supervision, Project administration; PYH: Writing-Review and Editing, Supervision; WX: Data Curation, Methodology.
+
+\noindent\textbf{Funding} Open access funding provided by The Hong Kong Polytechnic University.
+
+\pdfpage{21}
+\noindent\textbf{Data availability} No datasets were generated or analyzed during the current study.
+
+\subsection*{Declarations}
+
+\noindent\textbf{Conflict of interest} The authors declare no competing interests.
+
+\noindent\textbf{Open Access} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+\subsection*{References}
+
+\begin{hangpars}
+1. Abyaneh MJ, El Naggar H, and Sadeghian P (2020) Numerical modeling of the lateral behavior of concrete-filled frp tube piles in sand. Int J Geomech 20(8). https://doi.org/10.1061/(ASCE)GM.1943-5622.0001725
+
+2. Aliasghar-Mamaghani M, Khaloo A (2021) Effective flexural stiffness of beams reinforced with frp bars in reinforced concrete moment frames. J Compos Constr 25(1). https://doi.org/10.1061/(ASCE)CC.1943-5614.0001101
+
+3. Amaral CR, Rodriguez RJS, Garcia FG, Junior LPB, Carvalho EA (2014) Impact of aliphatic amine comonomers on dgeba epoxy network properties. Polym Eng Sci 54(9):2132–2138. https://doi.org/10.1002/pen.23751
+
+4. Anagnostopoulos CA, Kandiliotis P, Lola M, Karavatos S (2014) Improving properties of sand using epoxy resin and electrokinetics. Geotech Geol Eng 32(4):859–872. https://doi.org/10.1007/s10706-014-9763-6
+
+5. Anagnostopoulos CA, Papaliangas TT (2012) Experimental investigation of epoxy resin and sand mixes. J Geotech Geoenviron Eng 138(7):841–849. https://doi.org/10.1061/(ASCE)GT.1943-5606.0000648
+
+6. Chang K, Yoshioka T, Kanezashi M, Tsuru T, Tung K (2010) A molecular dynamics simulation of a homogeneous organic-inorganic hybrid silica membrane. Chem Commun 46(48):9140. https://doi.org/10.1039/c0cc02531c
+
+7. Chen Z, Chen W, Yin J, and Malik N (2021) Shaft friction characteristics of two frp seawater sea–sand concrete piles in a rock socket with or without debris. Int J Geomech 21(7). https://doi.org/10.1061/(ASCE)GM.1943-5622.0002059
+
+8. Dong K, Zhang J, Cao M, Wang M, Gu B, Sun B (2016) A Mesoscale study of thermal expansion behaviors of epoxy resin and carbon fiber/epoxy unidirectional composites based on periodic temperature and displacement boundary conditions. Polym Test 55:44–60. https://doi.org/10.1016/j.polymertesting.2016.08.009
+
+9. Dutta AK, Penumadu D, Files B (2004) Nanoindentation testing for evaluating modulus and hardness of single-walled carbon nanotube-reinforced epoxy composites. J Mater Res 19(1):158–164. https://doi.org/10.1557/jmr.2004.19.1.158
+
+10. Emami FS, Puddu V, Berry RJ, Varshney V, Patwardhan SV, Perry CC, Heinz H (2014) Force field and a surface model database for silica to simulate interfacial properties in atomic resolution. Chem Mater 26(8):2647–2658. https://doi.org/10.1021/cm500365c
+
+11. Frenkel D, Smit B (2001) Understanding molecular simulation: from algorithms to applications. Academic Press.https://doi.org/10.1016/B978-012267351-1/50012-2
+
+12. Frontini P, Lotfian S, Monclús MA, Molina-Aldareguia JM (2015) High temperature nanoindentation response of Rtm6 epoxy resin at different strain rates. Exp Mech 55(5):851–862. https://doi.org/10.1007/s11340-015-9985-4
+
+13. Frost JD, Han J (1999) Behavior of interfaces between fiber-reinforced polymers and sands. J Geotech Geoenviron 125(8):633–640. https://doi.org/10.1061/(ASCE)1090-0241(1999)125:8(633)
+
+14. Fu K, Chang Y, Tang Y, Zheng B (2014) Effect of loading rate on the creep behaviour of epoxy resin insulators by nanoindentation. J Mater Sci Mater Electron 25(8):3552–3558. https://doi.org/10.1007/s10854-014-2055-3
+
+15. Gao F, Stead D, Elmo D (2016) Numerical simulation of microstructure of brittle rock using a grain-breakable distinct element grain-based model. Comput Geotech 78:203–217. https://doi.org/10.1016/j.compgeo.2016.05.019
+
+16. Goel S, Joshi SS, Abdelal G, Agrawal A (2014) Molecular dynamics simulation of nanoindentation of Fe3C and Fe4C. Mater Sci Eng A 597:331–341. https://doi.org/10.1016/j.msea.2013.12.091
+
+17. Hagler A T, Lifson S, and Dauber P (1979) Consistent force field studies of intermolecular forces in hydrogen-bonded crystals. A benchmark for the objective comparison of alternative force fields. J Am Chem Soc 101(18):5122–5130. https://doi.org/10.1021/ja00512a002
+
+18. Hu H, Zhang W, Xing Y, and Li X (2017) Molecular dynamics study on the effect of single grain boundary on the mechanical behavior of alpha -quartz. Int J Rock Mech Min Sci (Oxford, England : 1997) 93:94–100. https://doi.org/10.1016/j.ijrmms.2017.01.009
+
+19. Khaloo A, Tabatabaeian M, Khaloo H (2020) The axial and lateral behavior of low strength concrete confined by Gfrp wraps: an experimental investigation. Structures 27:747–766. https://doi.org/10.1016/j.istruc.2020.06.008
+
+20. Lam CK, Lau KT (2006) Localized elastic modulus distribution of nanoclay/epoxy composites by using nanoindentation. Compos Struct 75(1–4):553–558. https://doi.org/10.1016/j.compstruct.2006.04.045
+
+21. Li C, Strachan A (2011) Molecular dynamics predictions of thermal and mechanical properties of thermoset polymer Epon862/detda. Polymer 52(13):2920–2928. https://doi.org/10.1016/j.polymer.2011.04.041
+
+22. Ma X, Kang X, Cao J (2023) Origin of the elastic anisotropy of silica particles: insights from first-principles calculations and nanoindentation molecular dynamic simulations. Comput Geotech 159:105489. https://doi.org/10.1016/j.compgeo.2023.105489
+
+23. Ma Z, Gamage RP, Zhang C (2021) Mechanical properties of A-quartz using nanoindentation tests and molecular dynamics simulations. Int J Rock Mech Min 147:104878. https://doi.org/10.1016/j.ijrmms.2021.104878
+
+24. Ma Z, Pathegama Gamage R, Zhang C (2021) Effects of temperature and grain size on the mechanical properties of polycrystalline quartz. Comp mater Sci 188:110138. https://doi.org/10.1016/j.commatsci.2020.110138
+
+25. Muller A, Jang J S, Suhr J, and Gibson R F (2010) Influence of particle diameter on coefficient of thermal expansion of sio2/epoxy particulate composites. In Process SAMPE fall technology conference, Salt Lake City
+
+26. Oliver WC, Pharr GM (1992) An improved technique for determining hardness and elastic modulus using load and displacement \pdfpage{22}sensing indentation experiments. J Mater Res 7(6):1564–1583. https://doi.org/10.1557/JMR.1992.1564
+
+27. Oral I, Guzel H, Ahmetli G (2013) Determining the mechanical properties of epoxy resin (Dgeba) composites by ultrasonic velocity measurement. J Appl Polym Sci 127(3):1667–1675. https://doi.org/10.1002/app.37534
+
+28. Pando M, Filz G, Dove J, Hoppe E (2002) Interface shear tests on frp composite piles. international deep foundations congress, pp 1486–1500. https://doi.org/10.1061/40601(256)10
+
+29. Plimpton S (1995) Fast paraller algorithms for short-range molecular dynamics. J COMPUT PHYS 117:1–19. https://doi.org/10.1006/jcph.1995.1039
+
+30. Rahman R, Haque A (2013) Molecular dynamic simulation of graphene reinforced nanocomposites for evaluating elastic constants. Proc Eng 56:789–794. https://doi.org/10.1016/j.proeng.2013.03.197
+
+31. Samad UA, Alam MA, Chafidz A, Al-Zahrani SM, Alharthi NH (2018) Enhancing mechanical properties of epoxy/polyaniline coating with addition of Zno nanoparticles: nanoindentation characterization. PROG ORG COAT 119:109–115. https://doi.org/10.1016/j.porgcoat.2018.02.018
+
+32. Sánchez M, Rams J, Campo M, Jiménez-Suárez A, Ureña A (2011) Characterization of carbon nanofiber/epoxy nanocomposites by the nanoindentation technique. Compos B Eng 42(4):638–644. https://doi.org/10.1016/j.compositesb.2011.02.017
+
+33. Saseendran S, Wysocki M, Varna J (2017) Cure-state dependent viscoelastic Poisson’S ratio of Ly5052 epoxy resin. Adv Manuf Polym Comp Sci 3(3):92–100. https://doi.org/10.1080/20550340.2017.1348002
+
+34. Schneider T, Stoll E (1978) Molecular-dynamics study of a three-dimensional one-component model for distortive phase transitions. Phys Rev B 17(3):1302–1322. https://doi.org/10.1103/PhysRevB.17.1302
+
+35. Shaia HA, Al-Asadi AK, Ramadan SH (2018) Evaluation of the interface friction between fiber-reinforced polymers and granular materials using modified shear apparatus. Int J Civil Eng Technol 9(13):1010–1016
+
+36. Shimizu F, Ogata S, Li J (2007) Theory of shear banding in metallic glasses and molecular dynamics calculations. Mater Trans 48(11):2923–2927. https://doi.org/10.2320/matertrans.mj20076910.2320/matertrans.mj200769
+
+37. Song X, Wang MC (2019) Molecular dynamics modeling of a partially saturated clay-water system at finite temperature. Int J Numer Anal Methods Geomech 43(13):2129–2146. https://doi.org/10.1002/nag.2944
+
+38. Sun Y, Chen L, Cui L, Zhang Y, Du X (2018) Molecular dynamics simulation of cross-linked epoxy resin and its interaction energy with graphene under two typical force fields. Comp Mater Sci 143:240–247. https://doi.org/10.1016/j.commatsci.2017.11.007
+
+39. Tack J (2006) Thermodynamic and mechanical properties of epon 862 with curing agent detda by molecular simulation. Texas A\&M University
+
+40. Tzetzis D, Mansour G, Tsiafis I, Pavlidou E (2013) Nanoindentation measurements of fumed silica epoxy reinforced nanocomposites. J Reinf Plast Comp 32(3):160–173. https://doi.org/10.1177/0731684412463978
+
+41. Wan J, Zaoui A, Li X, Zheng Y (2024) Molecular dynamics simulations of the interface friction behavior between fiber-reinforced polymer pile and sand. Tribol Int 192:109288. https://doi.org/10.1016/j.triboint.2024.109288
+
+42. Wang P, Yin Z, Zhou W, Chen W (2022) Micro-mechanical analysis of soil-structure interface behavior under constant normal stiffness condition with dem. Acta Geotech 17(7):2711–2733. https://doi.org/10.1007/s11440-021-01374-8
+
+43. Wei P, Yin Z, Yao C, Ren Z, Zheng Y, Ma W (2024) Atomistic origin of montmorillonite clay subjected to freeze-thaw hysteresis. J Rock Mech Geotech Eng. https://doi.org/10.1016/j.jrmge.2024.11.004
+
+44. Wei P, Zheng Y, Zaoui A, Yin Z (2023) Atomistic study on thermo-mechanical behavior and structural anisotropy of montmorillonite under triaxial tension and compression. Appl Clay Sci 233:106817. https://doi.org/10.1016/j.clay.2023.106817
+
+45. Xie J, Chen K, Yan M, Guo J, Xie Q, Lü F (2022) Effect of temperature and water penetration on the interfacial bond between epoxy resin and glass fiber: a molecular dynamics study. J Mol Liq 350:118424. https://doi.org/10.1016/j.molliq.2021.118424
+
+46. Xu WQ, Yin ZY, Zheng YY (2023) Frp-soil interfacial mechanical properties with molecular dynamics simulations: insights into friction and creep behavior. Num Anal Meth Geomech. https://doi.org/10.1002/nag.3607
+
+47. Xu W, Yin Z, Zheng Y (2023) Investigating silica interface rate-dependent friction behavior under dry and lubricated conditions with molecular dynamics. Acta Geotech. https://doi.org/10.1007/s11440-022-01792-2
+
+48. Yang H, He M, Lu C, Gong W (2019) Deformation and failure processes of kaolinite under tension: insights from molecular dynamics simulations. Sci China Phys Mech Astron 62(6):64612. https://doi.org/10.1007/s11433-018-9316-3
+
+49. Yang W, Ayoub G, Salehinia I, Mansoor B, Zbib H (2018) The effect of layer thickness ratio on the plastic deformation mechanisms of nanoindented Ti/Tin nanolayered composite. Comp Mater Sci 154:488–498. https://doi.org/10.1016/j.commatsci.2018.08.021
+
+50. Yaphary YL, Yu Z, Lam RHW, Hui D, Lau D (2017) Molecular dynamics simulations on adhesion of epoxy-silica interface in salt environment. Compos B Eng 131:165–172. https://doi.org/10.1016/j.compositesb.2017.07.038
+
+51. Zappalorto M, Pontefisso A, Fabrizi A, Quaresimin M (2015) Mechanical behaviour of epoxy/silica nanocomposites: experiments and modelling. Compos A Appl Sci Manuf 72:58–64. https://doi.org/10.1016/j.compositesa.2015.01.027
+
+52. Zhang L, Zheng Y, Wei P, Diao Q, Yin Z (2021) Nanoscale mechanical behavior of kaolinite under uniaxial strain conditions. Appl Clay Sci 201:105961. https://doi.org/10.1016/j.clay.2020.105961
+
+53. Zhang X, Xiong W (2009) Effect of bonding process on the properties of isotropic epoxy resin-bonded Nd-Fe-B magnets. Rare Met 28(3):248–252. https://doi.org/10.1007/s12598-009-0049-8
+
+54. Zhang Z, Song X (2022) Nonequilibrium molecular dynamics (nemd) modeling of nanoscale hydrodynamics of clay-water system at elevated temperature. Int J Numer Anal Met 46(5):889–909. https://doi.org/10.1002/nag.3325
+
+55. Zhang Z, Song X (2023) Nanoscale crack propagation in clay with water adsorption through reactive Md modeling. Int J Numer Anal Met 47(7):1103–1133. https://doi.org/10.1002/nag.3507
+
+56. Zhu W, Hughes JJ, Bicanic N, Pearce CJ (2007) Nanoindentation mapping of mechanical properties of cement paste and natural rocks. Mater Charact 58(11–12):1189–1198. https://doi.org/10.1016/j.matchar.2007.05.018
+\end{hangpars}
+
+\noindent\textbf{Publisher’s Note} Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+\end{document}

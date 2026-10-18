@@ -1,0 +1,524 @@
+# Xu et al. 2017 eLife 6:e25916, Figure 14(b): detection map in 'Backscatter Energy (eV)' vs 'Backscatter Angle (degrees)' (0 V sample bias).
+# Columns: series, angle_deg, energy_eV. 'boundary' = the yellow line separating 'Detected' (left/below, black dots) from
+#   'Not Detected' (pale yellow area), ordered along the line from its top end; one point per ~2 px of path. Points within
+#   8 px of the top and right frame lines are left out (the yellow outline of the area also runs along the frame there).
+#   '<colour> dot' = the coloured dots on the three horizontal reference lines (caption: 1.1 keV blue, 600 eV green, 50 eV red
+#   electrons simulated in (a)/(c)); dots hidden behind others or the frame are missing.
+# Not extracted: the ~10,000 simulated electrons (black and grey dots), which overlap too much to be separated.
+# Provenance: tier 3, digitized from the embedded raster image (~403 ppi, no vector data in the PDF) by fig14bd_extract.py.
+#   Axes: linear; x: frame lines = 0 and 90 deg; y: tick-label centroids 0 and 1200 eV (see the script).
+#   Check: blue (1.1 keV): mean 1100 eV, 17 dots; green (600 eV): mean 600 eV, 17 dots; red (50 eV): mean 50 eV, 17 dots.
+# Uncertainty: +-0.07 deg and +-1.7 eV per pixel; the yellow line is ~6 px wide.
+series,angle_deg,energy_eV
+boundary,89.07,132.2
+boundary,88.93,132.2
+boundary,88.80,133.1
+boundary,88.66,133.9
+boundary,88.53,133.9
+boundary,88.40,133.9
+boundary,88.26,133.9
+boundary,88.13,135.6
+boundary,88.00,136.4
+boundary,87.86,137.3
+boundary,87.73,137.3
+boundary,87.60,137.3
+boundary,87.46,138.1
+boundary,87.33,138.9
+boundary,87.20,138.9
+boundary,87.06,139.8
+boundary,86.93,140.6
+boundary,86.80,141.5
+boundary,86.66,142.3
+boundary,86.53,142.3
+boundary,86.39,142.3
+boundary,86.26,142.3
+boundary,86.13,144.0
+boundary,85.99,144.0
+boundary,85.86,144.8
+boundary,85.73,144.8
+boundary,85.59,145.7
+boundary,85.46,147.4
+boundary,85.33,147.4
+boundary,85.19,147.4
+boundary,85.06,147.4
+boundary,84.93,149.1
+boundary,84.79,149.1
+boundary,84.66,149.1
+boundary,84.53,149.1
+boundary,84.39,149.9
+boundary,84.26,150.7
+boundary,84.12,152.4
+boundary,83.99,152.4
+boundary,83.86,152.4
+boundary,83.72,152.4
+boundary,83.59,154.1
+boundary,83.46,154.1
+boundary,83.32,154.1
+boundary,83.19,154.9
+boundary,83.06,155.8
+boundary,82.92,157.5
+boundary,82.79,157.5
+boundary,82.66,157.5
+boundary,82.52,157.5
+boundary,82.39,159.2
+boundary,82.26,159.2
+boundary,82.12,159.2
+boundary,81.99,160.8
+boundary,81.85,161.7
+boundary,81.72,162.5
+boundary,81.59,162.5
+boundary,81.45,162.5
+boundary,81.32,163.4
+boundary,81.19,164.2
+boundary,81.05,164.2
+boundary,80.92,164.2
+boundary,80.79,165.1
+boundary,80.65,166.7
+boundary,80.52,167.6
+boundary,80.39,167.6
+boundary,80.25,167.6
+boundary,80.12,169.3
+boundary,79.99,169.3
+boundary,79.85,169.3
+boundary,79.72,170.9
+boundary,79.58,171.8
+boundary,79.45,172.6
+boundary,79.32,172.6
+boundary,79.18,172.6
+boundary,79.05,174.3
+boundary,78.92,174.3
+boundary,78.78,175.2
+boundary,78.65,176.0
+boundary,78.52,177.7
+boundary,78.38,177.7
+boundary,78.25,177.7
+boundary,78.12,179.4
+boundary,77.98,180.2
+boundary,77.85,180.2
+boundary,77.72,181.1
+boundary,77.58,182.7
+boundary,77.45,182.7
+boundary,77.31,182.7
+boundary,77.18,184.4
+boundary,77.05,185.3
+boundary,76.91,186.1
+boundary,76.78,187.8
+boundary,76.65,187.8
+boundary,76.51,187.8
+boundary,76.38,189.5
+boundary,76.25,190.3
+boundary,76.11,191.2
+boundary,75.98,192.8
+boundary,75.85,192.8
+boundary,75.71,192.8
+boundary,75.58,195.4
+boundary,75.45,196.2
+boundary,75.31,196.2
+boundary,75.18,197.9
+boundary,75.04,197.9
+boundary,74.91,198.7
+boundary,74.78,200.4
+boundary,74.64,200.4
+boundary,74.51,202.1
+boundary,74.38,202.9
+boundary,74.24,203.8
+boundary,74.11,205.5
+boundary,73.98,205.5
+boundary,73.84,206.3
+boundary,73.71,208.0
+boundary,73.58,208.0
+boundary,73.44,209.7
+boundary,73.31,211.4
+boundary,73.18,211.4
+boundary,73.04,213.1
+boundary,72.91,213.1
+boundary,72.77,213.9
+boundary,72.64,216.4
+boundary,72.51,216.4
+boundary,72.37,217.3
+boundary,72.24,218.1
+boundary,72.11,218.1
+boundary,71.97,221.5
+boundary,71.84,221.5
+boundary,71.71,222.3
+boundary,71.57,223.2
+boundary,71.44,223.2
+boundary,71.31,226.5
+boundary,71.17,226.5
+boundary,71.04,228.2
+boundary,70.91,228.2
+boundary,70.77,229.9
+boundary,70.64,231.6
+boundary,70.50,232.4
+boundary,70.37,233.3
+boundary,70.24,235.8
+boundary,70.10,236.6
+boundary,69.97,238.3
+boundary,69.84,238.3
+boundary,69.70,241.7
+boundary,69.57,241.7
+boundary,69.44,243.4
+boundary,69.30,244.2
+boundary,69.17,246.7
+boundary,69.04,247.6
+boundary,68.90,248.4
+boundary,68.77,250.1
+boundary,68.64,251.8
+boundary,68.50,253.5
+boundary,68.37,253.5
+boundary,68.23,256.8
+boundary,68.10,256.8
+boundary,67.97,258.5
+boundary,67.83,259.4
+boundary,67.70,261.9
+boundary,67.57,263.6
+boundary,67.43,263.6
+boundary,67.30,266.1
+boundary,67.17,266.9
+boundary,67.03,268.6
+boundary,66.90,270.3
+boundary,66.77,272.0
+boundary,66.63,272.8
+boundary,66.50,273.7
+boundary,66.36,277.1
+boundary,66.23,277.1
+boundary,66.10,279.6
+boundary,65.96,281.3
+boundary,65.83,282.1
+boundary,65.70,283.8
+boundary,65.56,285.5
+boundary,65.43,287.2
+boundary,65.30,288.8
+boundary,65.16,290.5
+boundary,65.03,292.2
+boundary,64.90,293.9
+boundary,64.76,295.6
+boundary,64.63,297.3
+boundary,64.50,298.9
+boundary,64.36,301.5
+boundary,64.23,302.3
+boundary,64.09,303.2
+boundary,63.96,307.4
+boundary,63.83,308.2
+boundary,63.69,309.9
+boundary,63.56,312.4
+boundary,63.43,314.1
+boundary,63.29,316.6
+boundary,63.16,318.3
+boundary,63.03,320.8
+boundary,62.89,322.5
+boundary,62.79,325.1
+boundary,62.66,326.7
+boundary,62.49,329.3
+boundary,62.39,331.8
+boundary,62.23,335.2
+boundary,62.09,336.8
+boundary,61.96,340.2
+boundary,61.82,342.7
+boundary,61.69,345.3
+boundary,61.56,348.6
+boundary,61.42,352.0
+boundary,61.29,354.5
+boundary,61.16,357.1
+boundary,61.02,360.4
+boundary,60.89,362.9
+boundary,60.76,366.3
+boundary,60.62,368.8
+boundary,60.49,372.2
+boundary,60.36,374.7
+boundary,60.26,377.3
+boundary,60.16,379.8
+boundary,60.02,382.3
+boundary,59.96,385.7
+boundary,59.82,387.4
+boundary,59.72,390.7
+boundary,59.62,393.3
+boundary,59.52,395.8
+boundary,59.42,398.3
+boundary,59.32,400.8
+boundary,59.22,403.4
+boundary,59.09,405.1
+boundary,58.99,407.6
+boundary,58.89,410.9
+boundary,58.75,413.5
+boundary,58.65,416.0
+boundary,58.55,418.5
+boundary,58.42,421.9
+boundary,58.29,425.3
+boundary,58.19,427.8
+boundary,58.05,431.2
+boundary,57.99,434.5
+boundary,57.82,437.9
+boundary,57.69,441.3
+boundary,57.59,444.6
+boundary,57.49,447.2
+boundary,57.39,449.7
+boundary,57.28,453.1
+boundary,57.15,454.7
+boundary,57.08,458.1
+boundary,56.95,461.5
+boundary,56.88,464.8
+boundary,56.75,466.5
+boundary,56.68,469.9
+boundary,56.55,473.3
+boundary,56.45,476.6
+boundary,56.35,480.0
+boundary,56.22,483.4
+boundary,56.12,486.7
+boundary,56.05,490.1
+boundary,55.88,493.5
+boundary,55.78,496.8
+boundary,55.68,500.2
+boundary,55.62,503.6
+boundary,55.55,506.9
+boundary,55.42,509.5
+boundary,55.35,512.8
+boundary,55.25,517.1
+boundary,55.15,520.4
+boundary,55.08,523.8
+boundary,54.98,527.2
+boundary,54.91,530.5
+boundary,54.81,533.9
+boundary,54.75,537.3
+boundary,54.68,540.6
+boundary,54.61,544.0
+boundary,54.51,547.4
+boundary,54.45,550.7
+boundary,54.38,554.1
+boundary,54.31,557.5
+boundary,54.21,560.8
+boundary,54.18,564.2
+boundary,54.11,567.6
+boundary,54.01,570.9
+boundary,53.95,574.3
+boundary,53.88,577.7
+boundary,53.81,581.1
+boundary,53.75,584.4
+boundary,53.65,587.8
+boundary,53.58,591.2
+boundary,53.55,594.5
+boundary,53.41,597.9
+boundary,53.38,601.3
+boundary,53.31,604.6
+boundary,53.21,608.0
+boundary,53.11,611.4
+boundary,53.01,614.7
+boundary,52.98,618.1
+boundary,52.88,621.5
+boundary,52.81,624.8
+boundary,52.74,628.2
+boundary,52.61,631.6
+boundary,52.54,634.9
+boundary,52.44,638.3
+boundary,52.38,641.7
+boundary,52.31,645.1
+boundary,52.21,648.4
+boundary,52.11,651.8
+boundary,52.01,655.2
+boundary,51.98,658.5
+boundary,51.84,661.9
+boundary,51.81,665.3
+boundary,51.71,668.6
+boundary,51.61,672.0
+boundary,51.54,675.4
+boundary,51.44,678.7
+boundary,51.34,682.1
+boundary,51.28,685.5
+boundary,51.21,688.8
+boundary,51.11,692.2
+boundary,51.04,695.6
+boundary,50.98,698.9
+boundary,50.88,702.3
+boundary,50.81,705.7
+boundary,50.74,709.1
+boundary,50.61,712.4
+boundary,50.57,715.8
+boundary,50.47,719.2
+boundary,50.41,722.5
+boundary,50.34,725.9
+boundary,50.24,729.3
+boundary,50.17,732.6
+boundary,50.14,736.0
+boundary,50.04,739.4
+boundary,50.01,742.7
+boundary,49.91,746.1
+boundary,49.84,749.5
+boundary,49.81,752.8
+boundary,49.71,756.2
+boundary,49.64,759.6
+boundary,49.64,762.9
+boundary,49.57,766.3
+boundary,49.54,769.7
+boundary,49.44,773.1
+boundary,49.41,776.4
+boundary,49.34,779.8
+boundary,49.31,783.2
+boundary,49.24,786.5
+boundary,49.21,789.9
+boundary,49.17,793.3
+boundary,49.14,796.6
+boundary,49.04,800.0
+boundary,49.04,803.4
+boundary,48.97,806.7
+boundary,48.94,810.1
+boundary,48.94,813.5
+boundary,48.84,816.8
+boundary,48.81,820.2
+boundary,48.77,823.6
+boundary,48.74,826.9
+boundary,48.71,830.3
+boundary,48.64,833.7
+boundary,48.64,837.1
+boundary,48.57,840.4
+boundary,48.51,843.8
+boundary,48.51,847.2
+boundary,48.44,850.5
+boundary,48.44,853.9
+boundary,48.37,857.3
+boundary,48.30,860.6
+boundary,48.30,864.0
+boundary,48.24,867.4
+boundary,48.24,870.7
+boundary,48.24,874.1
+boundary,48.14,877.5
+boundary,48.10,880.8
+boundary,48.07,884.2
+boundary,48.04,887.6
+boundary,48.04,890.9
+boundary,47.97,894.3
+boundary,47.90,897.7
+boundary,47.90,901.1
+boundary,47.84,904.4
+boundary,47.84,907.8
+boundary,47.77,911.2
+boundary,47.70,914.5
+boundary,47.70,917.9
+boundary,47.64,921.3
+boundary,47.64,924.6
+boundary,47.64,928.0
+boundary,47.54,931.4
+boundary,47.50,934.7
+boundary,47.50,938.1
+boundary,47.44,941.5
+boundary,47.44,944.8
+boundary,47.40,948.2
+boundary,47.30,951.6
+boundary,47.30,954.9
+boundary,47.24,958.3
+boundary,47.24,961.7
+boundary,47.24,965.1
+boundary,47.17,968.4
+boundary,47.10,971.8
+boundary,47.10,975.2
+boundary,47.07,978.5
+boundary,47.04,981.9
+boundary,47.04,985.3
+boundary,46.97,988.6
+boundary,46.90,992.0
+boundary,46.90,995.4
+boundary,46.90,998.7
+boundary,46.84,1002.1
+boundary,46.84,1005.5
+boundary,46.80,1008.8
+boundary,46.70,1012.2
+boundary,46.70,1015.6
+boundary,46.70,1018.9
+boundary,46.64,1022.3
+boundary,46.64,1025.7
+boundary,46.64,1029.1
+boundary,46.57,1032.4
+boundary,46.50,1035.8
+boundary,46.50,1039.2
+boundary,46.50,1042.5
+boundary,46.44,1045.9
+boundary,46.44,1049.3
+boundary,46.44,1052.6
+boundary,46.40,1056.0
+boundary,46.34,1059.4
+boundary,46.30,1062.7
+boundary,46.30,1066.1
+boundary,46.27,1069.5
+boundary,46.24,1072.8
+boundary,46.24,1076.2
+boundary,46.24,1079.6
+boundary,46.20,1082.9
+boundary,46.10,1086.3
+boundary,46.10,1089.7
+boundary,46.10,1093.1
+boundary,46.07,1096.4
+boundary,46.03,1099.8
+boundary,46.03,1103.2
+boundary,46.00,1106.5
+boundary,45.97,1109.9
+boundary,45.90,1113.3
+boundary,45.90,1116.6
+boundary,45.90,1120.0
+boundary,45.87,1123.4
+boundary,45.83,1126.7
+boundary,45.83,1130.1
+boundary,45.80,1133.5
+boundary,45.77,1136.8
+boundary,45.70,1140.2
+boundary,45.70,1143.6
+boundary,45.70,1146.9
+boundary,45.67,1150.3
+boundary,45.63,1153.7
+boundary,45.60,1157.1
+boundary,45.57,1160.4
+boundary,45.50,1163.8
+boundary,45.50,1167.2
+boundary,45.50,1170.5
+boundary,45.50,1173.9
+boundary,45.43,1177.3
+boundary,45.43,1180.6
+blue (1.1 keV) dot,4.86,1100.4
+blue (1.1 keV) dot,9.90,1100.2
+blue (1.1 keV) dot,14.92,1099.7
+blue (1.1 keV) dot,19.89,1100.1
+blue (1.1 keV) dot,24.89,1100.2
+blue (1.1 keV) dot,29.94,1100.1
+blue (1.1 keV) dot,34.90,1100.1
+blue (1.1 keV) dot,39.92,1100.3
+blue (1.1 keV) dot,44.95,1100.5
+blue (1.1 keV) dot,49.91,1100.2
+blue (1.1 keV) dot,54.94,1100.1
+blue (1.1 keV) dot,59.94,1100.0
+blue (1.1 keV) dot,64.92,1099.7
+blue (1.1 keV) dot,69.95,1100.0
+blue (1.1 keV) dot,74.98,1100.2
+blue (1.1 keV) dot,79.94,1100.0
+blue (1.1 keV) dot,84.95,1100.1
+green (600 eV) dot,4.88,600.2
+green (600 eV) dot,9.89,600.3
+green (600 eV) dot,14.92,600.3
+green (600 eV) dot,19.89,600.4
+green (600 eV) dot,24.89,600.2
+green (600 eV) dot,29.93,600.2
+green (600 eV) dot,34.89,600.3
+green (600 eV) dot,39.93,600.3
+green (600 eV) dot,44.95,600.4
+green (600 eV) dot,49.90,600.1
+green (600 eV) dot,54.94,600.3
+green (600 eV) dot,59.96,600.4
+green (600 eV) dot,64.93,600.4
+green (600 eV) dot,69.95,600.2
+green (600 eV) dot,74.98,600.3
+green (600 eV) dot,79.94,600.3
+green (600 eV) dot,84.95,600.6
+red (50 eV) dot,4.87,49.9
+red (50 eV) dot,9.90,50.0
+red (50 eV) dot,14.90,49.9
+red (50 eV) dot,19.89,50.0
+red (50 eV) dot,24.89,49.8
+red (50 eV) dot,29.92,50.0
+red (50 eV) dot,34.89,50.3
+red (50 eV) dot,39.93,49.8
+red (50 eV) dot,44.94,50.1
+red (50 eV) dot,49.92,50.0
+red (50 eV) dot,54.95,49.9
+red (50 eV) dot,59.95,49.8
+red (50 eV) dot,64.90,49.7
+red (50 eV) dot,69.96,50.1
+red (50 eV) dot,74.97,50.0
+red (50 eV) dot,79.94,49.5
+red (50 eV) dot,84.95,50.0

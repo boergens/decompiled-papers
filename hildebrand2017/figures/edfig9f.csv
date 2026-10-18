@@ -1,0 +1,41 @@
+# Hildebrand et al. 2017 (bioRxiv 134882), Extended Data Fig. 9f: 'construction of difference matrix' for one slice:
+# upper triangle = angle difference a (key 0-180 deg), lower triangle = distance difference d (key 0-8 um).
+# Rows/columns: the 6 pairs in the order of the printed colour dots (MeMv, MeMd, MeLr, MeLm, MeLc, Mauthner; Fig. 4f
+# colours). The panel does not say which slice; all 30 cells agree with Fig. 4e (slice 5560) within the reading error.
+# Two cells are framed in magenta (row MeLr / column Mauthner, solid; row Mauthner / column MeLr, dashed); the frame
+# pixels lie outside the sampled cell centres.
+# Provenance: tier 3, digitized from the embedded 150 ppi raster on PDF page 43 (figures/edfig9f_extract.py): median colour
+# of the inner 7x7 px of each 13x13 px cell matched to the nearest colour of the printed key (~86 px tall, linear 0 at the
+# bottom edge to the top label at the top edge). Uncertainty about +-3 % of the key range. rgb_dist = distance to the key colour.
+# columns: row_axon; col_axon; row; col; triangle; quantity; unit; value; rgb_dist
+row_axon,col_axon,row,col,triangle,quantity,unit,value,rgb_dist
+MeMv,MeMd,1,2,upper,angle difference a,deg,3.14,1.4
+MeMv,MeLr,1,3,upper,angle difference a,deg,15.7,1.0
+MeMv,MeLm,1,4,upper,angle difference a,deg,1.05,0.0
+MeMv,MeLc,1,5,upper,angle difference a,deg,1.05,0.0
+MeMv,Mauthner,1,6,upper,angle difference a,deg,1.05,0.0
+MeMd,MeMv,2,1,lower,distance difference d,um,0.14,1.4
+MeMd,MeLr,2,3,upper,angle difference a,deg,162,1.4
+MeMd,MeLm,2,4,upper,angle difference a,deg,1.05,0.0
+MeMd,MeLc,2,5,upper,angle difference a,deg,9.42,0.0
+MeMd,Mauthner,2,6,upper,angle difference a,deg,3.14,1.4
+MeLr,MeMv,3,1,lower,distance difference d,um,1.63,2.2
+MeLr,MeMd,3,2,lower,distance difference d,um,1.44,2.0
+MeLr,MeLm,3,4,upper,angle difference a,deg,40.8,2.0
+MeLr,MeLc,3,5,upper,angle difference a,deg,15.7,1.0
+MeLr,Mauthner,3,6,upper,angle difference a,deg,1.05,0.0
+MeLm,MeMv,4,1,lower,distance difference d,um,1.81,2.0
+MeLm,MeMd,4,2,lower,distance difference d,um,0.326,1.4
+MeLm,MeLr,4,3,lower,distance difference d,um,0.14,1.4
+MeLm,MeLc,4,5,upper,angle difference a,deg,9.42,0.0
+MeLm,Mauthner,4,6,upper,angle difference a,deg,3.14,1.4
+MeLc,MeMv,5,1,lower,distance difference d,um,1.81,2.0
+MeLc,MeMd,5,2,lower,distance difference d,um,2,2.8
+MeLc,MeLr,5,3,lower,distance difference d,um,0.0465,0.0
+MeLc,MeLm,5,4,lower,distance difference d,um,1.16,1.4
+MeLc,Mauthner,5,6,upper,angle difference a,deg,1.05,0.0
+Mauthner,MeMv,6,1,lower,distance difference d,um,1.44,2.0
+Mauthner,MeMd,6,2,lower,distance difference d,um,0.0465,0.0
+Mauthner,MeLr,6,3,lower,distance difference d,um,1.91,1.0
+Mauthner,MeLm,6,4,lower,distance difference d,um,0.14,1.4
+Mauthner,MeLc,6,5,lower,distance difference d,um,0.326,1.4

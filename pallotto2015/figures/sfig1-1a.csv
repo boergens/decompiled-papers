@@ -1,0 +1,14 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 1-figure supplement 1A: Slice thickness (um) vs Fix vehicle osmolarity (mOsm).
+# Columns: category ('perfused' = left of the axis break), osmolarity_mOsm (marker centre; empty for perfused),
+#   thickness_um (mean, marker centre), err_low_um, err_high_um (error-bar ends; caption: mean +/- SEM).
+# Provenance: tier 3, digitized from elife_figure_supplements/elife-08206-fig1-figsupp1-v3.jpg; figures/sfig1-1a_extract.py.
+# x axis (linear) fitted on ticks 200@503.5px, 300@624.5px, 400@745.5px, 500@867.5px; max residual 0.33 axis units.
+# y axis (linear) fitted on ticks 0@609.5px, 100@521.5px, 200@433.75px, 300@345.75px, 400@258.25px, 500@170.25px, 600@82.5px; max residual 0.203 axis units.
+# Uncertainty: +-1 px = +-0.82 mOsm and +-1.1 um. The point at ~407 mOsm shows no error bar outside its
+#   marker (ends = marker edges). Caption: nominal thickness 500 um; n = 20 slices from 6 animals; one-way ANOVA p = 0.46.
+category,osmolarity_mOsm,thickness_um,err_low_um,err_high_um
+perfused,,489.3,475.3,503.7
+,200.6,509.0,486.7,532.2
+,302.5,504.3,495.8,512.9
+,371.8,526.9,514.0,540.2
+,407.0,493.9,487.8,499.2

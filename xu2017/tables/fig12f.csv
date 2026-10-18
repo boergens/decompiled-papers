@@ -1,0 +1,16 @@
+# Xu et al. 2017 eLife, Figure 12(f): table printed as part of the figure image (transcribed by the decompiler).
+# Caption: Histogram of counts per pixel (e), Sample bias, SNR and contrast (f) of the corresponding images.
+# Printed row labels: 'Sample Bias (V)'; 'Np (e-/px)'; 'Nc (e-/px, %)'; 'Nm (e-/px, %)'; 'Nm - Nc, (e-/px, Contrast %)'; 'Noise Measured'; 'Noise Shot';
+#   'SNR Measured'; 'SNR Shot'. The table is transposed here (one row per bias column); cells 'value, percent' are split into two columns.
+# Decompiler cross-check against the formulas in the text (Ne = (Nm+Nc)/2, contrast = (Nm-Nc)/Ne, shot noise = sqrt(Ne), SNR = (Nm-Nc)/noise):
+#   bias 0 V: Nm-Nc=302 vs printed 303; (Nm-Nc)/noise_measured=4.97 vs printed 4.9; bias 400 V: (Nm-Nc)/noise_measured=5.45 vs printed 5.6; bias 500 V: (Nm-Nc)/noise_measured=4.10 vs printed 4.0; bias 600 V: Nm-Nc=90 vs printed 91; bias 800 V: Nm-Nc=78 vs printed 79; (Nm-Nc)/noise_measured=3.76 vs printed 3.7
+sample_bias_V,Np_e_per_px,Nc_e_per_px,Nc_percent,Nm_e_per_px,Nm_percent,Nm_minus_Nc_e_per_px,contrast_percent,noise_measured,noise_shot,SNR_measured,SNR_shot
+-600,12400,1270,10,1380,11,110,8,32,36.4,3.4,3.0
+-400,12400,1570,13,1740,14,170,10,47,40.7,3.6,4.2
+-200,12400,1949,16,2161,17,212,10,50,45.3,4.2,4.7
+0,12400,2594,21,2896,23,303,11,61,52.4,4.9,5.8
+200,12400,2911,24,3229,26,318,10,65,55.4,4.9,5.7
+400,12400,2983,24,3337,27,354,11,65,56.2,5.6,6.3
+500,12400,1211,10,1338,11,127,10,31,35.7,4.0,3.6
+600,12400,630,5,720,6,91,13,24,26.0,3.8,3.5
+800,12400,458,4,536,4,79,16,21,22.3,3.7,3.5

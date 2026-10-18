@@ -1,0 +1,192 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+\sourcefile{source/wanner2015.pdf}
+\decompnote{Publisher's version of record (Wiley typeset PDF, 6 pages, Journal of Microscopy pp.\,137--142), as served by the PMC Open Access bucket (PMC4745002). Left out: the ``Journal of Microscopy'' banner logo at the top of p.\,1, running headers (``A.A. WANNER \emph{ET AL.}'' with the page number on the even pages, ``CHALLENGES OF SBEM IN NEUROSCIENCE'' with the page number on the odd pages) and the repeated page footer ``© 2015 The Authors / Journal of Microscopy © 2015 Royal Microscopical Society, 259, 137--142'' on pp.\,2--6. The page-1 footer (copyright and licence) is given once, after the author block.}
+
+\pdfpage{1}
+\noindent\emph{Journal of Microscopy, Vol. 259, Issue 2 2015, pp. 137–142}\hfill doi: 10.1111/jmi.12244\par
+\noindent\emph{Received 15 September 2014; accepted 11 February 2015}\par
+
+\section*{Challenges of microtome-based serial block-face scanning electron microscopy in neuroscience}
+
+\noindent A.A. WANNER, M.A. KIRSCHMANN \& C. GENOUD\par
+\noindent\emph{Friedrich Miescher Institute for Biomedical Research, Maulbeerstrasse 66, 4058 Basel, Switzerland}\par
+
+\begin{quote}\small
+\noindent The copyright line for this article was changed on June 17, 2015 after original online publication.
+
+\noindent Correspondence to: Christel Genoud, Friedrich Miescher Institute for Biomedical Research, Maulbeerstrasse 66, CH-4058 Basel, Switzerland. Tel: +41-61-697-5070; fax: +41-61-697-3976; e-mail: Christel.genoud@fmi.ch
+
+\noindent © 2015 The Authors\\
+Journal of Microscopy © 2015 Royal Microscopical Society
+
+\noindent This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.
+\end{quote}
+\decompnote{The two notes above (copyright-line change, correspondence) are printed as footnotes at the bottom of the left column of p.\,1, and the copyright and licence lines as the page-1 footer; they are placed here after the author block.}
+
+\noindent\textbf{Key words.} Microtome, registration, SBFSEM, serial block-face scanning electron microscopy (SBEM), segmentation, three-dimensional reconstruction, tiling.
+
+\subsection*{Summary}
+
+Serial block-face scanning electron microscopy (SBEM) is becoming increasingly popular for a wide range of applications in many disciplines from biology to material sciences. This review focuses on applications for circuit reconstruction in neuroscience, which is one of the major driving forces advancing SBEM. Neuronal circuit reconstruction poses exceptional challenges to volume EM in terms of resolution, field of view, acquisition time and sample preparation. Mapping the connections between neurons in the brain is crucial for understanding information flow and information processing in the brain. However, information on the connectivity between hundreds or even thousands of neurons densely packed in neuronal microcircuits is still largely missing. Volume EM techniques such as serial section TEM, automated tape-collecting ultramicrotome, focused ion-beam scanning electron microscopy and SBEM (microtome serial block-face scanning electron microscopy) are the techniques that provide sufficient resolution to resolve ultrastructural details such as synapses and provides sufficient field of view for dense reconstruction of neuronal circuits. While volume EM techniques are advancing, they are generating large data sets on the terabyte scale that require new image processing workflows and analysis tools. In this review, we present the recent advances in SBEM for circuit reconstruction in neuroscience and an overview of existing image processing and analysis pipelines.
+
+\subsection*{Volume EM techniques}
+
+Understanding the information flow in neuronal circuits of the brain requires a detailed map on the connectivity between neurons. In order to map all the connections of even a small circuit, detailed recognition of anatomical structures such as spine necks and synapses is necessary. It requires 3D ultrastructural resolution on the nanometre scale (<20 nm pixel\textsuperscript{−1}; Helmstaedter, 2013). In addition, neurons are densely packed and a cubic millimetre, the typical size of a voxel in magnetic resonance imaging, contains millions of neurons and thousands of metres neurite length (Behrens \emph{et al.}, 2007). Therefore, microscopy techniques that rely on sparse labelling of neuronal features, such as fluorescence microscopy, are not suited for dense circuit reconstruction. The commonly used techniques for dense circuit reconstructions are volume EM techniques such as serial section TEM (ssTEM), automated tape-collecting ultramicrotome SEM (ATUM-SEM), serial block-face SEM (SBEM) and focused ion beam SEM (FIB-SEM). The former two use nondestructive manual (ssTEM) or automated (ATUM) ultrathin sectioning and slice collection with subsequent imaging. The latter two use \emph{in situ} destructive on-block sectioning inside of the SEM vacuum chamber either by a diamond knife (SBEM) or with a focused ion beam (FIB-SEM).
+
+In ssTEM, sections are cut by hand using an ultramicrotome and collected onto grids. Sections are imaged in a TEM, and imaging approaches such as camera array imaging (TEMCA) with typically 2–4 nm lateral resolution (Bock \emph{et al.}, 2011; Takemura \emph{et al.}, 2013; Atasoy \emph{et al.}, 2014) can acquire images at a rate of 5–8 megapixels s\textsuperscript{−1} (Bock \emph{et al.}, 2011). However, the manual sectioning process is prone to errors and is also labour-intensive. It limits the typical section thickness to 40–50 nm and the number of consecutive sections to a few thousands, because sections can get folded or warped or even get lost. Furthermore, the subsequent registration step is more delicate due to distortions of sections occurring during cutting and imaging (Kaynig, Fischer, \emph{et al.}, 2010; Saalfeld \emph{et al.}, 2010).
+
+ATUM-SEM (Schalek \emph{et al.}, 2011) overcomes these problems partially by automated cutting and collection of sections on an electrically opaque tape. This allows to reliable cut thousands of subsequent sections as thin as 30 nm. The on-tape sections are further processed for storage on silicon wafers and subsequent imaging in an SEM (Hayworth \emph{et al.}, 2014).
+
+\pdfpage{2}
+In SBEM [formerly called SBFSEM but renamed by W. Denk (Denk \& Horstmann, 2004)], the recording chamber of an SEM is equipped with a microtome. After each cut, the block-face is imaged with the scanning beam before the next section is shaved off. SBEM achieves field of views of >0.5 × 0.5 mm\textsuperscript{2} at a lateral resolution on the order of 6–10 nm and reliable cuts thousands of sections at section thickness 20–30 nm for neural tissue at an acquisition rate of 0.5 to 2 megapixel s\textsuperscript{−1} (Briggman \emph{et al.}, 2011; Helmstaedter, 2013). In FIBSEM, slices are cut using a gallium-ion beam (Knott \emph{et al.}, 2008). This allows to cut sections as thin as 5 nm with a lateral resolution <5 nm and an acquisition rate of 0.1–0.5 megapixel s\textsuperscript{−1} (Knott \emph{et al.}, 2008; Boergens \& Denk, 2013; Maco \emph{et al.}, 2014). However, the field of view is limited to <0.1 × 0.1 mm\textsuperscript{2}.
+
+The major advantage of the destructive on-block methods is that they do not suffer from warping problems and section loss that can significantly affect the data quality and the subsequent data analysis. In contrast, the advantages of the nondestructive methods are that sections can be imaged multiple times (e.g. at different magnifications) and in parallel on multiple microscopes, which reduce the acquisition time significantly compared to sequential techniques such as SBEM and FIBSEM.
+
+Currently, these techniques are to a large degree complementary. They cover different range of resolution, field of view and automation (Lichtman \& Denk, 2011).
+
+To date, only a handful of neuronal circuits have been completely reconstructed using volume EM. The entire nervous system of the nematode Caenorhabditis elegans has been acquired using serial sections and TEM, which led to the first complete connectome of an entire organism (White \emph{et al.}, 1986; Varshney \emph{et al.}, 2011). It includes all 302 neurons connected by more than 7000 synapses. Partial connectomes have been obtained from a mouse retina (Briggman \emph{et al.}, 2011; Helmstaedter \emph{et al.}, 2013) by SBEM and from mouse primary visual cortex (Bock \emph{et al.}, 2011) and Drosophila visual motion detection circuit (Takemura \emph{et al.}, 2013) by ssTEM. The retina datasets are available on http://www.knossostool.org/ and Bock \emph{et al.}’s images are publicly available through the Open Connectome Project (http://www.openconnectomeproject.org/).
+
+\subsection*{Development of SBEM for connectomics}
+
+SBEM was first described in 2004 (Denk \& Horstmann, 2004) based on an idea introduced by Leighton (1981). The group of W. Denk inserted a completely redesigned ultramicrotome inside of an environmental scanning electron microscope with a field emission gun. In this design, SBEM allows for automated, iterative removal of thin sections from the sample block and subsequent block-face imaging at ultrastructural resolution. The ultramicrotome comes with a movable high-precision stage that allows dividing the field of view into a mosaic of tiled images. This allows, in principle, to acquire field of views of arbitrary size, although the edge size of a single image in an SBEM is currently limited to about 40 µm (3VBSED, Gatan Inc.).
+
+One cubic millimetre is often described as the minimal target volume for neuronal circuit reconstruction, because it corresponds to a volume large enough to analyze a functional unit such as a cortical column in the adult mouse brain. For the dense reconstruction of all neurites and the unambiguous identification of chemical synapses in this volume, a voxel size of about 10 × 10 × 30 nm is necessary. This volume corresponds to a data set of 3.333 × 10\textsuperscript{14} voxels requiring >300 TB storage space. At a typical acquisition speed of 1–4 microseconds pixel\textsuperscript{−1}, the cubic millimetre requires more than 18 years of acquisition time making this kind of project impossible. Thereby, the stage movements for the tiling alone causes an overhead of 4 years.
+
+In order to move this kind of projects within the realm of the feasible, both, the instrumentation and the sample preparation, have been improved and optimized in the last couple of years.
+
+At the level of instrumentation, progress has been made that now allows now to scan larger field of views with higher scan speed and lower beam voltage. The neuronal tissue used for volume EM is usually embedded in nonconductive resin. If nonconductive regions are scanned in an SBEM, electrons accumulate on the block surface and cause charging artefacts. Therefore, environmental SEMs have been used for SBEM, where a gaseous agent such as water or nitrogen (Danilatos, 1988; Danilatos, 2009; Danilatos, 2012) is introduced into the recording chamber and takes up exceeding electrons from the block-face. This reduces any charging artefacts significantly (Denk \& Horstmann, 2004), but requires a lower scanning speed and/or a higher beam voltage in order to compensate for the loss in signal due to electron scattering at the gaseous agent. Because the beam current (number of electrons) of these environmental SEMs is limited to approximately 100 pA, the scan speed/dwell time typically had to be at least around 1–5 microseconds pixel\textsuperscript{−1} in order to collect enough electrons for a sufficient signal-to-noise ratio (Briggman \emph{et al.}, 2011). Similarly, for a decent image quality, the beam voltage (speed of the beam electrons) on these instruments had to be larger than 2 kV. However, the higher the beam voltage, the deeper the electrons penetrate into the block-face, which decreases the Z resolution and increases the minimal section thickness that can be cut (Denk \& Horstmann, 2004). In order to reliably cut 25–30-nm thin sections, a beam voltage <2 kV is necessary. Therefore, new SEMs are optimized for low voltage (1.5–2 kV) and higher beam currents (>0.5 nA) that allow faster scanning and shorter dwell times (<1 microsecond pixel\textsuperscript{−1}; Titze \& Denk, 2013).
+
+Recently, new approaches have been proposed to overcome the block-face charging problem even in high-vacuum operation mode of an SEM. A coating device can be introduced into \pdfpage{3}the SEM chamber sputtering a thin conductive layer after each cut before imaging which makes the block-face perfectly conductive (Titze \& Denk, 2013). As introduced above, the stage movements for the acquisition of a tiled field view can cause a significant overhead of more than 20\% of the total acquisition time. Therefore, the groups of Winfried Denk (MPIN Munich), Moritz Helmstaedter (MPI Frankfurt) and Kevin Briggman (NIH, Circuit Dynamics and Connectivity Unit, Bethesda) developed new microtomes that allow to continuously move the sample stage along one axis while scanning, which minimizes the number of stage movements for tiled acquisition and results in a significantly reduction of acquisition time (Perkel, 2014; http://www.pbs.org/newshour/updates/watch-ideas-light-fishs-brain/).
+
+Another promising approach to reduce the number of image tiles is the new multiSEM 505, launched by ZEISS (Marx, 2013). It allows scanning sample surfaces or sections with 61 parallel electron beams simultaneously, which increases the field of view tremendously. Combined with ATUM-SEM or with block-face approaches, it will allow to image at a rate of 1220 megapixels s\textsuperscript{−1} (Eberle \emph{et al.}, 2015).
+
+Currently, Winfried Denk is pushing the extremes of SBEM with the goal of cutting and imaging an entire mouse brain (Mikula \emph{et al.}, 2012; Perkel, 2014). Besides the development of a completely new microtome capable of cutting centimetre-sized blocks, they are also working on improving the stability of image acquisition by developing methods for automated correction of focus and stigmatism (Binding \emph{et al.}, 2013).
+
+At the level of the sample preparation, several groups have put efforts in generating samples able to sustain the accelerating voltage and beam current necessary for high-speed acquisition while keeping signal-to-noise ratio sufficient for subsequent analysis, such as image segmentation. The staining protocols have been adapted and optimized for SBEM (Deerinck \emph{et al.}, 2010; Mikula \emph{et al.}, 2012; Tapia \emph{et al.}, 2012; Starborg \emph{et al.}, 2013) focusing on the \emph{en bloc} staining with diverse heavy metals: OTO (osmium-thiocarbohydrazide-osmium, rOTO (reduced Osmium), OTrO followed by \emph{en bloc} uranyl acetate and/or lead citrate/asparte) in order to increase the contrast and the conductivity of the sample. The latter also reduces charging issues during acquisition. However, samples stained by multiple steps of heavy metals show reduced permeability and resin may not be able to fully penetrate (Mikula \emph{et al.}, 2012; Tapia \emph{et al.}, 2012; Starborg \emph{et al.}, 2013). In addition, the density of heavy metals in the sample block can compromise the cutting properties such as slice thickness and may reduce the imaging quality.
+\decompnote{``OTO (osmium-thiocarbohydrazide-osmium, rOTO'': the parenthesis opened after OTO is not closed in the paper; ``lead citrate/asparte'' as printed (aspartate is presumably meant). Both kept verbatim.}
+
+The advances on both levels, sample preparation and instrumentation, set new conditions of imaging: With higher beam currents (>1 nA) scan speed can reach 10 MHz (100 nanoseconds pixel\textsuperscript{−1}) without charging artefact, while keeping the signal-to-noise ratio good enough for image segmentation and neurite reconstruction (Titze \& Denk, 2013). At a speed of 10 MHz (0.1 microsecond pixel\textsuperscript{−1}) and with continuous scanning along one axis, the millimetre cube could be acquired in about 1.5 year. This is still a significant challenge as these instruments currently cannot be run for more than 1–2 months (Briggman \emph{et al.}, 2011; Lichtman \& Denk, 2011; Helmstaedter \emph{et al.}, 2013) without failure. However, this calculation is based on a single-beam SEM. With the launch of the multi-SEM 505, the acquisition can be parallelized on 61 beams, leading to a speed of 1220 megapixels s\textsuperscript{−1} (vs. 1 megapixel s\textsuperscript{−1} for a single-beam SEM at 1 microsecond pixel\textsuperscript{−1} equivalent to 1 MHz). With this, the cubic millimetre could be acquired in about 2 months.
+
+Another imaging parameter that influences the effective acquisition time significantly is the size of the acquired field of view. It is therefore advisable to restrict the acquisition to the desired region of interest. However, finding a particular region of interest in an \emph{en bloc} stained sample is challenging. Possible solutions are targeted near-infrared branding of a region of interest (Bishop \emph{et al.}, 2011; Maco \emph{et al.}, 2013; Maco \emph{et al.}, 2014) and staining specific structures, cells or molecules using genetic labels that accumulate electrodense molecules. (Martell \emph{et al.}, 2012).
+
+\subsection*{Data preprocessing: alignment in 3D}
+
+To annotate/reconstruct the imaged sample \emph{in silico}, image preprocessing is necessary. In particular, images need to be placed correctly in three dimensions to combine the slice data into a volume representing the specimen. Image tiles acquired from the same block-face need to be stitched together in \emph{x} and \emph{y}. The overlapping region between neighbouring tiles is scanned multiple times, which increases acquisition time and in addition can compromise the cutting quality and cutting thickness due to multiple beam exposure. It is therefore advisable to minimize both, the number of image tiles as well as the amount of overlap between neighbouring image tiles. A compromise in the amount of overlap has to be found because the overlaps need to be large enough to allow for correct image registration and stitching. Because temperature changes during acquisition can cause drifts of the stage relative to the beam source on the order of several nanometres (Boergens \& Denk, 2013), one cannot rely on stage coordinates alone. In addition, the actual image positions can also drift due to local changes in the electric field due to charging artefacts. In the case of SBEM, these drifts are mostly limited to translations. The necessary corrections do not need to take into account rotations or nonlinear transforms. To stitch the overlapping images pixel-perfect, the amount of overlap between adjacent images can be calculated via cross-correlations or by detecting and comparing matching configurations of image features, as with the scale-invariant feature transform algorithm (Lowe, 2004). Then, the images are stitched to the resulting mosaic \pdfpage{4}by overlapping the tiles and minimizing the global error at the overlaps (Fig. 1). Subsequently, the stitched mosaics need to be aligned in the \emph{z}-direction. Here, image feature-based algorithms suppress overfitting of larger objects which are oriented nonperpendicular to the cutting plane, an artefact typical for cross-correlation-based alignments. Since EM images of most biological samples contain many objects at smaller scales than the diagonally cut object, their resulting image features do not have a preferential direction and outnumber the features stemming from the larger object.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Fig. 1.} (A) Resin-embedded specimen (pyramid) is sectioned from top to bottom, while each block-face is imaged as a mosaic of overlapping tiles (B) For each imaged block-face, the overlapping tiles taken from the same area are compared in order to determine the correct overlap (C) The mosaics of adjacent planes are compared based on image features (as in B) and shifted to form a continuous representation of the specimen (D) Tiles are stitched into a mosaic optimizing the global overlap for each section.
+\alttext{Figure 1 spans the top of p.\,4. A colour schematic (grey shapes with blue outlines, no numerical axes, no data) in four panels separated by thin light-grey rules: (A) upper left, (B1) upper right, (C) lower left, (B2) lower right. There is no panel labelled (D), although the caption describes a (D); and the caption's (B) corresponds to the two printed panels (B1) and (B2). (A) A perspective line drawing of a transparent box (black edges) with faint grey dashed horizontal lines on its walls. Inside the box, on its floor, sits a four-sided pyramid (the specimen, per the caption), shaded dark grey on its left face and light grey on its right face, outlined in blue, with a blue line along its front edge. Blue horizontal bands across the pyramid mark successive cutting planes; four of them on the right face are labelled, from top to bottom, ``z = n -1'', ``z = n'', ``z = n+1'' and ``z = n+2''. (B1) A mosaic of six grey square tiles in two rows of three, with narrow white gaps between them, each tile with a darker grey border. A tilted blue rectangle outline spans all six tiles; where it crosses a gap its segments are offset, showing that the tiles are not yet aligned. A black circle at the gap between the lower middle and lower right tiles is magnified in a large black-ringed circle below: it shows the white gap and the dark-grey edges of the two tiles, a thick blue line segment in each tile (pieces of the rectangle, not aligned with each other), scattered blue dots (image features) in the left tile, and seven thin arrows, black at their start and grey at their head, each running from a blue dot in the left tile across the gap to a matching blue dot in the right tile. (B2) The same six grey tiles after registration: semi-transparent, overlapping one another by shifted amounts (overlap regions darker), and the tilted blue rectangle now drawn as one continuous outline across them. (C) Three stacked, perspective views of tile mosaics (each made of overlapping translucent grey parallelograms, two rows of three), one above another, each carrying a blue parallelogram outline; the blue outline is smallest in the top mosaic, larger in the middle one and largest in the bottom one, and its position shifts from mosaic to mosaic. The caption describes these as the mosaics of adjacent planes.}
+\decompnote{Figure 1 has no panel (D) although its caption describes one; the printed panels are (A), (B1), (B2) and (C).}
+
+The workflow of stitching and aligning needs to be automated to cope with many thousands of images per data set to reduce manual labour. TrakEM2, a free open-source software specifically designed for reconstruction of neural circuits from terabyte EM data sets is a handy tool for this work flow (Cardona \emph{et al.}, 2012). It uses pyramidal data organization to minimize the RAM consumption and necessary data throughput rates of mass storage.
+
+\subsection*{Image analysis, annotation and segmentation}
+
+Browsing, analyzing and annotating the massive image data sets generated by SBEM is challenging. The retina stack of Briggman \emph{et al.} (2011) and Helmstaedter \emph{et al.} (2013) already required several hundreds of GB storage space, but as the acquisition technology of SBEM progresses, the data set sizes also increase. The acquisition of a cubic millimetre cortex at a voxel size of 10 × 10 × 30 nm would require more than 300 TB storage space after image preprocessing. Therefore, the vast size of the image data makes it impossible to load the full data set for analysis into the RAM of a normal lab computer. Therefore, several labs have developed open-source software solutions dedicated for large-scale 3D image data such as KNOSSOS (Helmstaedter \emph{et al.}, 2013), TrakEM2 (Cardona \emph{et al.}, 2012) and CATMAID (Saalfeld \emph{et al.}, 2009). These programs use demand-driven dynamic data loading procedures, in which only the currently viewed subvolume is loaded into memory. As the user browses through the data, the corresponding subvolumes are continuously loaded in the background and therefore allow seamless navigation with minimal memory requirements. As the data sets are getting too big for local storage, both, CATMAID and KNOSSOS, feature online streaming of the data from external servers. In addition, these programs feature a wide range of manual annotation tools, including feature labelling (e.g. mitochondria, synapses, etc.), skeleton tracing of neurites and volume segmentation (Figure 2).
+
+However, manual annotation and segmentation of large image data sets is tedious, error-prone and can be very \pdfpage{5}time-consuming. For example, the dense skeleton reconstruction and analysis of 950 neurons in the inner plexiform layer of a mouse retina required almost 30,000 human working hours (Perkel, 2014), despite 50-fold speed-up for manual skeletonization versus manual volume annotation (Helmstaedter \emph{et al.}, 2013). Therefore, new software is under development for computer-assisted, semiautomated large-scale annotation and segmentation (Lowe, 2004; Jain \emph{et al.}, 2007; Chklovskii \emph{et al.}, 2010; Kaynig, Fuchs, \emph{et al.}, 2010; Kim \emph{et al.}, 2014; Maco \emph{et al.}, 2014).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Fig. 2.} Consolidated skeletons of six mitral cells (red) and eight interneurons (blue) projecting into the same protoglomerulus of the olfactory bulb of a larval zebra fish. The consolidated skeletons were calculated from redundant manual reconstructions of three different tracers. The SBEM data set was acquired in a period of 7 weeks and consists of more than 5000 sections of 25 nm thickness with a lateral pixel size of 10 nm. Scale bar: 10 µm.
+\alttext{Figure 2 fills the top two thirds of the left column of p.\,5 (portrait format, caption below it); the text of p.\,5 begins below its caption (``time-consuming'') and continues in the right column (``Although''). A 3D rendering, viewed obliquely from above, of neuron skeletons (thin branching lines) over one greyscale SBEM image plane. The image plane is a tilted parallelogram across the middle of the panel, showing tissue ultrastructure in grey (round cell profiles; a band of bright white spots along its lower edge). Above the plane, a dense tangle of dark-blue skeletons (interneurons, per the caption) fills most of the upper half, and a compact, very dense ball of red skeletons (mitral cells, per the caption) sits right of centre, partly overlapping the blue. Translucent, roughly polyhedral blobs are drawn around the neurons: about four blue-violet ones at the left above and on the plane and three below it, and four pink-red ones in the upper right around the red ball. Below the plane, mostly blue skeletons continue down on the right, and a sparse set of long red skeleton branches spreads over the whole lower third of the panel, reaching the lower left and lower right corners. A black horizontal scale bar sits at the lower left (10 µm per the caption). No labels, axes or colour key are printed in the panel.}
+
+Although the currently existing automated segmentation algorithms are still far from perfect, they have been successfully combined with manual annotation or proof-reading by humans. CATMAID is used for collaborative annotation efforts distributed over collaborating research groups (Saalfeld \emph{et al.}, 2009). The SBEM pioneers in the Denk lab recruited hundreds of undergraduates for skeleton tracing of neurons using KNOSSOS (Helmstaedter \emph{et al.}, 2013). Thereby, most neurons have been redundantly traced by multiple students in order to form a consensus and in turn reduce reconstruction error rates. Subsequently, these consensus-skeletons have been used for automated volume segmentation of the corresponding neurons. EyeWire, a crowd sourcing online platform, has successfully used the judgment of thousands of laymen volunteers for the proof-reading of automatically segmented neurons (Kim \emph{et al.}, 2014). Others have employed a small number (<10) of professional proof-readers (Takemura \emph{et al.}, 2013).
+
+\subsection*{Conclusion}
+
+Connectomics, the complete reconstruction of neuronal circuits in different animal models, is a major driving force for new developments in SBEM. New sample preparation protocols, microscopes, acquisition modes and microtomes enable faster acquisition of larger field of views. This in turn creates an unprecedented flood of EM data that triggers the development of new image processing and analysis workflows and software solutions. These technological advances will be and are highly beneficial for many other fields of research.
+
+\subsection*{References}
+
+\begin{hangpars}\small
+Atasoy, D., Betley, J.N., Li, W.P., \emph{et al.} (2014) A genetically specified connectomics approach applied to long-range feeding regulatory circuits. \emph{Nat. Neurosci}. \textbf{17}, 1830–1839.
+
+Behrens, T.E., Berg, H.J., Jbabdi, S., Rushworth, M.F. \& Woolrich, M.W. (2007) Probabilistic diffusion tractography with multiple fibre orientations: what can we gain? \emph{NeuroImage}. \textbf{34}, 144–155.
+
+Binding, J., Mikula, S. \& Denk, W. (2013) Low-dosage maximum-a-posteriori focusing and stigmation. \emph{Microsc. Microanal., Microbeam Anal. Soc. Microsc. Soc. Canada}. \textbf{19}, 38–55.
+
+Bishop, D., Nikic, I., Brinkoetter, M., Knecht, S., Potz, S., Kerschensteiner, M. \& Misgeld, T. (2011) Near-infrared branding efficiently correlates light and electron microscopy. \emph{Nat. Methods}. \textbf{8}, 568–570.
+
+Bock, D.D., Lee, W.C., Kerlin, A.M., \emph{et al.} (2011) Network anatomy and in vivo physiology of visual cortical neurons. \emph{Nature}. \textbf{471}, 177–182.
+
+Boergens, K.M. \& Denk, W. (2013) Controlling FIB-SBEM slice thickness by monitoring the transmitted ion beam. \emph{J Microsc}. \textbf{252}, 258–262.
+
+Briggman, K.L., Helmstaedter, M. \& Denk, W. (2011) Wiring specificity in the direction-selectivity circuit of the retina. \emph{Nature}. \textbf{471}, 183–188.
+
+Cardona, A., Saalfeld, S., Schindelin, J., \emph{et al.} (2012) TrakEM2 software for neural circuit reconstruction. \emph{PloS One}. \textbf{7}, e38011.
+
+Chklovskii, D.B., Vitaladevuni, S. \& Scheffer, L.K. (2010) Semi-automated reconstruction of neural circuits using electron microscopy. \emph{Curr. Opin. Neurobiol}. \textbf{20}, 667–675.
+
+\pdfpage{6}
+Danilatos, G.D. (1988) Foundations of Environmental Scanning Electron Microscopy. \emph{Advances in Electronics and Electron Physics}, Academic Press, \textbf{71}, 109–250.
+
+Danilatos, G.D. (2009) Optimum beam transfer in the environmental scanning electron microscope. \emph{J. Microsc}. \textbf{234}, 26–37.
+
+Danilatos, G.D. (2012) Backscattered electron detection in environmental SEM. \emph{J. Microsc}. \textbf{245}, 171–185.
+
+Deerinck, T.J., Bushong, E., Thor, A. \& Ellisman, M.H. (2010) NCMIR methods for 3D EM: a new protocol for preparation of biological specimens for serial block-face SEM. \emph{Microscopy}. 6–8.
+
+Denk, W. \& Horstmann, H. (2004) Serial block-face scanning electron microscopy to reconstruct three-dimensional tissue nanostructure. \emph{PLoS Biol}. \textbf{2}, e329.
+
+Eberle, A.L., Mikula, S., Schalek, R., Lichtman, J.W., Tate, M.L., \& Zeidler, D. (2015) High-resolution, high-throughput imaging with a multibeam scanning electron microscope. \emph{J Microsc}.
+
+Hayworth, K.J., Morgan, J.L., Schalek, R., Berger, D.R., Hildebrand, D.G. \& Lichtman, J.W. (2014) Imaging ATUM ultrathin section libraries with WaferMapper: a multi-scale approach to EM reconstruction of neural circuits. \emph{Front Neural Circ}. \textbf{68}, 1–18.
+
+Helmstaedter, M. (2013) Cellular-resolution connectomics: challenges of dense neural circuit reconstruction. \emph{Nat. Methods}. \textbf{10}, 501–507.
+
+Helmstaedter, M., Briggman, K.L., Turaga, S.C., Jain, V., Seung, H.S. \& Denk, W. (2013) Connectomic reconstruction of the inner plexiform layer in the mouse retina. \emph{Nature}. \textbf{500}, 168–174.
+
+Jain, V., Murray, J.F., Roth, F., \emph{et al.} (2007) Supervised learning of image restoration with convolutional networks. In \emph{Proceedings of the IEEE 11th International Conference on Computer Vision(ICCV 2007),} October 14–20. pp. 1–8, Rio de Janeiro, Brazil.
+
+Kaynig, V., Fischer, B., Muller, E. \& Buhmann, J.M. (2010) Fully automatic stitching and distortion correction of transmission electron microscope images. \emph{J. Struct. Biol}. \textbf{171}, 163–173.
+
+Kaynig, V., Fuchs, T.J. \& Buhmann, J.M. (2010) Geometrical consistent 3D tracing of neuronal processes in ssTEM data. In \emph{Proceedings of the 13th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)}, September 20–24. \textbf{13}, 209–216. Beijing, China.
+
+Kim, J.S., Greene, M.J., Zlateski, A., \emph{et al.} \& EyeWirers. (2014) Space-time wiring specificity supports direction selectivity in the retina. \emph{Nature}. \textbf{509}, 331–336.
+
+Knott, G., Marchman, H., Wall, D. \& Lich, B. (2008) Serial section scanning electron microscopy of adult brain tissue using focused ion beam milling. \emph{J. Neurosci}. \textbf{28}, 2959–2964.
+
+Leighton, S.B. (1981) SEM images of block faces, cut by a miniature microtome within the SEM – a technical note. \emph{Scan. Electron. Micros}. 73–76.
+
+Lichtman, J.W. \& Denk, W. (2011) The big and the small: challenges of imaging the brain’s circuits. \emph{Science}. \textbf{334}, 618–623.
+
+Lowe, D.G. (2004) Distinctive image features from scale-invariant keypoints. \emph{Int. J. Comput. Vision}. 60, 91–110.
+
+Maco, B., Holtmaat, A., Cantoni, M., Kreshuk, A., Straehle, C.N., Hamprecht, F.A. \& Knott, G.W. (2013) Correlative in vivo 2 photon and focused ion beam scanning electron microscopy of cortical neurons. \emph{PloS One}. \textbf{8}, e57405.
+
+Maco, B., Cantoni, M., Holtmaat, A., Kreshuk, A., Hamprecht, F.A. \& Knott, G.W. (2014) Semiautomated correlative 3D electron microscopy of in vivo-imaged axons and dendrites. \emph{Nat. Protocols}. \textbf{9}, 1354–1366.
+
+Martell, J.D., Deerinck, T.J., Sancak, Y., Poulos, T.L., Mootha, V.K., Sosinsky, G.E., Ellisman, M.H. \& Ting, A.Y. (2012) Engineered ascorbate peroxidase as a genetically encoded reporter for electron microscopy. \emph{Nat. Biotechnol}. \textbf{30}, 1143–1148.
+
+Marx, V. (2013) Neurobiology: brain mapping in high resolution. \emph{Nature}. \textbf{503}, 147–152.
+
+Mikula, S., Binding, J. \& Denk, W. (2012) Staining and embedding the whole mouse brain for electron microscopy. \emph{Nat. Methods}. \textbf{9}, 1198–1201.
+
+Perkel, J.M. (2014) Mapping Neural Connections. \emph{Biotechniques} \textbf{57}, 230–236.
+
+Saalfeld, S., Cardona, A., Hartenstein, V. \& Tomancak, P. (2009) CATMAID: collaborative annotation toolkit for massive amounts of image data. \emph{Bioinformatics}. \textbf{25}, 1984–1986.
+
+Saalfeld, S., Cardona, A., Hartenstein, V. \& Tomancak, P. (2010) As-rigid-as-possible mosaicking and serial section registration of large ssTEM datasets. \emph{Bioinformatics}. \textbf{26}, i57–i63.
+
+Schalek, R., Kasthuri, N., Hayworth, K., \emph{et al.} (2011) Development of high-throughput, high-resolution 3D reconstruction of large-volume biological tissue using automated tape collection ultramicrotomy and scanning electron microscopy. \emph{Microscop. Microanal.} \textbf{17S2}, 966–967.
+
+Starborg, T., Kalson, N.S., Lu, Y., Mironov, A., Cootes, T.F., Holmes, D.F. \& Kadler, K.E. (2013) Using transmission electron microscopy and 3View to determine collagen fibril size and three-dimensional organization. \emph{Nat. Protocols}. \textbf{8}, 1433–1448.
+
+Takemura, S.Y., Bharioke, A., Lu, Z., \emph{et al.} (2013) A visual motion detection circuit suggested by Drosophila connectomics. \emph{Nature}. \textbf{500}, 175–181.
+
+Tapia, J.C., Kasthuri, N., Hayworth, K.J., Schalek, R., Lichtman, J.W., Smith, S.J. \& Buchanan, J. (2012) High-contrast en bloc staining of neuronal tissue for field emission scanning electron microscopy. \emph{Nat. Protocols}. \textbf{7}, 193–206.
+
+Titze, B. \& Denk, W. (2013) Automated in-chamber specimen coating for serial block-face electron microscopy. \emph{J. Microsc}. \textbf{250}, 101–110.
+
+Varshney, L.R., Chen, B.L., Paniagua, E., Hall, D.H. \& Chklovskii, D.B. (2011) Structural properties of the Caenorhabditis elegans neuronal network. \emph{PLoS Comput. Biol}. \textbf{7}, e1001066.
+
+White, J.G., Southgate, E., Thomson, J.N. \& Brenner, S. (1986) The structure of the nervous system of the nematode Caenorhabditis elegans. \emph{Philos. Trans. R. Soc. Lond. B Biol. Sci}. \textbf{314}, 1–340.
+\end{hangpars}
+
+\end{document}

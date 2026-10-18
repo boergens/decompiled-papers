@@ -1,0 +1,42 @@
+# Wei et al. 2025, Figure 17 (left plot): friction coefficient (F_y/F_z) vs h_c/R for the spherical quartz indenters.
+#   (The y-axis title is printed 'Friciton coefficient'.)
+# Columns: series (legend text, by symbol colour: R = 10 Å black, 14.5 Å red, 20 Å blue, 25 Å magenta);
+#   hc_over_R = symbol centre on the x axis (dimensionless); friction_coefficient = symbol centre on the y axis;
+#   y_segment = lower (below the axis break) or upper (above it);
+#   hc_A_nearest / hc_over_R_nominal / x_minus_nominal = my check, not in the figure: the nearest of the six target
+#   indentation depths h_c = 4, 7, 10, 16, 22, 25 Å named in the text, its h_c/R, and the difference;
+#   flag = circled: the two points ringed by red dashed circles with arrows to the MD snapshots
+#   (R = 10 Å, h_c = 25 Å; R = 14.5 Å, h_c = 25 Å per the snapshot labels);
+#   flag = partly_hidden: the red dashed 1.0 line is drawn over the upper half of this symbol; its centre row is
+#   estimated from the visible lower edge minus the median half-height of the fully visible symbols (+-0.01).
+# Provenance: tier 3, digitized from the embedded 300 ppi JPEG of Figure 17 by fig17_extract.py; one row per symbol.
+#   x calibrated on the 5 major ticks 0.5-2.5 (max residual 0.0012; the left frame maps to -0.001, printed 0.0).
+#   The y axis is broken (break marks between 2.0 and 4.1): the lower segment is calibrated on its 4 labelled major ticks
+#   0.8-2.0 (max residual 0.0009), the upper segment on the 4.1 and 4.2 ticks and the top frame (4.3) (max residual 0.0008).
+# Uncertainty: about +-0.008 in x, +-0.009 (lower) / +-0.0032 (upper) in y (2 px; symbols ~16 px).
+# Not data: the red dashed horizontal line at friction coefficient 1.0 (labelled '1.0'), the dashed circles and the arrows.
+series,hc_over_R,friction_coefficient,y_segment,hc_A_nearest,hc_over_R_nominal,x_minus_nominal,flag
+R = 10 Å,0.3990,0.9209,lower,4,0.4000,-0.0010,
+R = 10 Å,0.7000,0.9725,lower,7,0.7000,+0.0000,partly_hidden
+R = 10 Å,0.9989,1.6913,lower,10,1.0000,-0.0011,
+R = 10 Å,1.5990,1.9693,lower,16,1.6000,-0.0010,
+R = 10 Å,2.1994,4.2324,upper,22,2.2000,-0.0006,
+R = 10 Å,2.4987,4.0999,upper,25,2.5000,-0.0013,circled
+R = 14.5 Å,0.2747,0.7930,lower,4,0.2759,-0.0011,
+R = 14.5 Å,0.4828,0.9084,lower,7,0.4828,+0.0001,
+R = 14.5 Å,0.6891,1.1124,lower,10,0.6897,-0.0005,
+R = 14.5 Å,1.1025,1.4236,lower,16,1.1034,-0.0010,
+R = 14.5 Å,1.5169,1.6510,lower,22,1.5172,-0.0003,
+R = 14.5 Å,1.7232,1.5855,lower,25,1.7241,-0.0010,circled
+R = 20 Å,0.2010,0.6797,lower,4,0.2000,+0.0010,
+R = 20 Å,0.3499,0.6743,lower,7,0.3500,-0.0001,
+R = 20 Å,0.4996,0.8089,lower,10,0.5000,-0.0004,
+R = 20 Å,0.7983,1.2401,lower,16,0.8000,-0.0017,
+R = 20 Å,1.0992,1.2922,lower,22,1.1000,-0.0008,
+R = 20 Å,1.2497,1.2944,lower,25,1.2500,-0.0003,
+R = 25 Å,0.1579,0.6515,lower,4,0.1600,-0.0021,
+R = 25 Å,0.2787,0.6836,lower,7,0.2800,-0.0013,
+R = 25 Å,0.3987,0.7805,lower,10,0.4000,-0.0013,
+R = 25 Å,0.6398,0.8132,lower,16,0.6400,-0.0002,
+R = 25 Å,0.8787,0.7947,lower,22,0.8800,-0.0013,
+R = 25 Å,0.9989,0.9725,lower,25,1.0000,-0.0011,partly_hidden

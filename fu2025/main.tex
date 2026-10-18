@@ -1,0 +1,578 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\sourcefile{source/fu2025.pdf}
+\decompnote{Publisher version of record (MDPI \emph{Polymers}, typeset PDF, 19 pages, as served by the PMC Open Access bucket, PMC12473824). Running headers (``Polymers 2025, 17, 2441'', ``n of 19''), the MDPI and journal logos, the ORCID icon and the ``check for updates'' button are left out; the journal block of the page-1 footer is given once below. The left-margin column of p.\,1 (editor, dates, citation, copyright) follows the keywords.}
+
+\pdfpage{1}
+\noindent \emph{Polymers} \textbf{2025}, \emph{17}, 2441\quad https://doi.org/10.3390/polym17182441\par
+
+\noindent\emph{Article}
+
+\section*{Finite Element Analysis and Experimental Investigation on the Machinability of PMMA/CNT Composites via Nanosectioning}
+
+\noindent\textbf{Guoyu Fu \textsuperscript{1,†}, Jia Ge \textsuperscript{2,†}, Hao Li \textsuperscript{1}, Fengzhen Sun \textsuperscript{3,*} and Weizhou Wu \textsuperscript{1}}
+
+\begin{quote}\small
+\noindent\textsuperscript{1} Key Laboratory of Mechanism Theory and Equipment Design of Ministry of Education, Tianjin University, Tianjin 300072, China; guoyu07@tju.edu.cn (G.F.); haolitju@tju.edu.cn (H.L.); wwxzz@tju.edu.cn (W.W.)\\
+\textsuperscript{2} School of Mechanical and Aerospace Engineering, Queen’s University Belfast, Belfast BT9 5AH, UK; jge02@qub.ac.uk\\
+\textsuperscript{3} School of Mechanical Engineering, Tongji University, 4800 Cao’an Road, Shanghai 201804, China\\
+\textbf{*} Correspondence: fengzhensun@tongji.edu.cn\\
+† These authors contributed equally to this work and should be regarded as co-first authors.
+\end{quote}
+
+\noindent\textbf{Abstract}
+
+\begin{quote}
+In this study, an innovative modeling approach has been proposed to demonstrate the removal mechanisms of Polymethyl Methacrylate (PMMA) reinforced with randomly distributed carbon nanotubes (CNTs) during nanosectioning. The viscoplastic behavior of the matrix polymer was described using the Mulliken–Boyce model and the distribution of the CNTs in the matrix was modeled using the random sequential adsorption (RSA) method. The effects of cutting thickness and CNT loading on the machinability of the nanocomposites are explored. Subsequent experiments were conducted to validate the modeling. It reveals that the addition of CNT increases the resistance to cutting, compared to the malleable matrix. Although the primary strain distribution for both plain PMMA and PMMA/CNT composites aligns closely, discernible disparities between the two materials emerge. A force augmentation is anticipated whenever a nanotube interacts with the cutting tool, which causes surface protrusions and sub-surface damage. The addition of CNT with a loading lower than 1.0 wt\% does not change the mechanisms of chip formation, but the addition of 1.0 wt\% CNTs increases cutting force by approximately 32\%. This work provides a feasible approach and framework to numerically model the nanosectioning of CNT-reinforced thermoplastics.
+\end{quote}
+
+\noindent\textbf{Keywords:} nanosectioning; carbon nanotubes (CNTs); polymer nanocomposites; Mulliken–Boyce model
+
+\begin{quote}\small
+\noindent Academic Editor: Alexander Malkin
+
+\noindent Received: 1 July 2025\\
+Revised: 25 August 2025\\
+Accepted: 27 August 2025\\
+Published: 9 September 2025
+
+\noindent\textbf{Citation:} Fu, G.; Ge, J.; Li, H.; Sun, F.; Wu, W. Finite Element Analysis and Experimental Investigation on the Machinability of PMMA/CNT Composites via Nanosectioning. \emph{Polymers} \textbf{2025}, \emph{17}, 2441. https://doi.org/10.3390/polym17182441
+
+\noindent\textbf{Copyright:} © 2025 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+\end{quote}
+\decompnote{The block above (editor, dates, citation, copyright) is printed in the left margin of p.\,1, beside the abstract.}
+
+\section*{1. Introduction}
+
+Carbon nanotubes (CNTs), encompassing single- and multi-wall variants, are cylindrical nanostructures derived from SP2 hybridized carbon atoms [1,2]. These nanostructures, with diameters ranging from 1 to 100 nm and lengths from 0.1 to 100 μm, are formed by rolling up single layers of carbon atoms [3]. Due to their diminutive size, high aspect ratio, and excellent mechanical and electrical properties, CNTs have become a leading reinforcement for polymers. Polymer/CNT nanocomposites have gained significant traction due to advantages such as ease of fabrication, enhanced processing capabilities, durability, and cost benefits over metals and ceramics [4–6], apart from their superior mechanical, thermal, and electrical properties [7–14].
+
+Numerous studies have been conducted to investigate the machinability of polymer/CNT nanocomposites. Kumar et al. [15] showed that the introduction of CNTs can \pdfpage{2}significantly improve the dimensional accuracy and quality of micro-machined surfaces. Mahmoudi et al. [16] showed that the machinability of polymer/CNT nanocomposites was better than that of plain polymers due to improved thermal conductivity. Samuel et al. [17] found the ductile-to-brittle transition that occurred with an increase in CNT loading. Gong et al. [18] quantified the relation between surface roughness and cutting parameters of polymer/CNT nanocomposites; for instance, the surface roughness exhibits a linear dependency upon the feed rate and a quadratic dependency upon the cutting speed. These studies predominantly focus on macro- and micro-machining, and thus there is a noticeable gap in the research concerning the nanomachining of polymer/CNT nanocomposites. While macro- and micro-machining share certain kinematic similarities, nanomachining presents distinct challenges due to the size effect [19–21]. In particular, when the feed per tooth (FPT) is too low, a chip cannot form during each cutting [22,23]. As the FPT value approaches the radius of the tool, the material undergoes intense ploughing/friction during each cutting [24–26]. In such cases, the tool primarily displaces the material, with elastic recovery dominating the deformation [27,28]. When the cutting thickness falls below a threshold, the size effect introduces adverse impacts on the cutting process, such as elevated cutting forces, reduced tool lifespan, and irregular surface topography [29,30].
+\decompnote{Reference numbers and the names given with them disagree in this paragraph as printed: the reference list has no ``Kumar'' (ref.\ 15 is Mahmoodi et al.), ref.\ 16 is Samuel et al., ref.\ 17 is Gong et al., and ref.\ 18 is Weule et al. The authors named in the text appear to be one reference number too high. Kept as printed.}
+
+Because of the large plastic deformation, thermoplastic coupling, and reinforcement-knife contact mechanisms occurring in the vicinity of the knife edge, it is very challenging to probe the machining process via experiment. Therefore, finite element (FE) modeling is extensively adopted to probe the material responses during the machining process. However, there are few reports on modeling polymer/CNT machining due to the challenges in modeling the viscoplastic behavior of polymers and integrating the CNTs into the matrix.
+
+This study aims to address a notable gap concerning the simulation and experimental machining of polymer/CNT nanocomposites. We conduct FE modeling of the machining of polymer/CNT nanocomposites using the Mulliken–Boyce model, in combination with a random distribution algorithm to integrate CNTs into the matrix material. This approach offers a useful perspective on simulating the machinability of CNT nanocomposites, different from the conventionally adopted molecular dynamics methods [31]. The FE cutting model has proven instrumental in exploring the machining mechanisms of polymer/CNT nanocomposites, particularly emphasizing their mechanical attributes and response. The modeling results were then validated with experimentally measured cutting force and chip morphology.
+
+\section*{2. Preparation of Nanocomposites}
+
+\subsection*{\emph{2.1. Materials and Preparation}}
+
+Commercial multi-walled CNTs (MWCNTs) were sourced from Cheap Tubes Inc., Grafton, VT, USA. These MWCNTs, produced via chemical vapor deposition, possess an outer diameter of 30–35 nm, an inner diameter of 5–10 nm, a length ranging from 1 to 6 μm, and a purity exceeding 95\%. The polymethyl methacrylate (PMMA) used was the commercial-grade H15 002 polymer obtained from Plastiglas, Ocoyoacac, Estado de México, Mexico. A standard reagent, chloroform, boasting a purity of 98.8\%, was employed in the fabrication.
+
+Both plain PMMA and PMMA/MWCNT films were synthesized using the solution casting method. For the preparation of nanocomposites with specified MWCNT contents, PMMA was dissolved in chloroform with the aid of a mechanical stirrer. Concurrently, MWCNTs were dispersed in chloroform using ultrasonication for an hour. Following the ultrasonic dispersion of MWCNTs, the two solutions were amalgamated under a laboratory hood and continuously stirred at 70 °C, allowing the solvent to evaporate over a span of 20 min.
+
+\pdfpage{3}
+To enhance MWCNT dispersion, two additional ultrasonic stirring cycles were executed prior to casting: an initial 15 min cycle followed by a 10 min cycle. The resulting viscous mixture was then cast into a glass mold, where the solvent was allowed to evaporate gradually over 24 h, culminating in the formation of a solid film with a thickness approaching 300 μm. The curing process was conducted in a convection oven and comprised three sequential stages: 60 °C, 70 °C, and 80 °C, with each stage lasting 24 h. This was to ensure the complete removal of any residual solvent. Using this methodology, composites with MWCNT concentrations of 0.1 wt\%, 0.2 wt\%, 0.5 wt\%, and 1.0 wt\% were fabricated. Plain PMMA films were synthesized following a similar protocol.
+
+Achieving a uniform distribution of CNTs in PMMA has always been a critical challenge in experimental studies. Several methods have been proposed and shown to be effective in overcoming this issue. First, ultrasound dispersion techniques are widely used to disperse CNTs, where high-frequency vibrations help reduce CNT agglomeration in solvents. However, excessive ultrasound treatment time and energy may lead to fractures or chemical structural changes of CNTs, so careful control of the process is necessary [32]. Second, surface functionalization of CNTs, such as oxidation or grafting functional groups (e.g., carboxyl or amino groups), significantly improves the compatibility between CNTs and the PMMA matrix, thus promoting their uniform distribution [33]. Additionally, solvent system optimization and solution immersion methods, by choosing appropriate solvents and adjusting concentration and temperature, help optimize CNT dispersion. Electrostatic or mechanical field-assisted dispersion has also been applied, where electric fields aid in the orientation of CNTs, effectively reducing aggregation [34]. Combining and optimizing these methods can address the challenge of uniform CNT distribution in PMMA, thereby improving the mechanical and processing performance of the composite material.
+
+\subsection*{\emph{2.2. Carbon Nanotube Distribution}}
+
+Prior to nanosectioning, we characterized the dispersion state and interfacial features of MWCNTs in PMMA by scanning electron microscopy (SEM). Specimens were fractured in bending and the fracture surfaces were sputter-coated with \textasciitilde40 nm Au to ensure conductivity. Representative micrographs for 0.2 wt\% and 1.0 wt\% MWCNTs are shown in Figure 1. SEM fracture-surface morphologies are shown in Figure 1a–d: nanotube pull-out at 0.2 wt\% (Figure 1a,b) and pull-out with interfacial debonding at 1.0 wt\% (Figure 1c,d). At both loadings, nanotubes are embedded within the matrix with tortuous, non-collinear trajectories, consistent with a predominantly random in-plane orientation rather than long-range alignment. Two dominant interfacial failure signatures are evident: (i) nanotube pull-out leaving cylindrical voids, indicative of interfacial sliding; and (ii) groove-like debonding traces when nanotubes lie nearly parallel to the fracture plane, reflecting local loss of adhesion. Occasional defects—interfacial gaps at the tube–matrix boundary, isolated porosity, and fine matrix cracks—are also observed. These microstructural features substantiate the modeling assumptions used in our FE framework: a random spatial distribution of short inclusions (as generated by RSA) and the possibility of interfacial separation/pull-out under load transfer. They also provide a mechanistic basis for the measured force fluctuations during nanosectioning, where local tube–tool encounters and interfacial debonding can transiently elevate the cutting resistance.
+
+\pdfpage{4}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Figure 1.} SEM micrographs of fracture surfaces of PMMA/MWCNT nanocomposites. (\textbf{a},\textbf{b}) 0.2 wt\%: low-magnification view and higher-magnification view highlighting nanotube pull-out. (\textbf{c},\textbf{d}) 1.0 wt\%: low-magnification view and higher-magnification view showing nanotube pull-out accompanied by interfacial debonding.
+\alttext{Figure 1 is printed at the top of p.\,4. Four greyscale SEM micrographs of fracture surfaces in a 2 × 2 grid, each labelled at its upper left. (a) ``0.2 wt\%'', low magnification, scale bar 2 μm at lower right: a smooth grey matrix crossed by curved bright ridges and fine bright filaments, a few small dark pits and holes. (b) ``0.2 wt\%'', higher magnification, scale bar 500 nm: bright curved filaments and ridges on a smooth surface; two red circles mark small dark holes with a bright dot or short filament, both labelled ``Pull-out'' in white. (c) ``1.0 wt\%'', low magnification, scale bar 2 μm: a rougher surface with many small dark pits, bright ridges and a band of torn, cracked matrix from upper left to lower centre. (d) ``1.0 wt\%'', higher magnification, scale bar 500 nm: many short bright curved filaments; two red circles around small holes and one red square around a filament segment, each labelled ``Pull-out'' in white.}
+
+\section*{3. Experimental Sectioning}
+
+Figure 2 illustrates the ultramicrotome used for conducting the nanosectioning, which is equipped with two piezoelectric load cells (PCB 209A12). Each specimen undergoes continuous slicing at a consistent rate of 1.0 mm/s, with depths set at 60 nm, 80 nm, 100 nm, 120 nm, 150 nm, and 200 nm. The slicing chips are observed using a CCD eyepiece camera. Additionally, the dimensions of the chips, in terms of length and width, are measured before and after slicing.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Figure 2.} Ultramicrotome setup and orthogonal cutting schematic. (\textbf{a}) Instrument with piezoelectric sensor, holder, sample, and diamond knife. (\textbf{b}) 45° rake, depth of cut, shear-plane angle, primary/secondary zones, and chip curl.
+\alttext{Figure 2 is printed in the lower half of p.\,4. (a) Colour photograph of the ultramicrotome set-up, labelled with white boxes and red leader lines: ``Piezoelectric sensor'' (a cylindrical metal body with an orange cable at the top centre), ``Sample holder'' (a round metal clamp), ``Sample'' (a small block at the bottom of the holder) and ``Diamond knife'' (a small knife edge in a turquoise boat below the sample). Two white labels on cables read ``e 2'' and ``e 1''. (b) Line drawing of orthogonal cutting: a workpiece with its top surface on the left; a diamond tool at the right (wedge labelled ``Diamond Tool'', with a 45° angle marked between its rake face and a dashed line, and a dashed line marking the ``Rake angle''); a chip rising from the cutting edge, curving up and to the right, with an arrow labelled ``Chip curly direction''. A dotted band from the tool tip back to the free surface is labelled ``Primary zone'' and ``Shear plane angle'' (curved arrow between the shear plane and the cutting direction); a vertically hatched ellipse on the rake face is the ``Secondary zone''; a cross-hatched patch in the chip is labelled ``Plastic shear deformation''. The vertical distance between the uncut surface and the cut surface is marked ``Depth of cut'' with two arrows, and an arrow labelled ``Workpiece'' points right along the cut surface.}
+
+\pdfpage{5}
+\section*{4. Modeling of Sectioning of PMMA/CNT}
+
+\subsection*{\emph{4.1. Mulliken–Boyce Model}}
+
+To investigate the sectioning behavior of polymers, this study adopts the Mulliken–Boyce model [35,36] to describe the mechanical response of PMMA under varying strain rates, which was developed based on the Arruda–Boyce model [30]. The Mulliken–Boyce model is a physics-driven constitutive model rooted in the theory of extensive plasticity. It models the elasticity, yield, and post-yield behavior of polymers across a spectrum of strain rates [37]. Comprising two activated molecular processes that run in parallel, as well as the nonlinear entropy hardening process [37]. Figure 3 provides a one-dimensional rheological representation of the Mulliken–Boyce model.
+\decompnote{As printed, ref.\ 31 in the list is Mulliken and Boyce (2006); refs.\ 35 and 36 are Zheng et al.\ (notch strength of PMMA) and Rafiee et al.\ (graphene nanocomposites), and ref.\ 30 is Ge et al.\ (machine learning for CFRP drilling), not an Arruda–Boyce paper. Kept as printed.}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Figure 3.} (\textbf{a}) Rotation of the molecules of polymer material during deformation; (\textbf{b}) one-dimensional rheological interpretation of the proposed constitutive model [37].
+\alttext{Figure 3 is printed on p.\,5. (a) Schematic, four stacked drawings: in each a rectangle holds a tangle of black curved lines (polymer chains), with an arrow pointing left on the left side and right on the right side; from top to bottom the rectangles become longer and lower and the chains straighten and align horizontally. ``\emph{T}, \emph{F}'' is written at both sides. (b) One-dimensional rheological model: between two terminals labelled ``\emph{T},\emph{F}'' (arrows pointing outward) two branches in parallel: the upper branch is a single spring labelled ``B''; the lower part, labelled ``A'', is itself two parallel branches, each a dashpot-like element in series with a spring, labelled α (upper) and β (lower).}
+
+\subsection*{\emph{4.2. Kinematics}}
+
+In the Mulliken–Boyce model [35], the deformation gradient, \emph{F}, which maps a material point from its reference position \emph{X} to the current location x, is defined as
+\begin{equation*}
+\mathrm{F} \equiv \frac{\mathrm{x}}{\mathrm{X}} \tag{1}
+\end{equation*}
+\decompnote{Equation (1) is printed as a plain fraction x over X, without the partial-derivative signs.}
+
+During loading, all parallel phases undergo the same deformation:
+\begin{equation*}
+\mathrm{F} \equiv \mathrm{F}_{\mathrm{A}_\alpha} = \mathrm{F}_{\mathrm{A}_\beta} = \mathrm{F}_{\mathrm{B}} \tag{2}
+\end{equation*}
+
+The deformation gradient in elements α and β is multiplicatively decomposed into elastic and plastic components via Kroner–Lee decomposition:
+\begin{gather*}
+\mathrm{F}_{\mathrm{A}_\alpha} = \mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\alpha}\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\alpha} \tag{3}\\
+\mathrm{F}_{\mathrm{A}_\beta} = \mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\beta}\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\beta} \tag{4}
+\end{gather*}
+
+Assuming that the plastic deformation is a volume-preserving process, then
+\begin{equation*}
+\mathrm{detF}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \mathrm{detF}^{\mathrm{p}}_{\mathrm{A}_\beta} = 1 \tag{5}
+\end{equation*}
+
+\pdfpage{6}
+All volume-changing deformation is elastic:
+\begin{equation*}
+\mathrm{detF}^{\mathrm{e}}_{\mathrm{A}_\alpha} = \mathrm{detF}^{\mathrm{e}}_{\mathrm{A}_\beta} = \mathrm{J} \tag{6}
+\end{equation*}
+
+Therefore, the deformation of the relaxed configuration can be obtained as
+\begin{gather*}
+\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \mathrm{R}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{U}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \mathrm{V}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{U}^{\mathrm{p}}_{\mathrm{A}_\alpha} \tag{7}\\
+\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\beta} = \mathrm{R}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{U}^{\mathrm{p}}_{\mathrm{A}_\beta} = \mathrm{V}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{U}^{\mathrm{p}}_{\mathrm{A}_\beta} \tag{8}
+\end{gather*}
+
+The velocity gradients including elastic and plastic components are defined as
+\begin{equation*}
+\mathrm{L}_{\mathrm{A}_\alpha} = \mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\alpha} + \mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\alpha}\mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{F}^{\mathrm{e}-1}_{\mathrm{A}_\alpha} \tag{9}
+\end{equation*}
+\noindent and
+\begin{equation*}
+\mathrm{L}_{\mathrm{A}_\beta} = \mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\beta} + \mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\beta}\mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{F}^{\mathrm{e}-1}_{\mathrm{A}_\beta} \tag{10}
+\end{equation*}
+\noindent where
+\begin{gather*}
+\mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \dot{\mathrm{F}}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{F}^{\mathrm{p}-1}_{\mathrm{A}_\alpha} = \mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\alpha} + \mathrm{W}^{\mathrm{p}}_{\mathrm{A}_\alpha} \tag{11}\\
+\mathrm{L}^{\mathrm{p}}_{\mathrm{A}_\beta} = \dot{\mathrm{F}}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{F}^{\mathrm{p}-1}_{\mathrm{A}_\beta} = \mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\beta} + \mathrm{W}^{\mathrm{p}}_{\mathrm{A}_\beta} \tag{12}
+\end{gather*}
+
+The plastic flow is irrotational in both the \emph{α} and \emph{β} components:
+\begin{equation*}
+\mathrm{W}^{\mathrm{p}}_{\mathrm{A}_\alpha} + \mathrm{W}^{\mathrm{p}}_{\mathrm{A}_\beta} = 0 \tag{13}
+\end{equation*}
+\noindent and therefore
+\begin{gather*}
+\dot{\mathrm{F}}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\alpha} \tag{14}\\
+\dot{\mathrm{F}}^{\mathrm{p}}_{\mathrm{A}_\beta} = \mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\beta} \tag{15}
+\end{gather*}
+
+Then integrated to derive $F^{p}_{A_\alpha}$ and $\mathrm{F}^{\mathrm{p}}_{\mathrm{A}_\beta}$, and the elastic deformation gradients of the polymer can be obtained via
+\begin{gather*}
+\mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\alpha} = \mathrm{F}_{\mathrm{A}_\alpha}\mathrm{F}^{\mathrm{p}-1}_{\mathrm{A}_\alpha} \tag{16}\\
+\mathrm{F}^{\mathrm{e}}_{\mathrm{A}_\beta} = \mathrm{F}_{\mathrm{A}_\beta}\mathrm{F}^{\mathrm{p}-1}_{\mathrm{A}_\beta} \tag{17}
+\end{gather*}
+
+Finally, the plastic flow rules are governed by
+\begin{gather*}
+\mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \dot{\gamma}^{\mathrm{p}}_{\mathrm{A}_\alpha}\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\alpha} \tag{18}\\
+\mathrm{D}^{\mathrm{p}}_{\mathrm{A}_\beta} = \dot{\gamma}^{\mathrm{p}}_{\mathrm{A}_\beta}\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\beta} \tag{19}
+\end{gather*}
+\noindent where
+\begin{gather*}
+\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\alpha} = \frac{\mathrm{T}'_{\mathrm{A}_\alpha}}{\left|\mathrm{T}'_{\mathrm{A}_\alpha}\right|} \tag{20}\\
+\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\beta} = \frac{\mathrm{T}'_{\mathrm{A}_\beta}}{\left|\mathrm{T}'_{\mathrm{A}_\beta}\right|} \tag{21}
+\end{gather*}
+
+\subsection*{\emph{4.3. Material Description and Constitutive Relations}}
+
+The intermolecular contribution to the material stress state is related to the deformation according to the constitutive laws for linear elastic springs:
+\begin{equation*}
+\mathrm{T}_{\mathrm{A}_\alpha} = \frac{1}{\mathrm{J}_\alpha}\mathcal{L}^{\mathrm{e}}_\alpha\left[\mathrm{InU}^{\mathrm{e}}_{\mathrm{A}_\alpha}\right] \tag{22}
+\end{equation*}
+\pdfpage{7}
+\begin{equation*}
+\mathrm{T}_{\mathrm{A}_\beta} = \frac{1}{\mathrm{J}_\beta}\mathcal{L}^{\mathrm{e}}_\beta\left[\mathrm{InU}^{\mathrm{e}}_{\mathrm{A}_\beta}\right] \tag{23}
+\end{equation*}
+\noindent where $\mathrm{T}_{\mathrm{A}_\mathrm{i}}(\mathrm{i} = \alpha, \beta)$ is the Cauchy stress, $\mathcal{L}^{\mathrm{e}}_{\mathrm{i}}$ is the fourth-order modulus tensor, and $\mathrm{lnU}^{\mathrm{e}}_{\mathrm{A}_\mathrm{i}}$ is the Hencky strain. Assuming the polymer is initially isotropic and that the elastic behavior of the polymer can be decomposed into \emph{α} and \emph{β} components, the modulus tensor is derived from the shear modulus μ and bulk modulus κ:
+\begin{gather*}
+\mathcal{L}^{\mathrm{e}}_\alpha = 2\mu_\alpha\mathcal{J} + (\kappa_\alpha - \frac{2}{3}\mu_\alpha)\mathrm{I}\otimes\mathrm{I} \tag{24}\\
+\mathcal{L}^{\mathrm{e}}_\beta = 2\mu_\beta\mathcal{J} + (\kappa_\beta - \frac{2}{3}\mu_\beta)\mathrm{I}\otimes\mathrm{I} \tag{25}
+\end{gather*}
+\noindent where $\mathcal{J}$ and I are the fourth- and second-order identity tensors, respectively. μ\textsubscript{i} and κ\textsubscript{i} (\emph{i} = \emph{α}, \emph{β}), are assumed to be functions of both temperature and strain rate.
+\decompnote{Equations (22) and (23) print ``InU'' (capital I, n); the text after them writes the Hencky strain as ``lnU'' (natural logarithm).}
+
+The stress in the nonlinear hardening component, representing the network ‘back stress’ due to molecular alignment, is defined as
+\begin{equation*}
+\mathrm{T}_{\mathrm{B}} = \frac{\mathrm{C}_{\mathrm{R}}}{3}\frac{\sqrt{\mathrm{N}}}{\lambda^{\mathrm{p}}_{\mathrm{chain}}}\mathcal{L}^{-1}\left(\frac{\lambda^{\mathrm{p}}_{\mathrm{chain}}}{\sqrt{\mathrm{N}}}\right)\mathrm{B}'_{\mathrm{B}} \tag{26}
+\end{equation*}
+\noindent where $\lambda^{\mathrm{p}}_{\mathrm{chain}}$ is the stretch on a chain in the eight-chain network; $\mathcal{L}$ is the Langevin function defined by $\mathcal{L}(\beta) \equiv \mathrm{coth}\beta - \frac{1}{\beta}$; $\mathrm{B}'_{\mathrm{B}}$ is the deviatoric part of the left Cauchy–Green tensor, $\mathrm{F}_{\mathrm{B}}\mathrm{F}^{\mathrm{T}}_{\mathrm{B}}$; $\sqrt{\mathrm{N}}$ is the limiting chain extensibility; and $\mathrm{C}_{\mathrm{R}} \equiv \mathrm{nk}\theta$ is the rubbery modulus.
+
+The total stress in the polymer is the tensorial sum of the α and β intermolecular stresses and the back stress:
+\begin{equation*}
+\mathrm{T} = \mathrm{T}_{\mathrm{A}_\alpha} + \mathrm{T}_{\mathrm{A}_\beta} + \mathrm{T}_{\mathrm{B}} \tag{27}
+\end{equation*}
+
+The driving stresses are used to specify the direction tensors $\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\alpha}$ and $\mathrm{N}^{\mathrm{p}}_{\mathrm{A}_\beta}$ in the flow rules:
+\begin{gather*}
+\mathrm{N}_\alpha = \frac{1}{\sqrt{2}\tau_\alpha}\mathrm{T}'_{\mathrm{A}_\alpha} \tag{28}\\
+\mathrm{N}_\beta = \frac{1}{\sqrt{2}\tau_\beta}\mathrm{T}'_{\mathrm{A}_\beta} \tag{29}
+\end{gather*}
+
+The effective equivalent shear stresses τ\textsubscript{α} and τ\textsubscript{β} are defined as
+\begin{gather*}
+\tau_\alpha = \sqrt{\frac{1}{2}\mathrm{T}'_{\mathrm{A}_\alpha}\mathrm{T}'_{\mathrm{A}_\alpha}} \tag{30}\\
+\tau_\beta = \sqrt{\frac{1}{2}\mathrm{T}'_{\mathrm{A}_\beta}\mathrm{T}'_{\mathrm{A}_\beta}} \tag{31}
+\end{gather*}
+
+They modified the flow rule in the Mulliken–Boyce model [38] by including new internal variables to characterize viscoplastic behavior:
+\begin{gather*}
+\dot{\gamma}^{\mathrm{p}}_\alpha = \dot{\gamma}^{\mathrm{p}}_{0,\alpha}\mathrm{exp}\left[-\frac{\Delta\mathrm{G}_\alpha}{\mathrm{k}\theta}\left(1 - \frac{\tau_\alpha}{\mathrm{s}_\alpha + \alpha_{\alpha+\beta}\mathrm{p}}\right)\right] \tag{32}\\
+\dot{\gamma}^{\mathrm{p}}_\beta = \dot{\gamma}^{\mathrm{p}}_{0,\beta}\mathrm{exp}\left[-\frac{\Delta\mathrm{G}_\beta}{\mathrm{k}\theta}\left(1 - \frac{\tau_\alpha}{\mathrm{s}_\beta + \alpha_{\alpha+\beta}\mathrm{p}}\right)\right] \tag{33}
+\end{gather*}
+\noindent where $\dot{\gamma}^{\mathrm{p}}_{0,\mathrm{i}}$ (i = α, β) is the factor proportional to the attempt frequency, ΔG\textsubscript{i} is the activation energy, p is the pressure, and α\textsubscript{p,i}p is the pressure coefficient. The internal variable s\textsubscript{i} is the \pdfpage{8}shear strength, which is related to the shear modulus and evolves to a preferred state with plastic straining:
+\begin{gather*}
+\mathrm{s}_{0,\alpha} \equiv \frac{0.077\mu_\alpha}{1 - \nu_\alpha} \tag{34}\\
+\dot{\mathrm{s}}_\alpha = \mathrm{h}_\alpha\left(1 - \frac{\mathrm{s}_\alpha}{\mathrm{s}_{\mathrm{ss,a}}}\right)\dot{\gamma}^{\mathrm{p}}_\alpha \tag{35}\\
+\mathrm{s}_{0,\beta} \equiv \frac{0.077\mu_\beta}{1 - \nu_\beta} \tag{36}\\
+\dot{\mathrm{s}}_\beta = \mathrm{h}_\beta\left(1 - \frac{\mathrm{s}_\beta}{\mathrm{s}_{\mathrm{ss},\beta}}\right)\dot{\gamma}^{\mathrm{p}}_\beta \tag{37}
+\end{gather*}
+\noindent where h\textsubscript{i} (i = α, β) represents the softening slope, and s\textsubscript{ss,i} is termed the ‘preferred state’. This internal variable is designed to allow the yield stress’s temperature dependence to mirror that of the elastic shear moduli, effectively capturing the strain-softening phenomenon. In the most comprehensive rendition of this constitutive model, the strain-softening effect can be interpreted as the cumulative softening of both the α and β components. During FE Analysis, CNTs were assumed to undergo brittle fracture [39].
+\decompnote{As printed, Equation (33) for the β process has τ\textsubscript{α} (not τ\textsubscript{β}) in the numerator, and both (32) and (33) write the pressure coefficient as α\textsubscript{α+β}, whereas the text after them and Table 1 use α\textsubscript{p,i}. Equation (35) has s\textsubscript{ss,a} (Latin a) where (37) has s\textsubscript{ss,β}.}
+
+\subsection*{\emph{4.4. Parameters for PMMA}}
+
+A one-dimensional Mulliken–Boyce model used genetic algorithms to deduce the constitutive parameters that govern the stress-strain behavior of PMMA [40]. In this work, these parameters were adopted by the 3D model and are detailed in Table 1.
+
+\noindent\textbf{Table 1.} Epoxy material parameters defined in the Mulliken–Boyce model [41].
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Symbol} & \textbf{Unit} & \textbf{Value}\\
+\midrule
+$\dot{\gamma}_{0,\mathrm{a}}$ & 10\textsuperscript{15} s\textsuperscript{−1} & 6.95\\
+$\dot{\gamma}_{0,\beta}$ & 10\textsuperscript{3} s\textsuperscript{−1} & 1.77\\
+ΔG\textsubscript{α} & 10\textsuperscript{−18} J & 5.528\\
+ΔG\textsubscript{β} & 10\textsuperscript{−20} J & 6.036\\
+α\textsubscript{p,α} & & 0.26\\
+α\textsubscript{p,β} & & 0.26\\
+h\textsubscript{α} & MPa & 200\\
+h\textsubscript{β} & MPa & 500\\
+C\textsubscript{R} & MPa & 14\\
+N & m$^{-\frac{1}{2}}$ & 2.1\\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 1's caption says ``Epoxy'' although the section and the text present these as the parameters for PMMA; the first row is printed with subscript ``0,a'' (Latin a) where the text uses α; N (the limiting chain extensibility, a number) is given the unit m\textsuperscript{−1/2}. All kept as printed. Also in tables/table1.csv.}
+
+\subsection*{\emph{4.5. Sectioning Model}}
+
+A microstructural cutting model was devised, which integrates microstructural representations with the corresponding constitutive and failure models. The matrix material predominantly exhibits ductile failure. The chip formation process in PMMA/CNT nanocomposites during cutting can be linked to a ductile failure mechanism. The failure of temperature-sensitive PMMA is described using the Gearing–Anand model [42]. For the MWCNTs, a strain failure criterion is employed.
+\decompnote{As printed, Gearing and Anand (2004) is ref.\ 41 in the list; ref.\ 42 is Fu et al.\ (2022).}
+
+Figure 4a presents SEM images of the fractured surfaces of PMMA/MWCNT composites. Figure 4b illustrates a streamlined modeling approach for the PMMA/MWCNT nanocomposites, while Figure 4b,c depict the FE configuration for orthogonal cutting of the nanocomposites. The FE model is distilled into a 2-phase representation. CNTs disperse within the matrix material randomly, which are simplified as rectangles with dimensions of 100 nm × 10 nm. A comparison model devoid of CNTs serves as a control. The cutting tool, assumed to be an analytical rigid body, traverses a stationary workpiece at a defined velocity. In the cutting model, the polymer and CNT geometries are generated independently, \pdfpage{9}and then are assembled with their interfaces integrated seamlessly. The matrix and CNTs are meshed independently, ensuring no shared nodes. The density, Young’s modulus, shear modulus, Poisson’s ratio, critical stress intensity factor, and equivalent critical strain energy release rate of CNT are specified as 2.267 g/cm\textsuperscript{3} [43], 1 TPa [44], 280 GPa [45], −0.38 [46], 4.0 MPa$\sqrt{\mathrm{m}}$ [47], and 15.9 Jm\textsuperscript{−2} [48], respectively.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Figure 4.} (\textbf{a}) SEM micrographs of PMMA/CNTs fracture surfaces [49], (\textbf{b}) simplification of MWCNT into 2D rectangular shape [50], and (\textbf{c}) schematics showing the FE set-up for orthogonal cutting of PMMA/CNTs.
+\alttext{Figure 4 is printed on p.\,9. (a) Two columns of greyscale SEM micrographs headed ``PMMA/ 0.2 wt\% CNT'' (left) and ``PMMA/ 1.0 wt\% CNT'' (right). Top row: low-magnification fracture surfaces with bright ridges and filaments, scale bars 10μm, each with a red square that is enlarged (red lines) in the bottom row. Bottom row: higher-magnification views with scale bars 1μm; on the left two red circles mark small holes; on the right a red circle marks a hole and a red square a filament. (b) Drawing of a multi-walled carbon nanotube (concentric cylinders of hexagonal carbon lattice in blue, yellow and red), labelled ``MWCNT'', with a red arrow to a white rectangle with black outline labelled ``Simplified 2-D shape'', its sides marked 10 nm (short) and 100 nm (long). (c) FE model screenshot: a wide light-blue rectangle (the workpiece) with about eight short white bars at random orientations; black arrows label the blue area ``PMMA matrix'' and a white bar ``MWCNT''; small coloured boundary-condition symbols along the left and bottom edges; the outline of a knife at the upper right. A red box at the upper right corner of the workpiece is enlarged at the right: a dark blue block (the workpiece edge), the outline of the ``Tool'' with dashed reference lines and curved arrows marking the ``Rake angle'' and ``Clearance angle'', and an arrow pointing left labelled ``Cutting direction''.}
+
+Table 2 documents the parameters of the cutting model and conditions employed in this study. The cutting speed is set at 1.0 mm/s, with six distinct cutting thicknesses ranging from 60 nm to 200 nm. The tool rake and clearance angles are 45.0° and 5.0°, respectively. The model dimensions are 1.6 μm by 0.5 μm. Drawing from the density metrics of PMMA and CNTs, the reinforcement fractions in the FE simulation are 0.05\%, 0.1\%, 0.25\%, and 0.5\%.
+
+\noindent\textbf{Table 2.} Cutting model and condition parameters used in the FE cutting model.
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+\textbf{Parameter} & \textbf{Value}\\
+\midrule
+Cutting speed & 1.0 mm/s\\
+Cutting thickness & 60, 80, 100, 120, 150, 200 nm\\
+Tool rake angle & 45.0°\\
+Tool clearance angle & 5.0°\\
+Content of nanoparticles & 0.1 wt\%, 0.2 wt\%, 0.5 wt\%, 1.0 wt\%\\
+Surface area fraction of nanoparticles & 0.05\%, 0.1\%, 0.25\%, 0.5\%\\
+Length of nanoparticle & 100 nm\\
+Width of nanoparticle & 10 nm\\
+Length of model & 1.6 μm\\
+Height of model & 0.5 μm\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{\emph{4.6. Distribution of CNTs}}
+
+This study employs the random sequential adsorption (RSA) method as its primary algorithm for the random distribution of MWCNTs [51,52]. Figure 5 displays the flow chart \pdfpage{10}of the RSA algorithm tailored for polymer/CNT nanocomposites. The program ceases once the cumulative area fraction of the nanotubes achieves a threshold.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Figure 5.} Flow chart of the RVE generation algorithm for polymer/CNTs nanocomposites.
+\alttext{Figure 5 is printed at the top of p.\,10. Flow chart. ``start'' (rounded box) → ``Build matrix part and nanoparticle parts'' → ``Build the nanoparticle instances base on matrix part'' → ``Built single nanoparticle instance'' → ``Rotate and move single nanoparticle instance'' → ``Calculate the surface area of all nanoparticles instance'' → diamond ``The surface area of all nanoparticles reaches the setting?''; ``no'' loops back to ``Build the nanoparticle instances base on matrix part''; ``yes'' → ``Save data'' → ``done''. The four boxes of the loop sit on a blue shaded background.}
+
+In its foundational design, the RSA algorithm iteratively introduces MWCNTs into the matrix by stochastically determining the locations for inclusions. Initially, distinct entities for the matrix and nanotubes are constructed. Subsequent to this, instances of nanotubes are instantiated, with their spatial coordinates and orientations being randomized. The algorithm then assesses for potential overlaps between nanotubes. In the event of an overlap, the conflicting nanotube undergoes random repositioning and reorientation until it is free from intersections. Once a nanotube is successfully placed without conflicts, the algorithm proceeds to introduce the next one, and the assessment cycle recommences.
+
+Figure 6 shows various contents of CNTs in nanocomposites for 2D FE cutting models. The probability of the random nanotube distribution is denoted as P\textsubscript{0}. As shown in Figure 5, θ is the disorientation angle between the normal vector ($\vec{\mathrm{n}}$) of the nanotube and the x axis, which can describe the orientation of the CNT in the matrix. It is obvious that when θ is equal to 0 and π/2, P\textsubscript{0} is equal to 1 and 0, respectively. Thus, P\textsubscript{0} can be assumed to be a function of θ as follows [53,54]:
+\begin{equation*}
+P_0 = (1 - \frac{2}{\pi}\theta) \tag{38}
+\end{equation*}
+\decompnote{``As shown in Figure 5'': θ and the normal vector n are drawn in the inset of Figure 6, not in Figure 5 (the flow chart).}
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Figure 6.} Various contents of CNT in nanocomposites in the 2D micro-FE cutting model.
+\alttext{Figure 6 is printed at the bottom of p.\,10. Four grey rectangles stacked vertically under the heading ``Various content of nanoparticles'', labelled at the left ``0.1 wt\% CNT'', ``0.2 wt\% CNT'', ``0.5 wt\% CNT'' and ``1.0 wt\% CNT''. Each holds thin white bars with black outlines at random positions and orientations: one bar at 0.1 wt\%, two at 0.2 wt\%, four at 0.5 wt\% and eight at 1.0 wt\% (as counted in the drawing). An x–y axis cross (y up, x right) is drawn at the lower right of the 1.0 wt\% rectangle. A red box in the 1.0 wt\% rectangle is enlarged at the right: a tilted bar labelled ``CNT'' with its normal vector $\vec{n}$ drawn as a dashed arrow; a horizontal dashed line and a curved arrow mark the angle θ between $\vec{n}$ and the horizontal.}
+
+\pdfpage{11}
+\section*{5. Results and Discussion}
+
+\subsection*{\emph{5.1. Cutting Force}}
+
+Figure 7 shows the simulated cutting force from the various composites and plain PMMA, and the measurement of resultant cutting force is used to evaluate the machinability. Using the computed thrust force per width, F\textsubscript{t}, and the cutting force per width, F\textsubscript{c}, the specific cutting energy, F, is calculated as [55]:
+\begin{equation*}
+\mathrm{F} = \sqrt{\mathrm{F}^2_{\mathrm{t}} + \mathrm{F}^2_{\mathrm{c}}} \tag{39}
+\end{equation*}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Figure 7.} (\textbf{a}) Experimental and (\textbf{b}) simulated cutting force of plain PMMA at various cutting thicknesses under 1 mm/s cutting.
+\alttext{Figure 7 is printed on p.\,11. Two line plots of ``Resultant cutting force (N/m)'' against ``Time (μs)'', each with six series labelled ``undeformed chip thickness 60nm'' (black), ``80nm'' (red), ``100nm'' (blue), ``120nm'' (magenta), ``150nm'' (green) and ``200nm'' (navy). (a) Experimental: x 0 to about 810 μs (ticks every 200), y 0 to 60 (ticks 0, 20, 40, 60). All curves rise from 0 to a first peak between about 33 and 39 N/m at 70–130 μs (the 80 nm curve peaks latest, at about 37.5 N/m near 130 μs; the 120 nm curve dips sharply to about 10 N/m near 145 μs), then settle at about 22–24 N/m; from about 250 μs the 150 nm and 200 nm curves oscillate between about 17 and 32 N/m with peaks near 330, 540, 730 and 790 μs, the 120 nm curve between about 18 and 28 N/m, while the 60, 80 and 100 nm curves stay near 21–25 N/m. (b) Simulated: x 0 to about 820 μs, y 0 to 80 (ticks every 20). The curves rise to a plateau within about 50 μs and fluctuate strongly: 60 nm about 13–24 N/m, 80 nm about 15–28, 100 nm about 15–30, 120 nm about 20–39 (one dip to about 1 N/m near 280 μs), 150 nm about 22–48, 200 nm a saw-tooth between about 25 and 58 N/m with sudden drops to 0 near 170, 360, 550 and 735 μs. Near 560–620 μs the 80, 100 and 120 nm curves also drop to near 0 and recover by about 680 μs. The curves end at about 775 μs. The digitized data show that these simulated curves coincide with those of Figure 8(d) (see the README).}
+\figuredata{a}{figures/fig7a.csv}{figures/fig7.py}{digitized from the embedded 300 ppi raster image (tier 3), see the CSV header}
+\figuredata{b}{figures/fig7b.csv}{figures/fig7.py}{digitized from the embedded 300 ppi raster image (tier 3), see the CSV header}
+
+Figure 7a illustrates the experimental cutting force for plain PMMA at various cutting thicknesses under a cutting speed of 1 mm/s. The results demonstrate that the cutting forces increase with the cutting thickness, with lower thicknesses such as 60 nm and 80 nm producing relatively stable force trends, while higher thicknesses such as 150 nm and 200 nm exhibit larger force magnitudes and variability. The force profile initially shows a surge, referred to as the entry shock, which corresponds to the tool engaging with the material [56]. Following this phase, the forces transition to a steady-state region with occasional fluctuations, reflecting dynamic tool-material interactions during sectioning.
+
+Figure 7b depicts the simulated cutting force for plain PMMA across various cutting thicknesses at a cutting speed of 1 mm/s. The cutting settings for both the FE simulation and the experiment are the same. The cutting forces exhibit an initial surge, termed the entry shock, which then transitions to a steady-state phase. Notably, even during this steady-state phase, the forces display fluctuations. As the tool progresses, there is an escalation in the cutting force, leading to heightened plastic deformation. Consequently, a decline in the cutting force is observed when the tool traverses the previously softened segment of the material. Upon reaching this juncture, the cycle of force fluctuations resets, and the pattern recurs with the tool’s forward movement. It is noteworthy that as the cutting depth increases, the force fluctuations become increasingly pronounced.
+
+Figure 8 presents the simulated resultant cutting force for various PMMA/CNT nanocomposites across different cutting thicknesses at a cutting speed of 1 mm/s. The steady-state cutting forces observed in the composite exhibit fluctuations akin to those in pure PMMA. However, these fluctuations in the composites are notably more pronounced and irregular compared to those in standard PMMA. This can be ascribed to the microstructural heterogeneity introduced by the CNTs. The inherently robust CNTs pose greater resistance to cutting or displacement than the comparatively malleable PMMA matrix. As a result, any interaction of a CNT with the cutting tool is likely to induce a spike in the cutting force. The magnitude and direction of this effect are also contingent on the orientation and length of the CNT [57]. Thus, the observed fluctuations in the steady-state force emerge \pdfpage{12}from the combined influence of CNTs within the PMMA matrix. The FE simulation results suggest that the spatial distribution of CNTs and their concentration significantly impact both the cutting force and chip formation. These force fluctuations are intrinsically tied to the chip formation process. It is worth noting that the forces associated with pure polymers exhibit more subdued fluctuations relative to their composite counterparts. The inherent uniformity of the polymer material results in more consistent cutting forces compared to the more variable forces observed in composites.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Figure 8.} Simulated resultant cutting force of PMMA/CNT nanocomposites at various cutting thicknesses under 1 mm/s cutting speed: (\textbf{a}) PMMA/0.1 wt\% CNTs; (\textbf{b}) PMMA/0.2 wt\% CNTs; (\textbf{c}) PMMA/0.5 wt\% CNTs; (\textbf{d}) PMMA/1.0 wt\% CNTs.
+\alttext{Figure 8 is printed on p.\,12. Four line plots in a 2 × 2 grid, each of ``Resultant cutting force (N/m)'' (0–80, ticks every 20) against ``Time (μs)'' (0 to about 820, ticks every 200), with the same six series as Figure 7 (undeformed chip thickness 60nm black, 80nm red, 100nm blue, 120nm magenta, 150nm green, 200nm navy; legend in two columns at the top). In all panels the forces rise from 0 within about 50–100 μs and then fluctuate; the curves are ordered by thickness most of the time. (a) 0.1 wt\%: 60 nm about 11–23 N/m; 80 nm about 13–27 with two sharp dips to about 5 N/m near 420 and 610 μs; 100 nm about 18–36; 120 nm about 25–42; 150 nm oscillating about 33–50 with peaks near 150, 330, 510, 690 μs; 200 nm a regular wave between about 38 and 58 with four maxima near 180, 350, 530, 700 μs. (b) 0.2 wt\%: 60 nm about 10–22; 80 nm about 15–27; 100 nm about 5–33 (dip near 300 μs); 120 nm about 10–40 (dips to about 0 near 285 μs and to about 10 near 620 μs); 150 nm about 10–49 with deep drops near 160 and 190 μs; 200 nm a wave between about 38 and 59. (c) 0.5 wt\%: 60 nm about 11–24; 80 nm about 15–29; 100 nm about 11–33; 120 nm about 12–37; 150 nm about 22–51; 200 nm about 20–65, its highest peak (about 65 N/m) near 160 μs, followed by an irregular wave with peaks near 60 N/m. (d) 1.0 wt\%: the same curves as Figure 7(b) (200 nm saw-tooth between about 25 and 58 N/m with drops to 0 near 170, 360, 550 and 735 μs; 120 nm dip to about 1 N/m near 280 μs; 80–120 nm drops near 560–620 μs).}
+\figuredata{a}{figures/fig8a.csv}{figures/fig7.py}{digitized from the embedded 600 ppi raster image (tier 3), see the CSV header}
+\figuredata{b}{figures/fig8b.csv}{figures/fig7.py}{digitized from the embedded 600 ppi raster image (tier 3), see the CSV header}
+\figuredata{c}{figures/fig8c.csv}{figures/fig7.py}{digitized from the embedded 600 ppi raster image (tier 3), see the CSV header}
+\figuredata{d}{figures/fig8d.csv}{figures/fig7.py}{digitized from the embedded 600 ppi raster image (tier 3), see the CSV header}
+\decompnote{Figure 8(d) (PMMA/1.0 wt\% CNTs) and Figure 7(b) (plain PMMA) show the same six curves: the digitized series agree to a median of 0.1--0.2 N/m (figures/fig7b\_fig8d\_compare.py), against 1.5--7.9 N/m between Figure 7(b) and Figures 8(a)--(c). One of the two figures appears to be a duplicate; the paper does not allow telling which caption is right.}
+
+Discussion on the limitations of the cutting model: Firstly, although the Mulliken–Boyce model is effective for simulating low-speed cutting conditions, it may fail to fully capture the complex behavior at higher cutting speeds. At elevated velocities, the thermal-mechanical coupling effects at the tool-workpiece interface, including heat generation, lead to changes in material properties such as thermal softening and reduced cutting resistance, which are not fully incorporated in the current model. These effects may cause an underestimation of the cutting forces in the simulations. For example, at cutting speeds above 1 mm/s, the temperature rise in the cutting zone could reduce the yield strength of PMMA and CNTs, which is not considered in the current version of the Mulliken–Boyce model. Secondly, the absence of tool-chip adhesion effects in the model could explain some of the observed discrepancies. The interaction between the cutting tool and the material generates a shear force that leads to adhesion, especially under high-speed cutting conditions, where localized heating can cause significant adhesion between the tool and the chip. This phenomenon is not included in the current model, and its omission likely contributes to the underprediction of cutting forces. Thirdly, the model also disregards strain gradient effects, which are particularly important in nanosectioning operations. At small cutting depths, such as those used in this study (60–200 nm), the material undergoes significant plastic deformation over a small region, creating strain gradients. These gradients result in stress concentrations that significantly affect the cutting \pdfpage{13}force but are not captured by the current model. Incorporating a more detailed strain gradient theory, such as a higher-order material model, could improve simulation accuracy.
+
+Figure 9 presents the simulated resultant cutting force for various PMMA/CNT nanocomposites in comparison to plain PMMA across different cutting thicknesses. The simulated cutting force for the PMMA/CNT nanocomposites is approximately 10\% greater than that of the plain PMMA. However, there is a notable discrepancy between the simulated and experimental results: the simulated cutting force for the PMMA/CNT nanocomposites is roughly 50\% less than the experimental results under identical cutting conditions. Specifically, for a cutting thickness of 200 nm, the simulated resultant cutting force for plain PMMA stands at about 30.4 N/m, while the experimental value is approximately 55.3 N/m. In the case of the PMMA/1.0 wt\% CNT nanocomposite, the simulated value is about 35.7 N/m, contrasting with the experimental value of around 72.9 N/m. Three potential reasons can account for these discrepancies. First, the Mulliken–Boyce model might exhibit limitations when subjected to high-velocity loads. Second, the current model does not incorporate the adhesion effects observed at the chip-to-tool interface. Lastly, the model does not consider the influence of strain gradient effects [58].
+\decompnote{The values given here for 200 nm do not match Figure 9 as printed: the digitized Figure 9 gives about 33.0 N/m (plain PMMA) and about 48.3 N/m (PMMA/1.0 wt\% CNT) at 200 nm, not 30.4 and 35.7 N/m. The experimental values 55.3 and 72.9 N/m are not shown in any figure (Figure 7a shows plain PMMA only, with forces below about 40 N/m).}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Figure 9.} Simulated resultant cutting force of various PMMA/CNT nanocomposites and plain PMMA at various cutting thicknesses.
+\alttext{Figure 9 is printed on p.\,13. Line plot with markers and error bars: ``Resultant cutting force (N/m)'' (0 to 80, labelled ticks 0, 25, 50, 75) against ``Undeformed chip thickness (nm)'' (50 to 210, labelled 50, 100, 150, 200). Points at 60, 80, 100, 120, 150 and 200 nm. Series (legend at upper left): ``Plain PMMA'' (dark grey squares) about 21.5, 22.1, 26.6, 31.3, 30.8, 33.0 N/m; ``PMMA/0.1 wt\% CNT'' (red circles) about 31.4, 32.0, 34.6, 38.4, 32.0, 33.6; ``PMMA/0.2 wt\% CNT'' (blue up-triangles) about 29.7, 29.3, 33.0, 34.9, 38.7, 46.9; ``PMMA/0.5 wt\% CNT'' (green down-triangles) about 34.8, 35.1, 34.5, 35.5, 37.2, 37.2; ``PMMA/1.0 wt\% CNT'' (purple diamonds) about 38.8, 39.8, 39.8, 40.3, 42.8, 48.3 (values read from the digitized data). The first four series have symmetric error bars of about ±1.2 to ±3.6 N/m; the 1.0 wt\% series has none visible. The figure does not state what the error bars represent.}
+\figuredata{(single panel)}{figures/fig9.csv}{figures/fig9.py}{digitized from the embedded 500 ppi raster image strips (tier 3), see the CSV header}
+
+\subsection*{\emph{5.2. Stress Distribution}}
+
+Figure 10 illustrates the stress distribution in plain PMMA compared to PMMA/1.0 wt\% CNT at a cutting thickness of 100 nm. The plain PMMA exhibits pronounced stress concentrations within the tool-to-workpiece contact area. In contrast, the contact zone between the tool and the PMMA/CNT workpiece displays reduced stress concentration. During the initial cutting phase, CNTs experience elevated stress levels. However, as the tool progresses and the deformation of the base material intensifies, an increasing number of CNTs begin to encounter heightened stresses. This observation indicates that, during the cutting process, the CNTs bear significant stresses transferred from the base material.
+
+Figure 11 illustrates the stress distribution in plain PMMA, PMMA/0.5 wt\% CNTs, and PMMA/1.0 wt\% CNTs at a cutting thickness of 60 nm. The incorporation of CNT introduces distinct phenomena, including the protrusion of CNT on the machined surfaces and sub-surface damage within the composites. This leads to a markedly different failure mechanism. Consequently, the machined surfaces of PMMA/CNT nanocomposites differ from those of plain PMMA. Furthermore, in composites with a higher concentration of CNTs, these CNTs not only offer enhanced reinforcement and mitigate stress propagation but also play a more pronounced role in chip formation, significantly affecting the morphology of the machined surface.
+
+\pdfpage{14}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Figure 10.} Stress distribution of plain PMMA and PMMA/1.0 wt\% CNTs at 100 nm cutting thickness.
+\alttext{Figure 10 is printed at the top of p.\,14. Two Abaqus contour plots of von Mises stress near the cutting edge, under title boxes ``Plain PMMA'' (left) and ``PMMA/ 1.0 wt\% CNT'' (right), with one colour key at the far left: ``S, Mises (Avg: 75\%)'', 12 bands from blue to red, limits +1.158×10\textsuperscript{2}, +3.010×10\textsuperscript{3}, +5.904×10\textsuperscript{3}, +8.799×10\textsuperscript{3}, +1.169×10\textsuperscript{4}, +1.459×10\textsuperscript{4}, +1.748×10\textsuperscript{4}, +2.038×10\textsuperscript{4}, +2.327×10\textsuperscript{4}, +2.616×10\textsuperscript{4}, +2.906×10\textsuperscript{4}, +3.195×10\textsuperscript{4}, +3.485×10\textsuperscript{4} (no unit given). Each panel shows the workpiece (bottom), the chip curling up and to the right along the rake face of the knife (white with black outline, its tip at the centre), and the uncut material at the left. Left: a red/orange zone of the highest stress at the knife tip and along the shear zone towards the free surface, labelled ``Highly concentrated stress zones'' with an arrow; green to light-blue lobes spread down and to the left beneath the tip; the chip is mostly blue with green patches. Right: a similar but smaller red zone at the tip, labelled ``Less concentrated stress zones''; a thin dark-blue diagonal streak (a nanotube) runs down and left from below the tip; the newly cut surface right of the knife is ragged.}
+\figuredata{left (Plain PMMA)}{figures/fig10left.csv}{figures/fig11.py}{colour map classified into the 12 key bands, one code per pixel at the native 300 ppi of the embedded image (tier 3), see the CSV header}
+\figuredata{right (PMMA/1.0 wt\% CNT)}{figures/fig10right.csv}{figures/fig11.py}{as for the left panel}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Figure 11.} Stress distribution (S, Mises) at 60 nm cutting thickness: (\textbf{a}) plain PMMA—shear-zone propagation; (\textbf{b}) plain PMMA—edge stress localization; (\textbf{c}) PMMA/0.5 wt\% CNTs—primary shear band growth; (\textbf{d}) PMMA/0.5 wt\% CNTs—CNT protrusion at the interface; (\textbf{e}) PMMA/1.0 wt\% CNTs—inhibited stress propagation; (\textbf{f}) PMMA/1.0 wt\% CNTs—stress redistribution during chip flow.
+\alttext{Figure 11 is printed on p.\,14. Six Abaqus contour plots of von Mises stress at 60 nm cutting thickness in three rows labelled at the left ``Plain PMMA'' (a, b), ``PMMA/ 0.5 wt\% CNT'' (c, d) and ``PMMA/ 1.0 wt\% CNT'' (e, f). Each panel has its own colour key ``S, Mises (Avg: 75\%)'' with 12 bands from blue to red; top and bottom limits: (a) +3.499e+04 / +8.297e+01; (b) +3.495e+04 / +3.832e+01; (c) +3.444e+04 / +0.000e+00; (d) +3.480e+04 / +0.000e+00; (e) +3.448e+04 / +0.000e+00; (f) +3.488e+04 / +0.000e+00 (all 13 values are in the CSV headers). All panels show the workpiece, the knife (white, black outline) at the right and a chip curling up along the rake face, with a red/orange high-stress zone at the knife tip extending up into the chip root. (a) Annotation ``Shear zone propagation'' with an arrow to the shear zone; a dashed ellipse below the tip with dashed arrows pointing down and to the left; green-to-cyan stress lobes fan out below the tip. (b) No annotation; the red zone is concentrated at the chip root along the rake face. (c) Two dashed circles around the tip region and arrows; a dark-blue diagonal streak below the tip; the cut surface right of the knife is ragged. (d) Annotation ``The protrusion of CNT'' with a long arrow to a red streak just below the knife tip; a ragged cut surface. (e) Annotation ``Distorted stress contour caused by prevented stress propagation'' with an arrow; a dashed circle with dashed arrows at the lower left of the tip, and blue diagonal streaks in the stressed region. (f) No annotation; a blue diagonal streak below the tip; the red zone extends along the chip root.}
+\figuredata{a}{figures/fig11a.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+\figuredata{b}{figures/fig11b.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+\figuredata{c}{figures/fig11c.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+\figuredata{d}{figures/fig11d.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+\figuredata{e}{figures/fig11e.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+\figuredata{f}{figures/fig11f.csv}{figures/fig11.py}{colour map classified into the 12 key bands of the panel's own key, one code per pixel at the native 300 ppi of the embedded JPEG (tier 3), see the CSV header}
+
+\subsection*{\emph{5.3. Validity and Limitations of the Geometric Approximation}}
+
+To balance mechanistic insight with computational cost, the planar projection of three-dimensional MWCNTs is approximated here by two-dimensional rectangles. Random sequential adsorption (RSA) is used to generate configurations whose areal fraction and orientation statistics are consistent with a prescribed target volume fraction [59,60]. Although this abstraction does not explicitly represent cylindrical curvature, end effects, or size distributions, it can, at cutting thicknesses of 60–200 nm, capture the local stress transfer that occurs when a CNT encounters the tool and the corresponding relative variations in peak cutting force [61,62].
+
+Numerical results show that, with geometric dimensions held fixed, merely increasing CNT content while maintaining random orientation reproduces the experimentally \pdfpage{15}observed overall trend of higher cutting resistance and more pronounced fluctuations in the steady-state force. The lower force amplitude relative to experiments is consistent with this geometric approximation providing a conservative (lower-bound) estimate of local triaxiality and effective load-transfer length [63,64]. Accordingly, we regard the approximation as a feasible representation for trend assessment and mechanistic elucidation.
+
+For higher quantitative fidelity, future work within the present framework will conduct parametric sensitivity studies—e.g., on aspect ratio, degree of orientational order, and interfacial cohesive parameters—together with uncertainty quantification [65]. These efforts will be integrated with existing SEM-based orientation statistics to delimit confidence bounds for the model predictions.
+
+\subsection*{\emph{5.4. Experimental Validation}}
+
+Figure 12 presents images of chips derived from various PMMA/CNT nanocomposites. Further details of these chips have been elaborated upon in prior research [66]. Specifically, Figure 12a,b depict chips from the PMMA/0.2 wt\% CNTs with cutting thicknesses of 60 nm and 200 nm, respectively. Conversely, Figure 12c,d represent chips from the PMMA/1.0 wt\% CNTs, at cutting thicknesses of 60 nm and 200 nm. Theoretical considerations suggest a ductile-to-brittle transition in different composites. This transition implies the existence of a threshold: beyond this point, an increase in the CNT percentage renders the composite increasingly brittle, increasing its propensity for failure during the cutting process [67]. Notably, both the plain PMMA and the PMMA/CNT nanocomposites consistently produced continuous chips across experiments and simulations. This observation aligns with findings by Satapathy et al. [68], who identified a ductile-to-brittle transition at a CNT loading of 4.0 wt\%. The cutting process, in its intricacy, offers valuable insights into the onset of damage phenomena, which can, in turn, influence the chip formation process. Consequently, it can be inferred that the 1.0 wt\% CNT addition does not surpass the critical threshold that would alter chip formation.
+
+\begin{center}
+\includegraphics[width=0.5\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Figure 12.} Images of chips of PMMA/CNT nanocomposites [69]: (\textbf{a},\textbf{b}) PMMA/0.2 wt\% CNTs sectioned at the cutting thickness of 60 nm and 200 nm, respectively, (\textbf{c},\textbf{d}) PMMA/1.0 wt\% CNTs sectioned at the cutting thickness of 60 nm and 200 nm, respectively.
+\alttext{Figure 12 is printed on p.\,15. Four colour optical images of sectioned chips (ribbons with fine transverse ridges) in a 2 × 2 grid. (a) a pale grey-white ribbon, split by a dark diagonal band, scale bar 0.34 mm; (b) a blue ribbon with dense transverse stripes, partly faded at the bottom, scale bar 0.34 mm; (c) a pale curved ribbon on a dark background, scale bar 0.25 mm at the bottom left; (d) blue-green ribbons with bright transverse stripes on a dark background, scale bar 0.25 mm at the top right. Per the caption, (a,b) are PMMA/0.2 wt\% CNTs and (c,d) PMMA/1.0 wt\% CNTs at 60 nm and 200 nm cutting thickness.}
+
+\pdfpage{16}
+\section*{6. Conclusions}
+
+This study provides an analysis of the nanosectioning behavior of PMMA/CNT nanocomposites using a microstructural-level FE model. The analysis reveals that introducing 1.0 wt\% CNTs does not surpass the critical threshold necessary to alter chip formation mechanisms, indicating that the nanocomposite maintains similar chip formation characteristics to plain PMMA at this CNT concentration. Any interaction between a specific CNT and the cutting tool is likely to result in an increased cutting force. Specifically, when 1.0 wt\% CNTs are added to PMMA, the cutting force increases from approximately 55.3 N/m to 72.9 N/m, which corresponds to approximately a 31.8\% increase. While the primary trends in strain distribution in PMMA/CNT composites closely match those observed in plain PMMA, discernible differences between the two materials persist, highlighting the impact of CNT inclusion on the sectioning response. Furthermore, the incorporation of CNTs affects specific phenomena, notably causing protrusion of CNTs on machined surfaces and leading to sub-surface damage within the composites.
+
+\noindent\textbf{Author Contributions:} Conceptualization, F.S. and G.F.; methodology, G.F.; software, G.F.; validation, J.G.; formal analysis, H.L. and W.W.; investigation, G.F.; resources, F.S.; data curation, J.G.; writing—original draft preparation, G.F.; writing—review and editing, F.S.; visualization, H.L.; supervision, F.S.; project administration, G.F.; funding acquisition, G.F. and H.L. All authors have read and agreed to the published version of the manuscript.
+
+\noindent\textbf{Funding:} This work was funded by the National Natural Science Foundation of China (52405509, 52375461) and Top Project of Natural Science Foundation of Tianjin (24JCYBJC01270).
+
+\noindent\textbf{Institutional Review Board Statement:} Not applicable.
+
+\noindent\textbf{Data Availability Statement:} The original contributions presented in this study are included in the article. Further inquiries can be directed to the corresponding author.
+
+\noindent\textbf{Acknowledgments:} The PMMA/MWCNT nanocomposites were supplied by Centro de Investigación Científica de Yucatán A.C, Mexico, and the nanosectioning was performed at the Division of Applied Mechanics, Uppsala University.
+
+\noindent\textbf{Conflicts of Interest:} The authors declare no conflicts of interest.
+
+\section*{References}
+\begin{hangpars}\small
+1. Fenta, E.W.; Mebratie, B.A. Advancements in carbon nanotube–polymer composites: Enhancing properties and applications through advanced manufacturing techniques. \emph{Heliyon} \textbf{2024}, \emph{10}, e36490. [CrossRef] [PubMed]
+
+2. Teymouri, A.; Al-Mahaidi, R.; Kazemi-Kamyab, H. A review on carbon nanofiber production and application in cementitious mixtures. \emph{J. Build. Eng.} \textbf{2024}, \emph{84}, 108519. [CrossRef]
+
+3. Yuan, J.; Yu, S.; Wang, Y.; Chen, X.; Zhou, S.; Zhong, J.; Lu, D. Nanocarbon-enhanced cement composites for self-sensing and monitoring in transport infrastructure. \emph{Case Stud. Constr. Mater.} \textbf{2024}, \emph{21}, e04082. [CrossRef]
+
+4. Yu, K.; Tay, Y.W.D.; Ting, S.J.; Yang, E.-H. Bacterially Derived Cellulose/Reduced Graphene Oxide Composite Films: Mechanical, Electrical, and Thermal Properties. \emph{ACS Appl. Nano Mater.} \textbf{2020}, \emph{3}, 12055–12063. [CrossRef]
+
+5. Ge, J.; Catalanotti, G.; Falzon, B.G.; Higgins, C.; McClory, C.; Thiebot, J.A.; Zhang, L.; He, M.; Jin, Y.; Sun, D. Process characteristics, damage mechanisms and challenges in machining of fibre-reinforced thermoplastic polymer (FRTP) composites: A review. \emph{Compos. Part B Eng.} \textbf{2024}, \emph{273}, 111247. [CrossRef]
+
+6. Ge, J.; Zhang, W.; Luo, M.; Catalanotti, G.; Falzon, B.G.; Higgins, C.; Zhang, D.; Jin, Y.; Sun, D. Multi-objective optimization of thermoplastic CF/PEKK drilling through a hybrid method: An approach towards sustainable manufacturing. \emph{Compos. Part A Appl. Sci. Manuf.} \textbf{2023}, \emph{167}, 107418. [CrossRef]
+
+7. Smoleń, P.; Czujko, T.; Komorek, Z.; Grochala, D.; Rutkowska, A.; Osiewicz-Powęzka, M. Mechanical and Electrical Properties of Epoxy Composites Modified by Functionalized Multiwalled Carbon Nanotubes. \emph{Materials} \textbf{2021}, \emph{14}, 3325. [CrossRef]
+
+8. Wang, H.; Shin, H. A multiscale model to predict fatigue crack growth behavior of carbon nanofiber/epoxy nanocomposites. \emph{Int. J. Fatigue} \textbf{2023}, \emph{168}, 107467. [CrossRef]
+
+9. Yazdanparast, R.; Rafiee, R.; Kalhori, H.; Li, B. Dynamic mechanical behavior of CNT-reinforced epoxy under medium-strain rate: A comparative study. \emph{Compos. Struct.} \textbf{2024}, \emph{344}, 118343. [CrossRef]
+
+\pdfpage{17}
+10. Ge, J.; Fu, G.; Almeida Jr, J.H.S.; Jin, Y.; Sun, D. Thermal effect in CFRP machining: Temperature field characteristics, heat generation mechanism and thermal damage management. \emph{Compos. Struct.} \textbf{2025}, \emph{356}, 118845. [CrossRef]
+
+11. Uyor, U.O.; Popoola, P.A.; Popoola, O.M.; Aigbodion, V.S. A Review of Recent Advances on the Properties of Polypropylene–Carbon Nanotubes Composites. \emph{J. Thermoplast. Compos. Mater.} \textbf{2023}, \emph{36}, 3737–3770. [CrossRef]
+
+12. Mousavi, S.R.; Estaji, S.; Kiaei, H.; Mansourian-Tabaei, M.; Nouranian, S.; Jafari, S.H.; Ruckdäschel, H.; Arjmand, M.; Khonakdar, H.A. A Review of Electrical and Thermal Conductivities of Epoxy Resin Systems Reinforced with Carbon Nanotubes and Graphene-Based Nanoparticles. \emph{Polym. Test.} \textbf{2022}, \emph{112}, 107645. [CrossRef]
+
+13. Sarode, V.B.; Patil, R.D.; Chaudhari, G.E. Characterization of functionalized multi-walled carbon nanotubes. \emph{Mater. Today Proc.} \textbf{2023}. [CrossRef]
+
+14. Le, B.D.Q.; Vu, N.V.; Ngoi, B.K.A.; Nguyen, N.-T. Micro-end-milling of carbon nanotube-reinforced epoxy nanocomposites manufactured using three-roll mill technique. \emph{J. Manuf. Process.} \textbf{2021}, \emph{70}, 307–320. [CrossRef]
+
+15. Mahmoodi, M.; Mostofa, M.G.; Jun, M.; Park, S.S. Characterization and micromilling of flow induced aligned carbon nanotube nanocomposites. \emph{J. Micro. NanoManuf.} \textbf{2013}, \emph{1}, 011005. [CrossRef]
+
+16. Samuel, J.; Dikshit, A.; DeVor, R.E.; Kapoor, S.G.; Hsia, K.J. Effect of carbon nanotube (CNT) loading on the thermomechanical properties and the machinability of CNT-reinforced polymer composites. \emph{J. Manuf. Sci. Eng.} \textbf{2009}, \emph{131}, 031008. [CrossRef]
+
+17. Gong, Y.; Baik, Y.J.; Li, C.P.; Byon, C.; Park, J.M.; Ko, T.J. Experimental and modeling investigation on machined surfaces of HDPE-MWCNT polymer nanocomposite. \emph{Int. J. Adv. Manuf. Technol.} \textbf{2017}, \emph{91}, 3527. [CrossRef]
+
+18. Weule, H.; Hüntrup, V.; Tritschle, H. Micro-cutting of steel to meet new requirements in miniaturization. \emph{CIRP Ann.} \textbf{2001}, \emph{50}, 61–64. [CrossRef]
+
+19. Liu, X.; DeVor, R.E.; Kapoor, S.G. An analytical model for the prediction of minimum chip thickness in micromachining. \emph{J. Manuf. Sci. Eng.} \textbf{2006}, \emph{128}, 474–481. [CrossRef]
+
+20. Ge, J.; Luo, M.; Zhang, D.; Catalanotti, G.; Falzon, B.G.; McClelland, J.; Higgins, C.; Jin, Y.; Sun, D. Temperature field evolution and thermal-mechanical interaction induced damage in drilling of thermoplastic CF/PEKK—A comparative study with thermoset CF/epoxy. \emph{J. Manuf. Process.} \textbf{2023}, \emph{88}, 167–183. [CrossRef]
+
+21. Kim, J.D.; Kim, D.S. Theoretical analysis of micro-cutting characteristics in ultraprecision machining. \emph{J. Mater. Process. Tech.} \textbf{1995}, \emph{49}, 387–398. [CrossRef]
+
+22. Saito, K. Fracture phenomena of high polymers in cutting. \emph{J. Macromol. Sci. Part B} \textbf{1981}, \emph{19}, 459–485. [CrossRef]
+
+23. Liu, X.; DeVor, R.E.; Kapoor, S.G.; Ehmann, K.F. The mechanics of machining at the microscale: Assessment of the current state of the science. \emph{J. Manuf. Sci. Eng.} \textbf{2004}, \emph{126}, 666–678. [CrossRef]
+
+24. Park, S.S.; Malekian, M. Mechanistic modeling and accurate measurement of micro end milling forces. \emph{CIRP Ann.} \textbf{2009}, \emph{58}, 49–52. [CrossRef]
+
+25. Ge, J.; Catalanotti, G.; Falzon, B.G.; McClelland, J.; Higgins, C.; Jin, Y.; Sun, D. Towards understanding the hole making performance and chip formation mechanism of thermoplastic carbon fibre/polyetherketoneketone composite. \emph{Compos. Part B Eng.} \textbf{2022}, \emph{234}, 109752. [CrossRef]
+
+26. Vogler, M.P.; DeVor, R.E.; Kapoor, S.G. On the modeling and analysis of machining performance in micro-endmilling, Part I: Surface generation. \emph{J. Manuf. Sci. Eng.} \textbf{2005}, \emph{126}, 685–694. [CrossRef]
+
+27. Aramcharoen, A.; Mativenga, P.T. Size effect and tool geometry in micromilling of tool steel. \emph{Precis. Eng.} \textbf{2009}, \emph{33}, 402–407. [CrossRef]
+
+28. Altintaş, Y.; Budak, E. Analytical prediction of stability lobes in milling. \emph{CIRP Ann.} \textbf{1995}, \emph{44}, 357–362. [CrossRef]
+
+29. Ge, J.; Tan, W.; Ahmad, S.; Falzon, B.G.; Catalanotti, G.; Higgins, C.; Jin, Y.; Sun, D. Temperature-dependent cutting physics in orthogonal cutting of carbon fibre reinforced thermoplastic (CFRTP) composite. \emph{Compos. Part A Appl. Sci. Manuf.} \textbf{2024}, \emph{176}, 107820. [CrossRef]
+
+30. Ge, J.; Yao, Z.; Wu, M.; Almeida Jr, J.H.S.; Jin, Y.; Sun, D. Tackling data scarcity in machine learning-based CFRP drilling performance prediction through a broad learning system with virtual sample generation (BLS-VSG). \emph{Compos. Part B Eng.} \textbf{2025}, \emph{305}, 112701. [CrossRef]
+
+31. Mulliken, A.D.; Boyce, M.C. Mechanics of the rate-dependent elastic-plastic deformation of glassy polymers from low to high strain rates. \emph{Int. J. Solids Struct.} \textbf{2006}, \emph{43}, 1331–1356. [CrossRef]
+
+32. Rennhofer, H.; Zanghellini, B. Dispersion State and Damage of Carbon Nanotubes and Carbon Nanofibers by Ultrasonic Dispersion: A Review. \emph{Nanomaterials} \textbf{2021}, \emph{11}, 1469. [CrossRef]
+
+33. Ma, P.C.; Siddiqui, N.A.; Marom, G.; Kim, J.-K. Dispersion and Functionalization of Carbon Nanotubes for Polymer-Based Nanocomposites: A Review. Compos. \emph{Part A Appl. Sci. Manuf.} \textbf{2010}, \emph{41}, 1345–1367. [CrossRef]
+
+34. Huang, Y.Y.; Terentjev, E.M. Dispersion of Carbon Nanotubes: Mixing, Sonication, Stabilization, and Composite Properties. \emph{Polymers} \textbf{2012}, \emph{4}, 275–295. [CrossRef]
+
+35. Zheng, X.L.; Wang, H.; Yan, J.H. Notch strength and notch sensitivity of polymethyl methacrylate glasses. \emph{Mater. Sci. Eng. A} \textbf{2003}, \emph{349}, 80–88. [CrossRef]
+
+\pdfpage{18}
+36. Rafiee, M.A.; Rafiee, J.; Wang, Z.; Song, H.; Yu, Z.Z.; Koratkar, N. Enhanced mechanical properties of nanocomposites at low graphene content. \emph{ACS Nano} \textbf{2009}, \emph{3}, 3884–3890. [CrossRef]
+
+37. Stern, T.; Marom, G. Fracture mechanisms and toughness in polymer nanocomposites: A brief review. \emph{J. Compos. Sci.} \textbf{2024}, \emph{8}, 395. [CrossRef]
+
+38. Böhm, H.J.; Eckschlager, A.; Han, W. Multi-inclusion unit cell models for metal matrix composites with randomly oriented discontinuous reinforcements. \emph{Comput. Mater. Sci.} \textbf{2002}, \emph{25}, 42–53. [CrossRef]
+
+39. Kari, S.; Berger, H.; Gabbert, U. Numerical evaluation of effective material properties of randomly distributed short cylindrical fibre composites. \emph{Comput. Mater. Sci.} \textbf{2007}, \emph{39}, 198–204. [CrossRef]
+
+40. Zhu, Y.T.; Blum Enthal, W.R.; Lowe, T.C. The tensile strength of short fibre-reinforced composites. \emph{J. Mater. Sci.} \textbf{1997}, \emph{32}, 2037–2043. [CrossRef]
+
+41. Gearing, B.P.; Anand, L. On modeling the deformation and fracture response of glassy polymers due to shear-yielding and crazing. \emph{Int. J. Solids Struct.} \textbf{2004}, \emph{41}, 3125–3150. [CrossRef]
+
+42. Fu, G.; Sun, F.; Sun, F.; Huo, D.; Shyha, I.; Fang, C.; Gao, Q. Finite element and experimental studies on the machining process of polymer/graphene nanoplatelet nanocomposites. \emph{Compos. Part B Eng.} \textbf{2022}, \emph{230}, 109545. [CrossRef]
+
+43. Dikshit, A.; Samuel, J.; DeVor, R.E.; Kapoor, S.G. Microstructure-level machining simulation of carbon nanotube reinforced polymer composites—Part II: Model interpretation and application. \emph{J. Manuf. Sci. Eng.} \textbf{2008}, \emph{130}, 031115. [CrossRef]
+
+44. Sun, F.; Gamstedt, E.K. Experimental and numerical investigation on shear banding during nanomachining of an amorphous glassy polymer. \emph{Int. J. Mech. Sci.} \textbf{2019}, \emph{151}, 13–21. [CrossRef]
+
+45. Dikshit, A.; Samuel, J.; DeVor, R.E.; Kapoor, S.G. Microstructure-level machining simulation of carbon nanotube reinforced polymer composites-Part I: Model development and validation. \emph{J. Manuf. Sci. Eng.} \textbf{2008}, \emph{130}, 031114. [CrossRef]
+
+46. Petrone, L.; Cieśla, M. Random sequential adsorption of oriented rectangles with random aspect ratio. \emph{Phys. Rev. E} \textbf{2021}, \emph{104}, 034903. [CrossRef] [PubMed]
+
+47. Estakhrianhaghighi, E.; Mirabolghasemi, A.; Shi, J.; Lessard, L.; Akbarzadeh, A. Architected cellular fiber-reinforced composite. \emph{Compos. Part B Eng.} \textbf{2022}, \emph{238}, 109894. [CrossRef]
+
+48. Kloza, P.A.; Elliott, J.A. Inverse projection of axisymmetric orientation distributions. \emph{arXiv} \textbf{2023}, arXiv:2305.06433. [CrossRef]
+
+49. He, Y.; Luo, M.; Wu, B.; Yao, C.; Wang, D. Study on the cutting force responses in machining multiscale carbon nanotube/carbon fiber reinforced polymer composites. \emph{J. Manuf. Process.} \textbf{2023}, \emph{95}, 160–170. [CrossRef]
+
+50. Wacker, I.; Curticean, R.; Ryklin, D.; Hutzler, A.; Grill, W. Deconstructing 3D structured materials by modern ultramicrotomy for multimodal imaging and volume analysis across length scales. \emph{Adv. Funct. Mater.} \textbf{2023}, \emph{33}, 2302025. [CrossRef]
+
+51. Zhang, X.; Li, W.; Shao, L.-H.; Wang, J.; Li, Y. Micromechanics-based modeling of temperature-dependent effective moduli of fiber-reinforced polymer composites with interfacial debonding. \emph{Compos. Part A Appl. Sci. Manuf.} \textbf{2024}, \emph{180}, 108049. [CrossRef]
+
+52. Yazdanparast, R.; Rafiee, R. A rate-dependent cohesive zone model for dynamic crack growth in carbon nanotube reinforced polymers. \emph{Int. J. Solids Struct.} \textbf{2024}, \emph{300}, 112932. [CrossRef]
+
+53. Mirkhalaf, S.M.; van Beurden, T.J.H.; Ekh, M.; Larsson, F.; Fagerström, M. An FE-based orientation averaging model for elasto-plastic behavior of short fiber composites. \emph{Int. J. Mech. Sci.} \textbf{2022}, \emph{219}, 107097. [CrossRef]
+
+54. Hessman, P.A.; Riedel, T.; Welschinger, F.; Hornberger, K.; Böhlke, T. Microstructural analysis of short glass fiber reinforced thermoplastics based on X-ray micro-computed tomography. \emph{Compos. Sci. Technol.} \textbf{2019}, \emph{183}, 107752. [CrossRef]
+
+55. Aliotta, L.; Lazzeri, A. A proposal to modify the Kelly–Tyson equation to calculate the interfacial shear strength (IFSS) of composites with low aspect ratio fibers. \emph{Compos. Sci. Technol.} \textbf{2020}, \emph{186}, 107920. [CrossRef]
+
+56. Razavi, M.; Cheng, S.; Huang, D.; Zhang, S.; Wang, S.-Q. Crazing and yielding in glassy polymers of high molecular weight. \emph{Polymer} \textbf{2020}, \emph{197}, 122445. [CrossRef]
+
+57. Zhang, C.; Chen, F.; Song, D.; Liu, J.; Xu, Q.; Zhou, Q.; Wang, H. A study on the effect of cutting temperature on CFRP hole wall damage in continuous drilling process. \emph{Machines} \textbf{2024}, \emph{12}, 809. [CrossRef]
+
+58. Palacios, G. Random sequential adsorption with correlated defects. \emph{Phys. Rev. E} \textbf{2024}, \emph{109}, 064154. [CrossRef] [PubMed]
+
+59. Mentges, N.; Çelik, H.; Hopmann, C.; Fagerström, M.; Mirkhalaf, S.M. Micromechanical modelling of short fibre composites considering fibre length distributions. \emph{Compos. Part B Eng.} \textbf{2023}, \emph{264}, 110868. [CrossRef]
+
+60. Huang, Y.; Wang, J.; Zheng, Z.; Li, X.; Zhang, C. Repetitive ultramicrotome trimming and SEM imaging for large-volume polymer microstructures. \emph{Sci. Rep.} \textbf{2024}, \emph{14}, 9221. [CrossRef] [PubMed]
+
+61. Nabergoj, M.; Urevc, J.; Halilovič, M. Function-based reconstruction of the fiber orientation distribution function of short-fiber-reinforced polymers. \emph{J. Rheol.} \textbf{2022}, \emph{66}, 147–160. [CrossRef]
+
+62. Rashid, M.K.; Kahraman, R.; Boyaci, B.; Yildiz, M.; Canyurt, O.E.; Ertugrul, O. Nanotechnology-enhanced fibre-reinforced polymer composites: A comprehensive review. \emph{Heliyon} \textbf{2024}, \emph{10}, e33126. [CrossRef] [PubMed]
+
+63. Ge, J.; Fisher, T.; Kazanci, Z.; Jin, Y.; Sun, D. Drilling-induced defects and mechanical performance of open-hole structures in thermoplastic and thermoset polymer composites. \emph{Compos. Commun.} \textbf{2025}, \emph{53}, 102223. [CrossRef]
+
+\pdfpage{19}
+64. Yi, Q.; Tian, G.Y.; Malekmohammadi, H.; Laureti, S.; Ricci, M.; Gao, S. Inverse reconstruction of fibre orientation in multilayer CFRP using forward FEM and eddy current pulsed thermography. \emph{NDTE Int.} \textbf{2021}, \emph{122}, 102474. [CrossRef]
+
+65. Ge, J.; Zhang, J.; Xu, M.; Wu, M.; Yao, Z.; Fu, G.; Zhang, W.; Falzon, B.G.; Catalanotti, G.; Xu, J.; et al. Data-driven CFRP machining performance prediction and optimization: Advances, challenges and future prospects. \emph{Thin-Walled Struct.} \textbf{2025}, \emph{216}, 113721. [CrossRef]
+
+66. Atkins, A.G. Toughness and cutting: A new way of simultaneously determining ductile fracture toughness and strength. \emph{Eng. Fract. Mech.} \textbf{2005}, \emph{72}, 849–860. [CrossRef]
+
+67. Patel, Y.; Blackman, B.R.K.; Williams, J.G. Determining fracture toughness from cutting tests on polymers. \emph{Eng. Fract. Mech.} \textbf{2009}, \emph{76}, 2711–2730. [CrossRef]
+
+68. Satapathy, B.; Weidisch, R.; Pötschke, P.; Janke, A. Tough-to-brittle transition in multiwalled carbon nanotube (MWNT)/polycarbonate nanocomposites. \emph{Compos. Sci. Technol.} \textbf{2007}, \emph{67}, 867–879. [CrossRef]
+
+69. Sun, F.; Wiklund, U.; Avilés, F.; Gamstedt, E.K. Assessing local yield stress and fracture toughness of carbon nanotube poly (methyl methacrylate) composite by nanosectioning. \emph{Compos. Sci. Technol.} \textbf{2017}, \emph{153}, 95–102. [CrossRef]
+\end{hangpars}
+
+\noindent\textbf{Disclaimer/Publisher’s Note:} The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+\end{document}

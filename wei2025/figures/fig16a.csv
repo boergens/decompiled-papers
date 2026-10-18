@@ -1,0 +1,36 @@
+# Wei et al. 2025, Figure 16(a), panel title 'Pyramid-0°': forces on the indenter along x, y, z vs indentation depth hc.
+# Columns: series (Fx, Fy, Fz as in the legend: Fx black open squares, Fy red open triangles, Fz blue filled circles);
+#   hc_nominal_A = the run's target indentation depth (4, 7, 10, 16, 22, 25 Å, Section 2.3) nearest to the marker;
+#   hc_A = marker x position read from the figure (Å); force_nN = marker y position (nN);
+#   match = normalized correlation of the marker with the legend symbol (1 = identical; lower where a dashed fit line crosses it).
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig16_extract.py:
+#   markers located by template matching (the panel-(a) legend symbols as templates) on colour masks.
+#   x calibrated on the left frame (0) and the 5 long ticks 5-25 Å: max residual 0.019 Å, 0.0461 Å/px;
+#   y calibrated on the 9 long ticks 6..-10 nN of the left axis: max residual 0.017 nN, 0.0433 nN/px.
+# Uncertainty: about +-0.09 Å in x and +-0.09 nN in y (2 px).
+# The dashed lines are the authors' linear fits; their printed equations (y = force in nN, x = hc in Å):
+#   Fz: y = 0.269x - 0.536, R2 = 0.969;  Fy: y = -0.422x + 0.61, R2 = 0.995.
+# Check of the printed fits against the digitized markers:
+#   Fz: least-squares fit to the digitized points (x = nominal hc): y = 0.269x -0.528, R2 = 0.975; printed: y = 0.269x - 0.536, R2 = 0.969
+#   Fy: least-squares fit to the digitized points (x = nominal hc): y = -0.422x +0.612, R2 = 0.996; printed: y = -0.422x + 0.61, R2 = 0.995
+# Rejected weaker matches (glyphs of the printed equations/titles): none
+# All 18 markers found (6 per series).
+series,hc_nominal_A,hc_A,force_nN,match
+Fx,4,3.99,-0.078,0.91
+Fx,7,6.99,0.572,0.76
+Fx,10,9.98,0.139,0.79
+Fx,16,16.02,-0.554,0.8
+Fx,22,22.01,-0.251,0.84
+Fx,25,25.01,-1.118,0.88
+Fy,4,3.99,-1.236,0.81
+Fy,7,6.99,-2.406,0.73
+Fy,10,9.98,-3.273,0.74
+Fy,16,16.02,-6.306,0.68
+Fy,22,22.01,-8.430,0.76
+Fy,25,25.01,-10.163,0.74
+Fz,4,4.00,0.861,0.8
+Fz,7,6.99,1.251,0.77
+Fz,10,10.03,1.901,0.62
+Fz,16,16.02,3.851,0.76
+Fz,22,22.02,4.892,0.86
+Fz,25,25.01,6.668,0.92

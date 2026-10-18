@@ -1,0 +1,29 @@
+# Supplementary Figure 4d (kubota2018 SI): depression depth vs acceleration voltage, BSD, one series per dwell time
+# columns: series (legend text), x_nominal (acceleration voltage, keV), x_digitized, y (depression depth, nm), marker_px (pixels in the colour blob found), status, printed_panel_c (the depth printed under the imaged square in panel c of the same figure, where it belongs to this point; empty otherwise), pixel_x, pixel_y (marker centre in the embedded image)
+# provenance: tier 3, digitized from the embedded raster image of SI page 13 (885 x 595 px JPEG, 150 ppi), native resolution; script sfig4_extract.py
+# method: ticks found in the image and fitted to the printed tick labels; at each nominal x the pixels of each series colour (HSV class) in a 7-px-wide column window are grouped into blobs and the centroid of the largest blob is the marker centre
+# axis fit: y on 6 ticks 0..-250, max residual 0.794; x on 7 ticks 0..6, max residual 0.0385
+# uncertainty: about 1-2 source pixels = 2.4-4.9 in y (1 px = 2.43); markers that overlap other markers are less certain
+# status 'hidden under other markers': the series colour was not found at that x (the marker is covered by another series' marker); 'partly hidden': fewer than 8 pixels of its colour visible
+# printed_panel_c: the depth printed under each imaged square of panel c (columns 0.8, 1.6, 3.2, 6.4 µs left to right; rows 6 ... 2 keV); the digitized markers agree with these within about 2-4 nm where visible
+series,x_nominal,x_digitized,y,marker_px,status,printed_panel_c,pixel_x,pixel_y
+6.4 µsec,2,1.993,-68.24,13,ok,-67,801.08,39.85
+6.4 µsec,3,3.008,-92.65,23,ok,-92,819.87,49.91
+6.4 µsec,4,4.039,-100.6,29,ok,-98,838.93,53.17
+6.4 µsec,5,4.980,-165.7,37,ok,-165,856.35,80.03
+6.4 µsec,6,5.988,-263.6,23,ok,-265,875.00,120.39
+3.2 µsec,2,,,0,hidden under other markers,-67,,
+3.2 µsec,3,2.997,-72.85,12,ok,-74,819.67,41.75
+3.2 µsec,4,,,1,hidden under other markers,-95,,
+3.2 µsec,5,4.961,-147.4,12,ok,-147,856.00,72.50
+3.2 µsec,6,6.023,-250.3,11,ok,-250,875.64,114.91
+1.6 µsec,2,1.975,-59.51,4,partly hidden (small blob),-63,800.75,36.25
+1.6 µsec,3,3.035,-82.5,11,ok,-82,820.36,45.73
+1.6 µsec,4,,,0,hidden under other markers,-94,,
+1.6 µsec,5,4.959,-130.7,24,ok,-131,855.96,65.58
+1.6 µsec,6,,,2,hidden under other markers,-245,,
+0.8 µsec,2,,,2,hidden under other markers,-65,,
+0.8 µsec,3,,,2,hidden under other markers,-93,,
+0.8 µsec,4,4.022,-80.16,21,ok,-80,838.62,44.76
+0.8 µsec,5,,,2,hidden under other markers,-169,,
+0.8 µsec,6,6.069,-239.6,8,ok,-240,876.50,110.50

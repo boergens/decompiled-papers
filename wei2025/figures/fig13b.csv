@@ -1,0 +1,170 @@
+# wei2025 (Wei et al. 2025, Int J Numer Anal Methods Geomech 49:2949-2964), Figure 13(b): Evolution of the forces along three directions with sliding distance for all systems at hc of 4 A; panel (b) hc = 4 A, Pyramid-45°
+# Columns: series = Fx, Fy or Fz (legend names; force on the indenter along x, y, z);
+#   x_nominal_A = sliding distance of the sample in angstrom, snapped to the integer-angstrom sampling grid (see below);
+#   x_measured_A = sliding distance of the located marker centre (angstrom); force_nN = marker centre in nN;
+#   match_score = normalized cross-correlation of the marker template (0-1); flag = notes.
+# Provenance: tier 3, digitized from the 300 ppi embedded raster image (PDF p. 12; no vector data) by fig13_extract.py.
+#   Markers (Fx open black squares, Fy filled red circles, Fz open magenta triangles) located by template matching:
+#   a template learned from the clearly matched markers of all panels of this figure (Fx 226, Fy 327, Fz 53) is correlated with the colour's ink map;
+#   marker position = correlation maximum shifted to the template's ink centroid. Fy circles: only positions that survive a
+#   morphological opening of the red mask with a 4 px disk (removes the dashes, keeps the filled circles) are allowed.
+#   The dashed lines joining the markers are not given separately: they are straight segments through the markers or
+#   (in some panels) smoothed curves passing near them, so they carry no extra data.
+#   x axis calibrated on 6 labelled major ticks (0..50): max residual 0.023 A; frame check: left/right frame at -4.97/54.95 A.
+#   y axis calibrated on 3 labelled major ticks (5..-5): max residual 0.007 nN; frame check: bottom/top frame at -9.99/9.99 nN.
+# Sampling: the 116 confidently matched markers (score >= 0.65) sit at integer angstrom (offset from the integer: rms 0.057 A, max 0.116 A),
+#   so one sample per 1 A from 1 to 49 A (hc = 4 A) is assumed and each series is searched at each.
+# Markers found: Fx 45, Fy 48, Fz 49 of 49 each; rows without a value are samples whose marker is hidden by another series or merged with the dashed line (not found).
+# Uncertainty: about +-0.07 nN in force (1.5 px; 1 px = 0.044 nN) and +-0.15 A in x_measured.
+#   'weak match' rows (score 0.30-0.55: marker partly covered by a dash or another marker; open markers kept only if their open
+#   centre is seen and the match lies within 0.2 A of the sample position) are less certain; they are cyan on the overlay
+#   work/fig13b_overlay.png (other markers: green Fx, blue Fy, orange Fz).
+#   'at top frame' rows: the marker touches the top of the plot frame and may be cut off there (value is a lower bound).
+series,x_nominal_A,x_measured_A,force_nN,match_score,flag
+Fx,1,0.95,-0.070,0.79,
+Fx,2,1.92,-0.748,0.68,
+Fx,3,2.95,-0.763,0.87,
+Fx,4,3.97,-0.356,0.87,
+Fx,5,4.96,-0.568,0.78,
+Fx,6,5.95,0.008,0.77,
+Fx,7,,,0.31,not found (weak match more than 0.2 A off the sample position: on a dash)
+Fx,8,7.98,0.697,0.40,weak match (open centre of the marker confirmed)
+Fx,9,8.90,1.021,0.53,weak match (open centre of the marker confirmed)
+Fx,10,9.93,0.794,0.78,
+Fx,11,,,0.31,not found (weak match more than 0.2 A off the sample position: on a dash)
+Fx,12,11.89,0.597,0.61,
+Fx,13,12.92,0.372,0.65,
+Fx,14,13.92,-0.418,0.71,
+Fx,15,14.93,0.954,0.80,
+Fx,16,15.95,0.199,0.67,
+Fx,17,16.85,0.353,0.36,weak match (open centre of the marker confirmed)
+Fx,18,17.92,0.671,0.86,
+Fx,19,18.94,-0.440,0.97,
+Fx,20,19.94,1.195,0.92,
+Fx,21,20.95,-0.774,0.80,
+Fx,22,21.96,-0.261,0.76,
+Fx,23,22.93,0.611,0.79,
+Fx,24,23.85,-0.525,0.49,weak match (open centre of the marker confirmed)
+Fx,25,24.95,0.599,0.71,
+Fx,26,26.19,0.067,0.56,
+Fx,27,26.94,-0.852,0.97,
+Fx,28,27.92,0.029,0.66,
+Fx,29,28.95,-0.409,0.77,
+Fx,30,,,0.31,not found (weak match more than 0.2 A off the sample position: on a dash)
+Fx,31,30.96,0.130,0.61,
+Fx,32,31.96,-0.487,0.75,
+Fx,33,,,0.31,not found (weak match more than 0.2 A off the sample position: on a dash)
+Fx,34,33.98,-1.072,0.40,weak match (open centre of the marker confirmed)
+Fx,35,34.96,-1.328,0.40,weak match (open centre of the marker confirmed)
+Fx,36,35.90,-1.399,0.76,
+Fx,37,36.90,-0.920,0.77,
+Fx,38,37.90,0.175,0.53,weak match (open centre of the marker confirmed)
+Fx,39,38.91,0.407,0.73,
+Fx,40,39.92,-0.407,0.63,
+Fx,41,40.86,0.341,0.63,
+Fx,42,41.91,0.454,0.85,
+Fx,43,42.95,1.253,0.74,
+Fx,44,43.91,0.058,0.74,
+Fx,45,44.89,0.346,0.78,
+Fx,46,45.91,0.186,0.93,
+Fx,47,46.91,-0.358,0.82,
+Fx,48,47.92,0.686,0.85,
+Fx,49,48.92,-0.240,0.77,
+Fy,1,1.02,-0.725,0.84,
+Fy,2,2.04,-1.070,0.76,
+Fy,3,3.02,-1.112,0.68,
+Fy,4,3.99,-1.804,0.71,
+Fy,5,5.01,-1.576,0.78,
+Fy,6,5.98,-0.353,0.68,
+Fy,7,6.97,-0.209,0.69,
+Fy,8,7.95,-0.201,0.85,
+Fy,9,9.02,-1.152,0.80,
+Fy,10,9.97,-1.120,0.65,
+Fy,11,11.01,-1.524,0.64,
+Fy,12,11.97,-1.874,0.64,
+Fy,13,13.00,-2.037,0.72,
+Fy,14,13.99,-0.209,0.94,
+Fy,15,14.99,-1.004,0.69,
+Fy,16,15.99,-2.382,0.95,
+Fy,17,16.99,-0.546,0.72,
+Fy,18,17.97,-0.666,0.71,
+Fy,19,18.95,-1.197,0.64,
+Fy,20,19.93,-0.801,0.68,
+Fy,21,,,-1.00,not found (marker hidden or merged)
+Fy,22,21.94,-0.847,0.88,
+Fy,23,22.94,-0.557,0.93,
+Fy,24,24.00,-0.387,0.71,
+Fy,25,24.99,-0.896,0.60,
+Fy,26,26.01,-1.641,0.92,
+Fy,27,26.96,-2.193,0.77,
+Fy,28,27.96,-1.501,0.88,
+Fy,29,28.98,-1.366,0.78,
+Fy,30,29.98,-0.732,0.79,
+Fy,31,31.01,-1.171,0.77,
+Fy,32,32.00,-1.157,0.70,
+Fy,33,33.02,-0.707,0.69,
+Fy,34,33.98,-0.796,0.66,
+Fy,35,34.93,-1.090,0.61,
+Fy,36,35.91,-0.926,0.80,
+Fy,37,36.96,-1.619,0.90,
+Fy,38,38.03,-0.441,0.75,
+Fy,39,38.98,-0.552,0.72,
+Fy,40,39.94,-0.606,0.70,
+Fy,41,40.95,-0.789,0.73,
+Fy,42,41.95,-0.797,0.88,
+Fy,43,42.92,-1.558,0.73,
+Fy,44,43.93,-1.742,0.78,
+Fy,45,44.88,-1.524,0.74,
+Fy,46,45.94,-2.337,0.90,
+Fy,47,46.92,-1.689,0.71,
+Fy,48,47.90,-1.736,0.89,
+Fy,49,48.93,-1.539,0.93,
+Fz,1,0.99,0.435,0.83,
+Fz,2,1.97,1.129,0.71,
+Fz,3,2.97,0.652,0.89,
+Fz,4,3.97,2.073,0.77,
+Fz,5,4.97,2.001,0.71,
+Fz,6,5.95,1.059,0.88,
+Fz,7,6.98,0.136,0.61,
+Fz,8,7.98,0.506,0.59,
+Fz,9,8.95,0.624,0.69,
+Fz,10,9.96,1.497,0.87,
+Fz,11,10.96,0.873,0.55,
+Fz,12,11.97,1.421,0.66,
+Fz,13,12.97,1.278,0.79,
+Fz,14,13.92,0.522,0.64,
+Fz,15,14.95,0.670,0.81,
+Fz,16,15.97,1.401,0.82,
+Fz,17,16.90,0.643,0.64,
+Fz,18,17.93,0.286,0.62,
+Fz,19,18.94,-0.002,0.67,
+Fz,20,19.95,0.726,0.73,
+Fz,21,20.93,0.824,0.90,
+Fz,22,21.95,0.752,0.88,
+Fz,23,22.95,1.070,0.70,
+Fz,24,23.96,0.089,0.68,
+Fz,25,24.93,-0.151,0.60,
+Fz,26,25.95,0.422,0.60,
+Fz,27,26.91,0.661,0.72,
+Fz,28,27.94,0.988,0.69,
+Fz,29,28.98,0.025,0.71,
+Fz,30,29.94,-0.018,0.67,
+Fz,31,30.90,-0.113,0.73,
+Fz,32,31.95,0.475,0.74,
+Fz,33,32.93,-0.073,0.71,
+Fz,34,33.94,0.504,0.74,
+Fz,35,34.96,0.478,0.87,
+Fz,36,35.96,0.949,0.84,
+Fz,37,36.95,1.251,0.83,
+Fz,38,37.95,-0.099,0.97,
+Fz,39,38.97,1.063,0.72,
+Fz,40,39.96,1.499,0.78,
+Fz,41,40.96,0.697,0.80,
+Fz,42,41.97,0.725,0.67,
+Fz,43,42.95,1.586,0.84,
+Fz,44,43.94,1.477,0.67,
+Fz,45,44.96,0.784,0.83,
+Fz,46,45.94,0.603,0.57,
+Fz,47,46.96,0.954,0.69,
+Fz,48,47.93,1.877,0.67,
+Fz,49,48.91,1.929,0.83,

@@ -1,0 +1,50 @@
+# Ta, Tran & Righi 2023, Langmuir 39, 14396, Figure 2(c) 'Ketone': energy vs displacement of the pulled O atom.
+# Columns: series (legend names of Figure 2(a): C(001) green squares, C(110) red triangles, C(111) blue circles);
+#   displacement_A = x of the marker centre in Angstrom (measured, not snapped to the 0.25 A step grid);
+#   energy_eV = y of the marker centre in eV; energy_eV_unc = estimated uncertainty in eV;
+#   x_px, y_px = marker centre in the embedded image (xref 284); status ok / partly hidden / hidden; note.
+# Provenance: tier 3, digitized from the embedded 300 ppi raster image (no vector data in the PDF) by fig2c_extract.py.
+#   y calibrated on the 11 major ticks -1..9 eV (the 10 eV tick is under an inset; max residual 0.011 eV, 0.0274 eV/px);
+#   x on the 6 major ticks 0..2.5 A (max residual 0.0011 A, 0.00511 A/px).
+#   Marker centre = bbox centre of the colour blob left after an elliptic opening of the closed colour mask;
+#   row offsets (-0.5, -1.0, +0.5 px) from the legend of Figure 2(a) (same plot style).
+# Uncertainty: 2 px for clear markers (0.05 eV); 4-5 px for partly hidden or hidden ones (0.11-0.14 eV).
+#   'hidden': value read from the marker on top or from the series' curve on both sides (straight-line fit).
+# The smooth curves of the figure are interpolations through the markers and are not given.
+# The arrows (first C detachment per the text) point at C(001) x~0.75 (green), C(110) x~0.75 (red), C(111) x~1.25 (blue).
+# Text check: the text gives 1.97, 2.51 and 3.13 eV for C(110), C(001), C(111); the arrowed markers read about
+#   1.96, 2.74 and 3.13 eV here; the C(001) plateau from x=1 to 2.5 reads 2.47-2.52 eV (see README).
+series,displacement_A,energy_eV,energy_eV_unc,x_px,y_px,status,note
+C(001),0.003,0.044,0.11,1219.0,475.5,partly hidden,"covered by the C(110) triangle and/or C(111) circle (centre from the visible square edges, 17x15 px)"
+C(001),0.253,0.318,0.14,1268.0,465.5,partly hidden,"covered by the C(110) triangle and/or C(111) circle; top edge (row 458) and left edge (column 1260) visible, centre from them and the 16 px marker size"
+C(001),0.503,1.277,0.05,1317.0,430.5,ok,
+C(001),0.749,2.756,0.05,1365.0,376.5,ok,
+C(001),1.004,2.496,0.05,1415.0,386.0,ok,
+C(001),1.249,2.523,0.11,1463.0,385.0,partly hidden,"covered by the C(110) triangle and/or C(111) circle (centre from the visible square edges, 17x14 px)"
+C(001),1.497,2.537,0.11,1511.5,384.5,partly hidden,"covered by the C(110) triangle and/or C(111) circle (centre from the visible square edges, 16x15 px)"
+C(001),1.750,2.537,0.11,1561.0,384.5,partly hidden,"covered by the C(110) triangle and/or C(111) circle (centre from the visible square edges, 17x15 px)"
+C(001),1.997,2.468,0.11,1609.5,387.0,partly hidden,"covered by the C(110) triangle and/or C(111) circle (centre from the visible square edges, 16x16 px)"
+C(001),2.250,2.468,0.05,1659.0,387.0,ok,
+C(001),2.495,2.468,0.05,1707.0,387.0,ok,
+C(110),0.000,0.003,0.11,1218.5,477.0,hidden,"under the C(111) circle; the C(110) curve leaves it at its centre, so the circle's centre is given"
+C(110),0.253,0.381,0.11,1268.0,463.2,hidden,under the C(111) circle (curve interpolated over 20 px from 8 columns)
+C(110),0.498,1.482,0.14,1316.0,423.0,partly hidden,"visible blob 11x13 px, typical 13x12"
+C(110),0.743,1.962,0.05,1364.0,405.5,ok,
+C(110),0.991,2.578,0.05,1412.5,383.0,ok,
+C(110),1.252,2.414,0.05,1463.5,389.0,ok,
+C(110),1.499,2.414,0.11,1512.0,389.0,partly hidden,"apex under the C(111) circle; base visible at row 396, centre = base - 7 px as for the unobstructed triangles"
+C(110),1.747,2.427,0.05,1560.5,388.5,ok,
+C(110),1.992,2.701,0.05,1608.5,378.5,ok,
+C(110),2.240,3.263,0.05,1657.0,358.0,ok,
+C(110),2.498,3.030,0.05,1707.5,366.5,ok,
+C(111),0.000,0.003,0.05,1218.5,477.0,ok,
+C(111),0.253,0.126,0.14,1268.0,472.5,partly hidden,"visible blob 17x13 px, typical 17x16"
+C(111),0.501,0.482,0.05,1316.5,459.5,ok,
+C(111),0.749,1.017,0.05,1365.0,440.0,ok,
+C(111),1.001,1.893,0.05,1414.5,408.0,ok,
+C(111),1.252,3.126,0.05,1463.5,363.0,ok,
+C(111),1.505,2.496,0.14,1513.0,386.0,partly hidden,"visible blob 15x12 px, typical 17x16"
+C(111),1.747,3.482,0.05,1560.5,350.0,ok,
+C(111),1.997,4.838,0.05,1609.5,300.5,ok,
+C(111),2.248,6.167,0.05,1658.5,252.0,ok,
+C(111),2.498,4.181,0.05,1707.5,324.5,ok,

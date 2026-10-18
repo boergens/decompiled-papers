@@ -1,0 +1,41 @@
+# Pallotto et al. 2015 eLife 4:e08206, Figure 2C: Resampled Adapted Rand Error versus ECS fraction (%).
+# Columns: kind (fold = one grey open circle, one cross-validation test image; median = red + marker),
+#   group (ECS fraction of the data set, %, from the caption), x_axis (horizontal position in axis units; the
+#   circles are jittered around the group position), y (value).
+# Provenance: tier 3, digitized from the embedded 300-ppi JPEG (elife-08206-v3.pdf p. 5) by ring-template matching
+#   (circles) and red-component centroids (medians); script figures/fig2_extract.py.
+# x axis (linear) fitted on ticks 0.6@654.5px, 6@718px, 11@777px, 24@930.5px; max residual 0.00968 axis units.
+# y axis (linear) fitted on ticks 0@1817px, 0.05@1737.5px, 0.1@1657.5px, 0.15@1578px, 0.2@1498px; max residual 9.41e-05 axis units.
+# Uncertainty: about +-1 px = +-0.00063 y units for isolated circles, +-2 px for overlapping ones.
+# Circles resolved per group (9 expected from the ninefold cross-validation): {'0.6': 6, '5.8': 6, '11.3': 6, '23.9': 6}.
+#   Missing circles are hidden under overlapping circles or under the red median marker.
+# match_score = template correlation (0-1) of each circle.
+kind,group,x_axis,y,match_score
+median,0.6,0.617,0.1087,
+median,5.8,6.027,0.0606,
+median,11.3,11.014,0.0611,
+median,23.9,24.000,0.0742,
+fold,0.6,0.313,0.2013,0.8
+fold,0.6,0.822,0.1543,0.83
+fold,0.6,0.906,0.1192,0.72
+fold,0.6,0.567,0.0991,0.58
+fold,0.6,0.313,0.0853,0.78
+fold,0.6,0.567,0.0747,0.91
+fold,11.3,11.248,0.1229,0.89
+fold,11.3,10.993,0.1004,0.83
+fold,11.3,10.739,0.0841,0.87
+fold,11.3,10.909,0.0703,0.77
+fold,11.3,11.078,0.0546,0.53
+fold,11.3,10.570,0.0502,0.56
+fold,23.9,24.301,0.1211,0.75
+fold,23.9,23.962,0.1123,0.74
+fold,23.9,23.878,0.0947,0.87
+fold,23.9,23.708,0.0809,0.54
+fold,23.9,23.962,0.0709,0.43
+fold,23.9,24.217,0.0552,0.89
+fold,5.8,5.568,0.0991,0.91
+fold,5.8,5.992,0.0872,0.91
+fold,5.8,6.247,0.0753,0.89
+fold,5.8,6.247,0.0439,0.54
+fold,5.8,5.907,0.0433,0.38
+fold,5.8,6.077,0.0358,0.6

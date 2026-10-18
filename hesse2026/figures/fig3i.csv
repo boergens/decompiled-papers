@@ -1,0 +1,38 @@
+# Source: Hesse et al. 2026 bioRxiv 10.64898/2026.10.15.759299v1, Figure 3, PDF page 37; extracted by fig3_extract.py from vector paths (PDF points, origin top-left)
+# Panel i: single-trial decoding accuracy (%) per session (n=10) for Average / State 1 / State 2, conscious (thin solid
+# lines, filled markers) and suppressed (thin dashed lines, open markers); thick lines = mean across sessions.
+# The figure does not link a conscious line to its session's suppressed line: session_k is the k-th thin line in PDF
+# path order within each condition (probably, but not verifiably, the same session order for both conditions).
+# Thin solid lines are 3-vertex stroke paths (exact). Dashed lines are outlined fills; their vertices were recovered
+# from pairs of anti-parallel dash edges (0.14 pt apart for thin, 1 pt for the thick mean line) extrapolated to the
+# category x positions; recovery lists per vertex 'dash' (recovered) or 'gap'. mean_marker_* rows are the centres of
+# the large circles; mean_of_session_values rows are computed here from the session rows as a consistency check.
+# y axis calibrated from ticks 0..100 (max residual 3.4e-04); precision ~0.2 %.
+# Colours: markers grey #808080 (Average), orange #fcae34 (State 1), purple #543379 (State 2); lines black; thin lines alpha 0.5.
+line,condition,recovery,average_pct,state1_pct,state2_pct
+session_1,conscious,dash,34.27,50.35,13.29
+session_2,conscious,dash,40.13,40.13,31.21
+session_3,conscious,dash,38.22,40.76,13.38
+session_4,conscious,dash,31.41,35.26,16.67
+session_5,conscious,dash,41.46,48.78,34.15
+session_6,conscious,dash,39.05,39.05,5.71
+session_7,conscious,dash,51.61,64.51,25.81
+session_8,conscious,dash,37.1,38.01,15.84
+session_9,conscious,dash,35.0,38.0,21.0
+session_10,conscious,dash,46.45,58.71,23.23
+session_1,suppressed,dash+dash+dash,29.37,11.19,37.06
+session_2,suppressed,dash+dash+dash,38.85,19.75,35.03
+session_3,suppressed,dash+dash+dash,24.2,8.28,35.03
+session_4,suppressed,dash+dash+dash,26.92,8.33,33.34
+session_5,suppressed,dash+dash+dash,48.78,43.9,39.02
+session_6,suppressed,dash+dash+dash,18.1,0.95,35.23
+session_7,suppressed,dash+dash+dash,30.65,11.29,43.56
+session_8,suppressed,dash+dash+dash,19.91,6.33,30.32
+session_9,suppressed,dash+dash+dash,27.0,9.0,35.0
+session_10,suppressed,dash+dash+dash,32.26,15.48,47.75
+mean_line,conscious,dash,39.47,45.36,20.03
+mean_line,suppressed,dash+dash+dash,29.6,13.45,37.14
+mean_marker_filled,conscious,marker,39.47,45.36,20.03
+mean_marker_open,suppressed,marker,29.6,13.45,37.13
+mean_of_session_values,conscious,computed,39.47,45.36,20.03
+mean_of_session_values,suppressed,computed,29.6,13.45,37.13

@@ -1,0 +1,10 @@
+# Xu et al. 2017 eLife, Figure 11(j): table printed as part of the figure image (transcribed by the decompiler).
+# Caption: (j) Specimen bias effects are quantified through SNR and contrast. SNR was calculated as (Nm - Nc)/sqrt((Nm + Nc)/2), where Nm and Nc are electron counts of membrane and cytoplasm respectively. Contrast was calculated as (Nm - Nc)/((Nm + Nc)/2).
+# Two-level header in the figure ('InLens' and 'ESB' over Membrane/Cytoplasm/SNR/Contrast) flattened into one header row. Membrane and Cytoplasm are electron counts (per pixel, 2 us sampling, per the text).
+# Decompiler check: every SNR and Contrast value agrees with the caption formulas applied to the Membrane/Cytoplasm counts to the printed precision.
+Bias (V),Specimen I (nA),InLens Membrane,InLens Cytoplasm,InLens SNR,InLens Contrast,ESB Membrane,ESB Cytoplasm,ESB SNR,ESB Contrast
+0,-0.71,25000,22000,19.6,12.8%,180,85,8.3,72%
+200,-0.90,33200,29400,21.5,12.1%,205,105,8.0,65%
+400,-1.83,47500,43000,21.2,9.9%,250,140,7.9,56%
+600,-1.84,5300,4300,14.4,20.8%,280,170,7.3,49%
+800,-1.85,3850,3100,12.7,21.6%,280,170,7.3,49%

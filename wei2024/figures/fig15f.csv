@@ -1,0 +1,305 @@
+# wei2024 Fig. 15f: Fy and sliding distance curve (hc = 20 A, sliding velocities 0.1-2.0 A/ps). Markers of the scatter.
+# Columns: series (sliding velocity, legend name), x = sliding distance (A), y = force along y-direction Fy (nN),
+# match = template-match score (1 = marker template fully covered; other series' ink counts half), flag.
+# Markers: 0.1 A/ps black open squares, 0.5 red open up-triangles, 1.0 orange open down-triangles, 1.5 blue open
+# diamonds, 2.0 magenta open circles (the legend shows only the dashed fit lines).
+# Provenance: tier 3 (digitized) from the embedded 300 ppi JPEG (PDF page 19, xref 264) by figures/fig15f_extract.py;
+# best match within +-3 px of each marker column; marker spacing 0.5 A (0.1, 0.5, 2.0 A/ps), 1 A (1.0), 0.375 A (1.5),
+# the same as in Figs. 15a-e. The scatter shows the same points as the Fy series of Figs. 15a-e (checked: work/fig15f_vs_ae.csv),
+# but here the markers overlap each other and the same-coloured dashed fit curves, so the search is guided: search = 'guided'
+# means the best match within +-10 px (about +-0.5 nN) of the value read in Fig. 15a-e (taken when its score >= 0.45);
+# 'global' = best match anywhere in the column. The values of Figs. 15a-e are the better reading of the same points.
+# Calibration (inward major ticks, linear): x ticks at px [1497.0, 1579.5, 1661.5, 1744.0, 1826.0, 1908.5, 1991.0] = [0, 5, 10, 15, 20, 25, 30], max residual 0.0141; y ticks at px [643.0, 720.0, 796.5, 874.0, 951.0] = [0, -4, -8, -12, -16], max residual 0.0208; 1 px = 0.06075 (x), 0.05195 (y); the frame lines map to 2.02 (top) and -20.0 (bottom).
+# Uncertainty: about +-1 px = +-0.061 A in x and +-0.052 nN in y for clean markers, +-2-4 px for flagged ones.
+# flag: 'other-series ink covers N%' = the marker overlaps markers/lines of other series; 'partly covered'/'hidden' as in fig15a.csv.
+series,x_A,Fy_nN,match,search,flag
+0.1 A/ps,0.485,0.9039,0.972,guided,
+0.1 A/ps,1.001,-2.94,0.972,guided,
+0.1 A/ps,1.487,0.3324,1.0,guided,
+0.1 A/ps,1.913,-1.486,0.583,guided,partly covered
+0.1 A/ps,2.490,-0.7844,0.972,guided,
+0.1 A/ps,3.097,-2.525,0.708,guided,
+0.1 A/ps,3.482,-3.442,0.667,guided,other-series ink covers 25% of the marker area
+0.1 A/ps,3.978,-4.369,0.694,guided,other-series ink covers 31% of the marker area
+0.1 A/ps,4.464,-2.577,0.972,guided,
+0.1 A/ps,5.041,-3.616,0.5,global,partly covered; no marker within +-10 px of the Fig. 15a value (global best match taken)
+0.1 A/ps,5.485,-4.935,0.5,guided,partly covered; other-series ink covers 56% of the marker area
+0.1 A/ps,5.983,-2.862,0.944,guided,
+0.1 A/ps,6.469,-3.849,0.625,guided,
+0.1 A/ps,6.985,-5.122,0.569,guided,partly covered
+0.1 A/ps,7.481,-4.88,0.681,guided,other-series ink covers 33% of the marker area
+0.1 A/ps,8.144,-6.747,0.514,guided,partly covered; other-series ink covers 50% of the marker area
+0.1 A/ps,8.474,-4.395,1.0,guided,
+0.1 A/ps,8.990,-5.148,0.833,guided,
+0.1 A/ps,9.476,-6.291,0.556,guided,partly covered
+0.1 A/ps,9.992,-3.849,0.944,guided,
+0.1 A/ps,10.478,-4.395,1.0,guided,
+0.1 A/ps,10.964,-4.395,0.972,guided,
+0.1 A/ps,11.481,-4.81,1.0,guided,
+0.1 A/ps,11.933,-6.473,0.5,guided,partly covered; other-series ink covers 75% of the marker area
+0.1 A/ps,12.463,-3.858,0.972,guided,
+0.1 A/ps,12.969,-6.265,0.972,guided,
+0.1 A/ps,13.486,-4.966,0.972,guided,
+0.1 A/ps,14.002,-3.979,0.944,guided,
+0.1 A/ps,14.488,-3.979,1.0,guided,
+0.1 A/ps,14.974,-3.564,1.0,guided,
+0.1 A/ps,15.460,-4.81,0.944,guided,
+0.1 A/ps,15.976,-4.395,0.847,guided,
+0.1 A/ps,16.493,-4.655,1.0,guided,
+0.1 A/ps,16.979,-5.018,1.0,guided,
+0.1 A/ps,17.465,-5.953,1.0,guided,
+0.1 A/ps,17.991,-5.815,0.625,guided,
+0.1 A/ps,18.467,-4.499,0.75,guided,other-series ink covers 19% of the marker area
+0.1 A/ps,18.984,-4.732,0.792,guided,
+0.1 A/ps,19.490,-4.88,0.972,guided,
+0.1 A/ps,19.956,-8.239,1.0,guided,
+0.1 A/ps,20.472,-2.94,0.972,guided,
+0.1 A/ps,20.988,-4.447,1.0,guided,
+0.1 A/ps,21.505,-5.226,0.944,guided,
+0.1 A/ps,21.960,-6.421,1.0,guided,
+0.1 A/ps,22.507,-6.473,1.0,guided,
+0.1 A/ps,22.993,-6.005,1.0,guided,
+0.1 A/ps,23.479,-3.2,1.0,guided,
+0.1 A/ps,23.965,-6.94,0.861,guided,
+0.1 A/ps,24.481,-5.382,1.0,guided,
+0.1 A/ps,24.957,-5.027,1.0,guided,
+0.1 A/ps,25.484,-5.849,1.0,guided,
+0.1 A/ps,26.010,-5.416,1.0,guided,
+0.1 A/ps,26.486,-4.447,0.944,guided,
+0.1 A/ps,26.972,-8.031,0.722,guided,
+0.1 A/ps,27.489,-4.525,0.972,guided,
+0.1 A/ps,27.975,-5.356,1.0,guided,
+0.1 A/ps,28.704,-5.278,0.514,guided,partly covered; other-series ink covers 19% of the marker area
+0.1 A/ps,29.007,-4.031,0.611,guided,other-series ink covers 44% of the marker area
+0.1 A/ps,29.493,-3.979,1.0,guided,
+0.1 A/ps,29.979,-4.603,1.0,guided,
+0.5 A/ps,0.455,-0.5247,1.0,guided,
+0.5 A/ps,0.971,-1.408,1.0,guided,
+0.5 A/ps,1.457,-2.758,0.84,guided,
+0.5 A/ps,1.882,-2.707,0.76,guided,other-series ink covers 32% of the marker area
+0.5 A/ps,2.399,-3.797,0.8,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,2.935,-2.689,0.96,guided,
+0.5 A/ps,3.434,-3.283,0.58,guided,partly covered; other-series ink covers 48% of the marker area
+0.5 A/ps,3.948,-4.681,0.76,guided,
+0.5 A/ps,4.555,-4.836,0.76,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,4.950,-4.603,0.86,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,5.406,-4.836,0.88,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,5.952,-5.148,1.0,guided,
+0.5 A/ps,6.499,-5.642,0.8,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,6.985,-5.512,0.86,guided,
+0.5 A/ps,7.471,-5.083,1.0,guided,
+0.5 A/ps,7.957,-5.512,0.84,guided,other-series ink covers 20% of the marker area
+0.5 A/ps,8.322,-6.758,0.6,guided,other-series ink covers 52% of the marker area
+0.5 A/ps,9.051,-5.694,0.82,guided,other-series ink covers 28% of the marker area
+0.5 A/ps,9.464,-5.647,1.0,guided,
+0.5 A/ps,10.023,-8.005,0.86,guided,other-series ink covers 16% of the marker area
+0.5 A/ps,10.387,-6.395,0.9,guided,
+0.5 A/ps,10.995,-7.096,1.0,guided,
+0.5 A/ps,11.390,-6.326,0.74,guided,other-series ink covers 20% of the marker area
+0.5 A/ps,12.058,-6.369,0.96,guided,
+0.5 A/ps,12.453,-6.187,1.0,guided,
+0.5 A/ps,12.969,-5.797,1.0,guided,
+0.5 A/ps,13.437,-5.886,0.8,guided,
+0.5 A/ps,14.032,-6.135,0.72,guided,other-series ink covers 28% of the marker area
+0.5 A/ps,14.473,-7.317,1.0,guided,
+0.5 A/ps,14.974,-4.057,1.0,guided,
+0.5 A/ps,15.490,-7.979,0.8,guided,
+0.5 A/ps,15.966,-4.741,1.0,guided,
+0.5 A/ps,16.462,-6.304,1.0,guided,
+0.5 A/ps,16.948,-7.434,0.68,guided,other-series ink covers 32% of the marker area
+0.5 A/ps,17.434,-7.642,0.82,guided,other-series ink covers 20% of the marker area
+0.5 A/ps,17.981,-5.018,0.68,guided,
+0.5 A/ps,18.467,-4.252,1.0,guided,
+0.5 A/ps,18.984,-4.473,1.0,guided,
+0.5 A/ps,19.470,-5.979,1.0,guided,
+0.5 A/ps,19.976,-6.984,1.0,guided,
+0.5 A/ps,20.472,-6.187,1.0,guided,
+0.5 A/ps,20.988,-7.122,1.0,guided,
+0.5 A/ps,21.493,-6.374,1.0,guided,
+0.5 A/ps,21.960,-8.706,0.74,guided,other-series ink covers 20% of the marker area
+0.5 A/ps,22.477,-7.668,0.74,guided,other-series ink covers 28% of the marker area
+0.5 A/ps,22.963,-8.681,0.86,guided,
+0.5 A/ps,23.418,-8.888,0.76,guided,other-series ink covers 28% of the marker area
+0.5 A/ps,23.955,-8.04,1.0,guided,
+0.5 A/ps,24.299,-7.148,0.68,guided,other-series ink covers 20% of the marker area
+0.5 A/ps,24.967,-8.701,1.0,guided,
+0.5 A/ps,25.423,-5.408,0.88,guided,
+0.5 A/ps,25.970,-8.577,1.0,guided,
+0.5 A/ps,26.456,-7.564,1.0,guided,
+0.5 A/ps,26.942,-10.81,1.0,guided,
+0.5 A/ps,27.367,-7.122,0.68,global,no marker within +-10 px of the Fig. 15b value (global best match taken)
+0.5 A/ps,28.025,-7.988,0.6,guided,other-series ink covers 76% of the marker area
+0.5 A/ps,28.491,-8.966,0.8,guided,
+0.5 A/ps,28.957,-5.685,1.0,guided,
+0.5 A/ps,29.463,-7.265,1.0,guided,
+0.5 A/ps,29.888,-7.174,0.76,guided,
+1.0 A/ps,0.941,-1.72,1.0,guided,
+1.0 A/ps,1.973,-3.434,0.98,guided,
+1.0 A/ps,2.915,-2.187,0.9,guided,
+1.0 A/ps,3.948,-2.732,1.0,guided,
+1.0 A/ps,4.950,-4.135,1.0,guided,
+1.0 A/ps,5.922,-7.07,0.96,guided,
+1.0 A/ps,6.925,-5.356,0.64,guided,other-series ink covers 20% of the marker area
+1.0 A/ps,7.897,-6.395,0.78,guided,other-series ink covers 28% of the marker area
+1.0 A/ps,8.990,-5.694,0.8,guided,other-series ink covers 24% of the marker area
+1.0 A/ps,9.962,-6.031,0.72,guided,other-series ink covers 20% of the marker area
+1.0 A/ps,10.964,-7.122,0.6,guided,other-series ink covers 40% of the marker area
+1.0 A/ps,11.906,-7.849,0.72,guided,other-series ink covers 40% of the marker area
+1.0 A/ps,12.939,-5.382,1.0,guided,
+1.0 A/ps,13.972,-7.538,1.0,guided,
+1.0 A/ps,14.944,-6.395,1.0,guided,
+1.0 A/ps,15.946,-6.603,0.96,guided,
+1.0 A/ps,16.948,-7.642,1.0,guided,
+1.0 A/ps,17.920,-4.525,1.0,guided,
+1.0 A/ps,18.953,-6.732,0.98,guided,
+1.0 A/ps,19.945,-6.516,1.0,guided,
+1.0 A/ps,20.958,-6.291,1.0,guided,
+1.0 A/ps,22.173,-7.745,0.66,guided,
+1.0 A/ps,23.084,-9.044,0.74,guided,other-series ink covers 44% of the marker area
+1.0 A/ps,24.016,-9.541,0.5,guided,partly covered; other-series ink covers 92% of the marker area
+1.0 A/ps,24.937,-6.031,1.0,guided,
+1.0 A/ps,26.031,-7.875,0.76,guided,other-series ink covers 40% of the marker area
+1.0 A/ps,26.942,-10.24,0.96,guided,
+1.0 A/ps,27.944,-7.953,0.96,guided,
+1.0 A/ps,28.916,-9.356,0.98,guided,
+1.0 A/ps,29.949,-6.81,1.0,guided,
+1.5 A/ps,0.313,-3.39,0.688,guided,other-series ink covers 22% of the marker area
+1.5 A/ps,0.698,-2.213,1.0,guided,
+1.5 A/ps,0.961,-2.334,0.75,guided,
+1.5 A/ps,1.639,-3.096,0.725,guided,other-series ink covers 35% of the marker area
+1.5 A/ps,1.852,-1.174,0.613,guided,
+1.5 A/ps,2.186,-2.836,0.75,guided,other-series ink covers 20% of the marker area
+1.5 A/ps,2.581,-3.564,1.0,guided,
+1.5 A/ps,2.945,-5.486,0.762,guided,
+1.5 A/ps,3.310,-2.031,0.925,guided,
+1.5 A/ps,3.735,-4.499,1.0,guided,
+1.5 A/ps,4.069,-3.148,0.775,guided,
+1.5 A/ps,4.484,-6.386,1.0,guided,
+1.5 A/ps,4.829,-6.317,1.0,guided,
+1.5 A/ps,5.223,-5.278,1.0,guided,
+1.5 A/ps,5.588,-4.395,0.975,guided,
+1.5 A/ps,5.983,-6.603,0.95,guided,
+1.5 A/ps,6.347,-4.135,0.613,guided,other-series ink covers 22% of the marker area
+1.5 A/ps,6.712,-4.681,0.75,guided,other-series ink covers 15% of the marker area
+1.5 A/ps,7.076,-5.849,1.0,guided,
+1.5 A/ps,7.471,-8.057,0.9,guided,
+1.5 A/ps,7.836,-8.966,0.975,guided,
+1.5 A/ps,8.231,-4.655,0.712,guided,other-series ink covers 28% of the marker area
+1.5 A/ps,8.595,-6.681,1.0,guided,
+1.5 A/ps,8.960,-7.927,1.0,guided,
+1.5 A/ps,9.324,-8.187,1.0,guided,
+1.5 A/ps,9.719,-8.603,1.0,guided,
+1.5 A/ps,10.053,-5.642,1.0,guided,
+1.5 A/ps,10.478,-8.966,1.0,guided,
+1.5 A/ps,10.843,-6.421,0.675,guided,other-series ink covers 43% of the marker area
+1.5 A/ps,11.207,-7.875,0.788,guided,
+1.5 A/ps,11.572,-6.213,0.762,guided,
+1.5 A/ps,11.967,-5.564,0.9,guided,
+1.5 A/ps,12.331,-11.82,0.975,guided,
+1.5 A/ps,12.726,-8.187,0.8,guided,
+1.5 A/ps,13.091,-4.135,1.0,guided,
+1.5 A/ps,13.455,-7.564,1.0,guided,
+1.5 A/ps,13.820,-5.979,0.975,guided,
+1.5 A/ps,14.215,-6.655,0.5,guided,partly covered; other-series ink covers 20% of the marker area
+1.5 A/ps,14.609,-9.33,0.975,guided,
+1.5 A/ps,14.944,-8.395,0.913,guided,
+1.5 A/ps,15.419,-8.152,0.663,guided,other-series ink covers 38% of the marker area
+1.5 A/ps,15.703,-7.512,1.0,guided,
+1.5 A/ps,16.098,-5.797,1.0,guided,
+1.5 A/ps,16.493,-10.16,1.0,guided,
+1.5 A/ps,16.827,-10.01,1.0,guided,
+1.5 A/ps,17.222,-9.538,0.975,guided,
+1.5 A/ps,17.556,-7.356,0.712,guided,other-series ink covers 35% of the marker area
+1.5 A/ps,17.951,-10.06,1.0,guided,
+1.5 A/ps,18.315,-6.161,0.712,guided,other-series ink covers 35% of the marker area
+1.5 A/ps,18.741,-7.668,0.962,guided,
+1.5 A/ps,19.075,-9.512,0.925,guided,
+1.5 A/ps,19.470,-14.06,1.0,guided,
+1.5 A/ps,19.834,-12.91,1.0,guided,
+1.5 A/ps,20.199,-10.94,0.675,guided,other-series ink covers 25% of the marker area
+1.5 A/ps,20.563,-9.694,0.575,guided,partly covered
+1.5 A/ps,20.968,-10.61,0.975,guided,
+1.5 A/ps,21.333,-10.51,0.975,guided,
+1.5 A/ps,21.717,-8.031,1.0,guided,
+1.5 A/ps,22.325,-7.901,0.688,guided,other-series ink covers 20% of the marker area
+1.5 A/ps,22.446,-7.979,1.0,guided,
+1.5 A/ps,22.811,-11.41,0.613,guided,other-series ink covers 43% of the marker area
+1.5 A/ps,23.206,-9.434,1.0,guided,
+1.5 A/ps,23.601,-5.434,0.95,guided,
+1.5 A/ps,23.965,-9.564,1.0,guided,
+1.5 A/ps,24.330,-7.512,0.7,guided,other-series ink covers 22% of the marker area
+1.5 A/ps,24.755,-9.538,1.0,guided,
+1.5 A/ps,25.119,-7.823,0.7,guided,other-series ink covers 25% of the marker area
+1.5 A/ps,25.453,-11.23,0.9,guided,
+1.5 A/ps,26.031,-8.005,0.65,guided,other-series ink covers 35% of the marker area
+1.5 A/ps,26.213,-8.135,1.0,guided,
+1.5 A/ps,26.598,-8.516,1.0,guided,
+1.5 A/ps,26.922,-8.429,0.975,guided,
+1.5 A/ps,27.306,-9.148,0.675,guided,other-series ink covers 32% of the marker area
+1.5 A/ps,27.732,-9.953,1.0,guided,
+1.5 A/ps,28.048,-9.777,1.0,guided,
+1.5 A/ps,28.461,-10.52,1.0,guided,
+1.5 A/ps,28.825,-8.447,1.0,guided,
+1.5 A/ps,29.210,-9.624,0.95,guided,
+1.5 A/ps,29.615,-10.16,0.95,guided,
+1.5 A/ps,29.979,-12.65,1.0,guided,
+2.0 A/ps,0.424,-4.784,1.0,guided,
+2.0 A/ps,0.910,-3.538,1.0,guided,
+2.0 A/ps,1.437,-3.139,0.959,guided,
+2.0 A/ps,1.943,-4.395,1.0,guided,
+2.0 A/ps,2.429,-1.564,1.0,guided,
+2.0 A/ps,2.915,-5.771,1.0,guided,
+2.0 A/ps,3.431,-3.122,1.0,guided,
+2.0 A/ps,3.948,-6.083,1.0,guided,
+2.0 A/ps,4.434,-5.434,1.0,guided,
+2.0 A/ps,4.920,-4.888,0.77,guided,other-series ink covers 19% of the marker area
+2.0 A/ps,5.436,-7.226,1.0,guided,
+2.0 A/ps,5.952,-7.434,1.0,guided,
+2.0 A/ps,6.469,-4.836,0.959,guided,
+2.0 A/ps,6.925,-9.148,1.0,guided,
+2.0 A/ps,7.593,-6.629,0.865,guided,
+2.0 A/ps,7.957,-7.486,1.0,guided,
+2.0 A/ps,8.443,-7.849,1.0,guided,
+2.0 A/ps,8.929,-7.226,1.0,guided,
+2.0 A/ps,9.415,-9.096,1.0,guided,
+2.0 A/ps,9.932,-7.745,0.973,guided,
+2.0 A/ps,10.418,-7.538,0.986,guided,
+2.0 A/ps,10.934,-8.265,1.0,guided,
+2.0 A/ps,11.570,-6.527,0.635,guided,other-series ink covers 46% of the marker area
+2.0 A/ps,11.947,-6.776,0.757,guided,other-series ink covers 35% of the marker area
+2.0 A/ps,12.433,-7.572,0.946,guided,
+2.0 A/ps,12.939,-6.81,0.784,guided,other-series ink covers 27% of the marker area
+2.0 A/ps,13.455,-6.914,0.811,guided,other-series ink covers 27% of the marker area
+2.0 A/ps,13.911,-8.681,1.0,guided,
+2.0 A/ps,14.442,-8.005,0.986,guided,
+2.0 A/ps,14.944,-8.94,1.0,guided,
+2.0 A/ps,15.430,-10.47,0.973,guided,
+2.0 A/ps,15.916,-7.797,0.973,guided,
+2.0 A/ps,16.432,-6.862,0.568,guided,partly covered; other-series ink covers 16% of the marker area
+2.0 A/ps,16.948,-7.252,0.77,guided,other-series ink covers 24% of the marker area
+2.0 A/ps,17.404,-6.914,0.716,guided,
+2.0 A/ps,17.951,-5.512,0.973,guided,
+2.0 A/ps,18.467,-6.187,1.0,guided,
+2.0 A/ps,18.953,-7.278,0.959,guided,
+2.0 A/ps,19.439,-9.979,1.0,guided,
+2.0 A/ps,19.956,-9.096,0.757,guided,other-series ink covers 16% of the marker area
+2.0 A/ps,20.442,-10.84,0.946,guided,
+2.0 A/ps,20.958,-9.616,1.0,guided,
+2.0 A/ps,21.444,-8.525,1.0,guided,
+2.0 A/ps,21.930,-9.668,1.0,guided,
+2.0 A/ps,22.436,-8.403,0.973,guided,
+2.0 A/ps,22.932,-11.46,0.919,guided,
+2.0 A/ps,23.449,-13.25,1.0,guided,
+2.0 A/ps,23.935,-7.382,1.0,guided,
+2.0 A/ps,24.451,-7.304,0.905,guided,
+2.0 A/ps,24.927,-8.23,0.973,guided,
+2.0 A/ps,25.453,-9.901,1.0,guided,
+2.0 A/ps,26.000,-7.797,0.703,guided,other-series ink covers 57% of the marker area
+2.0 A/ps,26.425,-10.39,1.0,guided,
+2.0 A/ps,26.942,-12.94,0.973,guided,
+2.0 A/ps,27.458,-14.84,0.973,guided,
+2.0 A/ps,28.066,-9.2,0.865,guided,
+2.0 A/ps,28.450,-5.321,0.595,guided,partly covered
+2.0 A/ps,28.947,-4.161,1.0,guided,
+2.0 A/ps,29.463,-8.213,1.0,guided,
+2.0 A/ps,29.949,-9.408,1.0,guided,

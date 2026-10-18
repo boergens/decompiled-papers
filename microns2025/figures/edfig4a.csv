@@ -1,0 +1,18 @@
+# Extended Data Fig. 4a (p. 27 of microns2025.pdf): table panel 'The number of matched neuronal EM nuclei by session/ scan'.
+# The table is drawn as outlined glyphs (no text layer); transcribed by the decompiler from a 400 dpi render.
+# Columns as printed: session, scan idx, # matched. (Sum of # matched = 18361.)
+session,scan idx,# matched
+4,7,1322
+5,6,1359
+5,7,1348
+6,2,1354
+6,4,1517
+6,6,1384
+6,7,1493
+7,3,1094
+7,4,1529
+7,5,892
+8,5,1537
+9,3,1558
+9,4,1231
+9,6,743

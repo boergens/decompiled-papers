@@ -1,0 +1,476 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\sourcefile{source/fuk2019.pdf}
+\decompnote{Publisher version of record (MDPI \emph{Polymers} typeset PDF, 15 pages, from the PMC Open Access bucket). Running headers (``Polymers 2019, 11, 975'' and ``n of 15''), the MDPI logo and the ``check for updates'' button are left out; the page-1 footer with the journal and DOI is given once after the dates. Each figure is a raster image; figure descriptions and data files are the decompiler's (marked as such).}
+
+\pdfpage{1}
+\noindent\emph{polymers}\par
+\noindent\emph{Article}
+
+\section*{Molecular Dynamics Simulation and Experimental Studies on the Thermomechanical Properties of Epoxy Resin with Different Anhydride Curing Agents}
+
+\noindent Kexin Fu~\textsuperscript{1}, Qing Xie~\textsuperscript{1,*}, Fangcheng LÜ~\textsuperscript{1}, Qijun Duan~\textsuperscript{1}, Xinjie Wang~\textsuperscript{2}, Quansheng Zhu~\textsuperscript{3} and Zhengyong Huang~\textsuperscript{4}
+\decompnote{An ORCID icon follows the name Kexin Fu.}
+
+{\small
+\begin{hangpars}
+\textsuperscript{1}\ State Key Laboratory of Alternate Electrical Power System with Renewable Energy Sources, North China Electric Power University, Baoding 071000, China; fkx\_ncepu@foxmail.com (K.F.); 13582251628@126.com (F.L.); duan\_ncepu@163.com (Q.D.)
+
+\textsuperscript{2}\ Department of English, North China Electric Power University, Baoding 071000, China; July2010@126.com
+
+\textsuperscript{3}\ State Grid Henan Electric Power Company, Zhengzhou 450052, China; zhuquansheng@ha.sgcc.com.cn
+
+\textsuperscript{4}\ State Key Laboratory of Power Transmission Equipment \& System Security and New Technology, Chongqing University, Chongqing 400044, China; huangzhengyong@cqu.edu.cn
+
+*\ Correspondence: xq\_ncepu@126.com; Tel.: +86-0312-7522-291
+\end{hangpars}}
+
+\noindent Received: 23 April 2019; Accepted: 27 May 2019; Published: 3 June 2019
+
+\noindent\emph{Polymers} \textbf{2019}, \emph{11}, 975; doi:10.3390/polym11060975\quad www.mdpi.com/journal/polymers
+\decompnote{The line above is the footer of p.\,1, placed here.}
+
+\begin{quote}
+\textbf{Abstract:} An investigation of the relationship between the microstructure parameters and thermomechanical properties of epoxy resin can provide a scientific basis for the optimization of epoxy systems. In this paper, the thermomechanical properties of diglycidyl ether of bisphenol A (DGEBA)/methyl tetrahydrophthalic anhydride (MTHPA) and DGEBA/nadic anhydride (NA) were calculated and tested by the method of molecular dynamics (MD) simulation combined with experimental verification. The effects of anhydride curing agents on the thermomechanical properties of epoxy resin were investigated. The results of the simulation and experiment showed that the thermomechanical parameters (glass transition temperature (\emph{T}\textsubscript{g}) and Young’s modulus) of the DGEBA/NA system were higher than those of the DGEBA/MTHPA system. The simulation results had a good agreement with the experimental data, which verified the accuracy of the crosslinking model of epoxy resin cured with anhydride curing agents. The microstructure parameters of the anhydride-epoxy system were analyzed by MD simulation, including bond-length distribution, synergy rotational energy barrier, cohesive energy density (CED) and fraction free volume (FFV). The results indicated that the bond-length distribution of the MTHPA and NA was the same except for C–C bonds. Compared with the DGEBA/MTHPA system, the DGEBA/NA system had a higher synergy rotational energy barrier and CED, and lower FFV. It can be seen that the slight change of curing agent structure has a significant effect on the synergy rotational energy barrier, CED and FFV, thus affecting the \emph{T}\textsubscript{g} and modulus of the system.
+
+\textbf{Keywords:} epoxy resin; anhydride curing agents; molecular dynamics simulation; thermomechanical properties; structure-property relationship
+\end{quote}
+
+\section*{1. Introduction}
+
+Diglycidyl ether of bisphenol A (DGEBA) reacts with an anhydride curing agent to form a three-dimensional crosslinked network structure, which has the advantages of excellent insulation performance, superior mechanical properties, easy processing and low cost. It is widely used in high voltage insulation systems [1–5]. Composites prepared by filling modification are usually used to improve the thermomechanical properties of epoxy resins [6–10]. However, filling of a large number of fillers will lead to decreased insulation properties [11]. If epoxy resins with outstanding \pdfpage{2}thermomechanical performance can be prepared, the loading of filler will reduce dramatically, which lays the foundation to obtain epoxy resin composites with excellent comprehensive properties. On the premise of ensuring high insulation performance of epoxy resin, how to improve thermomechanical properties is a great challenge and key technology in the field of electrical materials.
+
+Epoxy resin performance depends on the molecular structure of the crosslinked network [12–14]. The molecular structure of the crosslinked network can be achieved by changing the crosslinking density [15,16] and molecular structure of curing agent [13,14,17–19]. Epoxy polymers synthesized with different curing agents have different thermal and mechanical properties [14,17,19,20]. There are many kinds of epoxy resins and curing agents, but screening high performance epoxy resins by experiments is time-consuming, expensive and has low efficiency, plus it is difficult to analyze the relationships between molecular structure and macroscopic properties of epoxy resin networks [3,13,21]. Molecular dynamics (MD) simulations combined with experimental research methods have the advantages of shortening the development cycle and saving costs in predicting the properties of thermosetting epoxy resin materials. Meanwhile, a new feasible method has been provided to explore the relationship between the structure and properties of epoxy resins [14,21].
+
+In recent years, MD simulation technology has received much attention from researchers. Researchers have used MD simulation technology to conduct much research on the performance prediction and theoretical exploration of thermosetting epoxy resins. Research on the thermomechanical properties of epoxy resins is mainly focused on the crosslinked network structures formed by epoxy resins cured with amine curing agents [1,2,13,14,17,18,20,22–25]. Zhang et al. [18] calculated the theoretical modulus of the DETDA/TDE85 and MPD/TDE85 epoxy matrix through MD simulation. The flexibility and fluidity of molecular chains and the fraction free volume (FFV) of epoxy resins were analyzed in detail. It was revealed that not only was the stiffness of molecules an influential factor on the modulus of crosslinked epoxy resin systems, but also intermolecular forces and molecular chain packing structures. Zhang et al. [22] investigated the glass transition temperature (\emph{T}\textsubscript{g}) and modulus of DDM/DGEBA and DDS/DGEBA epoxy resin with the help of MD simulation combined with experimental verification. The results showed that the flexibility of curing-agent molecules directly affects the properties of materials. The thermal and mechanical properties of DGEBA/TETA and DGEBA/DETDA epoxy resin systems have also been studied by F. Jeyranpour et al. [1]. Yang et al. [13] conducted MD simulation to investigate the relationship between microstructure and macro-properties of DDM/TDE85 and DDS/TDE85. By analyzing conformational graphs and cohesive energy density (CED), the effects of a slight modification of amine structure on \emph{T}\textsubscript{g} were revealed. However, most simulation studies rarely involve the anhydride-epoxy systems widely used in electrical insulating materials; specifically, there are no reports on the effects of different anhydride curing agents on the thermomechanical properties of their epoxy-cured products, or that analyze the relationship between microstructures and properties.
+
+In this paper, we calculated the mechanical and thermal properties of DGEBA/methyl tetrahydrophthalic anhydride (MTHPA) and DGEBA/ nadic anhydride (NA) epoxy resins with a crosslink density of 89\% using MD simulation. The samples of DGEBA/MTHPA and DGEBA/NA epoxy resins were prepared and their thermomechanical performances were measured. We investigated the effects of anhydride curing agents with different molecular structures on the thermomechanical properties of epoxy resins. The relationship between molecular structure and properties of epoxy resin networks was studied by analyzing bond-length distribution, synergy rotational energy barrier, CED and FFV.
+
+\section*{2. Methodology}
+
+\subsection*{\emph{2.1. Simulation}}
+
+The models of DGEBA/MTHPA and DGEBA/NA crosslinked networks were constructed to investigate the effect of different anhydride curing agents on the thermomechanical performances of epoxy resins, and to analyze the relationship between molecular structure and properties. The models in this paper were built using Materials Studio 7.0 developed by Accelrys (San Diego, CA, USA).
+
+\pdfpage{3}
+\subsubsection*{2.1.1. Crosslinking Mechanism of Epoxy Resin and Anhydride}
+
+The commonly accepted epoxy-anhydride reaction mechanism suggests that the reaction is an alternate ring-opening polymerization of anhydrides and epoxies [26]. Researches have shown that at high temperatures, in the presence of catalysts or with an excess of epoxy, homopolymerization of epoxy groups also occurs [19,27,28]. In this paper, the curing temperature was below 473.15 K and the DGEBA was not excessive; therefore, the curing reaction mechanism of epoxy-anhydride did not include homopolymerization. The curing reaction mechanism of epoxy-anhydride is shown in Figure 1. Without an accelerating agent, the main reactions between anhydride and epoxy resin were as follows: (1) micro-water opened the epoxy group to form a hydroxyl group, (2) hydroxyl and anhydride group produced monoester, (3) carboxyl and epoxy group formed diesters and (4) etherification of hydroxyl and epoxy groups was conducted [5,26]. Though the above main reactions, the epoxy resin 3D crosslinked network was finally formed.
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Figure 1.} Curing reaction mechanism. (\textbf{a}) Micro-water opens the epoxy group to form a hydroxyl group; (\textbf{b}) hydroxyl and anhydride group produces monoester; (\textbf{c}) carboxyl and epoxy group forms diesters; (\textbf{d}) hydroxyl and epoxy groups etherify.
+\alttext{Figure 1 (middle of p.\,3): four reaction schemes drawn as condensed structural formulas in black, each with a bold panel letter below it. R\textsubscript{x} and R\textsubscript{y} are unspecified substituents. (a) An epoxide written CH\textsubscript{2}–CH–R\textsubscript{x} with an O bridging CH\textsubscript{2} and CH (three-membered ring), an arrow labelled H\textsubscript{2}O above it, product CH\textsubscript{3}–CH(OH)–R\textsubscript{x} (written CH\textsubscript{3}–CH–R\textsubscript{x} with OH below the CH). As SMILES with R\textsubscript{x} as [*]: reactant C1OC1[*], product CC(O)[*]. (b) CH\textsubscript{3}–CH(OH)–R\textsubscript{x} plus a cyclic anhydride drawn as a four-membered ring O=C–O–C(=O) closed through R\textsubscript{y} (O=C, ring O, C=O, with R\textsubscript{y} below), arrow, product: CH\textsubscript{3}–CH–R\textsubscript{x} whose CH carries an O that is bonded to a C(=O); that carbonyl carbon is bonded to R\textsubscript{y}, which is bonded to a second C(=O)OH (drawn with OH above and =O to the right): a monoester with a free carboxyl group. (c) That monoester plus the epoxide CH\textsubscript{2}–CH–R\textsubscript{x} (O-bridged), arrow, product: the same monoester whose carboxyl O is now bonded to CH\textsubscript{2}–CH(OH)–R\textsubscript{x}, i.e. a diester O=C(–O–CH(CH\textsubscript{3})R\textsubscript{x})–R\textsubscript{y}–C(=O)–O–CH\textsubscript{2}–CH(OH)–R\textsubscript{x}. (d) The diester of (c) plus an epoxide drawn as CH–CH–R\textsubscript{x} with an O bridging the two CH (left CH written without a second H), arrow, product: the diester whose CH(OH) hydroxyl O is now bonded to CH\textsubscript{2}–CH(OH)–R\textsubscript{x}: …–O–CH\textsubscript{2}–CH(R\textsubscript{x})–O–CH\textsubscript{2}–CH(OH)–R\textsubscript{x} (an ether). Reaction arrows are plain single-headed arrows; no conditions other than H\textsubscript{2}O in (a).}
+
+\subsubsection*{2.1.2. Establishment of Models}
+
+The modeling process is shown in Figure 2, and the details are as follows:
+
+(1) The molecular models of monomer (DGEBA, MTHPA, NA) and primary crosslinking structure (DGEBA-MTHPA and DGEBA-NA) were constructed, respectively. Their molecular structures and molecular formulas are shown in Figure 2a,f. Considering the actual average degree of polymerization (PD) of DGEBA in the experimental study, PD was between 0.1 and 0.2 [5]. Therefore, when building the DGEBA monomer model, the PD was set to zero.
+
+(2) The 3D amorphous models of DGEBA/MTHPA and DGEBA/NA were constructed using the Amorphous Cell Tools, as shown in Figure 2d. The research results of [29] indicate the cell size had no large effect on the calculated properties, while [3,30] investigated the thermomechanical properties of epoxy resin using the small system (the amorphous cells containing 4, 8, 12 and 16 DGEBA). Meanwhile, to verify the accuracy of the model, the DGEBA/MTHPA system containing 40 DGEBA, 90 MTHPA and 10 DGEBA-MTHPA was constructed [31]. The \emph{T}\textsubscript{g} of this system was 400.46 K at a crosslinking density of 89\%. The result was consistent with the result of the small system. Therefore, to reduce the \pdfpage{4}computational requirements, the epoxy resin system amorphous models were constructed using the Calculation option in Amorphous Cell Tools. The initial parameters of each epoxy resin model can be seen in Table 1. Ten amorphous models were constructed for each system. The molar ratio of the epoxy group to the anhydride group was 1:1 for each model with an initial density of 0.6 g/cm\textsuperscript{3}.
+
+\begin{center}
+\noindent\textbf{Table 1.} Initial parameters of DGEBA/MTHPA and DGEBA/NA epoxy resin models.
+
+\smallskip
+\small
+\begin{tabular}{lccccccccc}
+\toprule
+\textbf{Structure Models} & \multicolumn{3}{c}{\textbf{Molecular Number of}} & \multicolumn{2}{c}{\textbf{Amorphous Models}} & \multicolumn{2}{c}{\textbf{Crosslinked Models}} & \textbf{Volumetric Shrinkage} \\
+ & & & & \textbf{Volume} & \textbf{Density} & \textbf{Volume} & \textbf{Density} & \\
+ & \textbf{DGEBA} & \textbf{MTHPA} & \textbf{DGEBA-MTHPA/NA} & \textbf{Å\textsuperscript{3}} & \textbf{g/cm\textsuperscript{3}} & \textbf{Å\textsuperscript{3}} & \textbf{g/cm\textsuperscript{3}} & \textbf{\%} \\
+\midrule
+DGEBA/MTHPA & 8 & 18 & 2 & 9782.613 & 1.143 & 9693.979 & 1.153 & 0.91\% \\
+DGEBA/NA & 8 & 18 & 2 & 9387.993 & 1.184 & 9224.818 & 1.205 & 1.74\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 1 as printed: the column for the curing-agent count is headed ``MTHPA'' for both rows (also for DGEBA/NA); the head ``DGEBA-MTHPA/NA'' is broken over two lines in the PDF (``DGEBA-'' / ``MTHPA/NA''). Also in tables/table1.csv.}
+
+(3) After geometric structure optimization, the amorphous models with lowest energy were selected for further simulation. In order to eliminate the stress generated in the process of modeling and make the model density conform to the actual situation, MD simulation was subsequently conducted in constant volume and temperature (NVT) ensemble for 100 ps at 300 K. Afterwards, the model was equilibrated in constant pressure and temperature (NPT) ensemble for 200 ps at 1 atm. In MD simulation, the time step was 1 fs, the force field COMPASS was selected and the Charges, Electrostatic and van der Waals were set as Forcefield assigned, Ewald and Atom based, respectively. The Andersen and Berendsen were chosen to control temperature and pressure, respectively.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Figure 2.} Establishment of molecular models. (\textbf{a}) Molecular structure of DGEBA, MTHPA, NA, DGEBA-MTHPA and DGEBA-NA; (\textbf{b}) flow diagram of construction; (\textbf{c}) flow chart of crosslinking reaction program; (\textbf{d}) amorphous model, (\textbf{e}) crosslink model; (\textbf{f}) molecular formulas of DGEBA, MTHPA, NA, DGEBA-MTHPA and DGEBA-NA.
+\alttext{Figure 2 (lower half of p.\,4): a composite of six panels in boxes with lilac borders. (a) Upper left: ball-and-stick renderings (carbon grey, hydrogen white, oxygen red) of five molecules. Top row: DGEBA (an elongated molecule with two benzene rings joined by a central carbon carrying two methyls, an ether O and an epoxide ring at each end), MTHPA (a six-membered ring with a methyl, fused to a five-membered anhydride ring with two C=O), NA (a bridged bicyclic ring fused to the anhydride ring); labels ``DGEBA'', ``MTHPA'', ``NA'' in a pale orange bar below. Second row: DGEBA-MTHPA and DGEBA-NA (the DGEBA chain with the anhydride-derived ring group attached at one end), labelled in a second pale orange bar. (b) Centre column: flow diagram, top to bottom: ``Start'' (rounded box) → ``Construct monomer structure'' (pale orange box) → ``Geometry optimization'' → ``Construct Amorphous model'' (pale blue box) → ``Construct Crosslink model'' (pale green box) → ``MD simulation'' → ``Finish'' (rounded box). Double-headed block arrows connect the monomer box to panel (a) (pale orange), the amorphous box to panel (d) (pale blue), and the crosslink box to panel (e) (pale green, left) and to panel (c) (pale green, right). (c) Right column: flow chart captioned in a pale green bar ``Flow chart of cross-linking reaction procedure''. Steps: ``Start'' → parallelogram ``Set \emph{TCD}, \emph{T}, \emph{R}\textsubscript{n} and \emph{R}\textsubscript{max}'' → diamond ``\emph{R}\textsubscript{n} < \emph{R}\textsubscript{max} ?''; ``No'' goes right and down to ``Finish''; ``Yes'' goes down to diamond ``Are there reaction atoms in \emph{R}\textsubscript{n} ?''; its ``No'' goes left to box ``\emph{R}\textsubscript{n}=\emph{R}\textsubscript{n}+0.5'', which returns up to the \emph{R}\textsubscript{n} < \emph{R}\textsubscript{max} diamond; its ``Yes'' goes down to ``NPT MD simulation'' → ``Crosslink density statistics'' → diamond ``Reached the \emph{TCD} ?''; ``No'' goes left and up into the \emph{R}\textsubscript{n}=\emph{R}\textsubscript{n}+0.5 box; ``Yes'' goes down to ``Finish''. (d) Lower left: a square periodic cell drawn as a wire model (grey lines with red O segments) inside a blue dotted frame, label ``Amorphous model'' in a pale blue bar. (e) Next to it: the same kind of cell with some atoms drawn as grey and red balls (reacted groups), label ``Crosslink model'' in a pale green bar. (f) Bottom strip: skeletal/condensed formulas with O atoms in red: DGEBA, CH\textsubscript{2}(–O–)CH–CH\textsubscript{2}–O–C\textsubscript{6}H\textsubscript{4}–C(CH\textsubscript{3})\textsubscript{2}–C\textsubscript{6}H\textsubscript{4}–O–CH\textsubscript{2}–CH(–O–)CH\textsubscript{2} (SMILES C1OC1COc1ccc(cc1)C(C)(C)c1ccc(cc1)OCC1CO1); MTHPA, a cyclohexene ring with a CH\textsubscript{3} on the double-bond carbon, fused to a five-membered anhydride ring (SMILES CC1=CCC2C(C1)C(=O)OC2=O); NA, a norbornene (bicyclic ring with a CH\textsubscript{2} bridge and one C=C) fused to the anhydride ring (SMILES O=C1OC(=O)C2C1C1CC2C=C1); DGEBA-MTHPA, the MTHPA ring opened to a ring-substituted –C(=O)–O–CH(CH\textsubscript{3})–CH\textsubscript{2}–O– ester on one carbon and –C(=O)OH on the next, the ester O–CH(CH\textsubscript{3})–CH\textsubscript{2}–O– linked to the DGEBA bisphenol unit, which ends in an epoxide; DGEBA-NA, the same with the norbornene ring (CH\textsubscript{2} bridge) in place of the methylcyclohexene. The ester side is drawn as O–CH(CH\textsubscript{3})–CH\textsubscript{2}, with the CH\textsubscript{3} above the CH.}
+
+\pdfpage{5}
+(4) The script of the automatic crosslinking reaction program for epoxy resin/anhydride curing agent was written according to the mechanism of the acid anhydride curing reaction in Section 2.1.1, as shown in Figure 1. To simplify the process, the following assumptions were made [19,31]: (i) The step (1) in Section 2.1.1 was omitted, and the carboxyl in primary crosslinking structure reacted with the epoxy group as the initial reaction site. (ii) The reactivity of each reaction group was the same. (iii) The reactions were diffusion-controlled. (iv) The reactions were synchronized. The flow chart of cross-linking reaction program [31] is shown in Figure 2c, where \emph{TCD}, \emph{T}, \emph{R}\textsubscript{n} and \emph{R}\textsubscript{max} are target crosslink density, temperature, truncation radius and maximum truncation radius, respectively. \emph{T} was set at 300 K, and \emph{R}\textsubscript{n} and \emph{R}\textsubscript{max} were set at 3.5 and 7.5 Å, respectively. The crosslinking structure model of epoxy resin can be obtained by setting parameters, as shown in Figure 2e.
+
+\subsubsection*{2.1.3. Simulation Details}
+
+Typically, conversion degrees in well-controlled curing processes are in the 80–95\% range [14]. Meanwhile, the different crosslinking density models were calculated before determining the investigation model. The results showed thermomechanical performance was excellent when the crosslinking density was 89\%. Therefore, the crosslinking density of 89\% was used for analysis.
+
+After optimizing the structure of the crosslinking model with the crosslink density of 89\%, MD simulation was conducted successively in NVT and NPT ensembles at 600 K, and the simulation parameters were consistent with step (3) in Section 2.1.2. Finally, the crosslinking model of 600 K was annealed and the crosslinking model of epoxy was achieved with different temperatures. Finally, the crosslinking model of 600 K was annealed to 300 K at a cooling rate of 50 K/100 ps [1,32,33], and the crosslinking structure parameters of epoxy resin at different temperatures were obtained.
+
+The last 30 frames selected from the annealed files of epoxy resin systems with crosslink density of 89\% were calculated five times, and the mean value was taken as the theoretical modulus. The average values of specific volumes of the last 30 frames selected from the annealed files at different temperatures were calculated, and the \emph{T}\textsubscript{g} was achieved using a specific volume–temperature fitting curve.
+
+\subsection*{\emph{2.2. Experimental}}
+
+In order to verify the accuracy of the crosslinking model of the acid anhydride-epoxy system, samples of DGEBA/MTHPA and DGEBA/NA epoxy resin were prepared. Shanghai Resin Factory, Shanghai, China, supplied the epoxy resin DGEBA (epoxy value, 0.5–0.54) and the curing agent MTHPA. Aladdin Reagent Co., Ltd. (Shanghai, China) supplied the curing agent NA. The accelerator 2,4,6-tri (dimethyl amino methyl) phenol (DMP-30) (amine value 590–650 mg/g) was supplied by Shanghai Resin Factory, Shanghai, China. The specific experimental process was as follows. Using the DGEBA/MTHPA system as an example, the mass ratio of DGEBA, MTHPA and MPD30 was 100:80:1, respectively. The curing agent MTHPA was mixed with th epoxy resin DGEBA in the reaction kettle by using mechanical stirring at 400 rpm under 343.15 K for 1 h. Subsequently, the accelerator MPD30 was added to the reaction kettle and then the mixture was stirred at 400 rpm under 333.15 K for 30 min. After that, the above mixtures were degassed at 313.15 K for 30 min under a vacuum. Finally, the resin systems were poured into a steel mold and cured via 413.15 K for 1 h. After mold unloading, the samples were cured at 393.15 K for 10 h. After cooling down to room temperature in the oven, the samples of different epoxy systems were obtained.
+\decompnote{``MPD30'' (twice) as printed; the accelerator is introduced as DMP-30 two sentences earlier. ``with th epoxy resin'' as printed.}
+
+The \emph{T}\textsubscript{g} was measured via Q10 differential scanning calorimetry (DSC) by TA Instruments (New Castle, DE, USA). The range of temperature rise was from room temperature to 453.15 K, and the rate of temperature rise was 10 K/min. According to GB/T2567-2008, the tensile performance of resin casts was obtained by using a universal testing machine (HZ-1003, Dongguan, Guangdong, China) with a testing speed of 2 mm/min to investigate the Young’s modulus of different samples. To ensure the accuracy of the data, 10 specimens were tested for every case and the average values were taken.
+
+\pdfpage{6}
+\section*{3. Results and Discussions}
+
+\subsection*{\emph{3.1. Bond-Length Distribution Analysis}}
+
+In this section, the bond-length distributions of the monomer (DGEBA, MTHPA and NA) and the primary crosslinking structure (DGEBA-MTHPA and DGEBA-NA) are calculated and analyzed. Figure 3 shows the bond-length distribution of DGEBA, MTHPA and NA monomers. As can be seen from Figure 3, the bond-length distributions of C–H, C=O, C=C and C–O bonds of MTHPA and NA monomers are basically the same, and the bond-length distributions of C–C bonds are quite different.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Figure 3.} The bond-length distribution of DGEBA, MTHPA and NA monomers.
+\alttext{Figure 3 (top of p.\,6): line plot. x axis ``r(Å)'', linear, about 1.05 to 1.6, ticks labelled 1.1, 1.2, 1.3, 1.4, 1.5, 1.6. y axis ``Probability density'', linear, about −4 to 50, ticks labelled 0 to 50 in steps of 10. Legend at upper left: NA (black line), MTHPA (red), DGEBA (blue). All curves are zero (on the baseline) except for narrow, roughly Gaussian peaks; the peak labels are printed in the colour of the curve they belong to. C–H: black and red peaks of about 20 (black at about 1.098 Å, red slightly higher and to the right at about 1.101 Å), labelled ``C-H'' in black; a blue peak of about 31 at 1.14 Å labelled ``C-H'' in blue. ``C=O'': a red peak of about 6 at 1.21 Å (the black curve lies under it). ``C=C'': a red peak of about 3 at about 1.34 Å. ``C-O'': a red peak of about 6 at about 1.36 Å (again with the black hidden under the red). Around 1.47–1.55 Å, inside a red dotted circle: black peaks of about 6 at 1.48 Å and about 17 at about 1.54 Å; red peaks of about 6 at about 1.49 Å and about 8.5 at about 1.525 Å; blue peaks of about 6.5 at about 1.51 Å and about 26 at about 1.54 Å. Inset at upper right, a zoom of the circled region: x axis ``r(Å)'' 1.44 to 1.56 (ticks every 0.02), y axis ``Probability density'' 0 to 40 (ticks every 5), legend NA/MTHPA/DGEBA; peak labels ``C-C'' (black) at 1.48, ``C-C'' (red) at 1.49, ``C-O'' (blue) at 1.51, ``C-C'' (red) at 1.525, and ``C-C'' (black, about 17) and ``C-C'' (blue, about 26) at 1.54 Å. So in this region the blue (DGEBA) peak at 1.51 Å is C–O and the others are C–C.}
+\figuredata{(main plot)}{figures/fig3.csv}{figures/fig3.py}{digitized from the embedded 220 ppi raster image (tier 3); colour masks per pixel column, upper and lower edge of each line; parts of a curve hidden under another colour are left empty}
+\figuredata{(inset)}{figures/fig3inset.csv}{figures/fig3inset.py}{digitized from the same image (tier 3), inset axes calibrated on its own ticks; the inset is small (about 270 × 150 px), so uncertainties are larger}
+
+A comparison of bond-length distribution between the primary crosslinking structure (DGEBA-MTHPA and DGEBA-NA) and the monomer (DGEBA, MTHPA and NA) is shown in Figure 4. As can be seen in Figure 4a, compared with DGEBA, the bond lengths of C–H bonds of the DGEBA-MTHPA and DGEBA-NA primary crosslinking structures and C– bonds on benzene rings shifted the same distance to the left. Figure 4b shows that the C=C bonds and C–O bonds of the primary structure (DGEBA-MTHPA and DGEBA-NA) moved to the right compared with curing-agent monomers. Moreover, the change of C–C bonds is complicated. The specific bond length changes between the monomers and primary crosslinking structures are shown in Figure 5. The change values of the specific bonds length can be seen in Figure 5. The analysis indicates that the original structure of the monomers will change after forming the epoxy crosslinked structure.
+\decompnote{``C– bonds on benzene rings'' as printed (the second atom is missing).}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Figure 4.} Comparison of bond-length distributions. (\textbf{a}) The primary crosslinking structure and the epoxy resin DGEBA; (\textbf{b}) the primary crosslinking structure and the curing agents MTHPA and NA.
+\alttext{Figure 4 (bottom of p.\,6): two line plots side by side, both with y axis ``Probability density'' and x axis ``r(Å)''. (a) x from 0.9 to about 1.65, ticks labelled 0.9 to 1.6 in steps of 0.1; y from about −4 to 50, ticks 0 to 50 in steps of 10. Legend: DGEBA (blue), DGEBA-MTHPA (red), DGEBA-NA (black). Panel letter ``(a)'' at upper right. Labelled features: ``O-H'' a small black and red bump of about 1 at about 0.97 Å (the blue curve is zero there); ``C-H'' red and black peaks of about 27 at 1.10 Å; ``C-H'' a blue peak of about 31 at 1.14 Å; ``C=O'' small red and black bumps (about 1–2) at about 1.21 Å; ``C=C'' small bumps (about 1–2) at about 1.35 Å; ``next to benzene ringC-O'' (printed without a space) with an arrow to a peak of about 2 at about 1.36 Å; ``benzene ring C-C'' with an arrow to the peaks of about 7 at about 1.395 Å (red and black; a blue peak of about 6.5 just to the right); ``C-O'' a black peak of about 3 at about 1.43 Å; in a red dotted ellipse labelled ``C-C'' with an arrow: a blue peak of about 26 at 1.54 Å, blue about 6 and red about 5 at about 1.51 Å, black about 6 at about 1.53 Å, and small black wiggles out to about 1.59 Å. The blue DGEBA curve here is the same as in Figure 3. (b) x from 1.0 to 1.6, ticks every 0.1; y from about −3 to 40, ticks 0 to 40 in steps of 5. Legend: MTHPA (solid black), NA (solid red), DGEBA-MTHPA (dashed black), DGEBA-NA (dashed red). Panel letter ``(b)''. Peaks: at 1.10 Å the solid curves reach about 20 and the dashed about 27; at 1.21 Å solid peaks of about 6 and dashed of about 1–1.5; ``C=C'' solid peaks of about 3 at about 1.34 Å and a second ``C=C'' label below the axis near 1.36 Å for the dashed curves; ``C-O'' solid peaks of about 6 at 1.36 Å; dashed peaks of about 7 at about 1.40 Å and about 3 at about 1.43 Å (labelled ``C-O''); in a red dotted ellipse labelled ``C-C'': solid red peaks of about 6 at 1.48 Å and about 17 at 1.54 Å, solid black peaks of about 6 at about 1.49 Å and about 8.5 at about 1.525 Å, dashed curves with smaller peaks (about 3–6) between 1.47 and 1.58 Å. The colours of MTHPA and NA are swapped relative to Figure 3 (there NA is black and MTHPA red); the solid curves have the same shapes as in Figure 3 with that swap.}
+\figuredata{a}{figures/fig4a.csv}{figures/fig4a.py}{digitized from the embedded 220 ppi raster image (tier 3); colour masks per pixel column; hidden parts left empty}
+\figuredata{b}{figures/fig4b.csv}{figures/fig4b.py}{digitized from the embedded 220 ppi raster image (tier 3); solid and dashed lines of the same colour separated by connected-component size, dashes only where they do not touch the solid line; hidden parts left empty}
+
+\pdfpage{7}
+\begin{center}
+\includegraphics[width=0.8\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Figure 5.} Specific bond length changes between the monomers and primary crosslinking structures. (\textbf{a}) The primary crosslinking structure and the epoxy resin DGEBA; (\textbf{b}) the primary crosslinking structure and the curing agent MTHPA; (\textbf{c}) the primary crosslinking structure and the curing agent NA.
+\alttext{Figure 5 (top of p.\,7): three panels in dashed grey frames, each a ball-and-stick rendering (C grey, H white, O red) of a monomer on the left, a hollow arrow labelled ``Primary crosslink'' in the middle, and the primary crosslinking structure on the right. Selected bonds are highlighted in yellow and labelled in blue with their length (the labels in (a) use a full-width colon, written here as an ordinary colon). All values are also in figures/fig5\_bondlengths.csv. (a) Left, DGEBA: ``C-H:1.139Å'' (a ring C–H), ``C-C:1.542Å'' (a benzene-ring C–C), ``C-O:1.511Å'' (the aryl ether C–O), ``C-O:1.502Å'' (the epoxide C–O). Right top, DGEBA-MTHPA: ``C-O:1.441Å'' (epoxide), ``C-O:1.381Å'' (aryl ether), ``C-H:1.101Å'', ``C-C:1.387Å'' (benzene ring). Right bottom, DGEBA-NA: ``C-O:1.439Å'', ``C-O:1.381Å'', ``C-H:1.101Å'', ``C-C:1.388Å''. (b) Left, MTHPA, ring bonds numbered 1–5 in blue on the anhydride ring junction: ``C-C1:1.527Å'', ``C-C2:1.534Å'', ``C-C3:1.538Å'', ``C-C4:1.487Å'', ``C-C5:1.485Å''. Right, DGEBA-MTHPA (the opened anhydride attached to the DGEBA chain, epoxide at the far end), the same bonds numbered: ``C-C1:1.531Å'', ``C-C2:1.544Å'', ``C-C3:1.558Å'', ``C-C4:1.510Å'', ``C-C5:1.107Å''. (c) Left, NA, bonds 1–5: ``C-C1:1.544Å'', ``C-C2:1.544Å'', ``C-C3:1.541Å'', ``C-C4:1.483Å'', ``C-C5:1.483Å''. Right, DGEBA-NA: ``C-C1:1.546Å'', ``C-C2:1.559Å'', ``C-C3:1.575Å'', ``C-C4:1.535Å'', ``C-C5:1.549Å'' (printed in one row below the molecule).}
+\figuredata{a--c (labels)}{figures/fig5_bondlengths.csv}{(no plot)}{transcribed from the printed labels; not a plot}
+\decompnote{Figure 5(b): ``C-C5:1.107Å'' for DGEBA-MTHPA as printed.}
+
+\subsection*{\emph{3.2. Conformation and Cohesive Energy Analysis}}
+
+It is well known that the flexibility of molecular segments can exert an important influence on the thermomechanical performance of epoxy resin. Flexible chains will result in low \emph{T}\textsubscript{g} and low modulus [13,18]. The synergy rotational energy barrier can be inverted from the energy range associated with a particular build-up torsion; the larger the synergy rotational energy barrier, the worse the flexibility of the chain [13,22]. The analysis of bond-length distribution shows that the original molecular structure of the monomer changes after the formation of the crosslinking structure. Therefore, the analysis of the synergy rotational energy barrier of the specific bond of the primary crosslinking structure can better reflect the flexibility of the chain segment. Analysis of conformation behavior of molecular structure can provide useful information on the local structure and chain flexibility in the crosslinking network of the epoxy resins [18]. For the conformational grid search, the energies associated with torsional rotations of specific bonds can be obtained. The rotational energy barrier of a single bond cannot indicate the flexibility of molecular chains, and therefore cooperative motions of bonds \pdfpage{8}need to be paid attention to as the synergy rotational energy barrier of the specific bond is calculated. The torsional rotation of the specific bonds $\phi_1$ and $\phi_2$ is illustrated in Figure 6. The potential energy graph of bonds $\phi_1$ and $\phi_2$ in the DGEBA-MTHPA and DGEBA-NA primary crosslinking structure are shown in Figure 7. The specific synergy rotational energy barrier of the DGEBA-MTHPA primary crosslinking structure was 107.62 kcal/mol, and that of the DGEBA-NA primary crosslinking structure was 832.02 kcal/mol, which was higher than that of the DGEBA-MTHPA primary crosslinking structure.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Figure 6.} The torsional rotation of the specific bond. (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 6 (top of p.\,8): two ball-and-stick renderings (C grey, H white, O red) of the primary crosslinking structures. In each, atoms are numbered 1–8 in blue and two torsions are marked with small curved black arrows. (a) DGEBA-MTHPA: atoms 1–4 lie on the ester group of the opened MTHPA (1 a carbonyl O, 2 the carbonyl C, 3 the ester O, 4 the next C), with the torsion ``φ\textsubscript{1}'' marked there; atoms 5–8 lie at the central isopropylidene carbon between the two benzene rings (5 and 6 on the first ring, 7 the central C, 8 on the second ring), with the torsion ``φ\textsubscript{2}''. Thin blue lines join the numbered atoms. (b) DGEBA-NA: the same numbering, φ\textsubscript{1} on the ester linkage next to the norbornane ring (atoms 1–4) and φ\textsubscript{2} at the isopropylidene carbon (atoms 5–8). The epoxide ring at the far right end and the free carboxyl group (lower left) are visible.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Figure 7.} The potential energy graph of the bonds φ1 and φ2. (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 7 (middle of p.\,8): two 3D surface plots of total energy against two torsion angles, drawn in perspective inside a box whose two back walls and floor carry light grey grid lines, each with a rainbow colour key at the right. In both, the axis along the front left edge of the floor is ``φ\textsubscript{1}:Torsion angle (deg)'', the axis along the front right edge is ``φ\textsubscript{2}:Torsion angle (deg)'', and the vertical axis at the left corner is ``Total energy (Kcal/mol)''. The surface is coloured by energy (purple low, through blue, cyan, green, yellow, orange, red, to dark red high), with thin grey mesh lines and black contour lines; the contour lines run roughly parallel to the φ\textsubscript{1} axis. (a) DGEBA-MTHPA: φ\textsubscript{1} ticks labelled −100 to 20 in steps of 20; φ\textsubscript{2} ticks −150 to 150 in steps of 50; energy ticks 480 to 560 in steps of 20. Colour key from top to bottom: 465.5 (near black/purple), 476.6, 487.8, 498.9, 510.1, 521.3, 532.4, 543.5, 554.7, 565.9, 577.0 (dark red). The visible surface is low (purple, about 470--480) over the front-left part, at small φ\textsubscript{2}, with a small bump at the left edge; towards larger φ\textsubscript{2} it rises in a steep face through blue, green and yellow to orange (about 530--540), and at the back right two sharp peaks reach red to dark red (about 560--570). (b) DGEBA-NA: φ\textsubscript{1} ticks −80 to 80 in steps of 20; φ\textsubscript{2} ticks −150 to 150 in steps of 50; energy ticks 200 to 800 in steps of 200. Colour key from top to bottom: 54.00 (black/purple), 143.6, 233.2, 322.8, 412.4, 502.0, 591.6, 681.2, 770.8, 860.4, 950.0 (dark red). A flat purple floor (about 100--200) at the front, a tall nearly vertical face rising through all colours to an orange plateau (about 550--600) that runs along the whole φ\textsubscript{1} range, a sharp drop near the right end of the plateau to a lower green shelf (about 400) at the far right, and two narrow peaks at the back left, one reaching about 900 (dark red) and one about 700. In the digitized data (figures/fig7a.csv, fig7b.csv) the steep faces lie at φ\textsubscript{2} ≈ −70 to −35 in both panels.}
+\figuredata{a}{figures/fig7a.csv}{figures/fig7a.py}{digitized from the embedded 220 ppi raster image (tier 3): energy from the surface colour through the colour key, and (φ\textsubscript{1}, φ\textsubscript{2}) by intersecting each pixel's view ray with the plane of its energy, using a perspective camera fitted on the axis ticks (rms 0.06 px); 5° × 10° grid of the visible surface, per-pixel data in figures/fig7a\_pixels.csv.gz, colour key in figures/fig7a\_key.csv}
+\figuredata{b}{figures/fig7b.csv}{figures/fig7b.py}{as for panel a (camera rms 0.13 px); per-pixel data in figures/fig7b\_pixels.csv.gz, colour key in figures/fig7b\_key.csv}
+
+The CED of polymers can be used to roughly predict thermal and mechanical properties of materials; a smaller CED generally implies a lower \emph{T}\textsubscript{g} and theoretical modulus [13,18]. The cohesive energy (\emph{E}\textsubscript{coh}) of a system of molecules is the average energy required to separate all molecules to an infinite distance from each other. \emph{E}\textsubscript{coh} is calculated by the follow equation [13]:
+\begin{equation}
+E_{\mathrm{coh}} = \langle E_{\mathrm{inter}}\rangle = \langle E_{\mathrm{total}}\rangle - \langle E_{\mathrm{intra}}\rangle
+\tag{1}
+\end{equation}
+where \emph{E}\textsubscript{inter} is the total energy between all molecules, \emph{E}\textsubscript{total} is the total energy of a system and \emph{E}\textsubscript{intra} is the intramolecular energy. The brackets <···> represent an average over a constant temperature and constant pressure (NPT) ensemble or constant temperature and constant volume (NVT) ensemble.
+
+The CED is simply the cohesive energy per unit of volume [18]:
+\begin{equation}
+\mathrm{CED} = \frac{E_{\mathrm{coh}}}{V}
+\tag{2}
+\end{equation}
+
+The CED of the DGEBA/MTHPA and DGEBA/NA systems is displayed in Table 2. It was found that the CED of DGEBA/MTHPA was about 464.12 J/cm\textsuperscript{3}, which was lower than that of DGEBA/NA, specifically, 475.50 J/cm\textsuperscript{3}. It was indicated that intermolecular force of DGEBA/MTHPA was smaller than that of DGEBA/NA.
+
+By the analysis above, it is believed that the molecular chain flexibility of the DGEBA/NA epoxy resin system was worse and its CED was higher. It can be predicted that the \emph{T}\textsubscript{g} and modulus of DGEBA/MTHPA was lower than that of the DGEBA/NA. This is consistent with the simulation and experimental results (see Tables 3 and 4)
+
+\pdfpage{9}
+\begin{center}
+\noindent\textbf{Table 2.} The cohesive energy density (CED) of the epoxy system.
+
+\smallskip
+\begin{tabular}{ccc}
+\toprule
+\textbf{Epoxy System} & \textbf{DGEBA/MTHPA} & \textbf{DGEBA/NA} \\
+\midrule
+CED (J·cm\textsuperscript{−3}) & 464.12 ± 21.43 & 475.50 ± 24.33 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{\emph{3.3. Free Volume Analysis}}
+
+The influence of curing-agent structure on FFV is very prominent [18]. The investigation of free volume at a molecular scale is helpful to understand the accumulation and spatial state of polymer molecules. According to free volume theory [34], the volume (\emph{V\textsubscript{T}}) of a liquid or solid material consists of two parts, the volume occupied by molecules (i.e., the actual occupancy volume (\emph{V\textsubscript{0}})) and the unoccupied volume (i.e., the free volume (\emph{V}\textsubscript{f})).
+\begin{equation}
+V_T = V_0 + V_{\mathrm{f}}
+\tag{3}
+\end{equation}
+FFV is introduced to represent the relative size of the free volume of different polymers, and can be calculated by the following equation [35]:
+\begin{equation}
+\mathrm{FFV} = \frac{V_{\mathrm{f}}}{V_0 + V_{\mathrm{f}}} \times 100\%
+\tag{4}
+\end{equation}
+
+Free volume is an important factor affecting the thermomechanical properties of epoxy resins. The reduction of free volume in a glass state can inhibit the movement of molecular chains and lead to a higher modulus and \emph{T}\textsubscript{g}. The free volume of epoxy resin depends on the packing ability of molecular chains and the geometric constraints imposed by the crosslinked network [36]. In this paper, the free volume was acquired by calculating the Connolly surface through the Atom Volume \& Surface modules. Figure 8 shows the free volume of DGEBA-MTHPA and DGEBA-NA with a crosslinking degree of 89\% at 300 K.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Figure 8.} Free volume of (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 8 (middle of p.\,9): two square renderings of the simulation cell (black frame), side by side, each with its panel letter at the upper right outside the frame. Each shows the crosslinked network as balls and sticks (C grey, H white, O red) densely filling the cell, overlaid with smooth surfaces: light grey surfaces and saturated blue surfaces (the figure has no key saying what the two colours mean). (a) DGEBA-MTHPA: a large grey region at upper left and centre and a large, connected blue region on the right side running from the middle right edge down to the bottom centre, with smaller blue patches at the left and top. (b) DGEBA-NA: blue patches at the left edge, at the top centre, at the right edge (middle) and at the bottom centre, with grey surfaces between; the blue regions look smaller and more scattered than in (a). No scale bar or numbers.}
+
+The FFV of the epoxy system with the crosslink density of 89\% at 300 K is displayed in Table 3. It was found that the FFV of the DGEBA-NA system was higher than that of the DGEBA-MTHPA system, and the structure of the DGEBA-NA system was more compact, caused by the steric hindrance effect of methyl in MTHPA. It can be predicted that the \emph{T}\textsubscript{g} and modulus of DGEBA/NA was higher than that of DGEBA/MTHPA. This is consistent with the simulation and experimental results (see Tables 3 and 4)
+\decompnote{``the FFV of the DGEBA-NA system was higher'' as printed; Table 3 below gives a lower FFV for DGEBA/NA (14.18\,\%) than for DGEBA/MTHPA (16.67\,\%), as do the abstract and the conclusions.}
+
+\begin{center}
+\noindent\textbf{Table 3.} Free volume of the epoxy system.
+
+\smallskip
+\begin{tabular}{cccc}
+\toprule
+\textbf{Epoxy System} & \textbf{\emph{V}\textsubscript{f} (Å\textsuperscript{3})} & \textbf{\emph{V}\textsubscript{total} (Å\textsuperscript{3})} & \textbf{FFV (\%)} \\
+\midrule
+DGEBA/MTHPA & 1616.96 ± 67.88 & 9697.1 ± 66.52 & 16.67 ± 0.59 \\
+DGEBA/NA & 1285.69 ± 42.66 & 9067.72 ± 35.84 & 14.18 ± 0.43 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\pdfpage{10}
+\subsection*{\emph{3.4. Thermal Properties Analysis}}
+
+\emph{T}\textsubscript{g} is an important parameter of polymer materials. At \emph{T}\textsubscript{g}, the behavior of a polymer shifts from a glassy and brittle state to a rubbery state [1], accompanied by changes in physical properties such as specific volume and thermal, mechanical and electrical properties. Therefore, the \emph{T}\textsubscript{g} can be obtained either by linear fitting of the specific volume and temperature, or by the mean squared displacement (MSD) curve fitting [30,37]. The MSD for a system of N atoms can be described by the following equation [22,38]:
+\begin{equation}
+\mathrm{MSD} = \frac{1}{3N}\sum_{i=0}^{N-1}\left\langle\left|\left(\overrightarrow{R_i}\right)(t) - \left(\overrightarrow{R_i}\right)(0)\right|^2\right\rangle
+\tag{5}
+\end{equation}
+where $\left(\overrightarrow{R_i}\right)(t)$ and $\left(\overrightarrow{R_i}\right)(0)$ represent the displacement vectors of any atom \emph{i} in the system at time \emph{t} and initial time, respectively. When a polymer undergoes a glassy-to-rubbery phase transition, the torsional and rotational motions of the molecules combined with the local motion can cause chain disentanglement, leading to a sudden increase in diffusivity and, consequently, a sudden jump in the MSD-time curves obtained at a range of temperatures [39]. MSD-time curves are shown in Figure 9. The glass transition region can be roughly estimated by searching for an unusually large gap between MSD-time curves [37,39]. The inflection point was obtained by fitting the MSD value-temperature curve at 5, 10, 15, 20 and 25 ps, respectively. The calculation value at MSD-15 ps is consistent with the \emph{T}\textsubscript{g} obtained by the specific volume-temperature fitting curve. Therefore, the inflection point obtained by fitting the MSD value at 15 ps with the temperature can be regarded as the approximate value of \emph{T}\textsubscript{g}. The \emph{T}\textsubscript{g} achieved by the MSD (15 ps)-temperature fitting is shown in Figure 10.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Figure 9.} The MSD-time curves of epoxy resins. (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 9 (middle of p.\,10): two line plots side by side, x axis ``Time (ps)'' 0 to 25 (ticks every 5), y axis ``MSD(Å\textsuperscript{2})''. Legend in both: 300K (black), 350K (red), 400K (blue), 450K (magenta), 500K (green), 550K (navy), 600K (violet). A vertical red dashed line at 15 ps. All curves start at 0 at t = 0, rise steeply during the first picosecond and then grow slowly and nearly linearly with small wiggles; the order from bottom to top is 300 K to 600 K throughout. (a) DGEBA-MTHPA, y 0 to 8 (ticks every 1). At 15 ps (digitized): 300K 1.18, 350K 1.36, 400K 1.85, 450K 2.80, 500K 3.38, 550K 4.05, 600K 5.47; at 25 ps about 1.3, 1.5, 2.2, 3.7, 4.3, 4.7, 6.9. The gap between 400K and 450K is visibly larger than those between 300K, 350K and 400K. (b) DGEBA-NA, y 0 to about 4.5 (ticks every 1). At 15 ps (digitized): 300K 0.88, 350K 1.07, 400K 1.40, 450K 1.91, 500K 2.63, 550K 3.32, 600K 3.61; at 25 ps about 1.07, 1.24, 1.54, 2.43, 3.03, 3.91, 4.03. Exact values are in the CSV files.}
+\figuredata{a}{figures/fig9a.csv}{figures/fig9a.py}{digitized from the embedded 300 ppi raster image (tier 3); colour masks per pixel column}
+\figuredata{b}{figures/fig9b.csv}{figures/fig9b.py}{digitized from the embedded 300 ppi raster image (tier 3); colour masks per pixel column}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Figure 10.} The MSD (15 ps)-temperature fitting curves of epoxy resins. (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 10 (bottom of p.\,10): two scatter plots with two fitted straight lines each. x axis ``Temperature (K)'', ticks 300 to 600 in steps of 50; y axis ``MSD(Å\textsuperscript{2})''. Legend ``MSD'' (black square). Seven black squares at 300, 350, …, 600 K. Two red straight lines, one through the low-temperature points and one through the high-temperature points, cross at a red dot labelled with the fitted temperature. (a) DGEBA-MTHPA, y from about 0.5 to 6 (ticks labelled 1 to 6). Points (digitized): 1.18 (300 K), 1.36 (350), 1.86 (400), 2.80 (450), 3.39 (500), 4.05 (550), 5.47 (600). The low-temperature line runs from about (280 K, 1.00) to (420 K, 1.94), the high-temperature line from about (380 K, 1.47) to (620 K, 5.55); they cross at the red dot at about (398 K, 1.79), labelled ``398.26K''. A tiny red mark near (462 K, 1.1) is a stray dot in the image. (b) DGEBA-NA, y from 0.5 to 3.5 (ticks every 0.5). Points (digitized): 0.76, 0.96, 1.23, 1.59, 2.27, 2.85, 3.09. The low line runs from about (280 K, 0.61) to (430 K, 1.44), the high line from about (410 K, 1.28) to (620 K, 3.42); they cross at the red dot at about (420 K, 1.39), labelled ``419.46K''.}
+\figuredata{a}{figures/fig10a.csv}{figures/fig10a.py}{digitized from the embedded 300 ppi raster image (tier 3); square markers located as connected components; line end points from the red mask}
+\figuredata{b}{figures/fig10b.csv}{figures/fig10b.py}{as for panel a}
+\decompnote{Figure 10(a) agrees with the 15-ps values of the curves in Figure 9(a) (digitized, within 0.01 Å\textsuperscript{2}). The points of Figure 10(b) do not match the 15-ps values of Figure 9(b) (those are 0.1--0.5 Å\textsuperscript{2} higher) but match its values at 10 ps to within about 0.06 Å\textsuperscript{2}: Figure 10(b) seems to plot MSD at 10 ps, although the caption says 15 ps. Comparison in the README.}
+
+\pdfpage{11}
+Figure 11 shows the \emph{T}\textsubscript{g} fitting curves of specific volume-temperature. Figures 10 and 11 show that the \emph{T}\textsubscript{g} obtained by the two fitting methods were almost the same. The \emph{T}\textsubscript{g} of the DGEBA/NA system was 19.83 K higher than that of the DGEBA/MTHPA system when the specific volume-temperature fitting was used. The \emph{T}\textsubscript{g} of the DGEBA/NA system achieved by the MSD (15 ps)-temperature fitting was 21.22 K higher than that of DGEBA/MTHPA system. The results of the two methods were nearly identical.
+\decompnote{19.83 K as printed; the values in Figure 11 and Table 4 (421.02 K and 399.03 K) differ by 21.99 K. The MSD values (419.46 K and 398.26 K) differ by 21.20 K.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Figure 11.} The specific volume-temperature fitting curves of epoxy resins. (\textbf{a}) DGEBA-MTHPA; (\textbf{b}) DGEBA-NA.
+\alttext{Figure 11 (top of p.\,11): two scatter plots with error bars and two fitted straight lines each. x axis ``Temperature (K)'', ticks 300 to 600 in steps of 50; y axis ``Specific volume(cm\textsuperscript{3}/g)''. Legend box ``Specific volume'' (black square). Seven black squares at 300, 350, …, 600 K, each with a vertical error bar with caps. Two thin red straight lines, one fitted through the lower-temperature points and one through the higher-temperature points, crossing at a red dot labelled with the temperature. (a) DGEBA-MTHPA, y 0.86 to 0.98 (ticks every 0.02). Points (digitized; error-bar ends in brackets): 0.8746 (0.8725--0.8764) at 300 K, 0.8755 (0.8736--0.8773) at 350, 0.8838 (0.8823--0.8864) at 400, 0.9098 (0.9058--0.9136) at 450, 0.9259 (0.9223--0.9286) at 500, 0.9492 (0.9464--0.9518) at 550, 0.9652 (0.9599--0.9701) at 600. The low line runs from (300 K, 0.8734) to about (408 K, 0.8823), the high line from about (390 K, 0.8775) to (600 K, 0.9698); crossing at about (399 K, 0.8817), labelled ``399.03K''. (b) DGEBA-NA, y 0.80 to about 0.93 (ticks every 0.02). Points (digitized; error-bar ends in brackets): 0.8164 (0.8154--0.8173) at 300 K, 0.8272 (0.8246--0.8298) at 350, 0.8358 (0.8328--0.8385) at 400, 0.8515 (0.8505--0.8526) at 450, 0.8808 (0.8787--0.8825) at 500, 0.8973 (0.8945--0.8994) at 550, 0.9126 (0.9093--0.9156) at 600. The low line runs from (300 K, 0.8164) to (450 K, 0.8459), the high line from (400 K, 0.8312) to (600 K, 0.9182); crossing at about (421 K, 0.840), labelled ``421.02K''.}
+\figuredata{a}{figures/fig11a.csv}{figures/fig11a.py}{digitized from the embedded 300 ppi raster image (tier 3); markers and error-bar caps located in the black mask, lines from the red mask}
+\figuredata{b}{figures/fig11b.csv}{figures/fig11b.py}{as for panel a}
+
+It can be seen from Table 4 that the simulation and experimental results of the \emph{T}\textsubscript{g} of the DGEBA/NA system were higher than those of the DGEBA/MTHPA system, which is consistent with the \emph{T}\textsubscript{g} results predicted by the synergy rotational energy barrier, CED and FFV analyses.
+
+\begin{center}
+\noindent\textbf{Table 4.} Simulation and experimental results of the \emph{T}\textsubscript{g} calculated by the specific volume-temperature method (SV) and the MSD-temperature method (M).
+
+\smallskip
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Method} & \multicolumn{2}{c}{\textbf{DGEBA-MTHPA}} & \multicolumn{2}{c}{\textbf{DGEBA-NA}} \\
+ & \multicolumn{2}{c}{\textbf{\emph{T}\textsubscript{g} (K)}} & \multicolumn{2}{c}{\textbf{\emph{T}\textsubscript{g} (K)}} \\
+\midrule
+Simulation & SV & 399.03 & SV & 421.02 \\
+ & M & 398.26 & M & 419.46 \\
+\midrule
+Experiment & & 401.62 & & 427.48 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{\emph{3.5. Mechanical Properties Analysis}}
+
+In this paper, the mechanical properties of epoxy resins were calculated by a static constant strain method [2,17]. The process can be described as follows. For systems that have reached mechanical equilibrium, a slight strain is applied to the system, which causes uniaxial tension and compression deformation along the \emph{x}-, \emph{y}- and \emph{z}-axis of the three dimensional epoxy system, and generates shear deformation in the \emph{xy}-, \emph{xz}- and \emph{yz}- planes. The stress–strain relationship within the realm of linear elastic obeys Hooke’s law:
+\begin{equation}
+\sigma_i = C_{ij}\varepsilon_j
+\tag{6}
+\end{equation}
+where σ\textsubscript{\emph{i}} and ε\textsubscript{\emph{j}} are stress and strain vectors, respectively, and \emph{C\textsubscript{ij}} is the 6-dimensional stiffness matrix. In the simulation, the epoxy models can be assumed isotropic. Therefore, \emph{C\textsubscript{ij}} can be simplified as follow [2]:
+\pdfpage{12}
+\begin{equation}
+C_{ij} = \begin{bmatrix}
+\lambda + 2\mu & \lambda & \lambda & 0 & 0 & 0 \\
+\lambda & \lambda + 2\mu & \lambda & 0 & 0 & 0 \\
+\lambda & \lambda & \lambda + 2\mu & 0 & 0 & 0 \\
+0 & 0 & 0 & \mu & 0 & 0 \\
+0 & 0 & 0 & 0 & \mu & 0 \\
+0 & 0 & 0 & 0 & 0 & \mu
+\end{bmatrix}
+\tag{7}
+\end{equation}
+where λ and µ are the elastic constant, and can be obtained from the stiffness matrix.
+\begin{equation}
+\left\{\begin{array}{l}
+\lambda = \frac{1}{6}(C_{12} + C_{13} + C_{21} + C_{23} + C_{31} + C_{32}) \\
+\mu = \frac{1}{3}(C_{44} + C_{55} + C_{66})
+\end{array}\right.
+\tag{8}
+\end{equation}
+
+The parameters such as bulk modulus \emph{K}, Young’s modulus \emph{E}, shear modulus \emph{G} and Poisson’s ratio ν of the epoxy resins can be obtained from λ and µ [17].
+\begin{equation}
+\left\{\begin{array}{l}
+K = \lambda + \frac{2}{3}\mu \\
+E = \mu\frac{3\lambda + 2\mu}{\lambda + \mu} \\
+G = \mu \\
+\upsilon = \frac{\lambda}{2(\lambda + \mu)}
+\end{array}\right.
+\tag{9}
+\end{equation}
+\decompnote{Equation (9) prints the Poisson's ratio as υ (upsilon); the text above calls it ν.}
+
+The mechanical properties of the DGEBA/MTHPA and DGEBA/NA systems are calculated as shown in Table 5. It can be seen from Table 5 that the theoretical modulus of the DGEBA/NA system is higher than that of the DGEBA/MTHPA system.
+
+\begin{center}
+\noindent\textbf{Table 5.} The \emph{T}\textsubscript{g} of the epoxy systems.
+
+\smallskip
+\begin{tabular}{ccccc}
+\toprule
+\textbf{Epoxy System} & \textbf{Young’s Modulus (GPa)} & \textbf{Bulk Modulus (GPa)} & \textbf{Shear Modulus (GPa)} & \textbf{Poisson’s Ratio} \\
+\midrule
+DGEBA/MTHPA & 4.14 ± 0.18 & 3.5 ± 0.86 & 1.6 ± 0.06 & 0.29 ± 0.06 \\
+DGEBA/NA & 4.87 ± 0.41 & 3.89 ± 0.47 & 1.7 ± 0.46 & 0.3 ± 0.03 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{The caption of Table 5 reads ``The \emph{T}\textsubscript{g} of the epoxy systems'' as printed, but the table gives the calculated elastic properties.}
+
+Then the simulation results of the DGEBA/MTHPA and DGEBA/NA systems are compared with the experimental results. As can be seen from Figure 12, the modulus of the DGEBA/NA systems obtained by simulation and experimental tests was higher than that of DGEBA/MTHPA systems. This is consistent with the predicted results of the theoretical modulus of the synergy rotational energy barrier, cohesive energy density and free volume analyses. Nevertheless, the simulation values were higher than the values of experimental measurement, which may have been caused by the simulation model’s ideal crosslinking structure, composition [18] and model scale [40], in contrast with the inevitable structural defects and other factors existing in the actual system.
+
+\begin{center}
+\includegraphics[width=0.55\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Figure 12.} The simulation and experimental results of Young’s modulus.
+\alttext{Figure 12 (bottom of p.\,12): grouped bar chart. y axis ``Young Modulus (GPa)'', 0 to 6 (ticks every 1). Two groups on the x axis, ``DGEBA/MTHPA'' and ``DGEBA/NA''; in each a dark teal hatched bar ``Experimental'' and a lighter blue hatched bar ``Simulated'' (legend at upper left), each with an error bar and its value printed above it. DGEBA/MTHPA: Experimental 3.27 (error bar about ±0.08), Simulated 4.14 (about ±0.18). DGEBA/NA: Experimental 3.75 (about ±0.06), Simulated 4.87 (about ±0.41). The simulated values and their errors agree with Table 5.}
+\figuredata{(single panel)}{figures/fig12.csv}{figures/fig12.py}{digitized from the embedded 220 ppi raster image (tier 3); bar tops and error-bar ends located in the image; the printed bar labels are given alongside}
+
+\pdfpage{13}
+\section*{4. Conclusions}
+
+In this paper, the effects of anhydride curing agents MTHPA and NA on the thermomechanical properties of epoxy resin were studied by molecular dynamics simulations and experimental verification. The relationship between the molecular structure of epoxy resin and its thermomechanical properties was analyzed. The results are as follows:
+
+(1) The bond-length distributions of MTHPA and NA curing-agent monomers were quite the same, except for the C-C bond. Compared with DGEBA, MTHPA and NA monomers, the bond-length distribution of corresponding monomers in the primary crosslinking structure of MTHPA and NA will change after the formation of primary crosslinking structures. The analysis shows that the slight change of molecular structure of the anhydride curing agent has a great influence on the properties of epoxy crosslinked networks.
+
+(2) Compared with the DGEBA/MTHPA system, MD simulation results showed that the synergy rotational energy barrier and CED of the DGEBA/NA system were larger, the FFV of the DGEBA/NA system was smaller and the calculated values of the \emph{T}\textsubscript{g} and theoretical modulus of the DGEBA/NA system were higher. In other words, the flexibility of molecular chains, FFV and CED can significantly affect the \emph{T}\textsubscript{g} and theoretical modulus. High molecular chain flexibility, a high FFV and a small CED will result in a low \emph{T}\textsubscript{g} and modulus.
+
+(3) The simulation results of \emph{T}\textsubscript{g} and Young’s modulus of the DGEBA/MTHPA and DGEBA/NA systems were consistent with the experimental results, which verifies the accuracy of the crosslinking model of the anhydride-epoxy system in this paper. This can provide a scientific basis for the optimization of anhydride-epoxy systems in the field of high voltage insulation.
+
+\medskip
+\noindent{\small\textbf{Author Contributions:} Conceptualization, Methodology, K.F., Q.X. and F.L.; Date curation, Formal analysis, K.F.; Validation, Q.D. and Q.Z.; Writing—original draft, K.F.; Writing—review \& editing, K.F., Q.X. and X.W.; Resources, Q.X., F.L. and Z.H.; Supervision, F.L.; Funding acquisition, Q.X.}
+
+\noindent{\small\textbf{Funding:} This research was funded by the National Key R\&D Program of China (Grant No. 2017YFB0903800), the Fundamental Research Funds for the Central Universities (2019MS083) and the Science \&Technology Project of State Grid Corporation of China (SGHA0000KXJS1800891).}
+
+\noindent{\small\textbf{Conflicts of Interest:} The authors declare no conflict of interest.}
+
+\subsection*{References}
+
+\begin{hangpars}\small
+1.\ Jeyranpour, F.; Alahyarizadeh, G.; Minuchehr, A. The thermo-mechanical properties estimation of fullerene-reinforced resin epoxy composites by molecular dynamics simulation—A comparative study. \emph{Polymer} \textbf{2016}, \emph{88}, 9–18. [CrossRef]
+
+2.\ Shokuhfar, A.; Arab, B. The effect of cross linking density on the mechanical properties and structure of the epoxy polymers: molecular dynamics simulation. \emph{J. Mol. Model.} \textbf{2013}, \emph{19}, 3719–3731. [CrossRef]
+
+3.\ Sun, Y.Y.; Chen, L.; Cui, L.; Zhang, Y.W.; Du, X.Z. Molecular dynamics simulation of cross-linked epoxy resin and its interaction energy with graphene under two typical force fields. \emph{Comput. Mater. Sci.} \textbf{2018}, \emph{143}, 240–247. [CrossRef]
+
+4.\ Xie, Q.; Fu, K.; Liang, S.; Liu, B.; Lu, L.; Yang, X.; Huang, Z.; Lu, F. Micro-Structure and Thermomechanical Properties of Crosslinked Epoxy Composite Modified by Nano-SiO\textsubscript{2}: A Molecular Dynamics Simulation. \emph{Polymers} \textbf{2018}, \emph{10}, 801. [CrossRef]
+
+5.\ Wang, D. \emph{Production and Application of Epoxy Resin}; Chemical Industry Press: Beijing, China, 2001.
+
+6.\ LÜ, F.; Yin, K.; Fu, K.; Lin, H.; Xie, Q.; Hou, Z.; Zhang, C. Effect of Fluorination and Exfoliation Filler on the Surface Flashover Voltage of Boron Nitride/Epoxy Resin Composites. \emph{High Voltage Eng.} \textbf{2017}, \emph{43}, 2800–2807.
+
+7.\ Qi, B.; Gao, C.J.; Lv, Y.Z.; Li, C.R.; Tu, Y.P.; Xiong, J. The impact of nano-coating on surface charge accumulation of epoxy resin insulator: characteristic and mechanism. \emph{J. Phys. D Appl. Phys.} \textbf{2018}, \emph{51}, 11. [CrossRef]
+
+8.\ Du, B.X.; Liang, H.C.; Li, J.; Zhang, C. Temperature Dependent Surface Potential Decay and Flashover Characteristics of Epoxy/SiC Composites. \emph{IEEE Trns. Dielectr. Electr. Insul.} \textbf{2018}, \emph{25}, 631–638. [CrossRef]
+
+\pdfpage{14}
+9.\ Li, L.; Yan, C.; Xu, H.; Liu, D.; Shi, P.; Zhu, Y.; Chen, G.; Wu, X.; Liu, W. Improving the interfacial properties of carbon fiber-epoxy resin composites with a graphene-modified sizing agent. \emph{J. Appl. Polym. Sci.} \textbf{2019}, \emph{136}, 47122. [CrossRef]
+
+10.\ Fu, J.; Zhang, M.; Jin, L.; Liu, L.; Li, N.; Shang, L.; Li, M.; Xiao, L.; Ao, Y. Enhancing interfacial properties of carbon fibers reinforced epoxy composites via Layer-by-Layer self assembly GO/SiO\textsubscript{2} multilayers films on carbon fibers surface. \emph{Appl. Surf. Sci.} \textbf{2019}, \emph{470}, 543–554. [CrossRef]
+
+11.\ Koda, T.; Toyoshima, T.; Komatsu, T.; Takezawa, Y.; Nishioka, A.; Miyata, K. Ordering simulation of high thermal conductivity epoxy resins. \emph{Polym. J.} \textbf{2013}, \emph{45}, 444–448. [CrossRef]
+
+12.\ Li, S.; Yu, X.; Bao, H.; Yang, N. High Thermal Conductivity of Bulk Epoxy Resin by Bottom-Up Parallel-Linking and Strain: A Molecular Dynamics Study. \emph{J. Phys. Chem. C} \textbf{2018}, \emph{122}, 13140–13147. [CrossRef]
+
+13.\ Yang, Q.; Li, X.; Shi, L.; Yang, X.; Sui, G. The thermal characteristics of epoxy resin: Design and predict by using molecular simulation method. \emph{Polymer} \textbf{2013}, \emph{54}, 6447–6454. [CrossRef]
+
+14.\ Li, C.; Coons, E.; Strachan, A. Material property prediction of thermoset polymers by molecular dynamics simulations. \emph{Acta Mech.} \textbf{2014}, \emph{225}, 1187–1196. [CrossRef]
+
+15.\ Fu, Y.; Michopoulos, J.G.; Song, J.H. On Investigating the Thermomechanical Properties of Cross-linked Epoxy Via Molecular Dynamics Analysis. \emph{Nanosc. Microsc. Therm.} \textbf{2017}, \emph{21}, 8–25. [CrossRef]
+
+16.\ Fu, Y.; Michopoulos, J.; Song, J.H. Coarse-grained molecular dynamics simulations of epoxy resin during the curing process. \emph{Comput. Mater. Sci.} \textbf{2015}, \emph{107}, 24–32. [CrossRef]
+
+17.\ Jeyranpour, F.; Alahyarizadeh, G.; Arab, B. Comparative investigation of thermal and mechanical properties of cross-linked epoxy polymers with different curing agents by molecular dynamics simulation. \emph{J. Mol. Graph. Model.} \textbf{2015}, \emph{62}, 157–164. [CrossRef]
+
+18.\ Zhang, W.; Qing, Y.; Zhong, W.; Sui, G.; Yang, X. Mechanism of modulus improvement for epoxy resin matrices: A molecular dynamics simulation. \emph{React. Funct. Polym.} \textbf{2017}, \emph{111}, 60–67. [CrossRef]
+
+19.\ Wu, C.F.; Xu, W.J. Atomistic molecular modelling of crosslinked epoxy resin. \emph{Polymer} \textbf{2006}, \emph{47}, 6004–6009. [CrossRef]
+
+20.\ Yang, S.; Qu, J. Computing thermomechanical properties of crosslinked epoxy by molecular dynamic simulations. \emph{Polymer} \textbf{2012}, \emph{53}, 4806–4817. [CrossRef]
+
+21.\ Liu, J.; Shen, J.X.; Cao, D.P.; Zhang, L.Q. Computer Simulation of Dispersion and Interface in Polymer Nanocomposites. \emph{Acta Polym. Sin.} \textbf{2016}, \emph{8}, 1048–1061.
+
+22.\ Zhang, W.; Li, H.; Gao, L.; Zhang, Q.; Zhong, W.; Sui, G.; Yang, X. Molecular simulation and experimental analysis on thermal and mechanical properties of carbon nanotube/epoxy resin composites with different curing agents at high-low temperature. \emph{Polym. Compos.} \textbf{2018}, \emph{39}, E945–E954. [CrossRef]
+
+23.\ Kim, B.; Choi, J.; Yang, S.; Yu, S.; Cho, M. Influence of crosslink density on the interfacial characteristics of epoxy nanocomposites. \emph{Polymer} \textbf{2015}, \emph{60}, 186–197. [CrossRef]
+
+24.\ Li, C.; Strachan, A. Molecular dynamics predictions of thermal and mechanical properties of thermoset polymer EPON862/DETDA. \emph{Polymer} \textbf{2011}, \emph{52}, 2920–2928. [CrossRef]
+
+25.\ Bandyopadhyay, A.; Valavala, P.K.; Clancy, T.C.; Wise, K.E.; Odegard, G.M. Molecular modeling of crosslinked epoxy polymers: The effect of crosslink density on thermomechanical properties. \emph{Polymer} \textbf{2011}, \emph{52}, 2445–2452. [CrossRef]
+
+26.\ Chen, P.; Liu, S.; Wang, D. \emph{Epoxy Resin and Its Application}; Chemical Industry Press: Beijing, China, 2011.
+
+27.\ Capelot, M.; Montarnal, D.; Tournilhac, F.; Leibler, L. Metal-Catalyzed Transesterification for Healing and Assembling of Thermosets. \emph{J. Am. Chem. Soc.} \textbf{2012}, \emph{134}, 7664–7667. [CrossRef]
+
+28.\ Komarov, P.V.; Chiu, Y.T.; Chen, S.M.; Khalatur, P.G.; Reineker, P. Highly cross-linked epoxy resins: An atomistic molecular dynamics simulation combined with a mapping/reverse mapping procedure. \emph{Macromolecules} \textbf{2007}, \emph{40}, 8104–8113. [CrossRef]
+
+29.\ Fan, H.B.; Yuen, M.M.F. Material properties of the cross-linked epoxy resin compound predicted by molecular dynamics simulation. \emph{Polymer} \textbf{2007}, \emph{48}, 2174–2178. [CrossRef]
+
+30.\ Zhang, X.; Wen, H.; Wu, Y. Computational Thermomechanical Properties of Silica-Epoxy Nanocomposites by Molecular Dynamic Simulation. \emph{Polymers} \textbf{2017}, \emph{9}, 430. [CrossRef]
+
+31.\ Xie, Q.; Liang, S.; Liu, B.; Fu, K.; Zhan, Z.; Lu, L.; Yang, X.; Lu, F.; Huang, Z. Structure, microparameters and properties of crosslinked DGEBA/MTHPA: A molecular dynamics simulation. \emph{Aip. Adv.} \textbf{2018}, \emph{8}, 075332. [CrossRef]
+
+\pdfpage{15}
+32.\ Tang, Y.; Tang, C.; Hu, D.; Gui, Y. Effect of Aminosilane Coupling Agents with Different Chain Lengths on Thermo-Mechanical Properties of Cross-Linked Epoxy Resin. \emph{Nanomaterials} \textbf{2018}, \emph{8}, 951. [CrossRef]
+
+33.\ Aghadavoudi, F.; Golestanian, H.; Beni, Y.T. Investigating the Effects of Resin Crosslinking Ratio on Mechanical Properties of Epoxy-Based Nanocomposites Using Molecular Dynamics. \emph{Polym. Compos.} \textbf{2017}, \emph{38}, E433–E442. [CrossRef]
+
+34.\ Fox, T.G.; Flory, P.J. Second-Order Transition Temperatures and Related Properties of Polystyrene. I. Influence of Molecular Weight. \emph{J. Appl. Phys} \textbf{1950}, \emph{21}, 581–591. [CrossRef]
+
+35.\ Wei, Q.; Zhang, Y.; Wang, Y.; Yang, M. A molecular dynamic simulation method to elucidate the interaction mechanism of nano-SiO\textsubscript{2} in polymer blends. \emph{J. Mater. Sci.} \textbf{2017}, \emph{52}, 12889–12901. [CrossRef]
+
+36.\ Duek, K. \emph{Epoxy Resins and Composites III}; Springer-Verlag: Berlin, Germany, 1986.
+
+37.\ Arab, B.; Shokuhfar, A. Molecular dynamics simulation of cross-linked urea-formaldehyde polymers for self-healing nanocomposites: Prediction of mechanical properties and glass transition temperature. \emph{J. Mol. Model.} \textbf{2013}, \emph{19}, 5053–5062. [CrossRef]
+
+38.\ Li, K.; Li, Y.; Lian, Q.; Cheng, J.; Zhang, J. Influence of cross-linking density on the structure and properties of the interphase within supported ultrathin epoxy films. \emph{J. Mater. Sci.} \textbf{2016}, \emph{51}, 9019–9030. [CrossRef]
+
+39.\ Choi, J.; Yu, S.; Yang, S.; Cho, M. The glass transition and thermoelastic behavior of epoxy-based nanocomposites: A molecular dynamics study. \emph{Polymer} \textbf{2011}, \emph{52}, 5197–5203. [CrossRef]
+
+40.\ Gavrilov, A.A.; Komarov, P.V.; Khalatur, P.G. Thermal Properties and Topology of Epoxy Networks: A Multiscale Simulation Methodology. \emph{Macromolecules} \textbf{2015}, \emph{48}, 206–212. [CrossRef]
+\end{hangpars}
+\decompnote{The paper prints the reference list under the heading ``References'' (kept above). ``[CrossRef]'' marks are links in the PDF.}
+
+\medskip
+\noindent{\small © 2019 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).}
+\decompnote{The licence statement is printed next to a CC BY logo at the end of p.\,15.}
+
+\end{document}

@@ -1,0 +1,11 @@
+# Fig. 12 of Fu et al. 2019, Polymers 11, 975: simulated and experimental Young's modulus (bar chart).
+# Provenance: tier 3, digitized from the embedded 220 ppi raster image on p. 12; no source data published.
+# Columns: system = x-axis group; series = legend entry; modulus_GPa = bar top; err_high_GPa = upper error-bar cap minus bar top;
+# err_low_GPa = ASSUMED equal to err_high (the lower half of the error bar is hidden in the hatched bar and was not measured);
+# printed_label = the value printed above the bar; px_x = bar centre column, px_top / px_cap = rows of bar top and cap in the image.
+# Axis fit on the inward y ticks 1-5 GPa (max residual 0.0024 GPa); 1 px = 0.0157 GPa.
+system,series,modulus_GPa,err_low_GPa,err_high_GPa,printed_label,px_x,px_top,px_cap
+DGEBA/MTHPA,Experimental,3.273,0.078,0.078,3.27,163.5,224,219
+DGEBA/MTHPA,Simulated,4.136,0.188,0.188,4.14,268.5,169,157
+DGEBA/NA,Experimental,3.744,0.063,0.063,3.75,425.5,194,190
+DGEBA/NA,Simulated,4.873,0.408,0.408,4.87,530.0,122,96

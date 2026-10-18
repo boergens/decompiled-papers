@@ -1,0 +1,10 @@
+2026.10.15.759299v1.full.pdf
+  bioRxiv full-text PDF of Hesse, Lanfranchi, McGrory, Shi, Engel & Tsao (2026), "Rapid alternation of conscious and
+  suppressed stimulus representations in the primate brain", preprint version 1, posted 16 October 2026,
+  doi:10.64898/2026.10.15.759299, licence CC-BY 4.0 (stated in the footer of every text page).
+  Downloaded 2026-10-17 from https://www.biorxiv.org/content/10.64898/2026.10.15.759299v1.full.pdf with a browser
+  slot on this machine (bioRxiv's Cloudflare front end answers curl with HTTP 429). 50 pages: 34 text pages and 16
+  figure pages (Figures 1-6 on pp. 35-40, Extended Data Figures 1-10 on pp. 41-50). The JATS XML of the preprint
+  was not yet available from the bioRxiv API at that time.
+Not available locally: the electrophysiology data (DANDI, "upon publication") and the analysis code (GitHub,
+  "upon publication") named in the Data and Code availability statements.
