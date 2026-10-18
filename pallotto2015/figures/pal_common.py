@@ -9,9 +9,12 @@ import os, sys, csv
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))          # sep_28__osmium_chemistry
-PAPER = os.path.join(ROOT, "papers", "pallotto2015")
-TOOLS = os.path.join(ROOT, "decompiled", "tools")
+PAPER = os.path.abspath(os.path.join(HERE, "..", "source"))          # this paper's source PDFs (oct_17_papers layout)
+for _d in [os.path.dirname(os.path.abspath(__file__))] + [os.path.abspath(os.path.join(HERE, *([".."] * i))) for i in range(1, 6)]:
+    if os.path.exists(os.path.join(_d, "tools", "digitize_common.py")):   # the collection's shared tools/, wherever this folder sits
+        TOOLS = os.path.join(_d, "tools"); break
+else:
+    raise ImportError("shared tools/ (digitize_common.py) not found above " + HERE)
 WORK = os.path.join(HERE, "..", "work")
 sys.path.insert(0, TOOLS)
 from digitize_common import embedded_image, write_csv, fit_axis  # noqa: E402
