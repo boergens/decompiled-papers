@@ -1,0 +1,4 @@
+Fetched 2026-10-13 by the lead session (oct-12-epoxy-cutting) from NCBI's PMC Open Access bucket: https://pmc-oa-opendata.s3.amazonaws.com/PMC2224339.1/PMC2224339.1.pdf (%PDF checked).
+
+History (earlier failed attempt, superseded by the fetch above; was SOURCE_old_not_fetched.txt):
+  not fetched at that time: full text blocked for curl (bot check); needs browser. Folder left by the material agent, 2026-10-13.

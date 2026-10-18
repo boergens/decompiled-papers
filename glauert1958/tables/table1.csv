@@ -1,0 +1,11 @@
+# Glauert & Glauert 1958, J. Biophys. Biochem. Cytol. 4(2):191-194, p. 193 (PDF page 3): the untitled, unnumbered
+# table of soaking times ("The following table indicates some typical soaking times that have been found to be adequate.").
+# Columns: step = the row label (the mixture the specimen is soaked in); soft_specimens = the column headed
+# "Soft specimens, e.g. lung, liver, spleen, etc."; harder_specimens = the column headed "Harder specimens: muscle,
+# bacteria, etc.". Cell text verbatim (en dashes in the ranges; "48°C." as printed).
+# Sentence after the table: "These times are merely given as an indication of the range of soaking periods that has been
+# tried. The scheme can obviously be modified to meet the requirements of many different types of specimen."
+step,soft_specimens,harder_specimens
+50/50 ethanol/araldite,1–2 hrs. at 48°C.,4–6 hrs. at 48°C.
+"Araldite, less accelerator",2–3 hrs. at 48°C.,24 hrs. at 48°C.
+"Araldite, with accelerator",2–3 hrs. at 48°C.,24 hrs. at room temperature

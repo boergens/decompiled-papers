@@ -1,0 +1,11 @@
+# Glauert & Glauert 1958, J. Biophys. Biochem. Cytol. 4(2):191-194, p. 192 (PDF page 2), section "The Araldite Mixture":
+# the recommended embedding mixture, printed as an untitled two-column list ("the following mixture was recommended as an
+# embedding medium:--"). Not a numbered table of the paper; the rows are its four lines verbatim.
+# Columns: component (as printed); volume_ml (the printed amount, in ml.).
+# Sentence after the list: "This mixture sets in about 48 hours at 48°C. and yields a light gold block that has a similar
+# hardness to methacrylate (methyl/n-butyl:15/85)."
+component,volume_ml
+Araldite M,10.0
+Hardener 964 B,10.0
+Dibutyl phthalate,1.0
+Accelerator 964 C,0.5

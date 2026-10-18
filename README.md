@@ -7,8 +7,9 @@ make their figures accessible (every figure carries a written description). Repr
 not a goal.
 
 This is the public part of a private collection. It holds only papers whose licence allows redistribution
-(Creative Commons Attribution, one public-domain article, and one CC BY-NC-ND article as a deliberate test of the
-format-shift reading of "no derivatives"; see the table). Everything was produced by AI agents (Claude, run by
+(Creative Commons Attribution, one public-domain article, one CC BY-NC-SA article under its publisher's back-content
+policy, and one CC BY-NC-ND article as a deliberate test of the format-shift reading of "no derivatives"; see the
+table). Everything was produced by AI agents (Claude, run by
 Kevin Boergens) following the written procedure in `docs/SPEC.md`, and checked as each paper's README describes.
 Mistakes are possible: the README of each paper reports its text-coverage check against the PDF and what could not
 be recovered. If you find an error, open an issue.
@@ -36,7 +37,8 @@ and descriptions, data files, scripts and notes were added by the decompiler, al
 original paper, not this mirror.
 
 The additions (descriptions, notes, data files, scripts, READMEs, tools) are released under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE`).
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE`), except for papers under a share-alike
+licence, where the additions carry the paper's licence (noted in the table).
 
 ## Papers
 
@@ -48,6 +50,7 @@ The additions (descriptions, notes, data files, scripts, READMEs, tools) are rel
 | `fuk2019` | Kexin Fu, Qing Xie, Fangcheng LÜ, Qijun Duan, Xinjie Wang, Quansheng Zhu, Zhengyong Huang. "Molecular Dynamics Simulation and Experimental Studies on the Thermomechanical Properties of Epoxy Resin with Different Anhydride Curing Agents." *Polymers* **2019**… | [10.3390/polym11060975](https://doi.org/10.3390/polym11060975) | CC BY 4.0 |  |
 | `gabricevic2020` | Mario Gabričević, Gábor Lente, István Fábián. "Kinetic detection of osmium(VI) ester intermediates during the OsO4-mediated aqueous dihydroxylation of chloroethylenes." *J Phys Org Chem* **2020**, 33, e4045. DOI [10.1002/poc.4045](https://doi.org/10.1002/po… | [10.1002/poc.4045](https://doi.org/10.1002/poc.4045) | CC BY |  |
 | `genoud2018` | Christel Genoud, Benjamin Titze, Alexandra Graff-Meyer, Rainer W. Friedrich. "Fast Homogeneous En Bloc Staining of Large Tissue Samples for Volume Electron Microscopy." *Frontiers in Neuroanatomy* **2018**, 12:76 (Methods article). DOI [10.3389/fnana.2018.0… | [10.3389/fnana.2018.00076](https://doi.org/10.3389/fnana.2018.00076) | CC BY |  |
+| `glauert1958` | Audrey M. Glauert and R. H. Glauert. "Araldite as an Embedding Medium for Electron Microscopy." *J. Biophysic. and Biochem. Cytol.*, 1958, Vol. 4, No. 2, pp. 191–194 and Plate 98. Received for publication December 10, 1957. From the Strangeways Research Lab… | [10.1083/jcb.<vol>.<issue>.<page>](https://doi.org/10.1083/jcb.<vol>.<issue>.<page>) | CC BY-NC-SA (Rockefeller University Press policy for all its content six months after publication; nothing printed on the 1958 PDF) | non-commercial, share-alike: the additions to this paper are CC BY-NC-SA too; attribution per RUP: ©1958 Glauert et al. Originally published in J. Biophys. Biochem. Cytol. https://doi.org/10.1083/jcb.4.2.191; basis quoted in its README |
 | `hayworth2014` | Kenneth J. Hayworth, Josh L. Morgan, Richard Schalek, Daniel R. Berger, David G. C. Hildebrand, Jeff W. Lichtman. "Imaging ATUM ultrathin section libraries with WaferMapper: a multi-scale approach to EM reconstruction of neural circuits." *Frontiers in Neur… | [10.3389/fncir.2014.00068](https://doi.org/10.3389/fncir.2014.00068) | CC BY |  |
 | `he2018` | Q. He, M. Hsueh, G. Zhang, D. C. Joy, R. D. Leapman. "Biological serial block face scanning electron microscopy at improved z-resolution based on Monte Carlo model." *Scientific Reports* **8**, 12985 (2018). DOI [10.1038/s41598-018-31231-w](https://doi.org/… | [10.1038/s41598-018-31231-w](https://doi.org/10.1038/s41598-018-31231-w) | CC BY 4.0 |  |
 | `hesse2026` | Janis K. Hesse, Frank F. Lanfranchi, Conor McGrory, Yuelin Shi, Tatiana A. Engel, Doris Y. Tsao. "Rapid alternation of conscious and suppressed stimulus representations in the primate brain." *bioRxiv* preprint, version 1, posted 16 October 2026. DOI [10.64… | [10.64898/2026.10.15.759299](https://doi.org/10.64898/2026.10.15.759299) | CC BY 4.0 | bioRxiv preprint v1 |
