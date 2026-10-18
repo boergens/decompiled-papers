@@ -1,0 +1,9 @@
+# Templier 2019 eLife 8:e45696, Table 1 (PDF p.9). Coordinates of adult male zebra finch nuclei targeted with tracer injections.
+# Footnote: *with a 0 degree pipette angle
+# DOI: https://doi.org/10.7554/eLife.45696.018
+parameter,RA,AreaX,Avalanche
+Head angle (degrees),65,45,45
+Pipette angle (degrees),45,-20,0
+Anterior-Posterior (mm),3,6.45*,1.8
+Media-Lateral (mm),2.45,1.55,2
+Dorso-Ventral (mm),1.3,2.95,1.05

@@ -1,0 +1,75 @@
+# Templier 2019 eLife 8:e45696, Figure 2—figure supplement 2a: 'Histogram of the numbers of matching inliers found
+#   for each of the 203 LM-EM pairs of Dataset 2.'
+# Columns: bin_left, bin_right = bin edges in 'Number of inliers'; frequency_read = bar height read off the image
+#   (Frequency axis units); frequency = the same rounded to the nearest integer (counts are integers).
+# Provenance: tier 3, digitized from the eLife figure-supplement JPEG fig2-figsupp2.jpg (1027 x 1408 px) by
+#   sfig2-2a_extract.py. No vector or source data available.
+#   y fitted on 6 ticks (0-10 in steps of 2; labels 0, 4, 8), max residual 0.009; x fitted on 5 ticks
+#   (500-2500 in steps of 500; labels 1000, 2000), max residual 0.78 inliers.
+#   60 equal bins from the y-axis line to the right edge of the last bar; bin width 41.3 inliers.
+# Uncertainty: about +-0.027 in frequency (1 px); largest deviation of a bar from an integer 0.021.
+#   Bin edges about +-5 inliers (1 px).
+# Check: the integer bar heights sum to 201 (the caption says 203 LM-EM pairs).
+# Oddity: the x tick label '0' is printed under the y-axis line, which by the regular 500-step ticks lies at
+#   x = 67; the histogram starts there (presumably at the smallest inlier count), not at 0.
+bin_left,bin_right,frequency_read,frequency
+66.72,108,1.996,2
+108,149.3,0.002619,0
+149.3,190.6,3.012,3
+190.6,231.9,1.996,2
+231.9,273.2,3.012,3
+273.2,314.6,1.996,2
+314.6,355.9,4.991,5
+355.9,397.2,1.996,2
+397.2,438.5,0.002619,0
+438.5,479.8,1.996,2
+479.8,521.1,1.006,1
+521.1,562.4,4.002,4
+562.4,603.7,6.998,7
+603.7,645,1.996,2
+645,686.3,6.008,6
+686.3,727.6,4.991,5
+727.6,768.9,3.012,3
+768.9,810.2,3.012,3
+810.2,851.5,3.012,3
+851.5,892.8,3.012,3
+892.8,934.1,4.991,5
+934.1,975.5,4.991,5
+975.5,1017,4.991,5
+1017,1058,4.991,5
+1058,1099,3.012,3
+1099,1141,3.012,3
+1141,1182,4.991,5
+1182,1223,6.008,6
+1223,1265,6.008,6
+1265,1306,3.012,3
+1306,1347,6.008,6
+1347,1389,6.008,6
+1389,1430,4.002,4
+1430,1471,8.014,8
+1471,1512,6.998,7
+1512,1554,4.991,5
+1554,1595,4.991,5
+1595,1636,10.02,10
+1636,1678,6.008,6
+1678,1719,4.002,4
+1719,1760,4.991,5
+1760,1802,4.002,4
+1802,1843,0.002619,0
+1843,1884,1.996,2
+1884,1925,1.996,2
+1925,1967,3.012,3
+1967,2008,4.002,4
+2008,2049,1.006,1
+2049,2091,3.012,3
+2091,2132,1.006,1
+2132,2173,3.012,3
+2173,2215,0.002619,0
+2215,2256,1.006,1
+2256,2297,1.006,1
+2297,2339,1.006,1
+2339,2380,2.009,2
+2380,2421,1.996,2
+2421,2462,0.002619,0
+2462,2504,0.002619,0
+2504,2545,1.006,1

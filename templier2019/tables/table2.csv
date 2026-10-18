@@ -1,0 +1,8 @@
+# Templier 2019 eLife 8:e45696, Table 2 (PDF p.10). Characteristics of the two presented datasets.
+# BDA: biotinylated dextran amines
+# DOI: https://doi.org/10.7554/eLife.45696.019
+# The Dataset 1 row stacks three tracers, injection sites and antibodies; here separated by " / " in matching (printed top-to-bottom) order.
+# Note: the Materials and methods (Electron microscopy) give 750 ns dwell time for Dataset 1; this table gives 820.
+Dataset,Section number,Anatomical region,Tracer,Injection site,Primary antibody,Secondary antibody,EM size (µm x µm),EM dwell time (ns),Pixel size (nm)
+1,507,HVC,Alexa 488 / FITC / Texas red,RA / AreaX / Avalanche,Rat anti-488 / Mouse anti-FITC / Goat anti-rhodamine,488 anti-rat / 647 anti-mouse / 546 anti-rhodamine,275 x 205,820,8
+2,203,Dorsal RA,BDA,Caudal RA,mouse anti-BDA,647 anti-mouse,185 x 140,6000,8

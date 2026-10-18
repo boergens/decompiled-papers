@@ -1,0 +1,9 @@
+# TABLE 1. Recovery of disaturated phosphatidylcholine (Mason, Nellenbogen & Clements 1976, J Lipid Res 17:281-284, p. 282)
+# Transcribed from the page image. Values are mean ± standard deviation as printed; split into mean and sd columns.
+# Footnote a (on "A" and "B" of the osmium tetroxide rows): Lipids extracted from lungs of two different rats (A and B).
+# Footnote b (on "Disaturated PC"): The disaturated phosphatidylcholine (PC) is expressed as a percentage of total phospholipid (PL) as determined by measurement of total lipid phosphorus (20). The recoveries are determined from the added 14C-labeled dipalmitoylphosphatidylcholine (21). The numbers are the mean ± standard deviation.
+# Columns: method; preparation (A or B, the footnote-a mark is not repeated here); N; disaturated PC as % of total PL (mean, sd); recovery in % (mean, sd).
+method,preparation,N,disaturated_PC_pct_of_total_PL_mean,disaturated_PC_pct_of_total_PL_sd,recovery_pct_mean,recovery_pct_sd
+Osmium tetroxide,A,10,23.1,0.4,90.7,2.8
+Osmium tetroxide,B,6,21.6,0.4,92.5,1.2
+Mercuric acetate adducts,A,3,21.6,1.8,87.3,1.0

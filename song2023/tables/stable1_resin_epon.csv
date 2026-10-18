@@ -1,0 +1,15 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 1, Part III. Resin infiltration & Embedding, right half: Epon resin
+#   (SI pp. 15-16; 2 mm samples only), recipe: 'Epon resin 5.9 g Epon embedding medium, 2.25 g DDSA, 3.7 g MNA, 205 μl DMP'.
+Step,Conc. (in acetone),2 mm
+1,12.5% resin,"4 h/o.n., 4°C"
+2,25% resin,"4 h/o.n., 4°C"
+3,37.5% resin,"4 h/o.n., 4°C"
+4,50% resin,"4 h/o.n., 4°C"
+5,62.5% resin,"8 h/o.n., 4°C"
+6,75% resin,"8 h/o.n., 4°C"
+7,87.5% resin,"8 h/ o.n., 4°C"
+8,95% resin,"3 days, 4°C
+change every 8h/o.n."
+9,100% resin,"2 days, 4°C;
+change every 8h/o.n."
+10,embed,"60°C, 3 days"

@@ -1,0 +1,948 @@
+nature methods
+
+Brief Communication                                                                                  https://doi.org/10.1038/s41592-023-01866-3
+
+
+High-contrast en bloc staining of mouse
+whole-brain and human brain samples for
+EM-based connectomics
+
+Received: 28 February 2022                         Kun Song          , Zhihui Feng & Moritz Helmstaedter
+
+Accepted: 27 March 2023
+
+Published online: 8 May 2023                       Connectomes of human cortical gray matter require high-contrast
+                                                   homogeneously stained samples sized at least 2 mm on a side, and a mouse
+   Check for updates
+                                                   whole-brain connectome requires samples sized at least 5–10 mm on a side.
+                                                   Here we report en bloc staining and embedding protocols for these and
+                                                   other applications, removing a key obstacle for connectomic analyses at the
+                                                   mammalian whole-brain level.
+
+
+The dense and homogeneous deposition of heavy metals into brain              we applied low-vacuum scanning electron microscopy (SEM)17,18 to
+tissue that leads to high membrane contrast for electron-based imag-         evaluate ultrastructural contrast. This was of particular importance,
+ing is a prerequisite for synaptic-resolution connectomics. Ever since       as samples that had a homogeneous appearance in µCT could reveal
+the development of ‘reduced-osmium’ protocols1–3, en bloc staining of        insufficient membrane contrast or damaged ultrastructure when
+tissue samples up to a thickness of about 100–200 µm was possible.           analyzed by electron microscopy (EM) (Extended Data Figs. 1 and 2).
+Beyond such sample sizes, however, substantial staining gradients                  To achieve the ultimate goal of a 500-fold enlarged infiltration
+occurred, which limited connectomic analyses to smaller samples4,5.          volume (mouse whole brain versus cubic millimeter, Fig. 1a), we first
+With the development of a modified staining protocol6, samples up            worked on the staining of a volume about eightfold to tenfold larger
+to about 1 mm in size could be homogeneously stained, an important           (‘2-mm’ samples, Fig. 1a,b). When we applied the available 1-mm pro-
+step to allow millimeter-size connectomic data acquisition (Fig. 1a).        tocol6 to samples 2 mm in size (Fig. 1b), we observed strong staining
+This protocol has been widely applied since7–10.                             gradients (Fig. 1a and Extended Data Fig. 1a,b) and incomplete resin
+     However, with the ambition to obtain connectomes from even              infiltration (Extended Data Fig. 1j). We then used µCT to investigate
+larger samples, in particular, samples that encompass the gray matter        at which steps in the protocol the gradients occurred, analyzed their
+depth of the human cortex (at least 2 mm in size) and samples correspond-    co-dependence and found that, by prolonging relevant incubation
+ing to entire brains of small mammals such as mice11 or even humans12, the   steps, targeted separation from washing steps, replacing thiocar-
+need for improved protocols became obvious. In spite of the promising        bohydrazide (TCH) with pyrogallol (Pg) as proposed in ref. 13 and
+initial attempts for mouse whole-brain staining13, there is thus far no      introducing additional steps to ensure sample stability, we could
+reliable protocol for en bloc staining of multi-mm-to-centimeter-scale       obtain gradient-free high-contrast samples sized about 2 mm on a side
+samples with high staining contrast. This is particularly challeng-          (Fig. 1b, bottom; see Supplementary Results for a more detailed
+ing, as EM imaging and reconstruction have progressed to a stage             description of the protocol development and insights from these
+at which large-sample analyses appear to become possible7,8,14.              investigations). For obtaining homogeneous resin infiltration, we
+     Here, we report such protocols for samples 2 mm in size (Fig. 1a,b,     considered the fact that the epoxy resin blender would undergo polym-
+8 mm3), mouse hemispheres and whole brains (Fig. 1a,c, 250–500 mm3;          erization during infiltration, which would increase the viscosity of
+see ref. 15 for an initial version of our protocol) and human cortex sam-    the blender, and, once the polymerization process has crossed the
+ples (Fig. 2c–e, 12 mm3). Their development required the concomitant         gel point, no more diffusion would be possible19. Thus, the practical
+solution of the following problems: recurring staining inhomogeneity,        strategy for improving resin infiltration was to slow down polym-
+sample instability that leads to breakages (especially in hemispheres        erization reactions and maintain low viscosity. To do so, we kept all
+and whole-brain samples) and inhomogeneous resin infiltration, as            resin-infiltration steps at 4 °C19,20, added a step with 95% resin in 5%
+described in the following.                                                  acetone (this small amount of acetone substantially decreases the
+     For protocol development, we initially used X-ray microtomog-           resin viscosity21) and extended the incubation times (for details, see
+raphy (µCT) imaging to assess staining gradients13,16. Additionally,         Supplementary Table 1). By these modifications, we infiltrated both
+
+
+Department of Connectomics, Max Planck Institute for Brain Research, Frankfurt, Germany.    e-mail: kun.song@brain.mpg.de; mh@brain.mpg.de
+
+
+Nature Methods | Volume 20 | June 2023 | 836–840                                                                                                836
+Brief Communication                                                                                                                        https://doi.org/10.1038/s41592-023-01866-3
+
+
+ a                                                                                                    b
+                                                                                                                  Overview                 Periphery          Intermediate           Core
+
+
+     OsO4 + FeCN
+                               TCH
+
+
+
+                                     <200 µm
+                                                                                                                     x
+
+
+
+
+                                                 <~1 mm
+                                                                       ×8
+                                                                                                                 x x
+
+
+
+
+                                                                            2 mm
+      Reduced-osmium-TCH                                                                                                     500 µm                                                         500 nm
+            protocol                                 1-mm protocol
+                                                       Hua et al.6
+                                                                                                          1-mm protocol, 2-mm sample
+                                                                                     This protocol
+                                                                      ×500
+
+                                                                                            ~10 mm
+
+                                                           ~5–7 mm
+                                                                                                                 x x
+                        4 mm
+
+
+
+
+                                                                                                                         x
+
+                                                                             ~10 mm                                           500 µm                                                        500 nm
+     2 mm                      Human cortex                          Adult mouse whole brain
+                                                                                                          This protocol, 2-mm sample
+
+ c
+       Adult mouse whole brain                            Cortex (layer 2/3)                Layer 4                          Layer 5              White matter                   Striatum
+
+
+
+
+                        x
+                       x
+                  xx
+              x
+
+
+                                               2 mm                                                                                                                                     500 nm
+                               µCT
+
+
+d
+
+                               Insufficient
+      Typical
+                            stain penetration
+      artifacts
+                                                                                                                                                       Macroscopic
+                                                                                           Microscopic                                                  breakages
+                                Peripheral                                    1 µm          breakages                                  5 µm                                        2 mm
+                               overexposure
+ e
+         Full-volume embedded
+        adult mouse whole brain                                                              Sample
+                                                                                                                                                 Diamond
+                                                                                                     Ultrathin                                     knife
+                                                                                                     section                                                 ~10 µm                 ~10 µm
+                                                                                                                                                            at 37 nm               at 38 nm
+                                                                                                                                  0.5 mm
+                                                                                                                                                                         1 mm
+                                                                         Diamond                                                                                       trimmed
+                                                                           knife
+
+
+
+Fig. 1 | High-contrast staining protocol for brain samples 2 mm to 1                                       (at a voxel size of 5.62 × 5.62 nm2; 113 e− nm−2). μCT data of whole brains: https://
+centimeter in size, applied to human cortical tissue and adult mouse whole                                 wklink.org/7742 and https://wklink.org/7789. d, Illustrations and examples of key
+brains. a, Overview of en bloc staining protocol development: reduced-osmium-                              challenges of hemisphere and mouse whole-brain staining. Yellow arrows point
+TCH protocols1–3,25 for samples up to about 200–250 μm in thickness and a more                             to sites of intracellular overextraction with loss of cytosolic components (left)
+recent6 1-mm protocol, compared to the protocol reported here (gray boxes)                                 and breakages of the sample at microscopic (middle) or macroscopic (right)
+enabling gradient-free en bloc staining of samples 2 mm to 1 centimeter in size                            scale. e, ATUM cutting test at the center of a fully stained and fully embedded
+(sufficient to cover the depth of the human cortex (Fig. 2c–e) and entire adult                            mouse whole-brain sample (sample W3, Spurr’s resin, Supplementary Table 1).
+mouse brains). b, Staining of a sample 2 mm in size using the 1-mm protocol6                               Middle, sketch and picture of ATUM cutting at sample center, trimmed to about
+(top) and our protocol (bottom) (SEM images at a voxel size of 11.24 nm; dose,                             4 × 2 mm2 for ATUM cutting. Right, sketch of the location of two artifact-free
+47 e− nm−2). c, High-contrast staining of whole mouse brains. High-resolution EM                           ATUM test series at the exposed surface and after an additional depth of 1 mm
+images acquired from the superficial cortex to subcortical tissue; approximate                             (Supplementary Video 1).
+positions are indicated in the μCT overview (left). High-resolution SEM images
+
+
+
+
+Spurr’s and Epon epoxy resin into the sample center, yielding homo-                                        initial osmium tetroxide (OsO4) incubation to 3 d and 6 d, which
+geneously embedded samples 2 mm in size (Extended Data Fig. 1j,k).                                         resulted in increased membrane contrast, also in the sample center.
+    To obtain staining and embedding protocols for mouse hemi-                                             But, we encountered a serious obstacle not found in smaller samples:
+spheres about 25-fold larger (Extended Data Fig. 3) and adult mouse                                        when incubating for a sufficient duration for OsO4 to reach the center
+whole brains about 50-fold larger (Fig. 1c–e), we first extended the                                       of the hemisphere sample, the outer parts of the sample were showing
+
+
+Nature Methods | Volume 20 | June 2023 | 836–840                                                                                                                                               837
+Brief Communication                                                                                                                                         https://doi.org/10.1038/s41592-023-01866-3
+
+
+                a                                                                                Manual axon tracing                    b Automated axon reconstruction
+
+                                   Striatum, from hemisphere
+
+
+
+                                                                                                                        Randomly
+                                                                                                                        seeded
+                                                                                                                                                                                              Dense
+                    73 µm
+
+
+
+
+                                                                                                           Striatum
+
+
+
+
+                                                                     Mean inter-error distance
+
+
+
+
+                                                                                                                             reconstructed axons
+                                                                                                  0.6                                              10
+                                                                                                                                                        5
+
+
+
+
+                                                                       along axons (mm)
+
+
+
+
+                                                                                                                                Automatically
+                                                                                                                                                                      Hemisphere
+                                                                                                  0.4                                               3
+                                                                                                                                                   10
+                                                                µm
+
+
+
+
+                                                                                                  0.2
+                                      50 µ                                                                                                         10
+                                                                                                                                                        1
+                                                                                                                                                                     Control
+                                          m
+                                                              40
+
+
+
+
+                                                                                                   0
+                                                                                                        Hemi- Control                                       0                  50           100
+                                                                                                        sphere                                                      Axon path length (µm)
+
+
+                c                                                                                                                           d                    m
+                            Human brain                                                                                                                         m
+                                                                                                                                                            2                  2–3-mm
+                                                                                                                                                                2 mm           protocol
+
+
+
+
+                                                                                                                                                        3 mm
+                                                           Biopsy         Vibratome sections                        Subsampling
+
+
+
+
+                                                                                                                                                                                      Cut in half
+
+                            5 cm                      5 mm
+
+
+
+
+                e                                                                                                                                                        SEM
+                                                     Pia                                                                                                                 (e)                ATUM
+                                             1
+                                             2
+                                                                                                            1                                                                  2
+
+
+                                             3
+                                             4
+                                                       1 mm
+
+
+                                             5
+
+
+
+                                                     White
+                                                     matter
+
+
+                                                 3                                                              4                                                               5
+
+
+
+
+                                                                                                                                                                                              1 µm
+
+
+
+strong signs of ultrastructural disintegration (Fig. 1d; of note, these                                     had already discussed this in the context of overfixation of tissue by
+were not apparent in µCT, only under EM imaging). The cytosol of most                                       OsO4). As the outer part of the sample corresponds to the cortical gray
+neurites and cell bodies had an extracted appearance, possibly indi-                                        matter, a key target of whole-brain connectomic analysis, whole-brain
+cating the removal of intracellular proteins (Fig. 1d; note that Hayat22                                    staining with good stain penetration but insufficient ultrastructural
+
+
+Nature Methods | Volume 20 | June 2023 | 836–840                                                                                                                                                      838
+Brief Communication                                                                                            https://doi.org/10.1038/s41592-023-01866-3
+
+Fig. 2 | Traceability assessment in a mouse hemisphere sample and                  dense axon reconstruction (method as in ref. 24) with resulting axon path-length
+application to the human cortex. a, SBEM dataset (pixel size, 11.24 × 11.24 nm2;   distributions (bottom) for hemisphere striatum (blue) and control striatum
+cutting thickness, 35 nm; electron dose, 28 e− nm−2) from the center of a fully    (black) datasets. c, Immersion fixation, vibratome slicing and sample generation
+stained and fully embedded mouse hemisphere (H6), located in the striatum.         from human brain biopsies from neurosurgical samples (same procedure as in
+Twenty randomly seeded axons (from a bounding box 3 × 3 × 3 μm in size)            ref. 24). d, Processing of a human brain sample using this protocol for large-
+manually reconstructed in the entire dataset. Control SBEM dataset of a mouse      volume staining (here, a 2 × 2 × 3-mm block = 12 mm3). e, Overview EM of a tissue
+striatum from a conventional sample 1 × 1 × 0.5 mm3 in size stained using the      block 3 mm in height spanning the pia and layers 1–6 of the human cortex (top
+1-mm protocol6 and analyzed in the same way (gray bar), yielding a similar         left); high-resolution EM images of various locations along the cortical axis (right
+mean inter-error distance for axon reconstruction (mean and 25th and 75th          and bottom). Pixel size in e, (11.24 nm)2; electron dose, 42 e− nm−2.
+percentiles; Kolmogorov–Smirnov test, P = 0.4814; Methods). b, Automated
+
+
+
+
+quality in the cortical periphery would be inadequate. Because the                 (3D) EM acquisition and axon reconstruction, we acquired a serial
+ultrastructural alterations were likely a result of protein overoxidiza-           block-face SEM (SBEM) dataset from the center (striatum) of one
+tion by prolonged OsO4 incubation (Supplementary Results), which                   stained and full-volume embedded mouse brain hemisphere (Extended
+could be slowed down with a lower incubation temperature (4 °C)22, we              Data Fig. 3c; H6, webKnossos link) and compared this to a control SBEM
+used lower temperatures for OsO4 and ferrocyanide (FeCN) incubation,               dataset from the striatum obtained from a sample 1 × 1 × 0.5 mm3 in
+which solved the peripheral ultrastructural disintegration problem.                size stained with the 1 mm protocol6. Both manual axon reconstruc-
+Additional challenges from the FeCN step were addressed by modified                tion (Fig. 2a) and automated axon reconstruction (Fig. 2b) yielded
+washing steps around the relevant incubations (Supplementary Results               similar results between locally stained control and hemisphere-
+and Extended Data Figs. 4b–f and 5a,b).                                            stained samples.
+      A major remaining problem was that larger samples were consist-                    Finally, we applied our protocol to a sample of human brain
+ently broken during the staining process, either in their entirety into            biopsy to directly test the applicability of our protocol to large human
+several smaller pieces or with microbreakages that would hamper                    brain samples (Fig. 2c–e; tissue was obtained as described in ref. 24,
+dense circuit reconstruction (Fig. 1d). These breakages would usually              patient H6). We stained and embedded a sample 2 × 2 × 3 mm3 in size
+occur in relation to the Pg incubation step (Extended Data Fig. 4g,h).             (that is, 12 mm3 in volume) spanning all cortical layers from the human
+We therefore had to assess the effect of all earlier protocol steps on             frontal cortex. The tissue was homogeneously stained across layers
+the stability of the sample during Pg incubation. This was of particu-             (Fig. 2e). Furthermore, we obtained a cutting series using ATUM to test
+lar importance when the Pg incubation (including the washing steps                 cuttability for large-scale 3D EM (2,733 slices at a cutting thickness of
+before and after) was performed in water, as determined for the 2-mm               35–40 nm from the sample center).
+samples (Extended Data Fig. 1g), and this water incubation could induce                  We envision that the protocols reported here will be useful for
+substantial osmotic forces in the sample. We found that inserting an               large-scale connectomic projects in mice and other species. In particu-
+additional extended OsO4 incubation step after the FeCN step would                 lar, the volume of a mouse brain also approaches relevant cortical and
+stabilize samples such that they could be incubated in water for up                subcortical volumes in higher mammals such as non-human primates
+to 100 h without the occurrence of major breakages (Extended Data                  and humans. The goal of obtaining large connectomes from fractions
+Fig. 4i; a possible explanation is the membrane perforation induced                or the entirety of the human cortex12 will also profit from the advances
+by OsO4, which increases tolerance to osmotic stress22). While this                described here, both for fundamental research and possible clini-
+additional OsO4 step may also serve to enhance background staining                 cal applications, such as connectomic analysis of pathological brain
+and thus sample conductivity for SEM, in our view, the enhanced sta-               specimens from neurosurgical interventions24.
+bility of large samples is the most critical aspect (see Extended Data
+Fig. 6h–n for an alternative approach to avoid incubation with pure                Online content
+water by omitting the second osmium step).                                         Any methods, additional references, Nature Portfolio reporting sum-
+      We applied the hemisphere protocol to n = 4 hemispheres                      maries, source data, extended data, supplementary information,
+(Extended Data Fig. 3a–d), which all remained intact and provided                  acknowledgements, peer review information; details of author contri-
+homogeneous high-contrast staining throughout the sample. In addi-                 butions and competing interests; and statements of data and code avail-
+tion, we stained two entire mouse brains with modest additional exten-             ability are available at https://doi.org/10.1038/s41592-023-01866-3.
+sions of incubation times (Fig. 1c and Extended Data Fig. 3e), yielding
+a mouse whole-brain staining protocol for large-scale connectom-                   References
+ics11 (Extended Data Fig. 7). We observed two types of artifacts that              1.   Karnovsky, M. J. Use of ferrocyanide-reduced osmium tetroxide in
+remained in large-sample staining (Extended Data Fig. 6): the detach-                   electron microscopy. In 11th Annual Meeting, the American Society
+ment of larger blood vessel walls from the surrounding neuropil and                     for Cell Biology (ASCB, 1971; 146).
+rare remaining microbreakages in the subcortical regions with a high               2.   de Bruijn, W. C. Glycogen, its chemistry and morphologic
+rate of myelinated fibers. Also, special care had to be taken to preserve               appearance in the electron microscope I. A modified OsO4
+the integrity of the cerebellum (Extended Data Fig. 6f,g). In general,                  fixative which selectively contrast glycogen. J. Ultrastruct. Res.
+we recommend using longer protocol durations when in doubt about                        42, 29–50 (1973).
+which protocol version to choose (for example, use the whole-brain                 3.   Willingham, C. & Rutherford, A. Use of osmium-
+protocol for samples even slightly larger than a hemisphere).                           thiocarbohydrazide-osmium and ferrocyanide-reduced methods
+      To confirm that our whole-brain embedding protocol would also                     to enhance membrane contrast and preservation in cultured
+yield sufficient sample stability for ultrathin cutting, we performed a                 cells. J. Histochem. Cytochem. 32, 455–460 (1984).
+test series of automated tape-collecting ultramicrotome (ATUM) cut-                4.   Briggman, K. L., Helmstaedter, M. & Denk, W. Wiring specificity
+ting23 on the center of a mouse whole-brain sample that was stained and                 in the direction-selectivity circuit of the retina. Nature 471,
+embedded as a whole and only trimmed for the experiment afterward                       183–190 (2011).
+(Fig. 1e and Supplementary Video 1).                                               5.   Holcomb, P. S. et al. Synaptic inputs compete during rapid
+      To quantitatively determine the sufficiency of our staining quality               formation of the calyx of Held: a new model system for neural
+and resin stability in the center of our samples for three-dimensional                  development. J. Neurosci. 33, 12954–12969 (2013).
+
+
+Nature Methods | Volume 20 | June 2023 | 836–840                                                                                                                  839
+Brief Communication                                                                                   https://doi.org/10.1038/s41592-023-01866-3
+
+6.    Hua, Y., Laserstein, P. & Helmstaedter, M. Large-volume en-bloc        19. Vidil, T. et al. Control of reactions and network structures of epoxy
+      staining for electron microscopy-based connectomics. Nat.                  thermosets. Prog. Polym. Sci. 62, 126–179 (2016).
+      Commun. 6, 1–7 (2015).                                                 20. Korogod, N., Petersen, C. C. & Knott, G. W. Ultrastructural analysis
+7.    Motta, A. et al. Dense connectomic reconstruction in layer 4 of            of adult mouse neocortex comparing aldehyde perfusion with
+      the somatosensory cortex. Science 366, eaay3134 (2019).                    cryo fixation. eLife 4, e05793 (2015).
+8.    Hayworth, K. J. et al. Gas cluster ion beam SEM for imaging of         21. Loos, M. R. et al. The effect of acetone addition on the properties
+      large tissue samples with 10 nm isotropic resolution. Nat. Methods         of epoxy. Polimeros 18, 76–80 (2008).
+      17, 68–71 (2020).                                                      22. Hayat, M. A. Fixation for Electron Microscopy (Academic Press, 1981).
+9.    Kuan, A. T. et al. Dense neuronal reconstruction through               23. Hayworth, K. J. et al. Automating the collection of ultrathin
+      X-ray holographic nano-tomography. Nat. Neurosci. 23,                      serial sections for large volume TEM reconstructions. Microsc.
+      1637–1643 (2020).                                                          Microanal. 12, 86–87 (2006).
+10.   Yin, W. et al. A petascale automated imaging pipeline for mapping      24. Loomba, S. et al. Connectomic comparison of mouse and human
+      neuronal circuits with high-throughput transmission electron               cortex. Science 377, eabo0924 (2022).
+      microscopy. Nat. Commun. 11, 4949 (2020).                              25. Seligman, A. M., Wasserkrug, H. L. & Hanker, J. S. A new staining
+11.   Abbott, L. F. et al. The mind of a mouse. Cell 182,                        method (OTO) for enhancing contrast of lipid-containing
+      1372–1376 (2020).                                                          membranes and droplets in osmium tetroxide-fixed tissue
+12.   Motta, A. et al. Big data in nanoscale connectomics,                       with osmiophilic thiocarbohydrazide (TCH). J. Cell Biol. 30,
+      and the greed for training labels. Curr. Opin. Neurobiol. 55,              424–432 (1966).
+      180–187 (2019).
+13.   Mikula, S. & Denk, W. High-resolution whole-brain staining for         Publisher’s note Springer Nature remains neutral with regard to
+      electron microscopic circuit reconstruction. Nat. Methods 12,          jurisdictional claims in published maps and institutional affiliations.
+      541–546 (2015).
+14.   Januszewski, M. et al. High-precision automated reconstruction         Open Access This article is licensed under a Creative Commons
+      of neurons with flood-filling networks. Nat. Methods 15,               Attribution 4.0 International License, which permits use, sharing,
+      605–610 (2018).                                                        adaptation, distribution and reproduction in any medium or format,
+15.   Song, K., Feng, Z. & Helmstaedter, M. High-contrast en-                as long as you give appropriate credit to the original author(s) and the
+      bloc staining of mouse whole-brain samples for EM-based                source, provide a link to the Creative Commons license, and indicate
+      connectomics. Preprint at bioRxiv 10.1101/2022.03.30.                  if changes were made. The images or other third party material in this
+      486341 (2022).                                                         article are included in the article’s Creative Commons license, unless
+16.   Ströh, S. et al. In situ X-ray-assisted electron microscopy staining   indicated otherwise in a credit line to the material. If material is not
+      for large biological samples. eLife 11, e72147 (2022).                 included in the article’s Creative Commons license and your intended
+17.   Kazmierski, T. M. & Millington, P. F. Modification of an SEM for       use is not permitted by statutory regulation or exceeds the permitted
+      backscattered electron imaging at low vacuum. J. Microsc. 117,         use, you will need to obtain permission directly from the copyright
+      431–436 (1979).                                                        holder. To view a copy of this license, visit http://creativecommons.
+18.   Sommons, R. & Marquis, P. Application of the low vacuum                org/licenses/by/4.0/.
+      scanning electron microscope to the study of biomaterials and
+      mammalian cells. Biomaterials 18, 81–86 (1997).                        © The Author(s) 2023
+
+
+
+
+Nature Methods | Volume 20 | June 2023 | 836–840                                                                                                   840
+Brief Communication                                                                                     https://doi.org/10.1038/s41592-023-01866-3
+
+Methods                                                                       30 min, 60% ethanol at 4 °C; 30 min, 80% ethanol at 4 °C; 45 min, 100%
+Animal experiments                                                            ethanol at RT. For the resin infiltration, after three rinses for 45 min with
+All experimental procedures were approved by the local animal care            pure acetone, the samples went through graded Epon resin steps (for
+and use committee and were in accordance with the laws of animal              10 ml resin: 5.9 g Epon medium, 2.25 g DDSA, 3.7 g MNA, 205 µl DMP)
+experimentation issued by the German federal government (Regierung-           in acetone, all at 4 °C: 4 h, 12.5%; 13 h, 25% (overnight); 4 h, 37.5%; 4 h,
+spräsidium Darmstadt, Germany, permits V54, 19 c 20/15, F126/1028             50%; 19 h, 62.5% (overnight); 8 h, 75%; 19 h, 87.5% (overnight); 8 h, 95%;
+and F126/1002).                                                               19 h, 95% (first overnight for 95%); 8 h, 95%; 19 h, 95% (second overnight
+     Adult C57BL6/J mice (male and female, P30–P90) were treated with         for 95%); 8 h, 95%; 19 h, 95% (third overnight for 95%); 8 h, 100%; 19 h,
+analgesics (0.1 mg per kg buprenorphin (CP-Pharma) and 100 mg per             100% (first overnight for 100%); 8 h, 100%; 19 h, 100% (second overnight
+kg metamizol (WDT)) for 0.5 h before isoflurane anesthesia (Harvard           for 100%); afterward, the samples were embedded in freshly prepared
+Apparatus; 5% in O2 for initialization, 2–3% for maintenance; O2 flow rate,   Epon resin and cured at 60 °C for 3 d.
+1 l min−1). Following anesthesia, the animals were transcardially per-
+fused (Harvard Apparatus, flow rate of 10 ml min−1) using 15 ml sodium        Staining experiments
+cacodylate buffer (0.15 M, pH 7.4, Sigma-Aldrich) followed by 30 ml           All staining and resin-infiltration steps for 2-mm samples were carried
+fixative containing 2.5% paraformaldehyde (Sigma-Aldrich), 1.25%              out in 2-ml Eppendorf tubes and, for hemisphere or whole-brain sam-
+glutaraldehyde (Serva) and 2 mM calcium chloride (Sigma-Aldrich) in           ples, in 50-ml glass tubes at RT (~20–23 °C) unless specified otherwise.
+0.08 M sodium cacodylate buffer (osmolarity of about 700–800 mmol             For steps involving photosensitive chemicals (FeCN, TCH, Pg, UA or lead
+per kg, pH 7.4). The duration between the start of perfusion and inci-        aspartate (Ld)), the tubes were covered with aluminum foil.
+sion of the diaphragm was less than 30 s. After perfusion, animals                  All chemicals used in the staining pipeline are listed in Supplemen-
+were decapitated, the skull was opened with care to avoid mechanical          tary Table 2; all experiments reported in the main and supplementary
+damage to the brain, and the brain was post-fixed in situ for 12–96 h at      figures are detailed in Supplementary Table 3.
+4 °C before extraction from the skull.                                              For simplicity, the following terms were used to refer to the recur-
+     For 2-mm samples, the brain was cut into 2-mm-thick coronal sec-         ring staining steps in different experiments: CaC, sodium cacodylate
+tions in 0.15 M cacodylate buffer using a vibratome (Leica, VT1200).          buffer rinse, 0.15 M, pH 7.4; water, water (Milli-Q) rinse; first Os, the
+Next, a biopsy punch 2 mm in diameter (Kai Medical) was used to               first OsO4 incubation step, 2% OsO4 in 0.15 M CaC, pH 7.4; FeCN, the
+extract samples from dorsal cortical, ventral cortical and subcortical        FeCN incubation step, 2.5% in 0.15 M CaC, pH 7.4; second Os, the OsO4
+regions (Supplementary Fig. 1h). The samples were then stored in              incubation step after FeCN, 2% OsO4 in 0.15 M CaC, pH 7.4; Pg, the Pg
+0.15 M cacodylate buffer at 4 °C for 8–24 h before staining.                  incubation step, 4% in water; TCH, the TCH incubation step, 1% in water;
+     For hemisphere samples, brains were cut with a razor blade               third Os, the OsO4 incubation step after Pg, 2% in water; UA, the UA
+(Wilkinson) along the midline. The hemispheres were stored in 0.15 M          incubation step, UA (2% or 4%) dissolved in water; Ld, the Ld incubation
+cacodylate buffer at 4 °C for 24 h before staining.                           step, 0.66% lead nitrate in 0.03 M aspartic acid, pH 5.0.
+
+Human sample                                                                  Staining of 2-mm samples with the 1-mm protocol
+The human brain tissue sample (human individual H6, same as in                The 1-mm staining protocol (ref. 6 with addition of the second Os step)
+ref. 24) was collected during a neurosurgical procedure that was indi-        was applied to 2-mm samples directly. The samples were stained with
+cated for medical reasons and independently from this research project        the following steps: first Os, 1.5 h; FeCN, 1.5 h; second Os, 1 h; CaC, 0.5 h;
+at the Department of Neurosurgery at the Klinikum rechts der Isar of          water, 0.5 h; TCH, 1.5 h; water, 0.5 h (two times); third Os, 1.5 h; water,
+the Technical University of Munich. The sample was obtained from              0.5 h (two times); 2% UA (17 h at 4 °C, 50 h at 50 °C); water, 0.5 h (two
+access tissue (presumably healthy brain parenchyma that had to be             times); Ld, 2 h at 50 °C; water, 0.5 h (two times). Afterward, the sam-
+removed as part of the procedure and would have been discarded oth-           ples were incubated in a graded ethanol series from 50% (4 °C) to 75%
+erwise) before removal of the respective target lesion, as approved by        (4 °C) to 100% (each step, 45 min). Next, the samples were incubated in
+the Ethics Committee of the Technical University of Munich School of          pure acetone three times, each time for 45 min. Afterward, they were
+Medicine (Ethikvotum 184/16S and 273/21 S-EB). All patients had given         incubated in 50% Spurr’s resin (Sigma-Aldrich, at a ratio of 0.95 g ERL-
+their written informed consent.                                               4221, 5.9 g DER 736, 0.1 g NSA, 113 µl DMAE) in acetone for 6 h. Next, the
+      The human ‘H6’ sample was obtained from the inferior frontal            samples were left overnight with the cap of the Eppendorf tubes open to
+gyrus from a 69-year old female patient during surgical removal of            allow evaporation of acetone. Afterward, the samples were transferred
+a frontal mass lesion (final diagnosis, glioblastoma multiforme), the         into pure Spurr’s resin for 6 h before embedding and curing at 70 °C
+same patient as in ref. 24. Following surgical removal, tissue was directly   for 1–3 d. After resin curing, the samples were first imaged by μCT for
+collected in fix solution kept at 4 °C. The tissue was immediately sliced     staining homogeneity. Next, they were trimmed to expose the sample
+into 2-mm-thin slices in cold fixative using a vibratome. Slices were kept    center; the sample surface was smoothed and imaged in high-vacuum
+at 4 °C overnight. Samples sized 2 × 3 mm2 were then cut out from the         SEM and energy-dispersive X-ray spectroscopy (EDS).
+slices with razor blades.
+      The 2 × 3 × 2-mm3 samples were stained based on the 2-mm proto-         Step-by-step μCT diagnosis of the main staining steps of the
+col (Extended Data Fig. 7) with minor modifications (Supplementary            1-mm protocol on 2-mm samples
+Table 1). In brief, after four rinses for 30 min with 0.15 M sodium caco-     The 1-mm staining protocol (ref. 6 with the addition of the second Os
+dylate buffer (CaC) (4 °C), the following steps were applied sequen-          step) was applied to a batch of 2-mm samples as described above: first
+tially: 22 h, 2% OsO4 in 0.15 M CaC (pH 7.4) at room temperature (RT);        Os, 1.5 h; FeCN, 1.5 h; second Os, 1 h; CaC, 0.5 h; water, 0.5 h; TCH, 1.5 h;
+four rinses for 30 min with 0.15 M CaC at RT; 22 h, 2.5% FeCN in 0.15 M       water, 0.5 h (two times); third Os, 1.5 h; water, 0.5 h (two times); 2% UA
+CaC (pH 7.4) at RT; 6 h, 2% OsO4 in 0.15 M CaC (pH 7.4) at RT; 30 min,        (17 h at 4 °C, 50 h at 50 °C); water, 0.5 h (two times); Ld, 2 h at 50 °C;
+0.15 M CaC; three rinses for 20 min with water at RT; 18 h, 2% Pg in          water, 0.5 h (two times). After each main step (first Os, FeCN, second
+water at RT; three rinses for 20 min with water; 6 h, 2% OsO4 in water;       Os, third Os, UA), two samples were taken out from the staining pipeline
+three rinses for 20 min with water; 14 h, 4% uranyl acetate (UA) at 4 °C      and rinsed with either CaC or water, depending on the solvent condi-
+(afterward, switch temperature to 50 °C for 2 h); three times for 20 min      tion of the corresponding staining step (rinsing solution was changed
+with water. Afterward, the samples went through graded ethanol dehy-          every 8 or 17 h). When the rinsing was complete for all samples from
+dration steps: 30 min, 20% ethanol at 4 °C; 30 min, 40% ethanol at 4 °C;      different conditions, samples were embedded in 2% agarose in water
+
+
+Nature Methods
+Brief Communication                                                                                        https://doi.org/10.1038/s41592-023-01866-3
+
+in the same Eppendorf tube at different tube depths and stored at 4 °C           first Os, 3 h; FeCN, 17 h; second Os, 3 h; CaC, 0.5 h; water, 0.5 h (twice);
+for the agarose to cure. Next, the tube containing all the samples was           Pg in water (for 6 or 17 h); water, 0.5 h (twice); third Os (for 3 or 6 h);
+imaged by μCT to investigate staining gradients.                                 water, 0.5 h (twice); 2% UA (17 h at 4 °C, 2 h at 50 °C); water, 0.5 h (twice).
+                                                                                 The combinations of Pg and third Os incubation times were as follows:
+Extending the FeCN incubation time for 2-mm samples                              (1) Pg, 6 h; third Os, 3 h; (2) Pg, 17 h; third Os, 3 h; (3) Pg, 17 h; third Os,
+The 2-mm samples were stained as follows: first Os, 3 h; FeCN. During            6 h. After staining, the samples were dehydrated and embedded in
+the FeCN incubation, two samples were taken out at each of the fol-              Spurr’s resin as described above for 2-mm samples. After resin curing,
+lowing time points: 1.5 h, 3 h, 7 h and 17 h. Samples were then rinsed           they were trimmed to expose the center, their surface was smoothed,
+with CaC for 1 h and embedded in 2% agarose as described above.                  and they were imaged by high-vacuum SEM.
+After agarose curing, they were imaged by μCT to investigate staining
+gradients possibly related to FeCN incubation.                                   UA and Ld steps for 2-mm samples
+                                                                                 Four groups of 2-mm samples (groups differ in incubation of UA and
+Interaction between OsO4 incubation duration and FeCN                            Ld steps) were stained using the following protocol: first Os, 3 h;
+incubation                                                                       FeCN, 17 h; second Os, 3 h; CaC, 0.5 h; water, 0.5 h (twice); Pg in water
+The 2-mm samples were stained using the following two conditions:                (17 h); water, 0.5 h (twice); third Os, 6 h; water, 0.5 h (twice); 2% or
+(1) first Os, 3 h; FeCN, 17 h or (2) first Os, 24 h; FeCN, 17 h. Next, they      4% UA (17 h at 4 °C, 2 h at 50 °C); water, 0.5 h (twice); Ld, 50 °C, 4 h
+were rinsed sequentially with CaC (for 0.5 h) and water (two times, each         or 24 h; water, 0.5 h (twice). The combinations of UA and Ld incuba-
+time for 0.5 h); they were then dehydrated and embedded according                tions were as follows: (1) 2% UA; no Ld; (2) 2% UA; Ld, 4 h; (3) 4% UA; no
+to the 2-mm Spurr’s resin protocol. After resin embedding, they were             Ld; (4) 4% UA; Ld, 24 h. After staining, the samples were dehydrated
+trimmed to expose the center, their surface was smoothed, and they               and embedded in Spurr’s resin as described above for 2-mm samples.
+were imaged by low-vacuum SEM to investigate membrane contrast.                  After resin curing, samples were imaged by μCT and then trimmed to
+                                                                                 expose the center; their surface was smoothed and imaged by high-
+Extending the TCH incubation for 2-mm samples                                    vacuum SEM.
+Three groups of 2-mm samples were stained; each batch was incubated
+with TCH for a different incubation length, using the following pro-             Temperature of the OsO4 incubation step
+tocol: first Os, 3 h; FeCN, 17 h; second Os, 3 h; CaC, 0.5 h; water, 0.5 h       Two groups of 2-mm samples were stained according to the following
+(two times); TCH for 1.5 h or 3 h or 5 h; water, 0.5 h (two times); third        steps: (1) Os (4 °C, 7 d) or (2) Os (4 °C, 7 d; RT, 1 d). After staining, the
+Os, 3 h. Afterward, they were rinsed and embedded in 2% agarose for              samples were dehydrated and embedded in Spurr’s resin as described
+imaging by μCT.                                                                  above for 2-mm samples. After resin curing, they were trimmed to
+                                                                                 expose the center, their surface was smoothed, and they were then
+Replacing TCH with pyrogallol                                                    imaged by low-vacuum SEM.
+Three groups of 1-mm samples were stained; each group differed in the
+TCH-related step, using the following protocol: first Os, 1.5 h; FeCN,           OsO4 incubation at 4 °C followed by FeCN incubation
+1.5 h; second Os, 1 h; CaC, 0.5 h; water, 0.5 h; TCH, 1.5 h or Pg, 1.5 h or      Four groups of samples were stained according to the following steps:
+water, 1.5 h; water, 0.5 h (two times); third Os, 1.5 h; water, 0.5 h (two       (1) Os (4 °C, 6 d; RT, 1 d), FeCN (RT, 1 d); (2) Os (4 °C, 6 d; RT, 1 d), FeCN
+times); 2% UA (17 h at 4 °C, 50 h at 50 °C); water, 0.5 h (two times); Ld, 2 h   (4 °C, 1 d); (3) Os (4 °C, 7 d), FeCN (RT, 1 d); (4) Os (4 °C, 7 d), FeCN (4 °C,
+at 50 °C; water, 0.5 h (two times). Afterward, they were dehydrated and          1 d). After staining, the samples were dehydrated and embedded in
+embedded in resin according to ref. 6. After resin curing, the samples           Spurr’s resin as described above for 2-mm samples. After resin curing,
+were trimmed to expose the center, their surface was smoothed, and               they were trimmed to expose the center, their surface was smoothed,
+they were imaged by high-vacuum SEM and EDS. For EDS measurement,                and they were imaged by low-vacuum SEM.
+we selected point measurements in the neuropile of the sample center.
+                                                                                 Diffusion of OsO4 at 4 °C in hemisphere samples
+Comparison of pyrogallol incubation in water versus CaC                          A hemisphere was incubated in OsO4 at 4 °C. At different time points
+Two groups of 2-mm samples (the groups differ in Pg incubation and the           (17 h, 24 h, 40 h), it was taken out of the fridge to perform a fast μCT
+water steps around Pg) were stained with the following sequential incu-          scan (usually about 15–20 min in total) and then returned to the
+bation steps: first Os, 24 h; FeCN, 17 h; second Os, 3 h; CaC, 0.5 h; water,     fridge at 4 °C. µCT images were analyzed using Zeiss TXM3DViewer
+0.5 h (twice); Pg in water, 17 h; water, 0.5 h (twice) or CaC, 0.5 h (twice);    software, in which the depth of OsO4 diffusion was measured in
+Pg in CaC, 17 h; CaC, 0.5 h (twice); third Os, 6 h; water, 0.5 h (twice); 4%     sagittal reslices.
+UA (17 h at 4 °C, 2 h at 50 °C); water, 0.5 h (twice). Samples were then
+dehydrated and embedded in Spurr’s resin as described above for 2-mm             Effect of CaC steps on the staining gradient in hemispheres
+samples. After resin curing, they were trimmed to expose the center,             Two groups of hemispheres were stained with the following two con-
+their surface was smoothed, and they were imaged by high-vacuum SEM.             ditions: (1) Os, 48 h; FeCN, 48 h or (2) Os, 48 h; CaC, 48 h; FeCN, 48 h.
+                                                                                 After staining, the hemispheres were briefly rinsed with CaC and cut
+Long-duration OsO4 incubation for 2-mm samples                                   into coronal sections of about 2 mm in thickness with a razor blade.
+The 2-mm samples were stained with 2% OsO4 in CaC for either 3 d or              Afterward, the coronal sections were dehydrated and embedded in
+6 d. After rinsing with 0.15 M CaC for 0.5 h and two times with water            Spurr’s resin as described above for 2-mm samples. After resin cur-
+(each time for 0.5 h), the samples were dehydrated and embedded                  ing, they were imaged by μCT and then trimmed flat to expose the top
+according to the 2-mm Spurr’s resin protocol. Next, they were trimmed            surface and smoothed and imaged by low-vacuum SEM.
+to expose the center, their surface was smoothed, and they were imaged
+by low-vacuum SEM for determining ultrastructural preservation.                  Effect of CaC steps on the velocity of FeCN diffusion
+                                                                                 Two groups of 2-mm samples were stained with the following two
+Extended pyrogallol and the third OsO4 incubation for 2-mm                       conditions: (1) Os, 24 h; FeCN, 1.5 h or (2) Os, 24 h; CaC, 24 h; FeCN,
+samples                                                                          1.5 h. After staining, the samples were dehydrated and embedded in
+Three groups of 2-mm samples (groups differ in the incubation dura-              Spurr’s resin as described above for 2-mm samples. After resin cur-
+tion of Pg and third Os steps) were stained using the following protocol:        ing, they were imaged by μCT and then trimmed flat to expose the top
+
+
+Nature Methods
+Brief Communication                                                                                        https://doi.org/10.1038/s41592-023-01866-3
+
+surface and smoothed and imaged by low-vacuum SEM and EDS. For                   hemispheres. After resin curing, it was trimmed to expose the center,
+EDS measurement, we selected point measurements in the neuropile                 and the surface was smoothed and imaged by high-vacuum SEM.
+of the sample center.
+                                                                                 Whole-brain staining (W1)
+Interaction of pyrogallol incubation with the Os–FeCN                            A mouse whole-brain sample (W1) was stained according to the fol-
+gradient (H3)                                                                    lowing steps: first Os (4 °C, 96 h); CaC (4 °C, 168 h); FeCN (4 °C, 72 h);
+A hemisphere sample (H3) was stained according to the following steps:           CaC (4 °C, 48 h; RT, 48 h); second Os (48 h); CaC (72 h); water (48 h); Pg
+first Os (4 °C, 96 h; RT, 24 h), CaC (4 °C, 48 h); FeCN (4 °C, 48 h); second     (24 h); water (48 h); third Os (96 h); 4% UA (4 °C, 48 h; 50 °C, 5.5 h); water
+Os (72 h); CaC (24 h); water (29 h); Pg (24 h); water (48 h); third Os (48 h);   (24 h). For all CaC and water steps, the corresponding solutions were
+4% UA (4 °C, 48 h; 50 °C, 5 h); water (42 h). For all CaC and water steps,       changed every 4 h or overnight (that is, once in the morning, noon and
+the corresponding solutions were changed every 4 h or overnight                  afternoon). During staining, the brain was imaged by μCT at the main
+(that is, once in the morning, noon and afternoon). During staining,             staining steps (during the first Os step, after the second Os step, after
+the hemispheres were imaged by μCT at the main staining steps (after             Pg). After staining, the brain was cut into coronal sections ~2 mm thick.
+FeCN, after second Os, after Pg). After staining, the hemisphere was             Next, the sections were embedded according to Spurr’s resin embed-
+cut into coronal sections about 2 mm thick with a razor blade. After-            ding for 2-mm samples. After resin curing, the sections were trimmed
+ward, the coronal sections were dehydrated and embedded in Spurr’s               flat to expose the surface, smoothed and checked by high-vacuum SEM.
+resin as described above for 2-mm samples. After resin curing, they
+were trimmed flat to expose the top surface, smoothed and imaged                 Effect of the second Os step on sample stability in water
+by high-vacuum SEM.                                                              Two groups of 2-mm samples (the groups differed in whether they were
+                                                                                 exposed to a second Os step) were incubated under the following condi-
+Interaction of pyrogallol incubation with the Os–FeCN                            tions: (1) first Os, 24 h; CaC, 24 h; FeCN, 24 h; second Os, 3 h; CaC, 0.5 h;
+gradient and CaC (H1 and H2)                                                     water (two times, 0.5 h); water or (2) first Os, 24 h; CaC, 24 h; FeCN, 24 h;
+Two hemisphere samples (H1 and H2) were stained according to the                 CaC, 0.5 h; water (two times, 0.5 h); water. Afterward, the samples were
+following steps: first Os (4 °C, 63 h; RT, 24 h); CaC (4 °C, 24 h); FeCN         kept in water and imaged with the light microscope at different time
+(4 °C, 48 h); CaC (24 h); second Os (32 h); CaC (17 h); water (9 h); Pg          points (from 2 h to 100 h) to investigate macroscopic sample integrity.
+(48 h); water (40 h); third Os (48 h); 4% UA (4 °C, 48 h; 50 °C, 5 h); water
+(48 h). For all CaC and water steps, the corresponding solutions were            Pyrogallol–osmium(VI) interaction
+changed every 4 h or overnight (that is, once in the morning, noon and           For Extended Data Fig. 6, mouse hemisphere samples were stained
+afternoon). During staining, the hemispheres were imaged by μCT at               according to one of the following options: (1) Os, 4 °C, 72 h; CaC, 4 °C,
+the main staining steps (after FeCN, after second Os, after Pg). After           96 h; FeCN, 4 °C, 72 h; CaC, 48 h; Os, 48 h; CaC, 24 h; CaC, 24 h; Pg,
+staining, the hemisphere was cut into coronal sections about 2 mm                24 h; (2) Os, 4 °C, 72 h; CaC, 4 °C, 96 h; FeCN, 4 °C, 72 h; CaC, 48 h;
+thick with a razor blade. Afterward, the coronal sections were dehy-             CaC, 48 h; CaC, 24 h; CaC, 24 h; Pg, 24 h; (3) Os, 4 °C, 72 h; CaC, 4 °C,
+drated and embedded in Spurr’s resin as described above for 2-mm                 96 h; FeCN, 4 °C, 72 h; CaC, 48 h; Os, 48 h; KCl, 24 h; KCl, 24 h; Pg, 24 h;
+samples. After resin curing, they were trimmed flat to expose the top            (4) Os, 4 °C, 72 h; CaC, 4 °C, 96 h; FeCN, 4 °C, 72 h; CaC, 48 h; Os, 48 h;
+surface, smoothed and imaged by high-vacuum SEM.                                 KCl, 24 h, pH 7; KCl, 24 h, pH 7; KCl, pH 1; KCl, 24 h, pH 7; Pg, 24 h. After
+                                                                                 Pg, the samples were scanned by μCT with the parameters described
+Effect of CaC incubation at room temperature for 2 d on the                      in the section X-ray microtomography volumetric imaging of samples
+Os–FeCN gradient (H4–H6)                                                         without resin embedding.
+Three hemisphere samples (H4–H6) were stained according to the fol-                   Afterward, the hemisphere sample from condition (2) was cut into
+lowing steps: first Os (4 °C, 72 h; RT, 24 h); CaC (48 h); FeCN (4 °C, 48 h);    ~2-mm coronal chunks for further processing. The coronal sections
+CaC (24 h); second Os (48 h); CaC (24 h); water (24 h); Pg (24 h); water         were rinsed with CaC for 24 h and then stained with either Os in water
+(24 h); third Os (24 h); 4% UA (4 °C, 48 h; 50 °C, 5 h); water (48 h). For all   or Os in CaC for 24 h. Afterward, they were embedded according to the
+CaC and water steps, the corresponding solutions were changed every              2-mm Spurr’s resin-embedding protocol. After the resins were cured,
+4 h or overnight (that is, once in the morning, noon and afternoon).             the samples were cut into halves and checked with low-vacuum SEM
+During staining, the hemispheres were imaged by μCT at the main                  for membrane contrast.
+staining steps (after FeCN, after second Os, after Pg). After staining,
+H5 was cut into coronal sections about 2 mm thick with a razor blade.            Dehydration of 2-mm samples
+Afterward, the coronal sections were dehydrated and embedded in                  After the last water rinsing step in the staining protocol, 2-mm samples
+Spurr’s resin as described above for 2-mm samples. H4 and H6 were                were exposed to graded dehydration series in ethanol (50%, 4 °C; 75%,
+embedded in Spurr’s resin. After resin curing, H5 was trimmed flat to            4 °C; and 100%, RT; each step for 45 min) and then three rounds of
+expose the top surface, smoothed and imaged by high-vacuum SEM.                  acetone incubation (each 45 min).
+H4 and H6 were trimmed to expose the center, and the surface was
+smoothed and imaged by high-vacuum SEM.                                          Dehydration of hemispheres
+                                                                                 After the last water rinsing step in the staining protocol, hemisphere
+Effect of CaC incubation at 4 °C for 4 d on the Os–FeCN                          samples were exposed to graded dehydration series in ethanol (25%,
+gradient (H13)                                                                   4 °C; 50%, 4 °C; 75%, 4 °C; and 100%, RT; each step for 8 h or overnight)
+A hemisphere sample (H13) was stained according to the following                 and then three rounds of acetone incubation (each time for 8 h or
+steps: first Os (4 °C, 68 h); CaC (4 °C, 96 h); FeCN (4 °C, 72 h); CaC (48 h);   overnight).
+second Os (48 h); CaC (24 h); water (24 h); Pg (24 h); water (24 h); third
+Os (41 h); 4% UA (4 °C, 48 h; 50 °C, 12 h); water (24 h). For all CaC and        Dehydration of whole-brain samples
+water steps, the corresponding solutions were changed every 4 h or               After the last water rinsing step in the staining protocol, whole-brain
+overnight (that is, once in the morning, noon and afternoon). Dur-               samples (for example, W3) for subsequent full-volume embedding
+ing staining, the hemispheres were imaged by μCT at the main stain-              were exposed to graded dehydration series in ethanol (25% at 4 °C for
+ing steps (after the second Os step and after Pg). After staining, the           12 h, 50%, 75% and 100%; each step at 4 °C and for 24 h) and then three
+hemisphere was embedded according to Spurr’s resin embedding for                 rounds of acetone incubation (each time for 24 h).
+
+
+Nature Methods
+Brief Communication                                                                                    https://doi.org/10.1038/s41592-023-01866-3
+
+Infiltration of Spurr’s resin and embedding of 2-mm samples                    X-ray microtomography volumetric imaging of samples
+After dehydration, a graded incubation of Spurr’s resin (0.95 g ERL-4221,      without resin embedding
+5.9 g DER 736, 0.1 g NSA, 113 µl DMAE) was applied at 25%, 50% and 75%         To allow imaging by µCT without the need for resin embedding, 2-mm
+in acetone (each step for 8 h or overnight). Afterward, the samples            samples were embedded instead in 2% agarose (Sigma-Aldrich) in 0.15 M
+were incubated for four rounds in 100% Spurr’s resin (each time for            CaC or in water (depending on the last staining step that the sample was
+8 h or overnight). Finally, they were embedded in freshly prepared             exposed to) in 2-ml Eppendorf tubes. They were imaged by μCT (Zeiss
+Spurr’s resin and cured at 70 °C for 1–3 d. All steps were performed at        Xradia 520 Versa) using a voltage of 80 kV at a voxel size of 3–6 µm,
+4 °C. For each resin exchange, the tubes were taken out from the fridge        using Zeiss Scout-and-Scan software (version 16.1.14271.44713). For
+20–30 min before to be warmed to RT.                                           µCT imaging of hemispheres, the samples were kept in the 50-ml glass
+                                                                               tubes. Next, the glass tubes were put into a 140-ml syringe to be kept
+Infiltration of Spurr’s resin and embedding of hemisphere                      stable during µCT imaging (using a voxel size of 10–60 µm). µCT data-
+samples                                                                        sets were visualized with Zeiss TXM3DViewer software (version 1.2.10).
+After dehydration, a graded incubation of Spurr’s resin (0.95 g ERL-4221,
+5.9 g DER 736, 0.1 g NSA, 113 µl DMAE) was applied at 25%, 50% and 75%         Low-vacuum SEM imaging of incompletely stained samples
+in acetone (each step for 24 h). Afterward, the samples were incubated         To investigate samples at intermediate staining steps without com-
+for 2 d in 90% resin, for 3 d in 95% resin and for 3 d in 100% resin (chang-   plete staining (and therefore often reduced signal and conductiv-
+ing every 8 h or overnight for 90%, 95% and 100% resin steps). Finally,        ity), they were embedded in resin. Next, they were trimmed with a
+they were embedded in freshly prepared Spurr’s resin and cured at              diamond head trimmer (Leica EM TRIM2) to expose the center to the
+70 °C for 1–3 d. All resin steps were performed at 4 °C. For each resin        block faces of samples; the block face was smoothed with a diamond
+exchange, the tubes were taken out from the fridge 20–30 min before            knife ultramicrotome (Leica EM UC7) and then imaged in a scanning
+to be warmed to RT.                                                            electron microscope with a field-emission cathode and low-vacuum
+                                                                               mode (Quanta FEG 450, FEI). The chamber pressure was set to 30 Pa.
+Infiltration of Spurr’s resin and full-volume embedding of                     For the incident electron beam, a spot size of 3.5 at aperture 5 and an
+whole-brain samples                                                            acceleration energy of 5 keV (measured beam current, 67 pA) were used
+After dehydration, a graded incubation of Spurr’s resin (0.95 g ERL-4221,      for imaging at a pixel dwell time of 8–20 μs and a pixel size of 11.24 nm2
+5.9 g DER 736, 0.1 g NSA, 113 µl DMAE) was applied at 25%, 50% and 75%         in plane (corresponding electron dose, 26–66 e− nm−2) or 5.62 nm2 in
+in acetone (25% and 50% for 2 d and 75% for 3 d). Afterward, whole-brain       plane (corresponding electron dose, 105–264 e− nm−2), at a working
+samples (for example, W3) were incubated for 2 d in 90% resin, for 4 d         distance of about 5 mm using the back scattered electron CBS detector.
+in 95% resin and for 6 d in 100% resin. The solutions with 95% and 100%
+resin were changed every 2 d. Finally, they were embedded in freshly           High-vacuum SEM imaging of completely stained samples
+prepared Spurr’s resin and cured at 70 °C for 3 d. All resin steps were        For those samples that were fully stained and embedded in resin (and
+performed at 4 °C. For each resin exchange, the tubes were taken out           therefore were expected to show sufficient conductivity), trimming
+from the fridge 20–30 min before to be warmed to RT.                           and smoothing were similar to those of the previous section, but SEM
+                                                                               imaging was performed in high-vacuum mode (5 × 10−4 Pa, Quanta
+Measurement of fluidity of Epon resin                                          FEG 420 and Quanta FEG 200). For the incident electron beam, a spot
+Ten milliliters of Epon resin (Sigma-Aldrich, with a ratio of 5.9 g Epon       size of 3.2–3.5 and an acceleration energy of 2.8 keV at aperture 4–5
+medium, 2.25 g DDSA, 3.7 g MNA and 205 µl DMP) was prepared and                (beam current, 72–160 pA) were used. The pixel size was either 11.24 nm
+stored in 15-ml Falcon tubes for different conditions: pure resin at RT        (Quanta FEG 420; aperture 4; spot size, 3.5; pixel dwell time, 4–6 µs;
+(n = 2, green curves in Extended Data Fig. 1k), pure resin at 4 °C (n = 3,     31–47 e− nm−2) (Quanta FEG 200; aperture 5; spot size, 3.2; dwell time,
+blue curves in Extended Data Fig. 1k) and 95% resin with 5% acetone at         8 µs; 28 e− nm−2) or 5.62 nm (Quanta FEG 200; aperture 5; spot size, 3.2;
+4 °C (n = 4, red curves in Extended Data Fig. 1k). At different time points,   dwell time, 8 µs; 113 e− nm−2).
+videos were acquired of the resin moving in the tube after being turned
+upside down. The distance of movement of the resin in the tube was             Energy-dispersive X-ray spectroscopy (EDS) analysis
+measured using the ticks (ml) printed on the Falcon tubes. The speed           Resin-embedded samples were trimmed to expose the center as a block
+of resin movement was used as a measurement of the resin’s fluidity.           face (Leica EM TRIM2), smoothed (Leica EM UC7) and coated with a
+                                                                               10-nm gold layer (Leica EM ACE600); afterward, they were imaged in
+Infiltration with Epon resin and embedding of 2-mm samples                     a scanning electron microscope (Amray 1830) equipped with an Si(Li)
+After dehydration, samples were incubated in pure acetone three                EDS detector. An incident electron beam with an energy of 18 keV was
+times, each time for 45 min. Next, a graded incubation of Epon resin           used at working distance of 15–20 mm and a takeoff angle of 20.4°. The
+(5.9 g Epon medium, 2.25 g DDSA, 3.7 g MNA, 205 µl DMP) was applied            spectrum-collection time was 20–90 s.
+at 12.5%, 25%, 37.5%, 50%, 62.5%,75% and 87.5% in acetone (each step for
+4 h or overnight). Afterward, the samples were incubated for four to six       UV–visible spectrum acquisition of osmium(VI) solution
+rounds in 95% Epon resin (each time for 8 h or overnight) and then for         We prepared 1% potassium osmate(VI) in 0.15 M sodium cacodylate
+four rounds in 100% Epon resin (each time for 8 h or overnight) before         buffer by adding 0.05 g potassium osmate(VI) powder (Sigma-Aldrich)
+embedding for curing at 60 °C for 1–3 d. All resin steps were carried          into 5 ml cacodylate buffer. The solution was diluted 100 times and put
+out at 4 °C. For each resin exchange, the tubes were taken out from the        into a glass cuvette to avoid spectrum signal clipping. The measure-
+fridge 20–30 min before for warming to RT.                                     ment was performed using the wavelength range 190–1,400 nm on a
+                                                                               UV–visible spectrometer ( Jasco, V-670). Measurements on the same
+Light microscopic imaging of the sample surface to assess                      solution were made at time points 2 min, 2 h and 24 h.
+resin gradient
+Resin-embedded samples (2-mm hemispheres) were trimmed to                      Raman spectrum measurement of osmium(VI) and FeCN
+expose the center, and the surface was smoothed with a diamond                 solutions
+knife. Light microscopic images of the sample surface were acquired            We measured the following chemicals without dilution in a custom-built
+with a slight tilt of the imaging plane, such that the otherwise black         Raman spectrometer (Chemistry Department of Goethe Univer-
+sample surface appeared silver colored.                                        sity Frankfurt) with a range of 0–4,400-cm−1 wavelength: (1) 0.15 M
+
+
+Nature Methods
+Brief Communication                                                                                  https://doi.org/10.1038/s41592-023-01866-3
+
+sodium cacodylate buffer; (2) 1% potassium osmate(VI) in 0.15 M             center of a sample were measured. Data were presented as mean ± s.d.
+cacodylate buffer; (3) 0.3% potassium osmate(VI) and 1.3% potassium         as obtained from the EDS system. The staining experiments were rep-
+ferrocyanide(II) (Sigma-Aldrich) in 0.15 M cacodylate buffer; (4) 2.5%      licated ≥3 times, while EDS was performed on one sample from each
+potassium ferrocyanide(II) in 0.15 M cacodylate buffer; (5) 1.9% potas-     condition.
+sium ferricyanide(III) (Sigma-Aldrich) in 0.15 M cacodylate buffer; (6)          For the staining experiments on 2-mm and human samples, the
+staining solution of 2-mm samples in 2-ml Eppendorf tubes, after 24 h       number of replications was ≥3; for hemisphere and whole-brain stain-
+of 2% OsO4 (Serva) in 0.15 M cacodylate buffer, 1 h of 0.15 M cacodylate    ing experiments, the number of replications was ≥2 (Supplementary
+buffer wash and 17 h of 2.5% potassium ferrocyanide(II) in 0.15 M caco-     Table 3).
+dylate buffer.                                                                   Note added in proof: A staining and embedding protocol for
+                                                                            2 mm-sized human cortical samples has recently been published
+Membrane contrast quantification                                            (Karlupia et al., 2023, https://doi.org/10.1016/j.biopsych.2023.01.025)
+Membrane contrast was determined as the pixel-intensity differences         with protocol steps partly overlapping with this protocols’ earlier version
+between membrane and non-membrane regions in the EM images.                 (Song et al., 2022, ref. 15).
+For this, 500 × 500 pixel regions from the raw EM images (Fig. 1b and
+Extended Data Fig. 1m) were obtained and normalized for brightness          Reporting summary
+(1st–99th percentiles, MATLAB 2018a, imadjust). Next, one randomly          Further information on research design is available in the Nature Port-
+selected 500 × 500 subimage was used to train a random forest clas-         folio Reporting Summary linked to this article.
+sifier (Fiji, Trainable Weka Segmentation26) on ImageJ (version 1.53q)
+to automatically identify membrane versus non-membrane voxels.              Data availability
+Next, this classifier was applied to all subimages, and membrane con-       All 3D EM datasets are publicly available for browsing at https://web-
+trast was calculated as the difference between median membrane and          knossos.org: H6 striatum (full-stained, full-volume embedded hemi-
+non-membrane voxel intensities. To determine differences between the        sphere, Extended Data Fig. 3), https://wklink.org/7781; H13 striatum
+measured conditions, a two-way ANOVA was performed in GraphPad              (full-stained, subvolume embedded hemisphere, Extended Data Fig. 3),
+Prism 9, and Tukey’s multiple comparisons across staining protocols         https://wklink.org/7718; H13 cortex (full-stained, subvolume embed-
+and sampling positions were computed. Next, to determine the signifi-       ded hemisphere, Extended Data Fig. 3), https://wklink.org/7723. The
+cance of the observed differences, we performed one-sided t-test for        µCT datasets for full-embedded hemispheres and whole brains are
+comparing the membrane contrast between the Hua protocol and our            also publicly available for browsing at https://webknossos.org: H6,
+protocol (Os3 and Os24 pooled) at the core and intermediate positions,      https://wklink.org/7798; H4, https://wklink.org/7732 (note that this
+where improvements were expected.                                           sample has one area of mechanical damage caused by sample handling
+                                                                            in the peri-hippocampal region); W3, https://wklink.org/7742; W1,
+Three-dimensional electron microscopy imaging and                           https://wklink.org/7789 (note that this sample was imaged before
+image alignment                                                             resin embedding, and it has one area of mechanical damage caused
+Subvolumes sized about (1.5 mm)3 of the hemisphere samples H6 and           by sample handling in the frontal cortex). All source data have been
+H13 were cut out on the Leica EM TRIM2. SBEM datasets were acquired         deposited on the Edmond platform provided by the Max Planck Digital
+using a custom-built SBEM microtome27 mounted inside the chamber            Library30: https://doi.org/10.17617/3.RG58DU.
+of a scanning electron microscope (FEI Quanta, Thermo Fisher Scien-
+tific). The image acquisition and SBEM microtome were controlled            Code availability
+using custom-written software28. An incident electron beam with an          All analysis code (publicly available under the MIT license) has been
+acceleration energy of 2.8 keV at aperture 4 (spot size of 3.5; beam cur-   deposited on the Edmond platform provided by the Max Planck Digital
+rent, 160 pA; dwell time, 2.8 µs; electron dose, 22 e− nm−2) or aperture    Library30: https://doi.org/10.17617/3.RG58DU.
+6 (spot size, 3.0; beam current, 47 pA; dwell time, 12 µs; electron dose,
+28 e− nm−2) was used to image at an in-plane pixel size of (11.24 nm)2.     References
+      The image alignment of all EM datasets and their segmentations        26. Arganda-Carreras, I. et al. Trainable Weka Segmentation: a
+were carried out with routines described in ref. 24. The tracing of axons       machine learning tool for microscopy pixel classification.
+was carried out with webKnossos29. In brief, 20 axons were randomly             Bioinformatics 33, 2424–2426 (2017).
+seeded in a (3-µm)3 bounding box in the center of the H6 striatum data-     27. Denk, W. & Horstmann, H. Serial block-face scanning
+set or from the control striatum dataset. Manual tracing was performed          electron microscopy to reconstruct three-dimensional tissue
+by three expert annotators. The occurrence of discontinuity (defined            nanostructure. PLoS Biol. 2, e329 (2004).
+as not possible to trace non-ending nodes) was documented. The mean         28. Karimi, A. et al. Cell-type specific innervation of
+inter-error distance was calculated by dividing the total path length           cortical pyramidal cells at their apical dendrites. eLife 9,
+(mm) by the number of discontinuity nodes. Permutation random                   e46876 (2020).
+resampling was performed to calculate the 25th and 75th percentiles         29. Boergens, K. M. et al. webKnossos: efficient online
+for each condition.                                                             3D data annotation for connectomics. Nat. Methods 14,
+                                                                                691–694 (2017).
+Statistics and reproducibility                                              30. Song, K. Source Data for ‘High-Contrast En-Bloc Staining
+For the inter-error distance analysis (Fig. 2a), 20 randomly seeded             of Mouse Whole-Brain Samples for EM-Based Connectomics’
+axons from the dataset center were manually traced in the hemisphere            https://doi.org/10.17617/3.RG58DU (2023).
+and control striatum SBEM datasets, respectively. The mean inter-error
+distance was calculated as the total number of tracing errors divided       Acknowledgements
+by the total path length. Permutation (100 iterations) was performed        We thank Y. Hua for sharing very helpful insights into the
+to provide mean inter-error distance distributions for the hemisphere       staining protocols and for discussions and advice; E. Cocks for
+and control striatum datasets for the Kolmogorov–Smirnov test in            contributions to initial experiments and discussions; M. Sievers
+MATLAB (kstest2).                                                           for initial contributions to resin protocols and comments on
+     For EDS analysis (Extended Data Figs. 1b,f and 4f), the elementary     the manuscript; N. Ju for contributions to control experiments
+concentrations of Os, Fe and U (in wt %) in the neuropil region from the    and human data; H.-S. Meyer and J. Gempt from the UKE
+
+
+Nature Methods
+Brief Communication                                                                              https://doi.org/10.1038/s41592-023-01866-3
+
+Department of Neurosurgery, Hamburg, Germany, for human sample            Competing interests
+access; A. Khalifa, Department of Connectomics, MPI for Brain             A patent application has been filed by the Max Planck Society with
+Research, Frankfurt, for making the control striatum dataset available;   K.S., Z.F. and M.H. as inventors (application number EP22158620).
+and S. Loomba for support with SBEM data analysis. We are
+also grateful for brief discussions of chemical topics with               Additional information
+D.M.E. van Niekerk, C. Sun, S. Chen, T.S. Hofer; to M. Koch for           Extended data is available for this paper at
+support with low-vacuum SEM; to M. Kind and T. Vavaleskou for             https://doi.org/10.1038/s41592-023-01866-3.
+support with EDS experiments; and to M. Braun, C. Boumrifak and
+Y. Aydogan for support with UV–visible spectrum and Raman spectrum        Supplementary information The online version contains supplementary
+measurements. We thank S. Soworka, S. Horn, L. Dadashev and I. Wolf       material available at https://doi.org/10.1038/s41592-023-01866-3.
+for excellent technical support. All research was funded by the Max
+Planck Society.                                                           Correspondence and requests for materials should be addressed to
+                                                                          Kun Song or Moritz Helmstaedter.
+Author contributions
+K.S. and M.H. conceived of the project. K.S., Z.F. and M.H. designed      Peer review information Nature Methods thanks Martina Schifferer
+experiments. Z.F. carried out experiments with contributions from K.S.;   and the other, anonymous, reviewers for their contribution to the
+K.S., M.H. and Z.F. analyzed data. K.S. and M.H. wrote the paper with     peer review of this work. Primary Handling Editor: Nina Vogt, in
+contributions from Z.F.                                                   collaboration with the Nature Methods team.
+
+Funding                                                                   Reprints and permissions information is available at
+Open access funding provided by Max Planck Society.                       www.nature.com/reprints.
+
+
+
+
+Nature Methods
+Brief Communication                                 https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 1 | See next page for caption.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                              https://doi.org/10.1038/s41592-023-01866-3
+
+Extended Data Fig. 1 | Development of 2 mm protocol. (a) Left: µCT image              (left) influence of sampling location on the pyrogallol related gradient; (right)
+of staining gradient produced on 2 mm samples with Hua protocol1 and                  extension of pyrogallol incubation and 3rd OsO4 step removed gradient for all
+confirmation with SEM (right). (b) EDS analysis of staining gradient from sample      sampling locations. (i) Gradients related to UA and Ld incubation under different
+in (a). (c) µCT diagnosis of staining gradient after each consecutive step of         concentrations (UA only) and incubation time. ( j,k) Resin infiltration speed in
+the Hua staining protocol1. (d) µCT images after extension of FeCN step from          dependence of temperature and acetone concentration. Resin infiltration of
+3 h to 12 h. (e). µCT images after extending TCH incubation. (f) Comparison           larger samples requires separation of diffusion from polymerization to avoid
+of conductivity and membrane contrast of 1 mm samples stained with TCH                softer core of sample ( j).The resin fluidity time−course curve (k) was measured
+vs Pyrogallol. (left) samples stained by 1 mm Hua protocol but with omission          for different conditions of temperature and acetone addition combination
+of TCH step; (middle) samples stained by 1 mm protocol but replacing TCH              (see Methods). (l). Quantification of membrane contrast (see Methods) in
+by pyrogallol;2 (right) EDS analysis of the final osmium concentration in the         dependence of location within sample for Hua protocol (1b upper), our 2 mm
+corresponding samples. (g). Contrast and gradient comparison of pyrogallol-           protocol-Os3 (Extended Data Fig. 1m) and Os24 (1b lower). (m) EM screening
+related steps in water (top) vs. in CaC (bottom). Electron dose for high resolution   results for our 2 mm protocol-Os3.
+EM images in f,g,i:18 e−/nm2. (h) Effect of duration of pyrogallol related steps.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                                https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 2 | Effect of Os and FeCN incubation time and temperature           Membrane contrast and ultrastructural quality of samples stained with OsO4
+on membrane contrast in 2 mm samples. (a) Membrane contrast comparison                 and FeCN under different incubation time and temperature: (g) 6d incubation
+of samples stained with 3 h of OsO4 (left) or with 3 h OsO4 followed by 17 h of        of OsO4 at 4 °C followed by 1 d incubation at RT, plus 1d FeCN incubation at RT;
+FeCN. (b) Membrane contrast comparison of samples stained with 24 h of OsO4            (h) 6d incubation of OsO4 at 4 °C followed by 1d incubation at RT, plus 1d FeCN
+(left), or with 24 h of OsO4 followed by 17 h of FeCN. (c,d) Ultrastructural quality   incubation at 4 °C; (i) 7d with OsO4 at 4 °C followed by 1d of FeCN at RT; ( j) 7d
+of samples stained with 3 (c) and 6 (d) days of OsO4 at room temperature. (e,f)        with OsO4 at 4 °C followed by 1d of FeCN at 4 °C. All images were acquired in low
+Ultrastructural quality of samples stained with 7d incubation of OsO4 at 4 °C (e)      vacuum SEM at 30 Pa, with maximum electron dose 70 e−/nm2.
+or with 6d incubation of OsO4 at 4 °C followed by 1 d incubation at RT (f). (g-j).
+
+
+
+
+Nature Methods
+Brief Communication                                                                                             https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 3 | Reproduction of mouse hemisphere stainings.                    of n = 2 whole brains were stained with parameters reported in Extended Data
+(a-d) Hemispheres H4-H6 (in total n = 4 successful replicates) were stained as in     Fig. 7, Supplementary Table 3. All SEM images were taken at high vacuum with
+Supplementary Fig. 7, Supplementary Table 3. (e) Whole brain W3 was stained as        5.62 nm pixel size and a dose of 113 e−/nm2.
+in Extended Data Fig. 7, Supplementary Table 3. Together with W1 (Fig. 1c), a total
+
+
+
+
+Nature Methods
+Brief Communication                                 https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 4 | See next page for caption.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                          https://doi.org/10.1038/s41592-023-01866-3
+
+Extended Data Fig. 4 | Gradients and breakages in mouse hemispheres.             g gradient (top) after insufficient buffer washing step (1 or 2 days) at 4 °C;
+a Observation of OsO4 diffusion into mouse hemisphere sample at successive       gradient amplification and breakages occured in Pg (bottom). h No gradient
+time points at 4 °C using µCT. (b,c) Effect of buffer rinsing between OsO4 and   after sufficient buffer washing (2 days RT or 4 days 4 °C). i Effect of adding an
+FeCN incubation on staining gradient. (d,e) Effect of buffer rinsing between     extra OsO4 incubation step after FeCN on the sample stability in H2O measured
+OsO4 and FeCN incubation on FeCN diffusion speed and membrane contrast.          as sample expansion ratio. All SEM images were acquired in low vacuum SEM at
+f EDS measurement of Fe concentration in the center of samples from d,e.         30 Pa, with maximum electron dose 70 e−/nm2.
+
+
+
+
+Nature Methods
+Brief Communication                                 https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 5 | See next page for caption.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                          https://doi.org/10.1038/s41592-023-01866-3
+
+Extended Data Fig. 5 | Experiments conducted for exploring possible               OsO4), top row. For comparison, pure staining solutions are shown below: Os(vi)
+chemical mechanisms underlying staining contrast generation.                      and in vitro reaction of Os(vi) with FeCN (bottom). Note that sample solution
+(a,b) Membrane contrast after adding an intermediate CaC washing step             after 24 h OsO4 incubation appears similarly colored as Os(vi) solution (pink);
+between OsO4 and FeCN. Imaged in SEM in high vacuum, electron dose 31 e−/nm2.     and sample solution after Os-Cac-FeCN staining appears similarly colored
+(c) Membrane contrast after staining with potassium osmate (vi) (note yielded     as Os(vi)+FeCN reaction in vitro (blue−green). ( j). (left) Raman spectrum
+precipitation band). (d) UV-vis spectrum of potassium osmate (vi) in sodium       measurements of the product of Os(vi) + FeCN showing a shifted Os(vi) peak;
+cacodylate buffer over 24 h. (e,f) 2 mm samples stained with ‘reduced osmium’     (middle) in the wavelength range corresponding to FeCN(ii) and FeCN(iii), there
+protocol for 3 h vs. 24 h. (g) Membrane contrast after adding CaCl2 into OsO4     was only signal consistent with FeCN(ii) peaks, but not FeCN(iii), suggesting the
+before FeCN incubation. (h) Membrane contrast after OsO4 incubation at 4 °C       reaction between Os(vi) and FeCN was not a redox reaction. (k). The same Os(vi)
+before FeCN incubation. SEM acquisition for panels c,e,f,g,h was performed        signal was observed in brain staining solution after FeCN staining and in-vitro
+in low vacuum at 30 Pa, maximum electron dose of 70 e−/nm2. (i-m) Possible        Os(vi) + FeCN reaction. (l) Sketch summary of the possible chemical reactions
+chemical logic underlying staining results (i) Comparison of bright-field color   (see in Supplementary Results). (m) Summary of Os(vi) coordination chemistry
+appearance of samples stained in OsO4 for 2 h, 24 h, 24 h (diluted to evaluate    potentially relevant for staining mechanisms.
+color), and stained in OsO4(24 h)->CaC->FeCN (intermediate CaC wash to remove
+
+
+
+
+Nature Methods
+Brief Communication                                 https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 6 | See next page for caption.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                             https://doi.org/10.1038/s41592-023-01866-3
+
+Extended Data Fig. 6 | Summary of remaining artifacts in whole−brain                 of the cerebellum for whole-brain staining. All SEM images were acquired at
+staining protocol and alternative protocol approach for especially sensitive         high vacuum, with maximum dose of 21 e−/nm2. (h). Sketch of experiments
+samples. (a) μCT cross section of H5 showing locations with artifacts detailed       performed to explore alternatives to incubation in plain H2O around Pg step,
+in b-e. (b) Red arrow: ‘Vessel artifact’: disruption of blood vessel pericytes       which may create high osmotic stress. (i-l) Influence of possible free Os (vi) in
+from surrounding neuropil. (c) Vessel artifact visible in μCT images of 2 mm         the sample on establishment of staining gradient during pyrogallol incubation
+samples stained with OsO4 RT 1 day or 4 °C for 4 days. (d,e) Yellow arrows: Micro-   (see Supplementary Results). (m) Samples from j further stained with Os in water
+breakages with width of less than 1 μm were occasionally observed in subcortical     resulted in acceptable membrane contrast. (n) Samples from j further stained
+areas, in particular in highly myelinated regions. (f) During H2O incubation,        with Os in CaC resulted in acceptable membrane contrast. m,n imaged under
+the cerebellum was especially sensitive to macroscopic damage. (g) Changing          low-vacuum SEM (60 pa, beam current ~55 pA), pixel size 11.24 nm, electron dose
+the CaC rinsing step between 1st OsO4 and FeCN to 4 °C improved the stability        ~25 e−/nm2.
+
+
+
+
+Nature Methods
+Brief Communication                                                                                         https://doi.org/10.1038/s41592-023-01866-3
+
+
+
+
+Extended Data Fig. 7 | Overview of 2 mm, hemisphere and whole−brain               destruction, and macro- or microbreakages. Note for intermediate sized samples
+protocol steps with incubation times and temperature steps visualized.            (larger than 2 mm in any dimension), incubation times should be increased by
+Illustration of the relevance of various staining and washing steps for the key   roughly interpolating to the hemisphere protocol.
+challenges of whole−brain staining: avoidance of gradients, peripheral tissue
+
+
+
+
+Nature Methods
+≥   ≥
+

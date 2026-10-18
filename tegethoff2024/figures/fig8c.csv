@@ -1,0 +1,65 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 8C (left): blockface image of a ROTO + UA + Pb stained brain surrounded first with 12% gelatin and then embedded in EMbed 812 medium hard resin, with hardness dots.
+# image_extent_um: 991 2127  (width, height of the blockface image)
+# Hardness map: one row per coloured measurement dot on the blockface image, value read through the colour bar.
+# Columns: grid_row (1 = top), grid_col (1 = left) of the measurement grid;
+#   x_um, y_um = dot centre from the top-left corner of the blockface image, in micrometres via the 200 um scale
+#   bar (44 px, row 1189, cols 182-225; +-2 px, so +-5 % in scale);
+#   hardness_HV = Vickers hardness from the dot colour; hv_uncert = half-range of colour-bar values whose colour lies
+#   within 3 Lab units of the best match (how sharply the colour fixes the value); lab_dist = Lab distance of the
+#   dot colour to the best colour-bar match (JPEG colour error); rgb = median colour of the dot core (r <= 2.5 px).
+# Colour bar: the colour bar printed in panel A (labels 10-25, 'HV'); panel C has no colour bar of its own, the same bar is assumed; 10-25 HV labels, mapped linearly on the label centres
+#   (max residual 0.068 HV).
+# Provenance: tier 3, digitized from the embedded ~337 ppi JPEG (no vector data in the PDF) by fig8c_extract.py.
+# Uncertainty: about +-0.3 HV typical (the bar spans 15 HV over ~450 px), larger where the colour scale changes slowly with value or the JPEG
+#   shifted the colour (see hv_uncert and lab_dist); positions +-1 px (5 um).
+grid_row,grid_col,x_um,y_um,hardness_HV,hv_uncert,lab_dist,rgb
+1,3,513.85,117.05,18.616,0.066374,0,202 218 43
+1,1,90.496,122.8,18.55,0.16594,1.7321,197 217 44
+1,2,303.72,119.88,18.151,0.099561,1,180 212 65
+1,4,710.71,122.73,21.271,0.099561,1,240 125 36
+1,5,924.49,119.87,14.003,0.066374,2,76 135 196
+2,1,93.182,315.28,17.62,0.13275,1,159 207 105
+2,2,309.31,312.27,17.322,0.033187,0,146 204 123
+2,3,522.94,309.16,18.019,0.099561,1.4142,174 210 76
+2,4,718.04,308.95,18.55,0.16594,0,197 216 47
+2,5,924.9,320.67,17.554,0.099561,0,154 205 108
+3,1,87.708,521.54,17.554,0.13275,1.4142,154 204 105
+3,2,303.24,521.13,17.554,0.16594,1.4142,153 204 108
+3,3,520.16,519.19,18.019,0.099561,1,174 209 75
+3,4,714.5,521.87,18.384,0.16594,0,192 214 51
+3,5,921.97,527.96,14.899,0.13275,0,97 189 223
+4,1,86.78,711.14,19.081,0.16594,1,223 225 35
+4,2,309.33,707.88,19.612,0.49781,1,238 227 47
+4,3,513.79,711.4,17.919,0.13275,1.7321,168 208 85
+4,4,720.87,710.95,17.554,0.099561,0,154 205 108
+4,5,927.99,722.55,14.003,0.066374,1,76 135 194
+5,1,85.09,920.97,20.109,0.066374,1.4142,250 201 17
+5,2,309.09,923.93,18.55,0.16594,1.4142,198 217 46
+5,3,514.14,924.54,17.587,0.13275,1,154 205 106
+5,4,711.53,920.62,18.284,0.13275,0,188 213 54
+5,5,925.04,929.92,14.069,0.033187,0,75 139 196
+6,1,87.074,1134.2,18.649,0.099561,1,202 218 41
+6,2,304.01,1125.3,18.284,0.13275,1.7321,188 212 57
+6,3,520.29,1125.2,18.052,0.066374,1.4142,175 209 69
+6,4,708.86,1129.9,17.189,0.13275,2,137 204 129
+6,5,921.87,1140.2,15.297,0.19912,0,107 199 223
+7,1,90.412,1341.7,18.284,0.13275,1,188 213 57
+7,2,309.09,1338.6,19.379,0.29868,1,237 226 42
+7,3,516.68,1342.1,17.753,0.099561,1.4142,163 207 94
+7,4,714.58,1338.6,18.118,0.066374,1,180 212 66
+7,5,930.21,1344.1,17.886,0.099561,1,169 209 87
+8,1,87.603,1545.6,19.512,0.33187,1,239 227 48
+8,2,306.59,1536.7,17.521,0.13275,1.4142,153 205 106
+8,3,519.8,1536.9,16.426,0.099561,0,119 201 175
+8,4,714.39,1542.9,18.284,0.13275,0,187 213 55
+8,5,928.16,1542,16.293,0.13275,1,119 202 182
+9,1,87.787,1740.3,17.587,0.13275,1,159 206 107
+9,2,306.72,1734.7,17.653,0.13275,1,159 207 104
+9,3,520.07,1737.8,18.284,0.13275,0,188 213 54
+9,4,717.94,1737.4,19.379,0.2655,1,235 226 44
+9,5,927.93,1743.2,13.87,0.066374,1,72 127 188
+10,1,96.732,1942.2,17.819,0.066374,0,168 209 89
+10,2,315.81,1938.2,17.72,0.066374,1,164 208 96
+10,3,525.79,1944.5,18.118,0.066374,1,180 212 66
+10,4,721.31,1938.6,18.616,0.066374,0,201 218 42
+10,5,930.8,1947.8,13.87,0.066374,1.4142,71 127 190

@@ -1,0 +1,23 @@
+# Gabričević, Lente & Fábián 2020, Supporting Information Fig. S2: stoichiometry of the redox reaction between OsO4 Inset: A (345 nm) vs [cis-DCE]/[Os(VIII)].
+# Columns: series ('data' = grey diamonds; the two straight lines); kind = marker or 'line end' (the two ends of
+#   a straight line fitted to that line's pixels); ratio = [cis-DCE]/[Os(VIII)] (x axis title); A_345 = A (345 nm) (y axis title); marker size; note.
+# Provenance: tier 3, digitized from the embedded TIFF by sfig2_extract.py. x calibrated on the inset's left frame (0,
+#   labelled) and 5 labelled ticks, max residual 1.8e-15; y on 3 labelled ticks and the bottom frame (0.4), max residual 0.00075; inset frame: x -0.00877-5.48, y 0.403-1.5.
+#   Markers: bounding-box centre of the grey blob (overlapping diamonds flagged). Lines: least-squares straight line
+#   through the pixels of the dotted/dashed line (marker pixels and red pixels next to the orange line excluded);
+#   orange dashed line: y = -0.00623 x + 0.5223, rms 0.002, 133 px; red dotted line: y = -0.9021 x + 1.446, rms 0.007, 66 px.
+# Uncertainty: about +-0.035 in ratio and +-0.010 in A (2 px).
+series,kind,ratio,A_345,marker_w_px,marker_h_px,note
+data,marker,0.1053,1.447,13,18,irregular blob (partly hidden, or reshaped where the fit line was removed); centre from the edges bordering white paper + median marker size
+data,marker,0.2807,0.7591,,,one of several overlapping markers in one blob; centre from a greedy fit of copies of an isolated marker
+data,marker,0.4561,0.7242,,,one of several overlapping markers in one blob; centre from a greedy fit of copies of an isolated marker
+data,marker,0.7018,0.5846,18,18,
+data,marker,1,0.5398,18,18,
+data,marker,1.5,0.5174,17,19,
+data,marker,2,0.5049,18,18,
+data,marker,4,0.5049,18,18,
+data,marker,4.991,0.49,19,18,
+orange dashed line,line end,0.5,0.5192,,,
+orange dashed line,line end,4.781,0.4926,,,
+red dotted line,line end,0.0614,1.391,,,
+red dotted line,line end,1.149,0.4093,,,

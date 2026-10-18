@@ -1,0 +1,151 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 6C: percentage of section compression relative to the length of block faces, plotted versus hardness
+# Provenance: tier 3, digitized from the embedded ~305 ppi JPEG (no vector data in the PDF); markers found as
+#   connected components of each resin colour (Lab nearest MATLAB default colour); a blob of overlapping markers
+#   holds n = round(area / 52 px) markers, placed with k-means on its pixels (positions approximate, about one
+#   marker diameter); n_in_blob gives n (1 = isolated marker).
+#   Columns: series = resin (colour key next to the panel); hardness_HV = x of the marker; compression_percent = y;
+#   n_in_blob. All 50 nm sections; the VH Epon markers (asterisk) are from ~100 nm sections (caption).
+#   Markers of one resin share one hardness value; their sideways spread is the plot's placement, not data.
+#   Axis fits: y max residual 0.0154 %; x max residual 0.00216 HV.
+# Uncertainty: isolated markers +-0.13 % (2 px); markers in blobs about +-0.53 %;
+#   markers hidden completely behind others cannot be seen, so counts are lower limits.
+#   (the figure title line: for different resins, colour-coded, 50 nm sections)
+series,hardness_HV,compression_percent,n_in_blob
+LX 112,13.8,7.2505,1
+LX 112,13.759,8.0305,2
+LX 112,13.677,8.0322,2
+LX 112,13.922,8.0347,1
+LX 112,13.841,8.0366,1
+LX 112,13.801,8.8202,15
+LX 112,13.887,9.2016,15
+LX 112,13.712,9.219,15
+LX 112,13.784,9.2779,15
+LX 112,13.841,9.4675,15
+LX 112,13.755,9.7163,15
+LX 112,13.816,9.8978,15
+LX 112,13.885,9.9317,15
+LX 112,13.709,9.9865,15
+LX 112,13.798,10.32,15
+LX 112,13.953,10.371,15
+LX 112,13.645,10.374,15
+LX 112,13.876,10.381,15
+LX 112,13.723,10.404,15
+LX 112,13.8,10.766,15
+M Epon,13.6,20.601,1
+M Epon,13.6,21.375,2
+M Epon,13.6,21.812,2
+M Epon,13.683,22.978,12
+M Epon,13.6,22.983,12
+M Epon,13.514,22.986,12
+M Epon,13.641,23.41,12
+M Epon,13.561,23.417,12
+M Epon,13.684,23.753,12
+M Epon,13.512,23.756,12
+M Epon,13.6,23.964,12
+M Epon,13.643,24.491,12
+M Epon,13.559,24.495,12
+M Epon,13.601,24.883,12
+M Epon,13.6,25.319,12
+M Epon,13.556,26.09,3
+M Epon,13.645,26.093,3
+M Epon,13.6,26.48,3
+M Epon,13.6,28.404,1
+MH Epon,12.298,22.956,2
+MH Epon,12.299,23.378,2
+MH Epon,12.299,24.175,6
+MH Epon,12.298,24.714,6
+MH Epon,12.263,25.249,6
+MH Epon,12.338,25.279,6
+MH Epon,12.421,25.299,1
+MH Epon,12.177,25.303,1
+MH Epon,12.297,25.675,6
+MH Epon,12.215,26.09,1
+MH Epon,12.385,26.093,1
+MH Epon,12.298,26.104,6
+MH Epon,12.299,26.829,2
+MH Epon,12.213,26.859,1
+MH Epon,12.384,26.868,1
+MH Epon,12.298,27.243,2
+MH Epon,12.298,28.015,1
+MH Epon,12.298,28.793,1
+MH Epon,12.298,29.546,1
+H Epon,14.6,15.362,1
+H Epon,14.601,17.279,1
+H Epon,14.601,19.947,1
+H Epon,14.602,21.077,8
+H Epon,14.555,21.436,8
+H Epon,14.646,21.444,8
+H Epon,14.645,21.864,8
+H Epon,14.557,21.876,8
+H Epon,14.513,22.202,8
+H Epon,14.685,22.204,8
+H Epon,14.602,22.218,8
+H Epon,14.559,22.963,1
+H Epon,14.722,22.967,1
+H Epon,14.64,22.969,1
+H Epon,14.477,22.972,1
+H Epon,14.514,24.441,1
+H Epon,14.601,24.448,1
+H Epon,14.685,24.45,1
+H Epon,14.601,25.19,1
+H Epon,14.601,29.244,1
+VH Epon,17.702,16.515,1
+VH Epon,17.615,16.52,1
+VH Epon,17.786,16.523,1
+VH Epon,17.661,17.234,9
+VH Epon,17.742,17.264,9
+VH Epon,17.822,17.279,1
+VH Epon,17.579,17.282,1
+VH Epon,17.656,17.628,9
+VH Epon,17.746,17.688,9
+VH Epon,17.656,18.025,9
+VH Epon,17.746,18.083,9
+VH Epon,17.656,18.444,9
+VH Epon,17.745,18.478,9
+VH Epon,17.702,18.832,9
+VH Epon,17.747,19.557,4
+VH Epon,17.654,19.56,4
+VH Epon,17.701,19.909,4
+VH Epon,17.702,20.356,4
+VH Epon,17.701,21.046,2
+VH Epon,17.702,21.485,2
+Durcupan,13.298,14.252,1
+Durcupan,13.299,17.661,1
+Durcupan,13.299,19.884,3
+Durcupan,13.298,20.273,3
+Durcupan,13.299,20.672,3
+Durcupan,13.344,21.387,1
+Durcupan,13.253,21.393,1
+Durcupan,13.259,22.107,5
+Durcupan,13.178,22.115,1
+Durcupan,13.341,22.116,5
+Durcupan,13.421,22.118,1
+Durcupan,13.297,22.481,5
+Durcupan,13.343,22.849,5
+Durcupan,13.253,22.851,5
+Durcupan,13.253,23.588,3
+Durcupan,13.343,23.594,3
+Durcupan,13.298,23.964,3
+Durcupan,13.299,25.412,1
+Durcupan,13.298,26.11,2
+Durcupan,13.298,26.512,2
+Spurr's,12.899,16.565,1
+Spurr's,12.899,17.748,1
+Spurr's,12.853,18.489,3
+Spurr's,12.943,18.49,3
+Spurr's,12.943,18.881,3
+Spurr's,12.853,18.884,3
+Spurr's,12.943,19.302,3
+Spurr's,12.854,19.302,3
+Spurr's,12.899,20.049,4
+Spurr's,12.9,20.492,4
+Spurr's,12.853,20.854,4
+Spurr's,12.944,20.859,4
+Spurr's,12.899,21.584,6
+Spurr's,12.984,21.991,6
+Spurr's,12.814,21.994,6
+Spurr's,12.899,22.016,6
+Spurr's,12.854,22.397,6
+Spurr's,12.944,22.397,6
+Spurr's,12.853,23.157,1
+Spurr's,12.945,23.163,1

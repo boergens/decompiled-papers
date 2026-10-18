@@ -1,0 +1,1175 @@
+                                                                                          TOOLS AND RESOURCES
+
+
+
+
+                                     In situ X-­ray-­assisted electron microscopy
+                                     staining for large biological samples
+                                     Sebastian Ströh1†, Eric W Hammerschmith1†, David W Tank1, H Sebastian Seung1,
+                                     Adrian Andreas Wanner1,2*
+                                     1
+                                      Princeton Neuroscience Institute, Princeton University, Princeton, United States;
+                                     2
+                                      Paul Scherrer Institute, Villigen, Switzerland
+
+
+
+                                     Abstract Electron microscopy of biological tissue has recently seen an unprecedented increase
+                                     in imaging throughput moving the ultrastructural analysis of large tissue blocks such as whole brains
+                                     into the realm of the feasible. However, homogeneous, high-­quality electron microscopy staining of
+                                     large biological samples is still a major challenge. To date, assessing the staining quality in electron
+                                     microscopy requires running a sample through the entire staining protocol end-­to-­end, which can
+                                     take weeks or even months for large samples, rendering protocol optimization for such samples to
+                                     be inefficient. Here, we present an in situ time-­lapsed X-­ray-­assisted staining procedure that opens
+                                     the ‘black box’ of electron microscopy staining and allows observation of individual staining steps
+                                     in real time. Using this novel method, we measured the accumulation of heavy metals in large tissue
+                                     samples immersed in different staining solutions. We show that the measured accumulation of
+                                     osmium in fixed tissue obeys empirically a quadratic dependence between the incubation time and
+                                     sample size. We found that potassium ferrocyanide, a classic reducing agent for osmium tetroxide,
+                                     clears the tissue after osmium staining and that the tissue expands in osmium tetroxide solution,
+                                     but shrinks in potassium ferrocyanide reduced osmium solution. X-­ray-­assisted staining gave access
+                                     to the in situ staining kinetics and allowed us to develop a diffusion-­reaction-­advection model that
+*For correspondence:                 accurately simulates the measured accumulation of osmium in tissue. These are first steps towards
+adrian.wanner@psi.ch                 in silico staining experiments and simulation-­guided optimization of staining protocols for large
+*These authors contributed           samples. Hence, X-­ray-­assisted staining will be a useful tool for the development of reliable staining
+equally                              procedures for large samples such as entire brains of mice, monkeys, or humans.
+
+Competing interest: See page
+15
+                                     Editor's evaluation
+Funding: See page 15                 This important study explores the kinetics of heavy metal staining of tissue using time-­lapse imaging
+Preprinted: 20 June 2021             with X-­ray micro computed tomography (CT). Introducing a compelling approach to investigate
+Received: 13 July 2021               staining in situ, this work will be of interest to the wide community of scientists preparing biological
+Accepted: 18 October 2022            samples in particular for large-­volume electron microscopy. It will become a reference for the field in
+Published: 20 October 2022           establishing a quantitative tool for assessing and developing staining protocols.
+Reviewing Editor: Andreas
+T Schaefer, The Francis Crick
+Institute, United Kingdom
+
+‍ ‍Copyright Ströh,                  Introduction
+Hammerschmith et al. This
+                                     In the past decade the image acquisition rates of biological electron microscopy facilities have been
+article is distributed under the
+                                     scaled to 107–109 pixels per second through parallelization and automation (Hayworth et al., 2014;
+terms of the Creative Commons
+Attribution License, which           Schalek et al., 2011; Ren and Kruit, 2016; Denk and Horstmann, 2004; Hayworth et al., 2020;
+permits unrestricted use and         Eberle et al., 2015; Graham et al., 2019; Xu et al., 2017). The increase in imaging throughput
+redistribution provided that the     for biological samples has been mainly driven by the emerging Neuroscience field of connectomics
+original author and source are       which aims to densely reconstruct neuronal circuits with synaptic resolution (Briggman et al., 2011;
+credited.                            Helmstaedter et al., 2013; Bock et al., 2011; Zheng et al., 2018; Scheffer et al., 2020; Kornfeld
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                      1 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                               Neuroscience
+
+                                       et al., 2017; Wanner and Friedrich, 2020; Lee et al., 2016; Kasthuri et al., 2015; Wilson et al.,
+                                       2019; Schmidt et al., 2017; Svara et al., 2018; Vishwanathan et al., 2017). Also, the analysis of
+                                       the terabyte-­sized electron microscopy datasets produced by these studies is becoming increasingly
+                                       automated using machine-­learning and computer vision (Januszewski et al., 2018; Dorkenwald
+                                       et al., 2020; Schubert et al., 2019; Dorkenwald et al., 2017; Berning et al., 2015; Staffler et al.,
+                                       2017; Jain et al., 2010; Buhmann et al., 2020; Vergara et al., 2020; Turner et al., 2020). Both the
+                                       image acquisition as well as the image analysis for these types of datasets are being scaled by paral-
+                                       lelization to large samples on the order of several cubic millimeters or even entire brains. However,
+                                       a remaining obstacle is the lack of reliable tissue processing and staining protocols for large samples
+                                       where the smallest dimension is greater than 1 mm.
+                                           Existing en bloc electron microscopy staining protocols have been optimized for staining small
+                                       samples with dimensions of less than 1 mm (Genoud et al., 2018; Hua et al., 2015; Deerinck et al.,
+                                       2010; Tapia et al., 2012). Using aldehyde-­stabilized cryopreservation (McIntyre and Fahy, 2015) the
+                                       cellular ultrastructure can be preserved even in large tissue blocks with dimensions exceeding 1 mm
+                                       and entire brains. Despite pioneering work on en bloc staining protocols for whole mouse brains
+                                       (Mikula and Denk, 2015; Mikula et al., 2012), large en bloc stained samples still suffer from artifacts
+                                       such as inhomogeneous staining and membrane or tissue cracks.
+                                           En bloc sample preparation for electron microscopy generally requires tissue fixation, staining and
+                                       embedding in resin. First, the macromolecules in the tissue are stabilized via crosslinking by diffusing
+                                       or perfusing buffered solutions of fixatives such as formaldehyde (Claude and Fullam, 1945; Fox
+                                       et al., 1985) and glutaraldehyde (Sabatini et al., 1964). Because biological tissue is composed
+                                       mostly of carbon and other low atomic number elements, the tissue is stained with heavy metals
+                                       to increase the contrast in electron micrographs (Bahr, 1954; Porter et al., 1945). These heavy
+                                       metal stains are composed of electron dense atoms such as osmium, lead or uranium. In addition,
+                                       some of these heavy metals (e.g. osmium) also act as fixatives (Bahr, 1955). Finally, the stained
+                                       tissue gets dehydrated and embedded in resin. The most commonly used resins are epoxy resins
+                                       (Maaløe and Andersen, 1956), such as araldite (Glauert et al., 1956) or Epon (Finck, 1960) because
+                                       of their thermal stability and electron transparency. To inspect the staining quality in an electron
+                                       microscope, ultrathin sections (<100 nm) are typically collected from the embedded tissue using an
+                                       ultramicrotome.
+                                           Many steps in the classic en bloc electron microscopy staining protocols are based on passive diffu-
+                                       sion of chemicals into the tissue. Passive diffusion is one of the main bottlenecks for preparing large
+                                       samples (smallest dimension >1 mm) for electron microscopy (Burkl and Schiechl, 1968; Medawar,
+                                       1941). For small samples (smallest dimension <1 mm) a typical en bloc staining protocol takes about
+                                       10–15 days including sectioning (Tapia et al., 2012). However, for large samples or whole brains, a
+                                       diffusion-­based staining protocol takes several weeks or even months (Mikula et al., 2012; Mikula
+                                       and Denk, 2015; Masís et al., 2018).
+                                           To date, electron microscopy staining is a ‘black box’ and changes to staining protocols can only be
+                                       assessed using an electron microscope, which in turn requires a sample to be run through the entire
+                                       staining protocol. Conventional approaches for optimizing the parameters of staining protocols rely
+                                       on sequential screening of hundreds of samples that have been processed end-­to-­end. However,
+                                       sequential screening is very inefficient for months-­long protocols.
+                                           Recently, X-­ray based computed micro-­tomography (μCT) has been introduced for a relatively
+                                       fast, macroscopic assessment of staining quality and tissue integrity of resin-­embedded whole mouse
+                                       brains (Mikula and Denk, 2015; Kuan et al., 2020; Dyer et al., 2017). (Mikula and Denk, 2015)
+                                       showed that the pixel intensities of serial-­section EM images and the intensity of the corresponding
+                                       reslice are similar. Building on this pioneering work, we developed in situ time-­lapsed X-­ray-­assisted
+                                       staining to observe the staining process while the samples are in the staining solution (Figure 1a).
+                                       We used X-­ray-­assisted staining to explore the micro-­scale tissue mechanics and the kinetics of the
+                                       heavy metal diffusion and accumulation in large aldehyde-­fixed brain tissue blocks, resulting in new
+                                       insights on how different staining agents affect the tissue. X-­ray-­assisted staining opens the ‘black
+                                       box’ of electron microscopy staining protocols. Each staining step can be monitored and assessed in
+                                       real time. This enables in silico optimization of electron microscopy staining protocols, which will be
+                                       particularly useful for the development of staining procedures for large biological samples such as
+                                       whole brains (Figure 1g).
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                        2 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                        Neuroscience
+
+
+
+
+Figure 1. X-­ray assisted staining. (a) Experimental setup. The sample was glued into a thin layer of Sylgard and sits in staining solution in a sealed
+glass vial on a motorized stage. X-­rays are emitted from an X-­ray source, pass through the sample, and the spatial distribution of the transmitted
+X-­rays is detected and used to form a projection image of the X-­ray absorption in the sample. Over time, the heavy metals diffuse into the tissue and
+the accumulation of heavy metals change the X-­ray absorption properties of the sample. For the quantitative results presented in this study we used
+Figure 1 continued on next page
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                  3 of 19
+            Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                         Neuroscience
+
+Figure 1 continued
+cylindrical tissue samples extracted with a 4 mm diameter biopsy punch from the cortex of mice. (b) Projection images of a 4 mm punch of mouse cortex
+incubated in 2% buffered osmium tetroxide (OsO4) solution after 10 min, 1 hr, and 10 hr. The osmium diffuses passively from the cortical surface and the
+brain ventricles into the tissue and forms a staining front of tissue-­bound osmium (large arrowhead) that moves towards the center of the sample as time
+progresses. The accumulation of heavy metals results in an increase in the pixel intensity (a.u.) of the X-­ray projection image, which was measured along
+the radial axis of cortical depth from the cortical surface towards the white matter. The small arrowhead indicates the upper edge of the 2 mm thin layer
+of Sylgard. (c) Measured pixel intensities of the X-­ray projection images for different concentrations of buffered OsO4 solutions. The higher/darker the
+intensity, the more X-­rays are absorbed. The pixel intensity/X-­ray absorption scales linearly with the concentration/density of osmium (black line, Pearson
+correlation coefficient r=0.99, <10–6; n=3 for each concentration). (d) Propagation of the staining front in 4 mm brain punches immersed in 2% buffered
+OsO4 solution (n=13) measured along the radial axis of cortical depth (mean ±s.d.). The propagation can be fitted by a quadratic model (dashed black
+lines) in which the penetration depth x of the staining front is proportional to the square root of the incubation time t (residual standard error: SEres =
+14.68 μm). (e) Intensity profiles of the spatial heavy metal accumulation after t=20 hr of incubation in 2% buffered OsO4 (blue, n=13), Ferro-­redOs (green,
+n=6). Ferro-­redOs with 5.56% (orange, n=4) and 11.25% formamide (red, n=4) solutions (mean ±s.d.). In Ferro-­redOs the heavy metal staining is not
+homogenous and there is a more densely stained tissue band at a depth of 300–800 μm. (f) Tissue expansion quantified as change in sample height of
+aldehyde-­fixed brain punches immersed in OsO4 (blue, n=13), Ferro-­redOs (green, n=6), Ferro-­redOs with 5.56% (orange, n=4) and 11.25% formamide
+(red, n=4), respectively, as a function of the immersion duration (mean ±s.d.). All solutions were buffered by cacodylate. A monomolecular growth model
+was fitted to the average tissue expansion in OsO4 solution (black dashed line, residual standard error SEres = 0.06%). (g) In situ X-­ray-­assisted staining
+of large tissue samples. The images show projections of a whole mouse brain incubated in 2% buffered OsO4 at different points in time across 2.5 days.
+The arrowheads indicate the location of the staining front of accumulated osmium. Scale bar 2 mm.
+The online version of this article includes the following source data and figure supplement(s) for figure 1:
+Source data 1. Experimentally measured accumulation of heavy metals (blue traces) in buffered 2% OsO4 solution in n=13 different samples.
+Source data 2. Experimentally measured accumulation of heavy metals in a buffered solution of 2% OsO4 reduced with 2.5% potassium ferrocyanide
+K4[Fe(CN)6] (Ferro-­redOs) in n=6 different samples.
+Source data 3. Experimentally measured accumulation of heavy metals in buffered 2% Ferro-­redOs solution with 5.56% formamide in n=4 different
+samples.
+Source data 4. Experimentally measured accumulation of heavy metals in buffered 2% Ferro-­redOs solution with 11.25% formamide in n=4 different
+samples.
+Source data 5. Experimentally measured accumulation of heavy metals in a buffered solution of 2% OsO4 reduced with 2.5% potassium ferricyanide
+K3[Fe(CN)6] (Ferri-­redOs) in n=2 different samples.
+Figure supplement 1. As reported previously (Mikula and Denk, 2015, Figure 4b), X-­ray imaging exhibits a contrast similar to scanning electron
+microscopy (SEM).
+Figure supplement 2. Ultrastructural preservation at various tissue depths after 20 hr of X-­ray-­assisted staining with 2% buffered OsO4.
+Figure supplement 3. Spatial intensity profiles of accumulated heavy metals after t=20 hr of incubation (left column) and temporal tissue expansion
+profiles (right column) for different osmium reduction protocols in comparison to 2% buffered OsO4 (blue, n=13) and buffered solution of 2% OsO4
+reduced with 2.5% potassium ferricyanide K4[Fe(CN)6] (green, n=6) (mean ±s.d.).
+
+
+
+
+                                        Results
+                                        We developed in situ time-­lapsed X-­ray-­assisted staining with the goal of facilitating and acceler-
+                                        ating the optimization of staining protocols for large biological samples such as whole mouse brains
+                                        (Abbott et al., 2020). 4mm-­brain punches of transcardially perfused mice were immersed in alde-
+                                        hyde fixatives for 36 hr. After washing the sample blocks with cacodylate buffer, the samples were
+                                        immersed in staining solution and immediately placed in the acquisition chamber of a Zeiss Xradia
+                                        520 Versa 3D for X-­ray microscopy (Figure 1a). The Xradia can be operated in two different modes:
+                                           • In the μCT mode, projections of the sample are acquired at different rotation angles in order
+                                             to reconstruct a 3D computed tomograph of the sample. Depending on the required signal
+                                             to noise and resolution, this mode allowed us to acquire approximately 1–2 computed tomo-
+                                             graphs per hour.
+                                           • In single-­projection mode, a projection of the sample is acquired in a fixed position every few
+                                             seconds without rotating the sample.
+
+                                            The advantage of the μCT mode is that arbitrary virtual reslices can be extracted to assess the
+                                        staining progression in various parts of the sample. However, with our X-­ray microscope, the temporal
+                                        resolution in μCT mode was limited to 30–60 min per tomograph. Therefore we performed all quan-
+                                        titative experiments in single-­projection mode where the temporal resolution for monitoring of the
+                                        heavy metal diffusion and accumulation was on the order of a few seconds. Note, in this mode, the
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                    4 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                Neuroscience
+
+                                       pixel intensities of the resulting X-­ray projection images are accumulated through the entire sample
+                                       and therefore the correspondence to the pixel intensities in thin serial-­section EM images is less accu-
+                                       rate than in μCT mode (Figure 1—figure supplement 1). As soon as the samples got placed in the
+                                       staining solutions, the heavy metals started accumulating in the immersed tissue. The stained tissue
+                                       absorbs more X-­rays than the unstained tissue, resulting in a noticeable intensity difference that can
+                                       be used to track the diffusion and accumulation of the heavy metals in the tissue (Figure 1b).
+
+                                       Quadratic scaling of incubation times with sample size
+                                       Osmium tetroxide (OsO4) is one of the most commonly used contrast agents for lipid staining in elec-
+                                       tron microscopy due to its large atomic number and its ability to integrate into cellular membranes
+                                       (Porter et al., 1945; Palade, 1952; Watson, 1958). The immersion times for OsO4 vary between a
+                                       few minutes to several days, depending on the sample size and tissue type, and are usually deter-
+                                       mined empirically (Genoud et al., 2018; Hua et al., 2015; Tapia et al., 2012; Mikula and Denk,
+                                       2015). However, the kinetics of OsO4 staining of biological tissue are not well understood and so far
+                                       had to be determined experimentally by trial and error. We therefore set out to measure the diffusion
+                                       and accumulation of OsO4 by placing 4 mm punches of aldehyde-­fixed mouse brains in 2% buffered
+                                       OsO4 solution. The osmium diffused into the tissue and accumulated in the sample during the staining
+                                       process (Figure 1b). The intensity of X-­ray absorption in the projection images scales linearly with the
+                                       local concentration/density of osmium (Figure 1c). The density of OsO4 in the tissue increased beyond
+                                       the density in the surrounding staining solution, indicating that the density of binding sites for OsO4 in
+                                       the tissue is higher than the concentration of the OsO4 in the staining solution (Figure 1b). The diffu-
+                                       sion and spatio-­temporal accumulation of OsO4 results in a staining front that propagates towards the
+                                       center of the sample (Figure 1b). As expected for diffusive processes (Carnevale et al., 1979), the
+                                       propagation of the OsO4 staining front can be approximated by a quadratic model (Figure 1d). As in
+                                       the case of other fixatives (Medawar, 1941), the osmium staining penetration in aldehyde fixed tissue
+                                       obeys a quadratic scaling law, or rather a “rule of thumb”, for how the necessary incubation time t
+                                       depends on the staining depth or sample size x:
+
+                                       	﻿‍                                                 t ∝ x2‍                                           (1)
+
+                                       This means, for example, that if one would adapt an established OsO4 staining protocol for 3 X larger
+                                       samples, one would have to prolong the incubation time by 9 X in order to produce comparable
+                                       staining results. Similarly, the time it takes for any point in the sample to reach a given concentration
+                                       is proportional to the square of its distance to the sample surface (Carnevale et al., 1979).
+
+                                       Monitoring staining kinetics and tissue deformation
+                                       After 20 hr of incubation the staining density of osmium is homogeneous across the first 1000 μm of
+                                       cortical depth (Figure 1e). In addition, the ultrastructure is well preserved (Figure 1—figure supple-
+                                       ment 2). Reduced osmium is another commonly used staining agent that is known to result in higher
+                                       contrast for electron microscopy images than non-­reduced OsO4. Typically, a buffered 2% OsO4 solu-
+                                       tion is reduced with 2.5% potassium ferrocyanide (K4[Fe(CN)6]) (Hua et al., 2015; Willingham and
+                                       Rutherford, 1984; Mikula and Denk, 2015), which we will call Ferro-­redOs throughout this manu-
+                                       script. Consistent with previous reports on Ferro-­redOs staining in large samples (Hua et al., 2015;
+                                       Mikula and Denk, 2015) we found that for Ferro-­redOs the accumulation of heavy metals peaks at a
+                                       depth between 300 and 800 μm (Figure 1e), whereas the tissue above or below that depth is stained
+                                       less. Traditionally, this band of more heavily stained tissue has been associated with precipitated
+                                       osmium that hinders the diffusion and prevents homogenous staining (Genoud et al., 2018; Hua
+                                       et al., 2015; Mikula and Denk, 2015), in particular deeper in the tissue. No such band is present
+                                       in tissue immersed in non-­reduced OsO4. (Mikula and Denk, 2015) reported that homogeneous
+                                       staining of large samples with Ferro-­redOs was achieved by adding formamide to the Ferro-­redOs
+                                       solution. However, the underlying mechanisms by which formamide acts are not known (Mikula and
+                                       Denk, 2015; Genoud et al., 2018). (Mikula and Denk, 2015) hypothesized that formamide might
+                                       prevent precipitation by generally solubilizing compounds or that it might allow highly charged mole-
+                                       cules to cross membranes more easily. Adding formamide to the Ferro-­redOs solution indeed resulted
+                                       in more homogeneous staining (Figure 1e, ), but the heavy metal density was lower than in osmium
+                                       only. (Mikula and Denk, 2015) reported that the tissue tends to expand at high concentrations of
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                         5 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                Neuroscience
+
+                                       formamide (>50%). But we found that the tissue expands even at lower formamide concentrations,
+                                       while the amount of expansion depends on both the formamide concentration and the incubation
+                                       duration (Figure 1f). For a concentration of 11.25% formamide, the sample height increased by about
+                                       15% within 20 hr of incubation, whereas for a formamide concentration of 5.56%, the tissue height
+                                       expanded only by approximately 10% (Figure 1f). Note, in the first 3 hr of incubation in Ferro-­redOs
+                                       with 5.56% formamide the tissue actually shrank, suggesting that there are opposite forces acting on
+                                       the tissue. Indeed, in Ferro-­redOs solution without any formamide, the tissue shrank by about 5% in
+                                       height (Figure 1f). In contrast, we found that in 2% buffered OsO4 solution the sample height expands
+                                       by about 5% (Figure 1f). However, we found no sample expansion if the reduced osmium solution
+                                       was prepared with 2.5% potassium ferricyanide K3[Fe(CN)6]+ 8 a,b), another commonly used reducing
+                                       agent for OsO4.
+                                           Hua et al., 2015 suggested an alternative approach to achieve homogeneous staining in 1 mm
+                                       brain punches with Ferro-­redOs without formamide, in which osmium and the reducing agent are
+                                       applied separately. First, the samples are immersed in buffered 2% OsO4 solution for 90 min. Subse-
+                                       quently, the samples are placed for 90 min in buffered 2.5% K4[Fe(CN)6] without any washing step
+                                       in-­between. We repeated this procedure for 4 mm brain punches: First, the samples were incu-
+                                       bated in 2% buffered OsO4 for 22 hours resulting in homogeneous staining throughout the sample.
+                                       Next, we placed the sample directly without any washing step in 2.5% buffered K4[Fe(CN)6] solution.
+                                       (Hua et al., 2015) hypothesized that the main effect of reducing agents such as K4[Fe(CN)6] is to
+                                       convert VIII-­oxidized water-­soluble osmium into an VI-­oxidized water-­soluble form which is thought
+                                       to generate additional, non-­polar OsO2 to be deposited in the membrane increasing the heavy
+                                       metal content and the contrast in electron microscopy. However, we found that the heavy metal
+                                       density in the K4[Fe(CN)6] immersed samples did not increase, but rather decrease from the sample
+                                       surface towards the center as time progressed (Figure 2a). This suggests that K4[Fe(CN)6] removes or
+                                       “washes out” osmium from the sample (Litman and Barrnett, 1972) resulting in an inverse staining
+                                       gradient. This “washing effect” is stronger for longer incubation times as well as close to the sample
+                                       surface and around blood vessels (anecdotal observation in electron microscopy images, data not
+                                       shown). For incubation times longer than 12 hr, K4[Fe(CN)6] readily dissolves and disintegrates the
+                                       tissue (Figure 2—figure supplement 1). Interestingly, no ‘washing effect’ was observed if the
+                                       same procedure was repeated with 2.5% potassium ferricyanide K3[Fe(CN)6], but the sample height
+                                       shrank by about 2% (Figure 1—figure supplement 3,f, ). Similarly, only a small reduction in heavy
+                                       metal density could be observed when the sample was washed with double-­distilled H2O for 20 hr
+                                       (Figure 2—figure supplements 2 and 3).
+
+
+                                       The kinetics of osmium tetroxide staining
+                                       The chemistry and diffusion-­reaction-­advection kinetics of OsO4 staining in aldehyde-­fixed tissue are
+                                       not well understood. In brain tissue, OsO4 is thought to mainly react with carbon-­carbon double
+                                       bonds, in particular of unsaturated lipids, but it has also been reported to react with some amino acids
+                                       and nucleotides (Khan et al., 1961; Korn, 1967; White et al., 1976; Schroeder, 1980). At the begin-
+                                       ning of the OsO4 incubation, the density of OsO4 steeply increases and peaks close to the surface
+                                       of the sample. As the incubation time progresses, the OsO4 continues to diffuse and accumulates
+                                       deeper in the tissue (Figure 2b, d and e). Due to the curved surface of the cortical tissue sample, the
+                                       projected tissue thickness is lower (Figure 2f) and there are fewer binding sites for osmium, which
+                                       results in a lower density of osmium closer to the sample surface (Figure 2b). At any given time, the
+                                       accumulation seems to plateau from the surface towards the center of the sample, indicating that the
+                                       binding of OsO4 saturates (Figure 2d and e). However, we found that the saturated density in the
+                                       samples slowly increased over time from about 129 nmol/mm3 after 1 hr of incubation to 160 nmol/
+                                       mm3 after 10 hr of incubation (Figure 2b, d and e), while the density of the solution remained stable
+                                       at about 82 nmol/mm3. This suggests that additional binding sites for OsO4 become available slowly
+                                       over time. The reactions underlying the ‘unmasking’ of binding sites are not known, but we hypothe-
+                                       size that it depends at least partially on the availability and the local concentration of unbound, freely
+                                       diffusing osmium. Hence, at the macroscale level, the accumulation of osmium in biological tissue
+                                       can be described by four coupled processes (Figure 2g): As the osmium diffuses passively into the
+                                       tissue, it binds to the available binding sites in the tissue and additional binding sites are slowly being
+                                       unmasked, while the tissue expands by around 5% within 20 hr of incubation (Figure 1f). The kinetics
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                          6 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                   Neuroscience
+
+
+
+
+Figure 2. Kinetics and tissue mechanics of electron microscopy staining. (a) Spatio-­temporal washout of osmium in samples incubated in 2.5%
+potassium ferrocyanide K4[Fe(CN)6] (n=6). The samples have been stained with 2% OsO4 for 22 hrs prior to placing them in K4[Fe(CN)6]. The osmium
+gets washed out from the sample surface towards the center as the incubation time increases. (b) Average experimentally measured spatio-­temporal
+osmium density (nmol/mm3) accumulation in samples (n=13) immersed in 2% buffered OsO4 solution. Because of the surface curvature of the cortical
+Figure 2 continued on next page
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                            7 of 19
+            Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                               Neuroscience
+
+Figure 2 continued
+ samples, the tissue thickness decreases towards the surface (x=0) and results in a lower intensity in the projection images (see tissue geometry model
+ in f). (c) Simulated spatio-­temporal osmium density (nmol/mm3) accumulation fitted to the average experimental data in b. (d) Density profiles (nmol/
+ mm3) of the spatial accumulation of osmium (n=13, mean ±s.d.) after 1 hr (orange), 2 hrs (red), and 10 hr (blue) of incubation in 2% buffered OsO4
+ overlaid with the simulation of the diffusion-­reaction-­advection model (dashed lines). (e) Density profiles (nmol/mm3) of the temporal accumulation
+ of osmium (n=13, mean ±s.d.) at a depth of 200 μm (blue), 600 μm (red), and 1000 μm (orange) during incubation in 2% buffered OsO4, overlaid with
+ the simulation of the diffusion-­reaction-­advection model (dashed lines). (f) The geometry of the 4 mm( brain punches
+                                                                                                                   )      was modeled as a cylinder with
+ a curved surface. The curvature of the sample surface is approximated by a circle with radius 2H    1
+                                                                                                       · H2 + 14 R2 , where ‍R‍is diameter of the cylinder
+                                                                                                                                                       ( )
+                                                                                                   ‍                ‍
+   ( )‍H ‍is the height
+ and           √      ( of the curved
+                                  ) surface. The projected tissue( )thickness as a function of the depth x from the sample surface is then given by ‍d x :‍
+ d x = 2 · Hx · H2 + 14 R2 − x2 , for ‍0 ≤ x ≤ H ‍and ‍d x = R,‍ for ‍x > H ‍(g) Diffusion-­reaction-­advection model for osmium staining. The model
+‍combines four coupled processes: (1)‍ Free OsO diffuses passively into the tissue and (2) binds to the available binding sites. (3) In the presence of freely
+                                                    4
+
+ diffusing OsO4 previously masked binding sites are slowly turned into additional binding sites for OsO4. (4) The sample expands by about 5% in sample
+height within 20 hr of incubation (see Figure 1f).
+The online version of this article includes the following source data and figure supplement(s) for figure 2:
+Source data 1. Experimentally measured washout of heavy metals in buffered 2.5% potassium ferrocyanide K4[Fe(CN)6] solution in n=6 different samples
+that have previously been stained with buffered OsO4 for 22 hr.
+Source data 2. Experimentally measured washout of heavy metals in buffered 2.5% potassium ferricyanide K3[Fe(CN)6] solution in n=4 different
+samples that have previously been stained with buffered OsO4 for 22 hrs.
+Figure supplement 1. Long incubation in potassium ferrocyanide dissolves and disintegrates the tissue.
+Figure supplement 2. Experimentally measured change in heavy metal accumulation of a sample immersed in double distilled H2O (ddH2O).
+Figure supplement 3. (a) Spatial intensity profile of accumulated heavy metals at the beginning t=0 hr and after t=20 hr of immersion in double
+distilled H2O (n=1).
+Figure supplement 4. Effective diffusion coefficient De, unmasking rate constant kunmask, binding rate constant kon, the OsO4 concentration in the
+solution C0, the initial density of binding sites S0, the initial density of masked binding sites M0 and the sample curvature height H for n=13 different
+4 mm punches that have been immersed for 22 hr in 2% buffered OsO4 solution.
+Figure supplement 5. Experimentally measured accumulation of heavy metals (blue traces) in buffered 2% OsO4 solution of a 4 mm punch of aldehyde-­
+fixed liver tissue (n=1).
+
+
+
+                                        of these four processes can be described with the following coupled (non-­linear) partial differential
+                                        equations:
+
+                                                                ∂f(x,t) e ∂ 2 f(x,t) on                               [ ( ) ( )]
+                                                                  ∂t = D · ∂x2 − k · s(x, t) · f(x, t)                  f x, t · v x, t ‍
+                                                                                                                    ∂
+                                        	﻿‍                                                                     − ∂x                                         (2)
+                                                                      ∂b(x,t)  on                            [ ( ) ( )]
+                                                                        ∂t = k · s(x, t) · f(x, t) − ∂x b x, t · v x, t ‍
+                                                                                                          ∂
+                                        	﻿‍                                                                                                                  (3)
+                                                         ∂s(x,t)   on                      unmask                             [ ( ) ( )]
+                                                           ∂t = −k · s(x, t) · f(x, t) + k        · m(x, t) · f(x, t) − ∂x     s x, t · v x, t ‍
+                                                                                                                           ∂
+                                        	﻿‍                                                                                                                  (4)
+                                                                                                                 [    (   )     ( )]
+                                        	﻿‍
+                                                                 ∂m(x,t)
+                                                                   ∂t    = −kunmask · m(x, t) · f(x, t) − ∂x   ∂
+                                                                                                                   m x, t · v x, t ‍                        (5)
+
+                                        f(x,t) is the density of freely diffusing OsO4, b(x,t) is the density of osmium bound to the tissue, s(x,t) is
+                                        the density of available binding sites and m(x,t) corresponds to the density of masked binding sites at
+                                        time t and a radial depth x from the cortical surface. De is the effective diffusion coefficient for OsO4,
+                                        kon is the reaction rate constant for the binding of osmium to the tissue and kunmask is the reaction rate
+                                        constant at which masked binding sites get unmasked. In addition, the local change of the tissue
+                                        geometry, e.g. the expansion as observed for OsO4, results in a velocity field v(x,t) that describes the
+                                        local spatio-­temporal flow of the density of each component c(x,t):
+                                                                          [ ( ) ( )] ∂c(x,t) ( )            ( ) ∂v(x,t)
+                                        	﻿‍
+                                                                     ∂
+                                                                     ∂x    c x, t · v x, t = ∂x · v x, t + c x, t · ∂x ‍                                    (6)
+                                                                                     ( )
+                                                                                   ∂c x,t  ( )
+                                        The flow consists of an advection term ‍ ∂x · v x, t ,‍ corresponding to elemental volumes moving
+                                                                                    ( ) ∂v(x,t)
+                                        with the local flow, and a dilution term ‍c x, t · ∂x ‍ that describes the local volume change. While
+                                        we assume that the tissue density is homogeneous across the cortical thickness, we consider differ-
+                                        ences in the sample thickness due to the curvature of the cortical surface. Additional information on
+                                        the model assumptions can be found in the methods section.
+                                           We fitted the parameters of the system of reaction-­diffusion-­advection equations for a tissue
+                                        sample with the projection geometry shown in Figure 2f to the average measured spatio-­temporal
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                        8 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                  Neuroscience
+
+                                       accumulation of OsO4 (Figure 2b–e) as well as to the individual samples (n=13, ). The fitted parame-
+                                       ters of the diffusion-­reaction-­advection model (Figure 2—figure supplement 4) capture the measured
+                                       diffusion-­reaction-­advection kinetics of osmium staining well (Figure 2c; residual standard error SEres
+                                       = 0.026 ± 0.005, mean ±s.d.).
+
+
+                                       Discussion
+                                       In situ X-­ray-­assisted staining is a new tool for monitoring the different steps of en bloc staining proto-
+                                       cols for electron microscopy. By opening the ‘black box’ of staining protocols, X-­ray-­assisted staining
+                                       enables, for the first time, to observe directly the diffusion of heavy metals and their microscopic
+                                       effects on the tissue. While the technique will be useful to develop novel staining protocols for small
+                                       to intermediate sized samples with dimensions less than 1 mm, it will particularly accelerate and facili-
+                                       tate the development and optimization of new staining protocols for large biological samples such as
+                                       whole brains (Figure 1g).
+                                           We monitored the accumulation of osmium in different commonly used staining solutions and
+                                       found significant differences in the accumulation densities. In addition, we found that the tissue
+                                       expands and shrinks significantly depending on the composition of the staining solution. In particular,
+                                       we found that the tissue height increased by 5% in buffered osmium solution, while the tissue height
+                                       decreased by 5% in buffered Ferro-­redOs solution. We hypothesize that this shrinkage could provide
+                                       a mechanistic explanation for the long standing issue of diffusion barrier formation in large samples
+                                       during Ferro-­redOs incubation.
+                                           The method also revealed that K4[Fe(CN)6], a reducing agent that was believed to enhance the
+                                       accumulation of osmium in membranes, in contrast can wash out osmium from stained tissue if applied
+                                       separately. If K4[Fe(CN)6] removes osmium from the sample, why does the protocol modification of
+                                       Hua et al., 2015 result in enhanced electron microscopy contrast for samples with dimensions of up
+                                       to 1 mm? A potential explanation could be that K4[Fe(CN)6] clears the cytosol more efficiently than the
+                                       cell membranes. As a consequence, the osmium content in the cytosol gets washed out more/faster,
+                                       which might result in an overall electron microscopic contrast increase between the membranes and
+                                       the cytosol. However, the chemical mechanisms by which K4[Fe(CN)6] interact with the tissue remain
+                                       poorly understood and shining a light on those processes will require additional work.
+                                           X-­ray assisted staining opens the door for in silico staining protocol optimization, by enabling to
+                                       measure important heavy metal staining parameters such as the effective diffusion coefficients and
+                                       reaction rate constants directly in situ. We derived a diffusion-­reaction-­advection model that describes
+                                       the accumulation of osmium in homogeneous tissue by four distinct, but coupled, processes. Osmium
+                                       diffuses passively into the tissue and binds there quickly to available binding sites, for example unsat-
+                                       urated lipids. Thereby the tissue expands by about 5% in height. Additional binding sites are being
+                                       unmasked over the course of hours, which enables the tissue to accumulate additional osmium. While
+                                       the binding of osmium appears to be nearly instantaneous, the passive diffusion and unmasking
+                                       reactions are slow and appear to be rate-­limiting for the staining. The mechanisms and reactions
+                                       underlying the unmasking of additional binding sites for osmium are not known. Unsaturated lipids,
+                                       one of the prominent binding sites for osmium, can be masked by lipid-­protein complexes. In the
+                                       presence of osmium, these complexes could dissociate and make the previously masked unsatu-
+                                       rated lipid available for binding osmium (Clayton, 1959; Lauder and Beynon, 1993; Ashhurst, 1961;
+                                       Wigglesworth, 1975). A recent study used time-­of-­flight secondary ion mass spectrometry to analyze
+                                       the colocalization of different fatty acid species with osmium at the tissue surface (Belazi et al., 2009).
+                                       As expected, the unsaturated fatty acids colocalize well with the tissue-­bound osmium. However,
+                                       they also report a remarkable complementary clustering of saturated and unsaturated fatty acids
+                                       in osmium stained tissue that appears not to be present in unstained tissue. Hence, it could be that
+                                       osmium can convert saturated lipids to unsaturated lipids through hydrogenation/oxidation. Alterna-
+                                       tively, the masked binding sites could also be interpreted as a different binding partner that reacts
+                                       much slower with osmium.
+                                           Biological samples such as brains are non-­homogeneous media. They are composed of different
+                                       tissue and cell types and therefore the diffusion of staining agents is expected to be heterogeneous.
+                                       Nevertheless, the fitted model parameters reproduce the observed kinetics of osmium accumulation
+                                       relatively well up to a depth of about 700–800 μm from the surface. Deeper in the tissue osmium
+                                       that diffused from secondary sources such as ventricles or axon tracts appear to contribute to the
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                            9 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                Neuroscience
+
+                                       accumulation of osmium. For example, we found that white matter and myelinated axon tracks tend
+                                       to accumulate osmium faster and stronger compared to gray matter (, ). Such secondary sources and
+                                       tissue inhomogeneities are not considered in our model. Still, the fitted model parameters appear
+                                       consistent with comparable values from the literature, although we also find some discrepancies. For
+                                       example, in mouse brains we expect to find about 117.975 nmol/mm3 double-­bonds on unsaturated
+                                       lipids (see methods for the derivation). Because the dominant binding reaction for osmium is assumed
+                                       to be the formation of mono- and di-­ester bonds with unsaturated lipids which has been described
+                                       to result in the deposition of OsO2, the density of double bonds should roughly correspond to the
+                                       density of available binding sites. But the proposed model predicts 2.999 times more binding sites,
+                                       even without unmasking. One interpretation would be that unsaturated lipids are not the dominant
+                                       reaction partner and that other reaction partners such particular amino acids or nucleotides account
+                                       for about two third of the available binding sites. Alternatively, this could indicate that each unsat-
+                                       urated lipid double bond gets associated with on average 3 osmium atoms, for example through
+                                       Os3O5- and Os3O5H- isotopes that have previously reported to exist in osmium-­stained adipose mouse
+                                       tissue (Belazi et al., 2009). Similarly, it has been reported that if the mono- and di-­ester products are
+                                       left standing in solution, a highly insoluble trimer osmium product is formed (Schroeder, 1980).
+                                           We expect that X-­ray-­assisted staining will be very useful in establishing a more refined picture of
+                                       the heterogeneity of the heavy metal diffusion processes in different tissue types and compartments
+                                       as well as in different conditions. For example, we also measured and modeled the accumulation of
+                                       osmium in liver tissue (Figure 2—figure supplement 5). It will also be interesting to examine how
+                                       changes in the extracellular space and different fixation protocols or microwave-­assisted incubation
+                                       affect the diffusion dynamics (Korogod et al., 2015; Fulton and Briggman, 2020; Jensen and Harris,
+                                       1989; Login and Dvorak, 1988).
+                                           Furthermore, X-­ray-­assisted staining can be used at higher resolution and in combination with
+                                       computed tomography for producing a more detailed picture of the tissue mechanics involved in
+                                       different staining steps. We and several other labs have noticed that brain tissue expands significantly
+                                       during incubation in ‘osmium amplifiers’ such as the osmiophilic thiocarbohydrazide (TCH) (Seligman
+                                       et al., 1966). (Mikula and Denk, 2015) reported that nitrogen bubbles are formed during TCH incu-
+                                       bation that could be responsible for the formation of tissue cracks in large samples. X-­ray-­assisted
+                                       staining could be used to detect and monitor the formation of tissue cracks and to explore ways to
+                                       reduce these artifacts in large samples.
+                                           Aside from accelerating the development of novel staining protocols this new method will also
+                                       allow for improved closed-­loop quality control of the staining process. Large samples tend to be
+                                       biologically more variable and more difficult to precisely fine-­tune all the parameters in the staining
+                                       protocol ahead of time to account for these individual differences. Hence, X-­ray-­assisted staining can
+                                       be used to adjust the parameters in real time to compensate for these individual differences. This
+                                       is particularly important for experiments in which the sample yield is low or the individual sample
+                                       is precious, as for example in the case of human brains or functionally imaged brains of behaving
+                                       animals that require several months of behavioral training. However, this will require calibrating what
+                                       is measured with X-­ray microscopy to the corresponding appearance at an electron microscopic level,
+                                       because the image formation process and the resulting contrast, signal-­to-­noise, etc. for both imaging
+                                       modalities depend not only on the staining protocol, but also on the imaging modality, energy, flux,
+                                       etc. (Du and Jacobsen, 2018).
+
+
+
+                                       Methods
+                                       Sample preparation
+                                       Animal use procedures were approved by the Princeton University Institutional Animal Care and Use
+                                       Committee (protocol number 2000) and carried out in accordance with National Institutes of Health
+                                       standards (AAALAC International Institutional Number: Unit #1001, PHS assurance ID D16-­00273).
+                                       The experiments were carried out with C57BL/6 J mice (Jackson Laboratories, Bar Harbor, Maine,
+                                       USA) of both sexes, age ranging from 13 to 58 weeks (mean ± sd: 27±9 weeks). Prior to tissue sample
+                                       extraction, the mice were anesthetized by isoflurane inhalation (4%) and euthanized with an intra-
+                                       peritoneal injection of a ketamine (100 mg/kg) and xylazine (10 mg/kg) overdose. Next, the animals
+                                       were perfused transcardially with ≥50 ml fixative solution (1.3–1.5% glutaraldehyde (GA) and 2.5–2.6%
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                        10 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                 Neuroscience
+
+                                       paraformaldehyde (PFA) in 0.14–0.15 M cacodylate buffer with 2.0–2.1 mM CaCl2 at pH 7.4; (GA, PFA)
+                                       and cacodylate buffer Electron Microscopy Sciences, Hatfield, PA; CaCl2, Sigma Aldrich, St. Louis,
+                                       MO). After perfusion, the animal was left for 15–60 min on ice. Subsequently, the brain was removed
+                                       in order to extract tissue samples at the center of the cortical surface of each hemisphere using biopsy
+                                       punches of 4 mm diameter. The liver tissue was extracted with a 4 mm biopsy punch from the center
+                                       of the liver after perfusion. The samples were kept in fixative solution at 4 °C for 36 hr (4 mm biopsy
+                                       punches) or for 12 hr (whole mouse brain). Next, the samples were washed 6–7 times for 30 min in
+                                       0.15 M cacodylate buffer with 2 mM CaCl2.
+                                           Glass vials were prepared prior to the experiments with a 1–2 mm layer of Sylgard 184 (Electron
+                                       Microscopy Sciences, Hatfield, PA) at the bottom. The whole mouse brain was glued with a small
+                                       drop of Vetbond tissue adhesive (3 M, Hanna Pharmaceutical Supply Co., Inc, Wilmington, DE) to
+                                       the bottom of the vial. For the 4 mm biopsy punch samples, a hole with a diameter of 4 mm was cut
+                                       out of the Sylgard layer. Next, the samples were placed into the sylgard hole and were glued to the
+                                       bottom of the glass vial with a small drop of Vetbond tissue adhesive. Subsequently, the samples
+                                       were immersed in fresh cacodylate buffer solution for the transfer to the X-­ray microscope. At the
+                                       microscope, presets (see X-­ray microscopy section below) were loaded for image acquisition. After
+                                       that the washing solution was replaced with the staining solution and the sample was placed into the
+                                       X-­ray microscope. The acquisition of X-­ray images was typically started within 5.66±2.35 min. (mean
+                                       ±s.d.) after adding the staining solution. The following staining solutions have been assessed at room
+                                       temperature for this study (all buffered with 0.15 M cacodylate buffer and 2 mM CaCl2):
+
+                                          •   Osmium tetroxide: 1%, 2% and 3% OsO4 (prepared from 2 mL 4% osmium tetroxide solution,
+                                              Electron Microscopy Sciences, Hatfield, PA)
+                                          •   Potassium ferrocyanide: 2.5% potassium ferrocyanide (prepared from crystalline 25 g potassium
+                                              hexacyanoferrate(II) trihydrate powder, Sigma Aldrich, St. Louis, MO)
+                                          •   Ferro-­redOs: 2% OsO4, 2.5% potassium ferrocyanide
+                                          •   Ferro-­redOs in 11.25% formamide: 2% OsO4, 2.5% potassium ferrocyanide, 11.25% formamide
+                                              (prepared from 25 mL formamide solution, Sigma Aldrich, St. Louis, MO)
+                                          •   Ferro-­redOs in 5.56% formamide: 2% OsO4, 2.5% potassium ferrocyanide, 5.56% formamide
+                                          •   Potassium ferricyanide: 2.5% potassium ferricyanide (EMS #13746-­66-­2)
+                                          •   Potassium ferricyanide reduced osmium: 2% OsO4, 2.5% potassium ferricyanide
+
+
+                                       Sample embedding, sectioning, and electron microscopy
+                                       After staining, the samples were washed with double-­distilled H2O 3 times for 30 min. Next, the
+                                       tissue was dehydrated with iteratively increasing concentrations of ethanol (EtOH, 200 proof, anhy-
+                                       drous,≥99.5%, Sigma Aldrich, St. Louis, MO) in double-­distilled H2O for 30 min per step: 25% EtOH,
+                                       50% EtOH, 75% EtOH, 90% EtOH, 95% EtOH, 100% EtOH, 100% EtOH. Subsequently, the samples
+                                       were transferred to 100% acetonitrile (ACS grade, Electron Microscopy Sciences, Hatfield, PA) for two
+                                       30-­min washes. The tissue was embedded in hard Epon in an iterative concentration series: 1:2 Epon:
+                                       acetonitrile for 12 hr, 1:1 Epon: acetonitrile for 24 hr, 2:1 Epon: acetonitrile for 2 days with fresh resin
+                                       every 8–12 hr. Finally, the sample was left on the bench at room temperature for 6 days, with fresh
+                                       resin every 8–12 hr, before it was placed in a 60 °C oven for curing for 5–7 days.
+                                           Serial sections of ~40 nm thickness were collected using an UC7 ultramicrotome from Leica. To
+                                       assess the ultrastructural preservation of the tissue, the sections were imaged with a Zeiss Sigma
+                                       SEM (Zeiss Microscopy, Oberkochen, Germany) with a backscattered electron detector (BSD) and the
+                                       following acquisition parameters: 38 μs dwell time, 4 nm pixel size, probe current 200 nA, EHT voltage
+                                       6 kV, BSD Gain = High, all sectors of the detector ON.
+
+
+                                       X-ray microscopy
+                                       All X-­ray microscopy experiments were performed on a Zeiss Xradia 520 Versa 3D X-­ray microscope
+                                       (Zeiss, Thornwood, NY). The samples were immersed in heavy metal solution in glass containers tightly
+                                       sealed with Parafilm (Bemis Company, Inc, Neenah, WI) just before being placed in the recording
+                                       chamber of the Xradia. Test images were acquired to check imaging parameters. For the biopsy punch
+                                       samples, projections at a fixed view angle (rotation angle step size = 0°) were taken every 22–60 s
+                                       resulting in about 1300–1350 images per sample over 22 hr of continuous acquisition. For the whole
+                                       mouse brain, projections were taken every 22–60 s and after each projection the sample was rotated
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                          11 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                      Neuroscience
+
+                                       by 1°. All images were acquired using the image acquisition software Scout-­and-­Scan Control System
+                                       (Zeiss, Thornwood, NY) with the following parameters:
+
+                                          •   Objective: 0.4 X
+                                          •   Tube Voltage = 100 kV
+                                          •   Output power = 7 W
+                                          •   Source filter = air (no filter)
+                                          •   Exposure time = 20 s.
+                                          •   Effective pixel size = 2–3 μm (biopsy punches) and 13–14 μm (whole mouse brain)
+
+
+                                       Image preprocessing
+                                       First, the individual images and metadata of each projection of each sample were extracted from the
+                                       proprietary *.txrm and *.xrm files as saved by the Xradia image acquisition software. In addition, a
+                                       time stamp of the acquisition time point was extracted from the image metadata for each projection.
+                                       A custom cross-­correlation based image alignment procedure (Wanner et al., 2016) was used to
+                                       correct for translational offsets between images of subsequent time points. The projection images
+                                       were flat-­field corrected to account for radial intensity variations due to the cone-­shaped X-­ray beam
+                                       as follows:
+
+                                          1. For each sample, a median image ‍immedian‍was calculated from the 2nd to 5th projection images
+                                             right after acquisition onset.                         (       )
+                                          2. The following quadratic 2d function was fitted to ‍log immedian ‍using the built-­in function lsqcur-
+                                             vefit in MATLAB:
+                                               ( )            2         2
+                                             ‍Z x, y = b5 · x + b4 · y + b3 · x + b2 · y + b1‍                           ( )
+                                          3. At each time t, the projection image was flat-­    field corrected using ‍Z x, y ‍ with the fitted
+                                             parameters: ( )
+                                                 ( )                       (   ( ))
+                                              ˆ t x, y = im(t (x,y )) · max exp Z
+                                             im
+                                             ‍            exp Z x,y                 ‍
+                                       Measuring the X-ray absorption and local heavy metal density
+                                       The pixel intensities of the detected absorbed X-­rays were used as a proxy for the density of heavy
+                                       metal accumulation in the tissue. In each sample, we quantified the pixel intensities in each projection
+                                       taken at time t along a cross-­section that pointed from the cortical surface radially towards the white
+                                       matter (Figure 1b). The cross-­sections were manually selected such that they started at a well detect-
+                                       able surface boundary and they were located at least 1 mm away from the vertical sample borders.
+                                                                                    ( )
+                                       For each sample i, the intensity ‍wi x, t ‍of the transmitted X-­rays was quantified by averaging the pixel
+                                       intensity of the cross-­section at a depth ‍x ‍at time ‍t ‍within a width of ±25 pixels perpendicular to the axis
+                                       of the cross-­section. x=0 corresponds to the cortical surface of the brain samples or the surface of the
+                                                                                                                               ( )                ( )
+                                       liver for the liver samples. The intensity of X-­ray absorption was defined as ‍ui x, t = 10, 000 − wi x, t .‍
+                                                                                             ()
+                                       For each time point t, the baseline intensity ‍bi t ‍ was calculated by averaging the pixels outside of
+                                       the sample within –50 μm and –150 μm from the sample surface along the cross-­section within a width
+                                       of ±25 pixels perpendicular to the axis of the cross-­section. To account for baseline fluctuation in the
+                                       staining solution and the X-­ray illumination the intensity of X-­ray absorption was baseline-­corrected by
+                                         b( )         ( ) ( ()                       ( ))
+                                       ‍ui x, t = ui x, t − b(i t) − median bi ‍.
+                                           To standardize ‍ubi x, t ,‍ the following quantities where calculated for each sample:
+                                                           ( ( ))
+                                           1. bi = mean ubi x, t was calculated for all pixels along the cross-­section outside of the sample
+                                               ‍                      ‍
+                                               within 0 μm and –200
+                                                                  (      μm  ) from the sample surface.
+                                           2. ‍umin
+                                                 i   = bi − 1−0.9
+                                                             0.9 (  m  − b i  ‍)
+                                                 ref
+                                           3. ui = umini   − a · m − umini
+                                               ‍         (    ) (               ‍
+                                                                                )
+                                           4. unorm
+                                                 i    = 1 + a · m − umin   i
+                                               ‍                                  ‍
+                                                   b( )                                ( ) ( ( )           ref
+                                                                                                               )
+                                       Finally, ‍ui x, t ‍was standardized to ui x, t = ubi x, t − ui /unorm     i   .
+                                                                                     ‍                               ‍
+                                           This procedure ensures that the origin is at 0 for the linear relationship between the X-­ray absorp-
+                                       tion intensities in the projection images and the different OsO4 concentrations as shown in Figure 1c
+                                       and that a pixel intensity of 0.9 roughly corresponds to the saturated staining in 2% OsO4. For this, the
+                                       factors ‍a = 0.61749‍and ‍m = 6420‍were determined empirically.
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                              12 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                     Neuroscience
+
+                                       Measuring the linear relationship between X-ray absorption and OsO4
+                                       concentration
+                                       The X-­ray absorption/pixel intensity of cacodylate-­buffered solutions with 1%, 2% and 3% OsO4 was
+                                       measured the same way as for the X-­ray absorption in stained tissue.
+
+                                       Monitoring of tissue expansion and shrinkage
+                                       Intensity based heuristics were used in a semi-­automated procedure to detect the cortical surface
+                                       in each image of each sample. The glass vial bottom was used as a reference point to measure the
+                                                                          ()
+                                       distance to the cortical surface ‍H t ‍at time ‍t ‍. Right after placing the samples in the X-­ray the height
+                                                                     (     )
+                                       of the samples( was
+                                                        )    ‍H0 = H t = 0 ‍ and the change in sample height (expansion or shrinkage) was
+                                                        H t −H0
+                                       quantified as ‍     H0   · 100%.‍
+
+                                       Tissue expansion modeling
+                                       The expansion of the tissue in buffered OsO4 solution was modeled by the monomolecular, saturating
+                                                            ()                (    )
+                                       growth function ‍g t = a1 − a2 · exp − τt .‍ The built-­in function lsqcurvefit of MATLAB was used for
+                                       parameter fitting. The fitted parameters for the average expansion in Figure 1f were ‍a1 = 5.8697%,‍
+                                       ‍a2 = 5.6924%,‍ ‍τ = 588.23 min‍. Under the assumption that the expansion of the tissue domain in buff-
+                                       ered osmium solution is isotropic, the corresponding velocity field v(x,t) of the flow in Equation 6 can
+                                       be characterized by:
+                                                                                     (   ()     )
+                                                                       ( )          ∂ 1+g t /100           a2       (    )
+                                       	﻿‍                            v x, t = −x ·      ∂t       = −x · 100·τ · exp − τt .‍
+
+
+                                       Tissue projection geometry model
+                                       While we assumed that the tissue density is homogeneous across the brain punch, we took into
+                                       account the variation in the tissue thickness of the 4 mm brain punch. Figure 2f shows a sketch of the
+                                       modeled tissue geometry. The geometry of the 4 mm brain punches is modeled as a cylinder with a
+                                       curved surface. The diameter of the ( cylinder) is ‍R‍and the curvature of the sample surface is approxi-
+                                       mated by a circle with radius 2H 1
+                                                                          · H2 + 14 R2 . The thickness of the sample as a function of the depth
+                                                                      ‍               (‍ )
+                                       x from the sample
+                                                    √ surface     is then given by ‍d x :‍
+                                             ( )          (           )                             ( )
+                                           d x = 2 · Hx · H2 + 14 R2 − x2 , for ‍0 ≤ x ≤ H ‍and ‍d x = R,‍ for ‍x > H .‍
+                                           ‍                                 ‍
+                                       Diffusion-reaction-advection modeling
+                                       The diffusion-­reaction-­advection model described by Equations 2–5 makes the following assumptions:
+                                             •   the cortical surface is in contact with an infinite source of staining agents at constant
+                                                 concentration,
+                                             •   the composition of the 4 mm brain punches can be approximated by a semi-­infinite, homoge-
+                                                 neous medium,                               √
+                                                                                    ( )             (          )                               ( )
+                                             •   the tissue thickness is given by d x = 2 · Hx · H2 + 14 R2 − x2 , for ‍0 ≤ x ≤ H ‍ and ‍d x = R,‍
+                                                                                  ‍                                   ‍
+                                                 for ‍x > H ‍
+                                             •   the kinetics of OsO4 diffusion can be described by Fick’s second law,
+                                             •   the binding of OsO4 to the tissue is irreversible and can be described by first-­order reaction
+                                                 kinetics
+                                             •   the density of available OsO4 binding sites is limited,
+                                             •   the unmasking of additional binding sites is irreversible, follows first-­order reaction kinetics and
+                                                 depends on the local concentration of free OsO4
+                                             •   the tissue expands isotropically and can be modeled by a (monomolecular,
+                                                                                                                    ()     )
+                                                                                                                                    saturating growth
+                                                                                                  ( )          ∂ 1+g t /100           a2       (    )
+                                                 function, which induces a local velocity field ‍v x, t = −x ·      ∂t       = −x · 100·τ · exp − τt .‍
+
+                                          Because the projected intensity also includes any X-­ray absorbing components surrounding the
+                                                                                                                             ( )
+                                       sample, we have to consider the change in free osmium density outside of the sample ‍o x, t ‍for fitting
+                                       the model to the experimental data:
+                                                                                   ( )
+                                                                                 ∂o x,t        [ ( ) ( )]
+                                       	﻿‍                                         ∂t   = − ∂x
+                                                                                            ∂
+                                                                                                o x, t · v x, t ‍                                  (7)
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                              13 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                              Neuroscience
+
+                                       The initial conditions (t=0) for the system of coupled partial differential Equations 2–5; 7 were chosen
+                                       as follows:
+                                                                                                 (              )       0              (            )
+                                           • concentration of free OsO4 in the sample: ‍f x ≤ 0, t = 0 = C · R ‍and ‍f x > 0, t = 0 = 0‍
+                                                                           (        )
+                                           • density of bound OsO4: ‍b x, t = 0 = 0 ‍
+                                                                                      (              )              (               )      0   ( )
+                                           • density of available binding sites: ‍s x ≤ 0, t = 0 = 0‍and ‍s x > 0, t = 0 = S · d x ‍
+                                                                                      (              )               (              )        0   ( )
+                                           • density of masked binding sites: ‍m x ≤ 0, t = 0 = 0‍and ‍m x > 0, t = 0 = M · d x ‍
+                                                                                                                          (              )      0 (   )
+                                           • concentration of free OsO4 surrounding the sample: ‍o x ≤ 0, t = 0 = C · D − R ‍ and
+                                                (            )     0 (       (  ))
+                                              ‍o x > 0, t = 0 = C · D − d x ,‍ where ‍D = 25mm‍is the vial diameter.
+                                                                                                                                                        [ ]
+                                          The boundary conditions of the system of coupled partial differential Equations 2–5; 7 for ‍x ∈ 0, L ‍
+                                       with maximal depth ‍L = 3mm‍were chosen as follows:
+                                                                                (        )     0             (         )
+                                           • concentration of free OsO4: ‍f x = 0, t = C · R ‍and ‍f x = L, t = 0‍
+                                                                           (        )              (        )      0      ( )
+                                           • density of bound OsO4: ‍b x = 0, t = 0‍and ‍b x = L, t = B · d L ‍
+                                                                                      (        )              (          )      0     ( )
+                                           • density of available binding sites: ‍s x = 0, t = 0‍and ‍s x = L, t = S · d L ‍
+                                                                                      (        )               (          )       0     ( )
+                                           • density of masked binding sites: ‍m x = 0, t = 0‍and ‍m x = L, t = M · d L ‍
+                                                                                                                              (          )     0 (    )
+                                           • concentration of free OsO4 surrounding the sample: ‍o x = 0, t = C · D − R ‍ and
+                                                (        )     0 (       (  ))
+                                              ‍o x = L, t = C · D − d (L ‍ )          (      )       (     )       (       )
+                                                                       ∂f x=L,t     ∂s x=L,t      ∂m x=L,t       ∂o x=L,t
+                                           • No flux beyond ‍x = L ‍: ‍ ∂x        =     ∂x     =      ∂x     =       ∂x      = 0‍
+
+                                         The MATLAB function pdepe was used to solve/simulate the initial-­
+                                                                                                          boundary value problem
+                                       described above.
+
+                                       Diffusion-reaction-advection model fitting
+                                                                            ( )              [            ]
+                                       ‍ 0 ‍was calculated by averaging ‍ubi x, t ‍over ‍x ∈ −150, −50 ‍μm from the sample surface (i.e. outside
+                                       C
+                                                                 [      ]
+                                       of the sample) and ‍t ∈ 0, 1200 ‍min and dividing it by the vial diameter ‍D = 25mm‍and by the intensity-­
+                                                                                               mm3
+                                       to-­concentration scaling factor ‍FI2C = 214.6308 mmol·mm    ‍ . ‍FI2C ‍ was calculated from the linear fit in
+                                       Figure 1c. In each fitting iteration, simulated data was produced according to the diffusion-­reaction-­
+                                                                                                             ( ( )       ( )      ( ))
+                                       advection model above. Within the fitting procedure, ‍FI2C · o x, t + f x, t + b x, t ‍ was fitted to
+                                         b (   )                                                                      [       ]
+                                       ‍ui x, t ‍ in a least
+                                                          [
+                                                             square displacement sense within the domain ‍x ∈ 100, 700 ‍ μm from the sample
+                                                                 ]
+                                       surface and ‍t ∈ 0, 1200 ‍min by using the trust-­region-­reflective algorithm of the nonlinear least-­squares
+                                       solver lsqnonlin in MATLAB to optimize the N=6 model parameters ‍De‍, ‍kon‍, ‍kunmask ‍, ‍S0 ‍, ‍M0‍and ‍H ‍.
+                                       These parameters were fitted to the average experimentally measured osmium accumulation from
+                                                                                 [         ]             [        ]
+                                       n=13 samples within the domains ‍x ∈ 100, 700 ‍μm and ‍t ∈ 0,√        1200 ‍min. To evaluate the quality of the
+                                                                                                                ∑    [ ( ) (     ( ( ) ( ) ( )))]               2
+                                                                                                                  ( )
+                                                                                                                   x,t
+                                                                                                                         ubi x,t − FI2C · o x,t +f x,t +b x,t
+                                       model fits, the residual standard error was calculated as SEres =                                  df
+                                                                                                 ‍                                                                  ‍
+                                       , were ‍df ‍corresponds to the degree of freedom.
+
+                                       Estimation of the average double-bond/ osmium binding site density in
+                                       the mouse brain
+                                       The average phospholipid density in the mouse brain is 56,241±4000 nmol/g (Barceló-Coblijn et al.,
+                                       2007) and for an average mouse brain volume of 508.91±23.42 mm3 (Badea et al., 2007) with a
+                                       weight of 0.427±0.024 g (The Jackson Laboratory, 2021), a cubic millimeter brain tissue contains
+                                       about 47.19 nmol phospholipids. Lipids in the brain carry on average 2.5 double bonds (Fitzner
+                                       et al., 2020) which results in 117.975 nmol/mm3 double bonds to which osmium tetroxide could bind
+                                       through osmium mono- or di-­ester formation. Our proposed model predicts 2.999 times more binding
+                                       sites (353.774±27.460 nmol/mm3), even without unmasking (Figure 2—figure supplement 4).
+
+
+                                       Acknowledgements
+                                       We thank Michael Bozlar for advice on potassium ferrocyanide and osmium chemistry, Stefan N Oline
+                                       for excellent assistance with animal perfusions and Alyssa M Wilson and Zhihao Zheng for comments
+                                       on the manuscript. The authors acknowledge the use of Princeton’s Imaging and Analysis Center,
+                                       which is partially supported through the Princeton Center for Complex Materials (PCCM), a National
+                                       Science Foundation (NSF)-­MRSEC program (DMR-­2011750). AAW acknowledges support by the
+                                       CV Starr Fellowship in Neuroscience by the Princeton University. This work was supported by the
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                        14 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                             Neuroscience
+
+                                       National Institutes of Health (NIH) grants U19 NS104648, NIH/NEI (1R01EY027036 to HSS), NIH/
+                                       NINDS (1R01NS104926 to HSS), NINDS/NIH (U01NS090562 to HSS).
+
+
+
+                                       Additional information
+
+                                       Competing interests
+                                       David W Tank, H Sebastian Seung, Adrian Andreas Wanner: is an inventor of US Patent Application
+                                       16/681,028. The other authors declare that no competing interests exist.
+
+                                       Funding
+                                       Funder                      Grant reference number       Author
+
+                                       CV Starr Fellowship in                                   Adrian Andreas Wanner
+                                       Neuroscience by the
+                                       Princeton University
+
+                                       National Institutes of      NS104648                     David W Tank
+                                       Health
+
+                                       National Institutes of      1R01EY027036                 H Sebastian Seung
+                                       Health
+
+                                       National Institutes of      U01NS090562                  H Sebastian Seung
+                                       Health
+
+                                       The funders had no role in study design, data collection and interpretation, or the
+                                       decision to submit the work for publication.
+
+
+                                       Author contributions
+                                       Sebastian Ströh, Eric W Hammerschmith, Conceptualization, Data curation, Validation, Investigation,
+                                       Methodology, Writing – original draft, Writing – review and editing; David W Tank, H Sebastian Seung,
+                                       Formal analysis, Supervision, Funding acquisition, Validation, Methodology, Writing – review and
+                                       editing; Adrian Andreas Wanner, Conceptualization, Resources, Data curation, Software, Formal anal-
+                                       ysis, Supervision, Funding acquisition, Validation, Investigation, Visualization, Methodology, Writing
+                                       – original draft, Project administration, Writing – review and editing
+
+                                       Author ORCIDs
+                                       Sebastian Ströh ‍ ‍http://orcid.org/0000-0001-8128-2617
+                                       David W Tank ‍ ‍http://orcid.org/0000-0002-9423-4267
+                                       Adrian Andreas Wanner ‍ ‍http://orcid.org/0000-0002-5864-8577
+
+                                       Ethics
+                                       Animal use procedures were approved by the Princeton University Institutional Animal Care and
+                                       Use Committee (protocol number 2000) and carried out in accordance with National Institutes
+                                       of Health standards (AAALAC International Institutional Number: Unit #1001, PHS assurance ID
+                                       D16-­00273).
+
+                                       Decision letter and Author response
+                                       Decision letter https://doi.org/10.7554/eLife.72147.sa1
+                                       Author response https://doi.org/10.7554/eLife.72147.sa2
+
+
+
+                                       Additional files
+                                       Supplementary files
+                                       •  Transparent reporting form
+
+                                       Data availability
+                                       The code to analyze the X-­ray projection images and to model the accumulation of heavy metals can
+                                       be found on https://github.com/adwanner/XrayAssistedStaining, (copy archived at swh:1:rev:62c993
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                    15 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                         Neuroscience
+
+                                       0d08bbdd1602614d515cd20b1cb1f89d15). All X-­ray data is available for download on https://www.​
+                                       ebi.ac.uk/empiar/ with dataset ID EMPIAR-­10782.
+
+                                       The following dataset was generated:
+
+                                       Author(s)              Year       Dataset title                 Dataset URL              Database and Identifier
+
+                                       Ströh S,           2022           In situ X-­ray assisted       https://www.​ebi.​ac.​   EMPIAR, EMPIAR-­10782
+                                       Hammerschmith EW,                 electron microscopy           uk/​empiar/​EMPIAR-​
+                                       Tank DW, Seung HS,                staining for large biological 10782/
+                                       Wanner AA                         samples
+
+
+
+
+                                       References
+                                       Abbott LF, Bock DD, Callaway EM, Denk W, Dulac C, Fairhall AL, Fiete I, Harris KM, Helmstaedter M, Jain V,
+                                         Kasthuri N, LeCun Y, Lichtman JW, Littlewood PB, Luo L, Maunsell JHR, Reid RC, Rosen BR, Rubin GM,
+                                         Sejnowski TJ, et al. 2020. The mind of a mouse. Cell 182:1372–1376. DOI: https://doi.org/10.1016/j.cell.2020.​
+                                         08.010, PMID: 32946777
+                                       Ashhurst DE. 1961.         The cytology and histochemistry of the neurones of Periplaneta americana        . Journal
+                                         of Cell Science s3-­102:399–405. DOI: https://doi.org/10.1242/jcs.s3-102.59.399
+                                       Badea A, Ali-­Sharief AA, Johnson GA. 2007. Morphometric analysis of the C57BL/6J mouse brain. NeuroImage
+                                         37:683–693. DOI: https://doi.org/10.1016/j.neuroimage.2007.05.046, PMID: 17627846
+                                       Bahr GF. 1954. Osmium tetroxide and ruthenium tetroxide and their reactions with biologically important
+                                         substances. electron stains. III. Experimental Cell Research 7:457–479. DOI: https://doi.org/10.1016/s0014-​
+                                         4827(54)80091-7, PMID: 13220591
+                                       Bahr GF. 1955. Continued studies about the fixation with osmium tetroxide. Experimental Cell Research
+                                         9:277–285. DOI: https://doi.org/10.1016/0014-4827(55)90100-2, PMID: 13262039
+                                       Barceló-Coblijn G, Golovko MY, Weinhofer I, Berger J, Murphy EJ. 2007. Brain neutral lipids mass is increased in
+                                         alpha-­synuclein gene-­ablated mice. Journal of Neurochemistry 101:132–141. DOI: https://doi.org/10.1111/j.​
+                                         1471-4159.2006.04348.x, PMID: 17250686
+                                       Belazi D, Solé-Domènech S, Johansson B, Schalling M, Sjövall P. 2009. Chemical analysis of osmium tetroxide
+                                         staining in adipose tissue using imaging TOF-­SIMS. Histochemistry and Cell Biology 132:105–115. DOI: https://​
+                                         doi.org/10.1007/s00418-009-0587-z, PMID: 19319557
+                                       Berning M, Boergens KM, Helmstaedter M. 2015. SegEM: efficient image analysis for high-­resolution
+                                         connectomics. Neuron 87:1193–1206. DOI: https://doi.org/10.1016/j.neuron.2015.09.003, PMID: 26402603
+                                       Bock DD, Lee W-­CA, Kerlin AM, Andermann ML, Hood G, Wetzel AW, Yurgenson S, Soucy ER, Kim HS, Reid RC.
+                                         2011. Network anatomy and in vivo physiology of visual cortical neurons. Nature 471:177–182. DOI: https://​
+                                         doi.org/10.1038/nature09802, PMID: 21390124
+                                       Briggman KL, Helmstaedter M, Denk W. 2011. Wiring specificity in the direction-­selectivity circuit of the retina.
+                                         Nature 471:183–188. DOI: https://doi.org/10.1038/nature09818, PMID: 21390125
+                                       Buhmann J, Sheridan A, Gerhard S, Krause R, Nguyen T, Heinrich L, Schlegel P, Lee WCA, Wilson R, Saalfeld S,
+                                         Jefferis G, Bock D, Turaga S, Cook M, Funke J. 2020. Automatic Detection of Synaptic Partners in a Whole-­
+                                         Brain Drosophila EM Dataset. bioRxiv. DOI: https://doi.org/10.1101/2019.12.12.874172
+                                       Burkl W, Schiechl H. 1968. A study of osmium tetroxide fixation. The Journal of Histochemistry and
+                                         Cytochemistry 16:157–161. DOI: https://doi.org/10.1177/16.3.157, PMID: 4870843
+                                       Carnevale JH, Cole ER, Crank G. 1979. Fluorescent light catalyzed autoxidation of beta-­carotene. Journal of
+                                         Agricultural and Food Chemistry 27:462–463. DOI: https://doi.org/10.1021/jf60222a042, PMID: 429699
+                                       Claude A, Fullam EF. 1945. AN electron microscope study of isolated mitochondria. Journal of Experimental
+                                         Medicine 81:51–62. DOI: https://doi.org/10.1084/jem.81.1.51
+                                       Clayton B-­P. 1959. The action of fixatives on the unmasking of lipid. Journal of Cell Science s3-­100:269–274.
+                                         DOI: https://doi.org/10.1242/jcs.s3-100.50.269
+                                       Deerinck TJ, Bushong EA, Lev-­Ram V, Shu X, Tsien RY, Ellisman MH. 2010. Enhancing serial block-­face scanning
+                                         electron microscopy to enable high resolution 3-­D nanohistology of cells and tissues. Microscopy and
+                                         Microanalysis 16:1138–1139. DOI: https://doi.org/10.1017/S1431927610055170
+                                       Denk W, Horstmann H. 2004. Serial block-­face scanning electron microscopy to reconstruct three-­dimensional
+                                         tissue nanostructure. PLOS Biology 2:e329. DOI: https://doi.org/10.1371/journal.pbio.0020329, PMID:
+                                         15514700
+                                       Dorkenwald S, Schubert PJ, Killinger MF, Urban G, Mikula S, Svara F, Kornfeld J. 2017. Automated synaptic
+                                         connectivity inference for volume electron microscopy. Nature Methods 14:435–442. DOI: https://doi.org/10.​
+                                         1038/nmeth.4206, PMID: 28250467
+                                       Dorkenwald S, McKellar C, Macrina T, Kemnitz N, Lee K, Lu R, Wu J, Popovych S, Mitchell E, Nehoran B, Jia Z,
+                                         Bae JA, Mu S, Ih D, Castro M, Ogedengbe O, Halageri A, Ashwood Z, Zung J, Brittain D, et al. 2020. FlyWire:
+                                         Online Community for Whole-­Brain Connectomics. [bioRxiv]. DOI: https://doi.org/10.1101/2020.08.30.274225
+                                       Du M, Jacobsen C. 2018. Relative merits and limiting factors for X-­ray and electron microscopy of thick, hydrated
+                                         organic materials. Ultramicroscopy 184:293–309. DOI: https://doi.org/10.1016/j.ultramic.2017.10.003, PMID:
+                                         29073575
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                 16 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                       Neuroscience
+
+                                       Dyer EL, Gray Roncal W, Prasad JA, Fernandes HL, Gürsoy D, De Andrade V, Fezzaa K, Xiao X, Vogelstein JT,
+                                         Jacobsen C, Körding KP, Kasthuri N. 2017. Quantifying mesoscale neuroanatomy using X-­ray microtomography.
+                                         ENeuro 4:ENEURO.0195-­17.2017. DOI: https://doi.org/10.1523/ENEURO.0195-17.2017, PMID: 29085899
+                                       Eberle AL, Mikula S, Schalek R, Lichtman J, Tate MLK, Zeidler D. 2015. High-­resolution, high-­throughput imaging
+                                         with a multibeam scanning electron microscope. Journal of Microscopy 259:114–120. DOI: https://doi.org/10.​
+                                         1111/jmi.12224, PMID: 25627873
+                                       Finck H. 1960. Epoxy resins in electron microscopy. The Journal of Biophysical and Biochemical Cytology
+                                         7:27–30. DOI: https://doi.org/10.1083/jcb.7.1.27, PMID: 13822825
+                                       Fitzner D, Bader JM, Penkert H, Bergner CG, Su M, Weil MT, Surma MA, Mann M, Klose C, Simons M. 2020.
+                                         Cell-­type- and brain-­region-­resolved mouse brain lipidome. Cell Reports 32:108132. DOI: https://doi.org/10.​
+                                         1016/j.celrep.2020.108132, PMID: 32937123
+                                       Fox CH, Johnson FB, Whiting J, Roller PP. 1985. Formaldehyde fixation. The Journal of Histochemistry and
+                                         Cytochemistry 33:845–853. DOI: https://doi.org/10.1177/33.8.3894502, PMID: 3894502
+                                       Fulton KA, Briggman KL. 2020. Permeabilization-­Free        En Bloc     Immunohistochemistry for Correlative
+                                         Microscopy. [bioRxiv]. DOI: https://doi.org/10.1101/2020.10.07.327734
+                                       Genoud C, Titze B, Graff-­Meyer A, Friedrich RW. 2018. Fast homogeneous en bloc staining of large tissue
+                                         samples for volume electron microscopy. Frontiers in Neuroanatomy 12:76. DOI: https://doi.org/10.3389/​
+                                         fnana.2018.00076, PMID: 30323746
+                                       Glauert AM, Glauert RH, Rogers GE. 1956. A new embedding medium for electron microscopy. Nature 178:803.
+                                         DOI: https://doi.org/10.1038/178803a0, PMID: 13369546
+                                       Graham BJ, Hildebrand DGC, Kuan AT, Maniates-­Selvin JT, Thomas LA, Shanny BL, Lee WCA. 2019. High-­
+                                         Throughput Transmission Electron Microscopy with Automated Serial Sectioning. [bioRxiv]. DOI: https://doi.​
+                                         org/10.1101/657346
+                                       Hayworth KJ, Morgan JL, Schalek R, Berger DR, Hildebrand DGC, Lichtman JW. 2014. Imaging ATUM ultrathin
+                                         section libraries with wafermapper: a multi-­scale approach to em reconstruction of neural circuits. Frontiers in
+                                         Neural Circuits 8:68. DOI: https://doi.org/10.3389/fncir.2014.00068, PMID: 25018701
+                                       Hayworth KJ, Peale D, Januszewski M, Knott GW, Lu Z, Xu CS, Hess HF. 2020. Gas cluster ion beam SEM for
+                                         imaging of large tissue samples with 10 nm isotropic resolution. Nature Methods 17:68–71. DOI: https://doi.​
+                                         org/10.1038/s41592-019-0641-2, PMID: 31740820
+                                       Helmstaedter M, Briggman KL, Turaga SC, Jain V, Seung HS, Denk W. 2013. Connectomic reconstruction of the
+                                         inner plexiform layer in the mouse retina. Nature 500:168–174. DOI: https://doi.org/10.1038/nature12346,
+                                         PMID: 23925239
+                                       Hua Y, Laserstein P, Helmstaedter M. 2015. Large-­Volume en-­bloc staining for electron microscopy-­based
+                                         connectomics. Nature Communications 6:7923. DOI: https://doi.org/10.1038/ncomms8923, PMID: 26235643
+                                       Jain V, Seung HS, Turaga SC. 2010. Machines that learn to segment images: a crucial technology for
+                                         connectomics. Current Opinion in Neurobiology 20:653–666. DOI: https://doi.org/10.1016/j.conb.2010.07.004,
+                                         PMID: 20801638
+                                       Januszewski M, Kornfeld J, Li PH, Pope A, Blakely T, Lindsey L, Maitin-­Shepard J, Tyka M, Denk W, Jain V. 2018.
+                                         High-­Precision automated reconstruction of neurons with flood-­filling networks. Nature Methods 15:605–610.
+                                         DOI: https://doi.org/10.1038/s41592-018-0049-4, PMID: 30013046
+                                       Jensen FE, Harris KM. 1989. Preservation of neuronal ultrastructure in hippocampal slices using rapid microwave-­
+                                         enhanced fixation. Journal of Neuroscience Methods 29:217–230. DOI: https://doi.org/10.1016/0165-0270(89)​
+                                         90146-5, PMID: 2507828
+                                       Kasthuri N, Hayworth KJ, Berger DR, Schalek RL, Conchello JA, Knowles-­Barley S, Lee D, Vázquez-­Reina A,
+                                         Kaynig V, Jones TR, Roberts M, Morgan JL, Tapia JC, Seung HS, Roncal WG, Vogelstein JT, Burns R,
+                                         Sussman DL, Priebe CE, Pfister H, et al. 2015. Saturated reconstruction of a volume of neocortex. Cell
+                                         162:648–661. DOI: https://doi.org/10.1016/j.cell.2015.06.054, PMID: 26232230
+                                       Khan AA, Riemersma JC, Booij HL. 1961. The reactions of osmium tetroxide with lipids and other compounds.
+                                         The Journal of Histochemistry and Cytochemistry 9:560–563. DOI: https://doi.org/10.1177/9.5.560, PMID:
+                                         14455534
+                                       Korn ED. 1967. A chromatographic and spectrophotometric study of the products of the reaction of osmium
+                                         tetroxide with unsaturated lipids. The Journal of Cell Biology 34:627–638. DOI: https://doi.org/10.1083/jcb.34.​
+                                         2.627, PMID: 6035650
+                                       Kornfeld J, Benezra SE, Narayanan RT, Svara F, Egger R, Oberlaender M, Denk W, Long MA. 2017. EM
+                                         connectomics reveals axonal target variation in a sequence-­generating network. eLife 6:e24364. DOI: https://​
+                                         doi.org/10.7554/eLife.24364, PMID: 28346140
+                                       Korogod N, Petersen CCH, Knott GW. 2015. Ultrastructural analysis of adult mouse neocortex comparing
+                                         aldehyde perfusion with cryo fixation. eLife 4:e05793. DOI: https://doi.org/10.7554/eLife.05793, PMID:
+                                         26259873
+                                       Kuan AT, Phelps JS, Thomas LA, Nguyen TM, Han J, Chen C-­L, Azevedo AW, Tuthill JC, Funke J, Cloetens P,
+                                         Pacureanu A, Lee W-­CA. 2020. Dense neuronal reconstruction through X-­ray holographic nano-­tomography.
+                                         Nature Neuroscience 23:1637–1643. DOI: https://doi.org/10.1038/s41593-020-0704-9, PMID: 32929244
+                                       Lauder RM, Beynon AD. 1993. Unmasking and abolition of sudanophilia of the mineralizing front. Biotechnic &
+                                         Histochemistry 68:180–185. DOI: https://doi.org/10.3109/10520299309104693, PMID: 7687885
+                                       Lee WCA, Bonin V, Reed M, Graham BJ, Hood G, Glattfelder K, Reid RC. 2016. Anatomy and function of an
+                                         excitatory network in the visual cortex. Nature 532:370–374. DOI: https://doi.org/10.1038/nature17192, PMID:
+                                         27018655
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                17 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                          Neuroscience
+
+                                       Litman RB, Barrnett RJ. 1972. The mechanism of the fixation of tissue components by osmium tetroxide via
+                                         hydrogen bonding. Journal of Ultrastructure Research 38:63–86. DOI: https://doi.org/10.1016/s0022-5320(72)​
+                                         90084-6, PMID: 4550614
+                                       Login GR, Dvorak AM. 1988. Microwave fixation provides excellent preservation of tissue, cells and antigens for
+                                         light and electron microscopy. The Histochemical Journal 20:373–387. DOI: https://doi.org/10.1007/​
+                                         BF01002732, PMID: 2464568
+                                       Maaløe O, Andersen B. 1956. Bacterial anatomy. Symposium of the Society for General Microbiology.
+                                         Cambridge: University Press.
+                                       Masís J, Mankus D, Wolff SBE, Guitchounts G, Joesch M, Cox DD. 2018. A micro-­CT-­based method for
+                                         quantitative brain lesion characterization and electrode localization. Scientific Reports 8:5184. DOI: https://doi.​
+                                         org/10.1038/s41598-018-23247-z
+                                       McIntyre RL, Fahy GM. 2015. Aldehyde-­stabilized cryopreservation. Cryobiology 71:448–458. DOI: https://doi.​
+                                         org/10.1016/j.cryobiol.2015.09.003, PMID: 26408851
+                                       Medawar P. 1941. III.-the rate of penetration of fixatives. Journal of the Royal Microscopical Society 61:46–57.
+                                         DOI: https://doi.org/10.1111/j.1365-2818.1941.tb00884.x
+                                       Mikula S, Binding J, Denk W. 2012. Staining and embedding the whole mouse brain for electron microscopy.
+                                         Nature Methods 9:1198–1201. DOI: https://doi.org/10.1038/nmeth.2213, PMID: 23085613
+                                       Mikula S, Denk W. 2015. High-­Resolution whole-­brain staining for electron microscopic circuit reconstruction.
+                                         Nature Methods 12:541–546. DOI: https://doi.org/10.1038/nmeth.3361, PMID: 25867849
+                                       Palade GE. 1952. A study of fixation for electron microscopy. The Journal of Experimental Medicine 95:285–298.
+                                         DOI: https://doi.org/10.1084/jem.95.3.285, PMID: 14927794
+                                       Porter KR, Claude A, Fullam EF. 1945. A study of tissue culture cells by electron microscopy. Journal of
+                                         Experimental Medicine 81:233–246. DOI: https://doi.org/10.1084/jem.81.3.233
+                                       Ren Y, Kruit P. 2016. Transmission electron imaging in the delft multibeam scanning electron microscope 1.
+                                         Journal of Vacuum Science & Technology B, Nanotechnology and Microelectronics 34:06KF02. DOI: https://​
+                                         doi.org/10.1116/1.4966216
+                                       Sabatini DD, Miller F, Barrnett RJ. 1964. ALDEHYDE fixation for morphological and enzyme histochemical
+                                         studies with the electron microscope. The Journal of Histochemistry and Cytochemistry 12:57–71. DOI: https://​
+                                         doi.org/10.1177/12.2.57, PMID: 14187313
+                                       Schalek R, Kasthuri N, Hayworth K, Berger D, Tapia J, Morgan J, Turaga S, Fagerholm E, Seung H, Lichtman J.
+                                         2011. Development of high-­throughput, high-­resolution 3D reconstruction of large-­volume biological tissue
+                                         using automated tape collection ultramicrotomy and scanning electron microscopy. Microscopy and
+                                         Microanalysis 17:966–967. DOI: https://doi.org/10.1017/S1431927611005708
+                                       Scheffer LK, Xu CS, Januszewski M, Lu Z, Takemura S-­Y, Hayworth KJ, Huang GB, Shinomiya K,
+                                         Maitlin-­Shepard J, Berg S, Clements J, Hubbard PM, Katz WT, Umayam L, Zhao T, Ackerman D, Blakely T,
+                                         Bogovic J, Dolafi T, Kainmueller D, et al. 2020. A connectome and analysis of the adult Drosophila central
+                                         brain. eLife 9:e57443. DOI: https://doi.org/10.7554/eLife.57443, PMID: 32880371
+                                       Schmidt H, Gour A, Straehle J, Boergens KM, Brecht M, Helmstaedter M. 2017. Axonal synapse sorting in
+                                         medial entorhinal cortex. Nature 549:469–475. DOI: https://doi.org/10.1038/nature24005, PMID: 28959971
+                                       Schroeder M. 1980. Osmium tetraoxide cis hydroxylation of unsaturated substrates. Chemical Reviews 80:187–
+                                         213. DOI: https://doi.org/10.1021/cr60324a003
+                                       Schubert PJ, Dorkenwald S, Januszewski M, Jain V, Kornfeld J. 2019. Learning cellular morphology with neural
+                                         networks. Nature Communications 10:2736. DOI: https://doi.org/10.1038/s41467-019-10836-3
+                                       Seligman AM, Wasserkrug HL, Hanker JS. 1966. A new staining method (OTO) for enhancing contrast of
+                                         lipid--containing membranes and droplets in osmium tetroxide--fixed tissue with osmiophilic
+                                         thiocarbohydrazide(tch). The Journal of Cell Biology 30:424–432. DOI: https://doi.org/10.1083/jcb.30.2.424,
+                                         PMID: 4165523
+                                       Staffler B, Berning M, Boergens KM, Gour A, Smagt P, Helmstaedter M. 2017. SynEM, automated synapse
+                                         detection for connectomics. eLife 6:e26414. DOI: https://doi.org/10.7554/eLife.26414, PMID: 28708060
+                                       Svara FN, Kornfeld J, Denk W, Bollmann JH. 2018. Volume em reconstruction of spinal cord reveals wiring
+                                         specificity in speed-­related motor circuits. Cell Reports 23:2942–2954. DOI: https://doi.org/10.1016/j.celrep.​
+                                         2018.05.023, PMID: 29874581
+                                       Tapia JC, Kasthuri N, Hayworth KJ, Schalek R, Lichtman JW, Smith SJ, Buchanan J. 2012. High-­Contrast en bloc
+                                         staining of neuronal tissue for field emission scanning electron microscopy. Nature Protocols 7:193–206. DOI:
+                                         https://doi.org/10.1038/nprot.2011.439, PMID: 22240582
+                                       The Jackson Laboratory. 2021. jax-­mice-­and-­services. https://www.jax.org/de/-/media/jaxweb/files/jax-mice-​
+                                         and-services/b6j-data-summary.xlsx [Accessed November 8, 2022].
+                                       Turner NL, Macrina T, Bae JA, Yang R, Wilson AM, Schneider-­Mizell C, Lee K, Lu R, Wu J, Bodor AL, Bleckert AA,
+                                         Brittain D, Froudarakis E, Dorkenwald S, Collman F, Kemnitz N, Ih D, Silversmith WM, Zung J, Zlateski A, et al.
+                                         2020. Multiscale and Multimodal Reconstruction of Cortical Structure and Function. [bioRxiv]. DOI: https://doi.​
+                                         org/10.1101/2020.10.14.338681
+                                       Vergara HM, Pape C, Meechan KI, Zinchenko V, Genoud C, Wanner AA, Titze B, Templin RM, Bertucci PY,
+                                         Simakov O, Machado P, Savage EL, Schwab Y, Friedrich RW, Kreshuk A, Tischer C, Arendt D. 2020. Whole-­Body
+                                         Integration of Gene Expression and Single-­Cell Morphology. [bioRxiv]. DOI: https://doi.org/10.1101/2020.02.​
+                                         26.961037
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                                   18 of 19
+           Tools and resources﻿﻿﻿﻿﻿﻿                                                                                                      Neuroscience
+
+                                       Vishwanathan A, Daie K, Ramirez AD, Lichtman JW, Aksay ERF, Seung HS. 2017. Electron microscopic
+                                         reconstruction of functionally identified cells in a neural integrator. Current Biology 27:2137–2147. DOI:
+                                         https://doi.org/10.1016/j.cub.2017.06.028, PMID: 28712570
+                                       Wanner AA, Genoud C, Masudi T, Siksou L, Friedrich RW. 2016. Dense EM-­based reconstruction of the
+                                         interglomerular projectome in the zebrafish olfactory bulb. Nature Neuroscience 19:816–825. DOI: https://doi.​
+                                         org/10.1038/nn.4290, PMID: 27089019
+                                       Wanner AA, Friedrich RW. 2020. Whitening of odor representations by the wiring diagram of the olfactory bulb.
+                                         Nature Neuroscience 23:433–442. DOI: https://doi.org/10.1038/s41593-019-0576-z, PMID: 31959937
+                                       Watson ML. 1958. Staining of tissue sections for electron microscopy with heavy metals. The Journal of
+                                         Biophysical and Biochemical Cytology 4:727–730. DOI: https://doi.org/10.1083/jcb.4.6.727
+                                       White DL, Andrews SB, Faller JW, Barrnett RJ. 1976. The chemical nature of osmium tetroxide fixation and
+                                         staining of membranes by X-­ray photoelectron spectroscopy. Biochimica et Biophysica Acta 436:577–592. DOI:
+                                         https://doi.org/10.1016/0005-2736(76)90442-9, PMID: 60133
+                                       Wigglesworth VB. 1975. Lipid staining for the electron microscope: a new method. Journal of Cell Science
+                                         19:425–437. DOI: https://doi.org/10.1242/jcs.19.3.425, PMID: 54360
+                                       Willingham MC, Rutherford AV. 1984. The use of osmium-­thiocarbohydrazide-­osmium (OTO) and ferrocyanide-­
+                                         reduced osmium methods to enhance membrane contrast and preservation in cultured cells. The Journal of
+                                         Histochemistry and Cytochemistry 32:455–460. DOI: https://doi.org/10.1177/32.4.6323574, PMID: 6323574
+                                       Wilson AM, Schalek R, Suissa-­Peleg A, Jones TR, Knowles-­Barley S, Pfister H, Lichtman JW. 2019. Developmental
+                                         rewiring between cerebellar climbing fibers and Purkinje cells begins with positive feedback synapse addition.
+                                         Cell Reports 29:2849–2861.. DOI: https://doi.org/10.1016/j.celrep.2019.10.081, PMID: 31775050
+                                       Xu CS, Hayworth KJ, Lu Z, Grob P, Hassan AM, García-­Cerdán JG, Niyogi KK, Nogales E, Weinberg RJ, Hess HF.
+                                         2017. Enhanced FIB-­SEM systems for large-­volume 3D imaging. eLife 6:e25916. DOI: https://doi.org/10.7554/​
+                                         eLife.25916, PMID: 28500755
+                                       Zheng Z, Lauritzen JS, Perlman E, Robinson CG, Nichols M, Milkie D, Torrens O, Price J, Fisher CB, Sharifi N,
+                                         Calle-­Schuler SA, Kmecova L, Ali IJ, Karsh B, Trautman ET, Bogovic JA, Hanslovsky P, Jefferis GSXE, Kazhdan M,
+                                         Khairy K, et al. 2018. A complete electron microscopy volume of the brain of adult Drosophila melanogaster.
+                                         Cell 174:730–743.. DOI: https://doi.org/10.1016/j.cell.2018.06.019, PMID: 30033368
+
+
+
+
+Ströh, Hammerschmith et al. eLife 2022;11:e72147. DOI: https://​doi.​org/​10.​7554/​eLife.​72147                                              19 of 19
+

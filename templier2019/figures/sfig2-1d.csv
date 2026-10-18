@@ -1,0 +1,17 @@
+# Templier 2019 eLife 8:e45696, Figure 2—figure supplement 1d: bar chart (no axis titles). Categories 0-7 on the
+#   x axis, counts 0-400 on the y axis; the value of each bar is printed above it. The legend calls panel d the
+#   'Similarity matrix of the reordered sections'; the image shows this bar chart instead (see the README).
+# Columns: category = x tick label (0-7); height_read = bar height digitized (y units); printed_value = the
+#   number printed above the bar (transcribed from the image, exact).
+# Provenance: height_read is tier 3, digitized from fig2-figsupp1.jpg by sfig2-1_extract.py: summed blue
+#   coverage of the bar's central 9 columns above the axis; y fit on 5 ticks (0-400), max residual 0.51.
+# Uncertainty of height_read: about +-1.7 (1 px). printed_value sum = 513.
+category,height_read,printed_value
+0,373.9,375
+1,102.9,103
+2,25.47,26
+3,7.041,7
+4,1.223,1
+5,0.5086,0
+6,0.5086,0
+7,0.5086,1

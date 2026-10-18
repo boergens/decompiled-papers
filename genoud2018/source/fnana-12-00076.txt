@@ -1,0 +1,502 @@
+                                                                                                                                                              METHODS
+                                                                                                                                            published: 28 September 2018
+                                                                                                                                           doi: 10.3389/fnana.2018.00076
+
+
+
+
+                                            Fast Homogeneous En Bloc Staining
+                                            of Large Tissue Samples for Volume
+                                            Electron Microscopy
+                                            Christel Genoud 1*, Benjamin Titze 1 , Alexandra Graff-Meyer 1 and Rainer W. Friedrich 1,2
+                                            1
+                                              Friedrich Miescher Institute for Biomedical Research, Basel, Switzerland, 2 Faculty of Natural Sciences, University of Basel,
+                                            Basel, Switzerland
+
+
+                                            Fixation and staining of large tissue samples are critical for the acquisition of volumetric
+                                            electron microscopic image datasets and the subsequent reconstruction of neuronal
+                                            circuits. Efficient protocols exist for the staining of small samples, but uniform contrast
+                                            is often difficult to achieve when the sample diameter exceeds a few hundred
+                                            micrometers. Recently, a protocol (BROPA, brain-wide reduced-osmium staining with
+                                            pyrogallol-mediated amplification) was developed that achieves homogeneous staining
+                                            of the entire mouse brain but requires very long sample preparation times. By exploring
+                                            modifications of this protocol we developed a substantially faster procedure, fBROPA,
+                                            that allows for reliable high-quality staining of tissue blocks on the millimeter scale.
+                                            Modifications of the original BROPA protocol include drastically reduced incubation times
+                            Edited by:
+                     Yoshiyuki Kubota,
+                                            and a lead aspartate incubation to increase sample conductivity. Using this procedure,
+    National Institute for Physiological    whole brains from adult zebrafish were stained within 4 days. Homogenous high-contrast
+               Sciences (NIPS), Japan
+                                            staining was achieved throughout the brain. High-quality image stacks with voxel sizes
+                         Reviewed by:
+                                            of 10 × 10 × 25 nm3 were obtained by serial block-face imaging using an electron dose
+                            Yun-Qing Li,
+     Fourth Military Medical University,    of ∼15 e− /nm2 . No obvious reduction in staining quality was observed in comparison to
+                                   China    smaller samples stained by other state-of-the-art procedures. Furthermore, high-quality
+                            Tom Reese,
+      National Institute of Neurological
+                                            images with minimal charging artifacts were obtained from non-neural tissues with low
+       Disorders and Stroke (NINDS),        membrane density. fBROPA is therefore likely to be a versatile and efficient sample
+                          United States
+                                            preparation protocol for a wide range of applications in volume electron microscopy.
+                         Jon I. Arellano,
+         Yale School of Medicine, Yale      Keywords: EM, protocol, BROPA, connectomics, SBEM, block-face, zebrafish, sample preparation
+              University, United States
+
+                  *Correspondence:
+                       Christel Genoud      INTRODUCTION
+               christel.genoud@fmi.ch
+                                            Volume electron microscopy (volume EM) is currently the only imaging approach that enables
+           Received: 20 June 2018           dense reconstructions of neuronal circuits. A current goal for large-scale projects is the acquisition
+        Accepted: 29 August 2018            of high-resolution image data from volumes up to 1 mm3 , which may be achieved by different
+     Published: 28 September 2018           approaches that rely on automated sectioning and imaging (Briggman and Bock, 2012; Denk et al.,
+                            Citation:       2012; Titze and Genoud, 2016). One strategy is to collect sections on a support for subsequent
+Genoud C, Titze B, Graff-Meyer A and        imaging in a scanning EM (SEM) or in a transmission EM (TEM). Alternatively, stacks of images
+             Friedrich RW (2018) Fast
+                                            may be acquired by serial block-face scanning electron microscopy (SBEM), a technique that
+   Homogeneous En Bloc Staining of
+    Large Tissue Samples for Volume
+                                            repeatedly cuts and images the sample block-face in an SEM (Denk and Horstmann, 2004). For
+                 Electron Microscopy.       both approaches, unsliced tissue blocks must be fixed and impregnated with heavy metals. Efficient
+             Front. Neuroanat. 12:76.       methods for en bloc staining of EM samples on this size scale are thus of key importance for
+     doi: 10.3389/fnana.2018.00076          connectomics.
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                     1                                             September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                             En Bloc Staining of Large Tissue Samples
+
+
+
+    En bloc staining methods for connectomics should ideally              were then used to stain entire brains of adult zebrafish, which
+achieve uniform and strong impregnation of membranes with                 have a maximal diameter of >1 mm. Brains were imaged in an
+heavy metals throughout large sample blocks. This has been                SEM (Zeiss Merlin or FEI Quanta 200 FEG) in low or high
+achieved by the rOTO (reduced osmium—thiocarbohydrazide—                  vacuum. Under these conditions, intense staining with heavy
+osmium) protocol (Seligman et al., 1966; Malick and Wilson,               metals is required to obtain high-contrast images. Moreover,
+1975) and its recent adaptations and modifications (Deerinck              highly conductive samples are required to prevent charging in
+et al., 2010; Tapia et al., 2012a). The rOTO protocol achieves            high vacuum.
+high membrane contrast, but staining intensity decreases with                 We first reduced all incubation times of the original BROPA
+depth (Hua et al., 2015), presumably because the penetration              protocol by a scaling factor given by the approximate length ratio
+of reagents is inefficient. Acceptable staining can usually be            of the zebrafish brain and the mouse brain, which resulted in a
+achieved up to 200 µm below the tissue surface, but staining of           total duration of 2 weeks for the complete protocol. However,
+thicker samples remains challenging. Hence, new approaches are            this approach was not successful. Although we used a fixation
+required for high-contrast staining of samples containing large           procedure that is known to preserve ultrastructure very well
+neuronal circuits.                                                        (Briggman and Denk, 2006; Deerinck et al., 2010; Tapia et al.,
+    Recently, two protocols for efficient staining of larger              2012b; Hua et al., 2015; Mikula and Denk, 2015) brains showed
+samples have been introduced. The first protocol is based on              obvious signs of damage. Staining was poor, membrane integrity
+modifications of the osmium steps and produced homogeneous                was not preserved, and broken nuclear envelopes were observed
+and strong staining in 1 × 1 × 1 mm3 blocks of mouse brain                (Figure 1A). Moreover, the tissue contained large empty spaces
+tissue (Hua et al., 2015). However, we obtained variable results          and was not sufficiently conductive to obtain high-quality SBEM
+when applying this protocol to the brain of adult zebrafish, which        images in high vacuum (Figure 1B).
+is difficult to impregnate because densely packed somata and                  We then varied incubation times to optimize conditions.
+meninges form strong diffusion barriers. The second protocol,             Surprisingly, we found that shorter incubation times resulted
+referred to as BROPA, was developed to stain entire mouse brains          in more intense and more homogeneous staining. Moreover,
+and uses different reagents such as formamide and pyrogallol              shorter incubation times eliminated obvious signs of damage and
+(Mikula and Denk, 2015). Uniform staining of an entire mouse              dramatically improved the preservation of tissue ultrastructure
+brain requires very long incubation times that result in a total          (Figure 2). To further optimize the protocol we varied the
+protocol duration of 2–3 months. We therefore explored the                following steps and systematically analyzed staining in the
+possibility to modify this protocol to achieve faster staining of         telencephalon of the adult zebrafish brain:
+smaller samples.
+                                                                          1. Dissection and fixation. We found no obvious difference in
+    We developed a modified BROPA protocol, referred to as “fast
+                                                                             staining between brains that were dissected in cold artificial
+BROPA” (fBROPA), that achieves strong and uniform staining
+                                                                             cerebrospinal fluid (ACSF) before fixation and brains that
+of samples on a millimeter scale. The procedure takes advantage
+                                                                             were dissected directly in cold fixative.
+of the reagents used in the BROPA protocol but uses drastically
+                                                                          2. Sucrose. We did not observe an obvious correlation between
+shorter incubation times and contains additional modifications.
+                                                                             the sucrose concentration and the preservation of extracellular
+A lead aspartate (Walton, 1979) incubation step substantially
+                                                                             space (Pallotto et al., 2015). However, we observed that
+increased the conductivity of the sample, which greatly facilitated
+                                                                             the proportion of extracellular space differed between brain
+SBEM imaging of sample blocks. The protocol does not include
+                                                                             regions. While the telencephalon contained almost no
+uranyl acetate, thus resolving concerns about radiation safety
+                                                                             extracellular space (Figures 2B,C), substantial amounts of
+(Odriozola et al., 2017). The time required for the complete
+                                                                             extracellular space were observed in the olfactory bulb.
+fBROPA staining procedure (four days) is similar to the duration
+                                                                          3. Osmium incubation. Best results in the zebrafish forebrain
+of other protocols such as rOTO. We tested fBROPA on different
+                                                                             were obtained when the durations of osmium incubations
+samples including tissue from the adult zebrafish brain and
+                                                                             were limited to ∼90 min for each incubation. This time
+mammalian intestinal organoids using SBEM. In all samples,
+                                                                             was sufficient for reagents to diffuse throughout the
+fBROPA produced uniform staining with high contrast and
+                                                                             forebrain and produce homogeneous staining. Longer
+conductivity. We therefore conclude that fBROPA is a promising
+                                                                             incubation times, in contrast, may produce inhomogeneous
+staining method for volumetric EM applications in connectomics
+                                                                             staining. Tissue ultrastructure was well-preserved. Further
+and other fields.
+                                                                             observations indicated that the optimal duration of osmium
+                                                                             incubations varies between samples. In intestinal organoids,
+RESULTS                                                                      for example, the best tissue preservation and the most
+                                                                             homogeneous staining was obtained with an incubation time
+The goal of this study was to develop an en bloc staining protocol           of 45 min. We therefore recommend systematic variation
+for reliable staining of samples on the millimeter scale. Our                of this parameter when adapting the protocol to new
+starting point was the BROPA protocol (Mikula and Denk, 2015),               samples.
+which has been developed for larger samples. In order to adapt it         4. Lead aspartate. In order to increase conductivity and prevent
+to smaller samples we first used the same reagents and procedures            charging in the SEM (Figure 1B) we incubated samples
+but reduced incubation times by a constant factor. Protocols                 in lead aspartate. This procedure was found to increase
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                       2                                    September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                                 En Bloc Staining of Large Tissue Samples
+
+
+
+
+ FIGURE 1 | Unsuccessful staining attempts. (A) Telencephalon of adult zebrafish stained with a protocol that reduced incubation times of the original BROPA protocol
+ to a total duration of 2 weeks. Note severe tissue damage. (B) Telencephalon of adult zebrafish stained with a protocol that reduced incubation times of the original
+ BROPA protocol to a total duration of 5 days without lead aspartate. Note charging artifacts in nuclei and neuropil.
+
+
+
+
+   sample conductivity in the rOTO protocol. Consistent with                            The final protocol for fBROPA is described in detail in
+   this observation, we found that lead aspartate substantially                       Materials and Methods and consists of the following main steps:
+   increased conductivity of samples prepared by fBROPA. This
+                                                                                      Day 1: Dissection of tissue and fixation overnight.
+   step was necessary to acquire stacks of SBEM images in high
+                                                                                      Day 2: Incubation in reduced osmium, osmium, pyrogallol,
+   vacuum.
+                                                                                             osmium.
+5. Uranyl acetate. Initial attempts without lead aspartate staining
+                                                                                      Day 3: Incubation in lead aspartate, dehydration, incubation in
+   produced samples that were not sufficiently conductive
+                                                                                             resin.
+   (Figure 1B). As a consequence, charging was severe and high-
+                                                                                      Day 4: Embedding of sample.
+   quality images in SBEM could not be obtained with beam
+   currents >90 pA. To alleviate this problem we explored an                          We used the zebrafish telencephalon to optimize the protocol
+   additional incubation in uranyl acetate but did not observe                        because pilot experiments had shown that other sample
+   an obvious increase in conductivity or image contrast. We did                      preparation procedures often failed to produce strong and
+   therefore not include a uranyl acetate incubation in the final                     uniform staining in this brain area. One possible explanation
+   protocol but recommend to revisit this option if problems are                      for this observation is that the ventricle stretches as a thin
+   encountered in other samples.                                                      sheet over the dorsal telencephalon and hinders diffusion
+6. Pyrogallol.    The use of           pyrogallol instead of                          of reagents into the tissue. Nevertheless, fBROPA resulted
+   thiocarbohydrazide (TCH) was one of the main innovations                           in uniform high-contrast staining throughout the zebrafish
+   of the BROPA protocol (Mikula and Denk, 2015). We tested                           forebrain (Figure 2). Contrast and signal-to-noise ratio of
+   the option to return to TCH but abandoned this idea because                        images taken deep below the surface appeared indistinguishable
+   pyrogallol produced substantially better results.                                  from superficial images (Figures 2B,C). In some cases, contrast
+7. Dehydration. A time of 5–10 min was optimal to dehydrate                           was even higher in deep regions as compared to superficial
+   samples without creating artifacts. It is critical that samples                    regions. Hence, fBROPA allows for efficient staining of large
+   do not become dry at any time during dehydration. We                               samples.
+   therefore always add the next solution onto the previous one                          To corroborate this conclusion we analyzed sample blocks
+   and reiterate this procedure many times to ensure that the                         that were cross-sectioned through the optic tectum of adult
+   sample is always immersed.                                                         zebrafish where the diameter of the brain is maximal. The
+8. Embedding. As described previously (Wanner et al., 2016),                          diameters of these cross-sections were ∼1.1 and 0.8 mm along
+   we first embedded the sample in epoxy resin (Denk and                              the long and short axes, respectively. Homogeneous staining
+   Horstmann, 2004) and subsequently transferred it into a                            was observed throughout (Figure 3A). High-resolution images
+   different resin containing silver particles. This procedure                        of sub-regions in different locations demonstrated that contrast
+   renders the sample volume around the tissue conductive and                         was uniformly high (Figures 3B–D). As observed with related
+   suppresses charging in the SBEM. We found that the epoxy                           protocols for en bloc staining of large volumes, synaptic vesicles
+   resin for the initial embedding should be kept liquid for a                        could be clearly resolved while staining of postsynaptic densities
+   longer time when samples are larger, which was achieved by                         was not prominent (Figure 3E). Images with high signal-to-noise
+   variations in the formulation of the resin.                                        ratio could be obtained at all locations using image acquisition
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                   3                                            September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                              En Bloc Staining of Large Tissue Samples
+
+
+
+                                                                                           parameters that are typically used in high-throughput SBEM (1.5
+                                                                                           keV landing energy, 15 e− /nm2 , high vacuum).
+                                                                                              We next applied fBROPA to intestinal organoids that are
+                                                                                           small in volume compared to the zebrafish brain. However, these
+                                                                                           samples have a lower membrane density than brain tissue and
+                                                                                           contain relatively large sub-volumes devoid of cells. Organoid
+                                                                                           samples therefore accumulate less osmium and tend to be less
+                                                                                           conductive than brain samples. As a consequence, organoid
+                                                                                           samples are prone to charging effects and present a challenge
+                                                                                           for high-quality imaging using SBEM. We found that organoid
+                                                                                           samples prepared using fBROPA allowed for acquisition of
+                                                                                           high-resolution image stacks (3 keV landing energy, 3 nm pixel
+                                                                                           size, 50 nm section thickness; Figure 4). Charging artifacts were
+                                                                                           minimal and image quality was similar to that obtained in other
+                                                                                           samples. The acquisition of high-quality stacks at low section
+                                                                                           thickness (≤30 nm) was not possible when the incubation in
+                                                                                           lead aspartate was omitted because charging effects became too
+                                                                                           strong. These observations show that fBROPA allows for the
+                                                                                           preparation of volumetric EM samples with high contrast and
+                                                                                           conductivity from different biological sources.
+
+                                                                                           DISCUSSION
+                                                                                           We developed fBROPA, an en bloc staining method for volume
+                                                                                           EM. fBROPA is based on similar reagents and procedures as
+                                                                                           BROPA but uses substantially shorter incubation times, resulting
+                                                                                           in a total duration of four days that is similar to that of
+                                                                                           other en bloc staining protocols. Moreover, fBROPA includes
+                                                                                           an additional lead aspartate incubation step that substantially
+                                                                                           increases sample conductivity.
+                                                                                              Compared to the well-established rOTO protocol, fBROPA
+                                                                                           substantially extends the volume of homogeneous staining
+                                                                                           to the millimeter range without an obvious loss in staining
+                                                                                           intensity, contrast or conductivity. The appearance of synapses is
+                                                                                           similar as in rOTO-stained tissue, with distinct synaptic vesicles
+                                                                                           and lightly stained postsynaptic densities. Homogeneous high-
+                                                                                           contrast staining of cubic millimeter samples has also been
+                                                                                           achieved by a modification of the original rOTO protocol (Hua
+                                                                                           et al., 2015). This protocol has been applied successfully to
+                                                                                           the rodent neocortex. fBROPA now provides a complementary
+                                                                                           option for en bloc staining of large samples that has been applied
+                                                                                           successfully to different parts of the zebrafish brain and to
+                                                                                           organoid samples. These samples present different challenges
+                                                                                           for staining procedures including diffusion barriers and low
+                                                                                           membrane density. fBROPA resulted in high contrast and
+                                                                                           conductivity in all of these samples, indicating that it may
+                                                                                           be applicable to a wide range of biological specimens. Hence,
+                                                                                           fBROPA extends the range of available options for en bloc
+                                                                                           staining of large EM samples. Future studies may thus further
+                                                                                           explore applications of fBROPA and compare it to alternative
+ FIGURE 2 | Application of fBROPA to the adult zebrafish brain. (A) Coronal
+                                                                                           protocols.
+ section through the telencephalon of adult zebrafish at the level of Dp                      Recent developments in 3D EM technology substantially
+ (posterior zone of the dorsal telencephalon). Note homogeneous staining.                  increased the speed of data acquisition without loss in image
+ Black particles outside the tissue are silver particles in the surrounding resin to       quality. As a consequence, the acquisition of high-resolution
+ optimize conductivity. (B) Neuropil close to the surface. (C) Neuropil 300 µm
+                                                                                           image stacks covering volumes as large as a cubic millimeter
+ below the surface.
+                                                                                           appears realistic in the near future. Ultrastructural imaging
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                        4                                    September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                               En Bloc Staining of Large Tissue Samples
+
+
+
+
+ FIGURE 3 | Application of fBROPA to the adult zebrafish brain. (A) Section through the tectum near the location where the diameter is maximal (1.1 mm). Image is a
+ mosaic of 6 × 6 tiles. (B–D) Three images acquired at different depths. Approximate locations of images are indicated by outlines in (A). (E) Examples of images
+ showing synapses (5 nm pixel size). Vesicle pools close to the presynaptic membrane and a thickening of both membranes are visible. Synapse detection can be
+ performed in 3D as shown in Supplementary Data S1 (movie). Note uniformly high contrast. The partial damage on the right side of the tectum occurred during
+ dissection and is unrelated to fixation or staining.
+
+
+
+
+of such volumes can enable the reconstruction of important                               Cacodylate buffer (0.2 M stock solution): Prepare 100 ml of
+neuronal circuits such as entire neocortical columns. We                              0.4 M cacodylate buffer (8.56 g to 100 ml of ddH2 O) and add
+therefore assume that fBROPA will become a valuable method                            ∼10.8 ml of 0.2 M HCl. Adjust the pH to 7.4 and fill up to 200 ml
+for large-scale connectomics and neuronal circuit reconstruction.                     with ddH2 O. Can be stored at room temperature.
+Moreover, fBROPA has the potential to facilitate various                                 OsO4 /K4 Fe(CN)6 solution: 40 mM OsO4 (EMS 19110)
+applications of volumetric EM in other scientific domains.                            with 35 mM K4 Fe(CN)6 (Sigma Aldrich 60280) in 0.1 M
+                                                                                      cacodylate buffer and 2.5 M formamide (Sigma 47670). Add
+                                                                                      2.5 ml of 4% aqueous osmium tetroxide (stock solution
+MATERIALS AND METHODS
+                                                                                      prepared at least 24 h in advance by dissolving 2 g of osmium
+Reagents                                                                              tetroxide crystals in 50 ml of ddH2 O) to 5 ml of 0.2 M
+Fixative: 2.5% wt/vol glutaraldehyde (16400, Electron                                 cacodylate buffer. Add 0.15 g of K4 Fe(CN)6 (0.147812 g for
+Microscopy Sciences [EMS]) in 0.1 M cacodylate buffer                                 35 mM) and 1.125 ml of formamide. Fill up to 10 ml with
+(Sigma CO250) with 4% sucrose (Sigma S9378), pH 7.4. Use                              ddH2 O.
+fresh fixative (within less than 4 hours after preparation). Add                         OsO4 solution A: 40 mM OsO4 (EMS) in 0.1 M cacodylate
+3 ml (2.5% wt/vol) of freshly opened glutaraldehyde (25%                              buffer. Add 2.5 ml of 4% aqueous osmium tetroxide (stock
+vol/vol aqueous solution) to 15 ml 0.2 M cacodylate buffer with                       solution prepared at least 24 h in advance by dissolving 2 g of
+1.2 g sucrose. Correct pH to 7.4, and then fill up to 30 ml with                      osmium tetroxide crystals in 50 ml of ddH2 O) to 5 ml of 0.2 M
+double-distilled water (ddH2 O).                                                      cacodylate buffer. Fill up to final volume of 10 ml with ddH2 O.
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                   5                                           September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                          En Bloc Staining of Large Tissue Samples
+
+
+
+                                                                                           Epoxy “SERVA” resin (Denk and Horstmann, 2004):
+                                                                                       Mix 11.1 g of glycid ether (SERVA Electrophoresis GmbH
+                                                                                       21045), 6.19 g of dodecenylsuccinic anhydride (DDSA, SERVA
+                                                                                       Electrophoresis GmbH 20755), and 6.25 g of methyl nadic
+                                                                                       anhydride (MNA, SERVA Electrophoresis GmbH 29451) into a
+                                                                                       plastic pouring flask. Stir continuously with magnetic stirrer for
+                                                                                       at least 30 min. Add 0.325 ml of benzyldimethylamine (BDMA,
+                                                                                       SERVA Electrophoresis GmbH 14835), and stir for a further
+                                                                                       10 min.
+                                                                                           Epoxy “EMbed812” resin: Mix 20 ml of “EMbed812” (EMS
+                                                                                       kit 14120), 16 ml of DDSA (EMS kit 14120), and 8 ml of MNA
+                                                                                       (EMS kit 14120) into a plastic pouring flask. Stir continuously
+                                                                                       with magnetic stirrer for at least 30 min. Add 0.75 ml of DMP-30
+                                                                                       (tris-(dimethylaminomethyl)phenol, EMS 13600), and stir for a
+                                                                                       further 10 min.
+
+                                                                                       fBROPA Protocol for Adult Zebrafish Brain
+                                                                                        1. Dissect brain in ice-cold, precarbogenated ACSF as
+                                                                                           described (Zhu et al., 2012).
+                                                                                        2. Immerse in fixative for 1 hour at room temperature and then
+ FIGURE 4 | Application of fBROPA to early differentiated organoids (two cells).           overnight at 4◦ C.
+ Insert shows details of the membrane ultrastructure between the two cells.             3. The next morning, replace the fixative by 0.1 M cacodylate
+                                                                                           buffer with 4% sucrose, pH 7.4. Samples can be stored in this
+                                                                                           buffer for at least seven days when the medium is changed
+                                                                                           every other day.
+   OsO4 solution B: 40 mM OsO4 (EMS) in ddH2 O. Prepare
+                                                                                        4. Stain in freshly prepared OsO4 /K4 Fe(CN)6 solution (40 mM
+2.5 ml of 4% aqueous osmium tetroxide (stock solution prepared
+                                                                                           OsO4 with 35 mM K4 Fe(CN)6 in 0.1 M cacodylate buffer and
+at least 24 h in advance by dissolving 2 g of osmium tetroxide
+                                                                                           2.5 M formamide) at room temperature for 90 min.
+crystals in 50 ml of ddH2 O) and fill up to final volume of 10 ml
+                                                                                        5. Stain in OsO4 solution A (40 mM OsO4 in 0.1 M cacodylate
+with ddH2 O.
+                                                                                           buffer), pH 7.4, at room temperature for 90 min. Do not
+   Pyrogallol (Sigma 16040), 320 mM, pH 4.1, unbuffered:
+                                                                                           rinse between steps 4 and 5.
+Solution can be used for up to 6 weeks after preparation.
+                                                                                        6. Wash at least 3 × 5 min with 0.1 M cacodylate buffer, pH 7.4.
+Add 2.5 ml of 1.28 M stock pyrogallol solution (stock
+                                                                                           Repeat rinsing until solution remains clear for 5 min.
+solution is obtained by adding 40.35 g in 250 ml
+                                                                                        7. Place sample in 320 mM pyrogallol, pH 4.1, unbuffered, in
+ddH2 O and stored in the dark at 20◦ C) in 7.5 ml
+                                                                                           ddH2 O, for 30 min.
+ddH2 O.
+                                                                                        8. Wash at least 3 × 5 min with 0.1 M cacodylate buffer, pH 7.4.
+   Walton’s lead aspartate: Ensure that all solutions are kept at
+                                                                                           Repeat rinsing until solution remains clear for 5 min.
+60◦ C in a water bath and that pH is measured at this temperature.
+                                                                                        9. Stain in in OsO4 solution B (40 mM OsO4 in ddH2 O) at
+Mix 0.040 g aspartic acid (Sigma A9256) in 10 ml ddH2 O and
+                                                                                           room temp for 90 min.
+bring the solution to 60◦ C. Then add 0.066 g lead nitrate (EMS
+                                                                                       10. Store in ddH2 O at 4◦ C overnight.
+17900) and let the solution stabilize at 60◦ C. Adjust pH to 5.5
+                                                                                       11. Wash 3 × 5 min in ddH2 O at room temperature.
+(at 60◦ C) with 1M NaOH (∼350 µl). Keep solution at 60◦ C
+                                                                                       12. Immerse in Walton’s lead aspartate solution at 60◦ C for 60
+throughout.
+                                                                                           min.
+   Uranyl acetate solution (1% wt/vol in ddH2 O): Add 0.2 g of
+                                                                                       13. Wash 3 × 5 min in ddH2 O at room temperature.
+uranyl acetate powder to 20 ml of ddH2 O, and agitate gently until
+                                                                                       14. Dehydrate in graded EtOH balanced with water (10%, 25%,
+solution is transparent.
+                                                                                           50%, 75%, 2 × 100%) at room temperature or on ice.
+   Durcupan resin (Knott et al., 2009): Mix 33.3 g of resin
+                                                                                       15. Depending on the resin used, the sample may be incubated in
+A/M (Sigma 44611), 33.3 g of hardener B (Sigma 44612) and
+                                                                                           100% propylene oxide twice for 10 min. This step is optional
+1 g of hardener D (Sigma 44614) into a plastic pouring flask.
+                                                                                           and may be used if the resin does not penetrate throughout
+Stir continuously with magnetic stirrer for at least 30 min. Add
+                                                                                           the tissue. Otherwise, we recommend avoiding this step
+16 drops of DMP-30 (tris-(dimethylaminomethyl)phenol, EMS
+                                                                                           because it can wash out reagents.
+13600), and stir for a further 10 min.
+                                                                                       16. Immerse the sample in 50% resin−50% propylene oxide,
+   Durcupan resin (Deerinck et al., 2017): Mix 11.4 g part A/M
+                                                                                           or in 50% resin−50% ethanol, for at least 120 min. This
+(Sigma 44611), 10 g part B (Sigma 44612) and 0.3 g part C
+                                                                                           step can be extended overnight. We successfully used four
+(Sigma 44613) into a plastic pouring flask. Stir continuously with
+                                                                                           recipes of resin (see Reagents for details). Ensure that the
+magnetic stirrer for at least 30 min. Add 0.05-0.1 g part D (Sigma
+                                                                                           resin penetrates evenly through the sample.
+44614). For both recipes of Durcupan, the EMS products can also
+                                                                                       17. Immerse the sample in 100% resin overnight before
+be used.
+                                                                                           embedding.
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                    6                                    September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                                        En Bloc Staining of Large Tissue Samples
+
+
+
+18. If samples need to be oriented on the stub used for                                     AUTHOR CONTRIBUTIONS
+    SBEM imaging, transfer samples to the stub in liquid resin.
+    Superglue can be used to glue the sample in liquid resin onto                           All authors contributed to conception and design of the method.
+    the stub. If the sample is to be embedded in silver-containing                          AG-M, BT, and CG performed the experiments and imaging.
+    resin for high conductivity, proceed as described in (Wanner                            CG wrote the first draft of the manuscript. RF wrote the final
+    et al., 2016).                                                                          manuscript. All authors contributed to manuscript revision, read,
+19. Cure the resin in the oven at 60◦ C for at least 48 h.                                  and approved the submitted version.
+20. Trim sample in an ultramicrotome to prepare the block
+    surface for the SBEM (Wanner et al., 2016).                                             FUNDING
+    As recommended in Mikula and Denk (2015), tubes should be                               This work was supported by the Novartis Research Foundation
+changed for each staining step.                                                             and by the European Research Council (ERC) under the
+    All experiments were approved by the Veterinary Department                              European Union’s Horizon 2020 Research and Innovation
+of the Canton Basel-Stadt (Switzerland).                                                    Programme (Grant Agreement No. 742576).
+
+Imaging                                                                                     ACKNOWLEDGMENTS
+Images were acquired on a Zeiss Merlin SEM (Zeiss, Oberkochen,
+Germany) and on a Quanta 200 VP-FEG (FEI, Eindhoven,                                        We thank Adrian Wanner for valuable input on the protocol
+Netherlands; now ThermoFisher Scientific). Both microscopes                                 and comments on the manuscript and Stephan Gerhard for the
+were equipped with an automated ultramicrotome inside the                                   preparation of the movie. We are grateful for helpful discussions
+vacuum chamber for SBEM (3View; Gatan, Pleasanton, CA,                                      with Shawn Mikula, who tragically passed away during the review
+USA; now ThermoFisher Scientific). On the Zeiss Merlin,                                     process of this manuscript.
+image acquisition was controlled by SBEMimage, an open-
+source software for image acquisition in SBEM (Titze et al.,
+2018). Images were acquired with a landing energy of 1.5 keV                                SUPPLEMENTARY MATERIAL
+in analytical mode. Other imaging parameters were chosen
+to maintain an electron dose of 15 e− /nm2 (beam current:                                   The Supplementary Material for this article can be found
+300 pA, pixel dwell time: 0.8 µs, pixel size: 10 × 10 nm2 ).                                online at: https://www.frontiersin.org/articles/10.3389/fnana.
+These conditions were used to acquire all high-resolution images                            2018.00076/full#supplementary-material
+from the zebrafish brain. Images from intestinal organoids were                             Supplementary Data S1 | Movie of an image stack from the adult zebrafish brain
+acquired on the Quanta 200 with a landing energy of 3 keV, a pixel                          prepared using the fBROPA protocol. Field of view is 8 × 8 µm2 . Original voxel
+size of 3 × 3 nm2 , and a pixel dwell time of 2 µs.                                         size is 10 × 10 × 30 nm3 .
+
+
+
+
+REFERENCES                                                                                      in slice preparations for light and electron microscopic analysis. Nat. Protocols
+                                                                                                4, 1145–1156. doi: 10.1038/nprot.2009.114
+Briggman, K. L., and Bock, D. D. (2012). Volume electron microscopy                         Malick, L. E., and Wilson, R. B. (1975). Modified thiocarbohydrazide
+   for neuronal circuit reconstruction. Curr. Opin. Neurobiol. 22, 154–161.                     procedure for scanning electron microscopy: routine use for normal,
+   doi: 10.1016/j.conb.2011.10.022                                                              pathological, or experimental tissues. Stain Technol. 50, 265–269.
+Briggman, K. L., and Denk, W. (2006). Towards neural circuit reconstruction with                doi: 10.3109/10520297509117069
+   volume electron microscopy techniques. Curr. Opin. Neurobiol. 16, 562–570.               Mikula, S., and Denk, W. (2015). High-resolution whole-brain staining
+   doi: 10.1016/j.conb.2006.08.010                                                              for electron microscopic circuit reconstruction. Nat Methods 12,
+Deerinck, T. J., Bushong, E. A., Lev-Ram, V., Shu, X., Tsien, R. Y., and Ellisman, M.           541–546.doi: 10.1038/nmeth.3361
+   H. (2010). Enhancing serial block-face scanning electron microscopy to enable            Odriozola, A., Llodra, J., Radecke, J., Ruegsegger, C., Tschanz, S., Saxena, S.,
+   high resolution 3D nanohistology of cells and tissues. Microsc. Microanal. 16,               et al. (2017). High contrast staining for serial block face scanning electron
+   1138–1139. doi: 10.1017/S1431927610055170                                                    microscopy without uranyl acetate. bioRxiv 207472. doi: 10.1101/207472
+Deerinck, T. J., Shone, T. M., Bushong, E. A., Ramachandra, R., and Peltier,                Pallotto, M., Watkins, P. V., Fubara, B., Singer, J. H., and Briggman, K. L.
+   S. T., Ellisman, M. H. (2017). High-performance serial block-face SEM of                     (2015). Extracellular space preservation aids the connectomic analysis of neural
+   nonconductive biological samples enabled by focal gas injection-based charge                 circuits. Elife 4. doi: 10.7554/eLife.08206
+   compensation. J. Microsc. 270, 142–149. doi: 10.1111/jmi.12667                           Seligman, A. M., Wasserkrug, H. L., and Hanker, J. S. (1966). A new
+Denk, W., Briggman, K. L., and Helmstaedter, M. (2012). Structural neurobiology:                staining method, (OTO) for enhancing contrast of lipid–containing
+   missing link to a mechanistic understanding of neural computation. Nat. Rev.                 membranes and droplets in osmium tetroxide–fixed tissue with osmiophilic
+   Neurosci. 13, 351–358. doi: 10.1038/nrn3169                                                  thiocarbohydrazide(TCH). J. Cell Biol. 30, 424–432. doi: 10.1083/jcb.30.2.424
+Denk, W., and Horstmann, H. (2004). Serial block-face scanning electron                     Tapia, J. C., Kasthuri, N., Hayworth, K. J., Schalek, R., Lichtman, J. W., Smith,
+   microscopy to reconstruct three-dimensional tissue nanostructure. PLoS Biol.                 S. J., et al. (2012a). High-contrast en bloc staining of neuronal tissue for
+   2:e329. doi: 10.1371/journal.pbio.0020329                                                    field emission scanning electron microscopy. Nat. Protocols 7, 193–206.
+Hua, Y., Laserstein, P., and Helmstaedter, M. (2015). Large-volume en-bloc                      doi: 10.1038/nprot.2011.439
+   staining for electron microscopy-based connectomics. Nat. Commun. 6:7923.                Tapia, J. C., Wylie, J. D., Kasthuri, N., Hayworth, K. J., Schalek, R.,
+   doi: 10.1038/ncomms8923                                                                      Berger, D. R., et al. (2012b). Pervasive synaptic branch removal in
+Knott, G. W., Holtmaat, A., Trachtenberg, J. T., Svoboda, K., and Welker, E. (2009).            the mammalian neuromuscular system at birth. Neuron 74, 816–829.
+   A protocol for preparing GFP-labeled neurons previously imaged in vivo and                   doi: 10.1016/j.neuron.2012.04.017
+
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                         7                                             September 2018 | Volume 12 | Article 76
+Genoud et al.                                                                                                                     En Bloc Staining of Large Tissue Samples
+
+
+
+Titze, B., and Genoud, C. (2016). Volume scanning electron microscopy                       in zebrafish using a digital micromirror device. Nat. Protocols 7, 1410–1425.
+   for imaging biological ultrastructure. Biol Cell. 108, 307–323.                          doi: 10.1038/nprot.2012.072
+   doi: 10.1111/boc.201600024
+Titze, B., Genoud, C., and Friedrich, R. W. (2018). SBEMimage: versatile                 Conflict of Interest Statement: The authors declare that the research was
+   acquisition control software for serial block-face electron microscopy. Front         conducted in the absence of any commercial or financial relationships that could
+   Neural Circuits. 12:54. doi: 10.3389/fncir.2018.00054                                 be construed as a potential conflict of interest.
+Walton, J. (1979). Lead aspartate, an en bloc contrast stain particularly useful
+   for ultrastructural enzymology. J. Histochem. Cytochem. 27, 1337–1342.                Copyright © 2018 Genoud, Titze, Graff-Meyer and Friedrich. This is an open-access
+   doi: 10.1177/27.10.512319                                                             article distributed under the terms of the Creative Commons Attribution License (CC
+Wanner, A. A., Genoud, C., Masudi, T., Siksou, L., and Friedrich, R. W. (2016).          BY). The use, distribution or reproduction in other forums is permitted, provided
+   Dense EM-based reconstruction of the interglomerular projectome in the                the original author(s) and the copyright owner(s) are credited and that the original
+   zebrafish olfactory bulb. Nat. Neurosci. 19, 816–825. doi: 10.1038/nn.4290            publication in this journal is cited, in accordance with accepted academic practice.
+Zhu, P., Fajardo, O., Shum, J., Zhang Schärer, Y. P., and Friedrich, R. W. (2012).       No use, distribution or reproduction is permitted which does not comply with these
+   High-resolution optical control of spatiotemporal neuronalactivity patterns           terms.
+
+
+
+
+Frontiers in Neuroanatomy | www.frontiersin.org                                      8                                             September 2018 | Volume 12 | Article 76
+

@@ -1,0 +1,735 @@
+                                                                                                                      TYPE Original Research
+                                                                                                                      PUBLISHED   09 February 2024
+                                                                                                                      DOI 10.3389/fnins.2024.1286991
+
+
+
+
+                                                    Quantitative evaluation of
+OPEN ACCESS                                         embedding resins for volume
+EDITED BY
+Xueying Wang,
+Moderna Therapeutics, United States
+                                                    electron microscopy
+REVIEWED BY
+Linnaea Ostroff,                                    Lennart Tegethoff and Kevin L. Briggman*
+University of Connecticut, United States
+                                                    Max Planck Institute for Neurobiology of Behavior - caesar, Bonn, Germany
+Richard Schalek,
+Harvard University, United States
+*CORRESPONDENCE
+Kevin L. Briggman
+  kevin.briggman@mpinb.mpg.de                       Optimal epoxy resin embedding is crucial for obtaining consistent serial sections
+                                                    from large tissue samples, especially for block faces spanning >1 mm2 .
+RECEIVED 01 September 2023
+ACCEPTED 29 January 2024                            We report a method to quantify non-uniformity in resin curing using block
+PUBLISHED 09 February 2024                          hardness measurements from block faces. We identify conditions that lead
+CITATION                                            to non-uniform curing as well as a procedure to monitor the hardness of
+Tegethoff L and Briggman KL (2024)
+Quantitative evaluation of embedding resins         blocks for a wide range of common epoxy resins used for volume electron
+for volume electron microscopy.                     microscopy. We also assess cutting repeatability and uniformity by quantifying
+Front. Neurosci. 18:1286991.
+doi: 10.3389/fnins.2024.1286991
+                                                    the transverse and sectional cutting forces during ultrathin sectioning using
+                                                    a sample-mounted force sensor. Our findings indicate that screening and
+COPYRIGHT
+© 2024 Tegethoff and Briggman. This is an           optimizing resin formulations is required to achieve the best repeatability in
+open-access article distributed under the           terms of section thickness. Finally, we explore the encapsulation of irregularly
+terms of the Creative Commons Attribution
+License (CC BY). The use, distribution or           shaped tissue samples in a gelatin matrix prior to epoxy resin embedding to yield
+reproduction in other forums is permitted,          more uniform sections.
+provided the original author(s) and the
+copyright owner(s) are credited and that the
+original publication in this journal is cited, in   KEYWORDS
+accordance with accepted academic
+practice. No use, distribution or reproduction      epoxy resin, volume electron microscopy (vEM), hardness, cutting forces, tissue
+is permitted which does not comply with             embedding
+these terms.
+
+
+
+
+                                                    Introduction
+                                                        Several methods are now available for the automated collection of large volumetric
+                                                    electron microscopy (EM) datasets (Briggman and Bock, 2012; Peddie et al., 2022). All
+                                                    of these methods rely on the embedding of stained biological tissue in various resins
+                                                    to stabilize the tissue before thin sectioning or ion ablation. The choice of the optimal
+                                                    embedding resin has been, in our hands, a matter of trial and error and has lacked metrics
+                                                    on the sectioning properties of resins to help guide the decision. This is perhaps why the
+                                                    resins utilized in recent connectomic reconstructions have so widely varied including the
+                                                    use of Spurr’s resin (Karimi et al., 2020; Loomba et al., 2022), Durcupan (Calì et al., 2018),
+                                                    and Epon 812 replacements such as EMbed 812 (Kasthuri et al., 2015; Zheng et al., 2018;
+                                                    Alexander et al., 2021), LX 112 (Wanner and Vishwanathan, 2018; Kislinger et al., 2020),
+                                                    Glycid ether 100 (Ding et al., 2016; Wanner et al., 2016; Motta et al., 2019), and Poly/bed 812
+                                                    (Takemura et al., 2013). Some of these choices may reflect known properties of resins and
+                                                    how they interact with tissues, such as the low viscosity of Spurr’s resin for rapid infiltration
+                                                    (Spurr, 1969) or stability under an electron beam (Kizilyaprak et al., 2015). Rarely, however,
+                                                    are the reasons for the choice of a particular resin made explicit in publications. We sought
+                                                    to explore whether a more quantitative approach would be informative when evaluating
+
+
+
+
+Frontiers in Neuroscience                                                 01                                                            frontiersin.org
+Tegethoff and Briggman                                                                                                  10.3389/fnins.2024.1286991
+
+
+
+
+resins for ultrathin sectioning including monitoring the hardness            obtaining “stubs” or filled into flatbed silicone molds (70907, EMS)
+of resin blocks as well as explicitly measuring the cutting forces           for blocks.
+during sectioning. Of primary importance was to characterize                     After curing in an oven (UN30plus, Memmert), samples
+the repeatability of section thicknesses for ultrathin sections              were clamped in ultramicrotome chucks and first trimmed on a
+(<=50 nm) across hundreds of serial sections since this ultimately           milling device (EM Trim2, Leica) before polishing on a microtome
+determines the quality of the sampling along the Z axis of volume            (UC7, Leica) with a diamond trimming knife (Trim20 or Trim90,
+EM datasets. Our ultimate goal was to define a test platform that            Diatome) to a flat surface. For hardness tests, a rectangular
+can be used to identify an optimal embedding resin for ultrathin             blockface was trimmed at least 700 µm deep into a flatbed block
+sectioning as well as to evaluate lot-to-lot variability and the             with a 700 × 1400 µm2 block face. For cutting force tests, the
+suitability of future resins for volume EM.                                  blockface of a resin stub was trimmed to a hexagonal shape with
+    The hardness of embedding resins has previously been reported            dimensions 1.5 mm length, 0.9 mm width, a 110◦ leading edge and
+and an optimal hardness for ultrathin sectioning was determined              a 70◦ trailing edge.
+to be in a range of 13−18 HV (Vickers hardness) (Jésior, 1985).                  The following resins were evaluated: EMbed 812 Kit (14121,
+We extend this observation to quantify the time course of block              EMS), Spurr’s Low Viscosity Kit (14300, EMS), Durcupan ACM Kit
+hardening, block-to-block variability, factors leading to non-               (44610, Sigma-Aldrich), and LX 112 Kit (21212, Ladd Research).
+uniformity in the curing of blocks, and the impact of environmental          We used NSA (19050, EMS) in our protocol for LX 112.
+variables on resin block hardness. Similarly, devices to quantify
+sectioning forces have been previously described (Helander, 1974;
+Ericson and Lindberg, 1997; Sun et al., 2017), but have not been
+                                                                             Tissue sample preparation
+used to systematically evaluate the cutting properties of commonly
+                                                                                 Three Danionella cerebrum (∼3 mpf) were anaesthetized in
+used embedding resins nor the impact of embedding heavily
+                                                                             168 mg/L tricaine in Fish Ringer’s solution and brains were then
+stained tissue samples on cutting forces. The quantification of
+                                                                             excised and immersion fixed with 2% paraformaldehyde (15714,
+cutting forces allows cutting repeatability (i.e., the difference in
+                                                                             EMS) and 2% glutaraldehyde (GA) (16320, EMS) in 0.1 M sodium
+thickness between serial sections) and cutting uniformity (i.e., the
+                                                                             cacodylate buffer containing 5.5% sucrose at room temperature
+absence of chatter) to be measured. Overall, we evaluated the
+                                                                             (RT) for 24 h. The brain samples measured approximately
+sectioning of several common embedding resins at both 35 and
+                                                                             0.8 × 1.5 × 2.0 mm3 . All animal experiments were conducted in
+50 nm section thicknesses using resin block hardness and cutting
+                                                                             accordance with the animal welfare guidelines of the Max Planck
+forces as quantitative metrics. Because the definition of “good”
+                                                                             Society and with animal experimentation approval granted by the
+sectioning has been rather qualitative to date, our results are aimed
+                                                                             Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-
+at electron microscopists seeking a more quantitative approach to
+                                                                             Westfalen, Germany.
+selecting embedding resins.
+                                                                                 One sample was embedded in 12% gelatin (G2500, Sigma-
+                                                                             Aldrich), fixed with 2% GA in 0.175 M sodium cacodylate buffer,
+                                                                             and cut into a gelatin block prior to EM staining. Staining
+Materials and methods                                                        was performed either manually or in a tissue processor (EM
+                                                                             TP, Leica). All samples were stained with reduced osmium [2%
+                                                                             osmium tetroxide (19170, EMS), 3% K-ferrocyanide (60279, Sigma-
+Epoxy sample preparation                                                     Aldrich)] in 175 or 180 mM cacodylate buffer (20840, Sigma-
+                                                                             Aldrich) for 4 h at 4◦ C, 1% TCH (21900, EMS) in water for 1 h at
+    Samples for hardness testing were prepared by weighing the               45◦ C, and then 2% osmium tetroxide in water for 2 h at RT with
+epoxy and hardener components (see Table 1) into a tared 125 ml              intermediate washing steps (ROTO sample). Two samples were
+glass Erlenmeyer flask or 50 ml centrifuge tube on either a                  further processed by staining in 1% uranyl acetate (22400-2, EMS)
+precision (Kern) or analytical balance (Sartorius). After adding             in water for 12 h at 45◦ C and Walton’s lead aspartate (203580 and
+the components, the containers were placed in a 60◦ C oven                   A7219, Sigma-Aldrich) for 6 h at 45◦ C, with washing steps between
+(OV1, Biometra) for several minutes to reduce viscosity and mixed            reagents (ROTO + UA + Pb samples). The gelatin block was black
+thoroughly by vortexing or vigorous shaking. After the mixtures              from the osmium staining with no visual access to the sample. One
+became free flowing and streak-free, the respective accelerator              additional whole brain sample was gelatin-embedded as described
+was added by volume with a micropipette and mixed again. In                  above after staining resulting in a gelatin block that was transparent
+preliminary studies, we used glass rods to mechanically mix the              around the sample.
+components, but also observed non-uniform hardness near the                      Tissue samples were dehydrated in a graded series of ethanol
+bottom of silicone embedding molds in these samples similar to               (70%/90%/100%/100%) (15055, EMS) followed by changes in
+the results reported in Figure 1D. An optional vacuum degassing              propylene oxide (PO) (82320, Sigma-Aldrich) and infiltrated with
+step was included following the addition of the accelerator, in              EMbed 812 resin in the medium hard formulation (MH), first
+which the open container was placed in a desiccator (Mini Hot                in a 50:50 dilution with PO, then with several changes in pure
+Vac, Ted Pella) and evacuated to approximately −70 kPa using                 resin. Whole brains and brains in gelatin blocks were flat-
+a laboratory vacuum pump (KNF, Neuberger). The epoxy resin                   embedded in silicone molds for sagittal cross-sectioning. Samples
+was degassed until no further bubble formation was observed,                 were cured in a 70◦ C oven for 48 h and, after exploratory
+usually for 10−30 min. It was then pipetted onto aluminum pins               sectioning, remounted on aluminum stubs with epoxy resin for
+(75638, EMS) that were previously scored with a razorblade for               cutting force tests.
+
+
+Frontiers in Neuroscience                                               02                                                           frontiersin.org
+Tegethoff and Briggman                                                                                                                                        10.3389/fnins.2024.1286991
+
+
+
+
+TABLE 1 Epoxy formulations used for this study.
+
+                                                                        Epoxy                                                           Hardener                        Accelerator
+                                    EMbed 812              LX 112          A        ERL 4221            DER 736           DDSA           NMA         NSA          B     BDMA       C
+  Density g/mL                            1.146                −            −           1.162               1.14            1.005         1.232       1.03        −      −         −
+
+  Weight per epoxide (WPE)                 144                144           −           133.2               184.6             −            −            −         −      −         −
+
+  EMbed 812 medium (M)                     4.20                −            −             −                  −               2.95         1.67          −         −     0.300      −
+  epon
+
+  EMbed 812 medium hard                    5.96                −            −             −                  −               3.02         2.71          −         −     0.240      −
+  (MH) epon
+
+  EMbed 812 -var I epon                    5.96                −            −             −                  −               2.81         2.96          −         −     0.240      −
+
+  EMbed 812 -var II epon                   5.96                −            −             −                  −               2.61         3.20          −         −     0.240      −
+
+  EMbed 812 -var III epon                  5.96                −            −             −                                  2.41         3.45          −         −     0.240      −
+
+  EMbed 812 –hard (H)                      5.73                −            −             −                  −               2.26         3.70          −         −     0.300      −
+  epon
+
+  EMbed 812 -very hard                     5.73                −            −             −                  −                −           5.24          −         −     0.275      −
+  (VH) epon
+
+  Durcupan                                  −                  −          5.00            −                  −                −            −            −        5.00    −       0.075
+
+  LX 112                                    −                 6.26          −             −                  −                −           3.88        1.88        −     0.240      −
+
+  Spurr’s                                   −                  −            −            2.91               2.28              −            −          6.44        −     0.245      −
+
+All epoxy and hardener quantities are reported in grams (except where noted), even if original protocols report ml. Accelerator quantity is reported in milliliters.
+
+
+
+Hardness testing procedure                                                                           using two push/pull piezoelectric sensors (PCB-209C11, PCB
+                                                                                                     Piezotronics). The signals from the sensors were amplified
+    Samples were positioned in a hardness testing machine                                            (PCB-482C16), digitized (USB-6356, National Instruments) and
+(Q10A+, Qness) and fixed with a vise (1111182, Röhm) with the                                        recorded within Matlab (Mathworks). Continuous cutting tests
+blockface facing upwards. Using the manufacturer’s software, a                                       were performed at either 35 or 50 nm section thickness with the
+10x magnification overview image of the blockface was taken and                                      UC7 microtome for a duration of 15 min for each resin tested.
+areas selected for individual test points or test point grids. Vickers                               All cutting tests were performed at a speed of 1.2 mm/s, except
+hardness testing then commenced in an automated approach, using                                      for data in which sectioning speed was varied and sections were
+a 136◦ diamond indenter applying 25 grams of force for 10 s. Images                                  collected for 30 (at 0.6 mm/s) or 60 (at 0.3 mm/s) minutes. Videos
+of the indentations were then automatically acquired using a 40x                                     were captured during the sectioning process to measure section
+objective. Endpoints of the diagonals were manually annotated and                                    compression. For each cut profile the sectional and transverse
+the Vickers hardness (HV) was then automatically calculated within                                   forces were calculated by subtracting or summing the sensor
+the Q10A+ software based on the machine calibration.                                                 signals, respectively. The baseline signal before and after each
+                                                                                                     cut was fit with a line and subtracted from each force profile.
+                                                                                                     The slow discharge time constant of the force sensors was not
+Humidity tests                                                                                       corrected for the measurements of the mean cutting force, except
+                                                                                                     for sections cut to assess the effect of sectioning speed in which
+    For humidity tests, samples were tested for hardness in a                                        a single exponential was fit to the mean force profiles during the
+monitored lab environment or after incubation in a makeshift                                         portion of the cut corresponding to the parallel sides of the block.
+humidity chamber. This chamber was a small incubator (MyTemp                                         This single exponential was then deconvolved with the force profile
+Mini, Benchmark) lined with damp tissue paper or bags of                                             in Matlab to account for the slow discharge time constant. All
+desiccant for wetting and drying and a battery-powered hygrometer                                    cutting force tests were performed with a 35◦ diamond knife set
+(30.5027.01, TFA). To alter the humidity, water was sprayed                                          to a 6 degree clearance angle (Ultra 35 knife, Diatome), except for
+into the chamber or an amount of tissue paper exchanged                                              the tests that varied clearance angle. Note that the clearance angles
+with desiccant. After approximately 5 h per condition, samples                                       we report do not include the built-in 4 degree clearance of the Ultra
+were removed from the humidity chamber and immediately                                               35 knives.
+tested for hardness.
+
+                                                                                                     Results
+Cutting force tests
+                                                                                                         We began by quantifying the hardness of our standard
+    A cutting force sensor was constructed as previously described                                   embedding protocol for EMbed 812, medium hard resin. We
+(Ericson and Lindberg, 1997), with the minor alteration of                                           clamped resin blocks that had been trimmed and smoothed in
+
+
+Frontiers in Neuroscience                                                                       03                                                                        frontiersin.org
+Tegethoff and Briggman                                                                                                     10.3389/fnins.2024.1286991
+
+
+
+
+                                                                                 in the thermally insulating silicon mold or gas was trapped in the
+                                                                                 deeper portions of the embedding well. To test these possibilities,
+                                                                                 we degassed the resin in a weak vacuum before curing. The result
+                                                                                 was an improved homogeneity of hardness across block faces
+                                                                                 (Figure 1E). To explore whether a non-uniform distribution of
+                                                                                 heat contributed to the hardness gradient, we also cured non-
+                                                                                 degassed resin on aluminum stubs and measure hardness across a
+                                                                                 vertical cross-section relative to the stub surface (Figures 1F, G).
+                                                                                 We again observed an improvement in the distribution of hardness
+                                                                                 values, but to a lesser degree than the degassed resin. Overall,
+                                                                                 quantifying the distribution of hardness across block faces has
+                                                                                 changed the method by which we cure our specimens to achieve
+                                                                                 more uniformity and we now routinely degas and cure resins on
+                                                                                 thermally conductive stubs.
+                                                                                     We next quantified the hardness of several commonly used
+                                                                                 embedding resins including EMbed 812 (with varying hardness
+                                                                                 formulations), Durcupan (Staeubli, 1963), Spurr’s (Spurr, 1969),
+                                                                                 and LX 112 (Stratton et al., 1982; Figure 2A). The different resins
+                                                                                 spanned a hardness range of ∼10−18 HV, but the hardness values
+                                                                                 measured between independent blocks were fairly repeatable. We
+                                                                                 selected EMbed 812, a replacement for Epon 812 (Luft, 1961), to
+                                                                                 explore varying the ratio of the hardeners typically used (DDSA
+                                                                                 and NMA). As previously reported (Luft, 1961), changing the ratio
+                                                                                 of these components allows one to titrate the hardness of the
+                                                                                 cured blocks (Figure 2B) in a range we term medium-hard (1.34
+                                                                                 NMA:DDSA) to hard (2.44 NMA:DDSA). Omitting DDSA yielded
+                                                                                 the hardest block of all formulations we tested, the very-hard
+                                                                                 formulation (Figure 2A). We typically include the manufacturer
+                                                                                 recommended accelerator (BDMA) concentration of 2−3%. The
+                                                                                 hardness of EMbed 812 in this range and up to 5% concentration
+                                                                                 was similar, but notably yielded lower hardness below 2%
+   FIGURE 1
+                                                                                 (Figure 2C). We have not tested an alternative accelerator, DMP-30,
+   Hardness uniformity of resin blocks. (A) Illustration of the                  that is sometimes used in commercial embedding kits.
+   preparation of resin blocks for hardness testing. Blue arrows                     Resin blocks can continue to harden at room temperature even
+   indicate the surface that was tested. (B) Resin block clamped in              after the initial high temperature curing process, either through
+   place for indentation hardness measurements. (C) A representative
+   grid pattern for hardness mapping of a block face. Inset shows an             ongoing polymerization or possibly the leaching of unreacted resin
+   individual diamond indentation from which hardness is calculated.             components. In some cases this is evident by a change in the color
+   (D) Hardness measurements from an EMbed 812 MH block cured in                 of blocks on the time course of months or years. To explore the
+   a silicon mold. (E) Hardness measurements from EMbed 812 MH
+   resin that was first degassed prior to curing. (F) Illustration of the        evolution of hardness as a proxy for the curing state of a block,
+   preparation of resin cross-sections that were cured on aluminum               we tested different initial curing durations and then tracked the
+   stubs for hardness testing. Blue arrows indicate the surface that was         hardness of blocks over days out to a month (Figure 3A). We
+   tested. (G) Hardness measurements from EMbed 812 MH resin that
+   was first cured on a stub. Measurements were made from a                      performed an initial cure at 70◦ C for 1, 2, or 3 days of the EMbed
+   cross-section of the dome of resin, perpendicular to the stub                 812 MH formulation and observed an initial tendency for the
+   surface.                                                                      longer duration oven cure to yield harder blocks. This tendency
+                                                                                 persisted for the first 3 days after the curing. When measured again
+                                                                                 approximately 1 month later, the same blocks had increased in
+                                                                                 hardness by approximately 2 HV, indicating a substantial post-cure
+a diamond indention hardness testing machine (Figures 1A, B)                     hardening of the blocks. This time-dependency of the hardness
+and performed hardness measurements in a grid pattern across a                   complicated measurements, but we have tried to be as consistent
+blockface (Figure 1C). The machine drops a calibrated weight on                  as possible. For example, the measurements comparing individual
+the resin block leading to a diamond-shaped indentation pattern,                 blocks (Figure 2A) were performed 20−30 days after the initial
+the shape of which is quantified and reported as Vickers hardness                cure and measurements relating hardness to cutting force were
+(HV) (Low and Shi, 1998). Our standard embedding protocol                        performed within 1 day of cutting force tests. In general, hardness
+involved embedding tissue samples in 4 mm deep silicon molds                     measurements are useful to quantify the state of post-curing which
+and curing for 24−48 h at 70◦ C. We were surprised to measure                    can be important for serial sectioning experiments of tissue blocks
+a gradient in hardness values that varied from lower hardness in                 that were recently prepared.
+the deepest part of the block (bottom) to higher hardness toward                     Resins are also known to absorb atmospheric moisture which
+the top (more superficial) regions of the blockface (Figure 1D). We              can lead to poor embedding (Dellmann and Pearson, 1977). We
+hypothesized that either the oven heat was not equally distributed               had anecdotally observed that serial sectioning experiments were
+
+
+Frontiers in Neuroscience                                                   04                                                         frontiersin.org
+Tegethoff and Briggman                                                                                                   10.3389/fnins.2024.1286991
+
+
+
+
+                                                                                FIGURE 3
+                                                                                Time varying and environmental properties of resin hardness.
+                                                                                (A) EMbed 812 blocks cured for 24 (blue), 48 (red), or 72 (grey)
+                                                                                hours and then measured for hardness at different days post-cure.
+                                                                                (B) Hardness of an EMbed 812 MH resin block measured at different
+                                                                                relative humidities. Small numbers indicate the sequence in which
+                                                                                measurements were performed.
+
+
+
+
+                                                                             Cutting force measurement
+
+                                                                                 While the quantification of hardness allowed us to make several
+                                                                             practical improvements to our standard block preparation and
+   FIGURE 2                                                                  sectioning procedures, it is not a direct measurement of the quality
+   Hardness of different resin formulations. (A) Hardness values from        of sectioning that can be obtained from different resins. Indeed,
+   independent blocks for each of the tested resins. Hardness
+   (n = 8–20 points per block face) was measured for three or four           prior quantifications of the mechanical properties of embedding
+   blocks of each resin type. (B) The hardness of EMbed 812 measured         resins involved only qualitative evaluations of section quality
+   for different ratios of hardeners NMA and DDSA. (C) Hardness of           (Acetarin et al., 1987). Previous work had described a method
+   EMbed 812 MH cured with different concentrations of the
+   accelerator (BDMA).                                                       to instrument commercial ultramicrotomes with a force sensor
+                                                                             attached to the sample arm to directly measure cutting forces
+                                                                             (Ericson and Lindberg, 1997). We implemented this design with the
+                                                                             minor change of using pre-stressed piezoelectric force sensors that
+                                                                             are capable of sensing push and pull forces (Figure 4A). Because
+more error prone under higher humidity conditions. We quantified
+                                                                             two sensors (S1 and S2) are symmetrically arranged around a
+the relationship between relative humidity and hardness for a block
+                                                                             sample along the cutting axis, the resultant force (FR ) of a diamond
+that was placed in a humidifying or dehumidifying chamber and
+                                                                             knife into a sample can be decomposed into the sectional force (Fs )
+then immediately tested for hardness (Figure 3B). For relative
+                                                                             along the blockface and transverse force (FT ) into the block face.
+humidity <40% the hardness was relatively stable, but already at
+                                                                             FS is calculated as the difference of S1 and S2 and FT as the sum
+50% humidity we observed a reduction in hardness that was even               of the two signals (Figures 4B, C). Sectioning forces are reported
+lower at 70% humidity. The change in hardness was reversible as              normalized to the width of a given block. The sectional force is
+transitioning a block from high humidity (70%) to lower humidity             sufficiently sensitive to distinguish relatively small differences in
+(25%) recovered the hardness (Figure 3B). Because our laboratories           sectioning thickness, for example, 35 nm versus 50 nm sections
+are not centrally humidity controlled we now perform sectioning              (Figure 4C), whereas the transverse force is of lower amplitude and
+experiments in rooms in which industrial portable dehumidifiers              more difficult to distinguish section thickness (but see Figure 5B).
+are able to maintain a constant relative humidity of 30−45%,                     To quantify cutting quality, we define two terms: cutting
+a range in which it is comfortable to work, to ensure stable                 repeatability (the variability in the mean sectional force among
+block hardness.                                                              sections that correlates with section thickness variability) and
+
+
+Frontiers in Neuroscience                                               05                                                             frontiersin.org
+Tegethoff and Briggman                                                                                                        10.3389/fnins.2024.1286991
+
+
+
+
+   FIGURE 4
+   Force profile measurements. (A) A photograph of the force sensors (S1 and S2) mount and resultant, sectional and transverse forces measured by
+   the sensors. (B) Raw signals from the force sensors during a section from a diamond shaped resin block. (C) Representative sectional (FS ) and
+   transverse (FT ) forces for sections cut at 35 and 50 nm. (D) Sectional forces from a 15 min long sectioning session. Inset shows a magnified portion
+   of the time series. (E) A diagram of the measurement of mean sectional and transverse forces and the standard deviation of the force during the cut.
+   (F) A representative example of a cut with high frequency chatter.
+
+
+
+
+cutting uniformity (the presence or absence of chatter). We                      50 nm sections. The missed cuts still yielded a measurable force
+performed 15 min long sectioning sessions at both 50 and 35 nm                   (< 30 mN/mm) indicating the knife remained in contact with
+thickness that typically yielded ∼250 cuts at a sectioning speed                 the block despite the lack of a section being cut. The variability
+of 1.2 mm/s (Figure 4D). The analysis of the cutting profiles                    in the mean cutting force (i.e., the spread of datapoints in
+revealed the variability of each cut, ranging from uniform cutting,              Figures 5A, B) is a measure of cutting repeatability because it
+missed cuts, alternating thickness cuts and chatter during a cut.                reveals variability in section thickness. For example, Durcupan
+We measured the mean sectional and transverse cutting forces                     had similar mean sectional forces as Spurr’s resin at 50 nm,
+during the parallel portion of the block face, excluding the                     but a worse cutting repeatability due to the larger variability in
+leading and trailing ramps, for each block as well as the standard               the distribution of cutting forces (Figure 5A). The transverse
+deviation of the high-pass filtered force profile (Figure 4E). Cutting
+                                                                                 force was similarly variable regardless of resin formulation but
+repeatability is therefore the variability of the mean sectional force
+                                                                                 the lowest mean transverse forces were measured for Spurr’s and
+across cuts. The standard deviation of each cut (δFS , δFT ) or cutting
+                                                                                 Durcupan (Figure 5B).
+uniformity reveals changes in the force during the cut and shows
+                                                                                     Measuring the standard deviation of each cut (δFS , δFT ) reveals
+higher variability when, for example, chatter develops during a
+                                                                                 cutting uniformity. For example, the EMbed 812 H formulation
+cut (Figure 4F).
+                                                                                 exhibited such excessive chatter during sectioning already at 50 nm
+     We proceeded to quantify the cutting forces at both 35 and
+50 nm ultramicrotome feed settings from seven resin blocks,                      that we did not test it at 35 nm (Figures 5C, D). In several
+all trimmed to identical shapes, including LX 112, EMbed 812                     cases, such as Durcupan and EMbed 812 M and MH, the cutting
+medium (M), medium hard (MH), hard (H) and very hard                             uniformity was worse at 35 nm compared to 50 nm. Similarly,
+(VH) formulations, Durcupan and Spurr’s resins. The mean                         the EMbed 812 VH formulation that sectioned at ∼100 nm
+sectional cutting forces ranged from ∼40 mN/mm to ∼70 mN/mm                      instead of 50 nm due to skipped cuts resulted in better cutting
+for the different resins (Figure 5A) and from ∼3 mN/mm to                        uniformity, consistent with less chatter developing in the thicker
+∼10 mN/mm for the transverse force (Figure 5B). The EMbed                        sections. Among the tested resins, only Spurr’s and LX 112 yielded
+812 VH formulation skipped every other cut and therefore the                     reasonably good cutting repeatability and cutting uniformity at
+bimodal distribution of forces likely reflects 100 nm rather than                both 35 and 50 nm section thicknesses.
+
+
+Frontiers in Neuroscience                                                   06                                                               frontiersin.org
+Tegethoff and Briggman                                                                                                         10.3389/fnins.2024.1286991
+
+
+
+
+   FIGURE 5
+   Force measurements from different resins. (A) Mean sectional force from different resins (color-coded) cut at 35 or 50 nm. (B) Mean transverse force
+   from different resins (color-coded) cut at 35 or 50 nm nominal section thickness. (C,D) Standard deviation of sectional and transverse forces at 35 or
+   50 nm nominal section thickness. (E) Mean resultant forces plotted versus block hardness for 50 nm (filled circles) and 35 nm (open squares)
+   sections. Asterisk indicates the forces for EMbed 812 VH resin were from ∼100 nm sections due to missed cuts. (F) Mean of the standard deviation of
+   sectional force plotted versus block hardness for 50 nm (filled circles) and 35 nm (open squares) sections.
+
+
+
+
+    Because we had measured the blockface hardness profiles of                   obviously correlate with cutting repeatability across the different
+each block before performing cutting force tests, we explored                    resin formulations (Figure 5E, see standard deviation around the
+whether the mean hardness of a block was a predictor of its                      mean). Overall, Spurr’s resin exhibited the lowest cutting forces and
+cutting properties by plotting the resultant (total) force versus                best cutting repeatability at both 35 and 50 nm, but we have not
+hardness (Figure 5E). We found that resins with hardness near ∼13                tested the effect of preparing slightly softer or harder Spurr’s blocks.
+HV resulted in lower mean cutting forces, but hardness did not                   The cutting uniformity (δFT ) was also not obviously correlated with
+
+
+Frontiers in Neuroscience                                                   07                                                                frontiersin.org
+Tegethoff and Briggman                                                                                                       10.3389/fnins.2024.1286991
+
+
+
+
+block hardness (Figure 5F). For example, Durcupan, EMbed 812 M                  likely influenced by the thicker EMbed 812 VH sections. A notable
+and MH all exhibited chatter at 35 nm despite spanning a range of               exception was the LX 112 resin which compressed substantially less
+hardness from 12.3 to 13.8 HV.                                                  than all other resins (∼10%). The decompression of LX 112 sections
+                                                                                was noticeably visible on the water boat surface within the first few
+                                                                                100 ms after each cut (Figure 6D). We did not observe an obvious
+Section compression                                                             correlation between the magnitude of compression and block
+                                                                                hardness (Figure 6C) or the resultant cutting force (Figure 6E).
+    Sections are frequently compressed along the cutting direction              The ∼10% section compression for 50 nm LX 112 sections was also
+during sectioning (Jésior, 1985, 1986). Such compression can be                 observed for 35 nm sections (Figure 6E, open circles). For Spurr’s
+undesirable because it distorts the morphology of structures within             and LX 112 resins, we tested whether section compression was
+tissue samples, although sections can in principle be decompressed              dependent on cutting speed and found no correlation (Figure 6F)
+on the surface of a water boat with heat or chloroform vapor                    as was previously reported (Jésior, 1986).
+(Sotelo, 1957; Peachey, 1958). We quantified the compression of
+50 nm sections for each of the resins relative to dimensions of the
+block face (Figures 6A, B) and found that sections from most resins             Effect of cutting parameters on cutting
+compressed by factor of ∼15−25% (Figure 6C). There was a slight                 repeatability and uniformity
+downward trend in section compression for the harder EMbed 812
+resin blocks, consistent with a previous report that compression is                 We opted to hold several key cutting parameters constant
+inversely correlated with resin hardness (Jésior, 1985), but this is            for the preceding cutting force tests (Figure 5) including cutting
+
+
+
+
+   FIGURE 6
+   Compression of different resins. (A) A block of LX 112 resin (left) and representative 50 nm section (right). Lines indicate method used to measure
+   compression along cutting direction. (B) A block of EMbed 812 MH resin (left) and representative 50 nm section (right). (C) Percentage of section
+   compression relative to the length of block faces plotted versus hardness for different resins (color-coded, 50 nm sections). Asterisk indicates the
+   compression percentages for EMbed 812 VH resin were from ∼100 nm sections due to missed cuts. (D) Decompression of a 50 nm LX 112 section
+   on the water surface at different time points. Rectangular box is equally sized in the three images. (E) Percentage of section compression plotted
+   versus mean resultant force (color-coded). Open circles represent compression of 35 nm LX 112 sections, closed circles are 50 nm sections. Asterisk
+   indicates the compression percentages and forces for EMbed 812 VH resin were from ∼100 nm sections due to missed cuts. (F) Percentage of
+   section compression plotted versus cutting speed (color-coded, 50 nm sections).
+
+
+
+
+Frontiers in Neuroscience                                                  08                                                               frontiersin.org
+Tegethoff and Briggman                                                                                                   10.3389/fnins.2024.1286991
+
+
+
+
+speed (1.2 mm/s) and clearance angle (6◦ ). However, it is possible           across block faces, less distorted sections, and a lower variability in
+that improved cutting repeatability and uniformity could be                   the cutting force.
+achieved by further optimizing these parameters for each resin.
+In particular, while we have obtained excellent results cutting at
+1.0−1.2 mm/s with our current collection methodology (Fulton
+                                                                              Discussion
+et al., 2023), this speed is substantially faster than that used for
+most serial section volume EM studies. We therefore cut additional
+                                                                                  We sought to define quantitative metrics to evaluate a range
+50 nm series for LX 112, Spurr’s, and EMbed 812 H resins at
+                                                                              of currently available embedding resins. The use of indentation-
+0.3 and 0.6 mm/s (Figures 7A–D). For LX 112 and Spurr’s, we
+                                                                              based hardness measurements allowed us to achieve more uniform
+observed comparable results in terms of cutting repeatability and
+                                                                              block faces (Figure 1), based on the assumption that uniformly
+uniformity across the different cutting speeds. For EMbed 812 H,
+                                                                              hard blocks are desirable, as well as to monitor the degree
+we observed an improvement in cutting uniformity (reduced
+                                                                              of post-cure hardening of blocks and the impact of humidity
+chatter) as the cutting speed was lowered (Figures 7C, D), but
+                                                                              (Figure 3). Measuring cutting forces during sectioning allowed us
+a reduction in cutting repeatability at the slowest cutting speed
+                                                                              to quantify cutting repeatability and uniformity, two key metrics
+(Figures 7A, B).
+                                                                              to generate high-quality volume EM datasets (Figures 4, 5).
+    We also tested cutting 35 nm sections with a range of clearance
+                                                                              Spurr’s resin, in particular, performed well for ultrathin sectioning
+angles (3−9◦ , cut at 1.2 mm/s) for these three resins and found that
+                                                                              down to 35 nm relative to the other tested resins at least
+LX 112 and Spurr’s cut with a similar repeatability and uniformity
+                                                                              for the cutting parameters we selected. It has been previously
+regardless of clearance angle (Figures 7E–H). The repeatability of
+                                                                              speculated that minimizing sectioning forces yields the best
+EMbed 812 H was similar across the range of clearance angles
+                                                                              quality sections (Ericson and Lindberg, 1997). In line with this,
+(Figures 7E, F), but the uniformity degraded at the shallowest
+                                                                              Spurr’s exhibited among the lowest total sectioning forces at
+cutting clearance angles tested (Figures 7G, H). Overall, while it
+                                                                              35 nm and best cutting repeatability, but LX 112 also cut
+is clear that the cutting parameter space for each resin should
+                                                                              reasonably well at 35 nm despite higher sectioning forces. Further
+ideally be individually optimized, Spurr’s and LX 112 were relatively
+                                                                              measurements are needed that involve optimizing the cutting
+robust in terms of cutting repeatability and uniformity to many
+                                                                              parameters for each resin to fully explore whether minimizing
+combinations of cutting speeds and clearance angles.
+                                                                              cutting forces in general leads to the best cutting repeatability and
+                                                                              uniformity (Figure 7).
+                                                                                  Overall, we observed a tendency of block hardness in the
+Differential tissue/resin hardness                                            range of 13−14 HV to yield lower sectioning forces compared
+                                                                              to softer or harder blocks. However, the mean hardness of block
+    Finally, we measured the hardness of a tissue sample stained              faces did not obviously correlate with cutting quality across the
+with either ROTO (see Methods, Figure 8A) or ROTO + UA + Pb                   different resins. The degree of section compression was also not
+(see Methods, Figures 8C, E) relative to the surrounding resin                obviously correlated with hardness nor the magnitude of cutting
+(EMbed 812 MH). The hardness of embedded stained tissue was                   forces (Figure 6). The mechanisms of section compression have
+much higher (>15 HV) than most of the tested resins and was                   been previously studied (Jésior, 1985, 1986) and, for example, the
+higher for more intensely stained samples (Figures 8C, E versus               dependency of compression on section thickness and clearance
+8A). For irregularly shaped tissue samples that do not fully span             angle suggests that hardness alone would be insufficient to predict
+the block face this leads to a strong inhomogeneity in the block face         compression. LX 112 sections visibly decompressed on the water
+hardness. One correlate of this inhomogeneity is a distortion of the          surface after each section was cut, a property we did not observe
+surrounding resin relative to the stained tissue in ultrathin sections        for the other resins. This decompression may reflect the elastic
+(Figure 8A, right panel, white arrows). We also often observed                relaxation of the LX 112 polymer or potentially an interaction
+wrinkles form at the transition between the tissue and resin.                 between the polymer and water. We note that LX 112 was
+    We attempted to equilibrate the hardness difference between               prepared with a different hardener than the EMbed 812 resins
+heavily stained tissue and resin by surrounding samples with 12%              (NSA versus DDSA) and we speculate this may be related to
+gelatin prior to the tissue dehydration and embedding in EMbed                the difference in section compression, but further investigation
+812 MH. Gelatin was chosen due to its simplicity to work with                 is needed.
+and optical transparency. Gelatin alone raised the hardness to a                  We observed that irregularly shaped tissue samples embedded
+level roughly equal to that of ROTO + UA + Pb stained samples                 in resin can lead to distortions in ultrathin sections, particularly
+(Figure 8C). We also explored staining the gelatin with ROTO                  in the surrounding regions of bare resin (Figure 8). Potential
+and found a further increase in hardness to a level exceeding that            residual stresses in blocks that result from differences in the
+of the stained tissue sample (Figure 8E). Sections from both the              coefficients of thermal expansion of the resin and tissue could
+unstained and stained gelatin samples exhibited less distortion of            explain such an effect (Hodges et al., 1989; Serbena and Zanotto,
+sections on the water surface (Figures 8C, E, right panels). Finally,         2012; Luo et al., 2020). A modified curing schedule has been
+we performed force measurements of the samples and found a                    suggested to alleviate such stresses (Lu et al., 2023) and could
+larger deviation of the sectional force for the sample without any            help differentiate whether the hardness gradient between tissue
+surrounding gelatin (Figure 8B) compare to the samples with                   and resin we measured is related to these residual stresses. The
+gelatin (Figures 8D, F). Overall, the pre-embedding of irregularly            gelatin block in which we surrounded tissue prior to dehydration
+shaped samples with gelatin helps create a more uniform hardness              and embedding likely acts as an interphase, similar to a wide
+
+
+Frontiers in Neuroscience                                                09                                                            frontiersin.org
+Tegethoff and Briggman                                                                                                         10.3389/fnins.2024.1286991
+
+
+
+
+   FIGURE 7
+   Effect of cutting parameters on cutting repeatability and uniformity. (A,B) Mean sectional and transverse forces from different resins (color-coded)
+   cut at 50 nm and 6 degree clearance angle plotted versus cutting speed. (C,D) Standard deviation of sectional and transverse forces from different
+   resins (color-coded) cut at 50 nm and 6 degree clearance angle plotted versus cutting speed. (E,F) Mean sectional and transverse forces from
+   different resins (color-coded) cut at 35 nm and 1.2 mm/s plotted versus knife clearance angle. (G,H) Standard deviation of sectional and transverse
+   forces from different resins (color-coded) cut at 35 nm and 1.2 mm/s plotted versus knife clearance angle. Note that reported clearance angles do
+   not include the built-in 4 degree clearance angle of the knives we used.
+
+
+
+
+Frontiers in Neuroscience                                                   10                                                                frontiersin.org
+Tegethoff and Briggman                                                                                                            10.3389/fnins.2024.1286991
+
+
+
+
+   FIGURE 8
+   Hardness of embedded tissue samples. (A) Blockface image of a ROTO stained brain embedded in EMbed 812 MH resin (left) and a 50 nm section
+   (right). White arrows indicate distortion of the section. (B) Mean sectional (blue) and transverse (red) forces for 50 nm sections from the block in
+   panel A. (C) Blockface image of a ROTO + UA + Pb stained brain surrounded first with 12% gelatin and then embedded in EMbed 812 medium hard
+   resin (left) and a 50 nm section (right). White arrow indicates distortion of the portion of the section not containing gelatin. (D) Mean sectional (blue)
+   and transverse (red) forces for 50 nm sections from the block in panel C. (E) Blockface image of a ROTO + UA + Pb stained brain surrounded first
+   with 12% gelatin stained with ROTO and then embedded in EMbed 812 medium hard resin (left) and a 50 nm section (right). (F) Mean sectional (blue)
+   and transverse (red) forces for 50 nm sections from the block in panel E.
+
+
+
+
+variety of polymer composites, to alter the viscoelastic properties                There are many resin formulations that we have not yet evaluated,
+of the block and smooth the transition between the tissue and                      including, for example, additional Araldites (beyond Durcupan
+neighboring resin (Sienkiewicz et al., 2022; Gkaliou et al., 2023).                ACM) (Glauert et al., 1956) and Quetol (Kushida, 1974), a water
+The gelatin may also help prevent the development of residual                      miscible resin. We also have not systemically measured post-
+stresses during curing. The epoxy resin likely covalently binds                    cure hardening beyond a month, nor the impact of humidity on
+to gelatin similar to molecules in the tissue itself which could                   resins other than EMbed 812 MH. We emphasize that there are
+smooth the transition between tissue and the surrounding resin                     also numerous additional physical properties of resin blocks that
+(Sung et al., 1996).                                                               could be quantified and ultimately correlated with cutting quality
+    There are several future extensions we anticipate for the                      such as the glass transition temperature, fracture toughness, elastic
+use of hardness and cutting force measurements as quantitative                     modulus and tensile strength (Acetarin et al., 1987; Sun et al., 2017).
+metrics to evaluate resins. The resins we chose to characterize                    For hardness measurements, we note that epoxy samples do not
+span a range of chemical structures including aliphatic (LX                        behave in a rigid-plastic manner, but also exhibit noticeable elastic
+112), cycloaliphatic (Spurr’s), and aromatic (Durcupan ACM)                        properties. As a result, elastic recovery of indentations may lead to
+monomers as well as mixtures reported to contain both aliphatic                    greater variability in the results from hardness testing. Therefore,
+and aromatic monomers (EMbed 812) (Glauert and Lewis, 1998).                       we chose a load and application time that yielded the most robust
+
+
+Frontiers in Neuroscience                                                     11                                                                 frontiersin.org
+Tegethoff and Briggman                                                                                                                                 10.3389/fnins.2024.1286991
+
+
+
+
+hardness values for our samples. Finally, because our focus was                                 Funding
+on ultrathin sectioning, we have not yet assessed other important
+properties such as stability under exposure to an electron beam for                                 The author(s) declare financial support was received for
+the resins we tested (Kizilyaprak et al., 2015). Overall, hardness                              the research, authorship, and/or publication of this article. This
+testing and cutting force measurements are relatively simple to                                 research was funded by the Max Planck Society.
+implement in the laboratory and provide a more principled method
+to optimize sample embedding and choose an embedding resin
+compared to trial-and-error approaches.
+                                                                                                Acknowledgments
+                                                                                                    We thank Peter Christ, Kara Fulton, and Irene Guegel for
+Data availability statement                                                                     assistance with sample preparation and helpful discussions. We also
+                                                                                                thank the MPINB mechanical workshop for machining of force
+   The raw data supporting the conclusions of this article will be
+                                                                                                sensor components.
+made available by the authors, without undue reservation.
+
+
+
+Ethics statement                                                                                Conflict of interest
+
+   The animal study was approved by the Landesamt für Natur,                                        The authors declare that the research was conducted in the
+Umwelt und Verbraucherschutz Nordrhein-Westfalen, Germany.                                      absence of any commercial or financial relationships that could be
+The study was conducted in accordance with the local legislation                                construed as a potential conflict of interest.
+and institutional requirements.
+
+
+                                                                                                Publisher’s note
+Author contributions
+                                                                                                    All claims expressed in this article are solely those of the
+    LT: Data curation, Formal analysis, Investigation,                                          authors and do not necessarily represent those of their affiliated
+Methodology, Visualization, Writing – review & editing. KB: Data                                organizations, or those of the publisher, the editors and the
+curation, Formal analysis, Conceptualization, Funding acquisition,                              reviewers. Any product that may be evaluated in this article, or
+Investigation, Methodology, Supervision, Writing – original draft,                              claim that may be made by its manufacturer, is not guaranteed or
+Writing – review & editing.                                                                     endorsed by the publisher.
+
+
+
+
+References
+  Acetarin, J.-D., Carlemalm, E., Kellenberger, E., and Villiger, W. (1987). Correlation           Glauert, A. M., and Lewis, P. R. (1998). Biological specimen preparation for
+of some mechanical properties of embedding resins with their behaviour in                       transmission electron microscopy. Princeton, NJ: Princeton University Press.
+microtomy. J. Electron Microsc. Tech. 6, 63–79. doi: 10.1002/jemt.1060060109
+                                                                                                  Glauert, A. M., Rogers, G. E., and Glauert, R. H. (1956). A new embedding medium
+  Alexander, S.-C., Michał, J., Daniel, R. B., Art, P., Yuelong, W., Tim, B., et al.            for electron microscopy. Nature 178, 803–803. doi: 10.1038/178803a0
+(2021). A connectomic study of a petascale fragment of human cerebral cortex. bioRxiv             Helander, H. F. (1974). Some observations on knife properties and sectioning
+[Preprint] doi: 10.1101/2021.05.29.446289                                                       mechanics during ultramicrotomy of plastic embedding media. J. Microsc. 101, 81–93.
+   Briggman, K. L., and Bock, D. D. (2012). Volume electron microscopy for neuronal             doi: 10.1111/j.1365-2818.1974.tb03869.x
+circuit reconstruction. Curr. Opin. Neurobiol. 22, 154–161. doi: 10.1016/j.conb.2011.             Hodges, J., Yates, B., Darby, M. I., Wostenholm, G. H., Clemmet, J. F., and Keates,
+10.022                                                                                          T. F. (1989). Residual stresses and the optimum cure cycle for an epoxy resin. J. Mater.
+  Calì, C., Wawrzyniak, M., Becker, C., Maco, B., Cantoni, M., Jorstad, A., et al.              Sci. 24, 1984–1990. doi: 10.1007/BF02385410
+(2018). The effects of aging on neuropil structure in mouse somatosensory cortex-                 Jésior, J. C. (1985). How to avoid compression: A model study of latex sphere grid
+A 3D electron microscopy analysis of layer 1. PLoS One 13:e0198131. doi: 10.1371/               sections. J. Ultrastruct. Res. 90, 135–144. doi: 10.1016/0889-1605(85)90104-1
+journal.pone.0198131
+                                                                                                  Jésior, J.-C. (1986). How to avoid compression II. The influence of sectioning
+   Dellmann, H. D., and Pearson, C. B. (1977). Better epoxy resin embedding for                 conditions. J. Ultrastruct. Mol. Struct. Res. 95, 210–217. doi: 10.1016/0889-1605(86)
+electron microscopy at low relative humidity. Stain Technol. 52, 5–8. doi: 10.3109/             90042-X
+10520297709116736
+                                                                                                  Karimi, A., Odenthal, J., Drawitsch, F., Boergens, K. M., and Helmstaedter, M.
+  Ding, H., Smith, R. G., Poleg-Polsky, A., Diamond, J. S., and Briggman, K. L. (2016).         (2020). Cell-type specific innervation of cortical pyramidal cells at their apical
+Species-specific wiring for direction selectivity in the mammalian retina. Nature 535,          dendrites. Elife 9:e46876. doi: 10.7554/eLife.46876
+105–110. doi: 10.1038/nature18609
+                                                                                                  Kasthuri, N., Hayworth, K. J., Berger, D. R., Schalek, R. L., Conchello, J. A., Knowles-
+  Ericson, M. L., and Lindberg, H. (1997). Design and potential of instrumented                 Barley, S., et al. (2015). Saturated reconstruction of a volume of neocortex. Cell 162,
+ultramicrotomy. Polymer 38, 4485–4489. doi: 10.1016/S0032-3861(96)01051-8                       648–661. doi: 10.1016/j.cell.2015.06.054
+   Fulton, K. A., Watkins, P. V., and Briggman, K. L. (2023). GAUSS-EM: Guided                     Kislinger, G., Gnägi, H., Kerschensteiner, M., Simons, M., Misgeld, T., and Schifferer,
+accumulation of ultrathin serial sections with a static magnetic field for volume               M. (2020). Multiscale ATUM-FIB microscopy enables targeted ultrastructural analysis
+electron microscopy. bioRxiv [Preprint] doi: 10.1101/2023.11.13.566828                          at isotropic resolution. iScience 23:101290. doi: 10.1016/j.isci.2020.101290
+  Gkaliou, K., Trakakis, G., Manikas, A., Davies, P. R., Hall, J., Galiotis, C., et al.            Kizilyaprak, C., Longo, G., Daraspe, J., and Humbel, B. M. (2015). Investigation of
+(2023). Understanding cure and interphase effects in functionalized graphene-epoxy              resins suitable for the preparation of biological sample for 3-D electron microscopy.
+nanocomposites. Polym Adv Technol. 34, 2925–2935. doi: 10.1002/pat.6114                         J. Struct. Biol. 189, 135–146. doi: 10.1016/j.jsb.2014.10.009
+
+
+
+Frontiers in Neuroscience                                                                  12                                                                           frontiersin.org
+Tegethoff and Briggman                                                                                                                                  10.3389/fnins.2024.1286991
+
+
+
+
+  Kushida, H. (1974). A new method for embedding with a low viscosity epoxy resin                  Sotelo, J. R. (1957). Technical improvements in specimen preparation for electron
+“Quetol 651”. J. Electron. Microsc. 23:197. doi: 10.1093/oxfordjournals.jmicro.a049928            microscopy. Exp. Cell Res. 13, 599–601. doi: 10.1016/0014-4827(57)90091-5
+  Loomba, S., Straehle, J., Gangadharan, V., Heike, N., Khalifa, A., Motta, A., et al.             Spurr, A. R. (1969). A low-viscosity epoxy resin embedding medium for electron
+(2022). Connectomic comparison of mouse and human cortex. Science 377:eabo0924.                   microscopy. J. Ultrastruct. Res. 26, 31–43. doi: 10.1016/s0022-5320(69)90033-1
+doi: 10.1126/science.abo0924
+                                                                                                     Staeubli, W. (1963). A new embedding technique for electron microscopy,
+   Low, I. M., and Shi, C. (1998). Vickers indentation responses of epoxy polymers.               combining a water-soluble epoxy resin (Durcupan) with water-insoluble Araldite.
+J. Mater. Sci. Lett. 17, 1181–1183. doi: 10.1023/A:1006517005082                                  J. Cell Biol. 16, 197–201. doi: 10.1083/jcb.16.1.197
+  Lu, X., Wu, Y., Schalek, R. L., Meirovitch, Y., Berger, D. R., and Lichtman, J. W.                 Stratton, C. J., Erickson, T. B., and Wetzstein, H. Y. (1982). The lipid solubility of
+(2023). A scalable staining strategy for whole-brain connectomics. bioRxiv [Preprint]             fixative, staining and embedding media, and the introduction of LX-112 and Poly/bed-
+doi: 10.1101/2023.09.26.558265                                                                    812 as dehydrants for epoxy resin embedment. Tissue Cell 14, 13–24. doi: 10.1016/
+                                                                                                  0040-8166(82)90003-9
+  Luft, J. H. (1961). Improvements in epoxy resin embedding methods. J. Biophys.
+Biochem. Cytol. 9, 409–414. doi: 10.1083/jcb.9.2.409                                                Sun, F., Li, H., Lindberg, H., Leifer, K., and Gamstedt, E. K. (2017). Polymer fracture
+                                                                                                  and deformation during nanosectioning in an ultramicrotome. Eng. Fract. Mech. 182,
+  Luo, T., Deng, L., Li, A., Zhou, C., Shao, S., Sun, Q., et al. (2020). Scalable resin
+                                                                                                  595–606. doi: 10.1016/j.engfracmech.2017.05.044
+embedding method for large-volume brain tissues with high fluorescence preservation
+capacity. iScience 23:101717. doi: 10.1016/j.isci.2020.101717                                       Sung, H.-W., Hsu, H.-L., Shih, C.-C., and Lin, D.-S. (1996). Cross-linking
+                                                                                                  characteristics of biological tissues fixed with monofunctional or multifunctional
+  Motta, A., Berning, M., Boergens, K. M., Staffler, B., Beining, M., Loomba, S., et al.
+                                                                                                  epoxy compounds. Biomaterials 17, 1405–1410. doi: 10.1016/0142-9612(96)87282-6
+(2019). Dense connectomic reconstruction in layer 4 of the somatosensory cortex.
+Science 366:eaay3134. doi: 10.1126/science.aay3134                                                   Takemura, S.-Y., Bharioke, A., Lu, Z., Nern, A., Vitaladevuni, S., Rivlin, P. K.,
+                                                                                                  et al. (2013). A visual motion detection circuit suggested by Drosophila connectomics.
+  Peachey, L. D. (1958). Thin sections. I. A study of section thickness and physical
+                                                                                                  Nature 500, 175–181. doi: 10.1038/nature12450
+distortion produced during microtomy. J. Biophys. Biochem. Cytol. 4, 233–242. doi:
+10.1083/jcb.4.3.233                                                                                 Wanner, A. A., and Vishwanathan, A. (2018). Methods for mapping neuronal
+  Peddie, C. J., Genoud, C., Kreshuk, A., Meechan, K., Micheva, K. D., Narayan,                   activity to synaptic connectivity: Lessons from larval zebrafish. Front. Neural Circ.
+K., et al. (2022). Volume electron microscopy. Nat. Rev. Methods Primers 2:51. doi:               12:89. doi: 10.3389/fncir.2018.00089
+10.1038/s43586-022-00131-9                                                                           Wanner, A. A., Genoud, C., Masudi, T., Siksou, L., and Friedrich, R. W. (2016).
+  Serbena, F. C., and Zanotto, E. D. (2012). Internal residual stresses in glass-ceramics:        Dense EM-based reconstruction of the interglomerular projectome in the zebrafish
+A review. J. Non-Crystalline Solids 358, 975–984.                                                 olfactory bulb. Nat. Neurosci. 19, 816–825. doi: 10.1038/nn.4290
+  Sienkiewicz, N., Dominic, M., and Parameswaranpillai, J. (2022). Natural fillers                   Zheng, Z., Lauritzen, J. S., Perlman, E., Robinson, C. G., Nichols, M., Milkie, D.,
+as potential modifying agents for epoxy composition: A review. Polymers 14:265.                   et al. (2018). A complete electron microscopy volume of the brain of adult Drosophila
+doi: 10.3390/polym14020265                                                                        melanogaster. Cell 174, 730–743.e22. doi: 10.1016/j.cell.2018.06.019
+
+
+
+
+Frontiers in Neuroscience                                                                    13                                                                          frontiersin.org
+

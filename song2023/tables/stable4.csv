@@ -1,0 +1,21 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 4. Comparison of protocols (SI pp. 22-24).
+# Caption: 'Comparison between the main steps of rOTO (Willingham & Rutherford, 1984), Hua et al (Hua et al., 2015),
+#   Mikula et al. (Mikula & Denk 2015) and our protocol are summarized in the following table. Abbreviations are the
+#   same as previous tables.'
+# The second 'Ideas and notes about the step' cell for TCH spans the rOTO and Hua columns (given under rOTO).
+Main steps,rOTO (Willingham et al. 1984),"Hua et al., 2015",Mikula et al. 2015,This Protocol (Song et al.)
+Membrane Contrast,Os + FeCN (RT),Os → FeCN (RT) (RT),Os+FeCN+formamide (RT),Os → CaC → FeCN (4°C) (4°C) (4°C)
+Ideas and notes about the step,"(1).Os-FeCN redox is the core reaction
+(2). Either more osmium deposited into membranes; or osmium got washed out from background","(1).Os-FeCN redox is the core reaction to generate Os vi
+(2). Os vi dismutate to Os iv to deposited into membrane, resulting in increased contrast
+Separating Os and FeCN avoids locally too high os vi concentration.","(1). Os-FeCN redox is the core reaction
+(2). Formamide might act as a stabilizer for Os vi or charge neutralizer for FeCN.
+Formamide added into Os-FeCN mixture helps either Os (vi) or FeCN diffusion","(1).Os-FeCN redox is not necessary (2). Os vi cannot enhance membrane contrast (3). Os long cause background os vi to expose to aqueous phase (4). FeCN gives CN- to background Os vi to wash it away
+Adapted Hua’s Os-FeCN separation; however, as Os-FeCN redox is not necessary, added CaC in between to avoid artefacts. Temperature 4°C to avoid os over-expose and further stabilize samples in later steps (except 4°C, CaCl2 should also have the same effect, see in Extended Data Fig.5g,h)."
+Staining Amplification,TCH,TCH,Pyrogallol,Pyrogallol
+Ideas and notes about the step,"(1). TCH symmetrically link Os (2). however, TCH-OsO4 reaction generate bubbles causing breakages in large samples (>1 mm).",,"(1). Pg can replace TCH (2). Chemistry unclear; (3). Pg in H2O better than in CaC.
+However, cac was used around Pg step.","Our experiments indicate the interaction between Os (vi) and Pg cause staining gradient (Extended Data Fig. 4g, Extended Data Fig.6h-n).
+Adapted Mikula’s pyrogallol; however, we use water around Pg step; Added 2nd Os to help stabilize samples in water."
+UA,-,4°C then 50oC,-,4°C then 50oC
+Ideas and notes about the step,-,Low temperature facilitate diffusion by inhibiting reaction,-,Adapted from Hua; with increased UA concentration from 2% to 4%.
+Ld,-,50oC,-,Omitted due to too slow diffusion of Lead aspartate.

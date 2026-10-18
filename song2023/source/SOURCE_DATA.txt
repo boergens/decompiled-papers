@@ -1,0 +1,1 @@
+edmond_RG58DU/: source data, https://doi.org/10.17617/3.RG58DU (Edmond, CC0 1.0): readme.txt, code.zip, data.zip (961.7 MB) via the Dataverse API by curl, 2026-10-16.

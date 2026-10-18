@@ -1,0 +1,22 @@
+# Song et al. 2023 Nat Methods, Extended Data Fig. 7 (p. 22): 'Overview of 2 mm, hemisphere and whole-brain protocol steps
+#   with incubation times and temperature steps visualized'. The figure is a chart drawn as a table; transcribed here
+#   by reading the page image (raster figure, no text layer inside it). Incubation times in h as printed next to the
+#   bars (grey bar = 2 mm, black bar = Hem., dashed bar = W.B.); '' = no bar (n/a). temperature_* from the colour
+#   column (dark blue 4°C, light blue room temperature RT, red 50°C; colour bar 0°C..60°C).
+# The note column is quoted verbatim (spelling as printed: 'brekage', 'diffufsion'); the note for 12a/12b spans both rows.
+step,solution,time_2mm_h,time_hemisphere_h,time_whole_brain_h,temperature_2mm,temperature_hem_wb,note
+1a,OsO4,,72,96,n/a,4°C,4°C critical to avoid OsO4 over-exposure in periphery of large samples
+1b,OsO4,24,,,RT,n/a,
+2,Cac,2,96,168,4°C,4°C,"4°C long enough critical, if RT: PSD lost, cerebellum damage; if too short, gradient in FeCN, breakages in Pg"
+3,FeCN,17,72,72,4°C,4°C,"If step cancel: brekage in Pg. 4°C critical for large samples, if RT: brekages in FeCN"
+4,Cac,2,48,96,RT,RT,Critical for very large samples so free FeCN diffuse out. If cancel: gradient in 2nd Os & breakages in Pg.
+5,OsO4,3,48,48,RT,RT,Critical additional OsO4 step for the integrity in water steps of samples of all sizes.
+6,Cac,1,24,72,RT,RT,"Important for free OsO4 to diffuse out, to avoid OsO4-Pg interactions"
+7,H2O,2,24,48,RT,RT,"Essential for enhanced contrast; Critical for removing residual Os vi to avoid Os vi-Pg interaction, otherwise gradients and breakages in Pg"
+8,Pyrogallol,17,24,24,RT,RT,Freshly prepared PG.
+9,H2O,2,24,48,RT,RT,Wash out remaining Pg to avoid Pg-OsO4 interactions
+10,"OsO4, H2O",6,48,96,RT,RT,OsO4 critical for amplify staining intensity & sample conductivity
+11,H2O,1,24,48,RT,RT,Wash out remaining OsO4 to avoid OsO4-UA interactions
+12a,Uranyl Acetate,17,48,48,4°C,4°C,UA critical for sample conductivity. Note higher UA concentration (4%) for sufficient diffufsion.
+12b,Uranyl Acetate,2,5,5,50°C,50°C,
+13,H2O,1,24,48,RT,RT,

@@ -1,0 +1,40 @@
+# Nguyen et al. 2016 Sci Rep 6:23721, Table 1 (PDF p.8). Caption: "Table 1. Summary of imaging conditions."
+# Cells verbatim. Empty Panel cells are empty in the printed table (the row continues the panel above).
+# "Normal Conductive" is printed as one cell, as given here; "–" is printed in the Z-step column of two rows.
+# Image size is printed with a superscript 2 (e.g. 4096²: 4096 x 4096 pixels).
+Panel,Resin,Voltage (kV),Image size (pixels),Dwell time (us),X-Y resolution (nm),Z-step (nm)
+Fig. 2a,Normal,1.5,4096²,1,7.5,50
+Fig. 2b,Conductive,1.5,4096²,1,5.7,40
+Fig. 2c–f,Normal Conductive,1.5,4096²,3,26,–
+"Fig. 2g,h",Normal Conductive,1.4,4096²,2,25,–
+Fig. 3a–e,Conductive,1.4,4096²,1,5.7,30
+"Fig. 4d,e",Normal Conductive,1.5,8192²,1,4,40
+"Fig. 4f,g",Normal Conductive,2,3072²,1,4.8,40
+"Fig. 5a,c,e",Normal,1.4,4096²,1,8.6,50
+"Fig. 5b,d,f",Conductive,1.4,4096²,1,5.7,30
+Fig. 5h,Normal,1.5,8192²,1,5.7,40
+,Conductive,1.5,8192²,1,4,40
+,Normal,1.4,4096²,1,8.6,50
+,Conductive,1.4,4096²,1,5.7,30
+,Normal,1.4,4096²,1,10.3,80
+,Conductive,1.4,4096²,1,6.5,70
+,Normal,1.4,4096²,2,5.9,50
+,Conductive,1.4,4096²,2,6,40
+,Normal,2,3072²,1,7.7,40
+,Conductive,2,3072²,1,5.9,40
+,Normal,2,3072²,1,7.7,50
+,Conductive,2,3072²,1,4.8,40
+,Normal,2,3072²,1,4.8,50
+,Conductive,2,3072²,1,4.3,40
+Fig. 5i,Normal,1.5,8192²,1,5.7,40
+,Conductive,1.5,8192²,1,4,40
+,Normal,1.4,4096²,1.6,7.5,40
+,Conductive,1.4,4096²,2,6,40
+,Normal,1.4,4096²,1,7.7,40
+,Conductive,1.4,4096²,1,5.9,40
+,Normal,1.4,4096²,1,8.7,60
+,Conductive,1.4,4096²,1,7.4,60
+,Normal,2,3072²,1,7.7,50
+,Conductive,2,3072²,1,4.3,50
+,Normal,2,3072²,1,4.8,50
+,Conductive,2,3072²,1,4.3,50

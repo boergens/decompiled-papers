@@ -1,0 +1,53 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 3. Protocols for all staining experiments (SI pp. 18-22).
+# Caption: 'Abbreviated protocol descriptions for all shown control and main experiments with corresponding figure
+#   panels. Protocol steps were denoted as chemical, incubation time, temperature. Incubation time in h unless specified
+#   otherwise. Temperature only noted when other than room temperature (RT). Sample screening method is indicated (µCT
+#   and/or SEM); Sample size, dehydration, infiltration and embedding steps are reported in main methods. x2: applied twice.'
+# The arrows are printed as a Wingdings glyph (text layer 'à'); written here as →. A line break inside a cell separates
+#   protocols printed on separate lines (e.g. two conditions of one experiment).
+Exp ID,Experiment,Staining Steps (brief),Figures
+1,Staining 2 mm samples with 1 mm protocol,"Os 1.5→FeCN 1.5→ Os 45min→ CaC 0.5→x2 H2O 0.5→ TCH 1→ x2 H2O 0.5→ Os-aqua1.5→ x2 H2O 0.5→2% UA overnight 4°C, 2 h 50°C→ μCT, SEM","Fig.1b; Extended Data Fig.1a,b"
+2,Step-by-step diagnosis of 1 mm protocol,"Os 1.5 (μCT)→FeCN 1.5 (μCT)→ Os 45min (μCT)→ CaC 0.5→x2 H2O 0.5 → TCH 1→ x2 H2O 0.5→ Os-aqua 1.5 (μCT)→ x2 H2O 0.5→2% UA overnight 4°C, 2 h 50 °C (μCT)",Extended Data Fig.1c
+3,Extending FeCN incubation for 2 mm,Os 3→FeCN 1.5/3/7/12/17→ Os 3→ μCT,Extended Data Fig.1d
+4,Os short vs. long on FeCN’s effect,"Os 3→ SEM
+Os 3→ FeCN 17→SEM
+Os 24→SEM
+Os 24→ FeCN 17→ SEM","Extended Data Fig.2a,b"
+5,Extending TCH incubation for 2 mm,Os 3→FeCN 17→ Os 3→ CaC 0.5→ x2 H2O 0.5 → TCH 1.5/3/5→ x2 H2O 0.5→ Os-aqua 3→ μCT,Extended Data Fig.1e
+6,Replacing TCH by Pg,"Os 1.5→FeCN 1.5→ Os 45min→ CaC 0.5→x2 H2O 0.5→ TCH/H2O/Pyrogallol 1→ x2 H2O 0.5→ Os acq 1.5→ x2 H2O 0.5→ 2% UA overnight 4°C, 2 h 50°C→ SEM & EDS",Extended Data Fig.1f
+7,Comparing Pg in H2O vs. CaC,"Os 24→FeCN 17→ Os 3→ CaC 0.5→x2 H2O 0.5→ Pg-aqua/Pg-CaC 17→ x2 H2O 0.5→ Os-aqua 6→ x2 H2O 0.5→ 4% UA overnight 4°C, 2 h 50°→ SEM",Extended Data Fig.1g
+8,Extending pyrogallol,Os 3→FeCN 17 → Os 3 → CaC 0.5→x2 H2O 0.5→ Pyrogallol 1.5/7/17→ x2 H2O 0.5→ Os-aqua 3/6→ μCT,Extended Data Fig.1h
+9,Improving UA,"Os 3→FeCN 17→ Os 3→ CaC 0.5→x2 H2O 0.5→ Pyrogallol 17→ x2 H2O 0.5→ Os-aqua 6→ x2 H2O 0.5→ 2% /4% UA overnight 4°C, 2 h 50°C→ μCT",Extended Data Fig.1i; Extended Data Fig.1m
+10,Cancelling Ld,"Os 3→FeCN 17→ Os 3→ CaC 0.5→x2 H2O 0.5→ Pyrogallol 17→ x2 H2O 0.5→ Os-aqua 6→ x2 H2O 0.5→ 4% UA overnight 4°C, 2 h 50°C→ Ld 4/24 50°C→μCT",Extended Data Fig.1i
+11,Os very long,"Os 3 days→ SEM
+Os 6 days→ SEM","Extended Data Fig.2c,d"
+12,Os 4°C vs. RT,"Os 7 days 4°C→ SEM
+Os 6 days 4°C, 1 day RT→SEM","Extended Data Fig.2e,f"
+13,Os 4°C then FeCN,"Os 6 days 4°C, 1day RT→FeCN 1 day 4°C/RT→SEM
+Os 7 days 4°C→FeCN 1 day 4°C/RT→SEM","Extended Data Fig.2i,j"
+14,Os 4°C on hemisphere,Os 4°C → uCT at 17/24/40h,Extended Data Fig. 4a
+15,CaC washing removes Os-FeCN redox gradient,"Os 48→FeCN48→SEM
+Os48→CaC48→FeCN48→SEM","Extended Data Fig. 4b,c"
+16,CaC washing speed up FeCN diffusion,"Os 24 → FeCN 1.5 → uCT, SEM
+Os 24 → CaC 24 → FeCN 1.5 → uCT, SEM","Extended Data Fig. 4d,e"
+17,Pg interaction with Os-FeCN redox gradient (H3),"Os 4°C 96, RT 24→CaC 4°C 48 →FeCN 4°C 48 (μCT) → Os 72→CaC 24(μCT) → H2O 29 (μCT) → Pg 24 (μCT) → H2O 48 → Os 48 → 4% UA 4°C 48, 50°C 5 →H2O 42 →SEM",Extended Data Fig. 4g
+18,Pg interaction with Os-FeCN redox gradient and CaC (H1),"Os 4°C 63, RT 24 →CaC 4°C 24 → FeCN 4°C 48 → CaC 24 (μCT)→ Os 32→CaC 17 (μCT)→ H2O 9(μCT) → Pg 48 (μCT)→ H2O 40 → Os 48 → 4% UA 4°C 48, 50°C 5→H2O 48→ SEM",Extended Data Fig. 4g
+19,"CaC RT 2d removes Os-FeCN redox gradient (H4,5,6)","Os 4°C 72, RT 24→CaC 48 → FeCN 4°C 4 → CaC 24 (μCT H5) → Os 48→CaC 24→ H2O 24 (μCT H5) → Pg 24 (μCT H5) → H2O 24 → Os 24 (μCT H5) → 4% UA 4°C 48, 50°C 5 →H2O 48 →SEM","Extended Data Fig. 4h; Extended Data Fig. 3a,b,c; Extended Data Fig.6a"
+20,CaC washing at 4°C 4 day removes Os-FeCN redox gradient (H13),"Os 4°C 68 →CaC 4°C 96 → FeCN 4°C 72 → CaC 48 → Os 48 →CaC 24 → H2O 24 (μCT) → Pg 24 (μCT) → H2O 24 → Os 41 (μCT at 24/41 h) → 4% UA 4°C 48, 50°C 12 →H2O 24 →SEM",Extended Data Fig. 4h; Extended Data Fig. 3d
+21,"Whole brain staining (W1,W2)","W1: Os 4°C 96 (μCT) → CaC 4°C 168→ FeCN 4°C 72 (μCT) → CaC 4°C 48, RT 48 → Os 48→CaC 72 (μCT) → H2O 48 (μCT) → Pg 24 (μCT) → H2O 48→ Os 96 (μCT) → 4% UA 4°C 48, 50°C 5.5 →H2O 24 →SEM
+W2: Os 4°C 96 → CaC RT 72, 4°C 72→ FeCN 4°C 72 → CaC 4°C 48, RT 48 → Os 48→CaC 72 → H2O 48 (μCT) → Pg 24 → H2O 48→ Os 96 → 4% UA 4°C 48, 50°C 5.5 →H2O 24 →SEM",Fig.1c; Extended Data Fig.6g
+22,2nd Os stabilize samples in H2O,"Os 24 → CaC 24 → FeCN 24 → Os 3 → CaC 0.5 → x2 H2O 0.5 → H2O→ take LM images at different time points
+Os 24 → CaC 24 → FeCn 24→ CaC 0.5 → x2 H2O 0.5 → H2O → take LM images at different time points",Extended Data Fig. 4i
+23,Os vi staining,1% Os (vi) CaC 6→ SEM,Extended Data Fig.5c
+24,Adding CaCl2 in OsO4 then FeCN,Os 24 (with CaCl2)→ FeCN 17→ SEM,Extended Data Fig.5g
+25,OsO4 at 4°C then FeCN,Os 24 4°C→FeCN17→SEM,Extended Data Fig.5h
+26,rO short vs. long,"rO 3 → SEM
+rO 24 → SEM","Extended Data Fig.5e,f"
+27,CaC wash between OsO4 and FeCN,Os 3/24→x3 CaC 1→FeCN 17→SEM,"Extended Data Fig.5a,b"
+28,CaC before Pg causes gradient,Os 4°C 72 →CaC 4°C 96 → FeCN 4°C 72 → CaC 48 → Os 48 →CaC 24 → CaC 24 → Pg 24 (μCT),Extended Data Fig.6i
+29,Cancelling 2nd Os to remove Os vi before Pg,"Os 4°C 72 →CaC 4°C 96 → FeCN 4°C 72 → CaC 48 → CaC 48 →CaC 24 → CaC 24 → Pg 24 (μCT)
+Afterwards, the hemisphere was cut into four ~2 mm thick coronal chunks for exp32 and exp33.",Extended Data Fig.6j
+30,KCl between 2nd Os and Pg causes gradient,Os 4°C 72 →CaC 4°C 96 → FeCN 4°C 72 → CaC 48 → Os 48 →KCl 24 → KCl 24 → Pg 24 (μCT),Extended Data Fig.6k
+31,Adjusting pH of KCl to remove Os vi before Pg,"Os 4°C 72 →CaC 4°C 96 → FeCN 4°C 72 → CaC 48 → Os 48 →KCl 24, pH7 → KCl 24, pH7 → KCl pH1 → KCl 24, pH7 → Pg 24 (μCT)",Extended Data Fig.6l
+32,Os in h2o staining of sample from exp29,"Exp29 → CaC24 → Os in h2o 24 → h2o → 2 mm dehydration & Spurr’s resin embedding → μCT, SEM",Extended Data Fig.6m
+33,Os in cac staining of sample from exp29,"Exp29 → CaC24 → Os in cac 24 → h2o → 2 mm dehydration & Spurr’s resin embedding → μCT, SEM",Extended Data Fig.6n

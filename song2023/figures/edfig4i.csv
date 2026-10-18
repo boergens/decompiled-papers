@@ -1,0 +1,12 @@
+# Song et al. 2023 Nat Methods, Extended Data Fig. 4i (plot at right): Expansion Ratio of 2-mm samples kept in H2O vs
+#   Duration (h), 'No OsO4' (circles) and 'With OsO4' (squares; extra OsO4 step after FeCN). Points joined by lines.
+# Provenance: tier 3, digitized from the raster figure (PDF p. 16) by edfig4i_extract.py; uncertainty +-0.7 h, +-0.01.
+#   Axis fits: x max residual 0.06 h, y max residual 0.0000. Methods: imaging from 2 h to 100 h.
+# Columns: series; duration_h; expansion_ratio; how.
+series,duration_h,expansion_ratio,how
+No OsO4,5.5,1.335,"split blob, upper part"
+No OsO4,25.7,1.600,marker centroid
+No OsO4,97.2,1.790,marker centroid
+With OsO4,5.5,1.251,"split blob, lower part"
+With OsO4,24.8,1.265,marker centroid
+With OsO4,97.2,1.256,marker centroid

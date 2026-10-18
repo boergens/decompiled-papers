@@ -1,0 +1,23 @@
+# Song et al. 2023 Nat Methods, Extended Data Fig. 1b (right plot): EDS element concentration (WT.%) of Os, Fe, U, Pb
+#   at Periphery, Middle and Center of the 2-mm sample of panel a (1-mm Hua protocol).
+# Provenance: tier 1, source data: Edmond 10.17617/3.RG58DU, 'Extended Data Fig. 1a-b/EDX/EDS raw data.doc' (EDAX
+#   reports Image1-1..1-3, 10 kV, live time 60 s); conc_wt = Conc, error_2sig = Error (2-sig) of the report.
+# plotted_center, plotted_halfbar: digitized from the printed figure (tier 3; raster p. 12, y fitted on 4 ticks,
+#   +-0.3 wt.%; empty where the point is hidden under another series or the axis).
+# Agreement: the printed points lie 0.2-0.5 wt.% (2-4 px) above the report values, and the printed error bars are
+#   about half the 2-sigma error (Os periphery: +-0.43 printed vs 0.868 2-sig). The plot was therefore made either
+#   with +-1 sigma bars or from slightly different numbers than this file; the offset is larger than the reading error.
+# Columns: element; location; report; line (X-ray line); conc_wt; error_2sig; plotted_center; plotted_halfbar (wt.%).
+element,location,report,line,conc_wt,error_2sig,plotted_center,plotted_halfbar
+Fe,Periphery,Image1-1,Ka,4.151,1.327,4.35,0.60
+Os,Periphery,Image1-1,Ma,23.542,0.868,24.05,0.42
+Pb,Periphery,Image1-1,Ma,7.893,0.836,8.15,0.48
+U,Periphery,Image1-1,Ma,21.903,1.350,22.38,0.65
+Fe,Middle,Image1-2,Ka,0.717,1.356,1.01,0.48
+Os,Middle,Image1-2,Ma,25.595,1.065,26.07,0.54
+Pb,Middle,Image1-2,Ma,1.061,0.790,,
+U,Middle,Image1-2,Ma,15.118,1.448,15.54,0.71
+Fe,Center,Image1-3,Ka,0.000,0.000,,
+Os,Center,Image1-3,Ma,1.419,0.476,2.08,0.60
+Pb,Center,Image1-3,Ma,0.005,0.463,,
+U,Center,Image1-3,Ma,0.330,0.536,,

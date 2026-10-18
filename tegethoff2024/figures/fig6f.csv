@@ -1,0 +1,128 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 6F: percentage of section compression plotted versus cutting speed (colour-coded, 50 nm sections).
+# Provenance: tier 3, digitized from the embedded ~305 ppi JPEG (no vector data in the PDF); markers found as
+#   connected components of each resin colour (Lab nearest MATLAB default colour); a blob of overlapping markers
+#   holds n = round(area / 52 px) markers, placed with k-means on its pixels (positions approximate, about one
+#   marker diameter); n_in_blob gives n (1 = isolated marker).
+#   Columns: series (LX 112 yellow, Spurr's green); speed_mm_s = the x tick label of the column (the axis is
+#   categorical: 0.3, 0.6, 1.2 for LX 112, then 0.3, 0.6, 1.2 for Spurr's); x_offset = offset from the tick in tick
+#   spacings (plot placement, not data); compression_percent = y; n_in_blob.
+#   Axis fits: y max residual 0.0134 %; x max residual 0.00367 tick units.
+# Uncertainty: isolated markers +-0.13 % (2 px); markers in blobs about +-0.53 %;
+#   markers hidden completely behind others cannot be seen, so counts are lower limits.
+series,speed_mm_s,x_offset,compression_percent,n_in_blob
+LX 112,0.3,-0.157,9.5401,10
+LX 112,0.3,-0.12,9.1233,10
+LX 112,0.3,-0.086,7.5799,8
+LX 112,0.3,-0.076,9.5522,10
+LX 112,0.3,-0.044,8.012,8
+LX 112,0.3,-0.036,9.1637,10
+LX 112,0.3,-0.001,7.633,8
+LX 112,0.3,-0.001,11.441,1
+LX 112,0.3,-0.001,9.7902,10
+LX 112,0.3,-0.001,6.4027,8
+LX 112,0.3,-0,6.8181,8
+LX 112,0.3,-0,7.209,8
+LX 112,0.3,0,10.302,10
+LX 112,0.3,0.036,9.1557,10
+LX 112,0.3,0.046,8.0099,8
+LX 112,0.3,0.072,9.549,10
+LX 112,0.3,0.085,7.5824,8
+LX 112,0.3,0.122,9.1203,10
+LX 112,0.3,0.156,9.5268,10
+LX 112,0.6,-0.087,8.3648,7
+LX 112,0.6,-0.085,9.5072,7
+LX 112,0.6,-0.085,9.9387,7
+LX 112,0.6,-0.045,11.051,4
+LX 112,0.6,-0.044,8.7628,7
+LX 112,0.6,-0.044,7.9472,7
+LX 112,0.6,-0.002,8.3486,7
+LX 112,0.6,0,9.9268,7
+LX 112,0.6,0,11.859,4
+LX 112,0.6,0,11.425,4
+LX 112,0.6,0,6.0017,2
+LX 112,0.6,0,9.5072,7
+LX 112,0.6,0,10.334,7
+LX 112,0.6,0.002,6.4431,2
+LX 112,0.6,0.044,8.7556,7
+LX 112,0.6,0.044,7.9505,7
+LX 112,0.6,0.046,11.044,4
+LX 112,0.6,0.084,9.9443,7
+LX 112,0.6,0.085,8.3562,7
+LX 112,0.6,0.085,9.5046,7
+LX 112,1.2,-0.122,9.5353,13
+LX 112,1.2,-0.086,10.051,13
+LX 112,1.2,-0.086,10.621,13
+LX 112,1.2,-0.044,7.545,6
+LX 112,1.2,-0.043,7.9793,6
+LX 112,1.2,-0.043,8.4129,6
+LX 112,1.2,-0.043,9.5351,13
+LX 112,1.2,-0.003,10.322,13
+LX 112,1.2,0,11.104,13
+LX 112,1.2,0,10.715,13
+LX 112,1.2,0.005,9.9166,13
+LX 112,1.2,0.041,9.4982,13
+LX 112,1.2,0.046,7.5812,6
+LX 112,1.2,0.046,8.0045,6
+LX 112,1.2,0.046,8.4121,6
+LX 112,1.2,0.087,10.262,13
+LX 112,1.2,0.087,10.678,13
+LX 112,1.2,0.09,9.8599,13
+LX 112,1.2,0.125,9.5079,13
+Spurr's,0.3,-0.122,21.51,4
+Spurr's,0.3,-0.116,23.425,12
+Spurr's,0.3,-0.045,23.092,12
+Spurr's,0.3,-0.043,22.287,12
+Spurr's,0.3,-0.042,24.16,12
+Spurr's,0.3,-0.041,21.513,4
+Spurr's,0.3,-0.018,23.635,12
+Spurr's,0.3,-0.002,22.671,12
+Spurr's,0.3,-0.001,19.229,1
+Spurr's,0.3,-0.001,26.085,2
+Spurr's,0.3,-0,25.661,2
+Spurr's,0.3,0,24.561,12
+Spurr's,0.3,0.041,21.516,4
+Spurr's,0.3,0.042,24.144,12
+Spurr's,0.3,0.043,23.447,12
+Spurr's,0.3,0.046,23.014,12
+Spurr's,0.3,0.046,22.286,12
+Spurr's,0.3,0.124,23.423,12
+Spurr's,0.3,0.124,21.513,4
+Spurr's,0.6,-0.122,24.555,12
+Spurr's,0.6,-0.084,23.034,3
+Spurr's,0.6,-0.043,25.732,12
+Spurr's,0.6,-0.041,24.941,12
+Spurr's,0.6,-0.041,24.538,12
+Spurr's,0.6,-0.041,25.334,12
+Spurr's,0.6,-0,20.377,1
+Spurr's,0.6,0,21.922,2
+Spurr's,0.6,0.001,19.227,1
+Spurr's,0.6,0.001,23.032,3
+Spurr's,0.6,0.001,21.491,2
+Spurr's,0.6,0.001,26.473,12
+Spurr's,0.6,0.002,24.172,12
+Spurr's,0.6,0.003,26.045,12
+Spurr's,0.6,0.044,24.614,12
+Spurr's,0.6,0.046,25.648,12
+Spurr's,0.6,0.047,25.139,12
+Spurr's,0.6,0.085,23.035,3
+Spurr's,0.6,0.123,24.556,12
+Spurr's,1.2,-0.121,21.515,5
+Spurr's,1.2,-0.044,18.833,7
+Spurr's,1.2,-0.044,19.992,7
+Spurr's,1.2,-0.044,23.82,4
+Spurr's,1.2,-0.044,22.295,2
+Spurr's,1.2,-0.043,24.937,2
+Spurr's,1.2,-0.042,21.528,5
+Spurr's,1.2,-0.001,19.193,7
+Spurr's,1.2,0,21.124,5
+Spurr's,1.2,0,19.608,7
+Spurr's,1.2,0,23.445,4
+Spurr's,1.2,0.001,23.007,4
+Spurr's,1.2,0.001,18.442,7
+Spurr's,1.2,0.043,21.524,5
+Spurr's,1.2,0.047,19.994,7
+Spurr's,1.2,0.047,22.295,2
+Spurr's,1.2,0.047,24.941,2
+Spurr's,1.2,0.047,18.847,7
+Spurr's,1.2,0.048,23.824,4
+Spurr's,1.2,0.123,21.521,5

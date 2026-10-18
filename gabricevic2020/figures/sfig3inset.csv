@@ -1,0 +1,25 @@
+# Gabričević, Lente & Fábián 2020, Supporting Information Fig. S3: stoichiometry of the redox reaction between OsO4 Inset: y axis 'A (nm)' (sic) vs [trans-DCE]/[Os(VIII)].
+# Columns: series ('data' = grey diamonds; the two straight lines); kind = marker or 'line end' (the two ends of
+#   a straight line fitted to that line's pixels); ratio = [trans-DCE]/[Os(VIII)] (x axis title); A = A (y axis title 'A (nm)', sic); marker size; note.
+# Provenance: tier 3, digitized from the embedded TIFF by sfig3_extract.py. x calibrated on the inset's left frame (0,
+#   labelled) and 5 labelled ticks, max residual 3.6e-15; y on 3 labelled ticks (the bottom frame is not labelled), max residual 0.0004; inset frame: x -0.00758-5.4, y 0.271-0.869.
+#   Markers: bounding-box centre of the grey blob (overlapping diamonds flagged). Lines: least-squares straight line
+#   through the pixels of the dotted/dashed line (marker pixels and red pixels next to the orange line excluded);
+#   orange dashed line: y = -0.01271 x + 0.3737, rms 0.001, 186 px; red dotted line: y = -0.7202 x + 0.8562, rms 0.003, 22 px.
+# Uncertainty: about +-0.030 in ratio and +-0.005 in A (2 px).
+series,kind,ratio,A,marker_w_px,marker_h_px,note
+data,marker,0.09091,0.8239,13,19,irregular blob (partly hidden, or reshaped where the fit line was removed); centre from the edges bordering white paper + median marker size
+data,marker,0.197,0.7515,18,18,
+data,marker,0.2955,0.5877,19,18,
+data,marker,0.4015,0.5118,,,one of several overlapping markers in one blob; centre from a greedy fit of copies of an isolated marker
+data,marker,0.4924,0.4738,,,one of several overlapping markers in one blob; centre from a greedy fit of copies of an isolated marker
+data,marker,0.697,0.4073,18,18,
+data,marker,1,0.3693,18,18,
+data,marker,2,0.3503,18,18,
+data,marker,3,0.3325,18,19,
+data,marker,4,0.3219,18,18,
+data,marker,5.008,0.3124,19,18,
+orange dashed line,line end,0.4924,0.3674,,,
+orange dashed line,line end,4.826,0.3123,,,
+red dotted line,line end,0.08333,0.7962,,,
+red dotted line,line end,0.8106,0.2724,,,

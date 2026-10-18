@@ -1,0 +1,9 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 1, Part II. Dehydration (SI p. 15). The Notes cell of step 4 spans
+#   steps 4 and 5 in the PDF; given in step 4 only. 'a / b' in Hemisphere/WB = hemisphere / whole brain (as printed).
+Step,Solution,2 mm,Hemisphere/WB,Notes
+1,25% Ethanol in H2O,n/a,"8 h/o.n., / 12 h, 4°C",
+2,50% Ethanol in H2O,"0.5 h, 4°C","8 h/o.n. / 24 h, 4°C",
+3,75% Ethanol in H2O,"0.5 h, 4°C","8 h/o.n./ 24 h, 4°C",
+4,Pure Ethanol,"45 min, RT","8 h/o.n., RT / 24 h, 4°C","Samples can stay in pure Ethanol or pure acetone for days (up to 1 week), if a pause is needed practically"
+5,Pure Acetone,"2 h 15 min
+change every 45 min","32 h, RT / 3 days, RT",

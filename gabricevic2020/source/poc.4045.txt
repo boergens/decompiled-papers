@@ -1,0 +1,615 @@
+Received: 30 May 2019      Revised: 27 October 2019      Accepted: 17 November 2019
+DOI: 10.1002/poc.4045
+
+
+RESEARCH ARTICLE
+
+
+
+
+Kinetic detection of osmium(VI) ester intermediates during
+the OsO4‐mediated aqueous dihydroxylation of
+chloroethylenes
+
+Mario Gabričević1 | Gábor Lente2                                     | István Fábián3,4
+
+1
+ Faculty of Pharmacy and Biochemistry,
+University of Zagreb, Zagreb, Croatia
+                                                      Abstract
+2
+ Department of General and Physical                   The kinetics and mechanism of the cis dihydroxylation of cis‐1,2‐
+Chemistry, University of Pécs, Pécs,                  dichloroethylene, trans‐1,2‐dichloroethylene, and trichloroethylene by osmium
+Hungary
+                                                      tetroxide was studied systematically in aqueous solution. The stoichiometry of
+3
+ Department of Inorganic and Analytical
+                                                      the process was determined based on the principle of continuous variation of
+Chemistry, University of Debrecen,
+Debrecen, Hungary                                     reactant ratios with spectrophotometric detection. The results always showed
+4
+ MTA‐DE Redox and Homogeneous                         1:1 stoichiometry, which is in agreement with dihydroxylation. All three reac-
+Catalytic Reaction Mechanisms Research                tions were found to proceed in two distinct steps. The first step occurred on a
+Group, Debrecen, Hungary
+                                                      time scale of seconds and was associated with a minor change in absorbance
+Correspondence                                        and was identified as the formation of a 1:1 adduct between the two reagents,
+Gábor Lente, Department of General and
+                                                      which is the osmium(VI) ester that plays a decisive role in catalytic applica-
+Physical Chemistry, University of Pécs,
+Pécs, Hungary.                                        tions. This species is formed in an equilibrium that is very much shifted toward
+Email: lenteg@gamma.ttk.pte.hu                        the reactants, so the osmium(VI) complex is a short‐lived intermediate of the
+                                                      process, which is detected kinetically, but its concentration is never high
+Funding information
+Ministry of Human Capacities in Hun-                  enough for structural characterization. The second reaction is accompanied
+gary; European Regional Development                   by major spectral changes; it involves the formation of the final products.
+Fund, Grant/Award Number: GINOP‐
+                                                      Our results clearly show that it is possible to detect the intermediate of the pro-
+2.3.2‐15‐2016‐00008; Hungarian Science
+Foundation, Grant/Award Number:                       cess by careful kinetic studies. It is also possible that the same strategy might
+OTKA K_17‐124983                                      be successful in other OsO4‐dependent dihydroxylation processes.
+
+                                                      KEYWORDS
+                                                      aqueous chemistry, osmium (VI) ester, oxidation of alkenes, relaxation kinetics, stopped‐flow
+
+
+
+
+1 | INTRODUCTION                                                                       applications such as a staining and fixative agent for
+                                                                                       treating biological samples in electron microscopy and
+The cis dihydroxylation of carbon‐carbon double bonds                                  electrochemical analysis,[3–6] but it is rare and expensive.
+using osmium tetroxide is a frequently used reaction in                                Therefore, it is often imperative to use osmium as a cata-
+organic chemistry, it is probably the most reliable method                             lyst in the process, which can be readily achieved by
+for this particular transformation.[1,2] Osmium tetroxide                              adding a less expensive stoichiometric oxidizing agent
+has a surprisingly high number of additional practical                                 that is able to transform the product osmium(VI) back
+
+--------------------------------------------------------------------------------------------------------------------------------
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the
+original work is properly cited.
+© 2020 The Authors. Journal of Physical Organic Chemistry published by John Wiley & Sons Ltd
+
+J Phys Org Chem. 2020;33:e4045.                                                                                          wileyonlinelibrary.com/journal/poc     1 of 10
+https://doi.org/10.1002/poc.4045
+2 of 10                                                                                                    GABRIČEVIĆ ET AL.
+
+
+into osmium tetroxide. Hydrogen peroxide, tert‐butyl‐          intermediate is indeed present in low concentrations,
+hydroperoxide, N‐methylmorpholine N‐oxide, dioxygen,           which precludes structural characterization, but it is def-
+chlorate ion, hypochlorite ion, and periodate ion have         initely the species that is in the center of the catalytic
+all been reported to be suitable for this purpose under        activity. A formal kinetic scheme is proposed to interpret
+certain conditions.[1,2,7–13] Despite the vastly different     the kinetic findings with the full consideration of the var-
+properties of these oxidants, it is a common aspect that       ious labile equilibria of osmium(VIII) species in aqueous
+they do not react with the substrate olefin directly, and      solution.[29–32]
+their only role is to reproduce the initial form of the
+catalysts.[1,2] Therefore, it is clear that the kinetics and
+the efficiency of a catalytic method are dominantly deter-
+                                                               2 | EXPERIMENTAL
+mined by the interaction of the oxidizable substrate with
+osmium tetroxide, and kinetic studies on this process in
+                                                               2.1 | Materials
+the absence of an extra oxidizing agent may provide
+                                                               All chemicals used were commercially available and
+insightful information on the mechanism and the poten-
+                                                               reagent grade. NaOH, TCE, trans‐1,2‐dichloroethylene
+tial application of the method.
+                                                               (t‐DCE), cis‐1,2‐dichloroethylene (c‐DCE), and OsO4 were
+   There seems to be quite general agreement on the
+                                                               supplied by Sigma and used without further purification.
+mechanism of the cis dihydroxylation of carbon‐carbon
+                                                               NaClO4 (Sigma) was used to maintain constant ionic
+double bonds by osmium tetroxide.[1,2,7,8] The formation
+                                                               strength (denoted as I in this article) by adding an appro-
+of the catalytically active osmium(VI) ester usually
+                                                               priate amount of 6.2 mol/dm3 stock solution to the reac-
+assumed to contain a tetrahedral d2 metal center by the
+                                                               tion mixture. The solubilities of chloroethylenes are
+addition of OsO4 to the double bond is a common feature
+                                                               somewhat limited in water (mmol/dm3 level), and stock
+of these processes. The ester is a highly reactive
+                                                               solutions were prepared by the addition of excess of
+intermediate that may have fleeting existence in
+                                                               chloroethylenes in water to ensure saturated solution
+solution but unlikely to be stable in the solid phase.
+                                                               conditions.
+In some cases, penta‐coordinated dimeric monoester
+                                                                  The OsO4 stock solution was prepared by dissolving a
+species Os2O4(O2R)2 and monomeric diester complexes
+                                                               measured amount of solid OsO4 in NaOH solution to
+OsO(O2R)2 were characterized structurally, and the
+                                                               ensure the stability of OsO4 in its mono/di‐hydroxo form.
+mechanistic interpretations were also supported by quan-
+                                                               (WARNING! Solid OsO4 is known to be highly volatile,
+tum chemical calculations.[14–22] However, these mole-
+                                                               and its vapors are very harmful for the eyes.) Basic condi-
+cules might very well represent unreactive dead ends as
+                                                               tions also decrease the volatility of osmium(VIII) very
+far as the dihydroxylation process is concerned. The pro-
+                                                               substantially. The osmium concentration of this stock
+cess can be carried out in an enantioselective way by
+                                                               solution was double checked by ICP‐AES measurements
+adding coordinating chiral amines as coligands.[2,8,9,11,13]
+                                                               shortly after preparation and found to be in good agree-
+These are understood to exert an influence on the process
+                                                               ment with the values calculated based on mass and vol-
+by coordinating to the osmium center directly.
+                                                               ume measurements. Final concentrations were 0.10
+   Trichloroethylene (TCE) was in widespread industrial
+                                                               mol/dm3 for NaOH and 50 mmol/dm3 for OsO4. The con-
+use for decades in the 20th century as a vapor degreasing
+                                                               centration of OsO4 in this stock solutions was also moni-
+agent for metal objects and also as an anesthetic and dis-
+                                                               tored regularly by spectrophotometric measurements.
+infectant in medicine. By now, its carcinogenic properties
+                                                               The solution was stable for 5 days at 4 °C. Under strongly
+have been demonstrated, and its use was mostly phased
+                                                               basic conditions (2 mol/dm3 NaOH or higher), OsO4 can
+out in developed countries.[23] However, it is still present
+                                                               be reduced to osmium(VII) and later to osmium(VI) by
+in the environment in many industrial sites, and its
+                                                               water during a few days at room temperature as indicated
+general lack of reactivity is still an impediment in remedi-
+                                                               by spectral change.[29,30] No such spectral change was
+ation technologies.[24–27] From a purely chemical point of
+                                                               observed in 0.10 mol/dm3 NaOH under our conditions.
+view, it is also interesting that the C‐H acidity of the
+molecule can be clearly detected in hydrogen isotope
+exchange reactions, similarly to the two isomers of 1,2‐       2.2 | Instruments
+dichloroethylene.[28]
+   This work reports our serendipitous finding that the        Kinetic studies were performed on an Applied
+kinetics of the formation of the key intermediate can be       Photophysics SX‐20 Stopped‐flow spectrophotometer (fast
+detected during the reaction between osmium tetroxide          complexation reactions) and Perkin‐Elmer Lambda 25
+and three different chloroethylenes in aqueous solution.       spectrophotometer equipped with thermostated cell block
+A full kinetic analysis showed that this highly reactive       (slow redox processes). The dead time of the stopped‐flow
+GABRIČEVIĆ ET AL.                                                                                                          3 of 10
+
+
+instrument was experimentally determined to be 1.0
+ms.[33–35] Kinetic curves were evaluated, and rate con-
+stants were fitted by the respective built‐in softwares of
+the instruments. Each point presented is the average of
+at least seven runs in the complexation study, while the
+same averaging was done for at least three runs in the
+redox study.
+
+
+
+3 | RESULTS
+
+3.1 | General observations
+
+First, the UV‐visible spectral changes of the reaction
+between osmium tetroxide and the three chloroethylenes         FIGURE 1       Stoichiometry of the redox reaction between OsO4
+were studied in basic aqueous solution. No reaction was        and trichloroethylene (TCE). All spectra were measured after
+observed with 1,1‐dichloroethylene, the use of                 completion of the reaction (24 h). Inset: Absorbance change at 320
+chloroethylene (better known as vinyl chloride) was not        nm vs TCE/OsO4 ratio. Conditions: [Os(VIII)] = 1.00 mmol/dm3,
+even attempted because it is a gas under normal                [TCE] = 0.050‐5.0 mmol/dm3 [NaOH] = 0.10 mol/dm3, I = 0.10
+conditions. In addition, no reaction was observed at room      mol/dm3, T = 25°C
+temperature even with the studied three chloroethylenes
+when the conditions were less basic than in the experi-        the previous literature of the oxidation of
+ments shown in this study.                                     chloroethylenes[37,38] that the cis‐dihydroxylated species
+   In a series of experiments, the ratio of reactants (OsO4    hydrolyze to glyoxal and glyoxilic acid in fast reactions,
+vs ethylenes) was changed systematically to explore the        which are the final detectable organic products.
+stoichiometry of the redox reactions. Samples with differ-         The kinetics of the three processes was also studied in
+ent ratios were prepared and left to react for 24 hours.       detail. Because the dominating absorbing species are the
+This period of time was sufficient for the completion of       different forms of osmium, and chloroethylenes have neg-
+the redox process; the UV‐vis spectrum of the solution         ligible UV‐absorption in this region; OsO4 was selected as
+was measured. The absorbance at a few selected wave-           the substoichiometric reagent, and the chloroethylenes
+lengths was plotted as a function of the reactant ratio.       were used in excess. Figure 2 shows representative kinetic
+This plot is expected to give a sharp break point that indi-   curves for all three substrates measured at 280 nm. They
+cates the stoichiometric ratio of reactants in the process     confirm that the spectral changes take at least a few
+(this technique is also known as the method of continu-        hours to complete in each of the systems. All the curves
+ous variation[36]). For all chloroethylenes, evidence for
+1:1 stoichiometry was obtained. A plot based on a typical
+series of experiments is presented in Figure 1 for the
+TCE‐OsO4 system. Two more plots for the other two sub-
+strates are shown in the Supporting Information. The
+spectral changes indicate the reduction of osmium(VIII)
+to osmium(VI) clearly: The initial spectrum matches the
+known spectrum of aqueous osmium(VIII), while the last
+one is the same as the independently known spectrum of
+osmium(VI) in water.[29,30] The appearance of the
+isosbestic point at about 260 nm implies that the studied
+process can be characterized by a single stoichiometric
+equation for TCE, the same was observed for c‐DCE and
+t‐DCE. The inset in Figure 1 shows absorbance as func-
+tion of the TCE/Os(VIII) ratio at 320 nm. The break point
+occurs at 1:1 ratio, so a 1:1 TCE:Os(VIII) stoichiometry is    FIGURE 2 Representative kinetic curves on long time scale.
+concluded. This is in agreement with the expectation           Conditions: [Os(VIII)] = 0.20 mmol/dm3 (trichloroethylene [TCE],
+based on previous knowledge about the cis                      trans‐dichloroethylene [DCE]) and 0.16 mmol/dm3 (cis‐DCE),
+dihydroxylation reaction. However, it is also clear from       [NaOH] = 0.10 mol/dm3, I = 0.10 mol/dm3, T = 25.0°C
+4 of 10                                                                                                         GABRIČEVIĆ ET AL.
+
+
+gave excellent fits to exponential functions, which con-          spectral region above 280 nm (OsO4 absorption). We attri-
+firmed the fact that the rates of these processes show first      bute this absorbance change to the formation of the com-
+order dependence on the concentration of the                      monly assumed intermediate osmium(VI) ester
+substoichiometric reagent (OsO4). The initial absorbances         complex.[1,2] In the slower step, the reaction proceeds
+in these curves matched the expectations based on the             via the decomposition of the complexes in each investi-
+known spectrum of osmium(VIII) within experimental                gated system, and the appropriate form of aqueous
+error. These facts, especially when considered together           osmium(VI) is formed from the intermediate on a time
+with the observed isosbestic point in Figure 1, gave no           scale of a few hours.
+reason to suspect a multi‐step process.                               Detailed studies were carried out on the kinetics of
+    However, when the kinetic experiments were repeated           both the fast and slow processes in all three systems,
+on a short time scale in a stopped‐flow instrument, the           where the reactant concentrations and the pH were
+occurrence of a fast reaction was revealed. Figure 3 shows        changed in a systematic way to explore the rate equa-
+curves measured for two different ethylenes. These traces         tions of the processes. The dependence of the measured
+also gave quite acceptable fits to exponential functions,         pseudo‐first order rate constants on the ethylene concen-
+which implies pseudo‐first order behavior. The amplitude          trations for the fast step is shown in Figure 4. It is nota-
+of the process (ie, the difference in the initial and the final   ble that neither the concentration nor the identity of the
+absorbance) was really tiny, smaller than 0.005 units in          chloroethylene influences the value of this parameter.
+all cases. Of course, absolute absorbances cannot be mea-         There is some scatter in the data, but that seems to
+sured reliably at this precision. However, the time depen-        show no particular tendency so we fully assign this scat-
+dence detected within a single curve still holds valuable         ter to random noise, which is not unreasonable given
+information, and the pseudo‐first order rate constant             the small amplitude of the absorbance changes followed.
+could be determined quite reliably. This is the conse-            It should also be noted that the concentration of TCE
+quence of the negligible random variation of the absor-           could not be increased as much as that of the two
+bance due to the fluctuation of the base line in such a           dichloroethylenes because its solubility is more limited
+short time scale. In this sense, this small signal resembles      in water.
+the general practice followed during relaxation measure-              Figure 5, on the other hand, shows that the pseudo‐
+ments (temperature jump, pressure jump, and field                 first order rate constant of the fast process does depend
+jump).[39,40]                                                     on the pH. The identity of the chloroethylene still does
+    On the basis of these observations, it was concluded          not make a difference here, ie, trichloroethylene and
+that the reaction between chloroethylenes and OsO4 actu-          the two dichloroethylenes have very similar values at
+ally proceeds in two distinct steps under basic conditions.       the same pH, but the pseudo‐first order rate constants
+In the faster step, TCE, c‐DCE, or t‐DCE react with               at lower basicities are significantly higher
+osmium(VIII) in a few seconds as evidenced by the small               The experimental points in Figure 5 were fitted to
+decrease of absorbance, which was detected in the entire          Equation (1), which is a very general one to interpret
+
+
+
+
+FIGURE 3 Representative curves on short time scale.               FIGURE 4 Dependence of kobs on the chloroethylene
+Conditions: [Os (VIII)] = 0.20 mmol/dm3 (trichloroethylene        concentrations in the fast step of their reactions with osmium
+[TCE]) and 0.16 mmol/dm3 (cis‐dichloroethylene [DCE]), [NaOH]     (VIII). Conditions: [Os(VIII)] = 0.20 mmol/dm3, [NaOH] = 0.10
+= 0.10 mol/dm3, I = 0.10 mol/dm3, T = 25.0°C                      mol/dm3, I = 0.10 mol/dm3, T = 25.0°C
+GABRIČEVIĆ ET AL.                                                                                                                5 of 10
+
+
+
+
+FIGURE 5 Dependence of kobs on the pH of the complexation
+reaction of chlorinated ethylenes with osmium(VIII). Conditions:
+[Os(VIII)] = 0.20 mmol/dm3, [substrate] = 2.0 mmol/dm3, I = 0.10
+mol/dm3, T = 25.0 °C. Continuous line: best fit to the formula give
+in Equation (1)
+
+
+pH‐dependences[41], although the equilibrium process
+characterized by the pK in the formula is not identified
+at this point, this will only be done in Section 4. Rate con-
+stants kacid and kbase correspond to the reactions of the
+acidic and basic forms of the same reactant, respectively.
+
+                         ½Hþ k acid þ 10−pK kbase
+                kobs ¼                             :           (1)
+                              ½Hþ  þ 10−pK                           FIGURE 6        Pseudo‐first order rate constant as a function of
+                                                                      substrate concentration for the slow process in the reactions
+   The fit was carried out in a global way, so common                 between chloroethylenes and OsO4. [Os(VIII)] = 0.20 mmol/dm3
+                                                                      (trichloroethylene [TCE]), 0.50 mmol/dm3 (c‐dichloroethylene
+parameter values were forced for the three different sub-
+                                                                      [DCE] and t‐DCE); [NaOH] = 0.10 mol/dm3; I = 0.10 mol/dm3; T =
+strates. [H+] in this formula was calculated from the
+                                                                      25°C
+hydroxide ion concentrations with the known value of
+the ionic product of water (if defined by concentrations
+rather than activities[42], pKw = 13.58 at I = 0.10                   time to complete the reaction under otherwise identical
+mol/dm3 and 298.15 K[43]). It was observed that the esti-             conditions. The plots in Figure 6 also show that the
+mated value of kbase was very low and substantially                   pseudo‐first order rate constants are directly proportional
+smaller than its standard error. This is an indication that           to the substrate concentration (which was used in excess).
+the basic pathway does not contribute significantly to the            These observations are normally indicative of a simple
+observed rate. Therefore, kbase was fixed to zero. The                first order process with respect to the substrate, and
+remaining two parameters were determined as kacid =                   therefore an overall second order reaction. The slopes of
+4.3 ± 0.1 s−1 and pK = 12.0 ± 0.1. The best fit is shown              the straight lines give the second order rate constants in
+as a line in Figure 5. Although the fit of the data points            each system, they were determined as k2nd = 0.036 ±
+is far from perfect, this is still seen as a reasonable one           0.001 dm3 mol−1 s−1 (TCE), k2nd = 0.111 ± 0.008 dm3
+given the small signal followed and the fact that three dif-          mol−1 s−1 (c‐DCE), and k2nd = 0.53 ± 0.01 dm3 mol−1
+ferent reactions were considered in a common fit.                     s−1 (t‐DCE).
+   As was already mentioned, the slow process was also                    The pH‐dependence of the slow pseudo‐first order rate
+very well described by an exponential curve. Figure 6                 constant was studied in all three systems as well. The
+shows the dependence of the pseudo‐first order rate con-              results are shown in Figure 7. It was mentioned earlier
+stants on the substrate concentrations in all systems.                that the different substrates show characteristically differ-
+Unlike in the fast step, the different substrates give                ent reactivities on the slow time scale. A change in the pH
+noticeably different rate constant and reaction rates. t‐             influences the measured pseudo‐first order rate constants
+DCE is the most reactive, whereas TCE takes the longest               in all three cases. However, unlike to the fast process, the
+6 of 10                                                                                                            GABRIČEVIĆ ET AL.
+
+
+                                                                      OsO4(OH)22− in a stepwise manner:[29–31]
+
+                                                                              OsO4 þ H2 O ¼ OsO4 OH− þ Hþ            K a1 ;       (2)
+
+
+                                                                         OsO4 OH− þ H2 O ¼ OsO4 ðOHÞ2−
+                                                                                                    2 þH
+                                                                                                         þ
+                                                                                                                        K a2 :    (3)
+
+                                                                         The corresponding Ka1 and Ka2 values were reported in
+                                                                      the literature as 8.69 × 10−13 M (pKa1 = 12.2) and 7.58 ×
+                                                                      10−15 M (pKa2 = 14.4).[29] In agreement with these values,
+                                                                      the single negative aqueous form of osmium(VIII) domi-
+                                                                      nates under our conditions, which explains why vibra-
+                                                                      tional fine structure[30] is not detected in the spectra
+                                                                      shown in Figure 1. At the lower end of the pH range of
+                                                                      these studies, the neutral OsO4 species is in a slight excess
+FIGURE 7      Dependence of the pseudo‐first order rate constant of   over the mononegative ion. These equilibria only involve
+the slow process on the pH in the reaction of chloroethylenes with    simple proton transfer processes, which are understood to
+OsO4. Conditions: [Os(VIII)] = 0.20 mmol/dm3, [Substrate] = 2.0       be very fast (equilibrium reached within 1 μs under all
+mmol/dm3, I = 0.10 mol/dm3, T = 25°C
+                                                                      practical conditions), so only the equilibrium constants
+                                                                      need to be considered in our kinetic studies.
+values tend to increase as the pH increases. The experi-                 We found that all our kinetic findings are interpreted
+mental points measured in all three cases were fitted to              by the following kinetic scheme where the notation E
+the function given in Equation (1). Again, this formula               stands for the oxidizable chloroethylene derivative:
+gave an acceptable interpretation of the observed depen-
+dence. The parameters were determined separately in                                                  k1a
+                                                                                       OsO4 þ E ! OsO2 ðO2 EÞ                    (4)
+each case: kacid = (2.3 ± 1.0) × 10−5 s−1, kbase = (6.4 ±
+0.9) × 10−5 s−1, pK = 12.4 ± 0.4 (TCE), kacid = (1.5 ±
+                                                                                                     k1b
+0.3) × 10−4 s−1, kbase = (3.4 ±0.1) × 10−4 s−1 and pK =                          OsO4 OH− þ E ! OsO2 ðO2 EÞOH−                   (5)
+11.9 ± 0.2 (c‐DCE), and kacid = (2.5 ± 2.3) ×10−4 s−1, kbase
+= (1.44 ± 0.08) × 10−3 s−1 and pK = 11.9 ± 0.3 (t‐DCE). It                                            k1a−
+is seen that kacid for t‐DCE is barely larger than its stan-                          OsO2 ðO2 EÞ ! OsO4 þ E                    (6)
+dard error, which indicates that the corresponding path-
+way has a very limited contribution to the overall                                                    k1b−
+                                                                                 OsO2 ðO2 EÞOH− ! OsO4 OH− þ E                  (7)
+reaction progress under the experimental conditions.
+
+                                                                                OsO2 ðO2 EÞ þ H2 O ¼ OsO2 ðO2 EÞOH−
+4 | DISC USS I ON                                                                                  þ Hþ     K aE                  (8)
+
+First, it must be pointed out that this study has a highly                                     k2a
+                                                                         OsO2 ðO2 EÞ þ 4H2 O ! OsO2 ðOHÞ2−
+                                                                                                         4 þ EðOHÞ2
+unusual aspect, which is finding the fast process. In rou-
+                                                                           þ 2Hþ                                                  (9)
+tine high quality kinetic studies, this process would prob-
+ably not have been recognized as the easily detectable
+                                                                                                             k2b
+slow process is first order with respect to both of its                       OsO2 ðO2 EÞOH− þ 3H2 O ! OsO2 ðOHÞ2−
+                                                                                                                 4
+reagents, and even a comparison of expected and detected                        þ EðOHÞ2 þ Hþ                                    (10)
+initial absorbances[44] does not necessarily imply the need
+for including (or indeed, searching for) a fast process.[45]             This scheme may seem complicated at first sight, but
+So the discovery of the fast part of the reactions seems              in fact it is quite simple. The essence is that the osmium
+serendipitous.                                                        (VI) ester intermediate forms in a reversible way form
+   To interpret the kinetic findings, the highly labile equi-         osmium(VIII) and the chloroethyelene (Equations 4 and
+libria in the solutions of OsO4 have to be considered first.          6) then undergoes decomposition giving the final
+Osmium(VIII) is present as molecular OsO4 in neutral                  cis diol product (Equation 9). All of these reactions have
+aqueous solutions and shows very peculiar vibrational                 their counterpart where the osmium center is coordi-
+fine structure in its UV‐vis spectrum.[30] In basic medium,           nated to a hydroxide ion (Equations 5, 7, and 10). Finally,
+osmium(VIII) forms two perosmate ions, OsO4(OH)− and                  not only the pre‐equilibrium shown in Equation (2) is
+GABRIČEVIĆ ET AL.                                                                                                                                      7 of 10
+
+
+established between the two osmium(VIII) aqua forms
+but also the two different osmium(VI) esters (the one                                                   
+with a hydroxide ion coordinated and the one without)                    A       B A þ B þ Ae−Bt − Be−Bt
+                                                                ½EO ¼       −                            
+interconvert in a very rapid process (Equation 8). In                   2k þ 2k þ A þ B − Ae−Bt þ Be−Bt
+effect, this means that the scheme has one reversible                                              qﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+reaction (adduct formation between the reactants) and           A ¼ k þ ½E0 þ k þ ½O0 þ k − B ¼ A2 − 4kþ 2 ½E0 ½O0 :
+one irreversible (formation of the final products), but                                                                                                   (12)
+these are also possible in the same way when a hydroxide
+ion is attached to the osmium center.                              As given above, A and B are combination parameters
+    The first, reversible step occurs on the fast time scale.   in this formula that have been introduced to shorten the
+Note that a tiny absorbance decrease is detected for this       mathematical expressions. When the equilibrium is
+process. This is in agreement with the generally agreed         shifted toward the initial reagents, the value of the
+formulation of the active intermediate as an osmium             reverse rate constant is large and dominates in the defini-
+(VI) ester: If it contains a d2 metal center, its spectral      tion of A because k− > > k+[E]0 + k+[O]0. As derived in
+characteristics must resemble those of the product aque-        the Supporting Information, Equation (12) can be simpli-
+ous osmium(VI) and not the initial osmium(VIII). In             fied into the following, exponential form under these con-
+agreement with previous literature data, Figure 1 shows         ditions:
+that osmium(VI) has generally much smaller light                      0                        sﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ 1
+                                                                                                                                     
+absorption above 260 nm than osmium(VIII), the                         ½E    ½O    k−            ½E0 ½O0                    k− 2
+                                                                ½EO≅@ 0 þ 0 þ          −                   þ             þ                  − ½E0 ½O0 A
+decrease in absorbance during the fast process is quite                  2       2  2kþ               2             2          2k þ
+understandable. Furthermore, the tiny absorbance                                
+                                                                       1 − e−k− t :
+change of the process is caused by the fact that it reaches
+equilibrium at very low conversion. The small absorbance                                                                                                  (13)
+decrease of the curves in Figure 3 relative to the total            So indeed, the pseudo‐first order rate constant of the
+measured absorbance implies that the conversion is not          process will simply be k−, ie, the first order rate constant
+more than 2% to 3% in equilibrium.                              of the reverse process.
+    The measured kinetics of the process, and especially            This effect explains why Figure 4 shows that the
+the independence of the measured pseudo‐first order rate        pseudo‐first order rate constant of the fast process is inde-
+constants of the substrate concentration (Figure 4)             pendent of the substrate concentrations. It is more inter-
+deserves some additional attention here. From the theory        esting to consider why it is independent even of the
+of relaxation experiments,[39,44] it is well known that the     identity of the substrate. Here, it is probably best to con-
+lifetime in an equilibrium that is heavily shifted toward       sider that the reaction is the dissociation of the osmium
+the initial reagents is set by the rate constant of the         (VI) ester where the reactive center (the metal atom) is
+reverse reaction even if the process is advancing in the        not in the direct vicinity of the substituents that were
+forward direction. This is a pivotal point in the present       on the double bond in the original substrate. Therefore,
+study, so we also report a derivation by a method that is       it is arguable that the rate of the dissociation of this ester
+independent of the kinetic relaxation theory[39] because        is not very much influenced by the exchange of hydro-
+the product complex is absent at the initial time, which        gens to chlorine on the carbon atoms. It is also clear
+is very atypical in relaxation.                                 how the pH dependence shown in Figure 5 arises: the
+    The rate equation of a reversible reaction in which E       OsO2(O2E) and OsO2(O2E)OH− have different dissocia-
+and O come together to form the adduct EO takes the             tion rate constants as the coordination of the hydroxide
+following form:                                                 ion occurs directly on the metal center. In terms of ele-
+                                                                mentary rate constants shown in the scheme of Equa-
+   d½EO                                                    tions (4) to (10), the pseudo‐first order rate constant of
+         ¼ k þ ½E0 − ½EO ½O0 − ½EO − k − ½EO:      (11)    the fast process can be givens as:
+     dt
+
+                                                                                            ½Hþ k1a− þ K aE k 1b−
+   It is shown in the Supporting Information that this                            k obs ¼                          :                                      (14)
+                                                                                                 ½Hþ  þ K aE
+equation can be solved analytically (the solution of a
+more general version of this rate equation is also found           At this point, it should be remarked that the three dif-
+in the literature[45]). The precise solution under condi-       ferent chloroethylenes studied here might as well have
+tions where EO is not present in the initial mixture is         three different pKaE values. However, as the pseudo‐first
+given as:                                                       order rate constants measured for the fast process do
+8 of 10                                                                                                                       GABRIČEVIĆ ET AL.
+
+
+not depend on the identity of the substrate significantly,                        process, the pseudo‐first order rate constant of the slow
+neither does pKaE. It can also be observed that this pKaE                         phase depends on the identity of the substrate very signif-
+is in fact not significantly different from pKa1, which                           icantly. The k1a− and k1b− values already led to the argu-
+implies that the affinity of the metal center toward                              ment that for the properties of the osmium (VI) ester, the
+hydroxide ion does not even depend on whether                                     substituents farther away from the metal center do not
+the bonded oxygens are involved in further ester bonds                            seem to exert much kinetic influence. This same line of
+or not.                                                                           thought leads to the estimate that k2a and k2b are proba-
+   The kinetics of the slow step can be interpreted in a                          bly close to independent of the identity of the substrate.
+more commonly used sequence of thought[41,44] based                               Therefore, the reason for the kinetic difference in the
+on the proposed scheme. On this time scale, the two                               slow process between the three studied substrates must
+reversible reactions in Equations (4) to (7) already reach                        lie primarily in the k1a values, which characterize the rate
+equilibrium, as this equilibrium is shifted toward the ini-                       of association of osmium tetroxide with the oxidizable
+tial reagents, the concentrations of the osmium(VI) esters                        chloroethylene.
+can be given using the concentrations of the reactants at                             An essential point in our interpretation is that the
+every time instant:                                                               adduct OsO2(O2E) is a minor intermediate because its for-
+                                                                                  mation equilibrium is shifted towards the reactants. In
+                                         k 1a                                     other words, the thermodynamic stability of the osmate
+                  ½OsO2 ðO2 EÞ ¼             ½OsO4 ½E;                (15)
+                                        k 1a−                                     ester is low. At first sight, this might seem to contradict
+                                                                                  well established quantum chemical calculations,[46,47]
+                                        K aE                                      which showed that the osmate ester formation is highly
+            ½OsO2 ðO2 EÞOH−  ¼               ½OsO2 ðO2 EÞ
+                                       ½ Hþ                                      exergonic. The calculated energy changes for ethylene
+                                         k 1a K aE                                as an oxidizable alkene were −21.2 kcal mol−1 (=−88.7
+                                     ¼             ½OsO4 ½E:           (16)
+                                       k 1a− ½Hþ                                 kJ mol−1)[46] and −18.1 kcal mol−1 (=−75.7 kJ
+                                                                                  mol−1).[47] Without the intention to question the accuracy
+   It must also be considered that the total amount of                            of these results, the next paragraphs will show that the
+aqueous osmium(VIII) is distributed between two differ-                           results of these quantum chemical calculations are irrele-
+ent forms, the neutral molecule and the mononegative                              vant for the present study.
+ion:                                                                                  First, it is pointed out that the reported energy values
+                                                                                  are not Gibbs free energies and are therefore unsuitable
+              ½OsðVIIIÞ ¼ ½OsO4  þ ½OsO4 ðOHÞ−                                 for predicting the actual driving force of the adduct for-
+                                      K a1
+                         ¼ ½OsO4  þ þ ½OsO4 :                          (17)     mation directly, separate considerations about the
+                                     ½H 
+                                                                                  entropy changes would be needed. As this is an adduct
+                                                                                  formation reaction, the entropy change of the process
+    The formation rate of the cis‐diol is then:
+                                                                                  must certainly be highly negative, which would result in
+                                                                                 a Gibbs free energy that is considerably less negative than
+d EðOHÞ2
+              ¼ k 2a ½OsO2 ðO2 EÞ þ k 2b ½OsO2 ðO2 EÞOH−  ¼                     −88.7 kJ mol−1 or −75.7 kJ mol−1. However, there seems
+     dt
+                                                                                to be insufficient data to make this consideration truly
+        k 2b K aE k 1a               k 2a ½Hþ  þ k 2b K aE k 1a
+ k 2a þ      þ          ½OsO4 ½E ¼                             ½OsðVIIIÞ½E:   quantitative.
+         ½H  k 1a−                       ½Hþ  þ K a1 k 1a−
+                                                                                      A much more important point is that the process was
+                                                                         (18)
+                                                                                  experimentally studied in aqueous solution in this work.
+   Given that the substrate E is used in large excess over                        In this phase, thermodynamic data are available in the lit-
+osmium(VIII) in the experiments, the pseudo‐first order                           erature to develop some truly quantitative and meaning-
+rate constant of the slow processes is expected to be:                            ful thermodynamic analysis. The starting point is the
+                                                                                  following aqueous standard two‐electron reduction
+                           k 2a ½Hþ  þ k 2b K aE k 1a                            potential, which is known experimentally: [30,48,49]
+                 k obs ¼                               ½E:              (19)
+                                ½Hþ  þ K a1 k1a−
+                                                                                    OsO4 þ 2 H2 O þ 2 e− →OsO2 ðOHÞ4 2−       E° ¼ 0:46 V:
+   This is in excellent agreement with the experimental
+observations shown in Figures 6 and 7. It should be                                  At first sight, this reduction potential may seem very
+noticed that Ka1 ≅ KaE was already established at the                             low and it might also be somewhat counterintuitive that
+analysis of the fast step, so the analogy with Equation (1)                       OsO4 is only a mild oxidant in water. As a qualitative
+is complete with kacid = [E]k2ak1a/k1a− and kbase = [E]                           confirmation of this weak oxidizing power, we carried
+k2bk1b/k1b−. It is also remarkable that, unlike for the fast                      out experiments with iodide ion (E° = 0.54 V). No
+GABRIČEVIĆ ET AL.                                                                                                             9 of 10
+
+
+reaction was observed at all, which is in agreement with       process: neither the simple second order rate equation
+the literature value of the standard reduction potential       nor the spectral analysis of spectrophotometric studies
+for the aqueous osmium(VIII)/osmium(VI) couple.                provided any clue for the existence of the fast process.
+   Further thermodynamic data can be found in standard         Therefore, it is quite possible that the same strategy will
+tables[50]: The standard Gibbs free energy of formation for    lead to the successful kinetic detection of the intermedi-
+gaseous ethylene is ΔfG° = 68.4 kJ mol−1, for liquid ethyl-    ate in many other systems as well.
+ene glycol ΔfG° = −327.2 kJ mol−1, for liquid water ΔfG°
+= −237.1 kJ mol−1, whereas the Henry constant for the
+dissolution of ethylene in water is 21.7 kPa m3                ACKNOWLEDGEMENT
+mol−1.[50] All the thermodynamic data are given for            Work at the University of Pécs was financed by the
+298.15 K.                                                      Higher Education Institutional Excellence Programme
+   A detailed derivation in the Supporting Information is      of the Ministry of Human Capacities in Hungary, within
+presented to show that these standard thermodynamic            the framework of the 1st thematic programme of the
+data lead to an estimate of the standard free energy           University of Pécs. Work at the University of Debrecen
+change of the dihydroxylation of ethylene with OsO4 in
+                                                               was supported by the Hungarian Science Foundation
+aqueous solution:                                              (OTKA K_17‐124983). The research was supported by
+                                                               the EU and cofinanced by the European Regional
+ OsO4 ðaqÞ þ C2 H4 ðaqÞ þ 4H2 O ðlÞ→OsO2 ðOHÞ4 2− ðaqÞ         Development Fund under the project GINOP‐2.3.2‐15‐
+   þ C2 H6 O2 ðlÞ þ 2Hþ ðaqÞ                                   2016‐00008.
+
+                    ΔG° ¼ −17:8 kJ mol−1 :
+                                                               ORCID
+   It should be emphasized that this estimate is based         Gábor Lente       https://orcid.org/0000-0003-2022-2156
+on firm experimental data only. As the driving force of
+the entire aqueous reaction is quite small, it is certainly
+impossible to have a highly exergonic intermediate in it.      RE FER EN CES
+This is in agreement with our experimental findings (the        [1] M. Schröder, Chem. Rev. 1980, 80, 187.
+osmate ester is a minor intermediate) and the model             [2] M. M. Heravi, V. Zadsirjan, M. Esfandyari, T. B. Lashaki,
+proposed in this work. Again, we wish to emphasize that             Tetrahed. Asymm. 2017, 28, 987.
+the analysis presented here does not necessarily imply          [3] J. C. Riemersma, Biochim. Biophys. Acta 1968, 152, 718.
+that the accuracy of the gas phase quantum chemical             [4] S. K. K. Galagedera, L. Huynh, F. Wachholz, M. Jacobsen, P.
+calculations are questionable, it is rather a warning that          Haruehanroengra, J. Sheng, A. A. Chen, G. U. Flechsig,
+drawing very general conclusions from such data for                 Electroanal. 2018, 30, 398.
+solution phase reactions has serious limitations.               [5] P. Havranová‐Vidláková, J. Špaček, L. Vítová, M. Hermanová,
+                                                                    J. Dadová, V. Raindlová, M. Hocek, M. Fojta, L. Havran,
+                                                                    Electroanal. 2018, 30, 371.
+5 | CONCLUSION                                                  [6] J. Masís, D. Mankus, S. B. E. Wolff, G. Guitchounts, M. Joesch,
+                                                                    D. D. Cox, Sci. Rep. 2018, 8, 5184.
+In conclusion, this work reports that the generally             [7] B. B. Lohray, V. Bhushan, E. Nandanan, Tetrahed. Lett. 1994,
+accepted, but seldom in fact detected osmium(VI) ester              35, 4209.
+intermediate of the cis dihydroxylation of olefins with         [8] D. Munz, T. Strassner, J. Org. Chem 2010, 75, 1491.
+osmium tetroxide can be detected by kinetic methods if          [9] A. Poethig, T. Strassner, J. Org. Chem. 2010, 75, 1967.
+di‐ and trichloroethylenes are used as substrates in aque-     [10] L. L. Lazarus, R. L. Brutchey, Dalton Trans. 2010, 39, 7888.
+ous medium. The kinetic studies have clearly confirmed         [11] V. Köhler, J. Mao, T. Heinisch, A. Pordea, A. Sardo, Y. M. Wil-
+that this intermediate plays a key role in the chemical             son, L. Knörr, M. Creus, J. C. Prost, T. Schirmer, T. R. Ward,
+transformation. In the catalytic form of this method, less          Angew. Chem. Inter 2011, 50, 10863.
+expensive oxidants are employed to convert back the            [12] K. I. Fujita, K. Inoue, T. Tsuchimoto, H. Yasuda, Chem. Pharm.
+product osmium(VI) into to the original osmium tetrox-              Bull. 2012, 60, 1594.
+ide, but these stoichiometric oxidants do not react with       [13] M. M. Heravi, T. B. Lashaki, B. Fattahi, V. Zadsirjan, RSC Adv.
+the olefin, so the results reported here are fully transfer-        2018, 8, 6634.
+able to catalytic systems as well. It is also important that   [14] R. Criegee, Justus Liebigs Ann. Chem. 1936, 522, 75.
+the possibility of the kinetic detection of the intermedi-     [15] R. Criegee, Angew. Chem. 1937, 50, 153.
+ate was not obvious from the studies of the overall            [16] R. Criegee, Angew. Chem. 1938, 51, 519.
+10 of 10                                                                                                                       GABRIČEVIĆ ET AL.
+
+
+[17] N. A. Milas, J. H. Trepagier, J. T. Nolan Jr., M. I. Iliopulos,       [37] Y. E. Yan, F. W. Schwartz, Environ. Sci. Technol. 2000, 34, 2535.
+     J. Am. Chem. Soc. 1959, 81, 4730.                                     [38] K. C. Huang, G. E. Hoag, P. Chedda, B. A. Woody, G. M.
+[18] R. J. Collin, J. Jones, W. P. Griffith, J. Chem. Soc. Dalton Trans.        Dobbs, J. Hazard. Mater. B 2001, 87, 155.
+     1974, 1094.                                                           [39] C. Bernasconi, Relaxation Kinetics, Academic Press, New York
+[19] L. G. Marzilli, B. E. Hanson, T. J. Kistenmacher, L. A. Epps, R.           1976.
+     C. Stewart, Inorg. Chem. 1976, 15, 1661.                              [40] H. Strehlow, Rapid Reactions in Solutions, VCH Publishers,
+[20] R. J. Collin, W. P. Griffith, F. L. Phillips, A. C. Skapski,               Weinheim 1992.
+     Biochim. Biophys. Acta 1974, 354, 152.                                [41] J. H. Espenson, Chemical Kinetics and Reaction Mechanisms,
+[21] F. L. Phillips, A. C. Skapski, J. Chem. Soc. Dalton Trans. 1975,           2nd ed., McGraw‐Hill, New York 1995.
+     2586.                                                                 [42] A. K. Covington, M. I. A. Ferra, R. A. Robinson, J. Chem, Soc.,
+[22] T. Strassner, Adv. Phys. Org. Chem. 2003, 38, 131.                         Faraday Trans. 1 1977, 73, 1721.
+[23] https://www.echa.europa.eu/web/guest/substance‐informa-               [43] A. G. Dickson, J. P. Riley, Marine Chem. 1979, 7, 89.
+     tion/‐/substanceinfo/100.001.062 (accessed 30 May 2019).              [44] G. Lente, I. Fábián, Inorg. Chem. 1998, 37, 4204.
+[24] H. F. Stroo, A. Leeson, J. A. Marqusee, P. C. Johnson, C. H.          [45] G. Lente, Deterministic Kinetics in Chemistry and Systems Biol-
+     Ward, M. C. Kavanaugh, T. C. Sale, C. J. Newell, K. D. Pennell,            ogy, Springer, New York 2015.
+     C. A. Lebrón, Environ. Sci. Technol. 2012, 46, 6438.                  [46] U. Pidun, C. Boehme, G. Frenking, Angew. Chem. Int. Ed. 1996,
+[25] S. Yuan, P. Liao, A. N. Alshawabkeh, Environ. Sci. Technol.                35, 2817.
+     2014, 48, 656.                                                        [47] P. Gisdakis, N. Rösch, J. Am. Chem. Soc. 2001, 123, 697.
+[26] K. Manju, D. S. Nair, A. M. Rahnamol, Reac. Kinet. Mech.              [48] R. N. Goldberg, L. G. Hepler, Chem. Rev. 1968, 68, 229.
+     Catal. 2014, 111, 591.
+                                                                           [49] W. M. Latimer, Oxidation States of the Elements and their
+[27] E. Kowalewski, I. I. Kamińska, G. Słowik, D. Lisovytskiy, A.               Potential in Aqueous Solution, Prentice‐Hall, Englewood Clipps
+     Śrębowata, Reac. Kinet. Mech. Catal. 2017, 121, 3.                         1952.
+[28] M. Gabričević, G. Lente, I. Fábián, J. Phys. Chem. A 2015, 119,       [50] D. R. Lide (Ed), CRC Handbook of Chemistry and Physics, 87th
+     12627.                                                                     ed., CRC Press, Boca Raton 1996.
+[29] Z. M. Galbacs, A. Zsednai, L. J. Csányi, Trans. Met. Chem. 1983,
+     8, 328.
+[30] D. T. Richens, The Chemistry of the Aqua Ions, Wiley, Chiches-        SU PP OR TI NG IN FOR MAT ION
+     ter 1997.                                                             Additional supporting information may be found online
+[31] Belinda Julie McFadzean, The Kinetics and Associated Equi-            in the Supporting Information section at the end of the
+     libria of High Oxidation State Osmium Complexes, PhD                  article.
+     thesis, Nelson Mandela Metropolitan University, 2007
+     (https://core.ac.uk/download/pdf/49241525.pdf, accessed May
+     30, 2019).
+[32] T. E. Geswindt, W. J. Gerber, H. E. Rohwer, K. R. Koch, Dalton
+     Trans 2011, 40, 8581.                                                    How to cite this article: Gabričević M, Lente G,
+[33] B. Tonomura, H. Nakatani, M. Ohnishi, J. Yamaguchi‐Ito, K.               Fábián I. Kinetic detection of osmium (VI) ester
+     Hiromi, Anal. Biochem. 1978, 84, 370.                                    intermediates during the OsO4‐mediated aqueous
+[34] G. Peintler, A. Nagy, A. K. Horváth, T. Körtvélyesi, I. Nagypál,         dihydroxylation of chloroethylenes. J Phys Org
+     Phys. Chem. Chem. Phys. 2000, 2, 2575.                                   Chem. 2020;33:e4045. https://doi.org/10.1002/poc.4045
+[35] T. Ditrói, G. Lente, J. Phys. Chem. A 2018, 122, 5503.
+[36] M. T. Beck, I. Nagypál, Chemistry of Complex Equilibria,
+     Akadémiai Kiadó, Budapest 1990.
+

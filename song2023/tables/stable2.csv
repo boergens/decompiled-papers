@@ -1,0 +1,15 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 2. Employed chemicals (SI pp. 16-18).
+Chemical,Name,Preparation
+MilliQ water,H2O,-
+0.15 M sodium cacodylate buffer,CaC,"Diluting 0.3 M CaC (Sigma-Aldrich) 1:1 with water, pH adjusted to 7.4 by 1M NaOH (Sigma-Aldrich)"
+2% OsO4 in 0.15 M cacodylate buffer,Os,"Diluting 4% OsO4 (Serva) 1:1 with 0.3 M CaC (pH 7.4), no further pH adjustment"
+2% OsO4 in water,Os-aqua,Diluting 4% OsO4 (Serva) 1:1 with water
+2.5% potassium ferrocyanide in 0.15 M cacodylate buffer,FeCN,Dissolving 1.25 g FeCN (Sigma-Aldrich) in 50 ml 0.15 M CaC (Sigma-Aldrich)
+1% OsO4 + 1.5% FeCN in 0.15 M CaC,rO,Diluting 2% OsO4 (Serva) in 0.15 M CaC (Sigma-Aldrich) 1:1 with 2.5% FeCN (Sigma-Aldrich) in 0.15 M CaC (Sigma-Aldrich)
+1% thiocarbohydrazide in water,TCH,"Dissolving 0.5 g TCH (Sigma-Aldrich) in 50 ml water, shake for 1 h, filter before use. Light sensitive, cover with aluminum foil"
+3.75% pyrogallol in water,Pg,Dissolving 1.87 g Pg (Sigma-Aldrich) in water
+3.75% pyrogallol in CaC,Pg-CaC,Dissolving 1.87 g Pg (Sigma-Aldrich) in 0.15 M CaC (Sigma-Aldrich)
+2% uranium acetate in water,2% UA,"Dissolving 1 g UA (Serva) in 50 ml water, shake for 1 h, filter before use. Light sensitive, cover with aluminum foil"
+4% uranium acetate in water,4% UA,"Dissolving 2 g UA (Serva) in 50 ml water, shake for 1 h, filter before use. Light sensitive, cover with aluminum foil"
+0.66% lead aspartate,Ld,"Dissolving 0.33 g lead nitrate (Sigma-Aldrich) in 50 ml 0.03 M aspartate buffer (pH 3.8, Serva), adjust pH to 5.0 with 1 M KOH (Sigma-Aldrich). Light sensitive, cover with aluminum foil."
+0.15 M potassium chloride,KCl,Diluting 25 ml 3 M KCl (VWR) with 475 ml H2O

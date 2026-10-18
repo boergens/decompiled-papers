@@ -1,0 +1,27 @@
+# Hua, Laserstein & Helmstaedter 2015, Supplementary Table 1 (SI PDF p.4).
+# Title: Supplementary Table 1
+# Caption: Detailed comparison of staining steps in employed staining protocols (Fig. 1).
+# Column header over the protocol columns: 'staining protocol'; first column header: 'incubation steps'.
+# Layout: each step has a solution line and a time/temperature line (column 'line', added by the decompiler); the wash
+#   rows and the last row are single cells spanning all six protocol columns in the PDF and are repeated in every column here.
+# Text verbatim: OsO4 and CaCl2 without subscripts, 'º' (ordinal sign) as printed for degrees, 'periodic acide' as spelled.
+incubation steps,line,Briggman (Fig. 1b),Holcomb (Fig. 1c),Mikula (Fig. 1d),OTO,OPTO (Fig. 3g),Hua (Fig. 1e)
+1.,solution,"2% OsO4, 2.5% ferrocyanide, 0.15 M Cac, pH 7.4","2% OsO4, 2 mM CaCl2 1.5% ferrocyanide, 0.15 M Cac, pH 7.4","1 % periodic acide, 0.1 M Cac, pH 7.4","2% OsO4, unbuffered","2% OsO4, unbuffered","2% OsO4, 0.15 M Cac, pH 7.4"
+1.,time and temperature,1.5 h @ rt,1.5 h @ rt,1.5 h @ 4 ºC,1.5 h @ rt,1.5 h @ rt,1.5 h @ rt
+,wash (all protocols),No wash,No wash,No wash,No wash,No wash,No wash
+2,solution,,,,,"1 % periodic acide, 0.15 M Cac, pH 7.4","2.5% ferrocyanide, 0.15 M Cac, pH 7.4"
+2,time and temperature,,,,,1.5 h @ 4 ºC,1.5 h @ rt
+,wash (all protocols),0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2
+3,solution,"1% TCH, unbuffered","1% TCH, unbuffered","1% TCH, 0.1 M Cac, pH 7.4","1% TCH, unbuffered","1% TCH, 0.1 M Cac, pH 7.4","1% TCH, unbuffered"
+3,time and temperature,0.75 h @ 50 ºC,0.75 h @ rt,0.75 h @ 50 ºC,0.75 h @ rt,0.75 h @ 50 ºC,0.75 h @ 40 ºC
+,wash (all protocols),0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2
+4,solution,"2% OsO4, unbuffered","2% OsO4, unbuffered","2% OsO4, unbuffered","2% OsO4, unbuffered","2% OsO4, unbuffered","2% OsO4, unbuffered"
+4,time and temperature,1.5 h @ rt,1.5 h @ rt,1.5 h @ rt,1.5 h @ rt,1.5 h @ rt,1.5 h @ rt
+,wash (all protocols),0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2
+5,solution,"1 % uranyl acetate, unbuffered","1% uranyl acetate, unbuffered","1% uranyl acetate, unbuffered","1 % uranyl acetate, unbuffered","1 % uranyl acetate, unbuffered","1% uranyl acetate, unbuffered"
+5,time and temperature,2 h @ 50 ºC,overnight @ 4 ºC,2 h @ 50 ºC,2 h @ 50 ºC,2 h @ 50 ºC,"overnight @ 4 ºC, 2 h @ 50 ºC"
+,wash (all protocols),0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2
+6,solution,"Lead aspartate, pH 5.0","Lead aspartate, pH 5.5","Lead aspartate, pH 5.0","Lead aspartate, pH 5.0","Lead aspartate, pH 5.0","Lead aspartate, pH 5.0"
+6,time and temperature,2 h @ 50 ºC,2 h @ 60 ºC,2 h @ 50 ºC,2 h @ 50 ºC,2 h @ 50 ºC,2 h @ 50 ºC
+,wash (all protocols),0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2,0.5 h wash in water x 2
+,final step (all protocols),"dehydration, infiltration and embedding","dehydration, infiltration and embedding","dehydration, infiltration and embedding","dehydration, infiltration and embedding","dehydration, infiltration and embedding","dehydration, infiltration and embedding"

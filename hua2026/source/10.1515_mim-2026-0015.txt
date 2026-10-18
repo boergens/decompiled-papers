@@ -1,0 +1,654 @@
+                                                                                                                         Methods in Microscopy 2026; aop
+
+
+
+Review Article
+
+Yunfeng Hua*, Linlin Li* and Hua Han*
+
+Preparing large biological specimens
+for high-throughput volume electron microscopy
+https://doi.org/10.1515/mim-2026-0015                                              electron microscopy (vEM) [1]. Based on imaging princi-
+Received July 30, 2026; accepted August 31, 2026;                                  ples, vEM can be classiﬁed into two major categories: serial
+published online September 24, 2026
+                                                                                   section-based and serial block-face-based methods [2]–[5].
+                                                                                   Serial section-based vEM implements automated collec-
+Abstract: To enable high-throughput volume electron
+                                                                                   tion of ultrathin sections either on opaque tape for scan-
+microscopy (vEM) imaging, osmium-based staining
+methods are routinely employed to enhance membrane                                 ning electron microscopy (SEM) [6], or on grid tape for
+contrast and electrical conductivity in biological specimens.                      transmission electron microscopy (TEM) [7] and electron
+Nevertheless, reliable preparation of densely and uniformly                        tomography (ET) [8]. Since tape-related artifacts compli-
+stained tissue blocks remains a major challenge for                                cate downstream data analysis, direct silicon wafer-based
+large-scale vEM-based ultrastructure analysis, especially                          section collection techniques have recently been developed
+for connectomic studies. Recently, multiple strategies have                        with the assistance of magnetic ﬁeld-based systems (MagC
+been proposed to achieve high-quality en bloc staining                             [9], GAUSS-EM [10]) or an ionizer-equipped device (Drift-
+of millimeter-sized brain samples without compromising                             EM [11]). These methods are non-destructive and there-
+membrane contrast, paving the way for system-level                                 fore allow post-staining of mounted sections, but additional
+neural circuit mapping using vEM. Herein, we review the                            sample processing inevitably causes section loss, folding,
+development of large-volume tissue staining and elaborate                          contamination, especially for collecting large datasets. In
+the underlying chemical logic based on cumulative                                  contrast, serial block-face vEM produce intrinsically aligned
+experimental evidence. We further discuss emerging                                 image stacks by iteratively imaging newly exposed sample
+challenges associated with adapting current staining                               surfaces through in-chamber ultramicrotomy cutting [12]
+strategies for cryo-preserved tissue samples and in-resin                          or focused ion beam milling [13]. While this workﬂow cir-
+applications of correlative light and electron microscopy.                         cumvents the major drawbacks of traditional ultra-thin sec-
+                                                                                   tioning, it mandates the use of en bloc-stained tissue blocks
+Keywords: volume electron microscopy; large-scale con-                             due to an integrated imaging and surface removal process.
+nectomics; osmium staining; en bloc tissue processing;                             This scenario also applies to large-scale ion beam etching of
+high-throughput imaging                                                            thick sections [14], [15], which is regarded as a parallelized
+                                                                                   block-face imaging modality. Furthermore, sufficient heavy-
+Over the past two decades, conventional serial ultra-thin                          metal impregnation is indispensable for mitigating charging
+section electron microscopy has evolved into a group                               artifact under SEM, especially for imaging large biological
+of emerging techniques that enable automated acquisi-                              samples or conducting fast imaging under high electron
+tion of large-scale volumetric image datasets from sam-                            dose. As supplementary anti-charging strategies, conductive
+ples thicker than one micron, collectively termed volume                           resin embedding [16], carbon nanotube-coated ATUM tape
+                                                                                   [17], and in-chamber focal charge compensation [18] are
+                                                                                   often required to image speciﬁc tissue samples prone to
+*Corresponding authors: Yunfeng Hua, Shanghai Institute of Precision
+                                                                                   charging.
+Medicine, Ninth People’s Hospital, Shanghai Jiao Tong University School of
+Medicine, 200125, Shanghai, China, E-mail: yunfeng.hua@shsmu.edu.cn;
+Linlin Li, State Key Laboratory of Brain Cognition and Brain-inspired Intel-
+                                                                                   1 Development of staining protocol
+ligence Technology, Institute of Automation, Chinese Academy of Sciences,            for vEM
+100190, Beijing, China, E-mail: lilinlin@ia.ac.cn; and Hua Han, State Key
+Laboratory of Brain Cognition and Brain-inspired Intelligence Technology,
+Institute of Automation, Chinese Academy of Sciences, 100190, Beijing,             Driven by the ambitious goal of imaging intact neu-
+China; and School of Future Technology, University of Chinese Academy              ral circuits at nanometer resolution in large tissue vol-
+of Sciences, 101408, Beijing, China, E-mail: hua.han@ia.ac.cn                      umes [19], there remains an ongoing debate regarding the
+  Open Access. © 2026 the author(s), published by De Gruyter on behalf of Thoss Media          This work is licensed under the Creative Commons Attribution 4.0
+International License.
+2   — Y. Hua et al.: Development of sample preparation for volume electron microscopy
+
+
+
+
+Figure 1: Increasing stain penetration depth for 1-mm-sized brain samples (modified from ref. [26]). (A) workflow for screening 1-mm-sized brain
+biopsy samples. Samples were en bloc stained and embedded in resin. A block face was prepared by cutting the sample in half, which was then imaged
+for screening in overview (1), peripheral (2), intermediate (3), and core regions (4) under a scanning electron microscope. (B, C) Representative images
+from the corresponding regions in A (regions 1–4, left to right columns) for mouse cortex samples stained by rOTO (B) and ORTO (C). ORTO eliminates
+the precipitate ring that frequently forms in rOTO-stained samples.
+
+
+ultimate imaging method of choice. As the best (if not                             As the practical utility of serial block-face vEM is con-
+the only) option for serial block-face vEM users, the com-                   strained by the maximum sample size processable using
+bination of ferrocyanide-reduced osmium [20] with thio-                      rOTO staining, early methodological advances in this ﬁeld
+carbohydrazide (TCH)-mediated osmium ampliﬁcation [21]                       were primarily pioneered by Winfried Denk and his fol-
+– termed rOTO staining [22] – yields tissue specimens with                   lowers (Table 1). In 2015, three independent research teams
+superior membrane contrast and adequate electrical con-                      proposed distinct strategies to resolve the bottleneck of
+ductivity [23]–[25]. When adapting the original rOTO proto-                  large-volume sample preparation. Collectively, these studies
+col for mouse cortical tissues routinely collected via 1 mm-                 demonstrated that the mixture of OsO4 and ferrocyanide
+diameter biopsy needles (Figure 1A) [26] as well as whole                    (“reduced osmium”) is responsible for the undesirable pre-
+mouse brain [27], Hua and Mikula found independently                         cipitation barrier that forms within brain tissue samples
+that homogenous, high-quality staining was only achievable                   [26], [27]. As a straightforward solution, Hua et al. developed
+within a superﬁcial layer of approximately 200 μm from                       a modiﬁed procedure featuring sequential OsO4 penetra-
+the tissue surface. Note that these stained samples exhib-                   tion and ferrocyanide reduction to replace the conventional
+ited low-contrast central regions encapsulated by a dense                    reduced-osmium step in the classic rOTO protocol [26]. Note
+layer of black precipitates (Figure 1B). Such staining inho-                 that an intermediate wash step between OsO4 and ferro-
+mogeneity could not be simply attributed to slow reagent                     cyanide incubation is considered unnecessary, as reduced-
+penetration and persisted even after prolonged incubation,                   osmium species will be generated to some extent. This sim-
+representing a substantial bottleneck for en bloc staining                   ple modiﬁcation, termed the ORTO protocol (also informally
+of large-volume tissues. This notion was later supported by                  referred to as Hua protocol), enables uniform staining of
+real-time monitoring of the stain-penetration process using                  biopsy samples up to 1 mm in diameter (Figure 1C). In par-
+X-ray microscopy [28]. In addition, a 10–15 % sample shrink-                 allel, Mikula and Denk established the BROPA (brain-wide
+age in aldehyde-ﬁxed brain tissues was observed after treat-                 reduced-osmium staining with pyrogallol-mediated ampliﬁ-
+ment with osmium and ferrocyanide mixtures, offering one                     cation, or rOPO) protocol [27]. This procedure incorporates
+plausible explanation for the observed diffusion-barrier for-                10 % formamide to stabilize reduced-osmium species and
+mation [28].                                                                 prolong their efficacy during extended incubation. Besides,
+                                                                                                                                                                                                                                                                                                                                                                             Y. Hua et al.: Development of sample preparation for volume electron microscopy   — 3
+
+
+
+                                                                                                              PFA + GA (high Osm)
+                                                                                                                                                                                                                                                                                                                                                                                               pyrogallol was used for the ﬁrst time to replace TCH as a
+
+                                                                                       Karlupia et al. [32]
+                                                                                                                                                                                                                                                                                                                                                                                               better-suited reagent for osmium ampliﬁcation, supporting
+                                                                                                                                                                                                                                                                                                                                                                                               a 10-day-long incubation step required for whole mouse
+
+
+
+
+                                                                                                                                                                   GA, glutaraldehyde; Osm, osmolarity; FeCN, ferrocyanide. a Intermediate wash step is not applied. b Optional. Additional OsO4 step was used to enhance TCH reactivity [33], [34]. c All steps at 4 ◦ C.
+                                                                                                                                                                                                                                                                                                                                                                                               brain samples [27]. Notably, a signiﬁcantly shortened BROPA
+
+                                                                                                              FeCN
+                                                                                                              OsO
+
+
+
+
+                                                                                                                                                        OsO
+                                                                                                                                                                                                                                                                                                                                                                                               protocol (fBROPA) also enables homogeneous staining of
+
+
+                                                                                                                                                        TCH
+                                                                                                                                                                                                                                                                                                                                                                                               millimeter-sized ﬁsh brain samples within 4 days [35]. More-
+                                                                                                                                                                                                                                                                                                                                                                                               over, Palloto et al. showed optimized preservation of the
+                                                                                   Song et al. [31]c
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               extracellular space (ECS) by elevating osmolarity during
+                                                                                                                                                                                                                                                                                                                                                                                               tissue ﬁxation [29], which physically facilitates deeper stain
+                                                                                                              Pyrogallol
+                                                                                                              PFA + GA
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               diffusion and thereby supports uniform staining of large-
+                                                                                                              FeCN
+                                                                                                              OsO
+
+                                                                                                              OsO
+
+                                                                                                              OsO
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               volume samples [27], [29], [36].
+                                                                                                                                                                                                                                                                                                                                                                                                     Since then, en bloc staining using these rOTO vari-
+                                                                                                                                                                                                                                                                                                                                                                                               ants has become popular within the vEM community [14],
+                                                                                   Polilov et al. [30]c
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               [37]–[41], including serial-section vEM laboratories, owing
+                                                                                                                                                                                                                                                                                                                                                                                               to its operational simplicity (eliminating the need for post-
+                                                                                                              GA + OsO
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               staining of sections) and enhanced imaging throughput [7],
+                                                                                                              FeCNa
+                                                                                                              OsO
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               [42]–[46]. More importantly, different concepts established
+                                                                                                                                                                                                                                                                                                                                                                                               in these studies provide a foundational framework for
+                                                                                                                                                                                                                                                                                                                                                                                               developing a common procedure scalable to diverse tissue
+                                                                                                              PFA + GA (high Osm)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               dimensions (Figure 2). For instance, sequential OsO4 pen-
+                                                                                       Pulloto et al. [29]
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               etration and ferrocyanide reduction procedure were pro-
+                                                             Published protocols
+
+
+
+
+                                                                                                                                    OsO + FeCN
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               longed and performed at 4 ◦ C to prepare the whole insect
+                                                                                                                                                                                                                                                                                                                                                                                               brains [30], [47]. More recently, the modiﬁed ORTO protocol
+                                                                                                                                                        OsO
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               has been combined with ECS preservation to enable staining
+                                                                                                                                                        TCH
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               of human and rodent surgical brain samples up to 37 mm3 in
+                                                                                                                                                                                                                                                                                                                                                                                               volume, with one dimension below 2 mm [32]. Alternatively,
+                                                                                       Hua et al. [26]
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               it has also incorporated the TCH-to-pyrogallol substitution
+                                                                                                                                                                                                                                                                                                                                                                                               (from BROPA) in a prolonged, low-temperature implemen-
+                                                                                                              PFA + GA
+
+
+
+                                                                                                              (OsO )b
+                                                                                                              FeCNa
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               tation adapted for whole mouse brains and human brain
+                                                                                                              OsO
+
+
+
+
+                                                                                                              OsO
+                                                                                                              TCH
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               specimens [31].
+                                                                                                                                                                                                                                                                                                                                                                                                     In addition to compounds of osmium, other heavy met-
+                                                                                                                                                                                                                                                                                                                                                                                               als are adopted to further increase the overall electron con-
+                                                                                                                                    OsO + FeCN + 10 % formamide
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               trast of biological structures. A two-step uranyl acetate incu-
+                                                                                                                                                                                                                                                                                                                                                                                               bation procedure has been established and implemented
+Table 1: Summary of reduced osmium-based staining methods.
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               after osmium staining of brain tissues [26]. Prolonged incu-
+                                                                                       Mikula et al. [27]
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               bation (overnight to 2 days) at 4 ◦ C enables long-distance
+                                                                                                              GA + sucrose
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               stain diffusion without inducing cytoplasmic darkening,
+                                                                                                                                    Pyrogallol
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               while a short warming step (2–5 h) at room temperature
+                                                                                                                                                                                                                                                                                                                                                                                               or 50 ◦ C enhances the reactivity of uranyl acetate with pro-
+                                                                                                                                    OsO
+
+                                                                                                                                    OsO
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               tein and membrane targets [26], [31], [32]. For oversized
+                                                                                                                                                                   Necessary for improved tissue integrity.
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               samples, note that the application of a high-concentration
+                                                                                       Deerinck et al. [24]
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               (4 %) staining solution is recommended [31]; alternatively,
+                                                                                                                                                                                                                                                                                                                                                                                               repeated replacement with fresh solution during incubation
+                                                                                                                                    OsO + FeCN
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               can ensure sufficient stain supply. Regarding another widely
+                                                                                                              PFA + GA
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               used staining buffer, the Walton solution (lead aspartate),
+                                                                                                                                                        OsO
+                                                                                                                                                        TCH
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               early efforts have attempted to attenuate stain deposition
+                                                                                                                                                                                                                                                                                                                                                                                               by lowering the pH of the staining buffer from 5.5 to 5 [26].
+                                                                                                                                                                                                                                                                                                                                                                                               However, lead aspartate solution is found unsuitable for
+                                                                                                                  Fixation
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               long-term incubation due to its high susceptibility to light
+                                                                                                                                                  OTO
+                                                                                                                  rO
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               and air exposure. Consequently, it is not surprisingly that
+4   — Y. Hua et al.: Development of sample preparation for volume electron microscopy
+
+
+
+
+Figure 2: Protocol development for high-contrast en bloc staining. Joint efforts have greatly promoted the development of en bloc staining techniques
+for specimens ranging from small brain tissues to whole brains. To the best of our knowledge, Deerinck et al. first implemented rOTO staining
+for brain samples, laying a foundational framework for subsequent protocol optimization. Hua et al. further proposed a separate OsO4 penetration
+and reduction routine (OR, magenta) to achieve homogenous staining of 1-mm samples. Meanwhile, Mikula et al. established a pyrogallol-mediated
+osmium amplification (PO) strategy and validated that the preservation of extracellular space (ESC, blue), a method originally developed by Palloto
+et al., can substantially facilitate stain penetration into brain tissues. Notably, 10 % formamide is supplemented to the reduced osmium mixture (rO)
+to enhance solution stability during prolonged incubation. Alternatively, Polilov et al. performed a prolonged OR treatment at low temperature (4 ◦ C,
+yellow) for insect brains. More recently, Song et al. integrated prolonged OR treatment with PO amplification at 4 ◦ C, enabling uniform staining of the
+entire mouse brain. In parallel, Karlupia et al. optimized room-temperature ORTO staining for surgical samples with preserved ECS. Collectively,
+the newly established low-temperature ORPO workflow exhibits great potential for further improving the overall efficiency and quality of en bloc brain
+staining.
+
+lead staining has been excluded from up-to-date protocols
+optimized for large-volume tissue samples [31], [32].
+      Although these protocols were originally developed
+for EM imaging, they have gained increasing recogni-
+tion as ready-to-use sample preparation approaches for
+X-ray tomography [48], [49] and photoemission electron
+microscopy [50]. Moreover, osmium-based staining is lipid-
+selective and in principle readily applicable to other organ
+types. However, the incubation durations for key steps must
+still be determined empirically, due to heterogeneous tis-
+sue densities. This process can be both costly and time-
+consuming, as it requires repeated test runs with in-situ
+monitoring via X-ray microscopy and ﬁnal validation of
+sample quality using electron microscopy [28], [31].
+
+
+2 Putative chemical mechanisms
+  of reduced osmium staining
+Despite the widespread application of these reduced-
+osmium-based protocols for preparing various biologi-                         Figure 3: Schematic illustration of osmium chemistry involved
+                                                                              in membrane staining. Top: OsO4 molecule (OsVIII ) may rapidly penetrate
+cal specimens, the detailed chemical reactions underlying
+                                                                              multiple membrane bilayers (dashed arrows) via partitioning between
+membrane contrast generation remains incompletely elu-                        organic and aqueous phases (1). Gradually, membrane-residing OsVIII is
+cidated. A prevailing model describing reduced-osmium                         reduced to OsVI by unsaturated lipids within the organic phase,
+staining was initially proposed by Hua et al. [26] and                        followed by subsequent hydrolysis (thin solid arrows) (2). In addition,
+has recently been revisited through chemical analysis                         OsVIII reduction can also occur in water through a ferrocyanide
+[51]. The model can be simpliﬁed (Figure 3) and used                          (FeII )-assisted pathway (thick solid arrow) (3). The final contrast agent,
+                                                                              OsO2 (OsIV ), is ultimately generated via further reduction of OsVI species
+to rationalize the enhanced membrane-speciﬁc osmium
+                                                                              either through its disproportionation (4) or reduction by ethanol
+deposition achieved by supplementing ferrocyanide, which                      during the subsequent dehydration procedure (bent arrow). Bottom:
+in consensus functions as a reducing agent [20], [26],                        putative chemical reactions involved in the reduced osmium
+[51]. First, OsO4 exists in both nonpolar (lipophilic) and                    staining.
+                                                          Y. Hua et al.: Development of sample preparation for volume electron microscopy     — 5
+
+
+
+
+Figure 4: Temperature- and duration-dependent outcomes of reduced-osmium staining. Left: OsO4 (yellow squares) diffuse across cytoplasmic
+membranes and are gradually reduced over time (pink and black squares). Middle: ferrocyanide (green squares) reacts with ionized OsVIII (yellow open
+squares) in the aqueous phase. Note that slow washout of water-soluble OsVI species (grey arrows) in the presence of ferrocyanide. This may explain
+why the precipitate ring of rOTO is not found at the sample periphery, where the washout effect is particularly prominent. Right: short incubation (top
+left) yields uniform staining (black squares) for small-sized samples. In contrast, prolonged incubation required for large samples (top right) at room
+temperature (RT) may cause damage and extraction of stained tissues associated with overfixation. Right: this can be substantially alleviated
+by performing incubation at 4 ◦ C or on ice (bottom), which decelerates osmium-related reactions and thereby preserves the integrity of cellular
+ultrastructure.
+
+
+ionized (water-soluble) forms. This unique property enables                  this mechanism provides a plausible explanation for why
+efficient penetration of OsO4 molecules across numerous                      sequential incubation with OsO4 and ferrocyanide allows
+membrane-water interfaces within thick tissue samples.                       OsO4 to diffuse across greater distances before being con-
+Second, OsO4 undergoes a multi-step reduction process that                   verted into tissue-immobile OsO2 deposits (Figure 4). Under
+yields water-insoluble OsO2 . This black solid preferentially                certain circumstances, however, the water-soluble inter-
+deposits on membrane surface, acting as the core substance                   mediate osmium products (OsVI ) may remain stabilized
+responsible for generating membrane contrast under elec-                     for an extended duration and may be washed out of the
+tron microscopy [26], [51]. Third, ferrocyanide may directly                 tissue prior to forming OsO2 , the ﬁnal reduction prod-
+reduce ionized OsO4 to intermediate OsVI species outside                     uct. Until recently, the model seems unable to explain
+lipid bilayers, prompting further reduction to OsO2 . Effec-                 the progressive stain washout observed during prolonged
+tively, the addition of ferrocyanide to the OsO4 solution                    ferrocyanide incubation (>3 h) [28], [31]. To resolve this
+establishes a shortcut for OsO2 generation, thereby max-                     discrepancy, it has been suggested that extended ferro-
+imizing membrane contrasting. However, replacing ferro-                      cyanide incubation removes OsVI species in the extracellular
+cyanide with other reducing agents such as Na2 SO3 /NaHSO3                   matrix through forming stable coordination compounds,
+has failed to yield comparable results, implying that ferro-                 which reduces background signals and thereby enhanc-
+cyanide may exert additional roles beyond osmium reduc-                      ing membrane contrast [31]. Whether this pathway rep-
+tion. Moreover, these proposed reactions are strongly pH-                    resents the primary mechanism of ferrocyanide-enhanced
+dependent (Figure 3), which warrants further investigations                  osmium staining remains controversial, considering that
+to identify the optimal working conditions for osmium depo-                  OsO4 -ferrocyanide mixtures do effectively stain various tis-
+sition in a controlled fashion.                                              sues within a short period and yield greater heavy-metal
+     By and large, the proposed reaction model is consistent                 impregnation than OsO4 treatment alone [20], [23]. Build-
+with experimental observations obtained across a range of                    ing on recent advances in low-temperature staining of
+osmium staining methods [26]. As for the original reduced                    insect [30], [47] and mammalian brain samples [31], we
+osmium recipe, ferrocyanide rapidly depletes available                       speculate that slow extraction of membrane lipids and
+OsO4 to generate water-soluble OsIV species. Although this                   biomolecules owing to osmium overﬁxation may largely
+process leads to more OsO2 deposition onto cellular struc-                   account for osmium washout during prolonged incubation
+tures, the resultant low OsO4 concentration restricts the                    steps (Figure 4). This hypothesis is supported by cumula-
+tissue penetration depth of staining. More importantly,                      tive evidence as well as our own experience showing that
+6   — Y. Hua et al.: Development of sample preparation for volume electron microscopy
+
+
+
+
+Figure 5: Evidence for temperature-dependent tissue extraction during staining. (A) brain samples were incubated in 2 % buffered OsO4 solutions
+at either room temperature (RT) or 4 ◦ C. Low-temperature incubation markedly slows the darkening of the staining buffer, indicative of suppressed
+tissue extraction. Cacodylic buffer (CB) and phosphate buffer (PB) were used in this experiment. (B) SEM micrographs further verify that prolonged
+incubation at RT induces membranous structural damage (below), whereas low-temperature treatment effectively protects tissue ultrastructure (top).
+
+
+prolonged OsO4 incubation at room temperature induces                      stain penetration is accomplished in oversized samples.
+severe tissue extraction and structural damage, whereas                    Further optimization of chemical ﬁxation is therefore
+same incubation duration at 4 ◦ C substantially alleviate                  required to minimize membrane lipid extraction, for
+such artifacts (Figure 5). Furthermore, osmium destain-                    example by microwave-assisted osmium ﬁxation strategies
+ing predominantly occurs in peripheral sample regions,                     [52].
+which is consistent with the time-dependent nature of over-                      Another unresolved challenge in vEM sample prepara-
+ﬁxation, as outer tissue areas experience longer ﬁxative                   tion lies in tissue ﬁxation artifacts introduced by conven-
+exposure.                                                                  tional chemical crosslinking of biomolecules. Previous stud-
+                                                                           ies have documented prominent morphological alterna-
+                                                                           tions in chemically ﬁxed neural tissues, including reduced
+3 Future improvement of vEM                                                extracellular spaces [29], distorted neurite and synapse
+  sample preparation                                                       morphology [53], [54], and displaced synaptic vesicles [55].
+                                                                           The extent to which these ﬁxation-induced morpholog-
+Although the preparation of large-volume tissue samples                    ical changes would inﬂuence biophysical modeling and
+is technically feasible via prolonged low-temperature incu-                connectome-based emulation remains to be clariﬁed. As a
+bation, further protocol optimization with shortened pro-                  promising approach, high-pressure-freezing (HPF) enables
+cessing durations and incorporate quality-control check-                   near-native ultrastructural preservation for tissue speci-
+points in between critical steps is desirable to improve                   mens up to 200 μm thick by suppressing ice crystal for-
+overall staining success rates. Since both stain-diffusion and             mation through rapid vitriﬁcation under high pressure.
+chemical-reaction rates decline at low temperatures, incu-                 In principle, water molecules within HPF-preserved tis-
+bations required for large specimens must be substantially                 sues can be gradually substituted with acetone under cryo-
+prolonged. If overﬁxation-induced osmium washout can-                      condition (freeze substitution), allowing subsequent resin
+not be fully suppressed even under low-temperature con-                    embedding at room temperature. Afterwards, these samples
+ditions, one would expect that excessively prolonged incu-                 can be handled normally for both serial section-based and
+bation may lead to noticeable destaining before thorough                   serial block-face-based vEM (Figure 6), except for lower
+                                                          Y. Hua et al.: Development of sample preparation for volume electron microscopy     — 7
+
+
+
+
+Figure 6: Block-face imaging of HPF-preserved brain sample. Left: example SEM micrograph of a freshly dissected mouse cortical sample preserved
+through HPF. The sample was subsequently subjected to freeze substitution with acetone liquid containing osmium and uranium, followed by resin
+embedding. The block-face was normally prepared for SEM imaging. Right: high-magnification view of the region outlined by the white box in the left
+panel. Axon viscosity (red solid arrow) and extracellular space (red open arrow) are clearly visualized. Beam current: 0.8 nA, voltage: 2.0 keV, dwell
+time: 1.5 μs.
+
+
+contrast compared to rOTO-treated samples. Unfortunately,                    important trends in modern vEM workﬂows [62]–[65].
+the poor solubility of ferrocyanide and TCH in anhydrous                     Recent advances have enabled cell- and organelle-speciﬁc
+acetone makes existing en bloc staining protocols difficult                  labeling using APEX-based probes [66], [67] as well as
+to implement during or after freeze substitution. To fully                   ﬁxation-resistant and chemically stable ﬂuorescent proteins
+unlock the potential of HPF-preserved tissues for large-                     [68]–[70], allowing for identiﬁcation of genetically targeted
+scale vEM applications, future methodological advances are                   cellular structures under EM. To date, however, these strate-
+needed to establish effective en bloc staining strategies com-               gies have only been validated in samples processed with
+patible with the freeze-substitution workﬂow. Promising                      a single round of osmiﬁcation [69] or with uranyl acetate
+approaches include the use of an acetone-based cocktail                      to replace strong oxidative osmium compounds [64]. Fur-
+solution containing OsO4 , uranyl acetate, tannic acid, and                  ther optimization of stain deposition density is therefore
+potassium permanganate [56]. Similarly, pyrogallol and gal-                  required to achieve unambiguous discrimination between
+lic acid are expected to serve as potential osmiophilic can-                 labeled and unlabeled cyto-structures, while maximally pre-
+didates for stain ampliﬁcation [27], [57], given their high                  serving ﬂuorescence after enhanced osmiﬁcation and resin
+solubility in acetone. Alternatively, supplementing freeze-                  embedding for in situ correlative LM and vEM imaging.
+substitution solutions with 5 % water has been proposed
+to enable the use of water-soluble stains for cellular ultra-
+structure and membrane, such as a mixture of perman-                         4 Summary
+ganate and uranium salts, as a cost-effective replacement
+for OsO4 [58]. More recently, complete sample rehydration                    Optimized osmium-based en bloc staining has made large-
+is carried out after freeze substitution using an acetone                    volume and even whole-brain mapping technically achiev-
+solution containing 2 % OsO4 and 3 % water. This workﬂow,                    able via commercial high-throughput vEM. With the grow-
+termed FSaqOTO [59], supports the subsequent aqueous                         ing advancement of high-speed imaging techniques and
+osmium ampliﬁcation procedure as well as post-staining                       artiﬁcial intelligence-empowered acquisition optimization,
+with uranium and lead solutions. Furthermore, emerging                       saturated membrane staining is anticipated to no longer
+image processing tools [60], [61], originally developed to                   be the primary bottleneck for vEM experiments. Instead,
+boost vEM imaging throughput, can be repurposed to com-                      increasing research attention will shift toward other excit-
+pensate for the reduced image contrast typically observed                    ing directions: developing accelerated or simpliﬁed work-
+in HPF-preserved samples (Supplementary Video 1).                            ﬂows that can accomplish sample preparation within hours
+     Last but not least, multiplexed labeling and cor-                       to days, enhancing contrast for HPF-preserved samples
+relative imaging with light microscopy (LM) represent                        for large-scale high-throughput vEM, and improving the
+8   — Y. Hua et al.: Development of sample preparation for volume electron microscopy
+
+compatibility of en bloc staining with versatile genetic label-              [8] A. T. Kuan et al., “Scalable electron tomography for connectomics,”
+ing strategies.                                                                  bioRxiv , 2024, https://doi.org/10.1101/2024.06.05.597487.
+                                                                             [9] T. Templier, “MagC, magnetic collection of ultrathin sections for
+                                                                                 volumetric correlative light and electron microscopy,” Elife, vol. 8,
+Acknowledgments: We thank Drs Mark Ellisman (UCSD)
+                                                                                 2019, https://doi.org/10.7554/elife.45696.
+and Kun Song (PKU) for discussion and suggestion. We thank                 [10] K. A. Fulton, P. V. Watkins, and K. L. Briggman, “GAUSS-EM, guided
+Bingyu Tan, Rui Ma, and Yinghong Lin (Shanghai NanoPort,                         accumulation of ultrathin serial sections with a static magnetic
+Thermo Fisher Scientiﬁc) for support in image acquisition                        field for volume electron microscopy,” Cell Rep. Methods, vol. 4,
+using FIB-SEM (Hydra Bio). We thank Bohao Chen (CAS-IA)                          no. 3, 2024, Art. no. 100720,.
+                                                                            [11] N. Medina et al., “DRIFT-EM enables direct wafer retrieval of
+for performing image denoising and Haoyu Wang (Shang-
+                                                                                 ultrathin serial sections for large-volume electron microscopy,”
+hai Institute of Precision Medicine) for generating video                        Cell Rep. Methods, vol. 6, no. 6, 2026, Art. no. 101429,.
+illustration. This study was supported by the National Natu-               [12] W. Denk and H. Horstmann, “Serial block-face scanning electron
+ral Science Foundation of China (32171461 to H.H.) and the                       microscopy to reconstruct three-dimensional tissue
+Science and Technology Innovation 2030 (STI 2030) Major                          nanostructure,” PLoS Biol., vol. 2, no. 11, 2004, Art. no. e329,.
+Projects (2021ZD0204500, 2021ZD0204503 to L.L.).                           [13] G. Knott, H. Marchman, D. Wall, and B. Lich, “Serial section
+                                                                                 scanning electron microscopy of adult brain tissue using focused
+Research ethics: Not applicable.
+                                                                                 ion beam milling,” J. Neurosci., vol. 28, no. 12, pp. 2959 − 64, 2008,.
+Informed consent: Not applicable.                                          [14] K. J. Hayworth et al., “Gas cluster ion beam SEM for imaging of
+Author contributions: All authors have accepted responsi-                        large tissue samples with 10 nm isotropic resolution,” Nat.
+bility for the entire content of this manuscript and approved                    Methods, vol. 17, no. 1, pp. 68 − 71, 2020,.
+its submission.                                                            [15] H. Ma et al., “PIBE: Parallel ion beam etching of sections collected
+                                                                                 on wafer for ultra large-scale connectomics,” BioRxiv , 2025, https://
+Use of Large Language Models, AI and Machine Learning
+                                                                                 doi.org/10.1101/2025.04.25.650569.
+Tools: None declared.
+                                                                           [16] H. B. Nguyen et al., “Conductive resins improve charging and
+Conflict of interest: The authors state no conﬂict of interest.                  resolution of acquired images in electron microscopic volume
+Research funding: The National Natural Science Founda-                           imaging,” Sci. Rep., vol. 6, no. 1, 2016, Art. no. 23721,.
+tion of China (32171461 to H.H., 82171133 to Y.H.) and the                  [17] Y. Kubota et al., “A carbon nanotube tape for serial-section
+Science and Technology Innovation 2030 (STI 2030) Major                          electron microscopy of brain ultrastructure,” Nat. Commun., vol. 9,
+                                                                                 no. 1, p. 437, 2018,.
+Projects (2021ZD0204500, 2021ZD0204503 to L.L.).
+                                                                           [18] T. J. Deerinck, T. Shone, E. Bushong, R. Ramachandra, S. Peltier,
+Data availability: Not applicable.
+                                                                                 and M. Ellisman, “High-performance serial block-face SEM of
+                                                                                 nonconductive biological samples enabled by focal gas
+                                                                                 injection-based charge compensation,” J. Microsc., vol. 270, no. 2,
+References                                                                       pp. 142 − 9, 2018,.
+                                                                           [19] J. W. Lichtman and W. Denk, “The big and the small: Challenges of
+[1] C. J. Peddie et al., “Volume electron microscopy,” Nat. Rev. Methods         imaging the brain’s circuits,” Science, vol. 334, no. 6056,
+    Primers, vol. 2, p. 51, 2022,.                                               pp. 618 − 23, 2011,.
+[2] A. A. Wanner, M. A. Kirschmann, and C. Genoud, “Challenges of          [20] D. L. White, J. E. Mazurkiewicz, and R. J. Barrnett, “A chemical
+    microtome-based serial block-face scanning electron microscopy               mechanism for tissue staining by osmium tetroxide-ferrocyanide
+    in neuroscience,” J. Microsc., vol. 259, no. 2, pp. 137 − 42, 2015,.         mixtures,” J. Histochem. Cytochem., vol. 27, no. 7, pp. 1084 − 91, 1979,.
+[3] K. L. Briggman and D. D. Bock, “Volume electron microscopy for         [21] A. M. Seligman, H. L. Wasserkrug, and J. S. Hanker, “A new staining
+    neuronal circuit reconstruction,” Curr. Opin. Neurobiol., vol. 22,           method (OTO) for enhancing contrast of lipid − containing
+    no. 1, pp. 154 − 61, 2012,.                                                  membranes and droplets in osmium tetroxide − fixed tissue with
+[4] B. Titze and C. Genoud, “Volume scanning electron microscopy for             osmiophilic thiocarbohydrazide(TCH),” J. Cell Biol., vol. 30, no. 2,
+    imaging biological ultrastructure,” Biol. Cell, vol. 108, no. 11,            pp. 424 − 32, 1966,.
+    pp. 307 − 23, 2016,.                                                   [22] M. C. Willingham and A. V. Rutherford, “The use of
+[5] M. Helmstaedter, “Synaptic-resolution connectomics: Towards                  osmium-thiocarbohydrazide-osmium (OTO) and
+    large brains and connectomic screening,” Nat. Rev. Neurosci.,                ferrocyanide-reduced osmium methods to enhance membrane
+    vol. 27, no. 2, pp. 101 − 20, 2026,.                                         contrast and preservation in cultured cells,” J. Histochem.
+[6] R. Schalek et al., “Development of high-throughput,                          Cytochem., vol. 32, no. 4, pp. 455 − 60, 1984,.
+    high-resolution 3D reconstruction of large-volume biological           [23] J. C. Tapia et al., “High-contrast en bloc staining of neuronal tissue
+    tissue using automated tape collection ultramicrotomy and                    for field emission scanning electron microscopy,” Nat. Protoc.,
+    scanning electron microscopy,” Microsc. Microanal., vol. 17, no. S2,         vol. 7, no. 2, pp. 193 − 206, 2012,.
+    pp. 966 − 7, 2017,.                                                    [24] T. J. Deerinck, E. Bushong, V. Lev-Ram, X. Shu, R. Tsien, and M.
+[7] W. Yin et al., “A petascale automated imaging pipeline for                   Ellisman, “Enhancing serial block-face scanning electron
+    mapping neuronal circuits with high-throughput transmission                  microscopy to enable high resolution 3-D nanohistology of cells
+    electron microscopy,” Nat. Commun., vol. 11, no. 1, p. 4949, 2020,.          and tissues,” Microsc. Microanal., vol. 16, no. S2, pp. 1138 − 9, 2010,.
+                                                              Y. Hua et al.: Development of sample preparation for volume electron microscopy       — 9
+
+[25] K. L. Briggman, M. Helmstaedter, and W. Denk, “Wiring specificity                Natl. Acad. Sci. U. S. A., vol. 118, no. 42, 2021, https://doi.org/10
+     in the direction-selectivity circuit of the retina,” Nature, vol. 471,           .1073/pnas.2106785118.
+     no. 7337, pp. 183 − 8, 2011,.                                               [42] T. M. Nguyen et al., “Structured cerebellar connectivity supports
+[26] Y. Hua, P. Laserstein, and M. Helmstaedter, “Large-volume en-bloc                resilient pattern separation,” Nature, vol. 613, no. 7944, pp. 543 − 9,
+     staining for electron microscopy-based connectomics,” Nat.                       2023,.
+     Commun., vol. 6, no. 1, p. 7923, 2015,.                                     [43] J. A. Bae et al., “Functional connectomics spanning multiple areas
+[27] S. Mikula and W. Denk, “High-resolution whole-brain staining for                 of mouse visual cortex,” Nature, vol. 640, no. 8058, pp. 435 − 47,
+     electron microscopic circuit reconstruction,” Nat. Methods, vol. 12,             2025,.
+     no. 6, pp. 541 − 6, 2015,.                                                  [44] N. L. Turner et al., “Reconstruction of neocortex: Organelles,
+[28] S. Stroh, E. W. Hammerschmith, D. W. Tank, H. S. Seung, and A. A.                compartments, cells, circuits, and activity,” Cell, vol. 185, no. 6,
+     Wanner, “In situ X-ray-assisted electron microscopy staining for                 pp. 1082 − 100 e1024, 2022,.
+     large biological samples,” Elife, vol. 11, 2022, https://doi.org/10         [45] C. M. Schneider-Mizell et al., “Inhibitory specificity from a
+     .7554/elife.72147.                                                               connectomic census of mouse visual cortex,” Nature, vol. 640,
+[29] M. Pallotto, P. V. Watkins, B. Fubara, J. H. Singer, and K. L.                   no. 8058, pp. 448 − 58, 2025,.
+     Briggman, “Extracellular space preservation aids the connectomic            [46] S. Loomba et al., “Connectomic comparison of mouse and human
+     analysis of neural circuits,” Elife, vol. 4, 2015, https://doi.org/10            cortex,” Science, vol. 377, no. 6602, 2022, Art. no. eabo0924,.
+     .7554/elife.08206.                                                          [47] Z. Lu et al., “En bloc preparation of Drosophila brains enables
+[30] A. A. Polilov, A. A. Makarova, S. Pang, C. Shan Xu, and H. Hess,                 high-throughput FIB-SEM connectomics,” Front. Neural Circ.,
+     “Protocol for preparation of heterogeneous biological samples for                vol. 16, 2022, Art. no. 917251,.
+     3D electron microscopy: A case study for insects,” Sci. Rep., vol. 11,      [48] C. Bosch et al., “Nondestructive X-ray tomography of brain tissue
+     no. 1, p. 4717, 2021,.                                                           ultrastructure,” Nat. Methods, vol. 22, no. 12, pp. 2631 − 8, 2025,.
+[31] K. Song, Z. Feng, and M. Helmstaedter, “High-contrast en bloc               [49] A. T. Kuan et al., “Dense neuronal reconstruction through X-ray
+     staining of mouse whole-brain and human brain samples for                        holographic nano-tomography,” Nat. Neurosci., vol. 23, no. 12,
+     EM-based connectomics,” Nat. Methods, vol. 20, no. 6, pp. 836 − 40,              pp. 1637 − 43, 2020,.
+     2023,.                                                                      [50] G. Wildenberg et al., “Photoemission electron microscopy for
+[32] N. Karlupia et al., “Immersion fixation and staining of multicubic               connectomics,” Proc. Natl. Acad. Sci. U. S. A., vol. 122, no. 48, 2025,
+     millimeter volumes for electron microscopy-based connectomics                    Art. no. e2521349122,.
+     of human brain biopsies,” Biol. Psychiatry , vol. 94, no. 4,                [51] R. Li et al., “OsO2 as the contrast-generating chemical species of
+     pp. 352 − 60, 2023,.                                                             osmium-stained biological tissues in electron microscopy,”
+[33] Y. Hua et al., “Connectomic analysis of thalamus-driven                          ChemBioChem, vol. 25, no. 20, Art. no. e202400311.
+     disinhibition in cortical layer 4,” Cell Rep., vol. 41, no. 2, 2022, Art.   [52] J. Hanker and B. Giammara, “Microwave-accelerated cytochemical
+     no. 111476,.                                                                     stains for the image analysis and the electron microscopic
+[34] Y. Hua et al., “Electron microscopic reconstruction of neural                    examination of light microscopy diagnostic slides,” Scanning,
+     circuitry in the cochlea,” Cell Rep., vol. 34, no. 1, 2021, Art. no.             vol. 15, no. 2, pp. 67 − 80, 1993,.
+     108551,.                                                                    [53] H. Tamada, J. Blanc, N. Korogod, C. C. Petersen, and G. W. Knott,
+[35] C. Genoud, B. Titze, A. Graff-Meyer, and R. W. Friedrich, “Fast                  “Ultrastructural comparison of dendritic spine morphology
+     homogeneous en bloc staining of large tissue samples for                         preserved with cryo and chemical fixation,” Elife, vol. 9, 2020,
+     volume electron microscopy,” Front. Neuroanat., vol. 12, p. 76,                  https://doi.org/10.7554/elife.56384.
+     2018,.                                                                      [54] J. M. Griswold et al., “Membrane mechanics dictate axonal
+[36] X. Lu, X. Han, Y. Meirovitch, E. Sjöstedt, R. L. Schalek, and J. W.              pearls-on-a-string morphology and function,” Nat. Neurosci.,
+     Lichtman, “Preserving extracellular space for high-quality optical               vol. 28, no. 1, pp. 49 − 61, 2025,.
+     and ultrastructural studies of whole mammalian brains,” Cell Rep.           [55] N. Korogod, C. C. Petersen, and G. W. Knott, “Ultrastructural
+     Methods, vol. 3, no. 7, 2023, https://doi.org/10.1016/j.crmeth.2023              analysis of adult mouse neocortex comparing aldehyde perfusion
+     .100520.                                                                         with cryo fixation,” Elife, vol. 4, 2015, https://doi.org/10.7554/elife
+[37] A. Gour et al., “Postnatal connectomic development of inhibition in              .05793.
+     mouse barrel cortex,” Science, vol. 371, no. 6528, 2021, https://doi        [56] J. Guo et al., “An optimized approach using cryofixation for
+     .org/10.1126/science.abb4534.                                                    high-resolution 3D analysis by FIB-SEM,” J. Struct. Biol., vol. 212,
+[38] J. S. Phelps et al., “Reconstruction of motor control circuits in adult          no. 1, 2020, Art. no. 107600,.
+     Drosophila using automated transmission electron microscopy,”               [57] V. B. Wigglesworth, “A simple method for staining mitochondria,”
+     Cell, vol. 184, no. 3, pp. 759 − 74 e718, 2021,.                                 Nature, vol. 179, no. 4568, pp. 1033 − 4, 1957,.
+[39] C. Bosch et al., “Functional and multiscale 3D structural                   [58] M. Schauflinger, T. Bergner, G. Neusser, C. Kranz, and C. Read,
+     investigation of brain tissue through correlative in vivo physiology,            “Potassium permanganate is an excellent alternative to osmium
+     synchrotron microtomography and volume electron microscopy,”                     tetroxide in freeze-substitution,” Histochem. Cell Biol., vol. 157,
+     Nat. Commun., vol. 13, no. 1, p. 2923, 2022,.                                    no. 4, pp. 481 − 9, 2022,.
+[40] N. Karagulyan et al., “Gating of hair cell Ca(2+) channels governs          [59] S. Belanger et al., “A versatile enhanced freeze-substitution
+     the activity of cochlear neurons,” Sci. Adv., vol. 11, no. 25, 2025, Art.        protocol for volume electron microscopy,” Front. Cell Dev. Biol.,
+     no. eadu7898,.                                                                   vol. 10, 2022, Art. no. 933376,.
+[41] N. N. Guan et al., “A specialized spinal circuit for command                [60] Y. Meirovitch et al., “SmartEM: Machine learning-guided electron
+     amplification and directionality during escape behavior,” Proc.                  microscopy,” Nat. Methods, vol. 23, no. 1, pp. 193 − 204, 2026,.
+10   — Y. Hua et al.: Development of sample preparation for volume electron microscopy
+
+[61] B. Chen et al., “Volumetric denoising enables high-throughput                   simultaneous visualization of multiple cell types,” Nat. Neurosci.,
+     volume electron microscopy and efficient downstream analysis,”                  vol. 22, no. 5, pp. 828 − 39, 2019,.
+     Cell Rep. Methods, 2026, Art. no. 101543, https://doi.org/10.1016/j        [67] S. S. Lam et al., “Directed evolution of Apex2 for electron
+     .crmeth.2026.101543.                                                            microscopy and proximity labeling,” Nat. Methods, vol. 12, no. 1,
+[62] L. M. Collinson, E. C. Carroll, and J. P. Hoogenboom,                           pp. 51 − 4, 2015,.
+     “Correlating 3D light to 3D electron microscopy for                        [68] Z. Fu et al., “mEosEM withstands osmium staining and epon
+     systems biology,” Curr. Opin. Biomed. Eng., vol. 3, pp. 49 − 55,                embedding for super-resolution CLEM,” Nat. Methods, vol. 17, no. 1,
+     2017,.                                                                          pp. 55 − 8, 2020,.
+[63] N. Shafiei et al., “Correlative light and electron microscopy for          [69] H. Xiong et al., “A highly stable monomeric red fluorescent protein
+     human brain and other biological models,” Nat. Protoc., vol. 20,                for advanced microscopy,” Nat. Methods, vol. 22, no. 6,
+     no. 10, pp. 2994 − 3023, 2025,.                                                 pp. 1288 − 98, 2025,.
+[64] P. Ronchi et al., “High-precision targeting workflow for volume            [70] M. G. Paez-Segala et al., “Fixation-resistant photoactivatable
+     electron microscopy,” J. Cell Biol., vol. 220, no. 9, 2021, https://doi         fluorescent proteins for CLEM,” Nat. Methods, vol. 12,
+     .org/10.1083/jcb.202104069.                                                     no. 3, pp. 215 − 8, 214 p following 218, 2015. https://doi.org/10
+[65] D. P. Hoffman et al., “Correlative three-dimensional                            .1038/nmeth.3225.
+     super-resolution and block-face electron microscopy of whole
+     vitreously frozen cells,” Science, vol. 367, no. 7475, 2020, https://doi
+     .org/10.1126/science.aaz5357.
+[66] Q. Zhang, W. A. Lee, D. L. Paul, and D. D. Ginty, “Multiplexed             Supplementary Material: This article contains supplementary material
+     peroxidase-based electron microscopy labeling enables                      (https://doi.org/10.1515/mim-2026-0015).
+

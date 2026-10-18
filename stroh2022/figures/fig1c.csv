@@ -1,0 +1,21 @@
+# Ströh et al. 2022 eLife, Figure 1c: measured pixel intensity of X-ray projection images vs OsO4 concentration.
+# Columns: series (dot = one measurement, grey; fit_line = the black line, ends given; reference_line = thin line at 1);
+#   conc_vol_percent = OsO4 conc. (vol %); intensity_au = Intensity (a.u.).
+# Provenance: tier 3, digitized from the embedded ~348 ppi raster image (no vector data) by fig1c_extract.py:
+#   x fitted on 5 ticks (0-4), max residual 0.000; y on 3 ticks (0, 0.5, 1), max residual 0.0000.
+#   Dots: Hough circles on the grey mask (5 found; the caption says n=3 per concentration; overlapping
+#   dots hide each other: at 1 and 3 vol% only 2 of 3 dots, at 2 vol% 1 dot can be resolved; the two hidden middle dots are added as read by eye, tier 4).
+#   Fit line: straight-line fit to the traced black line.
+# Uncertainty: about ±0.029 vol% and ±0.0052 a.u. (2 px) for dot centres.
+series,conc_vol_percent,intensity_au,note
+dot,1.0073,0.23969,Hough circle centre
+dot,0.9927,0.19072,Hough circle centre
+dot,2,0.46392,Hough circle centre
+dot,3.0219,0.69588,Hough circle centre
+dot,2.9927,0.64175,Hough circle centre
+dot,1,0.22,read by eye (tier 4, ±0.01): middle dot of the stack, mostly hidden
+dot,3,0.66,read by eye (tier 4, ±0.01): middle dot of the stack, mostly hidden
+fit_line,0,-0.0023864,slope 0.22525 per vol%, intercept -0.00239
+fit_line,4.6642,1.0482,end of the drawn line
+reference_line,0,1,thin horizontal line at intensity 1
+reference_line,4.708,1,

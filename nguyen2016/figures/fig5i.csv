@@ -1,0 +1,26 @@
+# Nguyen et al. 2016 Sci Rep 6:23721, Figure 5i: the highest electron doses in the successful serial imaging,
+#   each set of tissues embedded in Control resin ('Cont') and in conductive resin ('Carbon'), joined by a line.
+#   Axis title as printed: 'Electron dose (e-/nm2)' (y, linear, ticks 0-80 every 20); x = the two categories.
+#   Colours per the caption: blue = kidney fixed with transcardial perfusion, purple = brain (transcardial
+#   perfusion), green = kidney fixed with resection and immersion. The panel shows 3 purple, 1 blue and 2 green
+#   pairs (6 pairs; caption: N = 6). '*' over the bracket: p < 0.05, Wilcoxon matched-pairs signed rank test.
+# Columns: pair (my numbering, 1-6, ordered by the Cont value read top to bottom); colour; group (Cont/Carbon);
+#   electron_dose_e_per_nm2; method (how the marker centre was located; see pairs_common.py).
+# Provenance: tier 3, digitized from the embedded ~220 ppi JPEG of Figure 5 by fig5i_extract.py. y calibrated on
+#   the 5 labelled ticks (max residual 0.08 e-/nm2). Pairs assigned by following each connecting line.
+#   Two places hold two coinciding markers (one darker disc each): Cont ~16 (purple + green) and Carbon ~51
+#   (two purple); both markers get the same value there.
+# Uncertainty: about +-0.19 e-/nm2 (0.7 px of the source image) for each marker centre.
+pair,colour,group,electron_dose_e_per_nm2,method
+1,purple,Cont,40.66,run (single disc)
+1,purple,Carbon,51.24,run (two purple markers coincide: one darker purple disc)
+2,green,Cont,35.55,run (single disc)
+2,green,Carbon,69.32,run (single disc)
+3,blue,Cont,25.17,run (single disc)
+3,blue,Carbon,58.66,run (single disc)
+4,purple,Cont,16.06,run (purple and green markers coincide: one darker grey-green disc)
+4,purple,Carbon,51.24,run (two purple markers coincide: one darker purple disc)
+5,green,Cont,16.06,run (purple and green markers coincide: one darker grey-green disc)
+5,green,Carbon,27.12,run (single disc)
+6,purple,Cont,12.36,run (single disc)
+6,purple,Carbon,17.46,run (single disc)

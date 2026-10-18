@@ -1,0 +1,1 @@
+eLife API (https://api.elifesciences.org/articles/<id>) JSON and figure-supplement images from iiif.elifesciences.org (full size, JPEG), by curl, 2026-10-17. The JSON holds the full legends of all figures and figure supplements.

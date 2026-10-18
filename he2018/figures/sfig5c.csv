@@ -1,0 +1,253 @@
+# He et al. 2018 Sci Rep 8:12985, Supplementary Figure 5c: 'low stain level 1.4 keV' (chart title). Intensity vs. stain
+#   composition for the cuboids of Supplementary Fig. 5a. Series names from the legend: '0-25 nm' (red triangles;
+#   caption: intensity of cuboid 3), 'sum' (blue diamonds; caption: sum of the signals of cuboids 1 and 2), and the
+#   second-order polynomial trendlines 'Poly. (0-25 nm)' (red line) and 'Poly. (sum)' (purple line).
+# Columns: series; kind = 'marker' (a plotted data point) or 'trendline vertex' (a vertex of the drawn polyline);
+#   stain_level_atomic_percent = x, 'stain level (atomic percent)', printed as percentages (1%-9%); counts_au = y, 'counts (a.u.)'.
+# Provenance: tier 2, vector: read from the PDF's own coordinates by sfig5_vector.py (called by
+#   sfig5c_extract.py). Trendlines and gridlines are vector paths; the markers are small raster images placed at
+#   the data points (their centres are used). y axis fitted on the bottom axis line and the gridlines matched to the
+#   tick labels [0, 500, 1000, 1500, 2000]: max residual 2.18 counts. x: category axis, first and last category on
+#   the left/right frame lines; the printed x labels' centres agree within 0.07 percentage points.
+# Uncertainty: markers about +-0.3 pt (~7 counts, 0.02 percentage points):
+#   the marker images are 6-7 pt wide and their centre is taken as the data point. The x values of the markers
+#   are the nominal stain levels (1% steps or 10% steps) up to this placement error.
+series,kind,stain_level_atomic_percent,counts_au
+0-25 nm,marker,0.99385,282.84
+0-25 nm,marker,1.9931,364.67
+0-25 nm,marker,2.9924,621.09
+0-25 nm,marker,3.9917,828.4
+0-25 nm,marker,4.991,893.87
+0-25 nm,marker,5.9903,1079.4
+0-25 nm,marker,6.9896,1193.9
+0-25 nm,marker,8.0064,1466.7
+0-25 nm,marker,9.0057,1526.7
+sum,marker,0.99385,285.56
+sum,marker,1.9931,356.49
+sum,marker,2.9924,623.82
+sum,marker,3.9917,836.59
+sum,marker,4.991,918.42
+sum,marker,5.9903,1114.8
+sum,marker,6.9896,1234.9
+sum,marker,8.0064,1578.6
+sum,marker,9.0057,1469.4
+Poly. (0-25 nm),trendline vertex,0.99604,263.74
+Poly. (0-25 nm),trendline vertex,1.0662,274.65
+Poly. (0-25 nm),trendline vertex,1.1538,285.56
+Poly. (0-25 nm),trendline vertex,1.224,296.47
+Poly. (0-25 nm),trendline vertex,1.2941,312.84
+Poly. (0-25 nm),trendline vertex,1.3642,323.75
+Poly. (0-25 nm),trendline vertex,1.4343,334.67
+Poly. (0-25 nm),trendline vertex,1.522,351.03
+Poly. (0-25 nm),trendline vertex,1.5921,361.94
+Poly. (0-25 nm),trendline vertex,1.6622,372.86
+Poly. (0-25 nm),trendline vertex,1.7324,389.22
+Poly. (0-25 nm),trendline vertex,1.8025,400.13
+Poly. (0-25 nm),trendline vertex,1.8726,411.04
+Poly. (0-25 nm),trendline vertex,1.9603,421.96
+Poly. (0-25 nm),trendline vertex,2.0304,438.32
+Poly. (0-25 nm),trendline vertex,2.1005,449.23
+Poly. (0-25 nm),trendline vertex,2.1706,460.15
+Poly. (0-25 nm),trendline vertex,2.2408,476.51
+Poly. (0-25 nm),trendline vertex,2.3284,487.42
+Poly. (0-25 nm),trendline vertex,2.3985,498.34
+Poly. (0-25 nm),trendline vertex,2.4687,509.25
+Poly. (0-25 nm),trendline vertex,2.5388,525.61
+Poly. (0-25 nm),trendline vertex,2.6089,536.52
+Poly. (0-25 nm),trendline vertex,2.6966,547.44
+Poly. (0-25 nm),trendline vertex,2.7667,558.35
+Poly. (0-25 nm),trendline vertex,2.8368,574.71
+Poly. (0-25 nm),trendline vertex,2.907,585.63
+Poly. (0-25 nm),trendline vertex,2.9771,596.54
+Poly. (0-25 nm),trendline vertex,3.0472,607.45
+Poly. (0-25 nm),trendline vertex,3.1349,623.82
+Poly. (0-25 nm),trendline vertex,3.205,634.73
+Poly. (0-25 nm),trendline vertex,3.2751,645.64
+Poly. (0-25 nm),trendline vertex,3.3452,656.55
+Poly. (0-25 nm),trendline vertex,3.4154,672.92
+Poly. (0-25 nm),trendline vertex,3.503,683.83
+Poly. (0-25 nm),trendline vertex,3.5732,694.74
+Poly. (0-25 nm),trendline vertex,3.6433,705.65
+Poly. (0-25 nm),trendline vertex,3.7134,716.56
+Poly. (0-25 nm),trendline vertex,3.7835,732.93
+Poly. (0-25 nm),trendline vertex,3.8537,743.84
+Poly. (0-25 nm),trendline vertex,3.9413,754.75
+Poly. (0-25 nm),trendline vertex,4.0114,765.66
+Poly. (0-25 nm),trendline vertex,4.0816,776.57
+Poly. (0-25 nm),trendline vertex,4.1517,792.94
+Poly. (0-25 nm),trendline vertex,4.2218,803.85
+Poly. (0-25 nm),trendline vertex,4.3095,814.76
+Poly. (0-25 nm),trendline vertex,4.3796,825.68
+Poly. (0-25 nm),trendline vertex,4.4497,836.59
+Poly. (0-25 nm),trendline vertex,4.5198,852.96
+Poly. (0-25 nm),trendline vertex,4.59,863.87
+Poly. (0-25 nm),trendline vertex,4.6776,874.78
+Poly. (0-25 nm),trendline vertex,4.7478,885.69
+Poly. (0-25 nm),trendline vertex,4.8179,896.6
+Poly. (0-25 nm),trendline vertex,4.888,912.97
+Poly. (0-25 nm),trendline vertex,4.9581,923.88
+Poly. (0-25 nm),trendline vertex,5.0283,934.79
+Poly. (0-25 nm),trendline vertex,5.1159,945.7
+Poly. (0-25 nm),trendline vertex,5.186,956.61
+Poly. (0-25 nm),trendline vertex,5.2562,967.52
+Poly. (0-25 nm),trendline vertex,5.3263,983.89
+Poly. (0-25 nm),trendline vertex,5.3964,994.8
+Poly. (0-25 nm),trendline vertex,5.4841,1005.7
+Poly. (0-25 nm),trendline vertex,5.5542,1016.6
+Poly. (0-25 nm),trendline vertex,5.6243,1027.5
+Poly. (0-25 nm),trendline vertex,5.6944,1038.4
+Poly. (0-25 nm),trendline vertex,5.7646,1054.8
+Poly. (0-25 nm),trendline vertex,5.8522,1065.7
+Poly. (0-25 nm),trendline vertex,5.9224,1076.6
+Poly. (0-25 nm),trendline vertex,5.9925,1087.5
+Poly. (0-25 nm),trendline vertex,6.0626,1098.5
+Poly. (0-25 nm),trendline vertex,6.1327,1109.4
+Poly. (0-25 nm),trendline vertex,6.2029,1120.3
+Poly. (0-25 nm),trendline vertex,6.2905,1136.6
+Poly. (0-25 nm),trendline vertex,6.3606,1147.6
+Poly. (0-25 nm),trendline vertex,6.4308,1158.5
+Poly. (0-25 nm),trendline vertex,6.5009,1169.4
+Poly. (0-25 nm),trendline vertex,6.571,1180.3
+Poly. (0-25 nm),trendline vertex,6.6587,1191.2
+Poly. (0-25 nm),trendline vertex,6.7288,1202.1
+Poly. (0-25 nm),trendline vertex,6.7989,1213
+Poly. (0-25 nm),trendline vertex,6.869,1223.9
+Poly. (0-25 nm),trendline vertex,6.9392,1240.3
+Poly. (0-25 nm),trendline vertex,7.0268,1251.2
+Poly. (0-25 nm),trendline vertex,7.0969,1262.1
+Poly. (0-25 nm),trendline vertex,7.1671,1273
+Poly. (0-25 nm),trendline vertex,7.2372,1284
+Poly. (0-25 nm),trendline vertex,7.3073,1294.9
+Poly. (0-25 nm),trendline vertex,7.3775,1305.8
+Poly. (0-25 nm),trendline vertex,7.4651,1316.7
+Poly. (0-25 nm),trendline vertex,7.5352,1327.6
+Poly. (0-25 nm),trendline vertex,7.6054,1338.5
+Poly. (0-25 nm),trendline vertex,7.6755,1349.4
+Poly. (0-25 nm),trendline vertex,7.7456,1365.8
+Poly. (0-25 nm),trendline vertex,7.8333,1376.7
+Poly. (0-25 nm),trendline vertex,7.9034,1387.6
+Poly. (0-25 nm),trendline vertex,7.9735,1398.5
+Poly. (0-25 nm),trendline vertex,8.0436,1409.4
+Poly. (0-25 nm),trendline vertex,8.1138,1420.3
+Poly. (0-25 nm),trendline vertex,8.2014,1431.3
+Poly. (0-25 nm),trendline vertex,8.2716,1442.2
+Poly. (0-25 nm),trendline vertex,8.3417,1453.1
+Poly. (0-25 nm),trendline vertex,8.4118,1464
+Poly. (0-25 nm),trendline vertex,8.4819,1474.9
+Poly. (0-25 nm),trendline vertex,8.5521,1485.8
+Poly. (0-25 nm),trendline vertex,8.6397,1496.7
+Poly. (0-25 nm),trendline vertex,8.7098,1507.6
+Poly. (0-25 nm),trendline vertex,8.78,1518.5
+Poly. (0-25 nm),trendline vertex,8.8501,1529.5
+Poly. (0-25 nm),trendline vertex,8.9202,1540.4
+Poly. (0-25 nm),trendline vertex,9,1551.3
+Poly. (sum),trendline vertex,0.99604,238.64
+Poly. (sum),trendline vertex,1.0662,252.83
+Poly. (sum),trendline vertex,1.1538,269.2
+Poly. (sum),trendline vertex,1.224,280.11
+Poly. (sum),trendline vertex,1.2941,296.47
+Poly. (sum),trendline vertex,1.3642,312.84
+Poly. (sum),trendline vertex,1.4343,323.75
+Poly. (sum),trendline vertex,1.522,340.12
+Poly. (sum),trendline vertex,1.5921,351.03
+Poly. (sum),trendline vertex,1.6622,367.4
+Poly. (sum),trendline vertex,1.7324,383.77
+Poly. (sum),trendline vertex,1.8025,394.68
+Poly. (sum),trendline vertex,1.8726,411.04
+Poly. (sum),trendline vertex,1.9603,421.96
+Poly. (sum),trendline vertex,2.0304,438.32
+Poly. (sum),trendline vertex,2.1005,449.23
+Poly. (sum),trendline vertex,2.1706,465.6
+Poly. (sum),trendline vertex,2.2408,476.51
+Poly. (sum),trendline vertex,2.3284,492.88
+Poly. (sum),trendline vertex,2.3985,503.79
+Poly. (sum),trendline vertex,2.4687,520.16
+Poly. (sum),trendline vertex,2.5388,531.07
+Poly. (sum),trendline vertex,2.6089,547.44
+Poly. (sum),trendline vertex,2.6966,558.35
+Poly. (sum),trendline vertex,2.7667,574.71
+Poly. (sum),trendline vertex,2.8368,585.63
+Poly. (sum),trendline vertex,2.907,601.99
+Poly. (sum),trendline vertex,2.9771,612.9
+Poly. (sum),trendline vertex,3.0472,629.27
+Poly. (sum),trendline vertex,3.1349,640.18
+Poly. (sum),trendline vertex,3.205,651.09
+Poly. (sum),trendline vertex,3.2751,667.46
+Poly. (sum),trendline vertex,3.3452,678.37
+Poly. (sum),trendline vertex,3.4154,694.74
+Poly. (sum),trendline vertex,3.503,705.65
+Poly. (sum),trendline vertex,3.5732,716.56
+Poly. (sum),trendline vertex,3.6433,732.93
+Poly. (sum),trendline vertex,3.7134,743.84
+Poly. (sum),trendline vertex,3.7835,754.75
+Poly. (sum),trendline vertex,3.8537,771.12
+Poly. (sum),trendline vertex,3.9413,782.03
+Poly. (sum),trendline vertex,4.0114,798.4
+Poly. (sum),trendline vertex,4.0816,809.31
+Poly. (sum),trendline vertex,4.1517,820.22
+Poly. (sum),trendline vertex,4.2218,831.13
+Poly. (sum),trendline vertex,4.3095,847.5
+Poly. (sum),trendline vertex,4.3796,858.41
+Poly. (sum),trendline vertex,4.4497,869.32
+Poly. (sum),trendline vertex,4.5198,885.69
+Poly. (sum),trendline vertex,4.59,896.6
+Poly. (sum),trendline vertex,4.6776,907.51
+Poly. (sum),trendline vertex,4.7478,918.42
+Poly. (sum),trendline vertex,4.8179,934.79
+Poly. (sum),trendline vertex,4.888,945.7
+Poly. (sum),trendline vertex,4.9581,956.61
+Poly. (sum),trendline vertex,5.0283,967.52
+Poly. (sum),trendline vertex,5.1159,978.43
+Poly. (sum),trendline vertex,5.186,994.8
+Poly. (sum),trendline vertex,5.2562,1005.7
+Poly. (sum),trendline vertex,5.3263,1016.6
+Poly. (sum),trendline vertex,5.3964,1027.5
+Poly. (sum),trendline vertex,5.4841,1038.4
+Poly. (sum),trendline vertex,5.5542,1054.8
+Poly. (sum),trendline vertex,5.6243,1065.7
+Poly. (sum),trendline vertex,5.6944,1076.6
+Poly. (sum),trendline vertex,5.7646,1087.5
+Poly. (sum),trendline vertex,5.8522,1098.5
+Poly. (sum),trendline vertex,5.9224,1109.4
+Poly. (sum),trendline vertex,5.9925,1120.3
+Poly. (sum),trendline vertex,6.0626,1131.2
+Poly. (sum),trendline vertex,6.1327,1147.6
+Poly. (sum),trendline vertex,6.2029,1158.5
+Poly. (sum),trendline vertex,6.2905,1169.4
+Poly. (sum),trendline vertex,6.3606,1180.3
+Poly. (sum),trendline vertex,6.4308,1191.2
+Poly. (sum),trendline vertex,6.5009,1202.1
+Poly. (sum),trendline vertex,6.571,1213
+Poly. (sum),trendline vertex,6.6587,1223.9
+Poly. (sum),trendline vertex,6.7288,1234.9
+Poly. (sum),trendline vertex,6.7989,1245.8
+Poly. (sum),trendline vertex,6.869,1256.7
+Poly. (sum),trendline vertex,6.9392,1267.6
+Poly. (sum),trendline vertex,7.0268,1278.5
+Poly. (sum),trendline vertex,7.0969,1289.4
+Poly. (sum),trendline vertex,7.1671,1300.3
+Poly. (sum),trendline vertex,7.2372,1311.2
+Poly. (sum),trendline vertex,7.3073,1322.1
+Poly. (sum),trendline vertex,7.3775,1333.1
+Poly. (sum),trendline vertex,7.4651,1344
+Poly. (sum),trendline vertex,7.5352,1354.9
+Poly. (sum),trendline vertex,7.6054,1365.8
+Poly. (sum),trendline vertex,7.6755,1376.7
+Poly. (sum),trendline vertex,7.7456,1387.6
+Poly. (sum),trendline vertex,7.8333,1398.5
+Poly. (sum),trendline vertex,7.9034,1404
+Poly. (sum),trendline vertex,7.9735,1414.9
+Poly. (sum),trendline vertex,8.0436,1425.8
+Poly. (sum),trendline vertex,8.1138,1436.7
+Poly. (sum),trendline vertex,8.2014,1447.6
+Poly. (sum),trendline vertex,8.2716,1458.5
+Poly. (sum),trendline vertex,8.3417,1469.4
+Poly. (sum),trendline vertex,8.4118,1480.4
+Poly. (sum),trendline vertex,8.4819,1485.8
+Poly. (sum),trendline vertex,8.5521,1496.7
+Poly. (sum),trendline vertex,8.6397,1507.6
+Poly. (sum),trendline vertex,8.7098,1518.5
+Poly. (sum),trendline vertex,8.78,1529.5
+Poly. (sum),trendline vertex,8.8501,1534.9
+Poly. (sum),trendline vertex,8.9202,1545.8
+Poly. (sum),trendline vertex,9,1556.7

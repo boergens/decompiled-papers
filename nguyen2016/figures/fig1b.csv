@@ -1,0 +1,17 @@
+# Nguyen et al. 2016 Sci Rep 6:23721, Figure 1b: scatter plot of the resistance of the conductive resin block
+#   versus the filler (Ketjen black) concentration. Axis titles as printed: 'Concentration (wt%)' (x, linear,
+#   ticks 5-20) and 'Resistance (Ohm/cm)' (y, log10, ticks 10^0-10^4). The main text (p.2) calls the quantity the
+#   'surface resistance of cured conductive Plain resin'; the series name below is taken from that sentence.
+# Columns: series; concentration_wt_pct (x as plotted); resistance_ohm_per_cm (y as plotted, unit as printed on the
+#   axis); log10_resistance.
+# Provenance: tier 3, digitized from the embedded ~220 ppi JPEG of Figure 1 (no vector data in the PDF) by
+#   fig1b_extract.py: dot centres = centroids of the four black discs (connected components); x calibrated on the
+#   4 labelled x ticks (max residual 0.008 wt%), y on the 5 labelled log ticks (max residual 0.0088 decades).
+# Uncertainty: about +-0.06 wt% in x and +-0.022 decades (+-5 %) in y
+#   (1 px of the source image; the dots are ~13 px across, so their centroids are good to well below that).
+# No error bars are drawn; n is not stated.
+series,concentration_wt_pct,resistance_ohm_per_cm,log10_resistance
+Conductive Plain resin,5.0028,3768.5,3.5762
+Conductive Plain resin,8.9376,34.764,1.5411
+Conductive Plain resin,16.039,9.1305,0.96049
+Conductive Plain resin,18.993,6.2064,0.79284

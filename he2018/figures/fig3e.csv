@@ -1,0 +1,207 @@
+# He et al. 2018 Sci Rep 8:12985, Figure 3e: histograms of the computed number of lead atoms per voxel for
+#   cuboids 1 to 3 and their backgrounds in the top and bottom sub-slice (fluence 1000 e/pixel). Six sub-plots,
+#   named by their printed titles (column 'subplot'). Each has two series, drawn as dots joined by lines:
+#   'red' and 'green'. The legend above each sub-plot shows the red series next to a thumbnail with a red box
+#   on a cuboid and the green series next to a thumbnail with a green box on the background (caption: 'cuboids
+#   1 to 3 and their corresponding backgrounds'); the series have no other names in the figure.
+# Columns: x_1e3_atoms_per_voxel = Number of lead atoms (10^3 /voxel), the shared x-axis title; frequency = the
+#   shared y-axis title 'Frequency' (counts of voxels); one row per plotted dot (marker centre).
+#   x_fit_residual / y_fit_residual = max residual of the axis fit on the gridlines of that sub-plot.
+# Provenance: tier 3, digitized from the embedded raster image (no vector data in the PDF) by fig3e_extract.py:
+#   axes calibrated on the 5 vertical (-10..10) and 5 horizontal (0..200) gridlines of each sub-plot; dot centres
+#   from maxima of the distance transform of red/green colour masks.
+# Uncertainty: about +-0.1 (10^3 atoms/voxel) in x and +-2 in frequency (1 px is ~0.043 in x and ~1.4 in y;
+#   the gridlines in the source are unevenly spaced by up to 2 px). Dots hidden under a dot of the other colour
+#   can be missing (see README); the overlay ../work/fig3e_overlay.png was checked dot by dot.
+subplot,series,x_1e3_atoms_per_voxel,frequency,flag,x_fit_residual,y_fit_residual
+cuboid 1 top sub-slice,red,-0.093713,0.35348,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,0.34602,1.3338,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,0.82179,6.4803,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,1.2219,16.773,partly hidden,0.025985,0.88745
+cuboid 1 top sub-slice,red,1.8166,32.948,partly hidden,0.025985,0.88745
+cuboid 1 top sub-slice,red,2.2707,78.532,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,2.7177,106.71,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,3.1935,122.89,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,3.6981,143.23,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,4.1522,134.41,partly hidden,0.025985,0.88745
+cuboid 1 top sub-slice,red,4.628,110.15,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,5.1038,71.179,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,5.6012,57.21,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,6.0769,31.478,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,6.5527,7.2155,visible,0.025985,0.88745
+cuboid 1 top sub-slice,red,6.9852,3.5394,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-2.487,7.2155,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-2.0977,20.449,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-1.7517,35.154,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-1.3624,67.503,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-0.97318,108.68,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-0.62716,117.5,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,-0.23789,157.2,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,0.10813,152.79,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,0.4974,102.06,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,0.86505,78.532,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,1.2327,47.652,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,1.622,20.449,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,2.0112,7.2155,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,2.3573,1.3338,visible,0.025985,0.88745
+cuboid 1 top sub-slice,green,2.7465,-0.13666,partly hidden,0.025985,0.88745
+cuboid 1 top sub-slice,green,3.107,0.35348,visible,0.025985,0.88745
+cuboid 1 bottom sub-slice,red,-6.7155,3.8789,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-5.8319,8.0339,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-4.898,29.271,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-4.0359,56.972,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-3.1451,75.439,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-2.2759,112.6,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-1.4353,135.46,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,-0.44396,150.69,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,0.375,129.92,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,1.3233,96.676,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,2.1422,56.51,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,3.0474,44.045,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,3.9095,19.114,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,4.8146,6.6489,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,5.8491,2.4938,partly hidden,0.012953,0.27739
+cuboid 1 bottom sub-slice,red,6.6034,1.1088,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-4.8836,5.2639,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-4.194,14.959,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-3.4612,28.809,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-2.7715,62.05,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-2.0819,86.981,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-1.4353,116.07,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-0.76724,150.69,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,-0.056034,118.84,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,0.67672,134.07,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,1.3233,85.596,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,2.0129,62.05,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,2.7026,31.579,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,3.3491,17.729,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,4.0603,4.5714,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,4.7715,-0.27624,visible,0.012953,0.27739
+cuboid 1 bottom sub-slice,green,5.4396,-0.27624,partly hidden,0.012953,0.27739
+cuboid 2 top sub-slice,red,-3.2086,3.1737,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-2.7838,,hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-2.4096,14.208,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-1.9891,32.139,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-1.6526,60.414,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-1.2602,98.345,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-0.76535,,hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,-0.39108,132.83,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,0.050462,148,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,0.44996,132.83,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,0.87048,85.931,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,1.2069,56.966,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,1.6568,,hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,2.09,10.07,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,2.5105,5.9323,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,red,2.8679,-0.27453,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,green,-3.1034,-0.27453,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-2.746,3.1737,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-2.4306,7.3116,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-2.0521,25.242,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-1.6526,39.035,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-1.2742,69.38,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-0.91673,92.138,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,green,-0.55929,146.62,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,-0.18082,136.97,partly hidden,0.029461,0.41379
+cuboid 2 top sub-slice,green,0.15559,123.17,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,0.49201,112.14,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,0.87048,69.38,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,1.2279,52.139,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,1.6274,18.346,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,1.8797,16.691,visible,0.029461,0.41379
+cuboid 2 top sub-slice,green,2.3213,1.7944,partly hidden,0.029461,0.41379
+cuboid 2 bottom sub-slice,red,-2.4368,1.1048,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,-1.5374,6.8518,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,-0.6661,12.829,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,0.17707,43.863,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,1.0764,84.092,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,1.9477,126.62,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,2.7909,159.03,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,3.7184,154.9,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,4.5615,127.31,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,5.4469,98.345,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,6.3322,70.759,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,7.2035,23.403,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,8.0607,6.6219,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,8.9039,3.1737,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,red,9.8314,1.1048,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-5.8305,1.1048,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-5.0927,3.1737,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-4.4182,11.449,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-3.7648,20.415,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-3.027,50.07,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-2.3524,95.586,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-1.6357,113.52,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-0.94716,122.71,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,-0.20236,123.17,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,0.43002,143.86,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,1.1467,105.24,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,1.8634,62.483,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,2.5801,36.277,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,3.2546,22.484,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,3.9713,5.9323,visible,0.012655,0.41379
+cuboid 2 bottom sub-slice,green,4.6669,3.8633,visible,0.012655,0.41379
+cuboid 3 top sub-slice,red,-0.89571,7.7987,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,-0.20185,13.271,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,0.49201,46.786,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,1.1648,91.245,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,1.8377,133.65,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,2.5105,182.22,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,3.1833,171.96,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,3.8562,124.76,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,4.55,85.089,partly hidden,0.029461,0.47813
+cuboid 3 top sub-slice,red,5.2229,52.942,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,5.8957,13.271,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,6.5755,7.3428,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,7.2624,3.0108,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,7.9352,0.2749,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,8.608,0.2749,visible,0.029461,0.47813
+cuboid 3 top sub-slice,red,9.2809,0.95889,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-3.4048,2.7829,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-3.0193,3.6948,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-2.5357,14.639,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-2.1573,35.158,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-1.6947,55.678,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-1.2742,95.349,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-0.8116,129.55,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,-0.43313,133.65,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,0.029436,147.33,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,0.49201,129.55,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,0.87048,73.461,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,1.333,52.942,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,1.7536,31.054,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,2.1741,13.271,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,2.5946,10.535,visible,0.029461,0.47813
+cuboid 3 top sub-slice,green,3.0361,4.3788,visible,0.029461,0.47813
+cuboid 3 bottom sub-slice,red,-7.032,2.3269,partly hidden,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-6.0202,3.6948,partly hidden,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-4.9241,0.95889,partly hidden,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-3.9334,11.903,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-2.8373,28.318,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-1.8255,61.15,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,-0.73637,89.421,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,0.32462,137.76,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,1.3575,135.02,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,2.4325,148.7,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,3.4865,113.13,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,4.5615,89.877,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,5.5944,59.098,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,6.6484,35.158,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,7.7445,10.535,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,red,8.7774,4.3788,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-7.7768,1.4149,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-6.8634,0.95889,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-5.9781,9.1667,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-5.0787,12.359,partly hidden,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-4.1653,28.318,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-3.2659,56.59,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-2.3946,95.349,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-1.5093,152.8,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,-0.58179,161.01,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,0.30354,155.54,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,1.231,115.87,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,2.1164,74.829,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,3.0228,42.682,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,3.9292,14.639,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,4.8567,6.4308,visible,0.012655,0.47813
+cuboid 3 bottom sub-slice,green,5.7631,5.0628,visible,0.012655,0.47813

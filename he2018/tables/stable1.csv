@@ -1,0 +1,17 @@
+# He et al. 2018 Sci Rep 8:12985, Supplementary Information p.8: Supplementary Table 1. Parameters used in Monte Carlo simulation.
+# Transcribed verbatim from the page image. The second column has no header in the PDF ("value" is a decompiler label).
+# "10, 000" is printed with a space after the comma. epsilon_det is the symbol printed as italic epsilon with subscript det.
+Parameter,value
+Number of incident electrons / pixel,"10, 000"
+Electron beam diameter,12.5 nm
+Pixel size,12.5 nm
+Simulation noise,Shot noise
+Backscattered detector efficiency (ϵ_det),1.0
+Low primary energy for stained cuboids in epoxy (25 nm/cut),1.0 keV
+High primary energy for stained cuboids in epoxy (25 nm/cut),1.4 keV
+Low primary energy for stained cuboids in epoxy (50 nm/cut),1.4 keV
+High primary energy for stained cuboids in epoxy (50 nm/cut),2.2 keV
+Density of epoxy embedding resin,1.22 g/cm3
+Composition of epoxy resin,C36H52O12
+Heavy atom stain concentration (Pb),3 atomic %
+Pb stain density in cuboids,3.24 atoms/nm3

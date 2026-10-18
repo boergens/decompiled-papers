@@ -1,0 +1,27 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 5E: mean resultant forces (y axis 'F_R' with an overbar,
+#   mN/mm) plotted versus block hardness for 50 nm (filled circles) and 35 nm (open squares) sections.
+# Axes calibrated on the ticks 30-70 mN/mm (labels 30-90; max residual 0.031) and 12-18 HV (max residual 0.0028).
+# A grey asterisk is printed above the VH Epon marker.
+# Columns: series = resin (colour key of Figure 5B); thickness = 50 nm (filled circles) or 35 nm (open squares), per
+#   the caption; marker; hardness_HV = x of the marker centre; mean_FR_mN_per_mm = y of the marker centre;
+#   bar_low / bar_high = lower and upper end of its vertical error bar (not defined in the caption; the main text,
+#   p.7, says of Figure 5E 'see standard deviation around the mean'; the bars are symmetric about the markers);
+#   flag = notes.
+# Provenance: tier 3, digitized from the embedded ~310 ppi JPEG (no vector data in the PDF) by fig5e_extract.py:
+#   approximate marker positions were picked by eye from a 2x zoom, then refined on the series colour mask
+#   (centroid for circles, outline bounding box for squares); bar ends = last pixel of the series colour along the
+#   marker's column (antialiased thin bars matched to the series colour blended with white).
+# Uncertainty: +-0.21 mN/mm in y and +-0.016 HV in x (2 px).
+series,thickness,marker,hardness_HV,mean_FR_mN_per_mm,bar_low,bar_high,flag
+MH Epon,50 nm,filled,12.3,60.189,57.958,62.345,
+MH Epon,35 nm,open,12.326,49.603,42.71,56.496,
+Spurr's,50 nm,filled,12.898,48.354,46.261,50.439,
+Spurr's,35 nm,open,12.927,39.473,35.817,43.232,
+Durcupan,50 nm,filled,13.303,47.016,39.89,54.094,
+Durcupan,35 nm,open,13.327,41.979,36.339,47.723,
+M Epon,50 nm,filled,13.599,59.618,57.018,62.136,
+M Epon,35 nm,open,13.623,45.53,37.906,53.154,
+LX 112,50 nm,filled,13.8,61.678,55.974,67.253,
+LX 112,35 nm,open,13.813,55.556,50.856,60.256,
+H Epon,50 nm,filled,14.601,60.165,52.214,68.089,
+VH Epon,50 nm,filled,17.702,83.885,82.188,85.53,marked with an asterisk (~100 nm sections, per the caption)

@@ -1,0 +1,17 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, TABLE 1 Epoxy formulations used for this study.
+# Footnote: All epoxy and hardener quantities are reported in grams (except where noted), even if original protocols report ml. Accelerator quantity is reported in milliliters.
+# Column groups as printed: Epoxy = EMbed 812, LX 112, A, ERL 4221, DER 736; Hardener = DDSA, NMA, NSA, B; Accelerator = BDMA, C.
+# Cells: numbers as printed; "−" = the dash printed in the table; empty = an empty cell in the PDF (DER 736 of the -var III row).
+row,EMbed 812,LX 112,A,ERL 4221,DER 736,DDSA,NMA,NSA,B,BDMA,C
+Density g/mL,1.146,−,−,1.162,1.14,1.005,1.232,1.03,−,−,−
+Weight per epoxide (WPE),144,144,−,133.2,184.6,−,−,−,−,−,−
+EMbed 812 medium (M) epon,4.20,−,−,−,−,2.95,1.67,−,−,0.300,−
+EMbed 812 medium hard (MH) epon,5.96,−,−,−,−,3.02,2.71,−,−,0.240,−
+EMbed 812 -var I epon,5.96,−,−,−,−,2.81,2.96,−,−,0.240,−
+EMbed 812 -var II epon,5.96,−,−,−,−,2.61,3.20,−,−,0.240,−
+EMbed 812 -var III epon,5.96,−,−,−,,2.41,3.45,−,−,0.240,−
+EMbed 812 –hard (H) epon,5.73,−,−,−,−,2.26,3.70,−,−,0.300,−
+EMbed 812 -very hard (VH) epon,5.73,−,−,−,−,−,5.24,−,−,0.275,−
+Durcupan,−,−,5.00,−,−,−,−,−,5.00,−,0.075
+LX 112,−,6.26,−,−,−,−,3.88,1.88,−,0.240,−
+Spurr’s,−,−,−,2.91,2.28,−,−,6.44,−,0.245,−

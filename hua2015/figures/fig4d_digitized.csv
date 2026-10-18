@@ -1,0 +1,78 @@
+# Hua, Laserstein & Helmstaedter 2015 Nat Commun 6:7923, Fig. 4d: Meas. (measured vote histogram), heat map of the number of
+#   skeleton edges ('# edges', colour, log scale) for each combination of total votes N and agreeing votes T.
+# Columns: N = 'Total votes for an edge (N)' (x, cells 0..7, left to right); T = 'Agreeing votes for an edge (T)'
+#   (y, cells 0..7, top to bottom); n_edges = '# edges' read from the colour bar; log10_n_edges; rgb_dist = RGB
+#   distance between the cell colour and the nearest colour-bar colour (JPEG noise; < ~15 is a clean match);
+#   cell_rgb = median colour of the cell; flag bottom_colour = the darkest blue at the bottom of the colour bar
+#   (1 edge or fewer; empty cells are drawn the same way, so 0 cannot be told apart); top_colour = the darkest
+#   red at the top of the bar (the lookup stops 2 px below the top, at 10^3.79; the true value may be higher).
+# Provenance: tier 3, digitized from the embedded 304 x 122 px JPEG (heat maps and colour bar; ~3.06 px per pt,
+#   ~15 px per cell) by fig4de_digitized_extract.py. Cell grid from the vector axis frames; colour bar calibrated on its
+#   vector tick marks at 1, 10, 100, 1,000 (log10, 10.288 pt per decade; bar top = 10^3.87).
+# Uncertainty: about +-0.06 in log10 (+-15 %): the colour map has discrete steps of ~0.06 decades (64-colour
+#   'jet' over 3.87 decades) and the JPEG shifts colours slightly. Values below ~1.15 cannot be resolved.
+N,T,n_edges,log10_n_edges,rgb_dist,cell_rgb,flag
+0,0,1.16,0.064,19.0,1 0 142,bottom_colour
+1,0,1.16,0.064,20.0,2 0 141,bottom_colour
+2,0,1.16,0.064,25.0,1 0 136,bottom_colour
+3,0,1.16,0.064,23.0,0 2 138,bottom_colour
+4,0,1.16,0.064,20.0,0 0 141,bottom_colour
+5,0,1.16,0.064,19.0,1 2 142,bottom_colour
+6,0,1.16,0.064,23.0,1 0 138,bottom_colour
+7,0,1.16,0.064,23.0,1 0 138,bottom_colour
+0,1,1.16,0.064,21.0,2 0 140,bottom_colour
+1,1,2.76e+03,3.440,4.5,237 1 2,
+2,1,158,2.198,3.3,207 254 45,
+3,1,75.8,1.879,2.7,126 255 129,
+4,1,75.8,1.879,2.7,125 254 128,
+5,1,56.5,1.752,7.2,96 254 159,
+6,1,87.7,1.943,2.1,143 254 111,
+7,1,136,2.134,1.4,191 254 65,
+0,2,1.16,0.064,19.0,1 0 142,bottom_colour
+1,2,1.16,0.064,21.0,1 0 140,bottom_colour
+2,2,636,2.803,2.5,253 142 2,
+3,2,87.7,1.943,0.5,145 254 111,
+4,2,52.5,1.720,4.5,79 254 175,
+5,2,60.8,1.784,6.7,96 254 157,
+6,2,45.3,1.656,5.2,61 254 190,
+7,2,87.7,1.943,2.1,143 254 112,
+0,3,1.16,0.064,19.0,1 0 142,bottom_colour
+1,3,1.16,0.064,19.0,1 0 142,bottom_colour
+2,3,1.16,0.064,18.0,1 0 143,bottom_colour
+3,3,636,2.803,2.1,254 143 2,
+4,3,136,2.134,2.4,190 255 63,
+5,3,75.8,1.879,2.1,125 255 129,
+6,3,70.4,1.848,5.6,111 255 142,
+7,3,102,2.007,2.2,159 255 97,
+0,4,1.16,0.064,19.0,1 0 142,bottom_colour
+1,4,1.16,0.064,19.0,1 0 142,bottom_colour
+2,4,1.16,0.064,19.0,1 0 142,bottom_colour
+3,4,1.16,0.064,21.0,2 0 140,bottom_colour
+4,4,987,2.994,2.2,255 94 3,
+5,4,212,2.325,3.2,238 255 17,
+6,4,136,2.134,2.4,190 255 65,
+7,4,158,2.198,4.2,207 255 49,
+0,5,1.16,0.064,19.0,1 0 142,bottom_colour
+1,5,1.16,0.064,19.0,1 0 142,bottom_colour
+2,5,1.16,0.064,19.0,1 0 142,bottom_colour
+3,5,1.16,0.064,19.0,1 0 142,bottom_colour
+4,5,1.16,0.064,18.0,1 0 143,bottom_colour
+5,5,1.53e+03,3.186,1.8,253 46 0,
+6,5,354,2.548,2.2,255 208 0,
+7,5,329,2.517,2.0,255 222 1,
+0,6,1.16,0.064,19.0,1 0 142,bottom_colour
+1,6,1.16,0.064,19.0,1 0 142,bottom_colour
+2,6,1.16,0.064,19.0,1 0 142,bottom_colour
+3,6,1.16,0.064,19.0,1 0 142,bottom_colour
+4,6,1.16,0.064,19.0,1 0 142,bottom_colour
+5,6,1.16,0.064,17.0,1 0 144,bottom_colour
+6,6,2.21e+03,3.345,1.4,251 2 0,
+7,6,736,2.867,4.6,253 127 4,
+0,7,1.16,0.064,19.0,1 0 142,bottom_colour
+1,7,1.16,0.064,19.0,1 0 142,bottom_colour
+2,7,1.16,0.064,19.0,1 0 142,bottom_colour
+3,7,1.16,0.064,19.0,1 0 142,bottom_colour
+4,7,1.16,0.064,19.0,1 0 142,bottom_colour
+5,7,1.16,0.064,19.0,1 0 142,bottom_colour
+6,7,1.16,0.064,19.0,1 0 142,bottom_colour
+7,7,6.18e+03,3.791,14.6,127 1 2,top_colour

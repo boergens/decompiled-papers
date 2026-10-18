@@ -1,0 +1,2 @@
+hua2015.pdf: https://www.nature.com/articles/ncomms8923.pdf; 41467_2015_BFncomms8923_MOESM728_ESM.pdf (SI): nature.com supplementary link, by curl, 2026-10-16.
+esm_zips/: Supplementary Software (Hua 2015 MOESM729; Mikula 2015 MOESM196) and Supplementary Data (Mikula MOESM195) from the nature.com article pages, by curl, 2026-10-17; unpacked in extracted/.

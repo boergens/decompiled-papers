@@ -1,0 +1,77 @@
+# He et al. 2018 Sci Rep 8:12985, Figure 2c: 'Corresponding intensity profiles for cuboids shown in (b)', one small
+#   bar chart per primary beam energy (0.8-2.2 keV, 0.1 keV steps). Shared axes: 'Relative intensity' (y, no numbers) and
+#   'Depth (nm)' (x, no numbers). Each chart has 4 bars; their colours match the four cuboids of Fig. 2a (blue 0-12.5 nm,
+#   red 12.5-25 nm, green 25-37.5 nm, purple 37.5-50 nm, from the colour key of panel a).
+# Columns: energy_keV (chart title); colour; layer (depth range of that cuboid, from panel a); bar_centre_px (x of the
+#   bar centre in the source image, for ordering only); height_px = bar height in source pixels above the chart's
+#   baseline (its bottom major gridline); height_frac = height as fraction of the chart's gridded box (0 = bottom,
+#   1 = top major gridline); height_major / height_minor = height in units of the chart's major / minor gridline
+#   spacing; n_major, n_minor = number of major (darker) and minor (fainter) unlabelled gridlines; major_px, minor_px
+#   = their median spacing in source pixels.
+#   The charts have no y numbers. Charts 0.8-1.4 keV have 2 major gridlines (one major interval of ~67 px, 5 minor
+#   steps); charts 1.5-2.2 keV have 3 (two major intervals of ~33.5 px). If the major gridline step is the same
+#   quantity in all charts, the y scale of the 1.5-2.2 keV charts is half that of the others; the figure does not
+#   say, so heights are given both in pixels and in gridline units.
+# Provenance: tier 3, digitized from the embedded raster image (no vector data in the PDF) by fig2c_extract.py.
+# Uncertainty: +-1 px in height_px (about +-0.01-0.02 in height_frac).
+energy_keV,colour,layer,bar_centre_px,height_px,height_frac,height_major,height_minor,n_major,n_minor,major_px,minor_px
+0.8,blue,0-12.5 nm,255.5,54,0.8157,0.814,4.1,2,4,66.34,13.17
+0.8,red,12.5-25 nm,293.5,10,0.151,0.1507,0.7593,2,4,66.34,13.17
+0.8,green,25-37.5 nm,330.5,9,0.1359,0.1357,0.6834,2,4,66.34,13.17
+0.8,purple,37.5-50 nm,369,9,0.1359,0.1357,0.6834,2,4,66.34,13.17
+0.9,blue,0-12.5 nm,553,59,0.8912,0.8893,4.478,2,4,66.34,13.18
+0.9,red,12.5-25 nm,591.5,8,0.1208,0.1206,0.6071,2,4,66.34,13.18
+0.9,green,25-37.5 nm,629.5,7,0.1057,0.1055,0.5313,2,4,66.34,13.18
+0.9,purple,37.5-50 nm,667,8,0.1208,0.1206,0.6071,2,4,66.34,13.18
+1.0,blue,0-12.5 nm,855,60,0.9063,0.9044,4.555,2,4,66.34,13.17
+1.0,red,12.5-25 nm,892.5,15,0.2266,0.2261,1.139,2,4,66.34,13.17
+1.0,green,25-37.5 nm,931,9,0.1359,0.1357,0.6832,2,4,66.34,13.17
+1.0,purple,37.5-50 nm,969.5,9,0.1359,0.1357,0.6832,2,4,66.34,13.17
+1.1,blue,0-12.5 nm,1154,59,0.8912,0.8893,4.478,2,4,66.34,13.18
+1.1,red,12.5-25 nm,1191,20,0.3021,0.3015,1.518,2,4,66.34,13.18
+1.1,green,25-37.5 nm,1230,9,0.1359,0.1357,0.683,2,4,66.34,13.18
+1.1,purple,37.5-50 nm,1268,9,0.1359,0.1357,0.683,2,4,66.34,13.18
+1.2,blue,0-12.5 nm,1454,58,0.863,0.8587,4.402,2,4,67.54,13.17
+1.2,red,12.5-25 nm,1492,31,0.4613,0.459,2.353,2,4,67.54,13.17
+1.2,green,25-37.5 nm,1530,10,0.1488,0.1481,0.759,2,4,67.54,13.17
+1.2,purple,37.5-50 nm,1568,10,0.1488,0.1481,0.759,2,4,67.54,13.17
+1.3,blue,0-12.5 nm,254.5,52,0.7849,0.7812,3.906,2,4,66.56,13.31
+1.3,red,12.5-25 nm,292,34,0.5132,0.5108,2.554,2,4,66.56,13.31
+1.3,green,25-37.5 nm,330.5,8,0.1208,0.1202,0.6009,2,4,66.56,13.31
+1.3,purple,37.5-50 nm,368.5,8,0.1208,0.1202,0.6009,2,4,66.56,13.31
+1.4,blue,0-12.5 nm,554,51,0.7698,0.7662,3.831,2,4,66.56,13.31
+1.4,red,12.5-25 nm,591.5,38,0.5736,0.5709,2.855,2,4,66.56,13.31
+1.4,green,25-37.5 nm,630,11,0.166,0.1653,0.8263,2,4,66.56,13.31
+1.4,purple,37.5-50 nm,668.5,8,0.1208,0.1202,0.601,2,4,66.56,13.31
+1.5,blue,0-12.5 nm,855,60,0.9057,1.803,9.085,3,8,33.28,6.605
+1.5,red,12.5-25 nm,892.5,50,0.7547,1.502,7.571,3,8,33.28,6.605
+1.5,green,25-37.5 nm,930.5,21,0.317,0.631,3.18,3,8,33.28,6.605
+1.5,purple,37.5-50 nm,969,10,0.1509,0.3005,1.514,3,8,33.28,6.605
+1.6,blue,0-12.5 nm,1154,61,0.9208,1.833,9.204,3,8,33.28,6.628
+1.6,red,12.5-25 nm,1192,52,0.7849,1.562,7.846,3,8,33.28,6.628
+1.6,green,25-37.5 nm,1228,28,0.4226,0.8413,4.225,3,8,33.28,6.628
+1.6,purple,37.5-50 nm,1267,9,0.1358,0.2704,1.358,3,8,33.28,6.628
+1.7,blue,0-12.5 nm,1454,56,0.8327,1.656,7.832,3,8,33.83,7.15
+1.7,red,12.5-25 nm,1492,55,0.8178,1.626,7.692,3,8,33.83,7.15
+1.7,green,25-37.5 nm,1530,33,0.4907,0.9756,4.615,3,8,33.83,7.15
+1.7,purple,37.5-50 nm,1568,11,0.1636,0.3252,1.538,3,8,33.83,7.15
+1.8,blue,0-12.5 nm,254,54,0.8158,1.626,8.153,3,8,33.21,6.623
+1.8,red,12.5-25 nm,292,51,0.7705,1.536,7.7,3,8,33.21,6.623
+1.8,green,25-37.5 nm,330,37,0.559,1.114,5.586,3,8,33.21,6.623
+1.8,purple,37.5-50 nm,367.5,14,0.2115,0.4216,2.114,3,8,33.21,6.623
+1.9,blue,0-12.5 nm,554,52,0.7739,1.534,7.295,3,8,33.91,7.128
+1.9,red,12.5-25 nm,591.5,49,0.7293,1.445,6.875,3,8,33.91,7.128
+1.9,green,25-37.5 nm,630,40,0.5953,1.18,5.612,3,8,33.91,7.128
+1.9,purple,37.5-50 nm,668.5,24,0.3572,0.7078,3.367,3,8,33.91,7.128
+2.0,blue,0-12.5 nm,855,48,0.7252,1.445,7.248,3,8,33.21,6.622
+2.0,red,12.5-25 nm,893,46,0.695,1.385,6.946,3,8,33.21,6.622
+2.0,green,25-37.5 nm,931.5,40,0.6043,1.205,6.04,3,8,33.21,6.622
+2.0,purple,37.5-50 nm,969.5,26,0.3928,0.7829,3.926,3,8,33.21,6.622
+2.1,blue,0-12.5 nm,1153,50,0.7554,1.506,7.556,3,8,33.21,6.618
+2.1,red,12.5-25 nm,1192,50,0.7554,1.506,7.556,3,8,33.21,6.618
+2.1,green,25-37.5 nm,1228,42,0.6345,1.265,6.347,3,8,33.21,6.618
+2.1,purple,37.5-50 nm,1266,27,0.4079,0.8131,4.08,3,8,33.21,6.618
+2.2,blue,0-12.5 nm,1454,44,0.6647,1.325,6.648,3,8,33.21,6.618
+2.2,red,12.5-25 nm,1492,45,0.6798,1.355,6.799,3,8,33.21,6.618
+2.2,green,25-37.5 nm,1530,39,0.5892,1.174,5.893,3,8,33.21,6.618
+2.2,purple,37.5-50 nm,1568,31,0.4683,0.9335,4.684,3,8,33.21,6.618

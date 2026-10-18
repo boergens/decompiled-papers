@@ -1,0 +1,16 @@
+# Hua, Laserstein & Helmstaedter 2015, Supplementary Table 2 (SI PDF p.5).
+# Title: Supplementary Table 2
+# Caption: Summary of staining experiments reported in the paper for assessing the variability of staining quality over cortex areas and experimentalists.
+# Text verbatim (line breaks inside cells joined with a space; double spaces in the scYH1059 row as in the text layer).
+Experimenter,"Species, brain region",Exp. ID,Exp. Date,Variation to standard protocol as in methods,Ultrastructural results,Screening results figure
+Hua,Mouse S1 cortex,scYH0009,2013/12/11,rOTO (ref. 18),"Poor penetration, good ultrastructure preservation, good membrane contrast",Fig. 1b
+Hua,Mouse S1 cortex,scYH0010,2013/12/11,rOTO (ref. 19),"Poor penetration, good ultrastructure preservation, good membrane contrast",Fig. 1c
+Hua,Mouse S1 cortex,scYH0053,2014/01/13,PATCO (ref. 2),"Good penetration, poor ultrastructure preservation, poor membrane contrast, charging",Fig. 1d
+Hua,Mouse S1 cortex,scYH0056,2014/01/22,No variation,"Penetration, contrast, ultrastructure (all good ) resin hardness (35 nm cut at border, soft core)",Fig. 1e Suppl Fig 2a
+Hua & Laserstein,Mouse S1 cortex,scPL0052,2014/08/14,"No accelerator during initial infiltration, Add accelerator on the next day","Penetration, contrast, ultrastructure (all good ) resin hardness (30 nm cut)",Traceability test
+Hua,Mouse s1 cortex,scYH1059,2014/01/22,No 2h incubation in UA at 50ºC,"Good penetration,  good ultrastructure preservation, slightly low membrane contrast",Suppl  Fig 2b
+Hua,Mouse S1 cortex,scYH1012,2015/05/07,"No accelerator during initial infiltration, Added accelerator on the next day instead","Penetration, contrast, ultrastructure (all good )",Fig. 2 Suppl Fig. 1
+Laserstein,Mouse S1 cortex,scPL0066,2014/08/25,No variation,"Penetration, contrast, ultrastructure (all good ) resin hardness (not tested)",Suppl Fig. 3a
+Gour,Mouse S1 cortex,scAG0008,2014/10/20,No variation,"Penetration, contrast, ultrastructure (all good ) resin hardness (not tested)",Suppl Fig. 3b
+Karimi,Mouse PPC,ppcAK0004,2014/10/21,No variation,"Penetration, contrast, ultrastructure (all good ), charging effect at the edge area, resin hardness (not tested)",Suppl Fig. 3c
+Karimi,Mouse PPC,ppcAK0003,2014/10/21,No variation,"Penetration, contrast, ultrastructure (all good ) resin hardness (not tested)",Suppl Fig. 3d

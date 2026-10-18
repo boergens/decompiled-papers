@@ -1,0 +1,16 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 1, Part III. Resin infiltration & Embedding, left half: Spurr's resin
+#   (SI pp. 15-16), recipe: 'Spurr’s resin 4.1 g ERL 4221, 0.95 g DER 736, 5.9 g NSA, 113 μl DMAE'.
+# Step 7 'embed': '70°C, 3 days' spans the 2 mm and Hemisphere/WB columns (given under 2 mm).
+# Note printed below the Spurr's steps: 'For all resin steps at 4°C, the tubes were taken out of fridge for 30 min (cap closed) before change to the solution of the next step to warm up to room temperature to avoid moisture.'
+Step,Conc. (in acetone),2 mm,Hemisphere /WB
+1,25% resin,"8 h/o.n., 4°C","24 h / 2 days, 4°C"
+2,50% resin,"8 h/o.n., 4°C","24 h / 2 days, 4°C"
+3,75% resin,"8 h/o.n., 4°C","24 h / 3 days, 4°C"
+4,90% resin,n/a,"2 days, 4°C,
+change every 8h/o.n. / 24 h"
+5,95% resin,n/a,"3 days / 4 days, 4°C,
+change every 8h/o.n. / 24 h"
+6,100% resin,"2 days, 4°C;
+change every 8h/o.n.","3 days / 6 days, 4°C,
+change every 8h/o.n. / 24 h"
+7,embed,"70°C, 3 days",

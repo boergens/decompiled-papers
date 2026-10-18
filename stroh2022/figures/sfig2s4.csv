@@ -1,0 +1,72 @@
+# Ströh et al. 2022 eLife, Figure 2—figure supplement 4: fitted parameters of n=13 samples (grey dots) and their
+#   mean (black bar) with error bar (upward only).
+# Columns: parameter (as printed under the bar); unit (as printed); kind (bar (mean) | error bar top | dot);
+#   value in the printed unit; x_px = horizontal position of a dot in the image (dots are jittered sideways).
+# Provenance: tier 3, digitized from the eLife figure-supplement JPEG by sfig2s4_extract.py; y calibrated on the 3
+#   tick marks (0, 5, 10; labels read by eye), max residual 0.084 (the ticks are not evenly spaced).
+#   Bar top = highest row where the whole bar width is black; error bar top = highest dark pixel in the bar centre.
+#   Dots: Hough circles on the grey mask; overlapping dots merge (C^0 dots overlap almost completely), so the dot
+#   count per parameter is below 13.
+# Uncertainty: ±0.13 units (2 px plus the tick-spacing residual).
+parameter,unit,kind,value,x_px
+D^e,10^4 μm^2 min^-1,bar (mean),3.3548,
+D^e,10^4 μm^2 min^-1,error bar top,5.5343,
+D^e,10^4 μm^2 min^-1,dot,9.5068,148
+D^e,10^4 μm^2 min^-1,dot,4.8195,154
+D^e,10^4 μm^2 min^-1,dot,3.9524,150
+D^e,10^4 μm^2 min^-1,dot,3.5071,138
+D^e,10^4 μm^2 min^-1,dot,3.4368,152
+D^e,10^4 μm^2 min^-1,dot,3.015,160
+D^e,10^4 μm^2 min^-1,dot,2.3822,144
+D^e,10^4 μm^2 min^-1,dot,1.7963,162
+D^e,10^4 μm^2 min^-1,dot,1.6088,136
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,bar (mean),1.8549,
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,error bar top,2.722,
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,3.929,488
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,2.5931,506
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,2.3119,496
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,1.9135,504
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,1.7025,478
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,1.2572,500
+k^unmask,10^-5 mm^3 nmol^-1 min^-1,dot,1.1869,482
+k^on,10^-4 mm^3 nmol^-1 min^-1,bar (mean),3.3313,
+k^on,10^-4 mm^3 nmol^-1 min^-1,error bar top,4.3157,
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,4.6555,834
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,4.2336,850
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,3.9993,846
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,3.5306,854
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,3.2962,824
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,3.2728,848
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,3.2728,838
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,2.9212,832
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,2.265,844
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,2.0775,840
+k^on,10^-4 mm^3 nmol^-1 min^-1,dot,1.8197,826
+C^0,10^2 nmol mm^-3,bar (mean),0.7768,
+C^0,10^2 nmol mm^-3,error bar top,0.84711,
+C^0,10^2 nmol mm^-3,dot,0.76509,1146
+C^0,10^2 nmol mm^-3,dot,0.76509,1116
+S^0,10^2 nmol mm^-3,bar (mean),3.4954,
+S^0,10^2 nmol mm^-3,error bar top,3.8469,
+S^0,10^2 nmol mm^-3,dot,3.9993,1422
+S^0,10^2 nmol mm^-3,dot,3.8352,1394
+S^0,10^2 nmol mm^-3,dot,3.179,1394
+S^0,10^2 nmol mm^-3,dot,2.9446,1418
+M^0,10^2 nmol mm^-3,bar (mean),1.4096,
+M^0,10^2 nmol mm^-3,error bar top,1.7846,
+M^0,10^2 nmol mm^-3,dot,2.3119,1684
+M^0,10^2 nmol mm^-3,dot,1.4916,1698
+M^0,10^2 nmol mm^-3,dot,1.4916,1680
+M^0,10^2 nmol mm^-3,dot,1.1635,1672
+M^0,10^2 nmol mm^-3,dot,1.1401,1692
+H,10^2 μm,bar (mean),3.7298,
+H,10^2 μm,error bar top,4.7844,
+H,10^2 μm,dot,5.2414,1978
+H,10^2 μm,dot,4.5149,1984
+H,10^2 μm,dot,4.3274,1962
+H,10^2 μm,dot,4.093,1968
+H,10^2 μm,dot,3.5306,1964
+H,10^2 μm,dot,3.2259,1960
+H,10^2 μm,dot,2.8743,1986
+H,10^2 μm,dot,2.2181,1956
+H,10^2 μm,dot,1.7728,1974

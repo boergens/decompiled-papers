@@ -1,0 +1,10 @@
+# Song et al. 2023 Nat Methods, Extended Data Fig. 4a (plot at right): Depth (mm) of OsO4 diffusion into a mouse
+#   hemisphere at 4 degC (uCT) vs Incubation Time (h); points joined by straight lines.
+# Provenance: tier 3, digitized from the raster figure (PDF p. 16) by edfig4a_extract.py; uncertainty +-0.3 h, +-0.02 mm.
+#   Axis fits: x max residual 0.05 h, y max residual 0.004 mm. Methods: time points 17, 24, 40 h.
+# Columns: time_h; depth_mm; how.
+time_h,depth_mm,how
+0.03,-0.000,"origin, by eye (marker on the axis corner)"
+16.99,1.799,marker centroid
+23.99,2.000,marker centroid
+39.95,2.399,marker centroid

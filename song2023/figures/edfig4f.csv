@@ -1,0 +1,10 @@
+# Song et al. 2023 Nat Methods, Extended Data Fig. 4f: Fe wt.% (EDS) at Periphery and Center of the samples of d,e;
+#   'no CaC' (dashed line) and 'CaC wash' (solid line), mean +- s.d. (Methods: s.d. as obtained from the EDS system).
+# Provenance: tier 3, digitized from the raster figure (PDF p. 16) by edfig4f_extract.py; uncertainty +-0.002 wt.%.
+#   y axis fitted on 3 ticks (max residual 0.0004). No source data for this panel in the Edmond data set.
+# Columns: series; location; fe_wt_pct; half_errorbar; how.
+series,location,fe_wt_pct,half_errorbar,how
+CaC wash,Center,0.0460,0.0070,error-bar caps
+CaC wash,Periphery,0.0474,0.0036,error-bar caps
+no CaC,Center,0.0070,,end of dashed line (no error bar visible)
+no CaC,Periphery,0.0849,0.0107,error-bar caps

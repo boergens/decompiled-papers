@@ -1,0 +1,16 @@
+# Hua, Li & Han 2026, Methods in Microscopy, Table 1 (p. 3, printed rotated by 90 degrees).
+# Caption: "Table 1: Summary of reduced osmium-based staining methods."
+# Column header spanning the protocol columns: "Published protocols".
+# Footnote: "GA, glutaraldehyde; Osm, osmolarity; FeCN, ferrocyanide. aIntermediate wash step is not applied. bOptional. Additional OsO4 step was used to enhance TCH reactivity [33], [34]. cAll steps at 4 °C. Necessary for improved tissue integrity."
+# Footnote marks are written as ^a, ^b, ^c; OsO4 = OsO with subscript 4. Transcribed from the page image
+#   (the PDF text layer drops the subscript 4 in the table body).
+# Column "step": the row label as printed ("rO" and "OTO" are printed only on the first line of their blocks;
+#   the following lines are left empty here as in the table). One row per printed table line, in order.
+# "Pulloto et al. [29]" is printed as such (reference [29] is Pallotto et al.).
+step,Deerinck et al. [24],Mikula et al. [27],Hua et al. [26],Pulloto et al. [29],Polilov et al. [30]^c,Song et al. [31]^c,Karlupia et al. [32]
+Fixation,PFA + GA,GA + sucrose,PFA + GA,PFA + GA (high Osm),GA + OsO4,PFA + GA,PFA + GA (high Osm)
+rO,,,OsO4,,OsO4,OsO4,OsO4
+,OsO4 + FeCN,OsO4 + FeCN + 10 % formamide,FeCN^a,OsO4 + FeCN,FeCN^a,FeCN,FeCN
+OTO,,OsO4,(OsO4)^b,,,OsO4,
+,TCH,Pyrogallol,TCH,TCH,,Pyrogallol,TCH
+,OsO4,OsO4,OsO4,OsO4,,OsO4,OsO4

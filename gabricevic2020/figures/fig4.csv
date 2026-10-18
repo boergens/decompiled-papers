@@ -1,0 +1,28 @@
+# Gabričević, Lente & Fábián 2020, J Phys Org Chem 33:e4045, Figure 4: dependence of k_obs on the chloroethylene
+#   concentration in the fast step of the reaction with osmium(VIII). Scatter plot, no error bars, no fit line.
+# Columns: series (paper's legend names); substrate_mol_dm3 = [Substrate] (mol/dm3); kobs_s-1 = k_obs (s-1);
+#   marker_w_px, marker_h_px = size of the marker blob in the source image; note.
+# Provenance: tier 3, digitized from the embedded raster image (1003 x 724 px; the PDF has no vector data for the
+#   plot) by fig4_extract.py. x calibrated on the left frame (0.000) and 4 labelled ticks, max residual 8.9e-06;
+#   y on the bottom frame (0.0) and 3 labelled ticks (0.2-0.6), max residual 0.00025. Marker centre = centre of
+#   the bounding box of the colour-masked marker.
+# Uncertainty: about +-0.00005 mol/dm3 in x and +-0.0025 s-1 in y (2 px); more for markers
+#   partly hidden by another marker (flagged), whose centre comes from the visible part only.
+series,substrate_mol_dm3,kobs_s-1,marker_w_px,marker_h_px,note
+TCE,0.00061817,0.61747,22,18,
+TCE,0.00097431,0.54647,22,19,
+TCE,0.0014831,0.57725,22,18,
+TCE,0.0021954,0.52636,14,19,irregular blob (partly hidden, or reshaped where the fit line was removed); centre from the edges bordering white paper + median marker size
+TCE,0.003798,0.61747,22,18,
+cis-DCE,0.0019791,0.53013,23,23,
+cis-DCE,0.0029967,0.54018,23,23,
+cis-DCE,0.0049936,0.4497,22,23,
+cis-DCE,0.0069906,0.53013,23,23,
+cis-DCE,0.010005,0.56971,24,22,
+cis-DCE,0.020015,0.66082,23,23,
+trans-DCE,0.0019919,0.43022,18,18,
+trans-DCE,0.0029967,0.57034,19,19,
+trans-DCE,0.0049936,0.47106,18,17,
+trans-DCE,0.0070033,0.49054,18,18,
+trans-DCE,0.0099924,0.49054,19,18,
+trans-DCE,0.020015,0.47044,17,18,

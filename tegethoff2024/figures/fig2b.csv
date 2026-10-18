@@ -1,0 +1,59 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 2B: hardness of EMbed 812 for different ratios of the
+#   hardeners NMA and DDSA (black dots).
+# Columns: nma_ddsa_ratio = the x tick label the dot belongs to (the x axis is categorical: the five labels sit at
+#   equally spaced ticks); x_offset = horizontal offset from that tick in units of the tick spacing (the plot places equal
+#   values side by side); hardness_HV = Vickers hardness; n_in_blob = markers in the merged blob this point was split
+#   from (1 = isolated marker; >1 = overlapping markers split with k-means, positions approximate).
+# Provenance: tier 3, digitized from the embedded ~349 ppi JPEG (no vector data in the PDF) by fig2b_extract.py.
+#   y calibrated on the 12 tick marks 9.5-15 HV (labels 10-15 at the integer ticks), max residual 0.006 HV.
+# Uncertainty: about +-0.02 HV (2 px). Fully overlapping markers cannot be seen; counts are lower limits.
+nma_ddsa_ratio,x_offset,hardness_HV,n_in_blob
+1.34,-0,11.7,1
+1.34,0.046,11.799,1
+1.34,-0.044,11.8,1
+1.34,-0.044,11.9,1
+1.34,0.046,11.9,1
+1.34,0.046,12.298,1
+1.34,-0.045,12.299,1
+1.34,0.046,12.402,1
+1.34,-0.045,12.403,1
+1.34,0.001,12.602,1
+1.57,0.002,10.1,1
+1.57,0.001,11.101,1
+1.57,0.002,11.599,1
+1.57,0.002,11.8,1
+1.57,0.001,12.401,1
+1.57,0.002,13.099,1
+1.57,0.002,13.299,1
+1.57,0.087,13.299,1
+1.57,-0.085,13.299,1
+1.83,0.001,11.101,1
+1.83,-0.043,12.2,1
+1.83,0.047,12.202,1
+1.83,0.001,12.602,1
+1.83,0.001,12.698,1
+1.83,0.001,13.2,1
+1.83,-0.044,13.5,1
+1.83,0.046,13.5,1
+1.83,-0.044,13.6,1
+1.83,0.046,13.6,1
+2.11,0.001,11.9,1
+2.11,0.003,11.999,1
+2.11,0.002,12.4,1
+2.11,-0.044,12.801,1
+2.11,0.046,12.801,1
+2.11,0.047,13.901,1
+2.11,-0.042,13.901,1
+2.11,0.002,13.998,1
+2.11,0.002,14.101,1
+2.11,0.002,14.398,1
+2.44,0.002,11.9,1
+2.44,0.002,13.002,1
+2.44,0.002,13.201,1
+2.44,0.002,13.4,1
+2.44,0.003,13.5,1
+2.44,0.001,14.199,1
+2.44,0.046,14.398,1
+2.44,-0.041,14.398,1
+2.44,-0.042,14.5,1
+2.44,0.046,14.501,1

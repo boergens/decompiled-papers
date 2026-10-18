@@ -1,0 +1,9 @@
+# Templier 2019 eLife 8:e45696, Table 3 (PDF p.10). Tracer-antibody library.
+# LT: Life Technologies. VL: Vector Laboratories. JI: Jackson Immunoresearch.
+# DOI: https://doi.org/10.7554/eLife.45696.020
+# Transposed for tidiness: one row per antigen (the printed table has antigens as columns). Two antibodies in one cell are separated by " / ".
+Antigen,Antigen catalogue,Antibody species
+Alexa 488,LT #D-22910,rabbit (LT #A-11094) / rat (Biotem #custom)
+FITC,LT #D-1820,mouse / rabbit (LT #A-889)
+Texas Red,LT #D-3328,goat (VL #SP-0602)
+BDA,LT #D-1956,mouse (JI #200-002-211)

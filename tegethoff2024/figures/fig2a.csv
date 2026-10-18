@@ -1,0 +1,207 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 2A: hardness values from independent blocks per resin.
+# Columns: series = resin as labelled under the axis (EMbed 812 'medium hard', 'hard', 'very hard', LX 112, Durcupan,
+#   Spurr's); block = 1..4, the block (tick position) within the resin, left to right; x_tick = horizontal position in
+#   units of the x tick marks (tick 1 = first tick right of the y axis; the x axis has ticks but no numbers: it is
+#   categorical, and small offsets from the integer are the plot's side-by-side placement of equal values);
+#   hardness_HV = Vickers hardness (y axis); n_in_blob = number of markers in the merged blob this point was split from
+#   (1 = an isolated marker; >1 = overlapping markers, split with k-means by blob area, positions approximate).
+# Provenance: tier 3, digitized from the embedded ~349 ppi JPEG (the PDF has no vector data for this plot) by
+#   fig2a_extract.py. y calibrated on the 9 tick marks 10-18 HV, max residual 0.005 HV.
+# Uncertainty: about +-0.04 HV for isolated markers (2 px; marker diameter ~5.5 px = 0.12 HV);
+#   markers that overlap completely cannot be seen, so the counts are lower limits (caption: n = 8-20 points per block face).
+# Series colours: MATLAB default colours (blue, orange, grey, yellow, purple, green).
+series,block,x_tick,hardness_HV,n_in_blob
+medium hard,1,1.9294,12.905,7
+medium hard,1,1.9943,12.6,7
+medium hard,1,1.9998,12.799,7
+medium hard,1,2.0025,9.9248,1
+medium hard,1,2.0025,11.096,1
+medium hard,1,2.0025,12.396,7
+medium hard,1,2.0026,11.696,1
+medium hard,1,2.0027,12.502,7
+medium hard,1,2.0042,9.6757,1
+medium hard,1,2.0097,12.696,7
+medium hard,1,2.0527,12.9,7
+medium hard,2,2.9393,13.299,2
+medium hard,2,2.9968,12.097,2
+medium hard,2,2.9968,13.098,2
+medium hard,2,2.9981,12.598,1
+medium hard,2,3,11.798,1
+medium hard,2,3,11.995,2
+medium hard,2,3,12.396,1
+medium hard,2,3,12.799,1
+medium hard,2,3,12.996,2
+medium hard,2,3.0608,13.299,2
+medium hard,3,3.9946,11.396,1
+medium hard,3,3.9946,12.398,1
+medium hard,3,3.9961,12.592,2
+medium hard,3,3.9972,12.696,2
+medium hard,3,3.9976,9.9248,1
+medium hard,3,3.9976,13.202,4
+medium hard,3,3.9984,12.989,4
+medium hard,3,4.0003,13.097,4
+medium hard,3,4.0039,12.891,4
+medium hard,4,4.9447,12.798,10
+medium hard,4,4.9488,12.906,10
+medium hard,4,4.9981,12.306,10
+medium hard,4,4.9998,12.413,10
+medium hard,4,5.0021,12.509,10
+medium hard,4,5.0028,12.204,10
+medium hard,4,5.0028,12.605,10
+medium hard,4,5.0081,12.999,10
+medium hard,4,5.0137,12.712,10
+medium hard,4,5.0746,12.85,10
+hard,1,6.9194,14.399,3
+hard,1,6.9947,13.9,1
+hard,1,6.9947,14.904,4
+hard,1,6.9961,14.594,4
+hard,1,6.9974,14.301,3
+hard,1,6.9976,14.1,1
+hard,1,7.0003,14.695,4
+hard,1,7.0003,14.801,4
+hard,1,7.0895,14.398,3
+hard,2,7.9107,14.906,6
+hard,2,7.9134,14.801,6
+hard,2,7.9923,15.101,6
+hard,2,8.0026,15.4,1
+hard,2,8.0055,14.997,6
+hard,2,8.0745,14.801,6
+hard,2,8.0825,14.903,6
+hard,3,8.92,14.592,8
+hard,3,8.9455,14.692,8
+hard,3,8.9597,14.802,8
+hard,3,8.9969,15.1,8
+hard,3,9.0001,14.995,8
+hard,3,9.0096,14.887,8
+hard,3,9.0746,14.737,8
+hard,3,9.0804,14.599,8
+hard,4,9.9237,14.603,3
+hard,4,9.9481,15.001,2
+hard,4,9.9947,15.605,1
+hard,4,9.9977,15.204,1
+hard,4,10,14.503,3
+hard,4,10.064,15.004,2
+hard,4,10.09,14.605,3
+very hard,1,11.938,17.107,3
+very hard,1,11.938,17.501,2
+very hard,1,11.939,17.304,2
+very hard,1,11.997,16.997,3
+very hard,1,12,18.205,1
+very hard,1,12,17.698,2
+very hard,1,12,17.805,2
+very hard,1,12.061,17.304,2
+very hard,1,12.062,17.107,3
+very hard,1,12.062,17.501,2
+very hard,2,12.913,17.403,7
+very hard,2,12.938,17.299,7
+very hard,2,12.999,17.504,7
+very hard,2,13.001,17.804,1
+very hard,2,13.002,18.306,1
+very hard,2,13.003,17.203,7
+very hard,2,13.003,17.609,7
+very hard,2,13.072,17.317,7
+very hard,2,13.091,17.416,7
+very hard,3,13.909,17.308,6
+very hard,3,13.93,17.102,6
+very hard,3,13.993,17.208,6
+very hard,3,13.998,17,6
+very hard,3,13.999,17.807,1
+very hard,3,13.999,18.107,1
+very hard,3,13.999,18.406,1
+very hard,3,14.059,17.105,6
+very hard,3,14.077,17.308,6
+LX 112,1,15.871,13.901,4
+LX 112,1,15.942,14.503,4
+LX 112,1,15.999,14.606,4
+LX 112,1,16.001,13.802,4
+LX 112,1,16.003,14.401,4
+LX 112,1,16.004,14.801,1
+LX 112,1,16.011,13.907,4
+LX 112,1,16.071,14.503,4
+LX 112,1,16.136,13.898,4
+LX 112,2,16.908,14.603,4
+LX 112,2,16.93,13.907,4
+LX 112,2,17,13.8,4
+LX 112,2,17,14.503,4
+LX 112,2,17.003,14.1,1
+LX 112,2,17.004,14.703,4
+LX 112,2,17.006,13.697,4
+LX 112,2,17.057,13.901,4
+LX 112,2,17.081,14.599,4
+LX 112,3,17.912,14.705,5
+LX 112,3,17.919,14.098,2
+LX 112,3,18,13.902,1
+LX 112,3,18,14.503,5
+LX 112,3,18,14.61,5
+LX 112,3,18,14.801,5
+LX 112,3,18.082,14.098,2
+LX 112,3,18.084,14.705,5
+Durcupan,1,19.933,12.201,2
+Durcupan,1,19.998,11.396,6
+Durcupan,1,20,11.798,6
+Durcupan,1,20.001,11.293,6
+Durcupan,1,20.002,11.7,6
+Durcupan,1,20.003,11.604,6
+Durcupan,1,20.003,11.497,6
+Durcupan,1,20.004,11.998,1
+Durcupan,1,20.052,12.2,2
+Durcupan,2,20.996,11.894,5
+Durcupan,2,20.997,11.605,2
+Durcupan,2,20.997,12.201,5
+Durcupan,2,21,11.399,1
+Durcupan,2,21,11.702,2
+Durcupan,2,21,11.991,5
+Durcupan,2,21,12.096,5
+Durcupan,2,21,12.303,5
+Durcupan,2,21,12.601,1
+Durcupan,2,21,12.799,1
+Durcupan,3,21.903,11.797,4
+Durcupan,3,21.926,12.096,2
+Durcupan,3,21.946,11.904,4
+Durcupan,3,21.998,12.396,1
+Durcupan,3,22.06,11.888,4
+Durcupan,3,22.087,12.096,2
+Durcupan,3,22.108,11.794,4
+Durcupan,4,22.911,12.098,4
+Durcupan,4,22.914,12.799,2
+Durcupan,4,22.998,11.901,4
+Durcupan,4,23.002,12.297,3
+Durcupan,4,23.003,12.396,3
+Durcupan,4,23.003,12.499,3
+Durcupan,4,23.006,12.007,4
+Durcupan,4,23.075,12.799,2
+Durcupan,4,23.079,12.099,4
+Spurr's,1,24.928,10.999,2
+Spurr's,1,24.947,11.899,3
+Spurr's,1,24.97,12.013,3
+Spurr's,1,24.996,11.597,1
+Spurr's,1,24.996,10.705,2
+Spurr's,1,24.999,10.598,2
+Spurr's,1,25.076,11.935,3
+Spurr's,1,25.088,10.999,2
+Spurr's,2,25.927,12.201,3
+Spurr's,2,25.93,11.095,2
+Spurr's,2,26.004,10.698,1
+Spurr's,2,26.006,9.8953,1
+Spurr's,2,26.006,11.297,1
+Spurr's,2,26.006,11.9,1
+Spurr's,2,26.006,12.303,3
+Spurr's,2,26.056,11.097,2
+Spurr's,2,26.098,12.202,3
+Spurr's,3,26.922,11.991,4
+Spurr's,3,26.935,12.096,4
+Spurr's,3,27,10.892,4
+Spurr's,3,27,10.99,4
+Spurr's,3,27,11.201,4
+Spurr's,3,27,11.098,4
+Spurr's,3,27.066,12.096,4
+Spurr's,3,27.079,11.991,4
+Spurr's,4,27.869,12.096,8
+Spurr's,4,27.943,11.92,8
+Spurr's,4,27.978,12.029,8
+Spurr's,4,27.995,12.174,8
+Spurr's,4,27.996,11.597,1
+Spurr's,4,27.997,12.296,8
+Spurr's,4,28,11.808,8
+Spurr's,4,28.075,11.928,8
+Spurr's,4,28.117,12.083,8

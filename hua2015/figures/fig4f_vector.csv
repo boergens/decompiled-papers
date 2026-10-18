@@ -1,0 +1,58 @@
+# Hua, Laserstein & Helmstaedter 2015 Nat Commun 6:7923, Fig. 4f: fitted distribution of skeleton-edge difficulty
+#   (edge probability) p(p_e); one blue line on a log y axis.
+# Columns: segment = index of the separate drawn sub-path (left to right; the line is only visible where it rises
+#   above the bottom of the axis box); p_e = edge probability (axis 'p_e', linear, ticks labelled 0 and 1);
+#   p_pe = p(p_e) (axis 'p(p_e)', log10, ticks labelled 10^-1, 10^1, 10^3); flag: below_axis = vertex lies on
+#   the bottom frame of the plot (10^-1), i.e. the true value is <= 10^-1 (possibly 0) and was clipped;
+#   at_top = vertex on the top of the axis box (10^3), true value may be larger.
+# Provenance: tier 2, vector paths in the PDF (fig4f_vector_extract.py). Every vertex of the 15 blue (0.5 pt) sub-paths;
+#   x from the ticks at p_e=0 and 1 (check: middle tick -> 0.5004); y from 5 decade ticks, max residual
+#   6.8e-05 decades.
+# Uncertainty: exact up to the PDF's coordinate precision (0.001 pt = 1.6e-5 in p_e, 1e-4 decades in y).
+segment,p_e,p_pe,flag
+1,0.00002,73.039,
+1,0.00002,0.099674,below_axis
+2,0.01426,0.099674,below_axis
+2,0.01569,0.18074,
+2,0.01639,0.099674,below_axis
+3,0.03561,0.099674,below_axis
+3,0.03774,0.37485,
+3,0.04485,0.099674,below_axis
+4,0.05696,0.099674,below_axis
+4,0.06123,0.70052,
+4,0.06551,0.099674,below_axis
+5,0.07473,0.099674,below_axis
+5,0.07974,1.7181,
+5,0.08541,0.099674,below_axis
+6,0.09610,0.099674,below_axis
+6,0.10108,0.64032,
+6,0.10676,0.099674,below_axis
+7,0.13666,0.099674,below_axis
+7,0.13809,0.13367,
+7,0.13952,0.099674,below_axis
+8,0.29182,0.099674,below_axis
+8,0.30037,0.59233,
+8,0.30892,0.099674,below_axis
+9,0.58222,0.099674,below_axis
+9,0.59504,2.0251,
+9,0.60784,0.099674,below_axis
+10,0.74663,0.099674,below_axis
+10,0.75517,0.88196,
+10,0.76371,0.099674,below_axis
+11,0.82563,0.099674,below_axis
+11,0.83487,1.965,
+11,0.84270,0.099674,below_axis
+12,0.90249,0.099674,below_axis
+12,0.90960,6.7374,
+12,0.91815,0.099674,below_axis
+13,0.93095,0.099674,below_axis
+13,0.93877,3.0682,
+13,0.94734,16.823,
+13,0.95515,0.724,
+13,0.95871,0.099674,below_axis
+14,0.98720,0.099674,below_axis
+14,0.98861,0.27477,
+14,0.99217,0.44596,
+14,0.99360,0.099674,below_axis
+15,1.00000,0.099674,below_axis
+15,1.00000,999.74,at_top

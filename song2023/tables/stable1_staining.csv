@@ -1,0 +1,72 @@
+# Song et al. 2023 Nat Methods, Supplementary Table 1: Detailed protocols for mouse & human 2 mm, mouse hemisphere and
+#   whole brain sample staining and resin embedding. Part I. Staining. (Source: 41592_2023_1866_MOESM1_ESM.pdf pp. 13-15.)
+# Caption lines printed above the table: 'Samples sized 2 mm were stained in 2 ml Eppendorf tubes, hemispheres / whole
+#   brains were stained in 50 ml tubes. All steps were at room temperature (RT) unless otherwise noted. From step 3 (FeCN)
+#   onwards, all tubes were covered with aluminum foil.'
+# Footnote: '* The dehydration and resin infiltration of the human sample can be found in the method part of the main text.'
+# Transcribed from the PDF text layer and checked against the page images; a line break inside a cell marks a blank
+#   line (paragraph break) in the printed cell. Sub/superscripts are written inline (OsO4, H2O, mm3).
+# The Notes cell of step 12a spans steps 12a and 12b in the PDF; it is given in 12a only (12b empty).
+# Abbreviations: h/o.n. = h / overnight (as printed); CaC = 0.15 M sodium cacodylate buffer; FeCN = potassium ferrocyanide.
+Step,Solution,2 mm,Human* (2*3*2 mm3),Hemisphere (H),Whole Brain (WB),Notes
+1a,"OsO4
+2% in 0.15 M CaC, pH 7.4",n/a,n/a,"72 h, 4°C","96 h, 4°C",
+1b,"OsO4
+2% in 0.15 M CaC, pH 7.4",24 h,"22 h
+(2 h less in order to keep time schedule practical)",n/a,n/a,
+2,"CaC
+0.15 M, pH 7.4","1.5-2 h, 4°C
+change every 0.5 h","2 h, 4°C
+change every 20 min
+(rinse more frequent)","96 h, 4°C
+change every 4 h/o.n.","168 h, 4°C
+change every 4 h/o.n.",
+3,"FeCN
+2.5% in 0.15 M CaC, pH 7.4","overnight (17 h) , 4°C","overnight (22 h) , 4°C
+(extended)","72 h, 4°C
+change every 24 h","72 h, 4°C
+change every 24 h","Light sensitive. H4-6 used 48h, but 72h recommended"
+4,"CaC
+0.15 M, pH 7.4","1.5-2 h
+change every 0.5 h",(omitted to fit into practical time schedule),"48 h
+change every 4 h/o.n.","96 h
+change every 4 h/o.n.",
+5,"OsO4
+2% in 0.15 M CaC, pH 7.4",3 h,"6 h
+(extended)",48 h,48 h,
+6,"CaC
+0.15 M, pH 7.4","0.5-1 h
+change every 0.5 h",0.5 h,"24 h
+change every 4 h/o.n.","72 h
+change every 4 h/o.n.",
+7,H2O,"1-2 h
+change every 0.5 h","1 h
+change every 20 min (rinse more frequent)","24 h
+change every 4 h/o.n.","48 h
+change every 4 h/o.n.",
+8,"Pyrogallol
+4% in H2O","overnight (17 h)
+change every 4h/o.n.","overnight (18 h)
+change once 2 h after the initial pg to keep time schedule practical",24 h,24 h,Freshly prepared; light sensitive
+9,H2O,"1-2 h
+change every 0.5 h","1 h
+change every 20 min","24 h
+change every 4 h/o.n.","48 h
+change every 4 h/o.n.",
+10,"OsO4,H2O
+2% in H2O",6 h,6 h,48 h,96 h,"Was 24h for H4-6, but 48h (H13) recommended"
+11,H2O,"1 h
+change every 0.5 h","1 h
+change every 0.5 h","24 h
+change every 4 h/o.n.","48 h
+change every 4 h/o.n.",
+12a,"Uranyl Acetate
+4% in H2O","overnight (17 h), 4°C","overnight (14 h), 4°C
+(shortened to keep time schedule practical)","48 h, 4°C","48 h, 4°C","Light sensitive. UA solution was not changed for steps 12a and 12b, only the temperature was changed."
+12b,"Uranyl Acetate
+4% in H2O","2 h, 50°C","2 h, 50°C","5 h, 50°C","5 h, 50°C",
+13,H2O,"1 h
+change every 0.5 h","1 h
+change every 20 min (rinse more frequent)","24 h
+change every 4 h/o.n.","48 h
+change every 4 h/o.n.",

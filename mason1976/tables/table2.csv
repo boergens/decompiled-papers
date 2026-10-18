@@ -1,0 +1,10 @@
+# TABLE 2. Fatty acid composition (Mason, Nellenbogen & Clements 1976, J Lipid Res 17:281-284, p. 283)
+# Transcribed from the page image. Fatty acids named "carbons:double bonds" (footnote b). Values in mole % (footnote a).
+# Footnote a: The mean of triplicate analyses of methyl esters of total lipids and the mean of 16 determinations of the isolated disaturated phosphatidylcholines are presented. There was no difference in the fatty acid composition of the disaturated phosphatidylcholine of the two preparations (A and B). The percent composition is given as mole %.
+# Footnote b (on "14:0"): Number of carbon atoms: number of double bonds.
+# Footnote c (on the first "tr"): tr stands for trace (0.5%).
+# Empty cells are blank in the print. Rows A and B are total lipids of rat-lung preparations A and B (see Table 1, footnote a).
+preparation,14:0,15:0,16:0,16:1,18:0,18:1,18:2,20:4,Unidentified
+A,1.9,tr,35.8,4.6,11.8,14.6,18.5,10.4,2.5
+B,2.5,tr,39.5,5.2,10.8,12.4,10.8,14.4,4.1
+Disaturated phosphatidylcholine,6.3,1.9,87.9,,3.9,,,,

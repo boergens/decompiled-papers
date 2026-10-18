@@ -1,0 +1,69 @@
+# Tegethoff & Briggman 2024 Front Neurosci 18:1286991, Figure 3B: hardness of an EMbed 812 MH resin block measured at
+#   different relative humidities.
+# Columns: sequence = the small number printed above the column (order in which the measurements were made, per
+#   the caption); humidity_percent = x position; hardness_HV = Vickers hardness; n_in_blob = markers in the merged blob
+#   this point was split from (1 = isolated; >1 = split with k-means, positions approximate).
+# Provenance: tier 3, digitized from the embedded ~372 ppi JPEG (no vector data in the PDF) by fig3b_extract.py.
+#   Calibrated on the ticks 0-14 HV (max residual 0.014) and 0-100 % (max residual 0.048).
+# Uncertainty: +-0.06 HV and +-0.21 % (2 px). Fully overlapping markers cannot be seen; counts
+#   are lower limits.
+sequence,humidity_percent,hardness_HV,n_in_blob
+6,14.759,12.774,4
+6,14.988,11.901,2
+6,14.99,12.612,4
+6,15.002,12.911,4
+6,15.002,13.104,1
+6,15.002,11.78,2
+6,15.172,12.768,4
+5,24.935,11.005,2
+5,24.945,12.613,2
+5,24.969,12.292,3
+5,24.97,11.295,1
+5,24.982,11.999,3
+5,24.984,12.145,3
+5,24.992,12.802,1
+5,25.017,12.491,2
+5,25.068,10.892,2
+2,29.848,12.175,5
+2,29.871,11.808,2
+2,29.978,11.997,5
+2,29.981,12.492,5
+2,29.993,7.653,1
+2,29.993,7.9257,1
+2,29.998,9.3081,1
+2,30.021,12.335,5
+2,30.051,11.693,2
+2,30.161,12.103,5
+1,36.882,12.002,3
+1,36.972,11.498,1
+1,36.972,11.703,1
+1,36.974,7.0618,1
+1,36.976,12.282,2
+1,36.977,12.399,2
+1,36.979,8.1115,1
+1,36.981,12.713,2
+1,36.998,12.597,2
+1,37.016,12.119,3
+1,37.046,11.895,3
+3,49.964,10.709,4
+3,49.976,10.099,2
+3,49.984,9.7879,1
+3,49.984,2.5159,1
+3,49.994,10.855,4
+3,49.995,11.701,1
+3,50.008,4.3632,1
+3,50.008,11.407,1
+3,50.009,10.406,1
+3,50.013,11.108,4
+3,50.018,10.216,2
+3,50.018,10.984,4
+4,69.975,7.1587,2
+4,69.978,8.9894,2
+4,69.989,8.2954,2
+4,70,9.5034,3
+4,70.002,7.0563,2
+4,70.002,9.2156,3
+4,70.008,9.3607,3
+4,70.013,0.88831,1
+4,70.027,8.8145,2
+4,70.029,8.1593,2

@@ -1,0 +1,33 @@
+# Nguyen et al. 2016 Sci Rep 6:23721, Figure 5h: the smallest possible voxel sizes in the successful serial imaging,
+#   each set of tissues embedded in Control resin ('Cont') and in conductive resin ('Carbon'), joined by a line.
+#   Axis title as printed: 'Voxel size (nm3)' (y, linear, ticks 0, 3000, 6000, 9000); x = the two categories.
+#   Colours per the caption: blue = kidney fixed with transcardial perfusion, purple = brain (transcardial
+#   perfusion), green = kidney fixed with resection and immersion. The panel shows 3 purple, 2 blue and 2 green
+#   pairs (7 pairs; caption: N = 7). '*' over the bracket: p < 0.05, Wilcoxon matched-pairs signed rank test.
+# Columns: pair (my numbering, 1-7, ordered by the Cont value read top to bottom); colour; group (Cont/Carbon);
+#   voxel_size_nm3; method (how the marker centre was located; see pairs_common.py).
+# Provenance: tier 3, digitized from the embedded ~220 ppi JPEG of Figure 5 by fig5h_extract.py. y calibrated on
+#   the 4 labelled ticks (max residual 10.2 nm3). Pairs assigned by following each connecting line.
+# Uncertainty: isolated markers about +-20 nm3 (0.7 px); markers with an edge covered by
+#   another marker about +-44 nm3; markers inside the Carbon cluster (600-1500 nm3) about
+#   +-87 nm3 (3 px), because the connecting lines do not end exactly in the marker centres
+#   (checked on isolated markers: up to ~2-5 px off for steep lines, <= ~2 px for shallow ones).
+# Cross-check (decompiler's calculation, not printed in the paper): Table 1 lists 7 Normal/Conductive pairs for
+#   Fig. 5h; (X-Y resolution)^2 x Z-step, the voxel-size formula in Methods, gives for them (nm3):
+#   1299.6/640.0, 3698.0/974.7, 8487.2/2957.5, 1740.5/1440.0, 2371.6/1392.4, 2964.5/921.6, 1152.0/739.6.
+#   See README for how the digitized pairs compare.
+pair,colour,group,voxel_size_nm3,method
+1,purple,Cont,8497,run (isolated)
+1,purple,Carbon,3011,run (isolated)
+2,blue,Cont,3688,run (isolated)
+2,blue,Carbon,1126,end of the least-squares connecting line (marker hidden inside the Carbon cluster)
+3,purple,Cont,2929,top edge + radius (lower part covered by the green marker)
+3,purple,Carbon,815,end of the least-squares connecting line (marker hidden inside the Carbon cluster)
+4,green,Cont,2869,bottom edge - radius (upper part covered by the purple marker)
+4,green,Carbon,983,end of the least-squares connecting line (marker hidden inside the Carbon cluster)
+5,green,Cont,2309,run (isolated)
+5,green,Carbon,1360,top edge of the Carbon cluster + radius (the green marker on top of the cluster)
+6,blue,Cont,1409,top edge + radius (lower part covered by the purple marker)
+6,blue,Carbon,677,bottom edge of the Carbon cluster - radius (blue and purple markers nearly coincide there)
+7,purple,Cont,1128,bottom edge - radius (upper part covered by the blue marker)
+7,purple,Carbon,677,bottom edge of the Carbon cluster - radius (blue and purple markers nearly coincide there)
