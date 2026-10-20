@@ -202,7 +202,7 @@ into `\alttext` or a CSV.
 
 ## Checks before you finish
 
-`check_text.py` is at version 2026-10-20a; the coordinator re-runs every check at the end
+`check_text.py` is at version 2026-10-20b; the coordinator re-runs every check at the end
 (`tools/audit.py`, which also OCRs scans afresh as a second opinion). Options for awkward PDFs:
 `--pages A-B`, `--exclude P:x0,y0,x1,y1` (ignore another article's text on page P, PDF points),
 `--figure-box P:x0,y0,x1,y1` (a figure inside a page scan). Report the options you used, so the

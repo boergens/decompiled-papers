@@ -1,0 +1,11 @@
+# Abdelaal et al. 2015, Biol. Proced. Online 17:2, Table 1 (PDF p. 4, foot of the page), transcribed by work/build_main.py from the Datalab conversion and checked against the page image.
+# Caption: Table 1 Comparison between the Compresstome VF-300 and the Vibratome 3000
+# The first column is the row label (the table prints no header over it). Superscript 2 is written as the Unicode character ² (printed 'cm2' with a superscript 2); '~' is printed as a tilde.
+parameter,Compresstome VF-300,Vibratome 3000
+Presence of light source,No,Yes
+Construction,Flimsy,Solid
+Cutting speed,Fast ~5 sections/minute,Slow ~0.8 sections/minute
+Number of blocks that can be cut at the same time,One,Four
+Chilling capability,Frozen buffer cubes added to the buffer tank,Dry ice or ice placed in the outer chamber
+Sectioning difficulties due to blade dislodging embedded tissue,Rare,Frequent
+Maximum section size,~0.64 cm²,~0.25 cm²

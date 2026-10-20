@@ -6,6 +6,7 @@ Usage:
                              [--pages A-B] [--drop-line-numbers]
                              [--exclude P:x0,y0,x1,y1 ...] [--figure-box P:x0,y0,x1,y1 ...]
 
+--reference-text F uses the plain-text file F (an OCR or publisher text) instead of the PDF's text layer (scans without one);
 --pages A-B checks only those pages of each PDF (a supplement printed inside the main PDF);
 --drop-line-numbers ignores bare numbers in the outer 15 % of the page width (preprint line numbers);
 --exclude P:x0,y0,x1,y1 ignores PDF text whose line centre lies in that rectangle of page P (1-based,
@@ -55,7 +56,7 @@ import pymupdf
 #              1-bit page images >= 50 % of the page are scans, not figures; short repeated lines
 #              (footers with page numbers) count as repeated; \\rotatebox/\\scalebox arguments
 #              dropped; --exclude and --figure-box.
-VERSION = "2026-10-20a"
+VERSION = "2026-10-20b"
 
 LIG = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl", "ß": "ss", "æ": "ae", "œ": "oe",
        "ø": "o", "ł": "l", "đ": "d", "ð": "d", "þ": "th", "ı": "i"}
@@ -286,6 +287,7 @@ def present_elsewhere(seg, grams, n):
 def main(argv):
     min_run, jout, files, pages_sel, dln = 6, None, [], None, False
     exclude, figure_box = {}, {}
+    reference_text = None  # --reference-text <file>: a plain-text reference (e.g. Google Patents text, a fresh OCR) used instead of the PDF's text layer
     i = 0
     while i < len(argv):
         if argv[i] in ("--exclude", "--figure-box"):
@@ -301,11 +303,20 @@ def main(argv):
             dln = True; i += 1; continue
         if argv[i] == "--json":
             jout = argv[i + 1]; i += 2; continue
+        if argv[i] == "--reference-text":
+            reference_text = argv[i + 1]; i += 2; continue
         files.append(argv[i]); i += 1
     if len(files) < 2:
         sys.exit(__doc__)
     tex, pdfs = files[0], files[1:]
-    p, pages, infig, lineid = pdf_tokens(pdfs, pages_sel, dln, exclude, figure_box)
+    if reference_text:
+        rt = open(reference_text, encoding="utf-8", errors="replace").read()
+        p = tokens(norm(rt)); pages = [1] * len(p); infig = [False] * len(p); lineid = list(range(len(p)))
+        print(f"reference text: {reference_text} ({len(p)} tokens) used instead of the PDF text layer")
+    else:
+        p, pages, infig, lineid = pdf_tokens(pdfs, pages_sel, dln, exclude, figure_box)
+        if not p:
+            print("WARNING: the PDF has no text layer (0 tokens): OCR it, or pass --reference-text <file> with an OCR or publisher text to check against")
     t = tokens(tex_text(tex))
     sm = SequenceMatcher(None, p, t, autojunk=False)
     p_ok, t_ok = [False] * len(p), [False] * len(t)

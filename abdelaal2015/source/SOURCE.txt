@@ -1,0 +1,10 @@
+abdelaal2015: Abdelaal H. M., Kim H. O., Wagstaff R., Sawahata R., Southern P. J., Skinner P. J. (2015). Comparison of Vibratome and Compresstome
+sectioning of fresh primate lymphoid and genital tissues for in situ MHC-tetramer and immunofluorescence staining. Biological Procedures Online 17:2.
+DOI: 10.1186/s12575-014-0012-4
+Publisher page: https://biologicalproceduresonline.biomedcentral.com/articles/10.1186/s12575-014-0012-4 (redirects to link.springer.com)
+Also: PMC4318225.
+Files (downloaded 2026-10-20 by the oct-20-compresstome session, browser slot 0; curl got an HTML bot page from Springer):
+  abdelaal2015.pdf   publisher version of record, 8 pp., from https://link.springer.com/content/pdf/10.1186/s12575-014-0012-4.pdf
+Licence: CC BY 4.0 ("© 2015 Abdelaal et al.; licensee BioMed Central. This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0)", PDF p. 1).
+Why: the Compresstome-vs-vibratome comparison that Wildenberg et al. 2023 cite as ref. 31 for the Compresstome "developed for decreasing damage
+during cutting"; primate lymphoid and genital tissue, not brain. Obtained for the Compresstome-on-large-brains question.
