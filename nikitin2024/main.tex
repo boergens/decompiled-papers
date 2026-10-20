@@ -1,0 +1,607 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\sourcefile{nikitin2024.pdf}
+\decompnote{Full verbatim transcript, produced tool-first: the text was placed from a Datalab API conversion of the born-digital PDF (\texttt{work/datalab/nikitin2024.md}, 2026-10-20) by \texttt{work/build\_main.py}, checked word by word against the PDF's own text layer (PyMuPDF) and proofread against the page images; every correction is in the script's table and in the README. Publisher's version of record (IUCr, 16 pages). Left out: the running headers (``research papers''; ``Viktor Nikitin et al. $\bullet$ Laminography for imaging large-size samples''), the page numbers 851--866 and the repeated footer ``J. Synchrotron Rad. (2024). 31, 851--866'' (given once below, with the DOI printed in the footer of p.\,1), the journal logo (``JOURNAL OF SYNCHROTRON RADIATION'' is part of the logo image on p.\,1) and the OPEN ACCESS / CC BY logo. The ISSN, the received/accepted/edited lines and the keywords are printed in the left margin column of p.\,1; the licence line under the logo at the foot of that column.}
+
+\pdfpage{1}
+\noindent{\small ISSN 1600-5775}\\
+{\small Received 30 January 2024}\\
+{\small Accepted 3 April 2024}\\
+{\small Edited by A. Bergamaschi, Paul Scherrer Institut, Switzerland}\\
+{\small \textbf{Keywords:} laminography; reconstruction; GPU; neuroimaging.}
+
+\section*{Laminography as a tool for imaging large-size samples with high resolution}
+
+\noindent\textbf{Viktor Nikitin,\textsuperscript{a*} Gregg Wildenberg,\textsuperscript{b} Alberto Mittone,\textsuperscript{a} Pavel Shevchenko,\textsuperscript{a} Alex Deriy\textsuperscript{a} and Francesco De Carlo\textsuperscript{a}}
+
+\noindent{\small \textsuperscript{a}Advanced Photon Source, Argonne National Laboratory, Lemont, IL 60439, USA, and \textsuperscript{b}University of Chicago, Chicago, IL 60637, USA. *Correspondence e-mail: vnikitin@anl.gov}
+
+\noindent{\small \emph{J. Synchrotron Rad. (2024).} \textbf{31}, 851–866 \quad \url{https://doi.org/10.1107/S1600577524002923}}\\
+{\small Published under a CC BY 4.0 licence}
+\decompnote{The journal line and the DOI are the footer of p.\,1 (the journal line repeats on every page); the licence line is printed under the OPEN ACCESS / CC BY logo at the foot of the left column of p.\,1, below the thumbnail picture shown after the abstract.}
+
+Despite the increased brilliance of the new generation synchrotron sources, there is still a challenge with high-resolution scanning of very thick and absorbing samples, such as a whole mouse brain stained with heavy elements, and, extending further, brains of primates. Samples are typically cut into smaller parts, to ensure a sufficient X-ray transmission, and scanned separately. Compared with the standard tomography setup where the sample would be cut into many pillars, the laminographic geometry operates with slab-shaped sections significantly reducing the number of sample parts to be prepared, the cutting damage and data stitching problems. In this work, a laminography pipeline for imaging large samples (>1 cm) at micrometre resolution is presented. The implementation includes a low-cost instrument setup installed at the 2-BM micro-CT beamline of the Advanced Photon Source. Additionally, sample mounting, scanning techniques, data stitching procedures, a fast reconstruction algorithm with low computational complexity, and accelerated reconstruction on multi-GPU systems for processing large-scale datasets are presented. The applicability of the whole laminography pipeline was demonstrated by imaging four sequential slabs throughout an entire mouse brain sample stained with osmium, in total generating approximately 12 TB of raw data for reconstruction.
+
+\begin{center}
+\includegraphics[width=0.45\linewidth,keepaspectratio]{figures/thumb.png}
+\end{center}
+\decompnote{Thumbnail picture printed in the left column of p.\,1 (no caption, no figure number): the IUCr layout's graphical abstract, a composite of Fig.\,8(\emph{a}) and Fig.\,11(\emph{b}).}
+\alttext{Colour composite without caption or figure number, printed in the left column of p.\,1 above the OPEN ACCESS logo. Main picture: a 3D rendering of four stacked, straightened brain-slab volumes seen obliquely from above (the same rendering as Fig.\,11(\emph{b}) without its labels): the top slab is magenta with the coronal brain surface, the slabs below it are yellow-green, cyan and tan, each a flat layer with a ragged edge. Inset at the upper left: a photograph of four resin-embedded, osmium-blackened brain slabs on a speckled grey background (the same photograph as Fig.\,8(\emph{a})), with a black scale bar labelled ``10mm'' and the text ``thickness: $\sim$0.5mm''. No other text.}
+
+\section*{1. Introduction}
+
+The computed laminography technique is an extension of regular computed tomography, which involves tilting the rotary stage along the beam direction (Hasenkamp, 1973; Gondrom \emph{et al.}, 1999). This allows for scanning planar and high X-ray absorbing samples with enhanced quality and less radiation damage.
+
+Laminography imaging has been demonstrated at several synchrotron facilities and lab-CT systems around the world. Helfen \emph{et al.} implemented the technique at several beamlines of the European Synchrotron Radiation Facility (ESRF) (Helfen \emph{et al.}, 2005, 2011, 2013). The method has become a routine tool at the synchrotron by showing high-quality results for many kinds of samples (Xu \emph{et al.}, 2010; Reischig \emph{et al.}, 2013; Morgeneyer \emph{et al.}, 2014). Recently, the first \emph{in situ} nano-laminography has been demonstrated using the Projection X-ray Microscope at the ESRF (Hurst \emph{et al.}, 2023). Furthermore, multi-contrast computed laminography was shown at a beamline of Karlsruhe Research Accelerator (Cheng \emph{et al.}, 2013) – the authors used a grating interferometer to enhance phase contrast of a butterfly sample. Hoshino \emph{et al.} demonstrated laminography at SPring-8 by analysing a copper grid pattern with alphabetical letters (Hoshino \emph{et al.}, 2011). At the Swiss Light Source, the laminography geometry has been also \pdfpage{2}used in nano-resolution 3D ptychographic imaging of integrated circuits (Holler \emph{et al.}, 2019, 2020). Laminography has become popular also for lab-CT sources with cone X-ray beams. Different cone-beam laminography trajectories were compared by O’Brien \emph{et al.} (2016). Fisher \emph{et al.} (2019) demonstrated a computed laminography implementation on a conventional industrial laboratory micro-CT scanner (Nikon XTEK), without the need for special equipment. The authors also presented methods for reducing laminography artefacts due to insufficient sampling. Another custom build X-ray compued tomography (CT) scanner was introduced by Deyhle \emph{et al.} (2020), together with a detailed guidance on the instrument calibration and optimal data acquisition. Furthermore, recent progress in robotic sample manipulator systems has facilitated the adjustment of laminography scanning geometry (Wood \emph{et al.}, 2019).
+
+Several reconstruction software packages have functionality for laminography reconstruction. In the \emph{Astra Tomography Toolbox} (van Aarle \emph{et al.}, 2015), the laminography geometry can be explicitly defined, followed by running iterative reconstruction (\emph{e.g.} SIRT or CGLS method) on GPUs. For an iterative method, necessary data are typically kept in GPU memory during all iterations, minimizing the overhead for data copy between the CPU and GPU memory. In such cases, the performance of the reconstruction is mostly limited by the GPU computation speed. Another package, called \emph{UFO} (Faragó \emph{et al.}, 2022), provides a multi-threaded, GPU-enabled and distributed data processing framework for tomographic and laminographic reconstruction. Both packages, \emph{Astra} and \emph{UFO}, implement laminography reconstruction by direct discretization of the forward and backward projection line integrals. In this case, computational complexity is $\mathcal{O}(N^4)$ assuming that the number of projection angles and volume size in each dimension are of the order of $N$.
+
+Computational complexity for laminography reconstruction can be decreased to $\mathcal{O}(N^3 \log N)$ using a Fourier-based method and fast Fourier transform (FFT), similar to the one used for regular tomography with the Gridrec algorithm (Dowd \emph{et al.}, 1999) in \emph{TomoPy} (Gürsoy \emph{et al.}, 2014), or by \emph{Fourierrec} in \emph{TomocuPy} (Nikitin, 2023). The tomography back-projection operator can be rapidly evaluated as a combination of the one-dimensional FFT and two-dimensional unequally spaced inverse FFT (Beylkin, 1998). In turn, rapid evaluation of the laminography back-projection operator can be performed as a combination of the two-dimensional FFT and three-dimensional unequally spaced inverse FFT (Myagotin \emph{et al.}, 2013; Voropaev \emph{et al.}, 2016). Computational complexity plays an important role when reconstructing data obtained by stitching several projection datasets (Vescovi \emph{et al.}, 2018). For instance, performance tables in Nikitin (2023) show that tomographic reconstruction by a method with lower complexity for $2048^3$, $4096^3$ and $8192^3$ volumes becomes faster than the direct discretization by factors of 5, 10 and 20, respectively. Current data storage allows working with stitched data of more than 16\,384 pixels in each dimension (more than 16 TB in single precision); therefore algorithms with lower computational complexity indeed become critical for any future tomography and laminography applications.
+
+Nvidia GPUs have demostrated to be an essential tool in accelerating computational imaging programs. VRAM (current maximum is 80 GB for Tesla H100) is significantly smaller than computer RAM, therefore in most cases additional data splitting and transfer mechanisms have to be performed before reconstruction. These mechanisms are straightforward for regular computed tomography since each $z$ -slice can be processed independently. But in laminography, more complex data handling procedures have to be developed since there is a dependence between slices due to the tilted geometry. Moreover, laminography slabs typically have larger sizes in two dimensions, that do not fit the detector field of view. This requires the implementation of a mosaic scanning protocol, where the slab is scanned at different positions and projection data are stitched to form a large data volume for further reconstruction. This is why it is fundamental to have fast GPU-based reconstruction with low computational complexity.
+
+In this work, we consider the laminography technique as a tool for optimal scanning of large-size samples. Imaging very thick and absorbing samples requires cutting these samples into parts to ensure sufficient X-ray transmission, and scanning each part independently. Compared with the standard tomography setup where the sample would be cut into pillars, the laminographic geometry uses slab-shaped samples, which requires a significantly lower number of cutting procedures. With proper slab thickness, the X-ray propagation distance through the slab can be sufficient to obtain acceptable photon counts for different materials.
+
+Our contribution through this paper can be summarized as follows:
+
+(i) Description of the synchrotron laminography setup. We report how laminography is implemented at the micro-CT beamline 2-BM of the Advanced Photon Source (APS), USA. The simplicity and adaptability of this setup make it an ideal choice for implementation at other synchrotron beamlines.
+
+(ii) GPU-based laminography reconstruction. We implement laminography reconstruction using the Fourier-based method [$\mathcal{O}(N^3 \log N)$] on GPU with efficient asynchronous data processing by chunks where CPU–GPU data transfers and GPU processing are timely overlapped almost fully hiding time for data transfers.
+
+(iii) Integrating laminography with \emph{TomocuPy}. We add the optimized laminography reconstruction in the \emph{TomocuPy} package (\url{https://tomocupy.readthedocs.io} – in the ‘develop’ github branch during the paper review). \emph{TomocuPy} provides an easy-to-use command-line interface for GPU-based reconstruction. Besides reconstruction of full volumes, it also provides functionality for adjusting the rotation axis and laminography tilt angle.
+
+(iv) Iterative reconstruction with regularization. Fast implementation of forward and adjoint laminography operators can be used for constructing iterative schemes with regularization. We provide, as an independent package, the implementation of reconstruction with total variation regu\pdfpage{3}larization for suppressing laminography artefacts due to insufficient sampling.
+
+(v) Scanning and reconstruction of large samples with laminography. Laminography simplifies the sample preparation process by requiring significantly less cutting compared with regular tomography, although more complex data stitching and reconstruction techniques are required in the case of large samples. We will describe the whole pipeline employed with large samples using as an example the imaging of four sequential mouse brain sections with micrometre resolution. The brain section datasets are made available in TomoBank (De Carlo \emph{et al.}, 2018) (see \url{https://tomobank.readthedocs.io/} under Laminography/Brain).
+
+\section*{2. Strategy for scanning large-size samples}
+
+We will start with a brief discussion on strategies for scanning large-size samples with high resolution. As an example let us consider micro-resolution imaging of an adult mouse brain sample. A typical mouse brain has a size of 12 mm (anterior to posterior) × 11 mm × 8 mm (dorsal to ventral). To increase X-ray absorption contrast in the projections, the brain is often stained with heavy metals (osmium, lead) (Hua \emph{et al.}, 2015) especially if further investigations (\emph{i.e.} electron microscopy) are required. Nevertheless, a high concentration of heavy materials leads to strong X-ray beam absorption by the sample. In this case, a possible solution is to use a higher energy X-ray beam, which however also significantly affects the achievable spatial resolution and sensitivity to variations in attenuation coefficient for large samples (Grodzins, 1983; Flannery \emph{et al.}, 1987). Based on our calculation, scanning the stained mouse brain may require energy of more than 60 keV to obtain acceptable photon counts on the detector. For such an energy, the X-ray flux of the bending magnet beamlines of APS is approximately ten times lower than that at 20–25 keV (optimal energies). Moreover, all X-ray imaging components (scintillators, monochromator and mirror) become less efficient. The situation becomes even more difficult for larger samples, such as, for example, in the cases of primate brains.
+
+Cutting large samples into smaller sections and scanning each section independently, followed by reconstruction and stitching procedures, is the only way to handle such samples. Minimizing the number of sample cuts is of great interest because each cut damages the sample structure and causes discontinuities among sections, thereby compromising the quality of segmentation and structures tracing. This can be of critical relevance such as for example in axons tracing to study the anatomy of neuronal pathways in normal and pathological states (Mizutani \emph{et al.}, 2016; Foxley \emph{et al.}, 2021; Wildenberg \emph{et al.}, 2023).
+
+For regular tomography, samples are cut into pillars sufficiently thin to fit the experimental requirements. The pillars are then scanned at different vertical positions with overlaps. Reconstructions from the data acquired at these positions are then stitched to form the whole volume, see Fig. 1(\emph{a}). Alternatively, the sample can be cut into slabs and scanned in the laminography geometry [Fig. 1(\emph{b})]. The whole slab is scanned at different horizontal and vertical positions with overlaps [mosaic scanning mode (Du \emph{et al.}, 2018)]. The acquired data are then stitched together to form a big data volume for further laminography reconstruction. Following the sketches in the bottom part of Fig. 1, the slab thickness is chosen as $w\sqrt{2}\sin\varphi$ where $w$ is the pillar width guaranteeing sufficient X-ray transmission along the maximum thickness $w\sqrt{2}$, and $\varphi$ denotes the laminography angle ($\varphi = 20^\circ$ in the figure). The optimal thickness can be found experimentally by analysing photon statistics on the detector and using the principles from Grodzins (1983) and Flannery \emph{et al.} (1987). For the example in Fig. 1 with $\varphi = 20^\circ$ laminography angle, the total number of sections to be cut is approximately five times lower in the laminography case compared with tomography (100 versus 20); for $\varphi = 30^\circ$, the number of slabs is seven times lower. Similar estimations for larger sample sizes reveal even greater improvements in the effectiveness of the laminography method, establishing it as a crucial X-ray imaging technique significantly minimizing sample damage.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Figure 1}\\
+Schemes for scanning large samples by cutting them into parts with sufficient X-ray transmission: (\emph{a}) tomography geometry with pillar-shaped parts, (\emph{b}) laminography geometry with slab-shaped parts.
+\alttext{Schematic in four parts on a white background, panel letters ``a)'' at the upper left and ``b)'' at the upper middle. Top left (a, labelled ``100 pillars''): a grey cube drawn in isometric view divided into a 10 × 10 grid of tall square pillars (the vertical cuts are drawn on the top face and on the two visible side faces); three axes with ticks 0--9 are labelled \emph{x} (front-left bottom edge), \emph{y} (front-right bottom edge) and \emph{z} (right vertical edge). Top right (b, labelled ``20 slabs''): the same cube divided only by vertical cuts parallel to the \emph{y}--\emph{z} face into about 20 thin slabs (the cuts show as parallel lines on the top face and the left face); the same axes with ticks 0--9. Bottom left (under a, labelled ``Vertical scan''): a tall square pillar of width \emph{w} (a small arrow marks the width at its top, and a vertical arrow out of the top marks the rotation axis) standing on a black cylinder (the rotary stage); an orange arrow labelled ``X-rays'' in bold enters horizontally from the left; three orange horizontal lines cross the pillar at mid-height (the beam positions); the pillar's diagonal is labelled ``$w\sqrt{2}$'' with a small arrow; a vertical double arrow at the right is the vertical scan direction. Bottom right (under b, labelled ``Mosaic scan''): a thin grey slab lying tilted on a black cylinder whose top is tilted by ``20°'' (shown by two lines meeting at the lower right with the angle label); a thin black line through the slab is the tilted rotation axis (arrow at its top); three orange lines cross the slab where the beam passes; the slab width is labelled ``$w\sqrt{2}$'' and its thickness ``$w\sqrt{2}\sin 20°$'' (lower left, with an arrow); a small three-way arrow symbol at the upper right stands for the mosaic (horizontal and vertical) scan movements. Not a plotted panel: no data file.}
+
+\section*{3. Laminography setup at micro-CT beamline 2-BM}
+
+Most micro-CT beamlines at synchrotrons worldwide have similar setups for conducting experiments. They include a detection system, rotary stage and vertical/linear stages for alignment. Besides, often the setup includes tilt motors needed for adjusting the pitch (along the beam) and roll (orthogonal to the beam) angles to properly align the rotary stage for tomographic acquisition. The sample is placed on the top of the rotary stage, where a micro-positioning system is normally present for selecting the region of interest for scanning. An example of the sample stack motors implemented at beamline 2-BM of the APS is shown in Fig. 2.
+
+In order to implement the laminography geometry for scanning, one needs to tilt the rotary stage at a significant \pdfpage{4}angle with respect to the beam direction. Generally, the tilt motor located under the stage allows motion only for a limited range of angles because it is used to align the rotary stage parallel with respect to the beam. The direction of the beam is adjusted for instance after switching between the pink beam and monochromatic beam, or when changing the energy on the monochromator. This alignment correction is typically less than a couple of degrees. Most popular, compact and inexpensive tilt stages available on the market allow for travelling ±10 or ±15°. At 2-BM we use a Kohzu SA07A-R2L stage with ±10° travel range. Therefore, to achieve the $20^\circ$ tilt angle required by laminography, we machined a $10^\circ$ wedge and placed it under the rotary stage (see Fig. 2, right). The wedge does not need to have precise angular specification because the fine alignment can be achieved by adjusting the tilt/roll motors under the rotary stage and analysing the X-ray projections of a simple object like a tungsten pin. For instance, if the wedge is not perfectly flat then it is possible to compensate the misalignment using the motor that tilts the rotary stage orthogonal to the beam (roll alignment). Additional inaccuracies can be identified either through the use of a tungsten pin or by analysing the reconstructions.
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{Figure 2}\\
+Sample stack with automatized switching between tomography (left) and laminography (right) geometries for conducting synchrotron experiments at sector 2-BM of the APS.
+\alttext{Two colour photographs of the same sample stack in the 2-BM experimental hutch, side by side, annotated in white. Left (tomography geometry): from top to bottom, the detector housing (label ``detector'' at the upper left) with a white arrow pointing left labelled ``X-rays'' in bold (the beam direction), a black rotary stage with a green circuit board on top (label ``rotary stage''), a horizontal white line under the stage marking its level, below it a ``10 deg wedge'' (arrow) and the ``tilt motor at $-$10 deg'' (arrow), all on an optical breadboard with cables and motor controllers in the background. Right (laminography geometry): the same stack, but the rotary stage is visibly tilted; a white line along the stage top and a horizontal reference line meet at the right with the label ``20 deg''; labels ``10 deg wedge'' and ``tilt motor at +10 deg'' with arrows, ``rotary stage'', ``detector'' and the ``X-rays'' arrow as on the left. Not a plotted panel: no data file.}
+
+Quick switching between tomography and laminography geometry during the beamline operation is important because, first, it reduces data acquisition delays during the switch over, and, second, it allows for more flexible data collection allowing to use the best geometry for the sample at hand and ultimately delivering higher quality 3D sample representation. In the current setup at 2-BM, the laminography geometry with $20^\circ$ tilt angle is achieved by placing the stage to +10°, while positioning the stage angle to −10° gives us 0° tilt against the beam, \emph{i.e.} the regular tomography geometry. It is worth mentioning that this quick switch between geometries also makes the alignment procedures easier. For instance, procedures such as the rotation axis alignment and adjusting the roll stage angle (tilt orthogonal to the beam) can be first done in the tomography geometry and then reused in laminography. The misalignment issues can also be resolved in the laminographic reconstruction process, as will be shown in the next section.
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{Figure 3}\\
+An example of sample mounting for laminography data acquisition.
+\alttext{Colour photograph of a sample mount, annotated with black text and red arrows. A dark brown Kapton tube rises obliquely from a lump of orange clay sitting on a black kinematic mount (bottom); a small flat sample is glued to the top end of the tube. Labels with red arrows: ``Flat sample'' (top, pointing to the sample), ``UV glue'' (left, to the glue joint at the tube top), ``Kapton tube'' (left, to the tube), ``Clay'' (right, to the orange lump), ``Kinematic mount'' (lower right, to the black base). Two thin cyan lines run parallel across the picture, one through the sample and one along the top of the kinematic mount, joined by the grey-arrowed note ``Sample is parallel to the kinematic mount'' at the right. The background is a bright, blurred surface. Not a plotted panel: no data file.}
+
+In the alignment procedures outlined above, it is assumed that the plane containing the moving trajectory of the pitch and the X-ray beam are parallel. This parallelism remains unaffected by the addition of any form of wedge and can be verified using a standard setup without the wedge. If the pitch trajectory is not parallel to the beam, the angle between the two can be determined using a tungsten pin. This angle serves as a fixed reference and remains unchanged even after the wedge is added. Subsequently, it can be utilized in the reconstruction procedures.
+
+Another important aspect of our laminography implementation is the sample mounting procedure. Regular mounting strategies, such as glueing to a pin or fixing in a holder, are not applicable because the pin or holder will block the beam and will not allow informative projections to be captured for many regions. Instead, we propose using Kapton tubes that are semi-transparent to X-rays (see Fig. 3). Kapton tubes with 200 μm wall thickness are stiff enough to keep the sample stable during rotation, and do not significantly attenuate the X-ray beam reaching the detector when working with hard X-rays (>10 keV). The diameter of the tube, as well as the wall thickness, can be chosen based on the sample shape and weight. Flat samples are glued to one side of the tube with epoxy or with a UV glue supplied for instance by Bondic. In our experience, the UV glue is less radiation sensitive and more transparent to X-rays than epoxy. Moreover, the glue is much easier to use since it does not have any timing requirements for mounting. While the sample is glued to one side of the Kapton tube, another side of the tube is attached to a kinematic mount with clay. Alternatively, one could also use the UV glue for this. For more efficient imaging, flat samples should be mounted parallel to the kinematic mount, otherwise the X-ray propagation distance through the sample may be significantly increased for some angles, resulting in potential beam blockage.
+
+\section*{4. Laminography reconstruction}
+
+In this section, we will formulate the laminography reconstruction problem in terms of operators and discuss methods for fast evaluation of these operators.
+
+\pdfpage{5}
+The forward laminography operator, or laminographic projection, maps a 3D object attenuation function $\mu(x_1, x_2, x_3)$ to data $d(\theta, u, v)$, where $u, v$ are detector coordinates, and $\theta$ is the rotation angle. In this work we define the laminography tilt angle $\varphi$ as the angle between the rotation axis and beam direction (horizontal). Note that in some literature this angle is measured between the rotation axis and the axis orthogonal to the beam (vertical). For this, variable $\varphi$ should be changed to $90 - \varphi$ in all further formulas. We defined the laminography projection as follows,
+
+\begin{equation}
+\begin{aligned} d(\theta, u, v) &= \mathcal{L}_\varphi \mu(\theta, u, v) \\ &= \int_{\mathbb{R}^3} u(x_1, x_2, x_3) \tilde{\delta}(\varphi, \theta, u, v)\, \mathrm{d}x_1\, \mathrm{d}x_2\, \mathrm{d}x_3, \end{aligned}
+\tag{1}
+\end{equation}
+\decompnote{Eq. (1) prints $u(x_1, x_2, x_3)$ in the integrand where the text defines the object as $\mu(x_1, x_2, x_3)$; kept as printed.}
+
+where $\tilde{\delta}(\varphi, \theta, u, v)$ is a multiplication of two delta function defining line directions,
+
+\begin{equation}
+\begin{aligned} \tilde{\delta}(\varphi, \theta, u, v) &= \delta(x_1 \cos \theta + x_2 \sin \theta - u) \\ &\times \delta(x_1 \sin \theta \sin \varphi - x_2 \cos \theta \sin \varphi + x_3 \cos \varphi - v). \end{aligned}
+\tag{2}
+\end{equation}
+
+The measured signal on the detector is linked to the intensity transmitted through the sample (following the Beer–Lambert law) and also includes contributions from the dark field $d_d(u, v)$ (image on the detector when the beam is off) and flat field $d_f(u, v)$ (image on the detector when the beam is on and the sample is out), $\tilde{d}(u, v) = \exp[-d(u, v)][d_f(u, v) - d_d(u, v)] + d_d(u, v)$. Therefore, before solving the inverse problem for (1), the dark/flat-field correction and taking the negative logarithm procedures are applied to the raw detector data. Note that for $\varphi = 0$, the integral in (1) becomes a general Radon transform used in tomography.
+
+The inversion formula is given by means of filtered back-projection (FBP),
+
+\begin{equation}
+\mu(x_1, x_2, x_3) = \mathcal{W} \mathcal{L}_\varphi^* d(x_1, x_2, x_3),
+\tag{3}
+\end{equation}
+
+where operator $\mathcal{L}_\varphi^*$ is adjoint to $\mathcal{L}_\varphi$, called laminographic backprojection, and written as
+
+\begin{equation}
+\mathcal{L}_\varphi^* d(x_1, x_2, x_3) = \int_0^{2\pi} \int_{\mathbb{R}^2} d(\theta, u, v) \tilde{\delta}(\varphi, \delta, u, v)\, \mathrm{d}u\, \mathrm{d}v\, \mathrm{d}\theta.
+\tag{4}
+\end{equation}
+\decompnote{Eq. (4) prints $\tilde{\delta}(\varphi, \delta, u, v)$ (a $\delta$ in the second slot where (2) has $\theta$); kept as printed.}
+
+The operator $\mathcal{W}$ is described as a convolution with a transfer function being a suitable scaled version of $|\sigma| \cos(\varphi)$ (ramp filter), where $\sigma$ denotes the conjugate variable of $u$. Similar to regular tomography, instead of the ramp filter it is common to consider low-pass filters (Shepp–Logan, parzen) for decreasing noise in reconstructions.
+
+Direct discretization of line integrals for evaluating the forward and adjoint laminography operators (1) and (4) with linear interpolation has computational complexity $\mathcal{O}(N^3 N_\theta)$ if we assume that reconstruction is made on a $N \times N \times N$ volume, the detector size is $N \times N$, and the number of rotation angles is $N_\theta$.
+
+Alternatively, formulas (1) and (4) can be evaluated with Fourier-based methods of lower computation complexity (Myagotin \emph{et al.}, 2013; Voropaev \emph{et al.}, 2016). In this work, we define the Fourier transform as $\mathcal{F}f(\xi) = \int f(x) \exp(-2\pi i x \xi)\, \mathrm{d}x$ and use subscripts with operation $\mathcal{F}$ to specify the transform dimensions or the grids it acts to. Using the Fourier transform properties of the delta function, it can be readily verified that
+
+\begin{equation}
+\mathcal{L}_\varphi \mu(\theta, u, v) = \mathcal{F}_{2D} \mathcal{F}_{u3D} \mu(\theta, u, v),
+\tag{5}
+\end{equation}
+
+where $\mathcal{F}_{2D}$ is a regular two-dimensional Fourier transform that in a discrete case is computed between equally spaced grids ($\mathcal{F}_{2D}^*$ – the adjoint/inverse transform). Operator $\mathcal{F}_{u3D}$ denotes the three-dimensional Fourier transform that in a discrete case is applied from the equally spaced grid $(x_1, x_2, x_3)$ to an unequally spaced grid $(\xi_1, \xi_2, \xi_3)$ with
+
+\begin{equation}
+\begin{aligned} \xi_1 &= k_u \cos_{\theta} + k_v \sin \theta \sin \varphi, \\ \xi_2 &= k_u \sin_{\theta} - k_v \cos \theta \sin \varphi, \\ \xi_3 &= k_v \cos \varphi. \end{aligned}
+\tag{6}
+\end{equation}
+\decompnote{Eq. (6) prints $\cos_{\theta}$ and $\sin_{\theta}$ with $\theta$ as a subscript in the first two lines (and $\sin\theta$, $\cos\theta$ in the remaining factors); kept as printed.}
+
+By making use of properties of the Fourier transform, the adjoint laminography operator can be calculated by replacing the 2D and 3D Fourier transforms with their adjoints and with reversing the operators order, namely,
+
+\begin{equation}
+\mathcal{L}_\varphi^* d(x_1, x_2, x_3) = \mathcal{F}_{u3D}^* \mathcal{F}_{2D} d(x_1, x_2, x_3).
+\tag{7}
+\end{equation}
+
+Computational complexity for discrete evaluating the forward and adjoint laminography operators by (5) and (7) in terms of FFT is lower than by using direct discretization of line integrals in (1) and (4). Indeed, the two-dimensional Fourier transform between equally spaced grids in both formulas is directly computed by means of FFT. For the three-dimensional Fourier transform $\mathcal{F}_{u3D}$ there also exist fast methods based on unequally spaced fast Fourier transform (USFFT) (Dutt \& Rokhlin, 1993; Beylkin, 1998). In short, the methods utilize a Gaussian function $\psi$ exhibiting certain properties, to rewrite the transform in the form of convolution,
+
+\begin{equation}
+\begin{aligned} \mathcal{F}_{u3D} \mu(\xi_1, \xi_2, \xi_3) &= \mathcal{F}_{3D} \left( \frac{\mu}{\psi} \psi \right) (\xi_1, \xi_2, \xi_3) \\ &= \mathcal{F}_{3D} \tilde{\mu} * \mathcal{F}_{3D} \psi (\xi_1, \xi_2, \xi_3), \end{aligned}
+\tag{8}
+\end{equation}
+
+where $\tilde{\mu} = \mu/\psi$. For the discrete version, the Fourier transform $\mathcal{F}\tilde{\mu}$ is calculated on an equally spaced grid, and the convolution allows switching to unequally spaced coordinates. The whole 3D USFFT procedure for computing the Fourier transform from equally to unequally spaced grid is described by the following steps:
+
+\noindent (i) Division by $\psi$ in the space domain.
+
+\noindent (ii) 3D FFT.
+
+\noindent (iii) Convolution-type operation in the frequency domain.
+
+The adjoint laminography operator is computed with the inverse 3D USFFT from the unequally to equally spaced grid. For that, the steps above should be done in reverse order, and the second step is replaced by ‘inverse 3D FFT’. The resulting computational complexity for evaluation of the forward/adjoint laminography operator is given by the complexity of the 3D FFT, \emph{i.e.} $\mathcal{O}(N^3 \log N)$. Clearly, the Fourier-based method is computationally more favourable than the direct discretization of the line integral. However, for small data sizes and if the number of projection angles ($N_\theta$) is very small then the direct discretization may work faster due to the code implementation.
+
+\pdfpage{6}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent\textbf{Figure 4}\\
+Undersampling problem in laminography: (\emph{a}) grids $(\xi_1, \xi_2, \xi_3)$ in the Fourier space defined in (6) for $\varphi = 0^\circ$ (regular tomography) and for $\varphi = 30^\circ$ showing the missing cone in red; (\emph{b}) synthetic integrated circuit dataset with the red-coloured position of the vertical slice for demonstrating reconstruction quality, (\emph{c}) examples of vertical slice reconstruction in laminography for different tilt angles.
+\alttext{Three-part figure. (a) Two 3D scatter plots side by side, each a cube with light grey grid walls and axes labelled $\xi_1$ (front left edge), $\xi_2$ (front right edge) and $\xi_3$ (right vertical edge), each axis from $-$0.5 to 0.5 (only these two values are printed as tick labels). Left plot, titled ``$\varphi = 0°$'': blue dots fill the cube on concentric vertical cylinders around the vertical axis (a thick black vertical line through the centre), i.e. the points lie on vertical lines arranged in rings, denser near the axis. Right plot, titled ``$\varphi = 30°$'': the same kind of point set but every ring is tilted, so the dots lie on nested tilted shells; a thick black line through the centre is tilted by the angle marked with an arc from the vertical labelled ``$\varphi = 30°$'', and a red double cone (apex at the centre, opening up and down along the vertical axis) marks the region without points, the missing cone. (b) A 3D volume rendering of the synthetic integrated circuit: a flat grey block seen obliquely, with stacked layers of rectangular metal pads and lines, rendered in grey levels on white; a red L-shaped line on its top face and down its right side marks the position of the vertical slice. (c) Six reconstructed vertical slices in two rows of three, each a black rectangle with a grey square region in its middle (the slab) and a white label in the lower right corner: ``$\varphi = 0°$'', ``$\varphi = 10°$'', ``$\varphi = 20°$'' (top row), ``$\varphi = 30°$'', ``$\varphi = 40°$'', ``$\varphi = 50°$'' (bottom row). Each slice shows the same layered structure: a row of bright rounded pads along the top with a dotted bright line above them, a row of a few small bright squares below, one continuous bright horizontal line across the middle, a row of several bright squares below it and a bottom row of squares. At 0° the slice is sharp with uniform dark grey between the features; with increasing angle the features blur into horizontal streaks (`tails'), bright bands bleed along the rows and the background becomes mottled, strongest at 40° and 50°, where the top pads and the middle line are smeared into broad bands. Panel (a) is a 3D scatter rendering of the grid defined by eq.\,(6): the individual points cannot be read off the projection, so no data file is given (README); (b) and (c) are images.}
+
+Formulation of the reconstruction problem with the Fourier-based method can be used to demonstrate the general laminography undersampling problem, \emph{i.e.} the missing cone in the Fourier space, see Fig. 4(\emph{a}). The figure depicts grids $(\xi_1, \xi_2, \xi_3)$ in the Fourier space for laminography angles $\varphi = 0^\circ$ (regular tomography) and for $\varphi = 30^\circ$ where the region marked with a red cone corresponds to missing information. To demonstrate the effect of the missing cone on reconstruction we generated laminography data for a synthetic integrated circuit data set by using formula (5) and reconstructed it by using formulas (3) and (7). Fig. 4(\emph{b}) shows a 3D volume rendering of the integrated circuit, and an approximate red-coloured position of the reconstructed slice used for quality comparisons. Fig. 4(\emph{c}) shows the reconstructed slice for the tilt angles 0°, 10°, 20°, 30°, 40° and 50°. The ‘tail’ artefacts along the angular span are clearly visible, especially for 40° and 50° tilt angles. We also observe that most of the visible artefacts originate from the sample features having higher amplitudes (metal layers of white colour) and propagate to the regions of uniform intensity. Therefore, it can be inferred that better quality laminography results are obtained with lower tilt angles (≤30°) and for more homogeneous samples.
+
+In Fig. 5 we validate the influence of these artefacts in a realistic case of scanning a section of osmium-stained mouse brain. To demonstrate reconstruction of such a sample with different laminography angles, we formed a ‘semi-synthetic’ mouse brain dataset based on high-quality data purposely acquired in the computed tomography geometry. The reconstruction was then cropped to a small slab shape and used as an initial object for generating laminography data for different angles, where forward laminography operator (1) was used to generate projections. The figure shows that mouse brain features are not significantly affected by the artefacts for angles $\varphi \leq 30^\circ$, except probably a small amplitude loose at the top and bottom parts of the reconstructions. In the results with $\varphi = 40^\circ, 50^\circ$, the degradation of fine brain features becomes visible.
+
+The integrated circuit and brain volumes had sizes (256, 256, 128); projection data were generated for 384 angles over a 360° range for a simulated detector with sizes (256, 256). It is worth noting that in contrast to regular tomography operating with data from a half-circle angular range (180°), the laminography geometry requires angles from the whole circle to properly fill the frequency space for reconstruction.
+
+For suppressing laminography artefacts typical for the samples like the synthetic integrated circuit above, one can use reconstruction with total variation regularization, as was demonstrated by Fisher \emph{et al.} (2019). In Appendix \emph{A}, we formulate the reconstruction problem with regularization, solve it by employing the proposed implementation of the laminography operators, and demonstrate enhancement of integrated circuit reconstruction results for large laminography angles.
+
+\pdfpage{7}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent\textbf{Figure 5}\\
+Reconstruction of a semi-synthetic brain dataset: (\emph{a}) a cropped region of the brain dataset used for data modelling – the red colour shows the position of the vertical slice for demonstrating reconstruction quality; (\emph{b}) examples of vertical slice reconstruction in laminography for different tilt angles.
+\alttext{Two-part figure of greyscale reconstructions. (a) A 3D rendering of a small cuboid block of the semi-synthetic brain volume seen obliquely (top face and two sides visible), showing a fibrous, streaky texture of bright and dark bands running across the top face and dark round holes (cells) scattered in it; a red line runs across the top face near its back edge and down the right side, marking the vertical slice. (b) Five reconstructed vertical slices arranged as two in the top row (right of (a)) and three in the bottom row, each a wide black rectangle with the slab in its middle and a white label in the lower right corner: ``$\varphi = 0°$'', ``$\varphi = 20°$'' (top row), ``$\varphi = 30°$'', ``$\varphi = 40°$'', ``$\varphi = 50°$'' (bottom row). Under the 0° slice: a black scale bar labelled ``50um'' and a grey-level bar labelled ``0 attenuation 1'' (black at 0, white at 1). The 0° slice is a sharp rectangle showing brain tissue with a bright diagonal band of fibres at the right, many small dark spots (cell bodies) and a few larger dark elongated holes; its edges are straight. In the 20°--50° slices the same content appears, but the top and bottom edges of the slab fade into the black with a soft, bowed (cushion-shaped) border, the fading growing with the angle, and at 40° and 50° the fine texture becomes smoother and the dark spots less distinct. Images only: no data file.}
+
+\section*{5. GPU acceleration of reconstruction}
+
+Nvidia GPUs are commonly used for tomography reconstruction since they demonstrate more than ten times acceleration compared with CPU-based implementations (Andersson \emph{et al.}, 2016; Nikitin, 2023). In tomography, each data slice (sinogram) can be processed independently to obtain a horizontal slice through a 3D reconstructed object. Modern GPUs have enough VRAM memory to process sinograms of sizes more than $30k \times 30k$ pixels (Nikitin, 2023). In laminography though, reconstruction of one slice through the object requires data from different sinograms, making the GPU memory requirements more demanding. Therefore, efficient data chunking, as well as CPU-GPU data transfer protocols, need to be developed.
+
+For direct discretization of the line integral in the backprojection formula (4), the chunking can be done in the slice $x_3$ and angle $\theta$ directions. A reconstructed chunk of slices in $x_3$ is obtained by summing reconstructions from all individual chunks of angles. The GPU memory requirements are defined based on discretizing $\mathcal{L}_\varphi^* d(x_1, x_2, \cdot) = \int_{\mathbb{R}^2} d(\cdot, u, v) \tilde{\delta}(\varphi, \cdot, u, v)\, \mathrm{d}u\, \mathrm{d}v$, which does not involve operations on 3D arrays and therefore can be computed by chunks that fit the GPU memory.
+
+Reconstruction with the Fourier-based method for evaluating the backprojection by formula (7) involves operations on 3D arrays. For instance, computing 3D Fourier transforms on unequally spaced grids involves computing 3D FFTs and 3D interpolation-like procedures in the frequency domain. Implementing such procedures on a GPU even for a $2048^3$ dataset requires more than 64 GB memory, which is beyond the capability of most modern GPUs. Therefore, we decompose the unequally spaced 3D Fourier transform into a combination of batched 1D and 2D transforms by splitting variables in the Fourier integral as follows,
+
+\begin{equation}
+\begin{aligned} \mathcal{F}_{u3d}f(\xi_1, \xi_2, \xi_3) &= \iiint \exp\big[-2\pi i(x_1\xi_1 + x_2\xi_2 + x_3\xi_3)\big] \\ &\quad \times \mathrm{d}x_1\, \mathrm{d}x_2\, \mathrm{d}x_3 \\ &= \iint \exp\big[-2\pi i(x_1\xi_1 + x_2\xi_2)\big] \mathrm{d}x_1\, \mathrm{d}x_2 \\ &\quad \times \left[ \int f(x_1, x_2, x_3) \exp(-2\pi i x_3 \xi_3)\, \mathrm{d}x_3 \right]. \end{aligned}
+\tag{9}
+\end{equation}
+\decompnote{Eq. (9) prints no $f(x_1, x_2, x_3)$ in the first (triple) integral; kept as printed.}
+
+It turns out that computing $\mathcal{F}_{u3d}f$ can be done in two steps: 1D USFFT with respect to variable $x_3$, followed by 2D USFFT with respect to variables $x_1, x_2$. Data chunking to fit GPU memory is done by columns and slices, respectively.
+
+GPU data processing by chunks involves three operations: CPU to GPU data transfer, computations on GPU, and GPU to CPU data transfer. In the aforementioned approach with batched processing the CPU–GPU data transfer takes a significant amount of total computation time for reconstruction. Therefore, in this work we adopt the approach proposed by Nikitin (2023) and organize an efficient pipeline for asynchronous data processing by chunks. Schematically the pipeline is shown in Fig. 6. With this pipeline, three operations are executed simultaneously: CPU–GPU memory transfer for Chunk $N$; GPU computations for Chunk $N - 1$; and GPU–CPU memory transfer for Chunk $N - 2$. We used this approach in all steps that involve chunking for computing backprojection (4), \emph{i.e.} 2D USFFT, 2D FFT and 1D USFFT.
+
+Asynchronous execution of computations and fast data transfers is implemented in Python with the \emph{CuPy} interface. The \emph{CuPy} interface allows for creating Nvidia CUDA Streams and allocating pinned memory needed to overlap computations and data transfers. To implement the overlap, the pinned memory on CPU and device memory on GPU should be both allocated for two input data chunks and two output chunks.
+
+\pdfpage{8}
+\noindent\textbf{Table 1}\\
+Time in seconds for processing $N$ laminographic projections of size $N \times N$ to reconstruct $N \times N \times N$ volumes.
+
+‘Data read’ – parallel read of 8-bit data from an SSD storage. ‘Pre-processing’ – dark-flat field correction, ring removal, Paganin filtering. ‘Reconstruction’ – reconstruction with the the \emph{Fourierrec} (Fourier-based) method, and with the \emph{Linerec} (direct discretization of the line integral) method. ‘Recon write’ – parallel write of 32-bit reconstructions to the SSD storage.
+
+\begin{center}\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lllllllll@{}}
+\toprule
+\emph{N} & Data read (8-bit) & Pre-processing & \multicolumn{3}{l}{Reconstruction} & Recon write (32-bit) & \multicolumn{2}{l}{Total} \\
+\cmidrule(lr){4-6}\cmidrule(lr){8-9}
+ & & & \emph{Fourierrec} & \emph{Linerec} & Gain & & \emph{Fourierrec} & \emph{Linerec} \\
+\midrule
+1024 & 1.3 & 1.9 & 3.0 & 9.3 & 3.1 & 4.2 & 10.4 & 16.7 \\
+1536 & 2.3 & 4.7 & 8.6 & 52.1 & 6.1 & 8.0 & 23.6 & 67.1 \\
+2048 & 4.6 & 7.8 & 21.1 & 222.1 & 10.5 & 18.1 & 51.6 & 252.6 \\
+3072 & 13.5 & 27.4 & 77.7 & 1002.2 & 12.9 & 52.3 & 170.9 & 1095.4 \\
+4096 & 31.1 & 59.4 & 164.0 & 4937.5 & 30.1 & 120.3 & 374.8 & 5148.3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\decompnote{Table 1 is printed across both columns at the top of p.\,8; also tables/table1.csv.}
+
+\begin{center}
+\includegraphics[width=0.8\linewidth,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent\textbf{Figure 6}\\
+A scheme for asynchronous data processing by chunks where GPU reconstructions are overlapped with data transfers.
+\alttext{Schematic timing diagram with three horizontal rows labelled at the left ``GPU calculations'', ``GPU->CPU memory transfer'' and ``CPU->GPU memory transfer''. Top row: three long blue boxes side by side labelled ``Chunk N-1'', ``Chunk N'', ``Chunk N+1''. Middle row: three shorter purple boxes, each starting under the start of a blue box, labelled ``Chunk N-2'', ``Chunk N-1'', ``Chunk N''. Bottom row: three short green boxes at the same positions labelled ``Chunk N'', ``Chunk N+1'', ``Chunk N+2''. Two red arrows run diagonally upward from the end of the green box ``Chunk N'' to the start of the purple box ``Chunk N-1''/blue box ``Chunk N'', and from the end of the green ``Chunk N+1'' to the start of the purple ``Chunk N''/blue ``Chunk N+1'': each chunk's CPU->GPU transfer precedes its GPU computation, which precedes its GPU->CPU transfer, while the three operations on different chunks overlap in time. No time scale. Not a plotted panel: no data file.}
+
+Three CUDA streams run simultaneously by switching between chunks: the first stream performs a data copy to the first input chunk of the pinned memory, followed by transfer to the first input chunk of GPU memory. The second stream performs GPU computations on the second input chunk in GPU memory (whenever it is available) and places the result in the second output chunk in GPU memory. The third stream executes a data transfer from the first output chunk in GPU memory to the first output pinned memory chunk. The chunk is then copied to a corresponding place in the resulting array. After processing each chunk, all streams synchronize and switch the chunk ID (0 or 1) they operate with.
+
+Asynchronous execution can be verified with the Nvidia Nsight System profiling tool (\url{https://developer.Nvidia.com/nsight-systems}). As an example, in Fig. 7 we demonstrate profiling results after executing a batch of 1D USFFT. Memory transfers take more than 70\% of time for GPU calculations; however, they are done asynchronously and therefore do not affect performance. Note that, in comparison with the schematic in Fig. 6, each CPU to GPU data transfer (green block) starts later than GPU data processing (dark blue block). This is due to the fact that some CPU time is spent transferring data to pinned memory, which is referred to CPU execution and is not shown in the profiler. Similarly, some CPU time for operation with pinned memory is spent after transferring data from GPU to CPU. In Fig. 7 we marked these blocks with an asterisk (*) for clarity.
+
+In Table 1 we demonstrate performance tests of the laminographic reconstruction implemented in the \emph{TomocuPy} package. Besides reconstruction with the Fourier-based method (\emph{Fourierrec}) and by direct discretization of the back-projection line integral (4) (\emph{Linerec}), the table also shows time for data pre-processing and read/write operations with an SSD storage. The pre-processing step includes dark-flat field correction, ring removal (Vo \emph{et al.}, 2018) and phase retrieval by Paganin filtering (Paganin \emph{et al.}, 2002). All operations are implemented in \emph{TomocuPy} using a similar GPU pipeline approach as for the backprojection.
+
+The tests were performed using synthetic HDF5 format datasets of different sizes. The datasets were generated for $N$ 8-bit laminographic projections with $N \times N$ detector sizes, where $N$ ranges from 1024 to 4096. The laminography tilt angle was set to $20^\circ$, although this angle does not affect the performance significantly. Reconstructed volumes ($N \times N \times N$) were obtained as sets of tiff files in 32-bit precision. Chunk sizes in projection angles and reconstructed slices were chosen by taking into account the GPU memory limitation and overall performance. For instance, for $N = 1024$ the chunk size in angles was 128, while for $N = 4096$ the size was 4. The chunk sizes as well as other reconstructions are given through the \emph{TomocuPy} command-line interface – see the next section for more details.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent\textbf{Figure 7}\\
+Timeline view report from the Nvidia Nsight System tool for asynchronous execution of the 1D USFFT operation for computing the laminographic backprojection operator.
+\alttext{Screenshot of the Nvidia Nsight Systems timeline view (colour), annotated by the authors. Left column: the row names ``CPU (64)'', ``Processes (2)'', ``[437282] tomocupy'', ``CUDA HW (0000:31:00.0 -'' (highlighted blue), ``[All Streams]'', ``52.7\% Stream 18'', ``11.9\% Stream 17'', ``11.8\% Stream 16'', ``11.2\% Stream 19'', ``3 streams hidden..'' with ``$-$'' and ``+'' buttons. Top: the time ruler, ``71s'' at the left and major ticks labelled ``+600ms'', ``+610ms'', ... ``+660ms'' (10 ms per labelled tick, an unlabelled tick between). The CPU row shows a flat black utilization trace. The CUDA HW row shows the overview bars: purple and green bars alternating along the row. The Stream 18 row holds a chain of dark blue kernel boxes with white labels, grouped into two chunks under black braces annotated in blue ``GPU calculations chunk N'' (about +598 to +626 ms) and ``GPU calculations chunk N+1'' (about +629 to +657 ms); the readable labels in each group, left to right, are ``gather1d...'', ``...'', ``void regular\_fft\_factor<(...'', ``void regul...'', ``void prime\_fft\_...'', ``...'' (in the second group the second label reads ``ff...''), with a narrow unlabelled box after ``gather1d...'' and two at the end of each group, and a cyan box at the start of each group; a third group starts at the right edge (``ga...''). The Stream 17 row shows two green boxes labelled ``Memcpy HtoD'' (about +609 to +618 ms and +637 to +646 ms), each under a brace annotated in green ``CPU->GPU copy chunk N+1'' and ``CPU->GPU copy chunk N+2''. The Stream 19 row shows two purple boxes labelled ``Memcpy DtoH'' (about +599 to +608 ms and +627 to +636 ms) with braces annotated in purple ``GPU->CPU copy chunk N-1'' and ``GPU->CPU copy chunk N''; a third purple box begins at the right edge (``Me...''). Black asterisks mark the gaps before each green box and after each purple box; the footnote under the timeline reads ``* - copy to/from CPU pinned memory for faster CPU-GPU data transfer''. The block extents in ms are in figures/fig7.csv.}
+\figuredata{Fig. 7 (single panel, timeline)}{figures/fig7.csv}{figures/fig7.py}{digitized from the embedded raster screenshot (2205 × 648 px; tier 3): start/end time of every box read from its colour fill, time axis calibrated on the seven labelled ruler ticks (+600 … +660 ms, residual 0.06 ms); about ±0.05 ms per edge}
+
+\pdfpage{9}
+Performance tests were carried out on a machine with Intel Xeon Gold 6326 CPU @ 2.90 GHz, 2 TB DDR4 3200 memory, one Nvidia Tesla A100 with 40 GB memory, and Intel SSD D7-P5510 Series PCIe 4.0 NVMe disks. Installed software included Python 3.9, CuPy 12.1, Nvidia CUDA toolkit 12.1.
+
+Table 1 shows that the \emph{Fourierrec} method significantly outperforms \emph{Linerec} because of more favourable computational complexity [$\mathcal{O}(N^3 \log N)$ versus $\mathcal{O}(N^4)$]. For $N = 1024$ the acceleration is about three times, while for $N = 4096$ it is higher than 30 times. Lower computational complexity is crucial in developing new reconstruction algorithms because detector sizes become bigger. Even if an algorithm with $\mathcal{O}(N^4)$ complexity is accelerated with large computational resources like multiple GPUs, for a large enough $N$ it will become slower than the one with $\mathcal{O}(N^3 \log N)$ complexity. From the table, we see that increasing data sizes by a factor of two (\emph{e.g.} 2048 → 4096) gives the difference between reconstruction times as $2^4 = 16$ for the \emph{Linerec} method and $2^3 = 8$ for the \emph{Fourierrec} method. However, we also observe that increasing data sizes by a factor of 1.5 (\emph{e.g.} 3072 → 4096) does not give $1.5^3 \simeq 3.4$ time difference (77.7 s versus 164 s). This can be explained by the fact that the FFT procedure on GPU is very well optimized for the sizes that are powers of two, making processing data for $N = 4096$ more optimal. A simple test of the two-dimensional FFT operation on GPU gives execution times of 0.17 ms, 0.43 ms and 0.5 ms for sizes 2048 × 2048, 3072 × 3072 and 4096 × 4096, respectively, which confirms the slowdown for the sizes that are not powers of two.
+
+Another observation from Table 1 is the relatively high performance of the read and write operations. In these tests we utilized PCIe 4.0 NVMe SSDs that allow parallel operations with the storage using multi-threading. With this system we were able to reach up to 3 GB s\textsuperscript{−1} for reading and writing. Regular HDD storage is more than five times slower and therefore may become a bottleneck for reconstruction. Therefore we note that, besides powerful GPUs, the NVMe SSD storage is also a crucial component for accelerating the whole reconstruction process. The table demonstrates results for up to 4096 × 4096 × 4096 reconstructed volumes, which corresponds to 256 GB of RAM. For bigger sizes the data may not fit into RAM and it will be necessary to operate with data chunks by communicating with the hard disk for each pre-processing procedure and reconstruction step (\emph{e.g.} Paganin Filter, USFFT1D, USFFT2D, \emph{etc.}). In this case a fast SSD storage could be a good alternative to RAM.
+
+\section*{6. Application to neuroimaging}
+
+To demonstrate the applicability of the developed laminographic implementation for imaging large samples we considered imaging of four sequential sample slabs cut from a whole mouse brain, see Fig. 8(\emph{a}).
+
+The slabs were prepared using protocols for electron microscopy. Briefly, a mouse is transcardially perfused with aldehyde fixatives and sectioned into ∼500 μm coronal sections. Sections are then stained with heavy metals [\emph{i.e.} osmium tetroxide, uranyl acetate and lead (II) nitrate] (Hua \emph{et al.}, 2015) to increase the X-ray absorption contrast. After staining, the samples were dehydrated and embedded in an epoxy resin to make it more X-ray resistant. Each slab has approximate sizes of 12 mm × 8 mm, with a thickness of about 500 μm. For 25 keV energy (optimal for 2-BM beamline of APS) such a thickness indicates satisfactory X-ray transmission, ranging from 15\% to 30\% depending on the sample rotation angle. The sample slabs were glued to a Kapton tube which in turn was attached to a kinematic mount with the Bondic UV glue (see Fig. 3). Experiments were conducted in the downstream experimental station located at 50 m from the source. For the measurements we used a filtered pink X-ray beam with an energy peak at 25 keV. A 8 mm glass filter was placed upstream of the sample to cut low X-ray energies and decrease the radiation damage. The exposure time per projection was 50 ms. An ORX-10G-310S9M camera with 6464 × 4852 pixels (pixel size 3.45 μm × 3.45 μm) recorded projections from a 25 μm-thick GGG:Eu scintillator, magnified through a 7.5× lens yielding a resulting isometric voxel size of 0.92 μm after 2 × 2 binning. We experimentally chose 200 mm as the distance between the sample and the objective to increase propagation-based phase contrast. The detector field of view after binning was also cropped to the size 3232 × 2256 due to the beam shape. Detector data were collected in 12-bit mode and stored as 16-bit images. The \pdfpage{10}laminography tilt angle was set to $20^\circ$ by adding the $10^\circ$ wedge under the rotary stage and setting the tilt motor to $10^\circ$ (see Fig. 2).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent\textbf{Figure 8}\\
+Mouse brain samples stained with heavy materials [osmium tetroxide, uranyl acetate and lead (II) nitrate] for laminographic scanning (\emph{a}), and an example of laminographic projection after data stitching and dark-flat field correction (\emph{b}). The right part of (\emph{b}) shows zoomed-in stitched regions of adjacent datasets, with black lines indicating the datasets borders after automatic stitching.
+\alttext{Two-part figure. (a) Colour photograph: four flat, transparent resin blocks, each with an embedded coronal brain slab that appears solid black (osmium-stained), lying on a speckled grey surface; a black scale bar labelled ``10mm'' at the lower left and the text ``thickness: $\sim$0.5mm'' at the lower right. (b) A stitched X-ray projection in grey levels: a wide dark grey, roughly oval silhouette of a brain slab (darker where the sample is thicker, with lighter internal regions and a brighter notch in the middle) on a light grey background crossed by a regular grid of thin dark lines, the borders of the 5 × 3 mosaic datasets (four vertical and two horizontal lines); a black scale bar labelled ``1mm'' at the lower right. To the right of (b), two grey square close-ups overlapping each other, each showing a crossing of one vertical and one horizontal black border line in a stitched region, with a faint brightness step across the lines. Images only: no data file.}
+
+The mouse brain slabs were scanned in the mosaic scanning mode by moving the whole sample stack by five and three steps in the horizontal (orthogonal to the beam) and vertical and directions, respectively. Because of low repeatability and accuracy of the vertical and horizontal motors under the rotary stage, an overlap of 300–400 pixels between projections of two adjacent datasets was set to perform image registration for more precise image stitching. For feature-based image registration we used the SIFT algorithm (Lowe, 2004). Data from each two overlapped regions were summed with linearly changing weights in the range between 0 and 1. An example of one of the stitched projections after dark- and flat-field correction is shown in Fig. 8(\emph{b}). Black lines indicate borders between different datasets used for stitching. Projection size after stitching is 14\,960 × 5936 pixels.
+
+Fifteen thousand tomographic projections were collected in a fly scan mode while the sample was continuously rotated over 360° at 0.48° s\textsuperscript{−1}, which together with collection of dark and flat fields yielded 13 min total acquisition time per dataset, 5 × 3 × 13 = 195 min per a slab, and 4 × 5 × 3 × 13 = 780 min (13 h) for scanning all four slabs. The total size of the acquired raw data was about 12 TB, after projections stitching it reduced to 10 TB.
+
+For reconstruction we used the FBP formula (3) with the backprojection operator implemented with the proposed Fourier-based method, see formula (7). The iterative reconstruction was not considered since laminography artefacts for $20^\circ$ tilt angle are not significant for such kinds of samples (see tests in Fig. 5). Because of the huge data sizes, reconstruction was done by steps with saving and loading intermediate results for chunked data processing.
+
+To accelerate reconstruction, we utilized several nodes of the Polaris supercomputer of the Argonne Leadership Computing Facility (\url{https://www.alcf.anl.gov/polaris}). Each Polaris node is equipped with an AMD EPYC Milan processor and four Tesla A100 GPUs with the SXM connection interface and high-speed HBM memory architecture. The storage called Eagle is based on a Lustre file system residing on an HPE ClusterStor E1000 platform equipped with 100 PB of usable capacity across 8480 disk drives. This ClusterStor platform also provides 160 object storage targets and 40 metadata targets with an aggregate data transfer rate of 650 GB s\textsuperscript{−1}.
+
+\subsection*{6.1. Reconstruction pipeline with \emph{TomocuPy} calls}
+
+Before demonstrating reconstruction of large mouse brain slabs, we will describe our proposed laminographic pipeline for manual adjustments of the rotation axis and laminographic tilt angle by using a dataset acquired for a small mouse brain slab that almost fits the detector field of view. The dataset consists of 3000 projections of size 3232 × 2256.
+
+In the proposed laminography implementation, the tilt angle is not given exactly since the wedge is manufactured with low angle accuracy. Moreover, the wedge may have an error in the roll angle, \emph{i.e.} the one in the direction orthogonal to the beam. The roll angle issue can be resolved with the regular tomographic setup: by moving the tilt angle to $0^\circ$, rotating the camera or the roll motor under the rotary stage, moving the tilt angle back to $20^\circ$.
+
+Searching for the laminography tilt angle and searching for the rotation axis can be performed during reconstruction. We propose the following strategy:
+
+Step 1. Choose an approximate value for the laminography tilt angle and for the rotation axis, and run a reconstruction of one slice for different rotation axes. In the \emph{TomocuPy} command-line interface the command should include the parameter \texttt{--reconstruction-type try} and is executed as:
+
+\begin{verbatim}
+tomocupy recon_steps --file-name --file-name brain_x2y1.h5
+--reconstruction-type try --rotation-axis 1616 --center-search-width 20
+--center-search-step 0.5 --lamino-angle 20 --nsino 0.3
+\end{verbatim}
+
+The command generates reconstructions of one slice for rotation axes $[1616 - 20, \dots, 1616 + 20)$ and for $20^\circ$ laminography tilt angle. Reconstruction of the middle part of images is not influenced much by the error in the laminography tilt angle, therefore the rotation axis can be found by scrolling through the images and examining only the middle part of them, see Fig. 9(\emph{a}).
+
+Step 2. Choose an approximate value for the laminography tilt angle, set the rotation axis found in Step 1 and run a reconstruction of one slice for different laminography tilt angles. In \emph{TomocuPy} command-line interface the command should include the parameter \texttt{--reconstruction-type try-lamino} and may be executed as:
+
+\begin{verbatim}
+tomocupy recon_steps --file-name brain_x2y1.h5
+--reconstruction-type try-lamino --rotation-axis 1630.5 --lamino-search-width 2
+--lamino-search-step 0.1 --lamino-angle 20 --nsino 0.3
+\end{verbatim}
+
+The command generates reconstructions of one slice for rotation axis 1630.5 and for $[20 - 2, \dots, 20 + 2)^\circ$ laminography tilt angles. Reconstruction of the border parts of the images is influenced by the error in the laminography tilt angle, therefore the angle can be found by scrolling through the images and examining their border parts, see Fig. 9(\emph{b}).
+
+Step 3. Use the rotation axis found in Step 1 and the laminography tilt angle from Step 2 to run a reconstruction of the full volume with setting parameter \texttt{--reconstruction-type full}:
+
+\begin{verbatim}
+tomocupy recon_steps --file-name brain_x2y1.h5
+--reconstruction-type full --rotation-axis 1630.5 --lamino-angle 19.95
+\end{verbatim}
+
+The command generates a reconstruction of the full volume, see Fig. 9(\emph{c}).
+
+An additional phase-retrieval procedure with the Paganin filter is performed by adding \texttt{--retrieve-phase-method}, \texttt{--propagation-distance}, ..., parameters; for details see the \emph{TomocuPy} documentation.
+
+\pdfpage{11}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent\textbf{Figure 9}\\
+Reconstruction strategy for the low-cost laminography: (\emph{a}) Step 1, searching the rotation axis by examining the middle part of the image, (\emph{b}) Step 2, searching the laminography tilt angle by setting the rotation axis from Step 1 and examining the border part of the image, (\emph{c}) Step 3, full reconstruction with chosen rotation axis and laminography tilt on Steps 1 and 2.
+\alttext{Three columns of greyscale reconstructed slices labelled ``a)'', ``b)'', ``c)'' at the top left of each. Top row: three nearly identical coronal slices through a small mouse brain slab, a square field showing a symmetric brain section (bright white spots at the upper corners, a dark midline structure, dark triangular ventricles at the lower left and right, speckled lateral regions with many small bright spots). In (a) a red ``x'' marks a point in the middle of the slice; in (b) a blue ``x'' marks a point at the right border; in (c) both crosses are drawn, and (c) also carries a grey-level bar ``0 attenuation 1'' (lower left) and a black scale bar ``500um'' (lower right). Bottom row: pairs of zoomed-in square crops. Under (a): two crops of the red-cross region, the left one blurred with doubled, ring-like cell outlines (wrong rotation axis), a thick red arrow pointing right to the second crop in which the cells are sharp dark dots; a red ``x'' in the upper left of the first crop. Under (b): two crops of the blue-cross region at the border, the left one blurred with smeared bright blobs, a thick blue arrow pointing right to the sharp second crop; a blue ``x'' in the first crop. Under (c): the two final crops (red-cross region at the left, blue-cross region at the right), both sharp, with a black scale bar ``100um'' at the lower right. Images only: no data file.}
+
+\begin{center}
+\includegraphics[width=0.75\linewidth,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent\textbf{Figure 10}\\
+Resolution estimation by Fourier ring correlation with the 1/2-bit criterion.
+\alttext{Line plot (raster, matplotlib style). x axis ``Spatial/Nyquist frequency'', linear from 0 to 1.0 with ticks at 0, 0.2, 0.4, 0.6, 0.8, 1.0; y axis ``Correlation'', linear from 0 to 1.0 with ticks at 0, 0.2, ..., 1.0; a light grey grid at the ticks. Legend box at the upper right with three line samples: ``FRC'' (black), ``smoothed FRC'' (red), ``1/2-bit threshold'' (blue). The black FRC curve starts at 1.0 at zero frequency, stays near 0.95--1.0 up to about 0.15, falls slowly to about 0.8 at 0.35, then drops steeply through 0.5 at about 0.44 and 0.2 at about 0.54, reaches a minimum of about 0.08 near 0.7 and rises slightly to about 0.12 at 1.0; it is noisy, oscillating by a few hundredths about its mean (more in the steep part and at the right end). The red smoothed FRC follows the centre of the black trace closely. The blue 1/2-bit threshold starts at 1.0 at zero frequency, drops almost vertically to about 0.4 within the first 0.01, decreases to about 0.25 at 0.1 and then declines slowly to about 0.2 at 1.0. The red and blue curves cross at about x = 0.54, y = 0.20; a black arrow from the upper right points at this crossing with the label ``1.69 um''. Data in figures/fig10.csv.}
+\figuredata{Fig. 10 (single panel)}{figures/fig10.csv}{figures/fig10.py}{digitized from the embedded raster image (1385 × 711 px; tier 3), no vector paths in the PDF; axes calibrated on the six grid lines per axis at the labelled ticks; about ±0.002 in frequency and ±0.004 in correlation (two pixels) for the smoothed FRC and the threshold, up to ±0.05 for the centre of the noisy FRC trace where it is hidden under the smoothed curve}
+
+Resolution levels were estimated by computing the Fourier ring correlation (FRC) (Van Heel \& Schatz, 2005) between reconstructions obtained from two independent sets of 3000 projections. We used the 1/2-bit resolution criterion. Since the reconstructed volume is thin, the resolution levels were estimated by slices and the plot with the lowest resolution (higher level in micrometres) was chosen as the final result, see Fig. 10. The intersection between the lines for the 1/2-bit criterion and the FRC corresponds to 1.69 μm resolution estimation.
+
+\subsection*{6.2. Results for the large mouse brain data}
+
+In the following we will demonstrate reconstruction of full brain slabs where data for each slab has sizes 15\,000 × 14\,960 × 5936 in 16-bit precision. Fig. 11 shows 3D volume rendering of reconstructed slabs in ORS Dragonfly package after binning reconstruction by a factor of eight in each dimension. The brain slabs were bent and tilted during the sample preparation, see Fig. 11(\emph{a}). Therefore we used additional postprocessing procedures to straighten reconstructed volumes. The images were rotated and unbent with \emph{Image.rotate()} and \emph{Image.distort()} methods from the \emph{Ward} Python package. After straightening the slabs they were stit\pdfpage{12}ched together, see Fig. 11(\emph{b}). Black dashed ellipses in the figure show matching features between adjacent slabs.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent\textbf{Figure 11}\\
+3D visualization of reconstructed mouse brain slabs: (\emph{a}) initial bent reconstruction of the slab 1 (top sample part), (\emph{b}) four straighten slab volumes stitched together.
+\alttext{Two colour 3D volume renderings (ORS Dragonfly) on a white background, labelled ``a)'' and ``b)'' at the upper left. (a) A single slab (label ``slab1'' at its right end) rendered in magenta-pink, seen obliquely from above and the side: a thin, plate-like coronal brain section that is strongly bent, its right part curling up like a wing; the top surface shows the brain's internal structure (two textured oval regions, the hemispheres' striatum, and a smoother cortex rim); a black scale bar labelled ``1mm''. (b) Four straightened slabs stacked on top of each other and seen obliquely: the top slab magenta (``slab1''), then yellow-green (``slab2''), cyan (``slab3'') and tan (``slab4''), the labels listed at the right from top to bottom; the stack forms a flattened oval block whose top shows the coronal brain surface and whose rim shows the four coloured layers with ragged, wavy edges. Three black dashed ellipses on the rim (left, front middle and right) enclose matching features that continue from one slab to the next. A black scale bar ``1mm'' at the bottom and an axis triad at the lower right: ``Z'' pointing up, ``X'' to the lower right, ``Y'' to the lower left. Images only: no data file.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent\textbf{Figure 12}\\
+(\emph{a}) Stitching reconstructed mouse brain slabs in vertical directions \emph{XZ} and \emph{YZ}. (\emph{b}) Corresponding zoomed-in regions marked with coloured crosses.
+\alttext{Greyscale reconstructed vertical slices through the stitched brain volumes, in two parts. (a) Top group, headed ``a) XZ slice'': four long horizontal strips labelled at their left ends ``slab1'', ``slab2'', ``slab3'', ``slab4'', stacked with each strip offset slightly to the left of the one above (staggered), showing grey brain tissue with bright fibre tracts, dark ventricles (a large dark region in the middle of slab3) and dark edges; thin black lines cross the gaps between neighbouring strips at several places, connecting matching features; coloured crosses mark zoom positions: magenta ``x'' in slab1, yellow in slab2, green in slab3, orange in slab4. At the right of this group a grey-level bar ``0 attenuation 1'' and a black scale bar ``1cm''. Lower group, headed ``YZ slice'': four wider horizontal strips labelled ``slab1'' (top), an unlabelled second strip, ``slab3'' and ``slab4'', again staggered, showing a symmetric coronal-like view with speckled bright regions at both sides, a dark cavity in the middle and many short black connecting lines between the strips; crosses: magenta in slab1, green in slab3, orange in slab4 (no yellow cross is visible in the unlabelled second strip). (b) Bottom row, headed ``b)'' with the titles ``XZ slice zoom'' (left) and ``YZ slice zoom'' (right): eight overlapping square close-ups, four per group, each carrying the cross of its colour (magenta, yellow, green, orange from left to right) in its upper left; they show fine tissue texture with dark dots (axons/cells), bright fibre bundles and black cavity edges; a black scale bar ``100um'' at the lower right. Images only: no data file.}
+
+Figs. 12 and 13 show reconstructed slices through the whole 3D volumes in high resolution. \emph{XZ}, \emph{YZ} and \emph{XY} directions for the slices are defined based on the axes depicted in the bottom part of Fig. 11. We carried out a visual inspection of slices for different slabs and found similar features that can be used for stitching. Black lines between the slices in Fig. 12(\emph{a}) show possible connections between the features. Accurate stitching is not possible because parts of the sample were destroyed/bent due to the cutting procedure. Based on the reconstructions, we can assume that 100 μm-thick layers between slabs were destroyed while cutting. It should be also noted that the brain was cut before embedding with petropoxy. This procedure may also affect the slab structures. The missing layer due to cutting can be also observed by comparing top and bottom slices in the \emph{XY} direction in Fig. 13(\emph{a}). The slices that should look similar are connected with black lines. For instance, ‘slab1, bottom’ and ‘slab2, top’ have similar features, although they are not very close to each other. Some parts of the top and bottom slices are blurred, see for instance the bottom right part of ‘slab1, top’, or the top right of ‘slab3, bottom’. This is due to the bent structure of the slabs. Although the images were straightened after reconstruction using the \emph{Ward} Python package, local deformation is not easily compensated. The imaging quality can be analysed using the zoomed-in regions demonstrated in Figs. 12(\emph{b}) and 13(\emph{b}). The regions are taken at the positions indicated by coloured crosses in the whole slab images. The obtained imaging resolution allows for segmenting axons (black dots) in most places.
+
+Resolution levels were estimated with the FRC as it was shown earlier for a small mouse brain sample. The middle part of the sample confirms 1.6–1.7 μm resolution. The levels on the sample borders are lower due to radiation damage. Iterative approaches with compensating sample deformation, \emph{e.g.} the one from Nikitin \emph{et al.} (2021), may be further considered to improve image quality and resolution.
+
+\section*{7. Conclusions and outlook}
+
+The proposed laminographic scanning strategy, coupled with an innovative laminography instrument setup at 2BM, APS, and advanced reconstruction capabilities integrated into the \emph{TomocuPy} package, not only facilitates the scanning of flat-shaped samples but also showcases the potential for imaging larger samples with minimal cutting procedures. As a primary illustration, we focused on imaging four sequential slabs from an entire mouse brain sample with a measured resolution of 1.69 μm (0.92 μm voxel size). This approach allowed us to trace connections between the slabs and discern axons in high-resolution reconstructions.
+
+While the laminography imaging technique is already established at the bending-magnet beamline 2-BM of the APS, our work suggests several avenues for significant improvement in brain imaging quality. First and foremost, the development of more refined cutting mechanisms is imperative. In our current sample preparation, the missing layer destroyed during cutting was approximately 100 μm, complicating accurate axon tracing or making it impossible in some instances. One can potentially consider methods used in \pdfpage{13}electron microscopy where the destroyed layer could be less than a micrometre (Mikula \& Denk, 2015). Another possible method involves the development of methods of sectioning the brain prior to staining with heavy metals. Indeed, we have recently shown that a new machine used for sectioning aldehyde-fixed brains, called the Compresstome, has an estimated tissue loss between sections of approximately 680 nm (Wildenberg \emph{et al.}, 2023). Given that ∼680 nm is near the size of a single pixel in our measurements, it is possible that the loss could be even smaller. Such an approach also offers the advantage that staining whole brains with heavy metals is difficult due to their poor diffusion, and protocols have only been demonstrated on whole mouse brains. Sectioning the tissue first and then staining it for X-ray imaging would bypass this limitation and pave a pathway towards imaging arbitrarily large brains.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.8\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent\textbf{Figure 13}\\
+(\emph{a}) Top and bottom slices in the horizontal direction \emph{XY} for each slab. (\emph{b}) Corresponding zoomed-in regions marked with coloured crosses.
+\alttext{Greyscale reconstructed horizontal (XY) slices, in two parts. (a) Headed ``a) XY slice'': eight coronal brain sections in a 4 × 2 grid, each labelled in a white box at its upper left: left column ``slab1, top'', ``slab2, top'', ``slab3, top'', ``slab4, top''; right column ``slab1, bottom'', ``slab2, bottom'', ``slab3, bottom'', ``slab4, bottom''. Each section is a light grey, butterfly-shaped coronal profile on a dark grey background (the embedding), with bright speckled lateral regions, dark ventricles and a dark midline; the sections of successive slabs show the coronal level changing from a rostral level (slab1: two small bright spots near the midline, rounded ventricles) to a caudal level (slab4: large dark cavities and a wide ventral structure). Short black diagonal lines between the ``bottom'' image of one slab and the ``top'' image of the next (three of them, on the left column's right side) connect the slices that should look alike. A red ``x'' in each ``top'' slice and a green ``x'' in each ``bottom'' slice mark the zoom positions. Under the grid: a grey-level bar ``0 attenuation 1'' and a black scale bar ``2cm''. (b) Right column, headed ``b) XY slice zoom'': four pairs of overlapping square close-ups (one pair per slab), each pair with a red-cross crop (upper left) and a green-cross crop (lower right), showing tissue texture with dark dots, bright fibre bundles and dark cavity edges; a black scale bar ``100um'' at the lower right. Images only: no data file.}
+
+Addressing the issue of the cut section deformations presents another potential enhancement. This can be approached by either cutting into slabs after embedding the entire sample in petropoxy or by considering more advanced methods for straightening the slabs. For example, the warp filtering method proposed by Ju \emph{et al.} (2006) for dealing with wavy histological mouse brain sections in optical microscopy can potentially be adapted for 3D X-ray images.
+
+The challenge of projection stitching for mouse brain data arises from low contrast, leading to insufficient features for accurate alignment. To overcome this, future efforts will involve the incorporation of high-contrast patterns placed in the beam before and after scanning each slab position. These patterns are expected to enable stitching accuracy of less than 1 μm.
+
+Additionally, we observed sample deformation at the borders due to radiation damage with the current pink X-ray beam centred at 25 keV. The monochromatic beam would be a more suitable choice. The upcoming APS Upgrade will provide the opportunity to work with higher energies (40–\pdfpage{14}50 keV) at the bending-magnet beamline 2-BM. This advancement should enable the imaging of thicker slabs with reduced radiation damage.
+
+As shown in Appendix \emph{A}, suppressing laminography artefacts caused by insufficient Fourier spectrum coverage for large laminography angles (≥30°) can be achieved using iterative reconstruction with total variation regularization. Applying the iterative scheme to large data volumes may take a lot of time and resources. For instance, reconstructing a $2048^3$ volume with the ADMM approach, typically involving 64 outer and four inner iterations, requires computing the forward and adjoint laminography operators 256 times each. According to Table 1, computing one of these operators on 1 GPU takes about 20 s, resulting in a total reconstruction time exceeding 3 h. Fortunately, the data chunking scheme presented in this work can be adapted for multi-GPU computations across multiple nodes. This should lead to significant acceleration of experimental data reconstruction. We plan to optimize the code accordingly in our future work.
+
+After successfully obtaining micrometre-resolution laminographic images of the mouse brain, our attention now shifts towards advancing techniques for nanometre resolution. This could involve utilizing the Projection X-ray Microscope instrument planned for construction with the APS Upgrade (Bean \emph{et al.}, 2021). By cutting mouse brains into thinner slabs and handling significantly larger data volumes, these steps represent crucial progress towards achieving high-resolution imaging of the human brain.
+
+\section*{APPENDIX \emph{A}}
+
+\subsection*{Reconstruction with regularization}
+
+In this Appendix we demonstrate a scheme for laminographic reconstruction with total variation (TV) regularization. The scheme allows for suppressing laminography artefacts and improving the quality of results for the samples having a lot of features that are significantly different in amplitudes. We will consider the augmented Lagrangian formulation of the reconstruction problem and solve the problem by using ADMM (Boyd \emph{et al.}, 2011) with splitting the whole problem by local sub-problems.
+
+As in the previous section, let $\mu(x_1, x_2, x_3)$ be a three-dimensional object and $d(\theta, u, v)$ its laminography data. Then the reconstruction problem with TV regularization reads as
+
+\begin{equation}
+\frac{1}{2} \|\mathcal{L}\mu - d\|_2^2 + \alpha \|\nabla\mu\|_1 \rightarrow \min,
+\tag{10}
+\end{equation}
+
+with
+
+\begin{equation}
+\alpha \|\nabla\mu\|_1 = \alpha \left\| \left[ \left( \frac{\partial\mu}{\partial x} \right)^2 + \left( \frac{\partial\mu}{\partial y} \right)^2 + \left( \frac{\partial\mu}{\partial z} \right)^2 \right]^{1/2} \right\|_1,
+\tag{11}
+\end{equation}
+
+where parameter $\alpha$ controls the trade-off between the data fidelity and regularization terms. The TV regularization promotes sparseness in reconstructions, resulting in noise suppression and incompleteness artefacts reduction (Chambolle \& Pock, 2016). In particular, the ‘tail’ laminography artefacts are an example of data incompleteness in the frequency domain.
+
+To solve the minimization problem (10) we first reformulate it as an equivalent constraint optimization problem with a new auxiliary variable $\psi$,
+
+\begin{equation}
+\min_{\mu, \psi} \frac{1}{2} \|\mathcal{L}\mu - d\|_2^2 + \alpha \|\psi\|_1
+\tag{12}
+\end{equation}
+
+subject to $\nabla\mu = \psi$, and try to minimize the augmented Lagrangian written as follows,
+
+\begin{equation}
+\mathcal{A}_\rho(\mu, \psi, \lambda) = \frac{1}{2} \|\mathcal{L}\mu - d\|_2^2 + \alpha \|\psi\|_1 + \lambda^T (\nabla\mu - \psi) + \frac{\rho}{2} \|\nabla\mu - \psi\|_2^2,
+\tag{13}
+\end{equation}
+
+where $\rho > 0$ is a penalty parameter and $\lambda$ represents the dual variable. We use ADMM to split the minimization problem of the augmented Lagrangian into two local sub-problems with respect to $\mu$ and $\psi$. The sub-problems are then coordinated through variable $\lambda$ to find a solution for the original problem. Specifically, the following steps are performed in each ADMM iteration $k$,
+
+\begin{equation}
+\mu^{k+1} = \operatorname*{argmin}_{\mu} \mathcal{A}_\rho(\mu, \psi^k, \lambda^k),
+\tag{14}
+\end{equation}
+
+\begin{equation}
+\psi^{k+1} = \operatorname*{argmin}_{\psi} \mathcal{A}_\rho(\mu^{k+1}, \psi, \lambda^k),
+\tag{15}
+\end{equation}
+
+\begin{equation}
+\lambda^{k+1} = \lambda^k + \rho(\nabla\mu^{k+1} - \psi^{k+1}),
+\tag{16}
+\end{equation}
+
+for zeros or some adequate initial guess at $k = 0$.
+
+The minimization functional for the problem (14) can be written as follows,
+
+\begin{equation}
+F(\mu) = \frac{1}{2} \|\mathcal{L}\mu - d\|_2^2 + \frac{\rho}{2} \|\nabla\mu - \psi^k + \lambda^k/\rho\|_2^2,
+\tag{17}
+\end{equation}
+
+where the terms not depending on $\mu$ are dropped. The problem is solved by considering the steepest ascent direction $\nabla_\mu F(u)$, given as
+
+\begin{equation}
+\nabla_\mu F(\mu) = \mathcal{L}^T(\mathcal{L}\mu - d) - \rho \operatorname{div}(\nabla\mu - \psi^k + \lambda^k/\rho),
+\tag{18}
+\end{equation}
+
+where the divergence operator $\operatorname{div}$ is the adjoint to $-\nabla$. With the steepest ascent direction, we can construct iterative schemes for solving (14) by using methods with different convergence rates. Here we employ the conjugate gradient (CG) method for its faster convergence rate at the expense of memory requirements. CG iterations are given as $u_{m+1} = u_m + \gamma_m \eta_m$, where $\gamma_m$ is a step length computed by a line-search procedure (Nocedal \& Wright, 2006) and $\eta_m$ is the search direction that we compute by using the Dai–Yuan formula (Dai \& Yuan, 1999),
+
+\begin{equation}
+\eta_{m+1} = -\nabla_\mu F(\mu_{m+1}) + \frac{\|\nabla_\mu F(\mu_{m+1})\|_2^2}{[\nabla_\mu F(\mu_{m+1}) - \nabla_\mu F(\mu_m)]^T \eta_m} \eta_m,
+\tag{19}
+\end{equation}
+
+where $\eta_0 = -\nabla_\mu F(\mu_0)$. On each ADMM iteration, we solve the tomography sub-problem approximately, by using only a \pdfpage{15}few numbers of CG iterations since this strategy in practice greatly improves ADMM convergence rates – see review by Boyd \emph{et al.} (2011).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig14.png}
+\end{center}
+\noindent\textbf{Figure 14}\\
+Results of reconstruction with total variation regularization for different laminography tilt angles. Data simulation parameters are the same as in Fig. 4.
+\alttext{Six greyscale reconstructed vertical slices of the synthetic integrated circuit in two rows of three, laid out like Fig.\,4(\emph{c}): each a black rectangle with the grey slab in the middle and a white label in the lower right corner, ``$\varphi = 0°$'', ``$\varphi = 10°$'', ``$\varphi = 20°$'' (top row), ``$\varphi = 30°$'', ``$\varphi = 40°$'', ``$\varphi = 50°$'' (bottom row). All six show the same layered pattern (a top row of bright rounded pads under a dotted line, a few small squares, a continuous bright middle line, a row of squares and a bottom row of squares) with sharp edges and a nearly uniform dark grey background; compared with Fig.\,4(\emph{c}) the horizontal streak artefacts are gone at all angles, and only at 40° and especially 50° are the edges slightly softer, with faint smooth brightness variations (patches) in the background. Images only: no data file.}
+
+The minimization problem with respect to $\psi$ (15) has a closed form solution defined via the soft-thresholding operator (Donoho, 1995),
+
+\begin{equation}
+\tilde{\psi} = \frac{\nabla\mu^{k+1} + 2\lambda^k/\rho}{|\nabla\mu^{k+1} + 2\lambda^k/\rho|} \max(0, |\nabla\mu^{k+1} + 2\lambda^k/\rho| - 2\alpha/\rho).
+\tag{20}
+\end{equation}
+
+Fig. 14 demonstrates the results of solving the minimization problem (10) for different laminography tilt angles $\varphi$. Data simulation parameters for the integrated circuit dataset were the same as in Fig. 4. The regularization parameter $\alpha$ was chosen using the L-curve criterion (Agarwal, 2003).
+
+Comparing reconstructed vertical slices presented in this figure with those presented in Fig. 4(\emph{c}), one can see that the proposed TV regularization approach significantly helps in suppressing the ‘tail’ artefacts even for large laminography angles. It should be noted that the TV regularization for large values of the regularization parameter may also introduce cartoon-like artefacts (Chan \& Shen, 2005). These artefacts are particularly seen in reconstruction for $\varphi = 50^\circ$ where we used a higher value of $\alpha$ than for other cases. It is generally advisable to search for a trade-off between the ‘tail’ and ‘cartoon’ artefacts with varying values of $\alpha$.
+
+\section*{Funding information}
+
+This research used resources of the Advanced Photon Source Argonne Leadership Computing Facility, US Department of Energy (DOE) Office of Science User Facilities operated for the DOE Office of Science by Argonne National Laboratory under Contract No. DE-AC02-06CH11357. The author also acknowledges support from ANL’s Laboratory Directed Research and Development (LDRD) funding 2021-0173, 2023-0104, 2023-0108.
+
+\section*{References}
+
+\begin{hangpars}
+Aarle, W. van, Palenstijn, W. J., De Beenhouwer, J., Altantzis, T., Bals, S., Batenburg, K. J. \& Sijbers, J. (2015). \emph{Ultramicroscopy}, \textbf{157}, 35–47.
+
+Agarwal, V. (2003). \emph{Total Variation Regularization and L-curve method for the selection of regularization parameter}, ECE599, Summer 2003, pp. 1–31. The University of Tennessee, TN, USA.
+
+Andersson, F., Carlsson, M. \& Nikitin, V. V. (2016). \emph{SIAM J. Imaging Sci.} \textbf{9}, 637–664.
+
+Bean, S., De Andrade, V., Deriy, A., Fezzaa, K., Graber, T., Matus, J., Preissner, C. \& Shu, D. (2021). \emph{Proceedings of 11th International Workshop on Mechanical Engineering Design of Synchrotron Radiation Equipment and Instrumentation (MEDSI2020)}, 24–29 July 2021, Chicago, IL, USA, pp. 211–214. TUPC15.
+
+Beylkin, G. (1998). Mathematical Geophysics Summer School, August 1998, Stanford University, Stanford, CA, USA (\url{https://amath.colorado.edu/faculty/beylkin/papers/aplusfft.pdf}).
+
+Boyd, S., Parikh, N., Chu, E., Peleato, B. \& Eckstein, J. (2011). \emph{Foundations Trends Machine Learning}, \textbf{3}, 1–122.
+
+Chambolle, A. \& Pock, T. (2016). \emph{Acta Numer.} \textbf{25}, 161–319.
+
+Chan, T. F. \& Shen, J. (2005). \emph{Image Processing and Analysis: Variational, PDE, Wavelet, and Stochastic methods}. SIAM.
+
+Cheng, Y., Altapova, V., Helfen, L., Xu, F., dos Santos Rolo, T., Vagović, P., Fiederle, M. \& Baumbach, T. (2013). \emph{J. Phys. Conf. Ser.} \textbf{463}, 012038.
+
+Dai, Y. H. \& Yuan, Y. (1999). \emph{SIAM J. Optim.} \textbf{10}, 177–182.
+
+De Carlo, F., Gürsoy, D., Ching, D. J., Batenburg, K. J., Ludwig, W., Mancini, L., Marone, F., Mokso, R., Pelt, D. M., Sijbers, J. \& Rivers, M. (2018). \emph{Meas. Sci. Technol.} \textbf{29}, 034004.
+
+Deyhle, H., Towsyfyan, H., Biguri, A., Mavrogordato, M., Boardman, R. \& Blumensath, T. (2020). \emph{NDT\&E Intl}, \textbf{111}, 102222.
+
+Donoho, D. L. (1995). \emph{IEEE Trans. Inf. Theory}, \textbf{41}, 613–627.
+
+Dowd, B., Campbell, G., Marr, R., Nagarkar, V., Tipnis, S., Axe, L. \& Siddons, D. (1999). \emph{Proc. SPIE}, \textbf{3772}, 224–236.
+
+Du, M., Vescovi, R., Fezzaa, K., Jacobsen, C. \& Gürsoy, D. (2018). \emph{J. Opt. Soc. Am. A}, \textbf{35}, 1871–1879.
+
+Dutt, A. \& Rokhlin, V. (1993). \emph{SIAM J. Sci. Comput.} \textbf{14}, 1368–1393.
+
+Faragó, T., Gasilov, S., Emslie, I., Zuber, M., Helfen, L., Vogelgesang, M. \& Baumbach, T. (2022). \emph{J. Synchrotron Rad.} \textbf{29}, 916–927.
+
+Fisher, S. L., Holmes, D., Jørgensen, J. S., Gajjar, P., Behnsen, J., Lionheart, W. R. \& Withers, P. J. (2019). \emph{Meas. Sci. Technol.} \textbf{30}, 035401.
+
+Flannery, B. P., Deckman, H. W., Roberge, W. G. \& D’Amico, K. L. (1987). \emph{Science}, \textbf{237}, 1439–1444.
+
+\pdfpage{16}
+Foxley, S., Sampathkumar, V., De Andrade, V., Trinkle, S., Sorokina, A., Norwood, K., La Riviere, P. \& Kasthuri, N. (2021). \emph{NeuroImage}, \textbf{238}, 118250.
+
+Gondrom, S., Zhou, J., Maisl, M., Reiter, H., Kröning, M. \& Arnold, W. (1999). \emph{Nucl. Eng. Des.} \textbf{190}, 141–147.
+
+Grodzins, L. (1983). \emph{Nucl. Instrum. Methods Phys. Res.} \textbf{206}, 541–545.
+
+Gürsoy, D., De Carlo, F., Xiao, X. \& Jacobsen, C. (2014). \emph{J. Synchrotron Rad.} \textbf{21}, 1188–1193.
+
+Hasenkamp, F. (1973). \emph{Radiographic Laminography}. Technical Report SLA-73-964. Sandia Labs, Albuquerque, NM, USA.
+
+Heel, M. van \& Schatz, M. (2005). \emph{J. Struct. Biol.} \textbf{151}, 250–262.
+
+Helfen, L., Baumbach, T., Mikulík, P., Kiel, D., Pernot, P., Cloetens, P. \& Baruchel, J. (2005). \emph{Appl. Phys. Lett.} \textbf{86}, 071915.
+
+Helfen, L., Myagotin, A., Mikulík, P., Pernot, P., Voropaev, A., Elyyan, M., Di Michiel, M., Baruchel, J. \& Baumbach, T. (2011). \emph{Rev. Sci. Instrum.} \textbf{82}, 063702.
+
+Helfen, L., Xu, F., Suhonen, H., Cloetens, P. \& Baumbach, T. (2013). \emph{J. Phys. Conf. Ser.} \textbf{425}, 192025.
+
+Holler, M., Odstrčil, M., Guizar-Sicairos, M., Lebugle, M., Frommherz, U., Lachat, T., Bunk, O., Raabe, J. \& Aeppli, G. (2020). \emph{J. Synchrotron Rad.} \textbf{27}, 730–736.
+
+Holler, M., Odstrcil, M., Guizar-Sicairos, M., Lebugle, M., Müller, E., Finizio, S., Tinti, G., David, C., Zusman, J., Unglaub, W., Bunk, O., Raabe, J., Levi, A. F. J. \& Aeppli, G. (2019). \emph{Nat. Electron.} \textbf{2}, 464–470.
+
+Hoshino, M., Uesugi, K., Takeuchi, A., Suzuki, Y., Yagi, N., McNulty, I., Eyberger, C. \& Lai, B. (2011). \emph{AIP Conf. Proc.} \textbf{1365}, 250–253.
+
+Hua, Y., Laserstein, P. \& Helmstaedter, M. (2015). \emph{Nat. Commun.} \textbf{6}, 7923.
+
+Hurst, M., Helfen, L., Morgeneyer, T. F., Suhonen, H., Buljac, A., Hild, F., Suuronen, J.-P., Baumbach, T. \& Hänschke, D. (2023). \emph{Sci. Rep.} \textbf{13}, 1055.
+
+Ju, T., Warren, J., Carson, J., Bello, M., Kakadiaris, I., Chiu, W., Thaller, C. \& Eichele, G. (2006). \emph{J. Neurosci. Methods}, \textbf{156}, 84–100.
+
+Lowe, D. G. (2004). \emph{Int. J. Comput. Vis.} \textbf{60}, 91–110.
+
+Mikula, S. \& Denk, W. (2015). \emph{Nat. Methods}, \textbf{12}, 541–546.
+
+Mizutani, R., Saiga, R., Ohtsuka, M., Miura, H., Hoshino, M., Takeuchi, A. \& Uesugi, K. (2016). \emph{Sci. Rep.} \textbf{6}, 35061.
+
+Morgeneyer, T. F., Taillandier-Thomas, T., Helfen, L., Baumbach, T., Sinclair, I., Roux, S. \& Hild, F. (2014). \emph{Acta Mater.} \textbf{69}, 78–91.
+
+Myagotin, A., Voropaev, A., Helfen, L., Hänschke, D. \& Baumbach, T. (2013). \emph{IEEE Trans. Image Process.} \textbf{22}, 5348–5361.
+
+Nikitin, V. (2023). \emph{J. Synchrotron Rad.} \textbf{30}, 179–191.
+
+Nikitin, V., De Andrade, V., Slyamov, A., Gould, B. J., Zhang, Y., Sampathkumar, V., Kasthuri, N., Gürsoy, D. \& De Carlo, F. (2021). \emph{IEEE Trans. Comput. Imaging}, \textbf{7}, 272–287.
+
+Nocedal, J. \& Wright, S. (2006). \emph{Numerical Optimization}. Springer Science \& Business Media.
+
+O’Brien, N., Mavrogordato, M., Boardman, R., Sinclair, I., Hawker, S. \& Blumensath, T. (2016). \emph{Case Stud. Nondestr. Test. Eval.} \textbf{6}, 56–61.
+
+Paganin, D., Mayo, S., Gureyev, T. E., Miller, P. R. \& Wilkins, S. W. (2002). \emph{J. Microsc.} \textbf{206}, 33–40.
+
+Reischig, P., Helfen, L., Wallert, A., Baumbach, T. \& Dik, J. (2013). \emph{Appl. Phys. A}, \textbf{111}, 983–995.
+
+Vescovi, R., Du, M., de Andrade, V., Scullin, W., Gürsoy, D. \& Jacobsen, C. (2018). \emph{J. Synchrotron Rad.} \textbf{25}, 1478–1489.
+
+Vo, N. T., Atwood, R. C. \& Drakopoulos, M. (2018). \emph{Opt. Express}, \textbf{26}, 28396–28412.
+
+Voropaev, A., Myagotin, A., Helfen, L. \& Baumbach, T. (2016). \emph{IEEE Trans. Image Process.} \textbf{25}, 2368–2378.
+
+Wildenberg, G. A., Boergens, K. M., Nikitin, V., Deriy, A., De Carlo, F., De Andrade, V., Xiao, X. \& Kasthuri, N. (2023). \emph{bioRxiv} 2023.10.23.563679.
+
+Wood, C. E., O’Brien, N., Denysov, A. \& Blumensath, T. (2019). \emph{IEEE Trans. Nucl. Sci.} \textbf{66}, 655–663.
+
+Xu, F., Helfen, L., Moffat, A. J., Johnson, G., Sinclair, I. \& Baumbach, T. (2010). \emph{J. Synchrotron Rad.} \textbf{17}, 222–226.
+
+\end{hangpars}
+\end{document}

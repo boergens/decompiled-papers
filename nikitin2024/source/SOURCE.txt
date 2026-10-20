@@ -1,0 +1,9 @@
+nikitin2024: Nikitin V., Wildenberg G., Mittone A., Shevchenko P., Deriy A., De Carlo F. (2024). Laminography as a tool for imaging large-size samples
+with high resolution. Journal of Synchrotron Radiation 31(4):851-866.
+DOI: 10.1107/S1600577524002923
+Publisher page: https://journals.iucr.org/s/issues/2024/04/00/gy5064/index.html (received 30 January 2024; accepted 3 April 2024; online 21 May 2024)
+Files (downloaded 2026-10-20 by the oct-20-compresstome session, browser slot 0; the publisher answers curl with a Cloudflare challenge):
+  nikitin2024.pdf   publisher version of record, from https://journals.iucr.org/s/issues/2024/04/00/gy5064/gy5064.pdf (31 MB; large figures)
+Licence: CC BY 4.0 ("Published under a CC BY 4.0 licence", PDF p. 1 footer).
+Why: cites Wildenberg et al. 2023 for the Compresstome's "estimated tissue loss between sections of approximately 680 nm" (Conclusions);
+mouse-brain laminography, not a Compresstome paper itself. Obtained as the lead listed in ~/ephemeral/oct_20_compresstome/README.md.

@@ -1,0 +1,58 @@
+# Nikitin et al. 2024, J. Synchrotron Rad. 31, 851-866, Figure 7 (p. 858): Nvidia Nsight Systems timeline of the
+#   asynchronous 1D USFFT (laminographic backprojection). One row per box on the timeline.
+# Columns: series (timeline row and box type as printed), label (the text printed inside the box, truncated as
+#   printed; empty where none is readable), annotation (the authors' brace label over/under the box: 'GPU calculations
+#   chunk N', 'CPU->GPU copy chunk N+1', ...), t_start_ms and t_end_ms = box extent on the ruler in ms after the '71s'
+#   mark (the ruler is labelled +600ms ... +660ms), duration_ms, x0_px/x1_px = pixel columns in the embedded image.
+# Provenance: tier 3, digitized from the embedded 2205 x 648 px raster screenshot (no vector paths) by fig7_extract.py:
+#   colour masks of the box fills (kernel boxes split at the light notch their rounded corners leave where two boxes
+#   meet), time axis fitted on the seven labelled major ticks (+600 ... +660 ms, max residual
+#   0.062 ms; one pixel = 0.0415 ms); the eight unlabelled major ticks fall on 5 ms multiples to < 0.3 ms.
+# Uncertainty: about +-0.05 ms (1 px) per box edge. The kernel labels are assigned in the printed left-to-right order
+#   of the six wide boxes of each chunk group (groups are separated by the cyan chunk-start boxes); the narrow
+#   dark boxes at the end of each group carry no readable label. A memcpy block of a stream row consists of several
+#   adjacent sub-boxes (seams visible in the screenshot); each sub-box is a row here, the overview bar is one bar.
+#   Boxes cut by the right edge of the screenshot (the third DtoH 'Me...', the 'ga...' kernel) are given up to the edge.
+# Not in the CSV: the CPU (64) utilization trace and the 'Processes'/'tomocupy' rows (no readable values), the stream
+#   percentages printed at the left (52.7% Stream 18, 11.9% Stream 17, 11.8% Stream 16, 11.2% Stream 19, 3 streams
+#   hidden), and the asterisks marking CPU time spent on pinned memory (see the figure caption and the \alttext).
+series,label,annotation,t_start_ms,t_end_ms,duration_ms,x0_px,x1_px
+CUDA HW overview: Memcpy HtoD (green bar),,,607.55,619.33,11.78,746,1029
+CUDA HW overview: Memcpy HtoD (green bar),,,643.22,654.96,11.74,1606,1888
+CUDA HW overview: Memcpy DtoH (purple bar),,,594.98,605.27,10.29,443,690
+CUDA HW overview: Memcpy DtoH (purple bar),,,630.61,640.94,10.33,1302,1550
+CUDA HW overview: Memcpy DtoH (purple bar),,,666.16,668.07,1.91,2159,2204
+Stream 18: GPU kernel box,,,593.40,594.11,0.71,405,421
+Stream 18: GPU kernel box,,GPU calculations chunk N,594.98,595.11,0.12,443,445
+Stream 18: GPU kernel box,gather1d...,GPU calculations chunk N,595.23,600.21,4.98,449,568
+Stream 18: GPU kernel box,,GPU calculations chunk N,600.33,600.75,0.41,572,581
+Stream 18: GPU kernel box,...,GPU calculations chunk N,600.91,602.36,1.45,586,620
+Stream 18: GPU kernel box,void regular_fft_factor<(...,GPU calculations chunk N,602.57,613.98,11.41,626,900
+Stream 18: GPU kernel box,void regul...,GPU calculations chunk N,614.23,619.66,5.43,907,1037
+Stream 18: GPU kernel box,void prime_fft_...,GPU calculations chunk N,619.91,627.17,7.26,1044,1218
+Stream 18: GPU kernel box,...,GPU calculations chunk N,627.38,628.83,1.45,1224,1258
+Stream 18: GPU kernel box,,GPU calculations chunk N,629.08,629.78,0.71,1265,1281
+Stream 18: GPU kernel box,,GPU calculations chunk N+1,630.65,630.78,0.12,1303,1305
+Stream 18: GPU kernel box,gather1d...,GPU calculations chunk N+1,630.90,635.88,4.98,1309,1428
+Stream 18: GPU kernel box,,GPU calculations chunk N+1,636.01,636.25,0.25,1432,1437
+Stream 18: GPU kernel box,ff...,GPU calculations chunk N+1,636.42,638.04,1.62,1442,1480
+Stream 18: GPU kernel box,void regular_fft_factor<(...,GPU calculations chunk N+1,638.25,649.65,11.41,1486,1760
+Stream 18: GPU kernel box,void regul...,GPU calculations chunk N+1,649.90,655.17,5.27,1767,1893
+Stream 18: GPU kernel box,void prime_fft_...,GPU calculations chunk N+1,655.42,662.68,7.26,1900,2074
+Stream 18: GPU kernel box,...,GPU calculations chunk N+1,662.89,664.38,1.49,2080,2115
+Stream 18: GPU kernel box,,GPU calculations chunk N+1,664.59,665.13,0.54,2121,2133
+Stream 18: GPU kernel box,ga...,,666.29,667.74,1.45,2162,2196
+"Stream 18: chunk-start box (cyan, unlabelled)",,,594.23,594.94,0.71,425,441
+"Stream 18: chunk-start box (cyan, unlabelled)",,,629.91,630.61,0.71,1285,1301
+"Stream 18: chunk-start box (cyan, unlabelled)",,,665.29,666.00,0.71,2138,2154
+Stream 17: Memcpy HtoD,Memcpy HtoD,CPU->GPU copy chunk N+1,607.55,619.41,11.86,746,1031
+Stream 17: Memcpy HtoD,Memcpy HtoD,CPU->GPU copy chunk N+2,643.22,655.09,11.86,1606,1891
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N-1,594.36,597.01,2.65,428,491
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N-1,597.05,600.83,3.77,493,583
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N-1,601.08,605.35,4.27,590,692
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N,630.03,632.69,2.65,1288,1351
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N,632.73,636.50,3.77,1353,1443
+Stream 19: Memcpy DtoH,Memcpy DtoH,GPU->CPU copy chunk N,636.75,641.03,4.27,1450,1552
+Stream 19: Memcpy DtoH,Me...,,665.42,666.00,0.58,2141,2154
+Stream 19: Memcpy DtoH,Me...,,666.04,666.41,0.37,2156,2164
+Stream 19: Memcpy DtoH,Me...,,666.49,667.82,1.33,2167,2198
