@@ -1,0 +1,18 @@
+{
+  "key": "kong2014",
+  "handed_over": "2026-10-20",
+  "from": "oct-20-compresstome session (Compresstome-on-large-brains package, ~/ephemeral/oct_20_compresstome), at Kevin's request ('get the patents and papers locally, then hand them over to the paper service')",
+  "paper": "Kong, Jian-Qiang (2014), Microtome. US patent 8,635,934 B2 (filed 2010-08-25, granted 2014-01-28)",
+  "doi_or_number": "US8635934B2",
+  "licence_as_printed": "US patent publication (USPTO); no copyright notice",
+  "files": "US8635934B2.pdf (USPTO image PDF, 9 pp., no text layer) + US8635934B2.google_patents.txt (Google Patents text, OCR second opinion)",
+  "state": "source only: source/ holds the PDF(s) and SOURCE.txt (URL, date, how fetched, licence). No decompile started. The three patents are image-only PDFs (scans in the SPEC's sense: run the OCR step first); each comes with the Google Patents text of the same document as a second opinion.",
+  "wanted": "decompile by the library's own rules and promote; the oct-20-compresstome session uses them for the Compresstome question (the kong2012 outlet-lip description and claims; the Abdelaal vibratome comparison; the Nikitin 680 nm citation)",
+  "callback": {
+    "when": "the paper leaves incoming/ for any reason: promoted to the library, blocked, or parked for a Kevin decision",
+    "how": [
+      "1. SendMessage to the session named 'oct-20-compresstome-a3'; if ListAgents shows no such name, to any live session whose name starts with 'oct-20-compresstome'. First line: 'callback kong2014: <promoted|blocked|needs-kevin> <commit sha>'.",
+      "2. Always also append that same line, with a UTC timestamp, to /home/admin/ephemeral/oct_20_compresstome/inbox/papers.md (durable fallback if the oct-20 session is not running)."
+    ]
+  }
+}

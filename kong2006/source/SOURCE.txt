@@ -1,0 +1,10 @@
+kong2006: Kong, George Y. (2006). Sliding blade microtome. US patent 7,146,895 B2, filed 2004-10-21, granted 2006-12-12.
+Inventor/assignee: George Y. Kong (the Precisionary Instruments founders' family; Precisionary's history page credits Jian-Qiang Kong with the Compresstome idea around 2004).
+Files (fetched 2026-10-20 by the oct-20-compresstome session):
+  US7146895B2.pdf                 USPTO full-text image PDF, 8 pp., no text layer (pdffonts: none; one image per page). Scan-type: needs OCR.
+                                  from https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7146895 (curl, HTTP 200)
+  US7146895B2.google_patents.txt  the text of https://patents.google.com/patent/US7146895B2/en (HTML stripped, curl, same day):
+                                  bibliographic data, abstract, description, claims; use as the OCR second opinion, the PDF image is authoritative.
+Licence: US patent publication (USPTO); no copyright notice in the text.
+Why: the earliest of the three Kong patents behind the Compresstome (sliding vibrating blade); obtained together with US 8,109,184 and US 8,635,934
+for the Compresstome-on-large-brains question.

@@ -1,0 +1,344 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\decompnote{Full verbatim transcript of US patent 8,635,934 B2 (Kong et al., ``Microtome'', granted Jan.\ 28, 2014), produced tool-first: the text was placed from a Datalab API (accurate mode) OCR of the USPTO image PDF made on 2026-10-20 (\texttt{work/datalab/US8635934B2.md}) by the script \texttt{work/build\_main.py}, and proofread against the page images by the decompiler, with the Google Patents text of the same document (\texttt{source/US8635934B2.google\_patents.txt}) as a second opinion; every correction is in the script's correction table and in the README. The source is the USPTO full-text image PDF: 9 pages, each one bilevel CCITT image of 2560 by 3300 pixels placed at one point per pixel, i.e.\ a 300 ppi scan of the 8.5 by 11 inch sheet, with no text layer; the page images are authoritative. The document is a public USPTO patent publication and prints no copyright notice. Left out: the running headers (``US 8,635,934 B2 / Page 2'' on p.\,2, ``U.S. Patent / Jan.\ 28, 2014 / Sheet n of 3 / US 8,635,934 B2'' on the drawing sheets pp.\,3--5, ``US 8,635,934 B2'' on pp.\,6--9), the gutter line numbers 5, 10, 15, \ldots\ of the description columns, the dot leaders between a cited patent's name and its class (and after ``USPC''), and the bar code ``US008635934B2'' at the top of the front page. The printed column numbers 1--8 of the description (pp.\,6--9, two columns per page) are given as decompiler notes at each column start, so the text can be cited by column; where a column starts mid-sentence the note says so and the sentence is kept whole. Reference numerals printed in bold in the abstract and the description are set in bold here too.}
+
+\sourcefile{US8635934B2.pdf}
+
+\pdfpage{1}
+\noindent (12) \textbf{\Large United States Patent}\\
+\mbox{}\quad\textbf{Kong et al.}\hfill (10) \textbf{Patent No.:} \textbf{US 8,635,934 B2}\\
+\mbox{}\hfill (45) \textbf{Date of Patent:} \textbf{Jan. 28, 2014}
+
+\decompnote{Front page, left column. The header's three items are printed as a block: (12) and the inventors' name at the left, (10) and (45) at the right.}
+\begin{hangpars}
+(54) \textbf{MICROTOME}
+
+(76) Inventors: \textbf{Jian-Qiang Kong}, Greenville, NC (US); \textbf{George Y-H Kong}, Greenville, NC (US)
+
+( * ) Notice: Subject to any disclaimer, the term of this patent is extended or adjusted under 35 U.S.C. 154(b) by 229 days.
+
+(21) Appl. No.: \textbf{13/320,215}
+
+(22) PCT Filed: \textbf{Aug. 25, 2010}
+
+(86) PCT No.: \textbf{PCT/US2010/046665}
+
+\S 371 (c)(1), (2), (4) Date: \textbf{Nov. 11, 2011}
+
+(87) PCT Pub. No.: \textbf{WO2011/034698}
+
+PCT Pub. Date: \textbf{Mar. 24, 2011}
+
+(65) \textbf{Prior Publication Data}
+
+US 2012/0055300 A1 Mar. 8, 2012
+
+\textbf{Related U.S. Application Data}
+
+(60) Provisional application No. 61/242,404, filed on Sep. 15, 2009.
+
+(51) \textbf{Int. Cl.} \textbf{\textit{B26D 7/06}} (2006.01)
+
+(52) \textbf{U.S. Cl.} USPC \textbf{83/42}; 83/167; 83/169; 83/215; 83/915.5
+
+(58) \textbf{Field of Classification Search} USPC 83/915.5, 13, 23, 42, 56, 412, 169, 170, 83/202, 215, 523, 527, 530, 167 See application file for complete search history.
+
+(56) \textbf{References Cited}
+
+\end{hangpars}
+\begin{center}U.S. PATENT DOCUMENTS\end{center}
+\decompnote{References Cited: the printed dot leaders between a name and its class are left out; the last column is the class (``83/409''), empty where none is printed; the star marks a reference cited by the examiner, as the footnote on p.\,2 says. Also as \texttt{tables/references\_cited.csv}.}
+\noindent
+\begin{tabular}{@{}rlcrll@{}}
+325,722 & A & * & 9/1885 & Bausch & 83/409\\
+618,514 & A & * & 1/1899 & Low & 83/466\\
+708,298 & A & * & 9/1902 & Bausch & 83/662\\
+3,460,417 & A & * & 8/1969 & Johnson & 83/111\\
+\end{tabular}
+\decompnote{Front page, right column (below the header).}
+\noindent
+\begin{tabular}{@{}rlcrll@{}}
+3,467,075 & A & * & 9/1969 & Cary & 125/13.01\\
+3,667,330 & A & * & 6/1972 & Kobernick & 83/98\\
+3,799,029 & A &  & 3/1974 & Cole et al. & \\
+3,807,604 & A &  & 4/1974 & Schaffer et al. & \\
+4,239,963 & A & * & 12/1980 & August et al. & 73/514.26\\
+4,377,958 & A & * & 3/1983 & Leighton & 83/410.7\\
+4,455,910 & A &  & 6/1984 & Kraft et al. & \\
+D328,129 & S &  & 7/1992 & Holbl & \\
+5,226,335 & A & * & 7/1993 & Sitte et al. & 83/74\\
+5,461,953 & A & * & 10/1995 & McCormick & 83/36\\
+\end{tabular}
+\begin{center}(Continued)\end{center}
+\begin{center}FOREIGN PATENT DOCUMENTS\end{center}
+\noindent
+\begin{tabular}{@{}lrr@{}}
+DE & 202004007658 & 7/2004\\
+JP & 5-340851 & 12/1993\\
+JP & 11-304668 & 11/1999\\
+JP & 2005-077368 & 3/2005\\
+\end{tabular}
+
+\noindent \textit{Primary Examiner} — Sean Michalski
+
+\noindent (74) \textit{Attorney, Agent, or Firm} — Richard C. Litman
+
+\noindent (57) \hfill \textbf{ABSTRACT} \hfill\mbox{}
+
+The microtome (\textbf{10}) includes a base (\textbf{12}) having a tank (\textbf{14}) filled with a bath (\textbf{16}) mounted thereon. A feeding mechanism (\textbf{20}) for feeding select amounts of specimen to be sectioned protrudes through the base (\textbf{12}) into the bath (\textbf{16}). A cutting mechanism (\textbf{40}) spans the tank (\textbf{14}) and includes a reciprocating carriage (\textbf{42}) above the feeding mechanism (\textbf{20}). The carriage (\textbf{42}) is disposed at an angle with respect to the direction of reciprocation and includes a vibrating blade (\textbf{62}) hanging down from the carriage (\textbf{42}). The combined motion of the carriage (\textbf{42}) and the vibrating blade (\textbf{62}) slices samples from the specimen extruded by the feeding mechanism (\textbf{20}), which permits consistent and uniformly thick samples with minimal surface irregularities, especially for large specimens. A controlling mechanism (\textbf{80}) coordinates operation of the feeding mechanism (\textbf{20}) and the cutting mechanism (\textbf{40}).
+
+\begin{center}\textbf{13 Claims, 3 Drawing Sheets}\end{center}
+\decompnote{Below this line the front page reproduces the drawing of FIG.\ 1 (Sheet 1, PDF p.\,3) at reduced size and upright, with the same 33 reference labels; it is not cropped separately, see the figure block at p.\,3.}
+
+\pdfpage{2}
+\noindent (56) \hfill \textbf{References Cited} \hfill\mbox{}
+
+\begin{center}U.S. PATENT DOCUMENTS\end{center}
+\noindent
+\begin{tabular}{@{}rlcrll@{}}
+5,671,648 & A &  & 9/1997 & Dern & \\
+5,713,255 & A &  & 2/1998 & Izvozichikov & \\
+6,041,686 & A & * & 3/2000 & Lihl et al. & 83/628\\
+6,105,483 & A & * & 8/2000 & Takeda & 83/881\\
+6,651,538 & B2 & * & 11/2003 & Tamura et al. & 83/575\\
+6,871,572 & B1 &  & 3/2005 & Haussler et al. & \\
+7,146,894 & B2 & * & 12/2006 & Hendrick et al. & 83/703\\
+\end{tabular}
+\decompnote{p.\,2, right column.}
+\noindent
+\begin{tabular}{@{}rlcrll@{}}
+7,146,895 & B2 & * & 12/2006 & Kong et al. & 83/705\\
+7,703,368 & B2 &  & 4/2010 & Lang et al. & \\
+8,109,184 & B2 & * & 2/2012 & Kong et al. & 83/13\\
+2006/0086221 & A1 &  & 4/2006 & Kong et al. & \\
+2007/0053057 & A1 & * & 3/2007 & Zust et al. & 359/368\\
+2007/0199418 & A1 & * & 8/2007 & Ito & 83/13\\
+2008/0072722 & A1 &  & 3/2008 & Tanki et al. & \\
+2010/0000383 & A1 & * & 1/2010 & Koos et al. & 83/22\\
+2012/0055300 & A1 & * & 3/2012 & Kong et al. & 83/19\\
+\end{tabular}
+
+\noindent * cited by examiner
+
+
+\pdfpage{3}
+\decompnote{Drawing sheets (PDF pp.\,3--5): each sheet is headed ``U.S. Patent \quad Jan.\ 28, 2014 \quad Sheet n of 3 \quad US 8,635,934 B2'' (left out) and prints one drawing sideways (rotated 90\textdegree\ counter-clockwise on the sheet, the ``FIG.\ n'' label reading bottom to top at the right edge); \texttt{figures/fig1--3.png} are crops at the scan's native 300 ppi (crop.py at 72 dpi, 1 px per scan pixel), rotated 90\textdegree\ clockwise so that the drawing and its reference numerals read upright. The reference numerals printed in the drawings are listed in each description block.}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{FIG. 1}
+\alttext{Sheet 1 of 3 (PDF p.\,3), FIG.\ 1: the diagrammatic top view of the microtome 10, a black-and-white line drawing with italic reference numerals on wavy leader lines; no scale. Described upright (the sheet prints it rotated 90\textdegree). A large outer rectangle (the base, unlabelled in this view) encloses everything but the numerals. Right part: a tall narrow vertical rectangle 50 (second stand) with an inner line 52 (second rail) running its full height and a short double-headed vertical arrow 41 beside it (the reciprocating direction); two small squares 56, 56 on the rail at the right end of the carriage (the pair of rotary bearings). The carriage 42 (numeral underlined) is a parallelogram-shaped beam: its left end is an upright rectangle at the upper centre-left, from which the middle section runs diagonally down to the right at an acute angle to the rail and ends at the bearings 56; an arrow 40 (cutting mechanism) points at the carriage from the upper right. On the middle section: two small rectangles 64, 64 (linear bearings), one at the upper left and one at the lower right of the blade holder 66, an elongated inclined rectangular frame hanging below the carriage, with the cutting blade 62 as the long strip along its lower edge; a short double-headed arrow 61 parallel to the blade (the vibrating direction); and the letter α with a curved arrow drawn between the vertical line of the carriage's left end and the inclined blade (the acute angle at which the middle section is disposed). Above the blade holder the connector arm 68 rises to a small circle 70 (bearing), from which the short crank arm 72 runs to a second small circle 74 (bearing) on the eccentric wheel 76, a larger circle; 78 (motor) is lettered at the wheel's hub. Inside an inner rectangle at the centre-right (unlabelled in this view; the tank of FIG.\ 2 by position) a circle 25 (feed opening) at the lower centre shows the substrate 27 as a hatched ring around the specimen 26 (numeral underlined), a stippled area with an irregular outline; an arrow 20 (feeding mechanism) points at it from the lower left. Left part: a horizontal rectangle 82 (control unit) at the upper left with 80 (control mechanism) arrowed at it from outside the base; below the carriage's left end a vertical bar 58 (mounting plate) carrying the rack 53, drawn as a narrow strip along it, and the pinion 57, a small square between the rack and the motor 55, a rectangle at the left middle; between the mounting plate and the inner rectangle a tall narrow vertical rectangle with an inner outline (unlabelled; the first rail on its stand in FIG.\ 2 by position); a small rectangle 60 (detectable element) at the lower end of the mounting plate, and two small circles 84 and 86 (first and second sensors) below it at the left, each wired by a line to the control unit, which is also wired to the motor 55 and, by a line across the top of the drawing, to the vibration drive at the right. The numeral 10 stands outside the lower right corner with a curved arrow towards the whole. Labels present (33): 10, 20, 25, 26, 27, 40, 41, 42, 50, 52, 53, 55, 56 (twice), 57, 58, 60, 61, 62, 64 (twice), 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, α. Not a plotted panel: no data file.}
+
+\pdfpage{4}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent\textbf{FIG. 2}
+\alttext{Sheet 2 of 3 (PDF p.\,4), FIG.\ 2: the diagrammatic front view of the microtome in FIG.\ 1, with the specimen feed in section; same drawing style, described upright. Centre, from bottom to top: the stepper motor 30, a rectangle at the bottom, joined by a short stem to the pusher 28, a tall rectangle inside the feed housing 22, whose walls are two hatched vertical strips; a double-headed vertical arrow 21 inside the pusher (the feed direction); above the pusher the specimen 26 (stippled, numeral underlined) between two hatched zones with wavy inner boundaries, the substrate 27; at the top of the housing the compression lip 24, its leader ending at the bevelled inner edge of the right wall. The housing passes up through the base 12, a long horizontal plate, and through the bottom of the tank 14, a rectangular vessel, into the bath 16, whose surface is a wavy line. Above the tank the carriage 42 is a long horizontal bar with the motor 78, a small rectangle, standing on it right of centre; 40 (cutting mechanism) is arrowed at it from the upper right. From the carriage's right end hangs the bearing support plate 54, a vertical bar, with a rotary bearing 56 (small rectangle) at its foot resting on the second rail 52, drawn as a circle (the circular rod in section), which sits on the second stand 50, a flared pedestal on the base. Left of centre the linear bearing 48 is a block under the carriage with an I-shaped slot in which the first rail 44 (its I-beam cross section) sits; the rail stands on the first stand 46, a tall column on the base, taller than the stand 50. Hanging from the carriage into the tank, unlabelled in this view: two vertical rods and two horizontal plates, the lower plate at the bath surface (the blade holder and blade of FIG.\ 1 by position). Far left: a vertical bar hanging from the carriage's left end (unlabelled; the mounting plate of FIG.\ 1), a small block 53 (rack) beside it and below it the pinion 57, a small square driven by the motor 55, a rectangle; and a numeral 51 whose leader ends at a short horizontal line just under the carriage between that bar and the linear bearing (51 does not occur in the description). Upper left: 80 (control mechanism) arrowed at an unlabelled rectangle (the control unit), from which lines run across the top of the drawing to the motor 78, down to the motor 55, and down the left side and along the bottom to the stepper motor 30. The numeral 10 stands at the lower right with a curved arrow towards the whole. Labels present (26): 10, 12, 14, 16, 21, 22, 24, 26, 27, 28, 30, 40, 42, 44, 46, 48, 50, 51, 52, 53, 54, 55, 56, 57, 78, 80. Not a plotted panel: no data file.}
+
+\pdfpage{5}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.6\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent\textbf{FIG. 3}
+\alttext{Sheet 3 of 3 (PDF p.\,5), FIG.\ 3: the diagrammatic side view of the sectioning station, i.e.\ the second-rail end of the carriage seen along the rail; the simplest of the three drawings, described upright. From top to bottom: the motor 78, a small upright rectangle, on the carriage 42, a flat horizontal bar; beneath it the bearing support plate 54, a square block; at the block's two lower corners two circles with centre dots, 56 and 56 (the pair of rotary bearings), resting on the second rail 52, drawn along its length as a long flat bar; below it the second stand 50, a wider and thicker bar; and at the bottom the base 12, a thin plate spanning the full width of the drawing. Labels present (8): 12, 42, 50, 52, 54, 56 (twice), 78. Not a plotted panel: no data file.}
+
+\pdfpage{6}
+\section*{MICROTOME}
+\decompnote{Description and claims, PDF pp.\,6--9, columns 1--8. Column 1 begins here.}
+
+\subsection*{CROSS-REFERENCE TO RELATED APPLICATION}
+
+This application is a 371 of PCT/US2010/046665, filed Aug. 25, 2010, which claims the benefit of U.S. Provisional Patent Application Seri. No. 61/242,404, filed Sep. 15, 2009.
+
+\subsection*{BACKGROUND OF THE INVENTION}
+
+\subsubsection*{1. Technical Field}
+
+The present invention relates to research and medical devices, more specifically to a sliding and vibrating microtome for sectioning large diameter tissue specimens.
+
+\subsubsection*{2. Background Art}
+
+Much of the modern research and medical examinations require biological samples for analysis. These samples are typically furnished by microtomes that make very thin slices or sections of tissue specimens, usually in μm, to be prepared on a slide. For best results, the sliced samples should have uniform thickness and minimal or no surface irregularities. Otherwise, any of these types of irregularities could potentially lead to, inter alia, difficult comparative studies between samples from the same specimen and poor imaging.
+
+Various microtomes have been in existence for sectioning samples. Some utilize a blade mounted on a sliding carriage to slice or section off a sample from an extruded specimen embedded in a gel substrate, e.g., agarose. Others utilize a vibrating blade, i.e., a vibratome, to perform the same. A common issue with these microtomes is that most cannot accommodate large specimens without compromising the quality of the sections. Either the design limitations of the prior microtomes necessitate specimen samples to be small and/or the cutting mechanism cannot insure uniform thickness of the sliced sample or prevent undulations of the sliced surface if the specimen is too large, the latter being more prevalent with vibratory blades having oscillations in more than one plane or in a non-parallel plane with respect to the cutting plane.
+
+Another issue is that most microtomes include a cryostat or refrigeration unit to keep the specimen cold as required for certain specimens and the required analysis. However, if a large specimen is to be sectioned, then the refrigeration unit must be sized or configured accordingly which may increase the cost and maintenance for the unit. The inclusion of a refrigeration unit alone incurs substantial costs especially since they have to be meticulously controlled and monitored. In light of the above, it would be a benefit in the art of research devices to provide a microtome that can section large diameter specimens with consistent quality and relative economy.
+
+Thus, a microtome solving the aforementioned problems is desired.
+
+\subsection*{DISCLOSURE OF INVENTION}
+
+The microtome includes a base with a tank filled with a bath mounted thereon. A feeding mechanism for feeding select amounts of specimen to be sectioned protrudes through the base into the bath. A cutting mechanism spans the tank and includes a reciprocating carriage above the feeding mechanism. The carriage is disposed at an angle with respect to the direction of reciprocation and includes a vibrating blade hanging down from the carriage. The combined motion of the carriage and the vibrating blade slices samples from the specimen extruded by the feeding mechanism, which permits consistent and uniformly thick samples with minimal surface
+
+\decompnote{Column 2 begins.}
+irregularities, especially for large specimens. A controlling mechanism coordinates operation of the feeding mechanism and the cutting mechanism.
+
+These and other features of the present invention will become readily apparent upon further review of the following specification and drawings.
+
+\subsection*{BRIEF DESCRIPTION OF THE DRAWINGS}
+
+FIG. \textbf{1} is a diagrammatic top view of a microtome according to the present invention.
+
+FIG. \textbf{2} is a diagrammatic front view of the microtome in FIG. \textbf{1}, shown with the specimen feed in section.
+
+FIG. \textbf{3} is a diagrammatic side view of the sectioning station on the microtome.
+
+Similar reference characters denote corresponding features consistently throughout the attached drawings.
+
+\subsection*{BEST MODES FOR CARRYING OUT THE INVENTION}
+
+The present invention relates to a microtome, generally referred to in the drawings by reference number \textbf{10}, configured to section samples from a large diameter specimen with consistent quality and uniformity of thickness. As shown in FIGS. \textbf{1-3}, the microtome \textbf{10} includes a base \textbf{12} upon which a buffer or wash tank \textbf{14} is disposed. A feeding mechanism \textbf{20} for incremental feeding of a specimen to be cut, sliced or sectioned is immersed in the bath or buffer solution or liquid \textbf{16}. The bath \textbf{16} allows for temporary storage of the cut samples in a protective environment for further processing, and the bath \textbf{16} also helps to lubricate the cutting blade of the microtome \textbf{10}. A cutting mechanism \textbf{40} for sectioning the desired portion of the specimen and a control mechanism \textbf{80} for controlling the feeding and cutting processes are both operatively disposed on the base \textbf{12}.
+
+The feeding mechanism \textbf{20} includes a cylindrical or tubular feed housing \textbf{22} passing through the base \textbf{12} into the tank \textbf{14}. The feed housing \textbf{22} encloses a specimen \textbf{26} that has been prepared for sectioning by being embedded with a substrate \textbf{27}. The substrate \textbf{27} is usually a gelatinous material made from agarose or derivatives thereof. One end of this specimen aggregate is attached to one end of a pusher, plunger or piston \textbf{28} with an adhesive or similar means. The term ``specimen aggregate'' herein is being used to refer to the combined mass of material comprising the specimen \textbf{26} and the substrate \textbf{27}. The other end of the pusher \textbf{28} is operatively connected to a stepper motor \textbf{30}. Operation of the stepper motor \textbf{30} displaces the pusher \textbf{28} in the direction indicated by arrow \textbf{21} to thereby feed a desired amount of to be cut specimen \textbf{26}, i.e., the other end of the specimen \textbf{26}, through a feed opening \textbf{25} on the feed housing \textbf{22}. The stepper motor \textbf{30} permits highly accurate and consistent incremental feeding of the specimen \textbf{26} for subsequent sectioning, which contributes to uniformity in thickness of the cut samples.
+
+The feed housing \textbf{22} also includes a circular compression lip \textbf{24} at the feed end of the housing \textbf{22}. The compression lip \textbf{24} may be a beveled edge that extends from the interior wall of the feed housing \textbf{22} towards the opening \textbf{25}. As the specimen \textbf{26} exits the opening \textbf{25} while being fed by the pusher \textbf{28}, the compression lip \textbf{24} restricts movement and compresses the mass of the specimen aggregate. This stabilizes and clamps the specimen aggregate to better counteract the cutting forces from the cutting mechanism \textbf{40} during the cutting operation. In this manner, incidences of irregular cut surfaces or contours can be drastically reduced or prevented.
+
+\pdfpage{7}
+\decompnote{Column 3 begins.}
+The cutting mechanism \textbf{40} includes a carriage, beam or bridge \textbf{42} spanning more than the width of and above the tank \textbf{14}. The carriage \textbf{42} is slidably supported on first and second rails \textbf{44}, \textbf{52} on respective sides of the carriage \textbf{42} and reciprocates thereon as indicated by arrow \textbf{41}.
+
+The first side of the carriage \textbf{42} includes a race, channel, follower or linear bearing \textbf{48} depending from the bottom of the carriage \textbf{42}. The linear bearing \textbf{48} includes a groove having a shape that mates with the shape of the first rail \textbf{44}. In the exemplary embodiment, the first rail \textbf{44} has a substantially I-beam shape in cross section. This dovetail-like join between the linear bearing \textbf{48} and the first rail \textbf{44} insures that the movement of the carriage \textbf{42} is restricted along the length of the first rail \textbf{44}. The first rail \textbf{44}, in turn, is supported on an upstanding first support or stand \textbf{46} disposed on the base \textbf{12}. Since the microtome \textbf{10} is a high precision instrument, it is preferable that the linear bearing \textbf{48} and the first rail are similar in capability. Various different linear bearing and rail combinations may be used as long as they can facilitate precise, restricted movement along the reciprocating direction, i.e., no undesirable movement in a perpendicular direction with respect to the reciprocating direction.
+
+The second side of the carriage \textbf{42} includes a depending bearing support plate or beam \textbf{54} supporting a pair of rotary bearings \textbf{56}. The rotary bearings \textbf{56} ride on the second rail \textbf{52}. Unlike the first rail \textbf{44}, the second rail \textbf{52} may be an elongate circular rod that provides tangential support for the rotary bearings \textbf{56} even when lateral shifts of the bearings \textbf{56} may occur during travel. The second rail \textbf{52}, in turn, is supported on an upstanding second support or stand \textbf{50} disposed on the base \textbf{12}. The second stand \textbf{50} is also shorter than the first stand \textbf{46}.
+
+The middle section of the carriage \textbf{42} includes a blade holder \textbf{66} slidably mounted on linear bearings \textbf{64}. The blade holder \textbf{66} may be a rectangular frame hanging below the carriage \textbf{42} with a cutting knife or blade \textbf{62} mounted at the distal end from the linear bearings \textbf{64}. The cutting blade \textbf{62} is disposed at a height close to but not co-planar with the opening \textbf{25}.
+
+To cut or section a sample from the tissue \textbf{26} and substrate \textbf{27}, the cutting mechanism \textbf{40} utilizes a combination of the reciprocating movement of the carriage \textbf{42} and a vibratory reciprocation of the cutting blade \textbf{62}, the vibrating direction indicated by arrows \textbf{61}. In that regard, the microtome \textbf{10} includes a reciprocating mechanism for the carriage \textbf{42} and a vibration mechanism for the cutting blade \textbf{62}.
+
+As shown in FIGS. \textbf{1} and \textbf{2}, the reciprocating mechanism includes a mounting plate \textbf{58} disposed on the first side of the carriage \textbf{42} and laterally spaced from the first rail \textbf{44}. A rack \textbf{53} is mounted on the outer side of the mounting plate \textbf{58} with the teeth thereof being disposed at the bottom of the rack \textbf{53}. A pinion \textbf{57} extends from a motor \textbf{55} and meshes with the rack \textbf{53}. Thus, operation of the motor \textbf{55} rotates the pinion \textbf{57}, which in turn forces the rack \textbf{53} to move in the reciprocating directions indicated by arrows \textbf{41}. Due to the accuracies required for sectioning samples and the need to control the cutting rate, the motor \textbf{55} is preferably reversible and variable speed.
+
+\decompnote{Column 4 begins inside this paragraph, at ``wheel 76 at bearing 74''.}
+As shown in FIGS. \textbf{1-3}, the vibration mechanism for the cutting blade \textbf{62} includes one end of a connector arm or beam \textbf{68} attached to the blade holder \textbf{66}. The connector arm \textbf{68} is preferably made from relatively flexible, springy and/or resilient material, so that the connector arm \textbf{68} will better absorb the abrupt changes of momentum compared to a stiff beam or structure. One end of a crank arm \textbf{72} is connected to a bearing \textbf{70} on the other end of the connector arm \textbf{68} while the other end of the crank arm \textbf{72} is rotatably attached to an eccentric wheel \textbf{76} at bearing \textbf{74}. The crank arm \textbf{72} is also preferably made from flexible, springy, and/or resilient material for the reasons noted above. A motor \textbf{78} rotates the eccentric wheel \textbf{76}. Due to the amount of control required to obtain consistent and uniform thickness samples, the motor \textbf{78} is preferably reversible and/or variable speed. To vibrate the blade \textbf{62}, the rotation of the eccentric wheel \textbf{76} via the motor \textbf{78} causes the crank arm \textbf{72} to push and pull the connector \textbf{68} in the direction indicated by arrows \textbf{61}. This in turn reciprocates or vibrates the blade \textbf{62}.
+
+While the combined movements of the carriage \textbf{42} and the blade \textbf{62} alone will slice samples well, this may not be satisfactory when cutting relatively large diameter tissue specimens. More care must be exercised when cutting larger specimens due to the larger area to be cut. To facilitate, the middle section of the carriage \textbf{42} is disposed at an acute angle α as shown in FIG. \textbf{1}, which accounts for the substantially parallelogram shape of the carriage \textbf{42}. With this configuration, the angle of incidence between the sample aggregate and the cutting edge of the blade \textbf{62} is at the angle α rather than perpendicular as the carriage \textbf{42} reciprocates across the opening \textbf{25}. As a result of the angular orientation, the cutting action is gradual across substrate \textbf{27} and the tissue specimen \textbf{26}, which reduces the chances for irregular cut surfaces that can exist with more abrupt cutting forces acting on the specimen aggregate. Moreover, the linear movement of the carriage \textbf{42} and the vibratory movement of the blade \textbf{62} are limited to a plane in the x-y coordinates as viewed in FIG. \textbf{1}. Any z-axis movement, i.e., up and down, of the blade \textbf{62} is prevented by the linear bearing \textbf{48} and the linear bearings \textbf{64}, which insures that the blade \textbf{62} will not cause undulations on the cut surface. Furthermore, the length of the blade \textbf{62} is greater than the diameter of the specimen to be but. The combination of these factors results in more consistent uniform thickness of cut samples with minimal to no surface irregularities, especially for large specimens.
+
+All of the operations of the microtome \textbf{10} are coordinated by the control mechanism \textbf{80}. The control mechanism \textbf{80} includes a control unit \textbf{82} that communicates with the motor \textbf{30} to control the incremental feed of the specimen aggregate, the motor \textbf{55} to control the rate and direction of carriage movement, and the motor \textbf{78} to control the speed and direction of vibration. Moreover, the control mechanism \textbf{80} includes a detectable element \textbf{60} attached to one end of the mounting plate \textbf{58} and travels between a first sensor \textbf{84} and a second sensor \textbf{86} as the carriage \textbf{42} reciprocates. The detectable element \textbf{60} is preferably a magnet but any object that can be sensed by the first and second sensors \textbf{84}, \textbf{86} are viable alternatives. The first and second sensors \textbf{84}, \textbf{86} are preferably Hall-Effect or proximity sensors that can detect the magnetic strength of the magnet \textbf{60}, and thereby accurately determine the exact position of the carriage \textbf{42}. Other types of position sensors such as laser based sensors, rotary encoders, etc. may also be used for determining the position.
+
+\decompnote{Column 5 begins inside this paragraph, at ``sample. The sliced sample is left to float''.}
+The following describes how to use the microtome \textbf{10}. To section a large diameter specimen, the user mounts the specimen aggregate of tissue specimen \textbf{26} and substrate \textbf{27} onto the pusher \textbf{28} via adhesives. The stepper motor \textbf{30} is actuated to move the pusher \textbf{28} upward a desired amount. This causes the specimen aggregate to extrude from the opening \textbf{25} of the feed housing \textbf{22} and be compressed by the compression lip \textbf{24}. The motor \textbf{78} is actuated to vibrate the blade holder \textbf{66} and blade \textbf{62}. Then the motor \textbf{55} is activated to move the carriage \textbf{42} along the first and second rails \textbf{44}, \textbf{52}. This movement causes the blade \textbf{62} to traverse across the extruded specimen \textbf{26} and substrate \textbf{27} at a controlled rate resulting in a sliced \pdfpage{8}sample. The sliced sample is left to float in the bath \textbf{16}. With this arrangement, no freezing of the sample is required.
+
+It is to be understood that the present invention is not limited to the embodiments described above, but encompasses any and all embodiments within the scope of the following claims.
+
+\noindent We claim:
+\decompnote{Claims 1--13 as printed, each claim's elements on their own indented lines; the claim numbers and the claim numbers referred to are printed bold.}
+\begin{hangpars}
+\textbf{1}. A microtome, comprising:
+
+\hspace*{1.5em}a base;
+
+\hspace*{1.5em}a tank disposed on the base, the tank being adapted for filling with a bath for sliced samples;
+
+\hspace*{1.5em}a feeding mechanism for feeding select amounts of specimen to be sliced, the feeding mechanism extending through the base into the tank, the feeding mechanism having a housing adapted for holding the specimen;
+
+\hspace*{1.5em}a movable cutting mechanism adapted for slicing samples from the specimen fed by the feeding mechanism; the cutting mechanism spanning above the feeding mechanism; the cutting mechanism having a reciprocating carriage movable in a direction toward and away from the feeding mechanism, and having a blade disposed at an acute angle with respect to the reciprocating direction, the blade vibrating along the acute angle; and
+
+\hspace*{1.5em}a control mechanism for coordinating operations of the feeding mechanism and the cutting mechanism;
+
+\hspace*{1.5em}wherein the combined movements of the carriage and the reciprocating blade minimize cut surface irregularities to produce sliced samples of uniform thickness.
+
+\textbf{2}. The microtome according to claim \textbf{1}, wherein said feeding mechanism comprises:
+
+\hspace*{1.5em}an elongated tubular housing adapted for holding the specimen to be sliced, the tubular housing having a specimen feed end defining an opening for the specimen to be fed through;
+
+\hspace*{1.5em}a pusher disposed inside the tubular housing at the end of the tubular housing opposite the specimen feed end, the pusher having a surface adapted for supporting the specimen; and
+
+\hspace*{1.5em}a motor operatively connected to the pusher for positively moving the pusher and thereby exposing a select amount of specimen to be sliced through the opening.
+
+\textbf{3}. The microtome according to claim \textbf{2}, further comprising a compression lip at the opening in the specimen feed end for compressing the specimen as the specimen exits the opening to thereby clamp and stabilize the exposed specimen for slicing.
+
+\textbf{4}. The microtome according to claim \textbf{3}, wherein said compression lip comprises a circular, beveled edge extending from an interior wall of said tubular housing towards the opening.
+
+\textbf{5}. The microtome according to claim \textbf{1}, wherein said carriage being disposed at said acute angle, said carriage having a bottom, a middle section and first and second opposing ends, said cutting mechanism comprises:
+
+\hspace*{1.5em}a vibrating mechanism disposed on the middle section for vibrating said blade;
+
+\hspace*{1.5em}a first rail slidably supporting the first end of said carriage;
+
+\hspace*{1.5em}a second rail slidably supporting the second end of said carriage; and
+
+\hspace*{1.5em}a reciprocating mechanism for moving said carriage toward and away from said feeding mechanism.
+
+\textbf{6}. The microtome according to claim \textbf{5}, wherein said vibrating mechanism comprises:
+
+\hspace*{1.5em}an elongated blade holder having a first end disposed in the middle section of said carriage and an opposite end holding said blade;
+
+\decompnote{Column 6 begins.}
+\hspace*{1.5em}at least one linear bearing attached to the first end of the blade holder to confine and smooth reciprocating movement of the blade holder;
+
+\hspace*{1.5em}a connector arm attached to the first end of the blade holder, the connector arm having a bearing at one end;
+
+\hspace*{1.5em}an eccentric wheel;
+
+\hspace*{1.5em}a crank arm having one end connected to the bearing on the connector arm and the other end connected to the eccentric wheel; and
+
+\hspace*{1.5em}a motor for rotating the wheel;
+
+\hspace*{1.5em}wherein rotation of the eccentric wheel causes the crank arm to reciprocate the connector arm and thereby vibrate the blade holder.
+
+\textbf{7}. The microtome according to claim \textbf{6}, wherein said connector arm and said crank arm are made from resilient material to compensate vibratory forces acting thereon.
+
+\textbf{8}. The microtome according to claim \textbf{5}, further comprising:
+
+\hspace*{1.5em}a first stand mounted on said base, the first stand having a height, said first rail being disposed on top of the first stand and having a cross-sectional shape;
+
+\hspace*{1.5em}a first bearing extending from the bottom of said carriage, the first bearing having a channel defining a shape corresponding to the shape of said first rail, the first bearing being slidable along said first rail;
+
+\hspace*{1.5em}a second stand mounted on said base, the second stand having a height less than the first stand, said second rail being disposed on top of the second stand, said second rail being an elongate circular rod;
+
+\hspace*{1.5em}a support beam extending from the bottom of said carriage at the second end of said carriage; and
+
+\hspace*{1.5em}a set of second bearings supported from the support beam, the second bearings being rotatably slidable on said second rail.
+
+\textbf{9}. The microtome according to claim \textbf{8}, wherein said set of second bearings comprises a pair of rotary bearings.
+
+\textbf{10}. The microtome according to claim \textbf{5}, wherein said reciprocating mechanism for moving said carriage comprises:
+
+\hspace*{1.5em}a mounting plate disposed on the first side of said carriage, the mounting plate being laterally spaced from said first rail and having an outer side;
+
+\hspace*{1.5em}a rack mounted on the outer side of the mounting plate;
+
+\hspace*{1.5em}a pinion meshed with the rack; and
+
+\hspace*{1.5em}a reversible motor connected to the pinion to rotate the pinion;
+
+\hspace*{1.5em}wherein rotation of the pinion by the reversible motor forces the rack, and thereby said carriage, to reciprocate.
+
+\textbf{11}. The microtome according to claim \textbf{1}, wherein said control mechanism comprises:
+
+\hspace*{1.5em}a control unit communicating with said feeding mechanism and said cutting mechanism;
+
+\hspace*{1.5em}a detectable element attached to one end of said carriage; and
+
+\hspace*{1.5em}spaced first and second sensors operatively connected to the control unit, the first and second sensors sensing the position of the detectable element and thereby said carriage.
+
+\textbf{12}. The microtome according to claim \textbf{11}, wherein said detectable element comprises a magnet.
+
+\textbf{13}. A method of using a microtome to section large specimens comprising the steps of:
+
+\hspace*{1.5em}providing a tank with a bath for sliced samples;
+
+\hspace*{1.5em}providing a feeding mechanism extending into the tank;
+
+\hspace*{1.5em}attaching a specimen onto the feeding mechanism with adhesive;
+
+\pdfpage{9}
+\decompnote{Column 7 begins.}
+\hspace*{1.5em}embedding the specimen with agarose gelatin within the feeding mechanism to thereby form a specimen aggregate;
+
+\hspace*{1.5em}feeding a select amount of specimen aggregate through an opening in the feeding mechanism;
+
+\hspace*{1.5em}compressing the select amount of specimen aggregate as the specimen aggregate exits the opening to clamp and stabilize the specimen aggregate;
+
+\hspace*{1.5em}providing a cutting mechanism having a reciprocating carriage and a vibrating blade, the carriage being movable in a direction toward and away from the feeding mechanism and disposed at an acute angle with respect to the direction of movement;
+
+\hspace*{1.5em}slicing a sample from the specimen aggregate by moving the carriage across the opening; and
+
+\hspace*{1.5em}providing a control mechanism for coordinating the steps of feeding and slicing.
+
+\end{hangpars}
+\begin{center}* * * * *\end{center}
+
+\end{document}

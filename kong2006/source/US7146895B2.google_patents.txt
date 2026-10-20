@@ -1,0 +1,1292 @@
+ 
+ US7146895B2 - Sliding blade microtome 
+ - Google Patents 
+US7146895B2 - Sliding blade microtome 
+ - Google Patents 
+ Sliding blade microtome 
+ Download PDF 
+Info 
+ Publication number 
+ US7146895B2 
+ US7146895B2 
+ US10/969,350 
+ US96935004A 
+ US7146895B2 
+ US 7146895 B2 
+ US7146895 B2 
+ US 7146895B2 
+ US 96935004 A 
+ US96935004 A 
+ US 96935004A 
+ US 7146895 B2 
+ US7146895 B2 
+ US 7146895B2 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ specimen 
+ syringe 
+ bath 
+ microtome 
+ attached 
+ Prior art date 
+ 2004-10-21 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Expired - Lifetime , expires 2025-05-10 
+ Application number 
+ US10/969,350 
+ Other versions 
+ US20060086221A1 
+ ( en 
+ Inventor 
+ George Y. Kong 
+ Jian-Qiang Kong 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Individual
+ Original Assignee 
+ Individual 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2004-10-21 
+ Filing date 
+ 2004-10-21 
+ Publication date 
+ 2006-12-12 
+ 2004-10-21 
+ Application filed by Individual 
+ filed 
+ Critical 
+ Individual 
+ 2004-10-21 
+ Priority to US10/969,350 
+ priority 
+ Critical 
+ patent/US7146895B2/en 
+ 2006-04-27 
+ Publication of US20060086221A1 
+ publication 
+ Critical 
+ patent/US20060086221A1/en 
+ 2006-12-12 
+ Application granted 
+ granted 
+ Critical 
+ 2006-12-12 
+ Publication of US7146895B2 
+ publication 
+ Critical 
+ patent/US7146895B2/en 
+ 2025-05-10 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+ Status 
+ Expired - Lifetime 
+ legal-status 
+ Critical 
+ Current 
+Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+Images 
+Classifications 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01N — INVESTIGATING OR ANALYSING MATERIALS BY DETERMINING THEIR CHEMICAL OR PHYSICAL PROPERTIES 
+ G01N1/00 — Sampling; Preparing specimens for investigation 
+ G01N1/02 — Devices for withdrawing samples 
+ G01N1/04 — Devices for withdrawing samples in the solid state, e.g. by cutting 
+ G01N1/06 — Devices for withdrawing samples in the solid state, e.g. by cutting providing a thin slice, e.g. microtome 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/647 — With means to convey work relative to tool station 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/647 — With means to convey work relative to tool station 
+ Y10T83/6492 — Plural passes of diminishing work piece through tool station 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/647 — With means to convey work relative to tool station 
+ Y10T83/6492 — Plural passes of diminishing work piece through tool station 
+ Y10T83/6494 — Work alternately, angularly re-oriented relative to tool station 
+ Y10T83/6496 — By additional means to engage work and orient it relative to tool station 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/647 — With means to convey work relative to tool station 
+ Y10T83/654 — With work-constraining means on work conveyor [i.e., "work-carrier"] 
+ Y10T83/6542 — Plural means to constrain plural work pieces 
+ Y10T83/6544 — End of work protrudes through aperture in carrier 
+Definitions 
+ the present invention 
+ relates to microtomes, more specifically to a sliding blade microtome. 
+ microtomes 
+ are specifically designed for preparing specimen for certain types of microscopes. For instance, rotary microtomes cut thin sections of specimen for light microscopy and ultramicrotomes are used to prepare ultrathin sections for light and electron microscopy. 
+ Live tissues 
+ such as brain or liver tissues, are prepared by oscillating or vibrating blade microtomes called vibratomes. Vibratomes are currently employed in biomedical studies such as electrophysiology recording, organotypic tissue culture and immunohistochemistry experiments. 
+ the microtome 
+ is a tissue specimen-cutting device for producing high quality specimen slices. 
+ the device 
+ includes a bath, a specimen syringe for holding, supporting and compressing the specimen, and an adjustable cutting mechanism for diagonally slicing the specimen. 
+ the cutting mechanism 
+ has a linear way guide, a mounting accessory slidingly attached to the linear way guide, and a cross clamp attached to the mounting accessory, a blade holder being adjustably attached to the cross clamp and holding a blade. 
+ the specimen syringe 
+ is a cylindrical shaft having a first end and a second end for holding and supporting a specimen. 
+ the shaft and the second end 
+ have the same diameter. 
+ the first end 
+ has a diameter that is smaller than the diameter of the shaft and the second end, forming a compressed lip at the first end. 
+ a specimen 
+ is prepared by gluing it to a first end of a plunger and embedding the specimen in a gelatin, such as low gel point agarose or similar material. 
+ the specimen 
+ is pushed out of the first end of the specimen syringe by placing pressure on a second end of the plunger using a motor mechanism or a manually adjustable micrometer drive. 
+ the blade of the cutting assembly 
+ is disposed adjacent the first end of the specimen syringe. 
+ a cutting plane 
+ is defined along the first end of the specimen syringe. 
+ the blade 
+ can be angled by rotating the blade holder about the cross clamp to define a cutting angle against the cutting plane. 
+ the first end and a portion of the syringe shaft 
+ are disposed in a bath through a syringe aperture. 
+ the syringe aperture 
+ is completely submerged under a buffer medium, which is held in the bath. 
+ a sealant ring 
+ seals the gap between the specimen syringe and the syringe aperture of the bath, thereby preventing the buffer medium from leaking. 
+ a spacer ring 
+ surrounds the specimen syringe and works together with a stopper, which is disposed on the syringe, to determine how much of the syringe will be exposed in the bath. 
+ the syringe 
+ slides into the bath until the stopper abuts the spacer ring and impedes the syringe from moving. 
+ the width of the spacer ring 
+ therefore, directly determines how much of the syringe is exposed. 
+ a wide spacer ring 
+ allows only a small portion of the syringe to extend into the bath, and a narrow spacer ring allows a larger portion of the syringe to extend into the bath. 
+ the specimen, as well as the tissue slices cut by the microtome 
+ is disposed in the bath, where the buffer medium not only provides oxygen and nutrition to the specimen, but also lubricates the blade as it cuts the specimen in the bath. 
+ FIG. 1 
+ is an environmental, perspective view of a sliding blade microtome according to the present invention. 
+ FIG. 2 
+ is a front view of the sliding blade microtome according to the present invention. 
+ FIG. 3 
+ is a sectional side view of the sliding blade microtome according to the present invention. 
+ FIG. 4 
+ is a sectional side view of a sliding blade microtome with a mechanical control mechanism according to the present invention. 
+ the present invention 
+ is a sliding blade microtome, a first embodiment of which is designated as 100 in the figures. 
+ the sliding blade microtome 100 
+ is a tissue specimen-cutting device for slicing live and pre-fixed tissue. 
+ the microtome 100 
+ has a base 115 for supporting a specimen syringe 130 having a first end 132 and a second end 134 , a bath 120 having a syringe aperture 122 , an adjustable cutting mechanism 150 and a micrometer drive 172 . 
+ the first end 132 of the specimen syringe 130 
+ is ideally disposed through the syringe aperture 122 of the bath 120 . 
+ the second end 134 of the syringe 130 
+ is disposed adjacent the micrometer drive 172 . 
+ the cutting mechanism 150 
+ is shown comprising a mounting accessory 156 having an axis rod 160 , a cross clamp 158 , a blade holder 162 and a blade 168 . 
+ the cross clamp 158 
+ is disposed on the axis rod 160 of the mounting accessory 156 . 
+ the cross clamp 158 
+ serves as a support to which the blade holder 162 is pivotally attached. 
+ the blade 168 
+ is clamped to the blade holder 162 by a blade clamping plate 166 and is tightened in position using screws 164 . 
+ the cutting mechanism 150 
+ is disposed on a linear way guide 154 that is mounted on a support arm 152 of the base 115 . 
+ the mounting accessory 156 
+ is the portion of the cutting mechanism 150 that directly contacts the guide 154 . 
+ the mounting accessory 156 
+ allows the cutting mechanism 150 to slide from a first end 153 of the linear way guide 154 to a second end 155 . 
+ the second end 155 of the linear way guide 154 
+ is disposed adjacent the first end 132 of the specimen syringe 130 that is situated within the bath 120 . 
+ the linear way guide 154 
+ may be tilted up or down to dispose the guide 154 at any angle above the bath 120 . 
+ the linear way guide 154 
+ is pivoted about a bolt that is secured through one of a number of holes in the support arm 152 . 
+ the first end 153 of the guide 154 
+ may be level with the second end 155 , or may be raised above the second end 155 . 
+ the specimen syringe 130 
+ is a cylindrical, hollow shaft designed for supporting and holding a specimen 148 . 
+ the specimen syringe 130 
+ is positioned and clamped in place on an immovable syringe mount 126 on the base 115 . 
+ the first end 132 of the syringe 130 
+ has a diameter that is smaller than the diameter of the second end 134 and the body of the syringe 130 , and consequentially defines a compressed lip. 
+ the compressed lip at the first end 132 
+ has a smaller cross section than the rest of the syringe 130 . 
+ the specimen syringe 130 
+ holds the specimen 148 after it is prepared on a plunger 140 . 
+ the specimen 148 
+ is prepared by being fixed to a first end 142 of the plunger 140 with an adhesive, such as isocyanate glue or the like. Afterwards, the specimen 148 is embedded in a gelatin 146 , such as a low gel point agarose, molten agarose or similar material once the specimen 148 is affixed to the plunger 140 in the syringe 130 . 
+ the compressed lip at the first end 132 of the syringe 130 
+ is the mechanism through which pressure is placed on the gelatin 146 and the specimen 148 as they exit the syringe 130 . 
+ the pressure applied by the compressed lip 
+ restricts movement of the specimen 148 and the gelatin 146 , holds both the gelatin 146 and the specimen 148 in a firm, sturdy position, and mechanically solidifies the two into a firmer mass. 
+ the importance of applying pressure to the gelatin 146 and the specimen 148 prior to being cut 
+ is to counteract mechanical stresses of the blade 168 as it cuts the specimen 148 . Mechanical stress can cause tissue distortion and cell damage of the specimen 148 during slicing. 
+ the specimen 148 
+ can be precisely sliced without chatter marks. 
+ the operator 
+ can slide the blade 168 from the first end 153 to the second end 155 of the linear way guide 154 to cut the specimen 148 . 
+ the angle of the linear way guide 154 over the first end 132 of the syringe 130 
+ determines how the specimen 148 is cut. If the guide 154 is angled so that the first end 153 is disposed higher than the second end 155 , then the blade 168 cuts the specimen 148 diagonally, since the angle of the guide 154 relative to the support 152 is locked while sliding the cutting mechanism 150 along the guide 154 . 
+ the blade 168 
+ slides along the guide 154 , abutting the first end 132 of the syringe 130 . Specifically, the blade 168 , via the blade holder 162 , is rotated at an angle from a cutting plane 170 , which is the outermost end of the first end 132 . The blade 168 forms an acute angel with the cutting plane 170 . The cutting plane 170 is perpendicular with the axially oriented syringe 130 . The cutting angle may be adjusted by rotating the blade holder 162 in the cross clamp 158 to increase or decrease the angle between the blade 168 and the cutting plane 170 . Once the blade 168 cuts slices from the specimen 148 , they fall into the bath 120 . 
+ the first end 132 and a portion of the shaft of the syringe 130 
+ are disposed through the syringe aperture 122 of the bath 120 . 
+ the bath 120 
+ has a bottom wall and at least one peripheral wall extending around the bottom wall; the bath holds a buffer medium 121 such as saline. 
+ the syringe aperture 122 
+ is completely submerged under the buffer medium 121 . 
+ a sealant ring 124 
+ seals the gap between the specimen syringe 130 and the wall of the bath 120 . 
+ the sealant ring 124 
+ is disposed adjacent the syringe aperture 122 and is sandwiched between the bath 120 and the syringe mount 126 . 
+ the buffer medium 121 
+ both lubricates the blade 168 as it cuts the specimen 148 and provides oxygen and nutrition to the specimen 148 and the specimen slices cut by the microtome 100 . 
+ the bath 120 
+ may be disposed below the syringe 130 to catch the specimen slices that are cut by the microtome 100 . 
+ the portion of the syringe 130 that is disposed through the syringe aperture 122 
+ is determined by a stopper 129 that is welded or otherwise disposed on the outside of the syringe 130 , and by a spacer ring 128 . 
+ the spacer ring 128 
+ surrounds the specimen syringe 130 and is sandwiched between the syringe mount 126 and the stopper 129 . 
+ the syringe 130 
+ moves axially through the syringe aperture 122 until the stopper 129 abuts the spacer ring 128 and stops the syringe 130 . 
+ the width of the spacer ring 128 
+ is a significant factor in determining how much of the syringe 130 is exposed in the bath 120 . For instance, a wide spacer ring 128 allows only a small portion of the syringe 130 to extend into the bath 120 . Narrow spacer rings 128 allow a larger portion of the syringe 130 to extend into 
+ the thickness of the slices cut from the specimen 148 
+ may be controlled by the axial movement of the plunger 140 through the specimen syringe 130 . 
+ the axial movement of the plunger 140 through the specimen syringe 130 
+ may be controlled manually or mechanically. 
+ the specimen 148 
+ may be pushed out of the first end 132 of the specimen syringe 130 using a micrometer drive 172 . 
+ a micrometer tip 176 of the micrometer drive 172 
+ is positioned at a second end 144 of the plunger 140 and incrementally pushes the specimen 148 out of the first end 132 of the syringe 130 . 
+ the micrometer drive 172 
+ is mounted on a micrometer mounting block 174 of the base 115 . 
+ FIG. 4 
+ shows a second embodiment of the microtome, which is an automated microtome 200 that drives the plunger 236 through the syringe 130 via a control unit 220 , sensors 240 , 250 , motors 242 , 252 , lead screw blocks 244 , 254 and lead screw 246 , 256 . 
+ the motor 242 
+ drives cutting mechanism 232 through lead screw 246 and lead screw block 244 . 
+ the motor 252 
+ operates the plunger 236 , moving it forward using lead screw 256 and lead screw block 254 . 
+ the control unit 220 
+ monitors the positions of the lead screw blocks 244 , 254 through sensors 240 , 250 , respectively, and sends commands to control the motors 242 , 252 , respectively. 
+ the microtomes 100 , 200 
+ differ in how the plungers 140 and 236 , respectively, are pushed out of the syringe 130 . However, both microtomes 100 , 200 hold and support the specimen 148 using the specimen syringe 130 . Also, both have the compressed lip at the first end 132 to compress the specimen 148 prior to being sliced by the blade 168 . Furthermore, the cutting mechanism 150 , 232 of each microtome 100 , 200 is directed to slidingly cut specimen 148 directly within the bath 120 as the blade 168 slides from the first end 153 to the second end 155 of the linear way guide 154 . 
+Landscapes 
+ Physics & Mathematics 
+ ( AREA )
+ Health & Medical Sciences 
+ ( AREA )
+ Life Sciences & Earth Sciences 
+ ( AREA )
+ Chemical & Material Sciences 
+ ( AREA )
+ Analytical Chemistry 
+ ( AREA )
+ Biochemistry 
+ ( AREA )
+ General Health & Medical Sciences 
+ ( AREA )
+ General Physics & Mathematics 
+ ( AREA )
+ Immunology 
+ ( AREA )
+ Pathology 
+ ( AREA )
+ Sampling And Sample Adjustment 
+ ( AREA )
+Abstract 
+The sliding blade microtome is a tissue specimen cutting device including a specimen syringe and an adjustable cutting mechanism for diagonally slicing the specimen. The specimen syringe is a cylindrical shaft having a first end and a second end for holding and supporting a specimen. The first end has a diameter that is smaller than the diameter of the shaft, forming a compressed lip for applying pressure on the specimen prior to slicing by the blade. The pressure used to compress the gelatin and the specimen holds the gelatin and the specimen in a sturdy position to slice the specimen to precision without chatter marks. The specimen is pushed out of the first end of the specimen syringe by a motor mechanism or a manually adjustable micrometer drive. 
+Description 
+ BACKGROUND OF THE INVENTION 
+1. Field of the Invention 
+The present invention relates to microtomes, more specifically to a sliding blade microtome. 
+2. Description of the Related Art 
+Much modern scientific research involves microscopic analysis. Much of today's microscopic analysis requires tissues to be prepared by devices that provide thin specimens, such as microtomes. Many microtomes are specifically designed for preparing specimen for certain types of microscopes. For instance, rotary microtomes cut thin sections of specimen for light microscopy and ultramicrotomes are used to prepare ultrathin sections for light and electron microscopy. Live tissues, such as brain or liver tissues, are prepared by oscillating or vibrating blade microtomes called vibratomes. Vibratomes are currently employed in biomedical studies such as electrophysiology recording, organotypic tissue culture and immunohistochemistry experiments. Though vibratomes have advanced the study of live and fresh tissues, there are disadvantages, such as slow cutting speeds, inconsistent slice thickness, lack of a support for the specimen and the presence of chatter marks on the sliced specimen, that leave the vibratome lacking as a fully efficient microtome. A microtome is desired that will uniformly slice specimen at a specific thickness without imparting chatter marks on the slices. The microtome should not only securely hold, but also steadily support the specimen. Thus, a microtome solving the aforementioned problems is desired. 
+ SUMMARY OF THE INVENTION 
+The microtome is a tissue specimen-cutting device for producing high quality specimen slices. The device includes a bath, a specimen syringe for holding, supporting and compressing the specimen, and an adjustable cutting mechanism for diagonally slicing the specimen. The cutting mechanism has a linear way guide, a mounting accessory slidingly attached to the linear way guide, and a cross clamp attached to the mounting accessory, a blade holder being adjustably attached to the cross clamp and holding a blade. 
+The specimen syringe is a cylindrical shaft having a first end and a second end for holding and supporting a specimen. The shaft and the second end have the same diameter. The first end has a diameter that is smaller than the diameter of the shaft and the second end, forming a compressed lip at the first end. A specimen is prepared by gluing it to a first end of a plunger and embedding the specimen in a gelatin, such as low gel point agarose or similar material. The specimen is pushed out of the first end of the specimen syringe by placing pressure on a second end of the plunger using a motor mechanism or a manually adjustable micrometer drive. 
+Thus, as the specimen is pushed out of the compressed lip at the first end of the specimen syringe, pressure is applied to the specimen and the gelatin. This pressure functions to compress the gelatin and the specimen when they are forced out of the opening of the specimen syringe, thereby clamping and holding the gelatin and the specimen in a sturdy position to slice the specimen to precision without chatter marks. 
+The blade of the cutting assembly is disposed adjacent the first end of the specimen syringe. A cutting plane is defined along the first end of the specimen syringe. The blade can be angled by rotating the blade holder about the cross clamp to define a cutting angle against the cutting plane. 
+Ideally the first end and a portion of the syringe shaft are disposed in a bath through a syringe aperture. The syringe aperture is completely submerged under a buffer medium, which is held in the bath. A sealant ring seals the gap between the specimen syringe and the syringe aperture of the bath, thereby preventing the buffer medium from leaking. 
+A spacer ring surrounds the specimen syringe and works together with a stopper, which is disposed on the syringe, to determine how much of the syringe will be exposed in the bath. The syringe slides into the bath until the stopper abuts the spacer ring and impedes the syringe from moving. The width of the spacer ring, therefore, directly determines how much of the syringe is exposed. A wide spacer ring allows only a small portion of the syringe to extend into the bath, and a narrow spacer ring allows a larger portion of the syringe to extend into the bath. The specimen, as well as the tissue slices cut by the microtome, is disposed in the bath, where the buffer medium not only provides oxygen and nutrition to the specimen, but also lubricates the blade as it cuts the specimen in the bath. 
+These and other features of the present invention will become readily apparent upon consideration of the following specification and drawings. 
+ BRIEF DESCRIPTION OF THE DRAWINGS 
+ FIG. 1 is an environmental, perspective view of a sliding blade microtome according to the present invention. 
+ FIG. 2 is a front view of the sliding blade microtome according to the present invention. 
+ FIG. 3 is a sectional side view of the sliding blade microtome according to the present invention. 
+ FIG. 4 is a sectional side view of a sliding blade microtome with a mechanical control mechanism according to the present invention. 
+Similar reference characters denote corresponding features consistently throughout the attached drawings. 
+ DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS 
+The present invention is a sliding blade microtome, a first embodiment of which is designated as 100 in the figures. The sliding blade microtome 100 is a tissue specimen-cutting device for slicing live and pre-fixed tissue. The microtome 100 has a base 115 for supporting a specimen syringe 130 having a first end 132 and a second end 134 , a bath 120 having a syringe aperture 122 , an adjustable cutting mechanism 150 and a micrometer drive 172 . The first end 132 of the specimen syringe 130 is ideally disposed through the syringe aperture 122 of the bath 120 . The second end 134 of the syringe 130 is disposed adjacent the micrometer drive 172 . 
+Referring to FIGS. 1–3 , the cutting mechanism 150 is shown comprising a mounting accessory 156 having an axis rod 160 , a cross clamp 158 , a blade holder 162 and a blade 168 . The cross clamp 158 is disposed on the axis rod 160 of the mounting accessory 156 . The cross clamp 158 serves as a support to which the blade holder 162 is pivotally attached. The blade 168 is clamped to the blade holder 162 by a blade clamping plate 166 and is tightened in position using screws 164 . 
+The cutting mechanism 150 is disposed on a linear way guide 154 that is mounted on a support arm 152 of the base 115 . The mounting accessory 156 is the portion of the cutting mechanism 150 that directly contacts the guide 154 . Specifically, the mounting accessory 156 allows the cutting mechanism 150 to slide from a first end 153 of the linear way guide 154 to a second end 155 . The second end 155 of the linear way guide 154 is disposed adjacent the first end 132 of the specimen syringe 130 that is situated within the bath 120 . The linear way guide 154 may be tilted up or down to dispose the guide 154 at any angle above the bath 120 . The linear way guide 154 is pivoted about a bolt that is secured through one of a number of holes in the support arm 152 . The first end 153 of the guide 154 may be level with the second end 155 , or may be raised above the second end 155 . 
+Referring now to FIG. 3 , the specimen syringe 130 is a cylindrical, hollow shaft designed for supporting and holding a specimen 148 . The specimen syringe 130 is positioned and clamped in place on an immovable syringe mount 126 on the base 115 . The first end 132 of the syringe 130 has a diameter that is smaller than the diameter of the second end 134 and the body of the syringe 130 , and consequentially defines a compressed lip. The compressed lip at the first end 132 has a smaller cross section than the rest of the syringe 130 . 
+The specimen syringe 130 holds the specimen 148 after it is prepared on a plunger 140 . The specimen 148 is prepared by being fixed to a first end 142 of the plunger 140 with an adhesive, such as isocyanate glue or the like. Afterwards, the specimen 148 is embedded in a gelatin 146 , such as a low gel point agarose, molten agarose or similar material once the specimen 148 is affixed to the plunger 140 in the syringe 130 . 
+The compressed lip at the first end 132 of the syringe 130 is the mechanism through which pressure is placed on the gelatin 146 and the specimen 148 as they exit the syringe 130 . The pressure applied by the compressed lip restricts movement of the specimen 148 and the gelatin 146 , holds both the gelatin 146 and the specimen 148 in a firm, sturdy position, and mechanically solidifies the two into a firmer mass. The importance of applying pressure to the gelatin 146 and the specimen 148 prior to being cut is to counteract mechanical stresses of the blade 168 as it cuts the specimen 148 . Mechanical stress can cause tissue distortion and cell damage of the specimen 148 during slicing. Thus, due to the pressure from the compressed lip of the first end 132 , the specimen 148 can be precisely sliced without chatter marks. 
+Once the gelatin 146 and the specimen 148 are pushed past the compressed lip of the first end 132 of the syringe 130 , the operator can slide the blade 168 from the first end 153 to the second end 155 of the linear way guide 154 to cut the specimen 148 . The angle of the linear way guide 154 over the first end 132 of the syringe 130 determines how the specimen 148 is cut. If the guide 154 is angled so that the first end 153 is disposed higher than the second end 155 , then the blade 168 cuts the specimen 148 diagonally, since the angle of the guide 154 relative to the support 152 is locked while sliding the cutting mechanism 150 along the guide 154 . 
+The blade 168 slides along the guide 154 , abutting the first end 132 of the syringe 130 . Specifically, the blade 168 , via the blade holder 162 , is rotated at an angle from a cutting plane 170 , which is the outermost end of the first end 132 . The blade 168 forms an acute angel with the cutting plane 170 . The cutting plane 170 is perpendicular with the axially oriented syringe 130 . The cutting angle may be adjusted by rotating the blade holder 162 in the cross clamp 158 to increase or decrease the angle between the blade 168 and the cutting plane 170 . Once the blade 168 cuts slices from the specimen 148 , they fall into the bath 120 . 
+As described above, the first end 132 and a portion of the shaft of the syringe 130 are disposed through the syringe aperture 122 of the bath 120 . The bath 120 has a bottom wall and at least one peripheral wall extending around the bottom wall; the bath holds a buffer medium 121 such as saline. The syringe aperture 122 is completely submerged under the buffer medium 121 . To prevent the buffer medium 121 from leaking a sealant ring 124 seals the gap between the specimen syringe 130 and the wall of the bath 120 . The sealant ring 124 is disposed adjacent the syringe aperture 122 and is sandwiched between the bath 120 and the syringe mount 126 . The buffer medium 121 both lubricates the blade 168 as it cuts the specimen 148 and provides oxygen and nutrition to the specimen 148 and the specimen slices cut by the microtome 100 . In alternative embodiments, the bath 120 may be disposed below the syringe 130 to catch the specimen slices that are cut by the microtome 100 . 
+The portion of the syringe 130 that is disposed through the syringe aperture 122 is determined by a stopper 129 that is welded or otherwise disposed on the outside of the syringe 130 , and by a spacer ring 128 . The spacer ring 128 surrounds the specimen syringe 130 and is sandwiched between the syringe mount 126 and the stopper 129 . The syringe 130 moves axially through the syringe aperture 122 until the stopper 129 abuts the spacer ring 128 and stops the syringe 130 . The width of the spacer ring 128 is a significant factor in determining how much of the syringe 130 is exposed in the bath 120 . For instance, a wide spacer ring 128 allows only a small portion of the syringe 130 to extend into the bath 120 . Narrow spacer rings 128 allow a larger portion of the syringe 130 to extend into the bath 120 . 
+The thickness of the slices cut from the specimen 148 may be controlled by the axial movement of the plunger 140 through the specimen syringe 130 . The axial movement of the plunger 140 through the specimen syringe 130 may be controlled manually or mechanically. As shown in FIGS. 1–3 , the specimen 148 may be pushed out of the first end 132 of the specimen syringe 130 using a micrometer drive 172 . A micrometer tip 176 of the micrometer drive 172 is positioned at a second end 144 of the plunger 140 and incrementally pushes the specimen 148 out of the first end 132 of the syringe 130 . The micrometer drive 172 is mounted on a micrometer mounting block 174 of the base 115 . 
+ FIG. 4 shows a second embodiment of the microtome, which is an automated microtome 200 that drives the plunger 236 through the syringe 130 via a control unit 220 , sensors 240 , 250 , motors 242 , 252 , lead screw blocks 244 , 254 and lead screw 246 , 256 . The motor 242 drives cutting mechanism 232 through lead screw 246 and lead screw block 244 . The motor 252 operates the plunger 236 , moving it forward using lead screw 256 and lead screw block 254 . The control unit 220 monitors the positions of the lead screw blocks 244 , 254 through sensors 240 , 250 , respectively, and sends commands to control the motors 242 , 252 , respectively. 
+The microtomes 100 , 200 differ in how the plungers 140 and 236 , respectively, are pushed out of the syringe 130 . However, both microtomes 100 , 200 hold and support the specimen 148 using the specimen syringe 130 . Also, both have the compressed lip at the first end 132 to compress the specimen 148 prior to being sliced by the blade 168 . Furthermore, the cutting mechanism 150 , 232 of each microtome 100 , 200 is directed to slidingly cut specimen 148 directly within the bath 120 as the blade 168 slides from the first end 153 to the second end 155 of the linear way guide 154 . 
+It is to be understood that the present invention is not limited to the embodiments described above, but encompasses any and all embodiments within the scope of the following claims. 
+Claims ( 11 ) 
+1. A microtome, comprising:
+a base; 
+a bath disposed on the base, the bath being adapted for holding a buffer medium, the bath having a bottom wall and at least one peripheral wall extending around the bottom wall, the bath having a syringe aperture defined therein; 
+a specimen syringe having a hollow shaft extending through the syringe aperture of the bath, wherein the shaft of the syringe has a first end and a second end, the first end extending into the bath, the first end having a constricted diameter forming a lip for compressing the specimen exiting the first end of the syringe; 
+a plunger having a first end and a second end, the first end of the plunger forming a holding surface adapted for having a specimen secured thereto, the plunger being slidably disposed in the specimen syringe; and 
+a cutting mechanism attached to the base adjacent the first end of the specimen syringe; 
+whereby the specimen is pushed through the syringe shaft into the bath and the cutting mechanism slices the specimen within the bath. 
+2. The microtome of claim 1 , wherein the specimen syringe is defined in the peripheral wall of said bath. 
+3. The microtome of claim 1 , wherein the cutting mechanism comprises:
+a linear way guide attached to the base; 
+a mounting accessory slidingly attached to the linear way guide; 
+a cross clamp attached to the mounting accessory; 
+a blade holder attached to the cross clamp; and 
+a blade attached to the blade holder. 
+4. The microtome of claim 3 , wherein the linear way guide is pivotally attached to the base. 
+5. The microtome of claim 3 , wherein the blade holder is pivotally attached to the cross clamp. 
+6. The microtome of claim 3 , wherein a cutting plane is defined normal to the first end of the shaft, said blade forming an acute angle with the cutting plane. 
+7. The microtome of claim 3 , wherein the mounting accessory is slidable along the linear way guide to a position in which said blade abuts the first end of the syringe shaft, thereby slicing the specimen into the bath. 
+8. The microtome of claim 1 , further comprising a micrometer drive attached to the base and abutting the second end of the plunger, the micrometer drive impelling the specimen out of the syringe into the bath. 
+9. A microtome comprising:
+a base; 
+a bath disposed on the base, the bath being adapted for holding a buffer medium, the bath having a bottom wall and at least one peripheral wall extending around the bottom wall, the bath having a syringe aperture defined therein; 
+a specimen syringe having a hollow shaft extending through the syringe aperture of the bath; 
+a plunger having a first end and a second end, the first end of the plunger forming a holding surface adapted for having a specimen secured thereto, the plunger being slidably disposed in the specimen syringe; 
+a cutting mechanism attached to the base adjacent the first end of the specimen syringe; and 
+a control unit comprising:
+motorized means for sliding the cutting mechanism; and 
+motorized means for advancing the plunger in the syringe; 
+whereby the specimen is rushed through the syringe shaft into the bath and the cutting mechanism slices the specimen within the bath. 
+10. A microtome, comprising:
+a base; 
+a specimen syringe mounted on the base, the specimen syringe being a hollow shaft having a first end and a second end, the first end having a compressed lip; 
+a bath disposed on the base, the bath being adapted for holding a buffer medium, the bath having a bottom wall and at least one peripheral wall extending around the bottom wall, the bath having a syringe aperture defined therein for slidably receiving the specimen syringe; 
+a plunger having a first end and a second end, the first end of the plunger being adapted for providing a holding surface to which a specimen is disposed; and 
+a cutting mechanism attached to the base and slidable across the first end of the specimen syringe. 
+11. The microtome of claim 10 , wherein the cutting mechanism comprises:
+a linear way guide pivotally attached to the base; 
+a mounting accessory slidably attached to the linear way guide; 
+a cross clamp attached to the mounting accessory; 
+a blade holder adjustably attached to the cross clamp; and 
+a blade attached to the blade holder aligned with the compressed lip of the specimen syringe. 
+ US10/969,350 
+ 2004-10-21 
+ 2004-10-21 
+ Sliding blade microtome 
+ Expired - Lifetime 
+ US7146895B2 
+ ( en )
+Priority Applications (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US10/969,350 
+ US7146895B2 
+ ( en )
+ 2004-10-21 
+ 2004-10-21 
+ Sliding blade microtome 
+Applications Claiming Priority (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US10/969,350 
+ US7146895B2 
+ ( en )
+ 2004-10-21 
+ 2004-10-21 
+ Sliding blade microtome 
+Publications (2) 
+ Publication Number 
+ Publication Date 
+ US20060086221A1 
+ US20060086221A1
+ ( en )
+ 2006-04-27 
+ US7146895B2 
+ true 
+ US7146895B2
+ ( en )
+ 2006-12-12 
+Family 
+ID=36204983 
+Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US10/969,350 
+ Expired - Lifetime 
+ US7146895B2 
+ ( en )
+ 2004-10-21 
+ 2004-10-21 
+ Sliding blade microtome 
+Country Status (1) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US7146895B2 
+ ( en )
+Cited By (13) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20100175520A1 
+ ( en )
+ * 
+ 2006-09-06 
+ 2010-07-15 
+ Jian-Qiang Kong 
+ Method and device for cutting fresh tissue slices 
+ US20100180742A1 
+ ( en )
+ * 
+ 2007-06-06 
+ 2010-07-22 
+ Leica Biosystems Nussloch Gmbh 
+ Device And Method For Braking A Shaft Of A Microtome 
+ US20120055300A1 
+ ( en )
+ * 
+ 2009-09-15 
+ 2012-03-08 
+ Jian-Qiang Kong 
+ Microtome 
+ WO2012172024A1 
+ ( en )
+ 2011-06-14 
+ 2012-12-20 
+ Vib Vzw 
+ Microtome chamber, sample holder and sample processing method 
+ US20130019725A1 
+ ( en )
+ * 
+ 2011-07-20 
+ 2013-01-24 
+ Vertex Pharmaceuticals, Inc. 
+ Device to collect and segregate tissue samples sectioned on a microtome 
+ US8876859B2 
+ ( en )
+ 2010-12-14 
+ 2014-11-04 
+ Patricia Buehler 
+ Devices for performing blepharoplasty and methods of using the same 
+ CN107953383A 
+ ( en )
+ * 
+ 2017-12-01 
+ 2018-04-24 
+ 刘家豪 
+ A kind of agricultural uses radish chopper and slicer 
+ US20190242790A1 
+ ( en )
+ * 
+ 2018-02-07 
+ 2019-08-08 
+ Nanotronics Imaging, Inc. 
+ Methods and Apparatuses for Cutting Specimens for Microscopic Examination 
+ US10422724B2 
+ ( en )
+ * 
+ 2016-11-14 
+ 2019-09-24 
+ Sakura Finetek U.S.A., Inc. 
+ Microtome waste removal assembly 
+ CN110757534A 
+ ( en )
+ * 
+ 2019-11-05 
+ 2020-02-07 
+ 邳州富通生物制品有限公司 
+ A section device for plant extract processing 
+ US20210338216A1 
+ ( en )
+ * 
+ 2017-09-05 
+ 2021-11-04 
+ Board Of Regents Of The University Of Texas System 
+ Devices and methods for umbilical cord processing 
+ WO2023141217A1 
+ ( en )
+ * 
+ 2022-01-19 
+ 2023-07-27 
+ Empiri, Inc. 
+ Methods and systems for evaluation of tissue samples 
+ US12376852B2 
+ ( en )
+ 2022-04-29 
+ 2025-08-05 
+ Osheru, Inc. 
+ Wound creation for excess skin removal and closure systems and methods 
+Families Citing this family (24) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ JP2005164547A 
+ ( en )
+ * 
+ 2003-12-05 
+ 2005-06-23 
+ Jiyasuko Eng Kk 
+ Thin film slicer 
+ JP5148828B2 
+ ( en )
+ * 
+ 2005-12-28 
+ 2013-02-20 
+ サクラファインテックジャパン株式会社 
+ Thin section preparation equipment
+ DE102008016165B4 
+ ( en )
+ * 
+ 2008-03-28 
+ 2010-10-14 
+ Leica Biosystems Nussloch Gmbh 
+ Microtome with variable cutting stroke using a linear motor as drive
+ WO2010021744A1 
+ ( en )
+ * 
+ 2008-08-21 
+ 2010-02-25 
+ California Institute Of Technology 
+ Microscope coupled tissue sectioning system 
+ US11353380B2 
+ ( en )
+ * 
+ 2014-09-23 
+ 2022-06-07 
+ Shabbir Bambot 
+ Apparatus for faster pathology 
+ CN105842000B 
+ ( en )
+ * 
+ 2016-05-06 
+ 2018-06-22 
+ 华中科技大学 
+ Suitable for the auto slice collection device and method of vibration slice 
+ CN108424832B 
+ ( en )
+ * 
+ 2017-02-15 
+ 2021-10-08 
+ Ｓｃｌ生物科技有限公司 
+ Device with tissue fine-crushing device 
+ DE102017129537A1 
+ ( en )
+ * 
+ 2017-12-12 
+ 2019-06-13 
+ Karlsruher Institut für Technologie 
+ Microtome and method of making thin sections from a sample using a microtome
+ WO2019242831A1 
+ ( en )
+ * 
+ 2018-06-20 
+ 2019-12-26 
+ Especialidades Medicas Myr, S.L. 
+ Microtome with actuated knife carrier clamping 
+ CN109060403B 
+ ( en )
+ * 
+ 2018-10-25 
+ 2025-01-10 
+ 天津市塑料研究所有限公司 
+ Medical pathology slicer and method for making pathology slices using the slicer
+ KR102754906B1 
+ ( en )
+ 2018-11-27 
+ 2025-01-13 
+ 서니브룩 리서치 인스티튜트 
+ Cartilage slicing device and method therefor
+ DE102019119560A1 
+ ( en )
+ * 
+ 2019-07-18 
+ 2021-01-21 
+ Carl Zeiss Microscopy Gmbh 
+ Microtome
+ US12405194B2 
+ ( en )
+ 2020-02-22 
+ 2025-09-02 
+ Clarapath, Inc. 
+ Facing and quality control in microtomy 
+ CN111531628B 
+ ( en )
+ * 
+ 2020-05-07 
+ 2021-04-06 
+ 丁伟山 
+ Pathological section cutting device and adjusting method thereof 
+ CN111805605B 
+ ( en )
+ * 
+ 2020-07-08 
+ 2025-02-11 
+ 湖北科技学院 
+ A tissue sectioning device for making microscope specimens
+ CN117043575A 
+ ( en )
+ 2020-10-23 
+ 2023-11-10 
+ 克拉拉帕斯股份有限公司 
+ Preliminary diagnosis of cut tissue sections
+ CN112847534A 
+ ( en )
+ * 
+ 2021-01-11 
+ 2021-05-28 
+ 李小燕 
+ Radix astragali section device for medicinal material processing 
+ MX2021004786A 
+ ( en )
+ * 
+ 2021-04-26 
+ 2022-10-27 
+ Jesus Raul Beltran Ramirez 
+ ASSEMBLY APPARATUS TO PERFORM PARAFFINATION AND CUTTING HISTOLOGICAL SAMPLES.
+ US12699027B2 
+ ( en )
+ 2021-05-13 
+ 2026-08-04 
+ Clarapath, Inc. 
+ Systems and methods for section transfer 
+ US12699028B2 
+ ( en )
+ 2021-06-21 
+ 2026-08-04 
+ Clarapath, Inc. 
+ Integrated system for preparation of pathology samples 
+ AU2022343612A1 
+ ( en )
+ * 
+ 2021-09-10 
+ 2024-03-21 
+ Elephas Biosciences Corporation 
+ Tissue cutting system and method 
+ WO2023092156A1 
+ ( en )
+ * 
+ 2021-11-22 
+ 2023-05-25 
+ Clarapath, Inc. 
+ Automated tissue section system with thickness consistency controls 
+ JP2025501669A 
+ ( en )
+ 2021-12-20 
+ 2025-01-22 
+ クララパス， インコーポレイテッド 
+ Automated tissue sectioning system with cut quality prediction 
+ CN116202840B 
+ ( en )
+ * 
+ 2023-03-03 
+ 2026-06-02 
+ 中国长江三峡集团有限公司 
+ Cutting device for strip samples
+Citations (18) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ DE3127266A1 
+ ( en )
+ 1981-07-10 
+ 1983-01-27 
+ Bernhard Dr. 7801 Buchenbach Wolf 
+ Microtome 
+ US4455910A 
+ ( en )
+ 1981-11-06 
+ 1984-06-26 
+ Ernst Leitz Wetzlar Gmbh 
+ Traversing microtome with air bearings 
+ US4625608A 
+ ( en )
+ 1984-02-07 
+ 1986-12-02 
+ Parke, Davis & Company 
+ Microtomes 
+ GB2182786A 
+ ( en )
+ 1985-11-05 
+ 1987-05-20 
+ Parke Davis & Co 
+ Microtome having specimen holder movable in two directions 
+ US4754675A 
+ ( en )
+ 1986-06-09 
+ 1988-07-05 
+ Joseph Segal 
+ Tissue slicing device 
+ US5148729A 
+ ( en )
+ 1990-10-15 
+ 1992-09-22 
+ Carlos Krumdieck 
+ Biological tissue slicer 
+ US5161446A 
+ ( en )
+ 1990-10-19 
+ 1992-11-10 
+ Leica Instruments Gmbh 
+ Microtome 
+ US5461953A 
+ ( en )
+ 1994-03-25 
+ 1995-10-31 
+ Mccormick; James B. 
+ Multi-dimension microtome sectioning device 
+ US5522294A 
+ ( en )
+ 1994-03-28 
+ 1996-06-04 
+ Krumdieck; Carlos 
+ Biological tissue slicer 
+ US5533342A 
+ ( en )
+ 1995-02-08 
+ 1996-07-09 
+ Gordon; Abe 
+ Semi-automated cryostat 
+ US5550033A 
+ ( en )
+ 1994-09-26 
+ 1996-08-27 
+ Krumdieck; Carlos 
+ Mold plunger and method for embedding tissue samples 
+ US5713255A 
+ ( en )
+ 1992-07-10 
+ 1998-02-03 
+ Microm Laborgerate Gmbh 
+ Process and apparatus for the production of thin sections by means of a microtome 
+ US5740708A 
+ ( en )
+ 1993-06-02 
+ 1998-04-21 
+ Microm Laborgerate Gmbh 
+ Suction microtome, particularly for histological work and the like 
+ US6209437B1 
+ ( en )
+ 1994-08-15 
+ 2001-04-03 
+ Micron Laborgerate Gmbh 
+ Microtome 
+ US6253653B1 
+ ( en )
+ 1996-07-29 
+ 2001-07-03 
+ Leica Microsystems Nussloch Gmbh 
+ Disc-microtome 
+ US20030101858A1 
+ ( en )
+ 2001-11-30 
+ 2003-06-05 
+ Isao Tamura 
+ Microtome 
+ US6598507B1 
+ ( en )
+ 1999-03-12 
+ 2003-07-29 
+ Leica Microsystems Nussloch Gmbh 
+ Microtome 
+ US6634268B1 
+ ( en )
+ 1999-03-12 
+ 2003-10-21 
+ Leica Microsystems Nussloch Gmbh 
+ Method for feeding a sample or cutting knife into a cutting plane of a microtome 
+ 2004 
+ 2004-10-21 
+ US 
+ US10/969,350 
+ patent/US7146895B2/en 
+ not_active 
+ Expired - Lifetime 
+Patent Citations (19) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ DE3127266A1 
+ ( en )
+ 1981-07-10 
+ 1983-01-27 
+ Bernhard Dr. 7801 Buchenbach Wolf 
+ Microtome 
+ US4455910A 
+ ( en )
+ 1981-11-06 
+ 1984-06-26 
+ Ernst Leitz Wetzlar Gmbh 
+ Traversing microtome with air bearings 
+ US4625608A 
+ ( en )
+ 1984-02-07 
+ 1986-12-02 
+ Parke, Davis & Company 
+ Microtomes 
+ GB2182786A 
+ ( en )
+ 1985-11-05 
+ 1987-05-20 
+ Parke Davis & Co 
+ Microtome having specimen holder movable in two directions 
+ US4754675A 
+ ( en )
+ 1986-06-09 
+ 1988-07-05 
+ Joseph Segal 
+ Tissue slicing device 
+ US5148729A 
+ ( en )
+ 1990-10-15 
+ 1992-09-22 
+ Carlos Krumdieck 
+ Biological tissue slicer 
+ US5161446A 
+ ( en )
+ 1990-10-19 
+ 1992-11-10 
+ Leica Instruments Gmbh 
+ Microtome 
+ US5713255A 
+ ( en )
+ 1992-07-10 
+ 1998-02-03 
+ Microm Laborgerate Gmbh 
+ Process and apparatus for the production of thin sections by means of a microtome 
+ US5740708A 
+ ( en )
+ 1993-06-02 
+ 1998-04-21 
+ Microm Laborgerate Gmbh 
+ Suction microtome, particularly for histological work and the like 
+ US5461953A 
+ ( en )
+ 1994-03-25 
+ 1995-10-31 
+ Mccormick; James B. 
+ Multi-dimension microtome sectioning device 
+ US5522294A 
+ ( en )
+ 1994-03-28 
+ 1996-06-04 
+ Krumdieck; Carlos 
+ Biological tissue slicer 
+ US6209437B1 
+ ( en )
+ 1994-08-15 
+ 2001-04-03 
+ Micron Laborgerate Gmbh 
+ Microtome 
+ US5550033A 
+ ( en )
+ 1994-09-26 
+ 1996-08-27 
+ Krumdieck; Carlos 
+ Mold plunger and method for embedding tissue samples 
+ US5533342A 
+ ( en )
+ 1995-02-08 
+ 1996-07-09 
+ Gordon; Abe 
+ Semi-automated cryostat 
+ US6253653B1 
+ ( en )
+ 1996-07-29 
+ 2001-07-03 
+ Leica Microsystems Nussloch Gmbh 
+ Disc-microtome 
+ US6598507B1 
+ ( en )
+ 1999-03-12 
+ 2003-07-29 
+ Leica Microsystems Nussloch Gmbh 
+ Microtome 
+ US6634268B1 
+ ( en )
+ 1999-03-12 
+ 2003-10-21 
+ Leica Microsystems Nussloch Gmbh 
+ Method for feeding a sample or cutting knife into a cutting plane of a microtome 
+ US20030101858A1 
+ ( en )
+ 2001-11-30 
+ 2003-06-05 
+ Isao Tamura 
+ Microtome 
+ US6651538B2 
+ ( en )
+ 2001-11-30 
+ 2003-11-25 
+ Dosaka Em Co., Ltd. 
+ Microtome 
+Cited By (23) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US8109184B2 
+ ( en )
+ 2006-09-06 
+ 2012-02-07 
+ Jian-Qiang Kong 
+ Method and device for cutting fresh tissue slices 
+ US20100175520A1 
+ ( en )
+ * 
+ 2006-09-06 
+ 2010-07-15 
+ Jian-Qiang Kong 
+ Method and device for cutting fresh tissue slices 
+ US20100180742A1 
+ ( en )
+ * 
+ 2007-06-06 
+ 2010-07-22 
+ Leica Biosystems Nussloch Gmbh 
+ Device And Method For Braking A Shaft Of A Microtome 
+ US8353232B2 
+ ( en )
+ * 
+ 2007-06-06 
+ 2013-01-15 
+ Leica Biosystems Nussloch Gmbh 
+ Device and method for braking a shaft of a microtome 
+ US20120055300A1 
+ ( en )
+ * 
+ 2009-09-15 
+ 2012-03-08 
+ Jian-Qiang Kong 
+ Microtome 
+ US8635934B2 
+ ( en )
+ * 
+ 2009-09-15 
+ 2014-01-28 
+ Jian-Qiang Kong 
+ Microtome 
+ US8876859B2 
+ ( en )
+ 2010-12-14 
+ 2014-11-04 
+ Patricia Buehler 
+ Devices for performing blepharoplasty and methods of using the same 
+ WO2012172024A1 
+ ( en )
+ 2011-06-14 
+ 2012-12-20 
+ Vib Vzw 
+ Microtome chamber, sample holder and sample processing method 
+ US20140137715A1 
+ ( en )
+ * 
+ 2011-06-14 
+ 2014-05-22 
+ Vib Vzw 
+ Microtome chamber, sample holder and sample processing method 
+ US8967024B2 
+ ( en )
+ * 
+ 2011-07-20 
+ 2015-03-03 
+ Vertex Pharmaceuticals, Inc. 
+ Device to collect and segregate tissue samples sectioned on a microtome 
+ US20150168277A1 
+ ( en )
+ * 
+ 2011-07-20 
+ 2015-06-18 
+ Vertex Pharmaceuticals, Inc. 
+ Device to collect and segregate tissue samples sectioned on a microtome 
+ US20130019725A1 
+ ( en )
+ * 
+ 2011-07-20 
+ 2013-01-24 
+ Vertex Pharmaceuticals, Inc. 
+ Device to collect and segregate tissue samples sectioned on a microtome 
+ US10422724B2 
+ ( en )
+ * 
+ 2016-11-14 
+ 2019-09-24 
+ Sakura Finetek U.S.A., Inc. 
+ Microtome waste removal assembly 
+ US10466143B2 
+ ( en )
+ * 
+ 2016-11-14 
+ 2019-11-05 
+ Sakura Finetek U.S.A., Inc. 
+ Microtome storage assembly 
+ US11723635B2 
+ ( en )
+ * 
+ 2017-09-05 
+ 2023-08-15 
+ The Board Of Regents Of The University Of Texas System 
+ Devices and methods for umbilical cord processing 
+ US12178417B2 
+ ( en )
+ 2017-09-05 
+ 2024-12-31 
+ The Board Of Regents Of The University Of Texas System 
+ Devices and methods for umbilical cord processing 
+ US20210338216A1 
+ ( en )
+ * 
+ 2017-09-05 
+ 2021-11-04 
+ Board Of Regents Of The University Of Texas System 
+ Devices and methods for umbilical cord processing 
+ CN107953383A 
+ ( en )
+ * 
+ 2017-12-01 
+ 2018-04-24 
+ 刘家豪 
+ A kind of agricultural uses radish chopper and slicer 
+ US20190242790A1 
+ ( en )
+ * 
+ 2018-02-07 
+ 2019-08-08 
+ Nanotronics Imaging, Inc. 
+ Methods and Apparatuses for Cutting Specimens for Microscopic Examination 
+ CN110757534A 
+ ( en )
+ * 
+ 2019-11-05 
+ 2020-02-07 
+ 邳州富通生物制品有限公司 
+ A section device for plant extract processing 
+ WO2023141217A1 
+ ( en )
+ * 
+ 2022-01-19 
+ 2023-07-27 
+ Empiri, Inc. 
+ Methods and systems for evaluation of tissue samples 
+ EP4466521A4 
+ ( en )
+ * 
+ 2022-01-19 
+ 2026-04-29 
+ Empiri Inc 
+ METHODS AND SYSTEMS FOR THE EVALUATION OF TISSUE SAMPLES
+ US12376852B2 
+ ( en )
+ 2022-04-29 
+ 2025-08-05 
+ Osheru, Inc. 
+ Wound creation for excess skin removal and closure systems and methods 
+Also Published As 
+ Publication number 
+ Publication date 
+ US20060086221A1 
+ ( en )
+ 2006-04-27 
+Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ US20060086221A1 
+ ( en )
+ 2006-04-27 
+ Sliding blade microtome 
+ US8109184B2 
+ ( en )
+ 2012-02-07 
+ Method and device for cutting fresh tissue slices 
+ US20120055300A1 
+ ( en )
+ 2012-03-08 
+ Microtome 
+ EP2259042A3 
+ ( en )
+ 2011-06-22 
+ Apparatus and method for harvesting and handling tissue samples for biopsy analysis 
+ US8113099B2 
+ ( en )
+ 2012-02-14 
+ Apparatus for processing a specimen 
+ ATE225500T1 
+ ( en )
+ 2002-10-15 
+ DISK MICROTOME
+ US5161446A 
+ ( en )
+ 1992-11-10 
+ Microtome 
+ US20100216221A1 
+ ( en )
+ 2010-08-26 
+ Device with which a histological section generated on a blade of a microtome can be applied to a slide 
+ JP5123636B2 
+ ( en )
+ 2013-01-23 
+ Sample processing equipment
+ US7080583B2 
+ ( en )
+ 2006-07-25 
+ Method and apparatus for presetting specimens in a cutting device 
+ US20050120854A1 
+ ( en )
+ 2005-06-09 
+ Thin-film slicer 
+ CA2172480C 
+ ( en )
+ 2000-05-02 
+ Anti-roll rake 
+ EP2009419B1 
+ ( en )
+ 2009-12-23 
+ Measuring the thickness of organic samples 
+ CN221350577U 
+ ( en )
+ 2024-07-16 
+ Vibrating microtome platform
+ EP1070240B1 
+ ( en )
+ 2002-07-10 
+ Specimen slicer 
+ JP2001013046A 
+ ( en )
+ 2001-01-19 
+ Thin sample preparation equipment
+ JP3147841U 
+ ( en )
+ 2009-01-22 
+ Super easy microtome
+ CN216266444U 
+ ( en )
+ 2022-04-12 
+ Three-dimensional tissue slice device and three-dimensional tissue slice equipment 
+ US20250251314A1 
+ ( en )
+ 2025-08-07 
+ Method and hard tissue slicing machine for slicing hard tissue using a slicing blade 
+ CN211205797U 
+ ( en )
+ 2020-08-07 
+ Bone tumor pathological specimen sampling frame 
+ JP2000065679A 
+ ( en )
+ 2000-03-03 
+ Optical fiber end face observation tool
+ Young 
+ 2000 
+ A Simple and Accurate Method for Setting a Parallel Cutting Plane on the Rotary Machine 
+ CN119437772A 
+ ( en )
+ 2025-02-14 
+ Nanoscale high-speed sample slicing device and method
+ KUHLMANN 
+ 2008 
+ Microtomy of tissue specimens, collection of sections 
+ CN119104408A 
+ ( en )
+ 2024-12-10 
+ A device for embedding frozen sections of cutting edge and cystoid tissue
+Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2010-07-19 
+ REMI 
+ Maintenance fee reminder mailed 
+ 2010-11-09 
+ FPAY 
+ Fee payment 
+ Year of fee payment :
+ 4 
+ 2010-11-09 
+ SULP 
+ Surcharge for late payment 
+ 2014-02-06 
+ FPAY 
+ Fee payment 
+ Year of fee payment :
+ 8 
+ 2018-07-23 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ MAINTENANCE FEE REMINDER MAILED (ORIGINAL EVENT CODE: REM.) 
+ 2019-01-14 
+ LAPS 
+ Lapse for failure to pay maintenance fees 
+ Free format text :
+ PATENT EXPIRED FOR FAILURE TO PAY MAINTENANCE FEES (ORIGINAL EVENT CODE: EXP.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2019-01-14 
+ STCH 
+ Information on status: patent discontinuation 
+ Free format text :
+ PATENT EXPIRED DUE TO NONPAYMENT OF MAINTENANCE FEES UNDER 37 CFR 1.362 
+ 2019-02-05 
+ FP 
+ Lapsed due to failure to pay maintenance fee 
+ Effective date :
+ 20181212 
+ 2020-10-19 
+ PRDP 
+ Patent reinstated due to the acceptance of a late maintenance fee 
+ Effective date :
+ 20201023 
+ 2020-10-23 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ PETITION RELATED TO MAINTENANCE FEES GRANTED (ORIGINAL EVENT CODE: PMFG); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Free format text :
+ PETITION RELATED TO MAINTENANCE FEES FILED (ORIGINAL EVENT CODE: PMFP); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Free format text :
+ SURCHARGE, PETITION TO ACCEPT PYMT AFTER EXP, UNINTENTIONAL. (ORIGINAL EVENT CODE: M2558); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2020-10-23 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 12TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2553); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Year of fee payment :
+ 12 
+ 2020-10-23 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 

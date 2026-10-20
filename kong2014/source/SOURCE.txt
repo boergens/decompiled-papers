@@ -1,0 +1,9 @@
+kong2014: Kong, Jian-Qiang (2014). Microtome. US patent 8,635,934 B2, filed 2010-08-25 (publication US 2012/0055300), granted 2014-01-28.
+Files (fetched 2026-10-20 by the oct-20-compresstome session):
+  US8635934B2.pdf                 USPTO full-text image PDF, 9 pp., no text layer (pdffonts: none; one image per page). Scan-type: needs OCR.
+                                  from https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8635934 (curl, HTTP 200)
+  US8635934B2.google_patents.txt  the text of https://patents.google.com/patent/US8635934B2/en (HTML stripped, curl, same day):
+                                  bibliographic data, abstract, description, claims; use as the OCR second opinion, the PDF image is authoritative.
+Licence: US patent publication (USPTO); no copyright notice in the text.
+Why: the third Kong microtome patent (feeding mechanism and angled vibrating blade), obtained together with US 7,146,895 and US 8,109,184
+for the Compresstome-on-large-brains question.
