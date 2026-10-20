@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\decompnote{arXiv preprint v2 (born-digital LaTeX PDF, 12 pages), decompiled tool-first: the text was placed from the PDF's own text layer (PyMuPDF characters with their fonts) by \texttt{work/build\_main.py}, which turns the Computer Modern fonts into italic/bold/small-caps and the math fonts into LaTeX formulas; the displayed formulas were written by hand from the page images (\texttt{work/build\_tables.py}); the decompiler proofread everything against the page images and recorded each correction in the script's table and in the README. No licence line is printed in the PDF (the arXiv listing says CC BY 4.0). The running headers (``JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL'' / ``A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS'') and page numbers are left out; the arXiv stamp printed vertically in the left margin of p.\,1 is given once below. Theorem, lemma and claim heads are kept as printed (bold head, italic statement), proofs end with the printed $\square$. Equation numbers are the paper's own, as \texttt{\textbackslash tag}.}
+
+\sourcefile{lavollee2023.pdf}
+
+\pdfpage{1}
+\noindent arXiv:2209.09800v2 [math.CO] 15 Jun 2023
+\decompnote{The line above is the arXiv stamp, printed vertically along the left margin of p.\,1.}
+
+\section*{A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS}
+
+\noindent JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+\noindent \textsc{Abstract.} A matchstick graph is a plane graph with edges drawn as unit-distance line segments. Harborth introduced these graphs in 1981 and conjectured that the maximum number of edges for a matchstick graph on $n$ vertices is $\lfloor 3n - \sqrt{12n - 3}\rfloor$. In this paper we prove this conjecture for all $n \ge 1$. The main geometric ingredient of the proof is an isoperimetric inequality related to L’Huilier’s inequality.
+
+\section*{1. \textsc{Introduction}}
+
+A \textit{matchstick graph} is a graph drawn in the Euclidean plane with each edge a straight unit-length segment, such that two edges only intersect in a common endpoint. These graphs were introduced by Harborth [11,12] in 1981. Most of the literature deals with matchstick graphs which are regular [3, 8, 9, 14–16, 21, 26] or almost regular [18,22–25]. There are also a few papers dealing with more general aspects, such as enumeration [20] and algorithmic recognition [1, 13]. Harborth considered the extremal problem of finding the minimum number $n$ of vertices in a matchstick graph on $e$ edges, or equivalently, the maximum number of edges for a given number of vertices. He conjectured in [12] that $e \le 3n - \sqrt{12n - 3}$ (see also [4, p. 225]) and proved this in the special case of penny graphs using a neat induction on the number of vertices [10] (see also [19, Theorem 13.12]). A \textit{penny graph} is a matchstick graph with the additional property that the circles of radius $1/2$ around the vertices are non-overlapping.
+
+\textbf{Theorem 1} (Harborth [10])\textbf{.} \textit{Let $G$ be a matchstick graph on $n$ vertices such that the distance between any two vertices is at least $1$. Then the number of edges of $G$ satisfies $e \le 3n - \sqrt{12n - 3}$.}
+
+For each $n \ge 1$ there are examples on the triangular lattice with $n$ vertices and the optimal $\lfloor 3n - \sqrt{12n - 3}\rfloor$ edges [10,19]. Proving Harborth’s conjecture in general turns out to be trickier. Using the isoperimetric inequality (Lemma 1) we showed in [17] that $e \le 3n - c\sqrt{12n - 3}$, where $c = \frac{1}{2}(1 + \sqrt{\pi \sqrt{3}/6}) = 0.976 \ldots$, which implies Harborth’s conjecture for some small values of $n$. In this paper we settle the conjecture completely.
+
+\textbf{Theorem 2.} \textit{Let $G$ be a matchstick graph with $n$ vertices and $e$ edges. Then $e \le 3n - \sqrt{12n - 3}$.}
+
+As in our previous paper [17], as a first step we use the Euler formula and the isoperimetric inequality.
+
+\textbf{Lemma 1} (Isoperimetric inequality)\textbf{.} \textit{For any simple polygon of perimeter $b$ and area $A$ we have $4\pi A < b^{2}$.}
+
+\decompnote{The two lines that follow are printed as unnumbered footnotes at the foot of p.\,1 (above the page number), below a short rule.}
+
+\noindent 2020 \textit{Mathematics Subject Classification.} Primary 52C10. Secondary 05C10.
+
+\noindent \textit{Key words and phrases.} matchstick graph, penny graph, plane unit-distance graph.
+
+\pdfpage{2}
+However, we will then exploit a different isoperimetric inequality that takes into account that many edges on the outer boundary of $G$ lie on the same triangular lattice. A variant of the isoperimetric inequality in the plane, known as L’Huilier’s inequality, states that among all polygons of a given perimeter for which the sides are constrained to be parallel to a given set of directions, the one of maximum area is circumscribed to a circle [6, pp. 9–10], [7, pp. 12–13]. In particular, among all closed polygons of a given perimeter with each side parallel to one of the sides of a fixed regular hexagon, the regular hexagon is optimal. We prove the following variant of this special case where we allow a certain bounded amount of the perimeter to be unconstrained in direction.
+
+\textbf{Lemma 2.} \textit{Let $P$ be a simple polygon with perimeter $b$, area $A$, and with the total length of the sides not parallel to any side of some fixed regular hexagon at most $b_{*}$. Then} 
+\begin{equation*}
+8\sqrt{3}A \le \bigl(b + \bigl(\tfrac{2}{\sqrt{3}} - 1\bigr)b_*\bigr)^2.
+\end{equation*}
+
+Our proof of Theorem 2 has an analytical flavour, with many inequalities appearing in it that are rather weak, with constants that could easily be improved. Surprisingly, this turns out to be unnecessary. The inequalities also often need $n$ to be large, which creates the potential problem that this approach will only work for sufficiently large $n$. However, the original isoperimetric inequality allows us to dismiss all values of $n < 147$ early on in the proof. Then the rest of the proof goes through, although there are many inequalities that have to be checked. This can be done by hand or by apps such as Wolfram Alpha or Desmos. We have to balance the asymptotics with constant terms in order to make the inequalities valid for small $n$. It is rather strange that such an approach manages to make the induction succeed for all values of $n$.
+
+\subsection*{1.1. Proof outline.}
+
+The proof of Theorem 2 is in Section 2. Here we give a high-level summary. The proof is by induction with the induction step split up into 12 claims. As the cases $1 \le n \le 4$ of Theorem 2 are easily checked, we assume that $n > 4$ and that the theorem holds for all smaller values of $n$, but not for $n$, and aim for a contradiction.
+
+Starting off, we show that the graph has minimum degree 3 (Claim 1) and is 2-connected (Claim 2). We then apply the Euler formula and count incident edge-face pairs to give an upper bound for the length of the boundary of $G$ in terms of $n$ and a certain weighted count $F$ of the number of non-triangular inner faces (Claim 3), as well as a lower bound for the number of triangles (Claim 4). If this weighted count $F$ equals 0 or 1, then either all inner faces are triangles, a case where Theorem 1 applies, or there is a quadrilateral as well, a case that can be easily dealt with by splitting up the graph at the quadrilateral and applying induction. Thus we can assume that $F \ge 2$ (Claim 5).
+
+We apply the isoperimetric inequality (Lemma 1) to our upper bound of the boundary length of $G$ and the lower bound on its area derived from the lower bound on the number of triangles. This gives an upper bound for $F$ of the form $c\sqrt{12n - 3}$ (we use $c = 1/11$, but $c$ can be made as small as $1/20$) as well as showing that we may assume that $n \ge 147$ otherwise $F < 2$ (Claim 6).
+
+We next consider the so-called lattice components of the graph, which we define to be maximal 2-connected subgraphs that each lie on some triangular lattice. We find lower bounds for their boundary lengths (Claim 7) and show that they cover almost all of $G$ without too much overlap (Claim 8). This enables us to show that the largest lattice component, $G_{1}$, has to be quite large (we show that $n(G_{1}) > 3n/4$ in Claim 9, but it is possible to go up to $0.97n$ if $n$ is sufficiently large).
+
+\pdfpage{3}
+We split $G$ up into $G_{1}$ and a slight enlargement of $G - G_{1}$, and apply induction to obtain a lower bound for $F$ in terms of $n$ and $n_{1}$ (Claim 10) that will be crucial for the final part of the proof. We also bound the number of edges on the boundary of $G$ that are not on the boundary of $G_{1}$ (Claim 11). Thus, except for a bounded quantity, the boundary edges of $G$ all lie on the same triangular lattice. Our new isoperimetric inequality (Lemma 2) then gives an improved upper bound on the area of $G$, which can be bounded from below using the bound on the number of triangles from Claim 4. The upshot of this is that we find a very good upper bound on $F$ (Claim 12), which, together with the lower bound from Claim 10 gives us our final contradiction.
+
+\subsection*{1.2. Definitions.}
+
+We define a \textit{triangular lattice} to be any subset of the plane isometric to $\{m(1, 0) + n(1/2, \sqrt{3}/2) : m, n \in \mathbb{Z}\}$, and we say that a finite set of points \textit{lies on a triangular lattice} if it is a subset of some triangular lattice. We will use the following simple observation.
+
+\textbf{Lemma 3.} \textit{If $a$ and $b$ are distinct points on a triangular lattice and $c$ is a point at distance $1$ to both $a$ and $b$, then $c$ lies on the same triangular lattice.}
+
+We use standard graph theory terminology as can be found in [5, Sections 1.1–1.4, 4.1, 4.2]. We call the cycle bounding the outer face of a plane graph $G$ the \textit{boundary} of $G$, its length the \textit{boundary length} of $G$, and its edges the \textit{boundary edges} of $G$.
+
+We will occasionally use the function $\phi(x) = \sqrt{12x - 3} - 3$ which is non-negative for all $x \ge 1$. Since $\phi$ is strictly concave, $\phi(x + a) - \phi(x)$ is strictly decreasing in $x$ for all fixed $a > 0$. This implies the following inequality that we will use repeatedly.
+
+\textbf{Lemma 4.} $\phi(a) + \phi(b) < \phi(a - c) + \phi(b + c)$ \textit{whenever $a > b + c$, $b \ge 1$ and $c > 0$.}
+
+\section*{2. \textsc{Proof}}
+
+\subsection*{2.1. Setting up the induction.}
+
+Let $G$ be a matchstick graph on $n = n(G)$ vertices in the plane. Denote the number of edges by $e = e(G)$. We prove Theorem 2 by induction. The cases $1 \le n \le 3$ are trivial. The case $n = 4$ follows since the complete graph on 4 vertices is not a matchstick graph. So we fix $n > 4$ and assume the theorem is true for all matchstick graphs of less than $n$ vertices. Among all matchstick graphs on $n$ vertices, fix one $G$ with the maximum number $e$ of edges. We assume that 
+\begin{equation*}
+e > 3n - \sqrt{12n-3}, \tag{1}
+\end{equation*} and will aim for a contradiction. Claims 1–12 below will all have as unstated assumptions the induction hypothesis, $n > 4$, the inequality (1), and that $G$ has the maximum number of edges among all matchstick graphs with $n$ vertices.
+
+\subsection*{2.2. Basic properties.}
+
+\textbf{Claim 1.} \textit{Each vertex of $G$ has at least $3$ neighbours.}
+
+\textit{Proof.} Suppose that there is a vertex $v$ with at most 2 neighbours, and let $G' = G - v$. Then by induction and Lemma 4, 
+\begin{align*}
+e &\le e(G') + 2 \le 3(n-1) - \sqrt{12(n-1)-3} + 2\\
+&= 3n - \phi(n-1) - 4\\
+&\le 3n - \phi(n) + \phi(5) - \phi(4) - 4\\
+&= 3n - \sqrt{12n-3} + \phi(5) - \phi(4) - 1 < 3n - \sqrt{12n-3},
+\end{align*} which contradicts (1). \hfill$\square$
+
+\pdfpage{4}
+\textbf{Claim 2.} $G$ \textit{is $2$-connected.}
+
+\textit{Proof.} $G$ has to be connected, otherwise we can move a connected component until one of its vertices has distance 1 to some other vertex, contradicting maximality.
+
+If $G$ is not 2-connected, then $G$ has a cut vertex. Thus there exist two subgraphs $G_{1}$ and $G_{2}$ that cover $G$ and have only a single vertex in common. Then with $n_{1} = n(G_{1}), n_{2} = n(G_{2}) \ge 2, e_{1} = e(G_{1})$, and $e_{2} = e(G_{2})$, we have $n = n_{1} + n_{2} - 1$, and 
+\begin{align*}
+e &= e_1 + e_2\\
+&\le 3n_1 - \sqrt{12n_1-3} + 3n_2 - \sqrt{12n_2-3}\\
+&= 3n - \phi(n_1) - \phi(n_2) - 3\\
+&< 3n - \phi(n_1+n_2-1) - \phi(1) - 3 = 3n - \sqrt{12n-3}
+\end{align*} by induction and Lemma 4, which contradicts (1). \hfill$\square$
+
+\subsection*{2.3. The Euler formula and double counting.}
+
+Since $G$ is 2-connected by Claim 2, all of its faces are polygons. Let $b$ denote the length of the outer face, and for each $i \ge 3$, let $f_{i}$ denote the number of inner faces bounded by a cycle of length $i$. Since $G$ is connected, Euler’s formula gives 
+\begin{equation*}
+n - e + \sum_{i\ge 3} f_i = 1, \tag{2}
+\end{equation*} and since $G$ is 2-connected, by counting incident edge-face pairs in two ways, we obtain 
+\begin{equation*}
+2e = b + \sum_{i\ge 3} i f_i. \tag{3}
+\end{equation*} Let $F = \sum_{i\ge 4}(i - 3)f_{i}$. Then (2) and (3) imply 
+\begin{equation*}
+e = 3n - 3 - b - F. \tag{4}
+\end{equation*} From (1) we then obtain
+
+\textbf{Claim 3.} $b < \sqrt{12n - 3} - 3 - F = \phi(n) - F$\textit{.}
+
+\subsection*{2.4. Using the isoperimetric inequality.}
+
+We need the following lower bound on the number of triangular faces, so that we can estimate the area of the region bounded by $G$, then use the isoperimetric inequality to find a lower bound for $b$ and from that our first upper bound on $F$. This upper bound will be needed later in our proof of an improved upper bound for $F$ (Claim 12).
+
+\textbf{Claim 4.} $f_{3} > 2n + 1 - \sqrt{12n - 3} - F = \phi(n)^{2}/6 - F$\textit{.}
+
+\textit{Proof.} Using the Euler formula (2) and our assumption (1), we obtain 
+\begin{equation*}
+f_3 = e - n + 1 - \sum_{i\ge 4} f_i > 2n - \sqrt{12n-3} + 1 - F. \tag*{$\square$}
+\end{equation*}
+
+\textbf{Claim 5.} $F \ge 2$\textit{.}
+
+\textit{Proof.} If $F = 0$, then all inner faces are triangular, and since $G$ is 2-connected, it lies on a single triangular lattice. Then $G$ is a penny graph, and Harborth’s Theorem 1 gives $e \le 3n - \sqrt{12n - 3}$, a contradiction.
+
+If $F = 1$, then there is a single quadrilateral inner face with all other inner faces triangular. Each vertex $v$ of this quadrilateral must lie on the boundary of $G$, otherwise, all other faces incident with $v$ would be equilateral triangles, implying that the angle of the quadrilateral at $v$ is a multiple of $60^{\circ}$. Then the quadrilateral would have angles $60^{\circ}$ and $120^{\circ}$, and we could add an edge between the two opposite vertices at the $120^{\circ}$ angles, violating the maximality of $G$.
+
+\pdfpage{5}
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent \textsc{Figure 1.} Subgraphs $G_{1}$ and $G_{2}$ covering $G$ and sharing edge $pq$ of a quadrilateral
+\alttext{Vector line drawing of a matchstick graph $G$ (16 vertices, drawn as black dots; every edge is a straight segment of the same length, about 34 pt in the PDF), split into two coloured subgraphs. Left, in red: $G_1$, a regular hexagon with its centre, i.e. 7 vertices and 12 edges (6 rim edges and 6 spokes), forming 6 equilateral triangles; the label ``$G_1$'' in red stands above its upper right rim edge. Right, in blue: $G_2$, 11 vertices and 18 edges forming 7 equilateral triangles and one quadrilateral; the label ``$G_2$'' in blue stands above its upper left part. The two subgraphs share exactly one edge, the vertical right side of the hexagon, drawn as a thick double line (red and blue side by side); its upper endpoint is labelled $p$ (label to the right of the vertex, above the edge's middle) and its lower endpoint $q$ (label below right). The quadrilateral face of $G$ is $p$, the blue vertex to the upper right of $p$, the blue vertex to the lower right of it, $q$: its four sides are $pq$ and three blue edges, so $pq$ is the edge of the quadrilateral that is not a boundary edge of $G$, and removing $p$ and $q$ separates the red part from the blue part. The blue triangles fan out from the two inner blue vertices of the quadrilateral: three triangles above the upper one (sharing a vertex at the top), three around the lower one towards the right (ending in a rightmost vertex), and one triangle hanging below $q$ with a vertex at the bottom. No axes, scale or coordinates are printed; the vertex positions are not data of the paper. Not a plotted panel: no data file.}
+
+We next decompose $G$. Since $n > 5$, at least one of the edges of the quadrilateral is not a boundary edge of $G$. Let $p$ and $q$ be the endpoints of such an edge. Then $G - \{p, q\}$ is not connected and has exactly two connected components $C_{1}$ and $C_{2}$. Let $G_{i}$ be the subgraph of $G$ induced by the vertices of $C_{i}$ and $p$ and $q$ for $i = 1, 2$. Then $G_{1}$ and $G_{2}$ have only an edge of the quadrilateral in common, and cover $G$. Denoting $n_{i} = n(G_{i})$ and $e_{i} = e(G_{i}), i = 1, 2$, we have $n_{1} + n_{2} = n + 2$ and $e_{1} + e_{2} = e + 1$. Since $pq$ is not on the boundary of $G$, it follows that $n_{i} \ge 3 (i = 1, 2)$, and the length $b$ of the boundary of $G$ is at least 5. Then Claim 3 implies that $n > 7$, and 
+\begin{align*}
+e &= e_1 + e_2 - 1\\
+&\le 3n - \phi(n_1) - \phi(n_2) - 1 \quad\text{by induction}\\
+&\le 3n - \phi(n_1+n_2-3) - \phi(3) - 1 \quad\text{by Lemma 4}\\
+&< 3n - \phi(n) + \phi(7) - \phi(6) - \phi(3) - 1 \quad\text{again by Lemma 4}\\
+&< 3n - \sqrt{12n-3},
+\end{align*} contradicting assumption 1. \hfill$\square$
+
+\textbf{Claim 6.} $n \ge 147$ \textit{and $F < \frac{1}{11}\sqrt{12n - 3} - 1$.}
+
+\textit{Proof.} Denote the area of the boundary polygon of $G$ by $A$. The area of an equilateral triangle of side length 1 is $\sqrt{3}/4$, hence $A > \frac{\sqrt{3}}{4} f_{3}$. By Claim 4, $f_{3} > \phi(n)^{2}/6 - F$, and by the isoperimetric inequality (Lemma 1) and Claim 3, $4\pi A < b^{2} < (\phi(n) - F)^{2}$. In the remainder of this proof we write $\phi = \phi(n)$. We thus obtain the inequality $\frac{\pi \sqrt{3}}{6} (\phi^{2} - 6F) < (\phi - F)^{2}$, or when expanded, 
+\begin{equation*}
+F^2 - (2\phi - \pi\sqrt{3})F + (1 - \pi\sqrt{3}/6)\phi^2 > 0. \tag{5}
+\end{equation*} By Claim 3 and $b \ge 3$, we obtain $F < \phi - \pi \sqrt{3}/2$, so the left-hand side of (5) is decreasing in $F$. Thus we can substitute $F = 2$ into (5) to obtain 
+\begin{equation*}
+4 - 2(2\phi - \pi\sqrt{3}) + (1 - \pi\sqrt{3}/6)\phi^2 > 0,
+\end{equation*} hence $\phi < 4.114 \ldots$ or $\phi > 38.849 \ldots$, or in terms of $n, n < 4.468 \ldots$ or $n > 146.199 \ldots$. Since $n \ge 5$ by assumption, we conclude that $n \ge 147$, as required. For the second part of the claim, we solve for $F$ in (5) to obtain 
+\begin{equation*}
+F < \phi - \pi\sqrt{3}/2 - \frac{1}{2}\sqrt{\frac{2\pi}{\sqrt{3}}\phi^2 - 4\pi\sqrt{3}\phi + 3\pi^2}.
+\end{equation*} In order to show that $F < (\phi - 8)/11$, it is sufficient to show that 
+\begin{equation*}
+\phi - \pi\sqrt{3}/2 - \frac{1}{2}\sqrt{\frac{2\pi}{\sqrt{3}}\phi^2 - 4\pi\sqrt{3}\phi + 3\pi^2} \le \frac{\phi - 8}{11}.
+\end{equation*}
+
+\pdfpage{6}
+This inequality is equivalent to $\phi \le 2.084 \ldots$ or $\phi \ge 20.506 \ldots$. However, we have already shown that $\phi > 38.849 \ldots$. Thus we conclude that $F < (\phi - 8)/11$, which proves the second part of the claim. \hfill$\square$
+
+\subsection*{2.5. Lattice components.}
+
+We define a \textit{lattice component} of $G$ to be any maximal 2-connected subgraph (on at least 3 vertices) that lies on some triangular lattice. Denote the lattice components of $G$ by $G_{1}, \ldots, G_{k}$. Denote the number of vertices by $n_{i} = n(G_{i})$, the number of edges by $e_{i} = e(G_{i})$, and the boundary length of $G_{i}$ by $b_{i}$. Assume that $n_{1} \ge n_{2} \ge \cdots \ge n_{k}$. Note that no two lattice components have an edge in common, otherwise their union would be a larger 2-connected graph on the same lattice.
+
+\textbf{Claim 7.} \textit{For each $i = 1, \ldots, k$, $b_{i} \ge \sqrt{12n_{i} - 3} - 3$.}
+
+\textit{Proof.} $G_{i}$ is on a triangular lattice and is 2-connected, so its boundary is a cycle. Construct a new graph $G'$ from $G_{i}$, by filling up all missing lattice vertices and edges inside the boundary of $G_{i}$. By Theorem 1, $e(G') \le 3n(G') - \sqrt{12n(G') - 3}$, since $G'$ is also on the triangular lattice. (We cannot use induction here, because $G'$ might have more than $n$ vertices.) By (4) applied to $G'$ (which is still 2-connected and with $F = 0$), we obtain $b_{i} \ge \sqrt{12n(G') - 3} - 3 \ge \sqrt{12n_{i} - 3} - 3$, since $G'$ has the same outer boundary as $G_{i}$. \hfill$\square$
+
+We will later need that the largest lattice component is not too small. We first show that the lattice components cover almost all of $G$ and do not overlap too much.
+
+\textbf{Claim 8.} $n - 2F \le \sum^{k}_{i = 1} n_{i} \le n + 4F$\textit{.}
+
+\textit{Proof.} For the lower bound, consider a vertex $v$ of $G$ that does not belong to any lattice component. Let $s$ be the number of inner faces of $G$ incident to $v$. Since $v$ has at least 3 neighbours (Claim 1), $s \ge 2$. Assign a charge of $1/s$ to each inner face incident to $v$. Since these faces are all non-triangular, the total charge is $\le \frac{1}{2} \sum_{i\ge 4} if_{i} \le 2F$. The total charge on all such vertices counts the number of vertices not covered by any lattice component. Thus, at least $n - 2F$ vertices of $G$ are covered by the lattice components, which gives $\sum^{k}_{i = 1} n_{i} \ge n - 2F$.
+
+For the upper bound, consider a vertex $v$ that belongs to $t \ge 2$ of the $G_{i}$. Now let $s$ be the number of non-triangular inner faces of $G$ incident to $v$. Since two adjacent faces incident to $v$ cannot belong to distinct $G_{i}$, there is at least one non-triangular face between any two faces at $v$ belonging to distinct $G_{i}$, so $v$ is incident to at least $t$ non-triangular faces, of which one could be the outer face. Hence $s \ge t - 1$. Assign a charge of $(t - 1)/s$ to each non-triangular inner face incident to $v$. This gives a total charge of $t - 1$ for each $v$, which is exactly its contribution to $\sum_{i} n_{i} - n$. Since $(t - 1)/s \le 1$, we obtain that the total charge is at most $\sum_{i\ge 4} if_{i} \le 4F$. Thus, $\sum_{i} n_{i} \le n + 4F$. \hfill$\square$
+
+From now on we concentrate on the largest lattice component $G_{1}$. We first show that it covers a considerable proportion of $G$.
+
+\textbf{Claim 9.} $n_{1} > 3n/4$\textit{.}
+
+\textit{Proof.} Suppose that all $n_{i} \le 3n/4$. We will find a contradiction by bounding $\sum^{k}_{i = 1} b_{i}$ from above and below. Since no two $G_{i}$ have a common boundary edge, this sum counts the number of edges on the boundaries of all lattice components.
+
+For the upper bound, note that if an edge is on the boundary of some lattice component then it borders a non-triangular face on the outside of the lattice component.
+
+\pdfpage{7}
+This gives 
+\begin{equation*}
+\sum_{i=1}^{k} b_i \le b + \sum_{i\ge 4} i f_i < \sqrt{12n-3} - 3 - F + 4F < \frac{14}{11}\sqrt{12n-3} - 6 \tag{6}
+\end{equation*} from Claims 3 and 6. For the lower bound we just use Claim 7: 
+\begin{equation*}
+\sum_{i=1}^{k} b_i \ge \sum_{i=1}^{k}\bigl(\sqrt{12n_i-3} - 3\bigr) = \sum_{i=1}^{k}\phi(n_i). \tag{7}
+\end{equation*} We lower bound the right-hand side by relaxing it to a continuous optimisation problem. We have $k \le N/3$, where $N = \sum^{k}_{i = 1} n_{i}$. For later reference, note that $3n/4 + 3 < N < 6n/4 - 3$ since $n \ge 13$, by Claims 8 and 6. In particular, $k \ge 2$. For each $\ell = 2, \ldots, \lfloor N/3\rfloor$, define $\Phi_{\ell}(x_{1}, \ldots, x_{\ell}) = \sum^{\ell}_{i = 1} \phi(x_{i})$ on the domain 
+\begin{equation*}
+D_\ell = \left\{(x_1,\ldots,x_\ell) \in \mathbb{R}^\ell : \tfrac{3}{4}n \ge x_1 \ge \cdots \ge x_\ell \ge 3, \sum_{i=1}^{\ell} x_i = N\right\}.
+\end{equation*} For each $\ell$, the function $\Phi_{\ell}$ has a minimum value $y_{\ell}$ on $D_{\ell}$. Among all of these $\ell$, fix one, say $m$, that minimises $y_{\ell}$. Fix $(x_{1}, \ldots, x_{m}) \in D_{m}$ such that $\Phi_{m}(x_{1}, \ldots, x_{m}) = y_{m}$. By strict concavity of $\phi$ (Lemma 4) we cannot have two $x_{i}$ in the open interval $(3, \frac{3}{4}n)$. If $m \ge 3$, we cannot have some $x_{i} = 3$ and another $x_{j} \le 3n/4 - 3$, since we can then replace both by a single variable equal to $x_{j} + 3$, thereby finding 
+\begin{align*}
+y_{m-1} &\le y_m + \phi(3 + x_j) - \phi(x_j) - \phi(3)\\
+&\le y_m + \phi(6) - \phi(3) - \phi(3) \quad\text{by Lemma 4}\\
+&< y_m.
+\end{align*} It follows that we cannot have any $x_{i} = 3$, since this would imply that all other $x_{j} \in (3n/4 - 3, 3n/4]$, but $3 + 3n/4 < N$ and $3 + 2(3n/4 - 3) > N$ as noted before. We cannot have two $x_{i}$ equal to $\frac{3}{4}n$, since $6n/4 > N$. Thus necessarily $m = 2, x_{1} = \frac{3}{4}n, x_{2} = N - \frac{3}{4}n$. It follows that 
+\begin{align*}
+\sum_{i=1}^{k}\phi(n_i) &= \Phi_k(n_1,\ldots,n_k) \ge \Phi_2(x_1,x_2)\\
+&\ge \Phi_2(x_1 + 1/16, x_2 - 1/16) \quad\text{by Lemma 4}\\
+&= \sqrt{(3/4)(12n-3)} - 3 + \sqrt{12(N - 3n/4) - 15/4} - 3\\
+&\ge \frac{\sqrt{3}}{2}\sqrt{12n-3} + \sqrt{12(n/4 - 2F) - 15/4} - 6 \quad\text{by Claim 8.} \tag{8}
+\end{align*}
+
+Putting (6), (7) and (8) together, we obtain 
+\begin{equation*}
+\frac{1}{6}(12n-3) > \Bigl(\frac{14}{11} - \frac{\sqrt{3}}{2}\Bigr)^2(12n-3) > 12(n/4 - 2F) - 15/4 = \frac{1}{4}(12n-3) - 3 - 24F.
+\end{equation*} Again using Claim 6 it follows that 
+\begin{equation*}
+\frac{1}{12}(12n-3) - 3 < 24F < \frac{24}{11}\sqrt{12n-3} - 24,
+\end{equation*} which has no solutions in $n$, a contradiction. \hfill$\square$
+
+The next inequality comes from applying the induction hypothesis to $G_{1}$ and a slight enlargement of the remainder $G - G_{1}$.
+
+\textbf{Claim 10.} $\sqrt{12(n - n_{1})} < 6F + \sqrt{12n - 3} - \sqrt{12n_{1} - 3}$\textit{.}
+
+\pdfpage{8}
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent \textsc{Figure 2.} Decomposition of $G$ into $G_{1}$ and $G'$ with common vertex set $K$
+\alttext{Vector schematic (not a matchstick graph drawing: no unit edges or vertex dots except for $K$). Left: a large hexagon filled light red with a red outline, labelled ``$G_1$'' in red above its upper left side; its right side is vertical. Right: a region filled light blue with a blue outline, labelled ``$G'$'' in blue at its upper left, whose outline runs along the whole vertical right side of the hexagon and then along part of the hexagon's lower right side before turning away to the right; the blue region is cut by a few blue internal edges into small faces along that shared boundary (a cell with five sides next to the middle of the vertical side, two small cells below it, a notch at the top). Six vertices drawn as green dots lie on the shared boundary: four on the vertical side (top corner, two intermediate points, bottom corner) and two on the lower right side of the hexagon; together they are the vertex set $K$, labelled ``$K$'' in green to the left of the vertical side, and the L-shaped path through them (down the vertical side, then diagonally down-left) is highlighted by a thick dark-green band with a light-green core. So $K$ is the set of vertices of $G_1$ joined to $G - G_1$, and $G'$ (induced by $V(G - G_1) \cup K$) overlaps $G_1$ exactly in $K$. Not a plotted panel: no data file.}
+
+\textit{Proof.} Let $K$ be the set of vertices of $G_{1}$ that are joined to some vertex in $G - G_{1}$, and let $G'$ be the subgraph of $G$ induced by $V (G - G_{1}) \cup K$. Since $G_{1}$ is on the lattice, we already know by Harborth’s Theorem 1 that $e_{1} \le 3n_{1} - \sqrt{12n_{1} - 3}$. If $K = \emptyset$, then $G_{1} = G$ since $G$ and $G_{1}$ are connected, and then the assumption (1) is contradicted. Thus $K \ne \emptyset$. Let $n' = n(G') = n - n_{1} + |K|$ and $e' = e(G')$. Then $G'$ and $G_{1}$ cover all the edges of $G$, hence $e \le e_{1} + e'$. To bound $e'$ from above, we will apply induction, but then we need to ensure that $K \ne V (G_{1})$. We do this by bounding $|K|$ from above.
+
+Each vertex $v$ in $K$ belongs to some inner face of $G$ not lying on the lattice of $G_{1}$, otherwise all inner faces around $v$ lie on the same lattice, so must be part of $G_{1}$ by maximality. Consider any inner face $\Gamma$ not lying on the lattice of $G_{1}$, so with at least one vertex not in $K$. Denote the length of the cycle bounding $\Gamma$ by $i$. Suppose that all but one of the vertices on this cycle lie in $K$ and consider the remaining vertex $v$ with neighbours $u$ and $w$ on $\Gamma$. Since $u$ and $w$ are on the lattice of $G_{1}, v$ also lies on the same lattice by Lemma 3, but then $\Gamma$ lies on the lattice of $G_{1}$, a contradiction. Hence at most $i - 2$ vertices of $K$ belong to $\Gamma$. Since $\Gamma$ is a non-triangular face of $G$, we find the upper bound 
+\begin{equation*}
+|K| \le \sum_{i\ge 4}(i-2)f_i \le 2F.
+\end{equation*} By Claims 6 and 9 it follows that $2F < n_{1}$, hence $K$ cannot be all of $G_{1}$ so $G'$ is a proper subset of $G$, and we can apply induction to $G'$ to obtain 
+\begin{equation*}
+e \le e_1 + e' \le 3n_1 - \sqrt{12n_1-3} + 3n' - \sqrt{12n'-3}.
+\end{equation*} Using assumption (1) and $n_{1} + n' = n + |K|$, we obtain 
+\begin{equation*}
+\sqrt{12(n - n_1 + |K|) - 3} < 3|K| + \sqrt{12n-3} - \sqrt{12n_1-3}. \tag{9}
+\end{equation*} The claim now follows from the bounds $1 \le |K| \le 2F$. \hfill$\square$
+
+Let $b_{*}$ be the number of boundary edges of $G$ not on the boundary of $G_{1}$.
+
+\textbf{Claim 11.} $b_{*} < \sqrt{12n - 3} - \sqrt{12n_{1} - 3}$\textit{.}
+
+\textit{Proof.} Each edge on the boundary of $G_{1}$ borders either the outer face of $G$ or an inner non-triangular face $\Gamma$ of $G$. Let $i$ denote the length of the cycle bounding $\Gamma$. Not all the edges of $\Gamma$ are on the boundary of $G_{1}$. Thus $\Gamma$ contributes at most $i - 1$ edges to the boundary of $G_{1}$. If $\Gamma$ has $i - 1$ or $i - 2$ of its edges on the boundary of $G_{1}$, then by Lemma 3, $\Gamma$ has to be a lattice polygon, so has to be part of $G_{1}$ by maximality. Thus $\Gamma$ has at most $i - 3$ of its edges on the boundary of $G_{1}$. Therefore, 
+\begin{equation*}
+b_1 \le b - b_* + \sum_{i\ge 4}(i-3)f_i = b - b_* + F.
+\end{equation*}
+
+\pdfpage{9}
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=0.4\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent \textsc{Figure 3.} The polygon $P'$ and its circumscribed hexagon $H$
+\alttext{Vector line drawing. A convex polygon $P'$ (thick black outline, labelled ``$P'$'' at its centre) inscribed in a hexagon $H$ (thin blue-grey lines, visible only at the six corners outside $P'$; the label ``$H$'' in blue-grey stands beside the upper right side). $H$ has a corner at the top ($r_6$) and at the bottom ($r_3$), vertical sides on the left (corners $r_1$ above $r_2$) and right ($r_5$ above $r_4$). Twelve vertices of $P'$ are marked as black dots and labelled: on each side of $H$ a segment $p_i q_i$ of $P'$ lies along the side, and the sides of $P'$ in between cut off the corners of $H$ as short, slightly curved paths. Going counter-clockwise from the top left: $p_7 = p_1$ (top, left of the corner $r_6$), $q_1$ (upper left side), $p_2$ and $q_2$ (left vertical side, top and bottom), $p_3$ (lower left side), $q_3$ and $p_4$ (bottom, either side of the corner $r_3$), $q_4$ (lower right side), $p_5$ and $q_5$ (right vertical side, bottom and top), $p_6$ (upper right side), $q_6$ (top, right of $r_6$). The corner-cutting paths carry the labels $Q_1$ (at $r_6$, between $q_6$ and $p_7 = p_1$), $Q_2$ (at $r_1$), $Q_3$ (at $r_2$), $Q_4$ (at $r_3$), $Q_5$ (at $r_4$) and $Q_6$ (at $r_5$). Decompiler's remark: the text defines $Q_i$ as the path between $q_i$ and $p_{i+1}$ (so at the corner $r_i$, in the triangle $p_{i+1} q_i r_i$), which would put $Q_6$ at $r_6$ and $Q_1$ at $r_1$; the figure's $Q$ labels are shifted by one against that definition. No coordinates are printed. Not a plotted panel: no data file.}
+
+The claim now follows from the inequalities in Claims 3 and 7. \hfill$\square$
+
+\subsection*{2.6. An improved isoperimetric inequality.}
+
+Our next aim is to find a better upper bound for $F$ in a form similar to the upper bound of $b_{*}$ in Claim 11. This bound (Claim 12) will then be combined with Claim 10 to obtain a contradiction. Claim 12 will follow from our isoperimetric inequality in Lemma 2, which we now restate and prove.
+
+\textbf{Lemma 2.} \textit{Let $P$ be a simple polygon with perimeter $b$, area $A$, and with the total length of the sides not parallel to any side of some fixed regular hexagon at most $b_{*}$. Then} 
+\begin{equation*}
+8\sqrt{3}A \le \bigl(b + \bigl(\tfrac{2}{\sqrt{3}} - 1\bigr)b_*\bigr)^2.
+\end{equation*}
+
+\textit{Proof.} Let $h$ be a fixed regular hexagon. For any simple polygonal path (open or closed) $Q$, we denote its length by $b(Q)$ and the total length of its sides not parallel to any side of $h$ by $b_{*}(Q)$. If $Q$ is closed (a polygon), we denote its area by $A(Q)$.
+
+We first modify $P$ into a convex polygon $P'$ with $b(P) = b(P'), b_{*}(P) = b_{*}(P')$, and $A(P) \le A(P')$. We say that a simple polygon $Q$ is a \textit{rearrangement} of $P$ if there is a bijection between the edge set of $Q$ and the edge set of $P$ such that corresponding edges are parallel and have the same length. Note that for any rearrangement $Q$ of $P$ we have $b(P) = b(Q)$ and $b_{*}(P) = b_{*}(Q)$. Among all rearrangements of $P$ fix one, $P'$, of maximum area. We claim that $P'$ is convex. If $P'$ is not convex, then it has two vertices $p$ and $q$ such that the boundary of $P'$ between $p$ and $q$ lies in the interior of the convex hull of $P'$. If we replace this part of the boundary by its rotation by $180^{\circ}$ around the midpoint of $p$ and $q$, then we obtain a new simple polygon that is still a rearrangement of $P$, but with larger area. Let $H$ denote the hexagon with sides parallel to the sides of $h$ circumscribed around $P'$. Number the sides of $H$ in order from 1 to 6. For each $i = 1, \ldots, 6$, let $p_{i}q_{i}$ be the segment of $P'$ on side $i$ of $H$, such that the points lie in the order $p_{1}, q_{1}, p_{2}, q_{2}, \ldots, p_{6}, q_{6}$ around $P'$. Denote the path of $P'$ between $q_{i}$ and $p_{i + 1}$ by $Q_{i}, i = 1, \ldots, 6$, where $p_{7} = p_{1}$.
+
+\pdfpage{10}
+Note that in a triangle $pqr$ with $\angle r = 120^{\circ}$, the cosine rule gives 
+\begin{align*}
+|pq|^2 &= |pr|^2 + |qr|^2 - 2|pr|\cdot|qr|\cos 120^\circ\\
+&= |pr|^2 + |qr|^2 + |pr|\cdot|qr|\\
+&= \tfrac{3}{4}(|pr| + |qr|)^2 + \tfrac{1}{4}(|pr| - |qr|)^2\\
+&\ge \tfrac{3}{4}(|pr| + |qr|)^2,
+\end{align*} hence $|pr| + |qr| \le \frac{2}{\sqrt{3}}|pq|$. We now apply this to each triangle $p_{i + 1}q_{i}r_{i}$ to obtain an upper bound on the perimeter of $H$ in terms of $b$ and $b_{*}$: 
+\begin{align*}
+b &= \sum_{i=1}^{6}|p_iq_i| + \sum_{i=1}^{6} b(Q_i)\\
+&= b(H) - \sum_{i=1}^{6}|q_ir_i| - \sum_{i=1}^{6}|r_ip_{i+1}| + \sum_{i=1}^{6} b(Q_i)\\
+&\ge b(H) - \sum_{i=1}^{6}|q_ir_i| - \sum_{i=1}^{6}|r_ip_{i+1}| + \sum_{i=1}^{6}|q_ip_{i+1}| \quad\text{by the triangle inequality}\\
+&\ge b(H) - \tfrac{2}{\sqrt{3}}\sum_{i=1}^{6}|q_ip_{i+1}| + \sum_{i=1}^{6}|q_ip_{i+1}| \quad\text{since } \angle r_i = 120^\circ\\
+&= b(H) - (\tfrac{2}{\sqrt{3}} - 1)\sum_{i=1}^{6}|q_ip_{i+1}|\\
+&\ge b(H) - (\tfrac{2}{\sqrt{3}} - 1)\sum_{i=1}^{6} b(Q_i) \quad\text{again by the triangle inequality}\\
+&= b(H) - (\tfrac{2}{\sqrt{3}} - 1)b_*.
+\end{align*} By the isoperimetric inequality for hexagons (or L’Huilier’s inequality for hexagons with sides parallel to those of a fixed hexagon) the hexagon with a fixed perimeter maximising the area is regular. It follows that 
+\begin{align*}
+A &\le A(P') \le A(H)\\
+&\le \tfrac{\sqrt{3}}{24} b(H)^2 \quad\text{by the isoperimetric inequality for hexagons}\\
+&\le \tfrac{\sqrt{3}}{24}\bigl(b + (\tfrac{2}{\sqrt{3}} - 1)b_*\bigr)^2,
+\end{align*} and Lemma 2 follows. \hfill$\square$
+
+We now obtain an improved upper bound for $F$ from the above isoperimetric estimate, again bounding the area from below by using the lower bound on $f_{3}$ from Claim 4.
+
+\textbf{Claim 12.} $F < \frac{1}{6}(\sqrt{12n - 3} - \sqrt{12n_{1} - 3}) + \frac{1}{2}$\textit{.}
+
+\textit{Proof.} As before, the area $A$ of the boundary polygon of $G$ is at least $\frac{\sqrt{3}}{4} f_{3}$. If we substitute this, as well as the upper bounds for $b$ and $b_{*}$ from Claims 3 and 11, respectively, and the lower bound for $f_{3}$ from Claim 4, into Lemma 2, we obtain 
+\begin{equation*}
+12n + 6 - 6\sqrt{12n-3} - 6F \le (b + cD)^2 < (\sqrt{12n-3} - 3 + cD - F)^2,
+\end{equation*} where $D = \sqrt{12n - 3} - \sqrt{12n_{1} - 3}$ and $c = 2/\sqrt{3} - 1$.
+
+Suppose that $cD - F \le - 1/2$. Then 
+\begin{equation*}
+12n + 6 - 6\sqrt{12n-3} - 6F < (\sqrt{12n-3} - 7/2)^2.
+\end{equation*}
+
+\pdfpage{11}
+Multiplying out and simplifying, we obtain $F > \frac{1}{6}\sqrt{12n - 3} - \frac{13}{24}$, which contradicts the previous upper bound on $F$ from Claim 6.
+
+Therefore, $cD - F > - 1/2$, which gives the claim. \hfill$\square$
+
+\subsection*{2.7. The conclusion.}
+
+We now combine the new estimate for $F$ from Claim 12 with Claim 10 to obtain a contradiction. Claim 12 together with $F \ge 2$ (Claim 5) imply that 
+\begin{equation*}
+D := \sqrt{12n-3} - \sqrt{12n_1-3} > 9. \tag{10}
+\end{equation*} Again by Claim 12, 
+\begin{equation*}
+6F < D + 3 < D + \frac{1}{3}D = \frac{4}{3}D \quad\text{by (10)}.
+\end{equation*} Then Claim 10 gives 
+\begin{equation*}
+\sqrt{12(n-n_1)} < \frac{4}{3}D + D = \frac{7}{3}D = \frac{7}{3}\cdot\frac{12(n-n_1)}{\sqrt{12n-3} + \sqrt{12n_1-3}}.
+\end{equation*} It follows that 
+\begin{equation*}
+\frac{3}{7}\bigl(\sqrt{12n-3} + \sqrt{12n_1-3}\bigr) < \sqrt{12(n-n_1)}. \tag{11}
+\end{equation*} By Claim 9, and using that $n_{1}$ and $n$ are integers, we have $n_{1} > \frac{3}{4}n + \frac{1}{16}$, which implies $\sqrt{12n_{1} - 3} > \frac{\sqrt{3}}{2}\sqrt{12n - 3}$ and $\sqrt{12(n - n_{1})} < \frac{1}{2}\sqrt{12n - 3}$. Together with (11) we obtain the contradiction $\frac{3}{7}(1 + \frac{\sqrt{3}}{2}) < \frac{1}{2}$.
+
+This finishes the induction step and thereby the proof of Theorem 2. \hfill$\square$
+
+\section*{\textsc{References}}
+
+\begin{hangpars}
+
+[1] Abel, Z., Demaine E. D., Demaine M. L., Eisenstat S., Lynch J., Schardl T. B.: \textit{Who needs crossings? Hardness of plane graph rigidity}. 32nd International Symposium on Computational Geometry, Art. No. 3, 15 pp., LIPIcs. Leibniz Int. Proc. Inform., \textbf{51}, Schloss Dagstuhl. Leibniz-Zent. Inform., Wadern. (2016)
+
+[2] Blåsjö, V.: \textit{The Isoperimetric Problem}. Amer. Math. Monthly \textbf{112}, 526–566. (2005)
+
+[3] Blokhuis, A.: \textit{Regular finite planar maps with equal edges}. arXiv preprint arXiv:1401.1799. (1982)
+
+[4] Brass, P., Moser W. O. J., and Pach. J.: \textit{Research Problems in Discrete Geometry}. Springer-Verlag, New York. (2005)
+
+[5] Diestel, R.: \textit{Graph theory}. 3rd ed. Springer, Berlin Heidelberg. (2006)
+
+[6] Fejes Tóth, L.: \textit{Lagerungen in der Ebene auf der Kugel und im Raum}. 2nd ed. Springer-Verlag, Berlin-New York. (1972)
+
+[7] Fejes Tóth, L., Fejes Tóth G, and Kuperberg W.: \textit{Lagerungen: Arrangements in the Plane, on the Sphere, and in Space}. Springer-Verlag, Cham. (2023) (Translation of [6] with additional material.)
+
+[8] Gerbracht, E. H.-A.: \textit{Minimal polynomials for the coordinates of the Harborth graph}. arXiv:math/0609360. (2006)
+
+[9] Gerbracht, E. H.-A.: \textit{Symbol-crunching the Harborth graph}. Adv. in Appl. Math., \textbf{47} 276–281. (2011)
+
+[10] Harborth, H.: \textit{Solution to Problem $664$A}. Elemente der Mathematik \textbf{29}, 14–15. (1974)
+
+[11] Harborth, H.: \textit{Point sets with equal numbers of unit-distant neighbors} (Abstract), Discrete Geometry, 12–18 July 1981, Oberwolfach, Tagungsbericht 31/1981, Mathematisches Forschungsinstitut Oberwolfach. pp. 11–12. (1981)
+
+[12] Harborth, H.: \textit{Match sticks in the plane}. In: The Lighter Side of Mathematics. Proceedings of the Eugène Strens Memorial Conference on Recreational Mathematics and its History held at the University of Calgary, Calgary, Alberta, August 1986. edited by R. K. Guy and R. E. Woodrow, 281–288. Mathematical Association of America, Washington, D.C. (1994)
+
+[13] Kurz, S.: \textit{Fast recognition of planar non unit distance graphs}. Geombinatorics, \textbf{21}, 25–33. (2011)
+
+[14] Kurz, S.: \textit{A lower bound for $4$-regular planar unit distance graphs}. Geombinatorics, \textbf{21}, 63–72. (2011)
+
+[15] Kurz, S. and Mazzuoccolo G.: 3\textit{-regular matchstick graphs with given girth}, Geombinatorics, \textbf{19}, 156–173. (2010)
+
+\pdfpage{12}
+[16] Kurz, S. and Pinchasi R.: \textit{Regular matchstick graphs}. Amer. Math. Monthly \textbf{118}, 264–267. (2011)
+
+[17] Lavollée, J. and Swanepoel K. J.: \textit{Bounding the Number of Edges of Matchstick Graphs}. SIAM Journal on Discrete Mathematics, \textbf{36}, 777–785. (2022)
+
+[18] Lavollée, J. and Swanepoel K. J.: \textit{The number of small-degree vertices in matchstick graphs}. Australas. J. Combin. \textbf{85}, 92–99. (2023)
+
+[19] Pach, J. and Agarwal P. J.: \textit{Combinatorial Geometry}. Wiley, New York. (1995)
+
+[20] Salvia, R.: \textit{A catalog of matchstick graphs}. arXiv:1303.5965. (2013)
+
+[21] Winkler M.: \textit{Ein neuer $4$-regulärer Streichholzgraph}. Mitteilungen der Deutschen Mathematiker-Vereinigung, \textbf{24}, 74–75. (2016)
+
+[22] Winkler M.: \textit{A catalogue of $4$-regular matchstick graphs with $63$–$70$ vertices and $(2, 4)$-regular matchstick graphs with less than $42$ vertices which contain only two vertices of degree} 2. arXiv preprint arXiv:1705.04715. (2017)
+
+[23] Winkler, M., Dinkelacker P., and Vogel. S.: \textit{Minimal completely asymmetric} (4; $n$)\textit{-regular matchstick graphs}. arXiv preprint arXiv:1609.06972. (2016)
+
+[24] Winkler, M., Dinkelacker P., and Vogel. S.: \textit{New minimal $(4, n)$-regular matchstick graphs}. Geombinatorics, \textbf{27}, 26–44. (2017)
+
+[25] Winkler, M., P. Dinkelacker, and S. Vogel: \textit{On the existence of $4$-regular matchstick graphs}. arXiv preprint arXiv:1705.00293. (2017)
+
+[26] Winkler, M., P. Dinkelacker, and S. Vogel: \textit{A $3$-regular matchstick graph of girth $5$ consisting of $54$ vertices}. Geombinatorics, \textbf{29}, 116–121. (2020)
+
+\end{hangpars}
+
+\end{document}

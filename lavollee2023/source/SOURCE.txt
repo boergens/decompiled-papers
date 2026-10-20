@@ -1,0 +1,10 @@
+Lavollée J, Swanepoel KJ. A tight bound for the number of edges of matchstick graphs. arXiv:2209.09800v2 [math.CO],
+15 June 2023 (v1 20 September 2022). Published in Discrete & Computational Geometry 72 (2024), 1530-1544,
+doi:10.1007/s00454-023-00530-z (online 18 August 2023; journal details from Crossref, journal version not read).
+
+Fetched 2026-10-11 ~20:45 UTC from arXiv (the v2 PDF) by the oct-11-hexagon-clink session; the exact URL was not
+recorded. 12 pages, 197,964 bytes, SHA-256 4223026dfa39ed00656c4f2b380a86a1713736ef3fa3e220b6903ca220082c32,
+"LaTeX with hyperref", dvips + Ghostscript 9.22, created 2023-06-16. Page 1 carries the stamp "arXiv:2209.09800v2
+[math.CO] 15 Jun 2023". Licence: the arXiv abstract page for v2 links CC BY 4.0
+(http://creativecommons.org/licenses/by/4.0/), checked 2026-10-18.
+Text layer: lavollee2023.txt (pdftotext -layout).

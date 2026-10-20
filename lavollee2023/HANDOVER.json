@@ -1,0 +1,18 @@
+{
+  "key": "lavollee2023",
+  "handed_over": "2026-10-18",
+  "from": "oct-11-hexagon-clink session (Hexagon Clink site, thickness of K_n in matchstick/penny/lattice layers), at Kevin's request (\"hand all your primary sources over to it\")",
+  "paper": "Lavollee & Swanepoel (2023), A tight bound for the number of edges of matchstick graphs. arXiv:2209.09800v2; Discrete Comput. Geom. 72 (2024) 1530-1544; CC BY 4.0 (arXiv)",
+  "doi": "10.1007/s00454-023-00530-z",
+  "arxiv": "2209.09800v2",
+  "licence_as_printed": "arXiv listing: CC BY 4.0 (no licence line in the PDF itself)",
+  "state": "source only: source/lavollee2023.pdf (arXiv v2), SOURCE.txt, lavollee2023.txt (pdftotext -layout). No decompile started. Born-digital LaTeX, 12 pages, a few line drawings, no plotted data.",
+  "wanted": "decompile by the library's own rules. The site cites Theorem 2 (matchstick graphs on n vertices have at most 3n - sqrt(12n-3) edges), Theorem 1 (Harborth's penny bound), the remark after Theorem 1 on lattice examples attaining floor(3n - sqrt(12n-3)), and refs 12, 17, 19 (Harborth 1994, Lavollee-Swanepoel 2022, Pach-Agarwal 1995) as the source of those citations. Hexagon Clink's site/references.html entry 'ls-2023' will then point to the library copy.",
+  "callback": {
+    "when": "the paper leaves incoming/ for any reason: promoted to the library, blocked, or parked for a Kevin decision",
+    "how": [
+      "1. SendMessage to the session named 'oct-11-hexagon-clink-15'; if ListAgents shows no such name, to any live session whose name starts with 'oct-11-hexagon-clink'. First line: 'callback lavollee2023: <promoted|blocked|needs-kevin> <commit sha>'.",
+      "2. Always also append that same line, with a UTC timestamp, to /home/admin/ephemeral/oct_11_hexagon_clink/inbox/papers.md (durable fallback if the oct-11 session is not running)."
+    ]
+  }
+}

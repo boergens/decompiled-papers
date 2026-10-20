@@ -1,0 +1,682 @@
+                                                  A TIGHT BOUND FOR THE NUMBER OF EDGES OF
+                                                             MATCHSTICK GRAPHS
+
+                                                              JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+arXiv:2209.09800v2 [math.CO] 15 Jun 2023
+
+
+
+
+                                                    Abstract. A matchstick graph is a plane graph with edges drawn as unit-
+                                                    distance line segments. Harborth introduced these graphs in 1981 and conjec-
+                                                    tured that
+                                                             √ the maximum number of edges for a matchstick graph on n vertices
+                                                    is ⌊3n − 12n − 3⌋. In this paper we prove this conjecture for all n ≥ 1. The
+                                                    main geometric ingredient of the proof is an isoperimetric inequality related
+                                                    to L’Huilier’s inequality.
+
+
+                                                                               1. Introduction
+                                               A matchstick graph is a graph drawn in the Euclidean plane with each edge
+                                           a straight unit-length segment, such that two edges only intersect in a common
+                                           endpoint. These graphs were introduced by Harborth [11, 12] in 1981. Most of the
+                                           literature deals with matchstick graphs which are regular [3, 8, 9, 14–16, 21, 26] or
+                                           almost regular [18, 22–25]. There are also a few papers dealing with more general
+                                           aspects, such as enumeration [20] and algorithmic recognition [1, 13]. Harborth
+                                           considered the extremal problem of finding the minimum number n of vertices in
+                                           a matchstick graph on e edges, or equivalently, the maximum number   √ of edges for
+                                           a given number of vertices. He conjectured in [12] that e ≤ 3n − 12n − 3 (see
+                                           also [4, p. 225]) and proved this in the special case of penny graphs using a neat
+                                           induction on the number of vertices [10] (see also [19, Theorem 13.12]). A penny
+                                           graph is a matchstick graph with the additional property that the circles of radius
+                                           1/2 around the vertices are non-overlapping.
+                                           Theorem 1 (Harborth [10]). Let G be a matchstick graph on n vertices such that
+                                                             √ any two vertices is at least 1. Then the number of edges of G
+                                           the distance between
+                                           satisfies e ≤ 3n − 12n − 3.
+                                              For each n ≥ 1 there √ are examples on the triangular lattice with n vertices
+                                           and the optimal ⌊3n − 12n − 3⌋ edges [10, 19]. Proving Harborth’s conjecture in
+                                           general turns out to be trickier. Using the isoperimetric inequality
+                                                                                                        q √ (Lemma 1) we
+                                                                           √
+                                           showed in [17] that e ≤ 3n − c 12n − 3, where c = 12 (1 + π 3/6) = 0.976 . . . ,
+                                           which implies Harborth’s conjecture for some small values of n. In this paper we
+                                           settle the conjecture completely.
+                                           Theorem√ 2. Let G be a matchstick graph with n vertices and e edges. Then
+                                           e ≤ 3n − 12n − 3.
+                                              As in our previous paper [17], as a first step we use the Euler formula and the
+                                           isoperimetric inequality.
+                                           Lemma 1 (Isoperimetric inequality). For any simple polygon of perimeter b and
+                                           area A we have 4πA < b2 .
+
+                                              2020 Mathematics Subject Classification. Primary 52C10. Secondary 05C10.
+                                              Key words and phrases. matchstick graph, penny graph, plane unit-distance graph.
+                                                                                         1
+2                   JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+   However, we will then exploit a different isoperimetric inequality that takes into
+account that many edges on the outer boundary of G lie on the same triangular
+lattice. A variant of the isoperimetric inequality in the plane, known as L’Huilier’s
+inequality, states that among all polygons of a given perimeter for which the sides
+are constrained to be parallel to a given set of directions, the one of maximum area is
+circumscribed to a circle [6, pp. 9–10], [7, pp. 12–13]. In particular, among all closed
+polygons of a given perimeter with each side parallel to one of the sides of a fixed
+regular hexagon, the regular hexagon is optimal. We prove the following variant of
+this special case where we allow a certain bounded amount of the perimeter to be
+unconstrained in direction.
+
+Lemma 2. Let P be a simple polygon with perimeter b, area A, and with the total
+length of the sides not parallel to any side of some fixed regular hexagon at most b∗ .
+Then
+                               √                     2
+                             8 3A ≤ b + √23 − 1 b∗ .
+
+   Our proof of Theorem 2 has an analytical flavour, with many inequalities ap-
+pearing in it that are rather weak, with constants that could easily be improved.
+Surprisingly, this turns out to be unnecessary. The inequalities also often need n
+to be large, which creates the potential problem that this approach will only work
+for sufficiently large n. However, the original isoperimetric inequality allows us to
+dismiss all values of n < 147 early on in the proof. Then the rest of the proof goes
+through, although there are many inequalities that have to be checked. This can be
+done by hand or by apps such as Wolfram Alpha or Desmos. We have to balance
+the asymptotics with constant terms in order to make the inequalities valid for
+small n. It is rather strange that such an approach manages to make the induction
+succeed for all values of n.
+
+1.1. Proof outline. The proof of Theorem 2 is in Section 2. Here we give a high-
+level summary. The proof is by induction with the induction step split up into
+12 claims. As the cases 1 ≤ n ≤ 4 of Theorem 2 are easily checked, we assume that
+n > 4 and that the theorem holds for all smaller values of n, but not for n, and
+aim for a contradiction.
+   Starting off, we show that the graph has minimum degree 3 (Claim 1) and is
+2-connected (Claim 2). We then apply the Euler formula and count incident edge-
+face pairs to give an upper bound for the length of the boundary of G in terms
+of n and a certain weighted count F of the number of non-triangular inner faces
+(Claim 3), as well as a lower bound for the number of triangles (Claim 4). If this
+weighted count F equals 0 or 1, then either all inner faces are triangles, a case where
+Theorem 1 applies, or there is a quadrilateral as well, a case that can be easily dealt
+with by splitting up the graph at the quadrilateral and applying induction. Thus
+we can assume that F ≥ 2 (Claim 5).
+   We apply the isoperimetric inequality (Lemma 1) to our upper bound of the
+boundary length of G and the lower bound on its area derived from the lower
+bound
+  √     on the number of triangles. This gives an upper bound for F of the form
+c 12n − 3 (we use c = 1/11, but c can be made as small as 1/20) as well as showing
+that we may assume that n ≥ 147 otherwise F < 2 (Claim 6).
+   We next consider the so-called lattice components of the graph, which we define
+to be maximal 2-connected subgraphs that each lie on some triangular lattice. We
+find lower bounds for their boundary lengths (Claim 7) and show that they cover
+almost all of G without too much overlap (Claim 8). This enables us to show that
+the largest lattice component, G1 , has to be quite large (we show that n(G1 ) > 3n/4
+in Claim 9, but it is possible to go up to 0.97n if n is sufficiently large).
+      A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS                     3
+
+
+   We split G up into G1 and a slight enlargement of G − G1 , and apply induction
+to obtain a lower bound for F in terms of n and n1 (Claim 10) that will be crucial
+for the final part of the proof. We also bound the number of edges on the boundary
+of G that are not on the boundary of G1 (Claim 11). Thus, except for a bounded
+quantity, the boundary edges of G all lie on the same triangular lattice. Our new
+isoperimetric inequality (Lemma 2) then gives an improved upper bound on the
+area of G, which can be bounded from below using the bound on the number of
+triangles from Claim 4. The upshot of this is that we find a very good upper bound
+on F (Claim 12), which, together with the lower bound from Claim 10 gives us our
+final contradiction.
+1.2. Definitions. We define  √ a triangular lattice to be any subset of the plane iso-
+metric to {m(1, 0) + n(1/2, 3/2) : m, n ∈ Z}, and we say that a finite set of points
+lies on a triangular lattice if it is a subset of some triangular lattice. We will use
+the following simple observation.
+Lemma 3. If a and b are distinct points on a triangular lattice and c is a point at
+distance 1 to both a and b, then c lies on the same triangular lattice.
+   We use standard graph theory terminology as can be found in [5, Sections 1.1–
+1.4, 4.1, 4.2]. We call the cycle bounding the outer face of a plane graph G the
+boundary of G, its length the boundary length of G, and its edges the boundary
+edges of G.                                       √
+   We will occasionally use the function φ(x) = 12x − 3 − 3 which is non-negative
+for all x ≥ 1. Since φ is strictly concave, φ(x + a) − φ(x) is strictly decreasing in x
+for all fixed a > 0. This implies the following inequality that we will use repeatedly.
+Lemma 4. φ(a) + φ(b) < φ(a − c) + φ(b + c) whenever a > b + c, b ≥ 1 and c > 0.
+
+                                      2. Proof
+2.1. Setting up the induction. Let G be a matchstick graph on n = n(G) ver-
+tices in the plane. Denote the number of edges by e = e(G). We prove Theorem 2
+by induction. The cases 1 ≤ n ≤ 3 are trivial. The case n = 4 follows since the
+complete graph on 4 vertices is not a matchstick graph. So we fix n > 4 and assume
+the theorem is true for all matchstick graphs of less than n vertices. Among all
+matchstick graphs on n vertices, fix one G with the maximum number e of edges.
+We assume that                           √
+                                e > 3n − 12n − 3,                               (1)
+and will aim for a contradiction. Claims 1–12 below will all have as unstated
+assumptions the induction hypothesis, n > 4, the inequality (1), and that G has
+the maximum number of edges among all matchstick graphs with n vertices.
+2.2. Basic properties.
+Claim 1. Each vertex of G has at least 3 neighbours.
+Proof. Suppose that there is a vertex v with at most 2 neighbours, and let G′ =
+G − v. Then by induction and Lemma 4,
+                                        p
+            e ≤ e(G′ ) + 2 ≤ 3(n − 1) − 12(n − 1) − 3 + 2
+                = 3n − φ(n − 1) − 4
+                ≤ 3n − φ(n) + φ(5) − φ(4) − 4
+                       √                               √
+                = 3n − 12n − 3 + φ(5) − φ(4) − 1 < 3n − 12n − 3,
+which contradicts (1).                                                              
+4                     JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+Claim 2. G is 2-connected.
+Proof. G has to be connected, otherwise we can move a connected component until
+one of its vertices has distance 1 to some other vertex, contradicting maximality.
+   If G is not 2-connected, then G has a cut vertex. Thus there exist two subgraphs
+G1 and G2 that cover G and have only a single vertex in common. Then with
+n1 = n(G1 ), n2 = n(G2 ) ≥ 2, e1 = e(G1 ), and e2 = e(G2 ), we have n = n1 + n2 − 1,
+and
+                 e = e1 + e2
+                           √               √
+                   ≤ 3n1 − 12n1 − 3 + 3n2 − 12n2 − 3
+                   = 3n − φ(n1 ) − φ(n2 ) − 3
+                                                             √
+                   < 3n − φ(n1 + n2 − 1) − φ(1) − 3 = 3n −    12n − 3
+by induction and Lemma 4, which contradicts (1).                                    
+2.3. The Euler formula and double counting. Since G is 2-connected by
+Claim 2, all of its faces are polygons. Let b denote the length of the outer face, and
+for each i ≥ 3, let fi denote the number of inner faces bounded by a cycle of length
+i. Since G is connected, Euler’s formula gives
+                                          X
+                                   n−e+       fi = 1,                               (2)
+                                           i≥3
+
+and since G is 2-connected, by counting incident edge-face pairs in two ways, we
+obtain                                   X
+                                2e = b +     ifi .                            (3)
+                                                i≥3
+          P
+Let F =       i≥4 (i − 3)fi . Then (2) and (3) imply
+                                  e = 3n − 3 − b − F.                              (4)
+From (1) we then obtain
+              √
+Claim 3. b < 12n − 3 − 3 − F = φ(n) − F .
+2.4. Using the isoperimetric inequality. We need the following lower bound
+on the number of triangular faces, so that we can estimate the area of the region
+bounded by G, then use the isoperimetric inequality to find a lower bound for b
+and from that our first upper bound on F . This upper bound will be needed later
+in our proof of an improved upper bound for F (Claim 12).
+                         √
+Claim 4. f3 > 2n + 1 − 12n − 3 − F = φ(n)2 /6 − F .
+Proof. Using the Euler formula (2) and our assumption (1), we obtain
+                                 X            √
+                f3 = e − n + 1 −    fi > 2n − 12n − 3 + 1 − F.                      
+                                     i≥4
+
+Claim 5. F ≥ 2.
+Proof. If F = 0, then all inner faces are triangular, and since G is 2-connected,
+it lies on a single triangular
+                            √ lattice. Then G is a penny graph, and Harborth’s
+Theorem 1 gives e ≤ 3n − 12n − 3, a contradiction.
+   If F = 1, then there is a single quadrilateral inner face with all other inner
+faces triangular. Each vertex v of this quadrilateral must lie on the boundary of G,
+otherwise, all other faces incident with v would be equilateral triangles, implying
+that the angle of the quadrilateral at v is a multiple of 60◦ . Then the quadrilateral
+would have angles 60◦ and 120◦, and we could add an edge between the two opposite
+vertices at the 120◦ angles, violating the maximality of G.
+      A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS                    5
+
+
+                                          G2
+                                 G1
+                                      p
+
+
+
+                                      q
+
+
+
+        Figure 1. Subgraphs G1 and G2 covering G and sharing edge pq
+        of a quadrilateral
+
+   We next decompose G. Since n > 5, at least one of the edges of the quadrilateral
+is not a boundary edge of G. Let p and q be the endpoints of such an edge. Then
+G − {p, q} is not connected and has exactly two connected components C1 and
+C2 . Let Gi be the subgraph of G induced by the vertices of Ci and p and q for
+i = 1, 2. Then G1 and G2 have only an edge of the quadrilateral in common, and
+cover G. Denoting ni = n(Gi ) and ei = e(Gi ), i = 1, 2, we have n1 + n2 = n + 2
+and e1 + e2 = e + 1. Since pq is not on the boundary of G, it follows that ni ≥ 3
+(i = 1, 2), and the length b of the boundary of G is at least 5. Then Claim 3 implies
+that n > 7, and
+           e = e1 + e2 − 1
+             ≤ 3n − φ(n1 ) − φ(n2 ) − 1 by induction
+             ≤ 3n − φ(n1 + n2 − 3) − φ(3) − 1 by Lemma 4
+             < 3n − φ(n) + φ(7) − φ(6) − φ(3) − 1     again by Lemma 4
+                    √
+             < 3n − 12n − 3,
+contradicting assumption 1.                                                        
+                          1
+                            √
+Claim 6. n ≥ 147 and F < 11  12n − 3 − 1.
+Proof. Denote the area of the boundary polygon of G by √         A. The area of an
+                                            √
+equilateral triangle of side length 1 is 3/4, hence A > 43 f3 . By Claim 4,
+f3 > φ(n)2 /6 − F , and by the isoperimetric inequality (Lemma 1) and Claim 3,
+4πA < b2 < (φ(n) − F )2 . In√ the remainder of this proof we write φ = φ(n). We
+thus obtain the inequality π 6 3 (φ2 − 6F ) < (φ − F )2 , or when expanded,
+                                    √             √
+                     F 2 − (2φ − π 3)F + (1 − π 3/6)φ2 > 0.                     (5)
+                                                √
+By Claim 3 and b ≥ 3, we obtain F < φ − π 3/2, so the left-hand side of (5) is
+decreasing in F . Thus we can substitute F = 2 into (5) to obtain
+                                     √           √
+                      4 − 2(2φ − π 3) + (1 − π 3/6)φ2 > 0,
+hence φ < 4.114 . . . or φ > 38.849 . . . , or in terms of n, n < 4.468 . . . or n >
+146.199 . . . . Since n ≥ 5 by assumption, we conclude that n ≥ 147, as required.
+For the second part of the claim, we solve for F in (5) to obtain
+                                        s
+                              √      1 2π 2           √
+                     F < φ − π 3/2 −        √ φ − 4π 3φ + 3π 2 .
+                                     2        3
+In order to show that F < (φ − 8)/11, it is sufficient to show that
+                               s
+                      √      1 2π 2           √              φ−8
+                φ − π 3/2 −      √ φ − 4π 3φ + 3π 2 ≤             .
+                             2     3                          11
+6                   JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+This inequality is equivalent to φ ≤ 2.084 . . . or φ ≥ 20.506 . . . . However, we have
+already shown that φ > 38.849 . . . . Thus we conclude that F < (φ − 8)/11, which
+proves the second part of the claim.                                                 
+
+2.5. Lattice components. We define a lattice component of G to be any maximal
+2-connected subgraph (on at least 3 vertices) that lies on some triangular lattice.
+Denote the lattice components of G by G1 , . . . , Gk . Denote the number of vertices
+by ni = n(Gi ), the number of edges by ei = e(Gi ), and the boundary length of Gi
+by bi . Assume that n1 ≥ n2 ≥ · · · ≥ nk . Note that no two lattice components have
+an edge in common, otherwise their union would be a larger 2-connected graph on
+the same lattice.
+                                        √
+Claim 7. For each i = 1, . . . , k, bi ≥ 12ni − 3 − 3.
+Proof. Gi is on a triangular lattice and is 2-connected, so its boundary is a cycle.
+Construct a new graph G′ from Gi , by filling up all missing lattice   pvertices and
+edges inside the boundary of Gi . By Theorem 1, e(G′ ) ≤ 3n(G′ ) − 12n(G′ ) − 3,
+since G′ is also on the triangular lattice. (We cannot use induction here, because G′
+might have more than n vertices.)pBy (4) applied to G′ (which is still 2-connected
+                                                         √
+and with F = 0), we obtain bi ≥ 12n(G′ ) − 3 − 3 ≥ 12ni − 3 − 3, since G′ has
+the same outer boundary as Gi .                                                    
+
+   We will later need that the largest lattice component is not too small. We first
+show that the lattice components cover almost all of G and do not overlap too
+much.
+                     Pk
+Claim 8. n − 2F ≤ i=1 ni ≤ n + 4F .
+Proof. For the lower bound, consider a vertex v of G that does not belong to any
+lattice component. Let s be the number of inner faces of G incident to v. Since
+v has at least 3 neighbours (Claim 1), s ≥ 2. Assign a charge of 1/s to each
+inner face
+        P incident to v. Since these faces are all non-triangular, the total charge
+is ≤ 21 i≥4 ifi ≤ 2F . The total charge on all such vertices counts the number of
+vertices not covered by any lattice component. Thus, at least n − 2F vertices of G
+                                                        Pk
+are covered by the lattice components, which gives i=1 ni ≥ n − 2F .
+    For the upper bound, consider a vertex v that belongs to t ≥ 2 of the Gi . Now let
+s be the number of non-triangular inner faces of G incident to v. Since two adjacent
+faces incident to v cannot belong to distinct Gi , there is at least one non-triangular
+face between any two faces at v belonging to distinct Gi , so v is incident to at least
+t non-triangular faces, of which one could be the outer face. Hence s ≥ t−1. Assign
+a charge of (t − 1)/s to each non-triangular inner face incident toP    v. This gives a
+total charge of t − 1 for each v, which is exactly its contribution
+                                                                P   to   i ni − n. Since
+(t − 1)/s ≤ 1, we obtain that the total charge is at most i≥4 ifi ≤ 4F . Thus,
+P
+   i ni ≤ n + 4F .                                                                    
+
+   From now on we concentrate on the largest lattice component G1 . We first show
+that it covers a considerable proportion of G.
+Claim 9. n1 > 3n/4.
+Proof. Suppose that all ni ≤ 3n/4. We will find a contradiction by bounding
+Pk
+  i=1 bi from above and below. Since no two Gi have a common boundary edge,
+this sum counts the number of edges on the boundaries of all lattice components.
+   For the upper bound, note that if an edge is on the boundary of some lattice com-
+ponent then it borders a non-triangular face on the outside of the lattice component.
+       A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS                          7
+
+
+This gives
+          k
+          X                X             √                            14 √
+                bi ≤ b +         ifi <       12n − 3 − 3 − F + 4F <        12n − 3 − 6   (6)
+          i=1
+                                                                      11
+                           i≥4
+
+from Claims 3 and 6. For the lower bound we just use Claim 7:
+                           k            k                   k
+                           X            X  √                X
+                                 bi ≥     ( 12ni − 3 − 3) =   φ(ni ).                    (7)
+                           i=1          i=1                    i=1
+
+We lower bound the right-hand side by relaxing it to a continuous optimisation
+problem. We have k ≤ N/3, where N = ki=1 ni . For later reference, note that
+                                                   P
+3n/4 + 3 < N < 6n/4 − 3 since n ≥ 13, by Claims 8 and 6. In particular, k ≥ 2.
+For each ℓ = 2, . . . , ⌊N/3⌋, define Φℓ (x1 , . . . , xℓ ) = ℓi=1 φ(xi ) on the domain
+                                                             P
+               (                                                        ℓ
+                                                                                  )
+                                                                      X
+                                     ℓ 3
+         Dℓ = (x1 , . . . , xℓ ) ∈ R : 4 n ≥ x1 ≥ · · · ≥ xℓ ≥ 3,          xi = N .
+                                                                        i=1
+
+For each ℓ, the function Φℓ has a minimum value yℓ on Dℓ . Among all of these ℓ, fix
+one, say m, that minimises yℓ . Fix (x1 , . . . , xm ) ∈ Dm such that Φm (x1 , . . . , xm ) =
+ym . By strict concavity of φ (Lemma 4) we cannot have two xi in the open interval
+(3, 43 n). If m ≥ 3, we cannot have some xi = 3 and another xj ≤ 3n/4 − 3, since
+we can then replace both by a single variable equal to xj + 3, thereby finding
+                       ym−1 ≤ ym + φ(3 + xj ) − φ(xj ) − φ(3)
+                              ≤ ym + φ(6) − φ(3) − φ(3) by Lemma 4
+                              < ym .
+It follows that we cannot have any xi = 3, since this would imply that all other
+xj ∈ (3n/4 − 3, 3n/4], but 3 + 3n/4 < N and 3 + 2(3n/4 − 3) > N as noted
+before. We cannot have two xi equal to 34 n, since 6n/4 > N . Thus necessarily
+m = 2, x1 = 34 n, x2 = N − 34 n. It follows that
+       k
+       X
+              φ(ni ) = Φk (n1 , . . . , nk ) ≥ Φ2 (x1 , x2 )
+        i=1
+                     ≥ Φ2 (x1 + 1/16, x2 − 1/16) by Lemma 4
+                       p                       p
+                     = (3/4)(12n − 3) − 3 + 12(N − 3n/4) − 15/4 − 3
+                       √
+                         3√            p
+                     ≥       12n − 3 + 12(n/4 − 2F ) − 15/4 − 6 by Claim 8.              (8)
+                        2
+   Putting (6), (7) and (8) together, we obtain
+1              14 √3 2                                      1
+  (12n − 3) >      −       (12n − 3) > 12(n/4 − 2F ) − 15/4 = (12n − 3) − 3 − 24F.
+6               11     2                                      4
+Again using Claim 6 it follows that
+                     1                        24 √
+                       (12n − 3) − 3 < 24F <       12n − 3 − 24,
+                    12                        11
+which has no solutions in n, a contradiction.                                   
+
+    The next inequality comes from applying the induction hypothesis to G1 and a
+slight enlargement of the remainder G − G1 .
+             p                    √          √
+Claim 10. 12(n − n1 ) < 6F + 12n − 3 − 12n1 − 3.
+8                  JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+                              G1               G′
+
+
+
+
+                                          K
+
+
+
+
+        Figure 2. Decomposition of G into G1 and G′ with common ver-
+        tex set K
+
+Proof. Let K be the set of vertices of G1 that are joined to some vertex in G − G1 ,
+and let G′ be the subgraph of G induced by V (G − G1 ) ∪ K. Since√G1 is on the
+lattice, we already know by Harborth’s Theorem 1 that e1 ≤ 3n1 − 12n1 − 3. If
+K = ∅, then G1 = G since G and G1 are connected, and then the assumption (1)
+is contradicted. Thus K 6= ∅. Let n′ = n(G′ ) = n − n1 + |K| and e′ = e(G′ ). Then
+G′ and G1 cover all the edges of G, hence e ≤ e1 + e′ . To bound e′ from above, we
+will apply induction, but then we need to ensure that K 6= V (G1 ). We do this by
+bounding |K| from above.
+   Each vertex v in K belongs to some inner face of G not lying on the lattice of
+G1 , otherwise all inner faces around v lie on the same lattice, so must be part of
+G1 by maximality. Consider any inner face Γ not lying on the lattice of G1 , so
+with at least one vertex not in K. Denote the length of the cycle bounding Γ by
+i. Suppose that all but one of the vertices on this cycle lie in K and consider the
+remaining vertex v with neighbours u and w on Γ. Since u and w are on the lattice
+of G1 , v also lies on the same lattice by Lemma 3, but then Γ lies on the lattice of
+G1 , a contradiction. Hence at most i − 2 vertices of K belong to Γ. Since Γ is a
+non-triangular face of G, we find the upper bound
+                                      X
+                               |K| ≤     (i − 2)fi ≤ 2F.
+                                    i≥4
+
+By Claims 6 and 9 it follows that 2F < n1 , hence K cannot be all of G1 so G′ is a
+proper subset of G, and we can apply induction to G′ to obtain
+                                    √                 √
+                e ≤ e1 + e′ ≤ 3n1 − 12n1 − 3 + 3n′ − 12n′ − 3.
+Using assumption (1) and n1 + n′ = n + |K|, we obtain
+           p                                √         √
+             12(n − n1 + |K|) − 3 < 3|K| + 12n − 3 − 12n1 − 3.                   (9)
+The claim now follows from the bounds 1 ≤ |K| ≤ 2F .                              
+  Let b∗ be the number of boundary edges of G not on the boundary of G1 .
+                 √          √
+Claim 11. b∗ < 12n − 3 − 12n1 − 3.
+Proof. Each edge on the boundary of G1 borders either the outer face of G or an
+inner non-triangular face Γ of G. Let i denote the length of the cycle bounding Γ.
+Not all the edges of Γ are on the boundary of G1 . Thus Γ contributes at most i − 1
+edges to the boundary of G1 . If Γ has i − 1 or i − 2 of its edges on the boundary
+of G1 , then by Lemma 3, Γ has to be a lattice polygon, so has to be part of G1 by
+maximality. Thus Γ has at most i − 3 of its edges on the boundary of G1 . Therefore,
+                                    X
+                      b1 ≤ b − b∗ +    (i − 3)fi = b − b∗ + F.
+                                    i≥4
+       A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS                             9
+
+
+                                          r6
+                               p7 = p1            q6
+                                          Q1
+                          q1
+                                                               H
+                r1                                                      p6
+                      Q2
+               p2                                                             r5
+                                                                      Q6       q5
+                                            P′
+                                                                       Q5      p5
+                q2                                                            r4
+                      Q3                                                 q4
+               r2
+                     p3
+
+                                          Q4
+                                     q3           p4
+                                           r3
+
+            Figure 3. The polygon P ′ and its circumscribed hexagon H
+
+
+
+The claim now follows from the inequalities in Claims 3 and 7.                               
+
+2.6. An improved isoperimetric inequality. Our next aim is to find a better
+upper bound for F in a form similar to the upper bound of b∗ in Claim 11. This
+bound (Claim 12) will then be combined with Claim 10 to obtain a contradiction.
+Claim 12 will follow from our isoperimetric inequality in Lemma 2, which we now
+restate and prove.
+
+Lemma 2. Let P be a simple polygon with perimeter b, area A, and with the total
+length of the sides not parallel to any side of some fixed regular hexagon at most b∗ .
+Then
+                               √                     2
+                             8 3A ≤ b + √23 − 1 b∗ .
+
+Proof. Let h be a fixed regular hexagon. For any simple polygonal path (open or
+closed) Q, we denote its length by b(Q) and the total length of its sides not parallel
+to any side of h by b∗ (Q). If Q is closed (a polygon), we denote its area by A(Q).
+    We first modify P into a convex polygon P ′ with b(P ) = b(P ′ ), b∗ (P ) = b∗ (P ′ ),
+and A(P ) ≤ A(P ′ ). We say that a simple polygon Q is a rearrangement of P if there
+is a bijection between the edge set of Q and the edge set of P such that corresponding
+edges are parallel and have the same length. Note that for any rearrangement Q
+of P we have b(P ) = b(Q) and b∗ (P ) = b∗ (Q). Among all rearrangements of P fix
+one, P ′ , of maximum area. We claim that P ′ is convex. If P ′ is not convex, then
+it has two vertices p and q such that the boundary of P ′ between p and q lies in
+the interior of the convex hull of P ′ . If we replace this part of the boundary by
+its rotation by 180◦ around the midpoint of p and q, then we obtain a new simple
+polygon that is still a rearrangement of P , but with larger area. Let H denote the
+hexagon with sides parallel to the sides of h circumscribed around P ′ . Number the
+sides of H in order from 1 to 6. For each i = 1, . . . , 6, let pi qi be the segment of P ′
+on side i of H, such that the points lie in the order p1 , q1 , p2 , q2 , . . . , p6 , q6 around
+P ′ . Denote the path of P ′ between qi and pi+1 by Qi , i = 1, . . . , 6, where p7 = p1 .
+10                           JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+     Note that in a triangle pqr with ∠r = 120◦, the cosine rule gives
+                                |pq|2 = |pr|2 + |qr|2 − 2|pr| · |qr| cos 120◦
+                                          = |pr|2 + |qr|2 + |pr| · |qr|
+                                          = 43 (|pr| + |qr|)2 + 14 (|pr| − |qr|)2
+                                          ≥ 43 (|pr| + |qr|)2 ,
+hence |pr| + |qr| ≤ √23 |pq|. We now apply this to each triangle pi+1 qi ri to obtain
+an upper bound on the perimeter of H in terms of b and b∗ :
+          6
+          X                  6
+                             X
+     b=         |pi qi | +         b(Qi )
+          i=1                i=1
+                     6
+                     X                    6
+                                          X                    6
+                                                               X
+       = b(H) −              |qi ri | −         |ri pi+1 | +         b(Qi )
+                     i=1                  i=1                  i=1
+                     X6                   X6                   X6
+       ≥ b(H) −              |qi ri | −         |ri pi+1 | +         |qi pi+1 | by the triangle inequality
+                     i=1                  i=1                  i=1
+                             6
+                             X                    6
+                                                  X
+       ≥ b(H) − √23                |qi pi+1 | +          |qi pi+1 | since ∠ri = 120◦
+                             i=1                  i=1
+                                     6
+                                     X
+       = b(H) − ( √23 − 1)                  |qi pi+1 |
+                                     i=1
+                                     X6
+       ≥ b(H) − ( √23 − 1)                  b(Qi ) again by the triangle inequality
+                                     i=1
+       = b(H) − ( √23 − 1)b∗ .
+By the isoperimetric inequality for hexagons (or L’Huilier’s inequality for hexagons
+with sides parallel to those of a fixed hexagon) the hexagon with a fixed perimeter
+maximising the area is regular. It follows that
+                A ≤ A(P ′ ) ≤ A(H)
+                       √
+                   ≤ 243 b(H)2             by the isoperimetric inequality for hexagons
+                       √
+                        3       √2         2
+                   ≤   24 (b + ( 3 − 1)b∗ ) ,
+
+and Lemma 2 follows.                                                                                         
+
+   We now obtain an improved upper bound for F from the above isoperimetric
+estimate, again bounding the area from below by using the lower bound on f3 from
+Claim 4.
+                   √           √
+Claim 12. F < 61 ( 12n − 3 − 12n1 − 3) + 21 .
+                                                                                                 √
+Proof. As before, the area A of the boundary polygon of G is at least 43 f3 . If we
+substitute this, as well as the upper bounds for b and b∗ from Claims 3 and 11,
+respectively, and the lower bound for f3 from Claim 4, into Lemma 2, we obtain
+                   √                             √
+       12n + 6 − 6 12n − 3 − 6F ≤ (b + cD)2 < ( 12n − 3 − 3 + cD − F )2 ,
+            √            √                    √
+where D = 12n − 3 − 12n1 − 3 and c = 2/ 3 − 1.
+   Suppose that cD − F ≤ −1/2. Then
+                             √                 √
+                 12n + 6 − 6 12n − 3 − 6F < ( 12n − 3 − 7/2)2 .
+       A TIGHT BOUND FOR THE NUMBER OF EDGES OF MATCHSTICK GRAPHS                                11
+
+                                                 √
+Multiplying out and simplifying, we obtain F > 16 12n − 3 − 24
+                                                            13
+                                                               , which contradicts
+the previous upper bound on F from Claim 6.
+   Therefore, cD − F > −1/2, which gives the claim.                             
+2.7. The conclusion. We now combine the new estimate for F from Claim 12
+with Claim 10 to obtain a contradiction. Claim 12 together with F ≥ 2 (Claim 5)
+imply that
+                             √           √
+                       D := 12n − 3 − 12n1 − 3 > 9.                        (10)
+Again by Claim 12,
+                                         1   4
+                         6F < D + 3 < D + D = D                 by (10).
+                                         3   3
+Then Claim 10 gives
+         p              4       7   7        12(n − n1 )
+           12(n − n1 ) < D + D = D = · √           √        .
+                        3       3   3    12n − 3 + 12n1 − 3
+It follows that
+                     3 √            √                p
+                       ( 12n − 3 + 12n1 − 3) < 12(n − n1 ).                  (11)
+                     7
+By Claim 9, and using that n1 and n are integers, we have n1 > 43 n + 161
+                                                                          , which
+        √              √ √                                √
+                         3                              1
+                                        p
+implies 12n1 − 3 > 2 12n − 3 and 12(n − n1 ) < 2 12n − 3. Together with
+                                         √
+(11) we obtain the contradiction 73 (1 + 23 ) < 21 .
+   This finishes the induction step and thereby the proof of Theorem 2.        
+
+                                         References
+[1] Abel, Z., Demaine E. D., Demaine M. L., Eisenstat S., Lynch J., Schardl T. B.: Who needs
+    crossings? Hardness of plane graph rigidity. 32nd International Symposium on Computational
+    Geometry, Art. No. 3, 15 pp., LIPIcs. Leibniz Int. Proc. Inform., 51, Schloss Dagstuhl. Leibniz-
+    Zent. Inform., Wadern. (2016)
+[2] Blåsjö, V.: The Isoperimetric Problem. Amer. Math. Monthly 112, 526–566. (2005)
+[3] Blokhuis, A.: Regular finite planar maps with equal edges. arXiv preprint arXiv:1401.1799.
+    (1982)
+[4] Brass, P., Moser W. O. J., and Pach. J.: Research Problems in Discrete Geometry. Springer-
+    Verlag, New York. (2005)
+[5] Diestel, R.: Graph theory. 3rd ed. Springer, Berlin Heidelberg. (2006)
+[6] Fejes Tóth, L.: Lagerungen in der Ebene auf der Kugel und im Raum. 2nd ed. Springer-Verlag,
+    Berlin-New York. (1972)
+[7] Fejes Tóth, L., Fejes Tóth G, and Kuperberg W.: Lagerungen: Arrangements in the Plane, on
+    the Sphere, and in Space. Springer-Verlag, Cham. (2023) (Translation of [6] with additional
+    material.)
+[8] Gerbracht, E. H.-A.: Minimal polynomials for the coordinates of the Harborth graph.
+    arXiv:math/0609360. (2006)
+[9] Gerbracht, E. H.-A.: Symbol-crunching the Harborth graph. Adv. in Appl. Math., 47 276–281.
+    (2011)
+[10] Harborth, H.: Solution to Problem 664A. Elemente der Mathematik 29, 14–15. (1974)
+[11] Harborth, H.: Point sets with equal numbers of unit-distant neighbors (Abstract), Discrete Ge-
+    ometry, 12–18 July 1981, Oberwolfach, Tagungsbericht 31/1981, Mathematisches Forschungsin-
+    stitut Oberwolfach. pp. 11–12. (1981)
+[12] Harborth, H.: Match sticks in the plane. In: The Lighter Side of Mathematics. Proceedings
+    of the Eugène Strens Memorial Conference on Recreational Mathematics and its History held
+    at the University of Calgary, Calgary, Alberta, August 1986. edited by R. K. Guy and R. E.
+    Woodrow, 281–288. Mathematical Association of America, Washington, D.C. (1994)
+[13] Kurz, S.: Fast recognition of planar non unit distance graphs. Geombinatorics, 21, 25–33.
+    (2011)
+[14] Kurz, S.: A lower bound for 4-regular planar unit distance graphs. Geombinatorics, 21, 63–72.
+    (2011)
+[15] Kurz, S. and Mazzuoccolo G.: 3-regular matchstick graphs with given girth, Geombinatorics,
+    19, 156–173. (2010)
+12                     JÉRÉMY LAVOLLÉE AND KONRAD SWANEPOEL
+
+
+[16] Kurz, S. and Pinchasi R.: Regular matchstick graphs. Amer. Math. Monthly 118, 264–267.
+    (2011)
+[17] Lavollée, J. and Swanepoel K. J.: Bounding the Number of Edges of Matchstick Graphs.
+    SIAM Journal on Discrete Mathematics, 36, 777–785. (2022)
+[18] Lavollée, J. and Swanepoel K. J.: The number of small-degree vertices in matchstick graphs.
+    Australas. J. Combin. 85, 92–99. (2023)
+[19] Pach, J. and Agarwal P. J.: Combinatorial Geometry. Wiley, New York. (1995)
+[20] Salvia, R.: A catalog of matchstick graphs. arXiv:1303.5965. (2013)
+[21] Winkler M.: Ein neuer 4-regulärer Streichholzgraph. Mitteilungen der Deutschen
+    Mathematiker-Vereinigung, 24, 74–75. (2016)
+[22] Winkler M.: A catalogue of 4-regular matchstick graphs with 63–70 vertices and (2, 4)-regular
+    matchstick graphs with less than 42 vertices which contain only two vertices of degree 2. arXiv
+    preprint arXiv:1705.04715. (2017)
+[23] Winkler, M., Dinkelacker P., and Vogel. S.: Minimal completely asymmetric (4; n)-regular
+    matchstick graphs. arXiv preprint arXiv:1609.06972. (2016)
+[24] Winkler, M., Dinkelacker P., and Vogel. S.: New minimal (4, n)-regular matchstick graphs.
+    Geombinatorics, 27, 26–44. (2017)
+[25] Winkler, M., P. Dinkelacker, and S. Vogel: On the existence of 4-regular matchstick graphs.
+    arXiv preprint arXiv:1705.00293. (2017)
+[26] Winkler, M., P. Dinkelacker, and S. Vogel: A 3-regular matchstick graph of girth 5 consisting
+    of 54 vertices. Geombinatorics, 29, 116–121. (2020)
+
