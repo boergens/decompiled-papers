@@ -1,0 +1,1243 @@
+ 
+ US8109184B2 - Method and device for cutting fresh tissue slices 
+ - Google Patents 
+US8109184B2 - Method and device for cutting fresh tissue slices 
+ - Google Patents 
+ Method and device for cutting fresh tissue slices 
+ Download PDF 
+Info 
+ Publication number 
+ US8109184B2 
+ US8109184B2 
+ US12/310,519 
+ US31051907A 
+ US8109184B2 
+ US 8109184 B2 
+ US8109184 B2 
+ US 8109184B2 
+ US 31051907 A 
+ US31051907 A 
+ US 31051907A 
+ US 8109184 B2 
+ US8109184 B2 
+ US 8109184B2 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ blade 
+ vibrating 
+ specimen 
+ diagonal 
+ diagonal slide 
+ Prior art date 
+ 2006-09-06 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Active , expires 2028-06-20 
+ Application number 
+ US12/310,519 
+ Other versions 
+ US20100175520A1 
+ ( en 
+ Inventor 
+ Jian-Qiang Kong 
+ George Y Kong 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Individual
+ Original Assignee 
+ Individual 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2006-09-06 
+ Filing date 
+ 2007-05-22 
+ Publication date 
+ 2012-02-07 
+ 2007-05-22 
+ Application filed by Individual 
+ filed 
+ Critical 
+ Individual 
+ 2007-05-22 
+ Priority to US12/310,519 
+ priority 
+ Critical 
+ patent/US8109184B2/en 
+ 2010-07-15 
+ Publication of US20100175520A1 
+ publication 
+ Critical 
+ patent/US20100175520A1/en 
+ 2012-02-07 
+ Application granted 
+ granted 
+ Critical 
+ 2012-02-07 
+ Publication of US8109184B2 
+ publication 
+ Critical 
+ patent/US8109184B2/en 
+ Status 
+ Active 
+ legal-status 
+ Critical 
+ Current 
+ 2028-06-20 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+Images 
+Classifications 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01N — INVESTIGATING OR ANALYSING MATERIALS BY DETERMINING THEIR CHEMICAL OR PHYSICAL PROPERTIES 
+ G01N1/00 — Sampling; Preparing specimens for investigation 
+ G01N1/02 — Devices for withdrawing samples 
+ G01N1/04 — Devices for withdrawing samples in the solid state, e.g. by cutting 
+ G01N1/06 — Devices for withdrawing samples in the solid state, e.g. by cutting providing a thin slice, e.g. microtome 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/04 — Processes 
+ Y — GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS 
+ Y10 — TECHNICAL SUBJECTS COVERED BY FORMER USPC 
+ Y10T — TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION 
+ Y10T83/00 — Cutting 
+ Y10T83/869 — Means to drive or to guide tool 
+ Y10T83/8874 — Uniplanar compound motion 
+Definitions 
+ the present invention 
+ is directed generally to a vibrating microtome. More specifically, the present invention is directed to a vibrating microtome that utilizes a blade which is movable in two directions. Most specifically, the present invention is directed to a vibrating microtome, and to a method of its use in the preparation of live or fixed tissue slices. 
+ the tissue specimens 
+ are embedded inside a specimen syringe. 
+ a slice thickness 
+ is selected using a stepper motor to drive a micrometer. 
+ a cutting blade 
+ is caused to slide diagonally, and to vibrate horizontally to slice very thin layers or slices off the specimen which is caused to extend from the specimen syringe. 
+ the vibrating and sliding blade microtome, in conjunction with the tissue embedding and slice thickness determination 
+ provides a much improved tissue slice quality. 
+ Microtomes 
+ are generally well-known and are typically used in biomedical experiments to prepare thin slices of tissue that can then be subjected to microscopic studies. 
+ the tissue to be sliced 
+ is often embedded in paraffin or is hardened by freezing so that it can be sliced as thinly as possible, typically through the use of a microtome. 
+ Live tissues and freshly fixed tissues 
+ are typically too soft for this type of cutting and it is thus difficult to obtain thin slices of such live tissues and freshly fixed tissues. 
+ One attempted solution 
+ has been the provision of a vibrating blade microtome in which the cutting blade has been vibrated horizontally with respect to the typically vertical or perpendicular movement of the cutting blade edge. Such vibrating microtomes are specifically intended to cut soft tissue slices without the need for tissue embedding or freezing. 
+ the horizontal oscillation of the blade, or its oscillation 
+ is a direction which is generally parallel to the longitudinal axis of the cutting edge, is provided as a high frequency vibration that has been more effective in slicing soft tissue samples than were prior cut devices. 
+ the resultant slices, cut by the vibrating microtomes, 
+ have had better slice quality than have slices cut by direct blade chopping. 
+ the blade 
+ vibrates generally parallel with respect to the longitudinal axis of the cutting blade. Typically this means that the blade vibrates in a generally horizontal, side to side direction, at a high frequency. 
+ An amplitude of such a vibrating stroke 
+ must be at least 0.6 mm. If the stroke amplitude is less than this amount, the blade will not cut through the live tissue. Instead, the live tissue or the freshly fixed specimen will merely be compressed and will push back against the horizontally vibrating blade. 
+ Vibrating microtomes 
+ have been noted recently as having undesirable vibrations of the cutting blade in the Z—-axis direction; i.e. the direction perpendicular to both the X-axis blade vibration direction and the Y-axis cutting direction. Efforts have been made in prior vibrating microtomes to reduce this Z—-axis movement of the cutting blade using a so-called “zero —” technique. While the blade movement is most often tested and quantified in test conditions, during vibrating of the blade but without cutting a tissue slice, the Z—-axis movement or vibration of the cutting blade in operating conditions has been largely ignored. 
+ Double edged razor blades 
+ are widely used in vibrating microtomes for cutting tissue slices. Such a razor blade is broken or separated into two single edge blade parts by being severed or snapped along its longitudinal axis prior to use. The now half blade, with its single cutting edge is clamped, generally at its middle, along its longitudinal axis in the blade holder of a currently available vibrating microtome and is used to cut tissue slices. 
+ the thin razor blade 
+ is apt to be bent or deflected relative to the blade holder, particularly in the portion of the blade that is unsupported by the blade holder of the vibrating microtome. 
+ the razor blade 
+ is typically mounted on the blade holder and is inclined at an angle of 15-35 degrees, with respect to the surface of the tissue specimen. 
+ a first of these 
+ is that in connection with high fiber containing tissue, which thus tends to be difficult to cut, such as brain stem or cerebellum, direct sliding cannot cut through the tough tissue thus resulting in low quality tissue slices. 
+ the thinnest slices that can be cut with the sliding blade machine described in the above-identified prior Kong patent 
+ have a thickness of about 70 to 80 ⁇ m. This thickness of cut precludes the sliding blade machine from being used in histology studies which typically require slice thicknesses between 10 and 40 ⁇ m. 
+ Another object of the present invention 
+ is to provide a vibrating blade microtome. 
+ a further object of the present invention 
+ is to provide a vibrating sliding-blade microtome. 
+ Yet another object of the present invention 
+ is to provide a method for using a vibrating, sliding-blade microtome to reduce tissue damage. 
+ Still a further object of the present invention 
+ is to provide a vibrating, sliding-blade microtome that eliminates chattering in a Z—-axis direction. 
+ Even yet another object of the present invention 
+ is to provide a vibrating, sliding-blade microtome which reduces mechanical trauma on tissue slices. 
+ the method and device for cutting fresh tissue slices 
+ utilizes a vibrating microtome, in which the cutting blade vibrates in a generally horizontal direction, with a sliding blade mechanism that causes the blade to also travel in a diagonal X-Y axis direction. 
+ the vibrating sliding-blade microtome in accordance with the present invention 
+ also adheres the cutting blade to one surface of a blade holder in a procedure that substantially reduces bending and resultant chattering of the blade in the Z—-axis direction. 
+ the method and device in accordance with the present invention 
+ is particularly intended for use in the slicing of live or fixed tissue slices which are not hard or rigid. Such specimens are not embedded in paraffin and are not frozen. 
+ the vibrating sliding-blade microtome in accordance with the present invention 
+ cuts specimen slices that have substantially higher numbers of live/dead cell ratios than are capable of being obtained with prior art devices. Such a higher number of live/dead cell ratio is an indication of slice viability. 
+ the vibrating, sliding-blade microtome in accordance with the present invention 
+ combines a transverse or back and forth, generally horizontal vibrating motion with a diagonal downward sliding motion. 
+ the resultant compound cutting blade movement 
+ has a substantial effect on the cutting efficiency of the vibrating sliding-blade microtome of the present invention. 
+ the blade vibration amplitude 
+ had to be at least 0.6 mm, in the subject device, that amplitude can be as little as 0.1 mm. 
+ the specimen being cut 
+ is not compressed by the blade vibrating movement so that the cutting efficiency of the blades is increased, and the mechanical stress imparted to the specimen is reduced. 
+ the razor blade 
+ or more typically, the half of a broken double-edged razor blade is glued onto a one piece blade holder. 
+ This 
+ allows the blade to be securely attached to the blade holder all along its length and at one side of the blade holder. 
+ the glue 
+ can extend to the edge of the blade holder and thus can extend to within 0.5 mm of the cutting edge of the razor blade. 
+ This 
+ forms a very rigid, uniform support for the thin razor blade and essentially eliminates blade edge wobble. 
+ clamped blades 
+ there are typically one or more clamping screws or the like. 
+ the blade 
+ is unevenly stressed and is subjected to blade edge wobble. 
+ the elimination of blade edge wobble 
+ by the use of the blade mounting through the use of adhesives of the present invention, in combination with the vibrating, sliding blade movement of the blade, essentially eliminates Z—-axis chatter, which is prevalent in prior devices. 
+ the cutting plane 
+ is generally vertical, in contrast to the prior art devices, in which the cutting plane is typically horizontal. 
+ the vibrating arm 
+ can essentially be as short as the cutting stroke and is thus very light weight. 
+ the vibrating unit 
+ is mounted on a preloaded linear bearing so that the vibrating unit can move freely in the vibrating, horizontal or X direction with no component of movement, by itself in either of the Y or Z— axis directions. Very low wattage is required to move the vibrating element as compared to the higher levels of power required by prior vibrating microtomes. 
+ the specimen to be sliced by the vibrating, sliding-blade microtome of the present invention 
+ is held in a specimen holder, as disclosed in detail in the prior Kong et al. U.S. Pat. No. 7,146,895. 
+ the combination of the specimen support structure and process, as described in the prior Kong et al. patent, together with the utilization of the vibrating, sliding-blade microtome of the present invention 
+ results in the preparation of extremely thin, sharply and accurately cut tissue specimens, particularly live tissue specimens. 
+ the slice viability 
+ which is an important factor in the evaluation of a fresh, live tissue slice, is much greater than has been accomplishable using prior art devices. 
+ the live/dead cell ratio 
+ which is a measurement of slice viability, is much greater in the present device, than has been the case when using traditional vibrating microtomes. 
+ the method and device for cutting fresh tissue slices 
+ in accordance with the present invention, overcomes a number of the significant limitations of the prior art devices. It is a substantial advance in the art. 
+ FIG. 1 
+ is a front elevation view of a vibrating sliding-blade microtome in accordance with the present invention 
+ FIG. 2 
+ is a side elevation view, partly in section, of the vibrating, sliding-blade microtome of FIG. 1 and showing a specimen being advanced in the specimen holder prior to its being sliced; 
+ FIG. 3 
+ is a top plan view of a portion of the vibrating, sliding-blade microtome of the present invention and showing a micrometer drive assembly; 
+ FIG. 4 
+ is a bar graph depiction of live/dead cell ratios obtainable by use of the present invention and compared with the results obtainable using a prior art device. 
+ a generally planar base 12 
+ supports a microtome assembly, generally at 14 , and a specimen holding assembly, generally at 16 . 
+ the specimen holding assembly 
+ generally at 16 
+ the specimen holding assembly, generally at 16 
+ is similar, in overall structure and operation, to the specimen holding assembly described and depicted in the prior U.S. Pat. No. 7,146,895 in the names of the present applicants. As indicated above, the entire disclosure of that patent is expressly incorporated herein be reference. 
+ the specimen holding assembly 
+ includes a specimen receiving bath, generally at 20 which includes a bath front wall 22 , a bath rear wall 24 , left and right bath side walls 26 and 28 , as seen in FIG. 1 and a bath bottom 30 . 
+ the specimen receiving bath 20 
+ thus is a fluid-tight receptacle into which can be placed a suitable saline solution 32 or any other fluid whose purpose will be to maintain the viability of a specimen slice that is deposited in the bath 20 by the action of the microtome assembly, generally at 14 , as will be discussed subsequently. 
+ a syringe tube 34 
+ is insertable into an aperture 36 in the rear wall 24 of the specimen receiving bath, generally at 20 . 
+ a resilient O-ring 38 
+ surrounds the bath aperture 36 and will prevent leakage of the saline solution 32 or other liquid out of the specimen receiving bath 20 while the syringe tube 34 is inserted through the aperture 36 . It will be apparent that the saline solution or other liquid solution 32 will be added to the bath only after the syringe tube 34 is in place and will be drained before the syringe tube 34 is removed. 
+ a syringe support base 40 
+ is situated spaced behind, and generally parallel to the rear wall 24 of the specimen receiving bath. 
+ That base 
+ is provided with a base aperture 42 which is aligned with the bath rear wall aperture 36 . 
+ the resilient O-ring 38 
+ is sandwiched between the rear wall 24 of the specimen receiving bath 20 and a front wall 44 of the syringe support base 40 . 
+ the syringe tube 34 
+ is a generally cylindrical tube that is sized to receive a cooperating syringe plunger 50 . 
+ a leading face 52 of the syringe plunger 50 
+ is adapted to have attached thereto a tissue specimen 54 which can be attached to the syringe leading face 52 by a suitable instantaneous adhesive or the like. 
+ Tissue specimen 54 
+ will typically be encased in, or embedded in a low gel point agarose 56 . As may be seen in FIG. 
+ the syringe tube 34 
+ has an outlet end 58 with a reduced diameter outlet lip 60 whose purpose is to provide some overcomable resistance to the passage of the tissue specimen 54 and its agarose encasement 56 out of the outlet end 58 of the syringe tube 34 . 
+ the reduced diameter outlet lip 60 
+ does not provide a complete barrier to the passage of the tissue specimen 54 and its embedding agarose 56 out of the syringe tube outlet end 58 . 
+ the syringe tube 34 
+ is also structured with an inlet end 62 which, in the present invention is sized to slidingly receive the syringe plunger 50 . 
+ a stop 64 
+ is attached to the syringe tube 34 intermediate the syringe tube ends 58 and 62 respectively. Stop 64 is positioned so that it will abut a rear wall 66 of the syringe support base 40 . Stop 64 thus functions to ensure that the syringe tube 34 will extend into the saline solution 32 or other liquid in the specimen receiving bath 20 to a pre-determined, repeatable depth or position. This will aid in the aligning of the vibrating sliding-blade microtome with the outlet end 58 of the syringe tube 34 . 
+ a micrometer drive, generally at 70 
+ is, as may be seen in FIGS. 2 and 3 , situated in a micrometer drive housing, generally at 72 . 
+ the micrometer drive housing 72 
+ is, in turn, secured atop a micrometer drive housing carrier plate 74 which is slidable, in the directions indicated by the arrow A in FIG. 3 , along a micrometer drive housing linear slide 76 which is, in turn, secured to the base 12 by any suitable expedient. 
+ a micrometer 80 
+ is situated atop a support pedestal 82 in the micrometer drive housing 72 and has a micrometer body 84 which carries a micrometer plunger 86 which passes through the micrometer drive housing 72 and through a mounting plate 88 attached to the micrometer drive housing 72 . 
+ a free end 90 of the micrometer plunger 86 
+ is engagable with a syringe plunger outer face 92 . 
+ a micrometer drive motor 96 
+ is situated in the micrometer drive housing 72 and is preferably provided as a suitable electric stepper motor. 
+ Micrometer drive motor 96 
+ has a micrometer motor drive gear 98 which supports a micrometer drive belt 100 that extends from the micrometer motor drive gear 98 to a micrometer drive gear 102 . Both of these drive gears 98 and 102 are externally toothed and engage interior teeth or cogs on the drive belt 100 . 
+ the micrometer drive motor 96 
+ is very precisely controlled by a micrometer motor control 104 . 
+ That control 
+ can be actuated to rotate the micrometer drive stepper motor 96 a finite amount so that the micrometer plunger 86 , and specifically its free end 90 will engage the syringe plunger 50 and can advance it in the syringe tube 34 a defined amount. 
+ Such a defined amount of forward travel of the syringe plunger 50 
+ will extrude a set length of the specimen 54 and embedding agarose 56 out of the reduced diameter outlet lip 60 of the syringe tube 34 so that it can be sliced off by the vibrating sliding-blade microtome and deposited in the saline solution 32 or the other suitable solution in the specimen receiving bath 20 where it can be removed for further processing. 
+ the micrometer plunger 86 and its free end 90 
+ can be retracted toward the micrometer drive housing 72 by reversal of the micrometer drive motor 96 . 
+ the micrometer drive housing 72 
+ can be slid laterally on the micrometer drive housing slide 76 . 
+ suitable clamps 
+ which are not specifically shown, can be used to hold the micrometer drive housing 72 in its operational position, and can be loosened to allow it to slide laterally to its non-use position. 
+ the vibrating sliding-blade microtome assembly 
+ generally at 14 , in accordance with the present invention, will be described in detail. It will be quite evident to those of skill in the art that the purpose of the microtome is to slice thin uniform viable tissue samples from the tissue specimen 54 embedded in the low gel point agarose 56 and extruded or forced out of the syringe outlet end 58 and restricted by the reduced diameter outlet lip 60 . The incremental advance of that tissue specimen 54 is accomplished by operation of the micrometer stepper drive motor 96 , under the control of the micrometer motor controller 104 . 
+ the microtome blade 
+ has tended to chatter and to bend or deflect, has tended to compress the tissue instead of cutting it and has generally failed to provide very thin, reproducible tissue specimen slices of live or soft tissue. 
+ the vibrating sliding-blade microtome of the subject invention 
+ overcomes those limitations. 
+ the vibrating sliding-blade microtome 
+ is comprised essentially of two distinct yet interacting components. 
+ the first of these 
+ is a diagonal sliding component, generally at 110 . 
+ the second 
+ is a horizontal vibrating component, generally at 112 . While the two components have separate features, they combine to much more effectively slice the tissue specimens 54 . 
+ a support column 114 
+ extends upwardly from the base 12 of the vibrating sliding-blade microtome, generally at 10 . 
+ This column 114 
+ is depicted in FIG. 1 as being generally rectangular but need not have any specific shape so long as it has sufficient structural rigidity to support the two cooperating components 110 and 112 . 
+ a diagonal slide platform 116 
+ is supported for diagonal movement along a diagonal slide rail 118 which is, in turn, secured to the support column 114 by suitable fasteners, such as the fastener bolts 120 depicted schematically in FIG. 1 . 
+ the diagonal slide platform 116 and the diagonal slide rail 118 
+ will preferably have friction reducing components, such as linear bearings, low friction slide surfaces or the like so that the platform 116 will be able to slide easily along the slide rail 118 . 
+ the angle of inclination of the diagonal slide rail 118 
+ could be varied such as, for example, by providing arcuate slots in the support column 114 and having the fastener bolts 120 be received in those arcuate slots. This angle of inclination is preferably between 20° and 80°. Other angle adjusting expedients are within the purview of the subject invention. 
+ a gear tooth rack 122 
+ is attached to the lower edge of the diagonal slide platform 116 and is in gear mesh with a cooperating drive pinion 124 . That drive pinion is driven by a diagonal slide platform drive motor 126 which is preferably a stepper motor whose revolutions are accurally controllable by a slide platform drive motor controller 128 . 
+ a pair of Hall-Effect sensors 130 , 132 
+ are situated adjacent first and second ends of the diagonal slide rail 118 . 
+ a suitable magnet 134 
+ is affixed to the diagonal slide platform 116 . In operation, readings from the two Hall Effect sensors 130 , 132 are sent to the diagonal slide platform drive motor controller 128 and are usable to very accurately position the diagonal slide platform 116 . 
+ a support arm 140 
+ is secured, at a first, attached end 142 , to the diagonal slide platform 116 by a suitable fastener, such as a bolt 144 . 
+ a suitable fastener 
+ such as a bolt 144 . 
+ the bolt 144 
+ is a schematic representation of any suitable fastening arrangement that could be used to attach the support arm 140 to the diagonal slide platform 116 . Since it is preferable that the support arm 140 be maintained generally horizontally, the fastening arrangement 144 could be adjustable so that the support arm 140 would remain horizontal with varying inclinations of the diagonal slide rail 118 . 
+ a second, free end 146 of the support arm 140 
+ extends, in a cantilever fashion, over the specimen holding assembly, generally at 16 . 
+ the support arm 140 
+ is depicted in the somewhat schematic illustration of the subject invention in FIG. 1 , as a generally rectangular member. In actuality, the support arm 140 could take any number of shapes so long as it has sufficient structural rigidity to accomplish its intended task, as will now be discussed. 
+ a vibrating blade support 150 
+ is carried by a pair of spaced blade support carriers 152 , 154 which are slidable horizontally along a blade support rail 156 . That blade support rail 156 is, in turn, bolted or otherwise fastened to the support arm 140 intermediate its ends 142 and 146 , as indicated schematically by bolts 158 . As was discussed in connection with the diagonal slide platform 116 and the diagonal slide rail 118 , the blade support carriers 152 and 154 , which may be a unified blade support carriage, and the blade support rail 156 may be provided with friction reducing elements, such as linear bearings, allow friction slide or other friction reducing components and the like. 
+ a vibrating blade drive motor 160 
+ is situated atop the support arm 140 generally adjacent the free, unsupported second end 146 of that support arm 140 . 
+ That vibrating blade drive motor 160 
+ is typically also an electric motor and is controlled by the same motor controller 128 which also controls the diagonal slide platform drive motor 126 . Coordination between the two motors 126 and 160 is thus assured through the provision of the common controller 128 . 
+ a drive wheel 162 
+ is driven by this motor 160 and is provided with an eccentrically situated drive pin 164 . That drive pin is received in a first end 166 of a resilient or spring steel connector link 168 . 
+ a second end 170 of this connector link 168 
+ is carried by a blade support drive pin 172 . 
+ both ends 166 and 170 of the resilient or spring steel connector link 168 
+ may be provided with suitable bearing assemblies, generally at 174 , which bearing assemblies aid in the support and connection of the connector link 168 . 
+ Actuation of the vibrating blade drive motor 160 
+ will cause the drive wheel 162 to rotate at a relatively high rate of speed. 
+ the eccentric location of the drive pin 164 
+ will cause the connector link 168 to reciprocate. This reciprocatory motion of the connector link 168 is translated into a horizontal vibration of the vibrating blade support 150 in the direction indicated by arrow C in FIG. 1 . 
+ a cutting blade, generally at 180 
+ is attached to a blade holder, generally at 182 , as seen in FIG. 1 , and as is also seen in greater detail in FIG. 2 . 
+ the cutting blade 180 
+ has an elongated blade edge 184 and a blade body 186 . 
+ the cutting blade 180 
+ is one half of a double-edged razor blade. 
+ the blade body 186 
+ has a top edge 188 and a blade side 190 . 
+ the blade holder 182 
+ is generally in the shape of an inverted T, as seen in FIG. 1 and includes a blade holder bar 192 which is attached, generally at its mid-point to a blade holder leg 194 . As seen in FIG. 
+ the blade holder bar 192 
+ has a horizontal ridge 196 which acts as an abutment which will be engaged by the upper edge 188 of the blade body 186 . 
+ the blade cutting edge 184 
+ extends below a lower edge 198 of the blade holder bar 192 . 
+ the cutting blade 180 
+ is attachable to the blade holder bar 192 by the use of a suitable adhesive which will be applied to the entire length of the blade holder bar 192 , below the ridge 196 thereof and to the cutting blade side 190 . 
+ the cutting blade 180 
+ will be adhesively attached to the blade holder bar 192 so that its cutting edge 184 protrudes below the blade holder bar lower edge 198 by a distance of approximately 1 mm. This support of the cutting blade 180 by the cutting blade holder 182 prevents the cutting blade 180 from bending or flexing, as typically happens with blades attached to holders only in several spaced locations. 
+ an upper end 200 of the blade holder leg 194 
+ is pivotally supported by a blade holder support rod 202 . 
+ That blade holder support rod 202 
+ is situated adjacent a lower end 204 of the vibrating blade support 150 . 
+ a suitable securement assembly 
+ such as a clamping screw, a set screw, or the like is provided, either at the juncture of the blade holder leg 194 and the rod 202 , or at the juncture of the rod 202 and the lower end 204 of the vibrating blade support 150 so that an angle of inclination of the cutting blade 180 can be varied over an arc D, with respect to the end of the specimen to be sliced, as depicted in FIG. 2 . 
+ a tissue specimen 54 
+ is secured to the syringe leading face 52 and is embedded in a suitable low gel point agarose 56 . 
+ the syringe plunger 50 
+ is inserted into the syringe barrel or tube 34 , from the inlet end 62 . 
+ the now assembled syringe 
+ is inserted into the aligned apertures of the bath rear wall 24 and of the syringe support base 40 . 
+ the specimen receiving bath 20 
+ can be filled with a suitable saline solution 32 or other similar sample receiving medium. 
+ the micrometer drive 70 
+ which had been slid out of the way or out of alignment with the aligned apertures 36 and 42 , is now slid along the micrometer drive housing linear slide 76 until the micrometer plunger 86 , and specifically its free end 90 , is aligned with the syringe plunger outer face 92 . 
+ the micrometer drive motor 96 with its controller 104 
+ which is in connection with the controller 128 for the diagonal sliding platform drive motor 126 and the vibrating blade drive motor 160 , is actuated to advance the tissue specimen 54 out through the reduced diameter outlet lip 60 of the syringe tube 34 . 
+ the diagonal slide platform 116 
+ is caused to move down and to the right, as seen in FIG. 1 , in the direction of the arrow B. 
+ the cutting blade 180 
+ is caused to vibrate horizontally in the direction of the arrow C. 
+ the compound sliding and vibrating motion of the cutting blade 180 
+ is effective to slice a first tissue slice off the tissue specimen 54 . That first slice will typically be discarded because its outer surface, the surface not newly formed by the blade 180 , will not be even. 
+ Subsequent slices 
+ which are obtained by the steps of advancing the syringe plunger 50 and by the vibrating and diagonally sliding movement of the cutting blade 180 , are much more uniform in thickness and can be retrieved from the saline solution 32 for further processing. 
+ the cycle time 
+ is substantially reduced from that which is possible using only a vibrating blade microtome. 
+ the slice thickness 
+ is much more uniform than has been possible in prior devices. 
+ the Hall Effect sensors 130 and 132 
+ limit the travel of the diagonal slide platform 116 so that there is no unnecessary platform travel. 
+ the short vibrating strokes imparted to the vibrating blade support 150 
+ are very efficient and again reduce specimen cutting or slicing time. 
+ the cutting edge 184 of the cutting blade 180 
+ moves in a plane, indicated by dashed lines in FIG. 2 , which is parallel to the plane of the decreased diameter lip 60 of the syringe tube 34 , the specimen slices are thus sliced clearly, quickly and with an accurately and controllable thickness. 
+ One effective measure of the viability of a specimen slice 
+ is a ratio of live to dead cells. 
+ the slice viability 206 of slices prepared using the vibrating, sliding-blade microtome in accordance with the present invention 
+ is much better than a ratio 208 obtained using a prior vibrating microtome. 
+ the vibrating, sliding-blade microtome, in accordance with the present invention 
+ is thus clearly far superior to the products which are currently available. 
+Landscapes 
+ Physics & Mathematics 
+ ( AREA )
+ Health & Medical Sciences 
+ ( AREA )
+ Life Sciences & Earth Sciences 
+ ( AREA )
+ Chemical & Material Sciences 
+ ( AREA )
+ Analytical Chemistry 
+ ( AREA )
+ Biochemistry 
+ ( AREA )
+ General Health & Medical Sciences 
+ ( AREA )
+ General Physics & Mathematics 
+ ( AREA )
+ Immunology 
+ ( AREA )
+ Pathology 
+ ( AREA )
+ Sampling And Sample Adjustment 
+ ( AREA )
+Abstract 
+The method and device for cutting fresh tissue slices utilizes a vibrating microtome. The vibrating microtome uses a cutting blade that vibrates in a horizontal direction. The microtome has a base, a specimen holder attached to the base, and a diagonal slide carriage and support arm that are supported on the base for movement diagonally with respect to the specimen holder. A vibrating blade support is located on the support arm and moves horizontally with respect to the specimen holder. A cutting blade is mounted on the vibrating blade support and moves in a compound diagonal and vibrating motion with respect to the specimen holder. 
+Description 
+ CROSS-REFERENCE TO RELATED APPLICATIONS 
+This application claims priority, under 35 USC 120, to U.S. provisional patent application No. 60/842,386, filed Sep. 6, 2006, the disclosure of which is expressly incorporated herein by reference. 
+ FIELD OF THE INVENTION 
+The present invention is directed generally to a vibrating microtome. More specifically, the present invention is directed to a vibrating microtome that utilizes a blade which is movable in two directions. Most specifically, the present invention is directed to a vibrating microtome, and to a method of its use in the preparation of live or fixed tissue slices. The tissue specimens are embedded inside a specimen syringe. A slice thickness is selected using a stepper motor to drive a micrometer. A cutting blade is caused to slide diagonally, and to vibrate horizontally to slice very thin layers or slices off the specimen which is caused to extend from the specimen syringe. The vibrating and sliding blade microtome, in conjunction with the tissue embedding and slice thickness determination provides a much improved tissue slice quality. 
+ BACKGROUND OF THE INVENTION 
+Microtomes are generally well-known and are typically used in biomedical experiments to prepare thin slices of tissue that can then be subjected to microscopic studies. The tissue to be sliced is often embedded in paraffin or is hardened by freezing so that it can be sliced as thinly as possible, typically through the use of a microtome. Live tissues and freshly fixed tissues are typically too soft for this type of cutting and it is thus difficult to obtain thin slices of such live tissues and freshly fixed tissues. One attempted solution has been the provision of a vibrating blade microtome in which the cutting blade has been vibrated horizontally with respect to the typically vertical or perpendicular movement of the cutting blade edge. Such vibrating microtomes are specifically intended to cut soft tissue slices without the need for tissue embedding or freezing. The horizontal oscillation of the blade, or its oscillation is a direction which is generally parallel to the longitudinal axis of the cutting edge, is provided as a high frequency vibration that has been more effective in slicing soft tissue samples than were prior cut devices. The resultant slices, cut by the vibrating microtomes, have had better slice quality than have slices cut by direct blade chopping. 
+In all current vibrating microtomes, the blade vibrates generally parallel with respect to the longitudinal axis of the cutting blade. Typically this means that the blade vibrates in a generally horizontal, side to side direction, at a high frequency. An amplitude of such a vibrating stroke must be at least 0.6 mm. If the stroke amplitude is less than this amount, the blade will not cut through the live tissue. Instead, the live tissue or the freshly fixed specimen will merely be compressed and will push back against the horizontally vibrating blade. 
+Vibrating microtomes have been noted recently as having undesirable vibrations of the cutting blade in the Z—-axis direction; i.e. the direction perpendicular to both the X-axis blade vibration direction and the Y-axis cutting direction. Efforts have been made in prior vibrating microtomes to reduce this Z—-axis movement of the cutting blade using a so-called “zero —” technique. While the blade movement is most often tested and quantified in test conditions, during vibrating of the blade but without cutting a tissue slice, the Z—-axis movement or vibration of the cutting blade in operating conditions has been largely ignored. 
+Double edged razor blades are widely used in vibrating microtomes for cutting tissue slices. Such a razor blade is broken or separated into two single edge blade parts by being severed or snapped along its longitudinal axis prior to use. The now half blade, with its single cutting edge is clamped, generally at its middle, along its longitudinal axis in the blade holder of a currently available vibrating microtome and is used to cut tissue slices. The thin razor blade is apt to be bent or deflected relative to the blade holder, particularly in the portion of the blade that is unsupported by the blade holder of the vibrating microtome. The razor blade is typically mounted on the blade holder and is inclined at an angle of 15-35 degrees, with respect to the surface of the tissue specimen. During slicing of the specimen, the specimen will itself tend to pull and to bend the blade toward the specimen. Such a bending of the blade, during slicing of the specimens, causes the formation of chatter marks in the cut or sliced specimen because of blade bending, or chatter, in the Z—-axis direction. Resistance of the tissue specimen to being sliced, and the inherent thin blade structure, together with its being mounted in a somewhat flexible fashion, all contribute to flexure of the blade in the Z—-axis and to the resultant formation of tissue damage by the infliction of chatter marks on the surface of the cut tissue specimens. 
+In current vibrating machines, the edge of the cutting blade vibrates on a horizontal cutting plane. Such a vibrating motion requires a long vibrating arm so that the cutting blade will be located in the middle of the tissue bath container. This relatively long vibrating arm is heavy and is difficult to support so that it will be able to vibrate at the desired speed but will not wobble. 
+In U.S. Pat. No. 7,146,895, to Kong et al., the applicants in the subject application, there is disclosed a sliding blade microtome. As described in that patent, the disclosure of which is expressly incorporated herein by reference, a diagonally sliding cutting blade is usable to slice thin specimens of live or dead tissue, which specimens have been embedded in a gel and have been extended from the open end of a specimen-holding syringe, by the use of a sliding blade microtome machine. The sliding blade machine disclosed in this prior Kong patent can cut soft tissue such as brain cerebrum into slices. However, this prior device still has several limitations. A first of these is that in connection with high fiber containing tissue, which thus tends to be difficult to cut, such as brain stem or cerebellum, direct sliding cannot cut through the tough tissue thus resulting in low quality tissue slices. Also, the thinnest slices that can be cut with the sliding blade machine described in the above-identified prior Kong patent have a thickness of about 70 to 80 μm. This thickness of cut precludes the sliding blade machine from being used in histology studies which typically require slice thicknesses between 10 and 40 μm. 
+It will thus be seen that a need exists for a device for cutting fresh tissue slices and for a method of using such a device that overcomes the limitations of the presently existing procedures and apparatus. The method and device for cutting fresh tissue slices in accordance with the present invention provides such a device and method and is a substantial advance in the art. 
+ SUMMARY OF THE INVENTION 
+It is an object of the present invention to provide a device for use in cutting fresh tissue slices. 
+Another object of the present invention is to provide a vibrating blade microtome. 
+A further object of the present invention is to provide a vibrating sliding-blade microtome. 
+Yet another object of the present invention is to provide a method for using a vibrating, sliding-blade microtome to reduce tissue damage. 
+Still a further object of the present invention is to provide a vibrating, sliding-blade microtome that eliminates chattering in a Z—-axis direction. 
+Even yet another object of the present invention is to provide a vibrating, sliding-blade microtome which reduces mechanical trauma on tissue slices. 
+The method and device for cutting fresh tissue slices, in accordance with the present invention utilizes a vibrating microtome, in which the cutting blade vibrates in a generally horizontal direction, with a sliding blade mechanism that causes the blade to also travel in a diagonal X-Y axis direction. The vibrating sliding-blade microtome in accordance with the present invention also adheres the cutting blade to one surface of a blade holder in a procedure that substantially reduces bending and resultant chattering of the blade in the Z—-axis direction. The method and device in accordance with the present invention is particularly intended for use in the slicing of live or fixed tissue slices which are not hard or rigid. Such specimens are not embedded in paraffin and are not frozen. The vibrating sliding-blade microtome in accordance with the present invention cuts specimen slices that have substantially higher numbers of live/dead cell ratios than are capable of being obtained with prior art devices. Such a higher number of live/dead cell ratio is an indication of slice viability. 
+The vibrating, sliding-blade microtome in accordance with the present invention combines a transverse or back and forth, generally horizontal vibrating motion with a diagonal downward sliding motion. The resultant compound cutting blade movement has a substantial effect on the cutting efficiency of the vibrating sliding-blade microtome of the present invention. Whereas, in the prior art devices, the blade vibration amplitude had to be at least 0.6 mm, in the subject device, that amplitude can be as little as 0.1 mm. The specimen being cut is not compressed by the blade vibrating movement so that the cutting efficiency of the blades is increased, and the mechanical stress imparted to the specimen is reduced. 
+In contrast with prior art devices, the razor blade, or more typically, the half of a broken double-edged razor blade is glued onto a one piece blade holder. This allows the blade to be securely attached to the blade holder all along its length and at one side of the blade holder. The glue can extend to the edge of the blade holder and thus can extend to within 0.5 mm of the cutting edge of the razor blade. This forms a very rigid, uniform support for the thin razor blade and essentially eliminates blade edge wobble. In clamped blades, there are typically one or more clamping screws or the like. The blade is unevenly stressed and is subjected to blade edge wobble. The elimination of blade edge wobble by the use of the blade mounting through the use of adhesives of the present invention, in combination with the vibrating, sliding blade movement of the blade, essentially eliminates Z—-axis chatter, which is prevalent in prior devices. 
+In the present invention, the cutting plane is generally vertical, in contrast to the prior art devices, in which the cutting plane is typically horizontal. This means that there are not required the long vibrating arms which were common in prior devices. The vibrating arm can essentially be as short as the cutting stroke and is thus very light weight. The vibrating unit is mounted on a preloaded linear bearing so that the vibrating unit can move freely in the vibrating, horizontal or X direction with no component of movement, by itself in either of the Y or Z— axis directions. Very low wattage is required to move the vibrating element as compared to the higher levels of power required by prior vibrating microtomes. 
+The specimen to be sliced by the vibrating, sliding-blade microtome of the present invention is held in a specimen holder, as disclosed in detail in the prior Kong et al. U.S. Pat. No. 7,146,895. The combination of the specimen support structure and process, as described in the prior Kong et al. patent, together with the utilization of the vibrating, sliding-blade microtome of the present invention results in the preparation of extremely thin, sharply and accurately cut tissue specimens, particularly live tissue specimens. The slice viability, which is an important factor in the evaluation of a fresh, live tissue slice, is much greater than has been accomplishable using prior art devices. The live/dead cell ratio, which is a measurement of slice viability, is much greater in the present device, than has been the case when using traditional vibrating microtomes. 
+The method and device for cutting fresh tissue slices, in accordance with the present invention, overcomes a number of the significant limitations of the prior art devices. It is a substantial advance in the art. 
+ BRIEF DESCRIPTION OF THE DRAWINGS 
+A full and complete understanding of the method and device for cutting fresh tissue slices, in accordance with the present invention may be had by referring to the detailed description of the preferred embodiment, as is set forth subsequently, and as illustrated in the accompanying drawings, in which: 
+ FIG. 1 is a front elevation view of a vibrating sliding-blade microtome in accordance with the present invention; 
+ FIG. 2 is a side elevation view, partly in section, of the vibrating, sliding-blade microtome of FIG. 1 and showing a specimen being advanced in the specimen holder prior to its being sliced; 
+ FIG. 3 is a top plan view of a portion of the vibrating, sliding-blade microtome of the present invention and showing a micrometer drive assembly; and 
+ FIG. 4 is a bar graph depiction of live/dead cell ratios obtainable by use of the present invention and compared with the results obtainable using a prior art device. 
+ DESCRIPTION OF THE PREFERRED EMBODIMENT 
+Referring initially to FIG. 1 , there may be seen, generally at 10 a preferred embodiment of a vibrating sliding-blade microtome in accordance with the present invention. A generally planar base 12 supports a microtome assembly, generally at 14 , and a specimen holding assembly, generally at 16 . As will be discussed in detail shortly, the specimen holding assembly, generally at 16 , is utilized to support and hold a tissue specimen so that a thin slice of the tissue can be cut from the specimen for further analysis. The specimen holding assembly, generally at 16 , is similar, in overall structure and operation, to the specimen holding assembly described and depicted in the prior U.S. Pat. No. 7,146,895 in the names of the present applicants. As indicated above, the entire disclosure of that patent is expressly incorporated herein be reference. 
+As may be seen by referring to FIG. 2 , taken in conjunction with FIG. 1 , the specimen holding assembly, generally at 16 , includes a specimen receiving bath, generally at 20 which includes a bath front wall 22 , a bath rear wall 24 , left and right bath side walls 26 and 28 , as seen in FIG. 1 and a bath bottom 30 . The specimen receiving bath 20 thus is a fluid-tight receptacle into which can be placed a suitable saline solution 32 or any other fluid whose purpose will be to maintain the viability of a specimen slice that is deposited in the bath 20 by the action of the microtome assembly, generally at 14 , as will be discussed subsequently. 
+Referring again to FIG. 2 , a syringe tube 34 is insertable into an aperture 36 in the rear wall 24 of the specimen receiving bath, generally at 20 . A resilient O- ring 38 surrounds the bath aperture 36 and will prevent leakage of the saline solution 32 or other liquid out of the specimen receiving bath 20 while the syringe tube 34 is inserted through the aperture 36 . It will be apparent that the saline solution or other liquid solution 32 will be added to the bath only after the syringe tube 34 is in place and will be drained before the syringe tube 34 is removed. A syringe support base 40 is situated spaced behind, and generally parallel to the rear wall 24 of the specimen receiving bath. That base is provided with a base aperture 42 which is aligned with the bath rear wall aperture 36 . As may also be seen in FIG. 2 , the resilient O- ring 38 is sandwiched between the rear wall 24 of the specimen receiving bath 20 and a front wall 44 of the syringe support base 40 . 
+The syringe tube 34 is a generally cylindrical tube that is sized to receive a cooperating syringe plunger 50 . A leading face 52 of the syringe plunger 50 is adapted to have attached thereto a tissue specimen 54 which can be attached to the syringe leading face 52 by a suitable instantaneous adhesive or the like. Tissue specimen 54 will typically be encased in, or embedded in a low gel point agarose 56 . As may be seen in FIG. 2 , the syringe tube 34 has an outlet end 58 with a reduced diameter outlet lip 60 whose purpose is to provide some overcomable resistance to the passage of the tissue specimen 54 and its agarose encasement 56 out of the outlet end 58 of the syringe tube 34 . Clearly, the reduced diameter outlet lip 60 does not provide a complete barrier to the passage of the tissue specimen 54 and its embedding agarose 56 out of the syringe tube outlet end 58 . 
+The syringe tube 34 is also structured with an inlet end 62 which, in the present invention is sized to slidingly receive the syringe plunger 50 . A stop 64 is attached to the syringe tube 34 intermediate the syringe tube ends 58 and 62 respectively. Stop 64 is positioned so that it will abut a rear wall 66 of the syringe support base 40 . Stop 64 thus functions to ensure that the syringe tube 34 will extend into the saline solution 32 or other liquid in the specimen receiving bath 20 to a pre-determined, repeatable depth or position. This will aid in the aligning of the vibrating sliding-blade microtome with the outlet end 58 of the syringe tube 34 . 
+A micrometer drive, generally at 70 , is, as may be seen in FIGS. 2 and 3 , situated in a micrometer drive housing, generally at 72 . The micrometer drive housing 72 is, in turn, secured atop a micrometer drive housing carrier plate 74 which is slidable, in the directions indicated by the arrow A in FIG. 3 , along a micrometer drive housing linear slide 76 which is, in turn, secured to the base 12 by any suitable expedient. A micrometer 80 is situated atop a support pedestal 82 in the micrometer drive housing 72 and has a micrometer body 84 which carries a micrometer plunger 86 which passes through the micrometer drive housing 72 and through a mounting plate 88 attached to the micrometer drive housing 72 . A free end 90 of the micrometer plunger 86 is engagable with a syringe plunger outer face 92 . 
+A micrometer drive motor 96 is situated in the micrometer drive housing 72 and is preferably provided as a suitable electric stepper motor. Micrometer drive motor 96 has a micrometer motor drive gear 98 which supports a micrometer drive belt 100 that extends from the micrometer motor drive gear 98 to a micrometer drive gear 102 . Both of these drive gears 98 and 102 are externally toothed and engage interior teeth or cogs on the drive belt 100 . The micrometer drive motor 96 is very precisely controlled by a micrometer motor control 104 . That control can be actuated to rotate the micrometer drive stepper motor 96 a finite amount so that the micrometer plunger 86 , and specifically its free end 90 will engage the syringe plunger 50 and can advance it in the syringe tube 34 a defined amount. Such a defined amount of forward travel of the syringe plunger 50 will extrude a set length of the specimen 54 and embedding agarose 56 out of the reduced diameter outlet lip 60 of the syringe tube 34 so that it can be sliced off by the vibrating sliding-blade microtome and deposited in the saline solution 32 or the other suitable solution in the specimen receiving bath 20 where it can be removed for further processing. When it is necessary to remove the syringe plunger 50 out of the rear, inlet end 62 of the syringe tube 34 , the micrometer plunger 86 and its free end 90 can be retracted toward the micrometer drive housing 72 by reversal of the micrometer drive motor 96 . Once the micrometer plunger 86 has been so retracted, the micrometer drive housing 72 can be slid laterally on the micrometer drive housing slide 76 . If desired, suitable clamps, which are not specifically shown, can be used to hold the micrometer drive housing 72 in its operational position, and can be loosened to allow it to slide laterally to its non-use position. 
+Referring now again to FIG. 1 , the vibrating sliding-blade microtome assembly, generally at 14 , in accordance with the present invention, will be described in detail. It will be quite evident to those of skill in the art that the purpose of the microtome is to slice thin uniform viable tissue samples from the tissue specimen 54 embedded in the low gel point agarose 56 and extruded or forced out of the syringe outlet end 58 and restricted by the reduced diameter outlet lip 60 . The incremental advance of that tissue specimen 54 is accomplished by operation of the micrometer stepper drive motor 96 , under the control of the micrometer motor controller 104 . The proper embedding of the tissue specimen 54 in the low gel point agarose 56 and the cooperation of the syringe tube 34 , the reduced diameter outlet tip 60 and the provision and control of the micrometer stepper drive motor 96 will set up the tissue for its being sliced. However, if the microtome blade is not able to perform an effective cut, the accurate tissue specimen set-up and positioning is of no consequence. In the prior devices, as discussed above, the microtome blade has tended to chatter and to bend or deflect, has tended to compress the tissue instead of cutting it and has generally failed to provide very thin, reproducible tissue specimen slices of live or soft tissue. The vibrating sliding-blade microtome of the subject invention overcomes those limitations. 
+As may be seen most clearly in FIG. 1 , the vibrating sliding-blade microtome, generally at 14 , is comprised essentially of two distinct yet interacting components. The first of these is a diagonal sliding component, generally at 110 . The second is a horizontal vibrating component, generally at 112 . While the two components have separate features, they combine to much more effectively slice the tissue specimens 54 . 
+A support column 114 extends upwardly from the base 12 of the vibrating sliding-blade microtome, generally at 10 . This column 114 is depicted in FIG. 1 as being generally rectangular but need not have any specific shape so long as it has sufficient structural rigidity to support the two cooperating components 110 and 112 . A diagonal slide platform 116 is supported for diagonal movement along a diagonal slide rail 118 which is, in turn, secured to the support column 114 by suitable fasteners, such as the fastener bolts 120 depicted schematically in FIG. 1 . It will be understood that the diagonal slide platform 116 and the diagonal slide rail 118 will preferably have friction reducing components, such as linear bearings, low friction slide surfaces or the like so that the platform 116 will be able to slide easily along the slide rail 118 . It will also be understood that the angle of inclination of the diagonal slide rail 118 , with respect to a horizontal line, could be varied such as, for example, by providing arcuate slots in the support column 114 and having the fastener bolts 120 be received in those arcuate slots. This angle of inclination is preferably between 20° and 80°. Other angle adjusting expedients are within the purview of the subject invention. 
+A gear tooth rack 122 is attached to the lower edge of the diagonal slide platform 116 and is in gear mesh with a cooperating drive pinion 124 . That drive pinion is driven by a diagonal slide platform drive motor 126 which is preferably a stepper motor whose revolutions are accurally controllable by a slide platform drive motor controller 128 . A pair of Hall- Effect sensors 130 , 132 are situated adjacent first and second ends of the diagonal slide rail 118 . A suitable magnet 134 is affixed to the diagonal slide platform 116 . In operation, readings from the two Hall Effect sensors 130 , 132 are sent to the diagonal slide platform drive motor controller 128 and are usable to very accurately position the diagonal slide platform 116 . It will be understood that other similar control schemes could be used to accurately determine and control the position of the diagonal slide platform 116 along the diagonal slide rail 118 . It is important the platform 116 be capable of sliding in a diagonal direction, with respect to X and Y axes, as indicated by arrow B in FIG. 1 , and that its positioning and magnitude of slide travel be capable of being accurately controlled. 
+A support arm 140 is secured, at a first, attached end 142 , to the diagonal slide platform 116 by a suitable fastener, such as a bolt 144 . It will be understood that the bolt 144 is a schematic representation of any suitable fastening arrangement that could be used to attach the support arm 140 to the diagonal slide platform 116 . Since it is preferable that the support arm 140 be maintained generally horizontally, the fastening arrangement 144 could be adjustable so that the support arm 140 would remain horizontal with varying inclinations of the diagonal slide rail 118 . A second, free end 146 of the support arm 140 extends, in a cantilever fashion, over the specimen holding assembly, generally at 16 . It will be understood that the support arm 140 is depicted in the somewhat schematic illustration of the subject invention in FIG. 1 , as a generally rectangular member. In actuality, the support arm 140 could take any number of shapes so long as it has sufficient structural rigidity to accomplish its intended task, as will now be discussed. 
+A vibrating blade support 150 is carried by a pair of spaced blade support carriers 152 , 154 which are slidable horizontally along a blade support rail 156 . That blade support rail 156 is, in turn, bolted or otherwise fastened to the support arm 140 intermediate its ends 142 and 146 , as indicated schematically by bolts 158 . As was discussed in connection with the diagonal slide platform 116 and the diagonal slide rail 118 , the blade support carriers 152 and 154 , which may be a unified blade support carriage, and the blade support rail 156 may be provided with friction reducing elements, such as linear bearings, allow friction slide or other friction reducing components and the like. The result is that the vibrating blade support 150 is supported so that it will move or reciprocate very freely and easily in the horizontal or X-axis direction, as indicated by arrow C in FIG. 1 . A vibrating blade drive motor 160 is situated atop the support arm 140 generally adjacent the free, unsupported second end 146 of that support arm 140 . That vibrating blade drive motor 160 is typically also an electric motor and is controlled by the same motor controller 128 which also controls the diagonal slide platform drive motor 126 . Coordination between the two motors 126 and 160 is thus assured through the provision of the common controller 128 . A drive wheel 162 is driven by this motor 160 and is provided with an eccentrically situated drive pin 164 . That drive pin is received in a first end 166 of a resilient or spring steel connector link 168 . A second end 170 of this connector link 168 is carried by a blade support drive pin 172 . As indicated schematically in FIG. 1 both ends 166 and 170 of the resilient or spring steel connector link 168 may be provided with suitable bearing assemblies, generally at 174 , which bearing assemblies aid in the support and connection of the connector link 168 . 
+Actuation of the vibrating blade drive motor 160 will cause the drive wheel 162 to rotate at a relatively high rate of speed. The eccentric location of the drive pin 164 will cause the connector link 168 to reciprocate. This reciprocatory motion of the connector link 168 is translated into a horizontal vibration of the vibrating blade support 150 in the direction indicated by arrow C in FIG. 1 . 
+A cutting blade, generally at 180 , is attached to a blade holder, generally at 182 , as seen in FIG. 1 , and as is also seen in greater detail in FIG. 2 . The cutting blade 180 has an elongated blade edge 184 and a blade body 186 . Typically, the cutting blade 180 is one half of a double-edged razor blade. The blade body 186 has a top edge 188 and a blade side 190 . The blade holder 182 is generally in the shape of an inverted T, as seen in FIG. 1 and includes a blade holder bar 192 which is attached, generally at its mid-point to a blade holder leg 194 . As seen in FIG. 2 , the blade holder bar 192 has a horizontal ridge 196 which acts as an abutment which will be engaged by the upper edge 188 of the blade body 186 . The blade cutting edge 184 extends below a lower edge 198 of the blade holder bar 192 . In use, the cutting blade 180 is attachable to the blade holder bar 192 by the use of a suitable adhesive which will be applied to the entire length of the blade holder bar 192 , below the ridge 196 thereof and to the cutting blade side 190 . The cutting blade 180 will be adhesively attached to the blade holder bar 192 so that its cutting edge 184 protrudes below the blade holder bar lower edge 198 by a distance of approximately 1 mm. This support of the cutting blade 180 by the cutting blade holder 182 prevents the cutting blade 180 from bending or flexing, as typically happens with blades attached to holders only in several spaced locations. 
+Referring again to FIG. 1 , an upper end 200 of the blade holder leg 194 is pivotally supported by a blade holder support rod 202 . That blade holder support rod 202 is situated adjacent a lower end 204 of the vibrating blade support 150 . A suitable securement assembly, such as a clamping screw, a set screw, or the like is provided, either at the juncture of the blade holder leg 194 and the rod 202 , or at the juncture of the rod 202 and the lower end 204 of the vibrating blade support 150 so that an angle of inclination of the cutting blade 180 can be varied over an arc D, with respect to the end of the specimen to be sliced, as depicted in FIG. 2 . 
+In operation of the vibrating, sliding-blade microtome, in accordance with the present invention, a tissue specimen 54 is secured to the syringe leading face 52 and is embedded in a suitable low gel point agarose 56 . The syringe plunger 50 is inserted into the syringe barrel or tube 34 , from the inlet end 62 . The now assembled syringe is inserted into the aligned apertures of the bath rear wall 24 and of the syringe support base 40 . Once this has been done, the specimen receiving bath 20 can be filled with a suitable saline solution 32 or other similar sample receiving medium. The micrometer drive 70 , which had been slid out of the way or out of alignment with the aligned apertures 36 and 42 , is now slid along the micrometer drive housing linear slide 76 until the micrometer plunger 86 , and specifically its free end 90 , is aligned with the syringe plunger outer face 92 . At this point, the micrometer drive motor 96 with its controller 104 , which is in connection with the controller 128 for the diagonal sliding platform drive motor 126 and the vibrating blade drive motor 160 , is actuated to advance the tissue specimen 54 out through the reduced diameter outlet lip 60 of the syringe tube 34 . 
+The diagonal slide platform 116 is caused to move down and to the right, as seen in FIG. 1 , in the direction of the arrow B. At the same time, the cutting blade 180 is caused to vibrate horizontally in the direction of the arrow C. The compound sliding and vibrating motion of the cutting blade 180 is effective to slice a first tissue slice off the tissue specimen 54 . That first slice will typically be discarded because its outer surface, the surface not newly formed by the blade 180 , will not be even. Subsequent slices, which are obtained by the steps of advancing the syringe plunger 50 and by the vibrating and diagonally sliding movement of the cutting blade 180 , are much more uniform in thickness and can be retrieved from the saline solution 32 for further processing. 
+In the vibrating and sliding-blade microtome in accordance with the present invention, the cycle time is substantially reduced from that which is possible using only a vibrating blade microtome. In addition, the slice thickness is much more uniform than has been possible in prior devices. The Hall Effect sensors 130 and 132 limit the travel of the diagonal slide platform 116 so that there is no unnecessary platform travel. The short vibrating strokes imparted to the vibrating blade support 150 are very efficient and again reduce specimen cutting or slicing time. The cutting edge 184 of the cutting blade 180 moves in a plane, indicated by dashed lines in FIG. 2 , which is parallel to the plane of the decreased diameter lip 60 of the syringe tube 34 , the specimen slices are thus sliced clearly, quickly and with an accurately and controllable thickness. 
+One effective measure of the viability of a specimen slice is a ratio of live to dead cells. The higher the ratio; i.e. the greater number of live cells there are for each dead cell, is an excellent measure of slice viability. As may be seen in FIG. 4 , the slice viability 206 of slices prepared using the vibrating, sliding-blade microtome in accordance with the present invention, as a ratio of live/dead cells, is much better than a ratio 208 obtained using a prior vibrating microtome. The vibrating, sliding-blade microtome, in accordance with the present invention is thus clearly far superior to the products which are currently available. 
+While a preferred embodiment of a method and device for cutting fresh tissue slices, in accordance with the present invention has been set forth fully and completely hereinabove, it will be apparent to one of skill in the art that various changes in, for example, the nature of the specimen slice receiving bath, the specifics of the several drive motors and their controllers, the specific adhesive used to secure the cutting blade to the blade holder, and the like could be made without departing from the true spirit and scope of the present invention, which is accordingly to be limited only by the following claims. 
+Claims ( 14 ) 
+1. A method for cutting a slice of a specimen tissue comprising the steps of:
+providing a base and a specimen holder attachable to said base, said specimen holder including:
+a diagonal slide carriage on said base, said diagonal slide carriage being supported for movement diagonally with respect to said specimen holder, wherein the diagonal slide carriage includes a movable diagonal slide platform and a diagonal slide rail and further includes a diagonal slide platform drive motor; 
+a support arm on said diagonal slide carriage and movable with said diagonal slide carriage; 
+a vibrating blade support on said support arm and movable horizontally with respect to said specimen holder; and 
+a specimen cutting blade on said vibrating blade support, said specimen cutting blade being movable in a compound diagonal and vibrating movement with respect to said specimen holder; 
+attaching a specimen to be sliced to said specimen holder; 
+supporting said specimen cutting blade for horizontal vibrating movement and for diagonal sliding movement with respect to said specimen holder; 
+extending a free end of said specimen from said specimen holder; and 
+severing a slice of said specimen by vibrating and diagonally sliding said specimen cutting blade with respect to said specimen. 
+2. The method of claim 1 further including providing a vibrating blade drive motor and using said vibrating blade drive motor for effecting said horizontal vibrating movement of said specimen cutting blade. 
+3. A device for cutting specimen slices comprising:
+a base; 
+a specimen holder attachable to said base; 
+a diagonal slide carriage on said base, said diagonal slide carriage being supported for movement diagonally with respect to said specimen holder, wherein the diagonal slide carriage includes a movable diagonal slide platform and a diagonal slide rail and further includes a diagonal slide platform drive motor; 
+a support arm on said diagonal slide carriage and movable with said diagonal slide carriage; 
+a vibrating blade support on said support arm and movable horizontally with respect to said specimen holder; and 
+a cutting blade on said vibrating blade support, said cutting blade being movable in a compound diagonal and vibrating movement with respect to said specimen holder. 
+4. The device of claim 3 further including a rack on said diagonal slide platform and a coacting pinion on said diagonal slide platform drive motor. 
+5. The device of claim 3 further including a motor controller for said diagonal slide platform drive motor. 
+6. The device of claim 5 further including spaced Hall Effect sensors on said base and a magnet on said diagonal slide platform, said Hall Effect sensors being connected to said motor controller. 
+7. The device of claim 3 further including a vibrating support drive motor on said support arm. 
+8. The device of claim 7 further including an eccentric drive on said vibrating blade support drive motor. 
+9. The device of claim 7 further including a connecting link between said vibrating blade support drive motor eccentric drive and said vibrating blade support. 
+10. The device of claim 9 wherein said connecting link is spring steel. 
+11. The device of claim 3 further including a vibrating blade support carriage connecting said vibrating blade support and said support arm. 
+12. The device of claim 11 further including a vibrating blade support rail secured to said support arm and supporting said vibrating blade support carriage. 
+13. The device of claim 3 further including a blade holder on said vibrating blade support. 
+14. The device of claim 13 further including a horizontal ridge on said blade holder and adapted to define a location for the attachment of a cutting blade to said blade holder. 
+ US12/310,519 
+ 2006-09-06 
+ 2007-05-22 
+ Method and device for cutting fresh tissue slices 
+ Active 
+ 2028-06-20 
+ US8109184B2 
+ ( en )
+Priority Applications (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US12/310,519 
+ US8109184B2 
+ ( en )
+ 2006-09-06 
+ 2007-05-22 
+ Method and device for cutting fresh tissue slices 
+Applications Claiming Priority (3) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US84238606P 
+ 2006-09-06 
+ 2006-09-06 
+ PCT/US2007/012120 
+ WO2008030279A2 
+ ( en )
+ 2006-09-06 
+ 2007-05-22 
+ Method and device for cutting fresh tissue slices 
+ US12/310,519 
+ US8109184B2 
+ ( en )
+ 2006-09-06 
+ 2007-05-22 
+ Method and device for cutting fresh tissue slices 
+Publications (2) 
+ Publication Number 
+ Publication Date 
+ US20100175520A1 
+ US20100175520A1
+ ( en )
+ 2010-07-15 
+ US8109184B2 
+ true 
+ US8109184B2
+ ( en )
+ 2012-02-07 
+Family 
+ID=39157726 
+Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US12/310,519 
+ Active 
+ 2028-06-20 
+ US8109184B2 
+ ( en )
+ 2006-09-06 
+ 2007-05-22 
+ Method and device for cutting fresh tissue slices 
+Country Status (6) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US8109184B2 
+ ( en )
+ EP 
+ ( 1 )
+ EP2059373A4 
+ ( en )
+ JP 
+ ( 1 )
+ JP2010502983A 
+ ( en )
+ CN 
+ ( 1 )
+ CN101500767B 
+ ( en )
+ CA 
+ ( 1 )
+ CA2661866A1 
+ ( en )
+ WO 
+ ( 1 )
+ WO2008030279A2 
+ ( en )
+Cited By (3) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20120055300A1 
+ ( en )
+ * 
+ 2009-09-15 
+ 2012-03-08 
+ Jian-Qiang Kong 
+ Microtome 
+ US20140345433A1 
+ ( en )
+ * 
+ 2013-05-22 
+ 2014-11-27 
+ Daniel Studer 
+ Device for Transferring Section Ribbon to Specimen Holder for Transmission Electron Microscopy, and Method for its Use 
+ US20200011767A1 
+ ( en )
+ * 
+ 2018-07-06 
+ 2020-01-09 
+ Precisionary Instruments LLC 
+ Reciprocating Microtome 
+Families Citing this family (27) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ KR20110032122A 
+ ( en )
+ * 
+ 2009-09-22 
+ 2011-03-30 
+ 주식회사 메디슨 
+ 3D probe device
+ FI20105012A0 
+ ( en )
+ * 
+ 2010-01-08 
+ 2010-01-08 
+ Pekka Salmi 
+ Cutter for cutting tiles or similar
+ US8839700B2 
+ ( en )
+ * 
+ 2010-06-23 
+ 2014-09-23 
+ Tissuevision, Inc. 
+ Oscillating microtome with flexure drive 
+ GB201109999D0 
+ ( en )
+ * 
+ 2011-06-14 
+ 2011-07-27 
+ Imec 
+ Sample holder 
+ JP6013142B2 
+ ( en )
+ * 
+ 2012-11-08 
+ 2016-10-25 
+ サクラファインテックジャパン株式会社 
+ Thin section preparation equipment
+ US10054518B2 
+ ( en )
+ 2013-11-05 
+ 2018-08-21 
+ Howard Hughes Medical Institute 
+ Sectioning volume samples 
+ US9649773B2 
+ ( en )
+ * 
+ 2014-08-12 
+ 2017-05-16 
+ Berran Industrial Group, Inc. 
+ Device and method for cutting hollow, thin-walled objects 
+ CN104729874B 
+ ( en )
+ * 
+ 2015-03-23 
+ 2017-08-01 
+ 武汉沃亿生物有限公司 
+ A kind of high-precision vibratome 
+ KR101706565B1 
+ ( en )
+ * 
+ 2015-12-01 
+ 2017-02-14 
+ 주식회사 포스코 
+ Cutting apparatus for test specimen 
+ US11073447B2 
+ ( en )
+ * 
+ 2016-03-31 
+ 2021-07-27 
+ Agilent Technologies, Inc. 
+ Apparatus and methods for transferring a tissue section 
+ CN105806864A 
+ ( en )
+ * 
+ 2016-06-02 
+ 2016-07-27 
+ 甘肃农业大学 
+ Method for directly observing salt contents of different tissues of halogeton glomeratus 
+ CN108340415A 
+ ( en )
+ * 
+ 2017-01-23 
+ 2018-07-31 
+ 上海电缆研究所有限公司 
+ Small line footpath cable insulating sheath slicing device 
+ US20190242790A1 
+ ( en )
+ * 
+ 2018-02-07 
+ 2019-08-08 
+ Nanotronics Imaging, Inc. 
+ Methods and Apparatuses for Cutting Specimens for Microscopic Examination 
+ CN108908430B 
+ ( en )
+ * 
+ 2018-06-28 
+ 2023-08-18 
+ 灌云县三星食品有限公司 
+ Production cutting equipment 
+ CN109530292B 
+ ( en )
+ * 
+ 2018-12-08 
+ 2024-01-09 
+ 亳州市国臻堂中药饮片股份有限公司 
+ A wash peeling apparatus for chinese herbal medicine preparation 
+ GB201901887D0 
+ ( en )
+ * 
+ 2019-02-11 
+ 2019-04-03 
+ Cardiovalve Ltd 
+ Device for conditioning ex vivo pericardial tissue 
+ CN110243851B 
+ ( en )
+ * 
+ 2019-05-31 
+ 2022-05-27 
+ 南京农业大学 
+ Plant sample processing method for X-ray instrument element scanning 
+ KR102304036B1 
+ ( en )
+ * 
+ 2019-11-27 
+ 2021-09-17 
+ 울산과학기술원 
+ Serial block-face optical coherence microscopy 
+ CN112197994A 
+ ( en )
+ * 
+ 2020-10-16 
+ 2021-01-08 
+ 上海旺泰客科学仪器有限责任公司 
+ A fully automatic vibrating slicer
+ CN112649221B 
+ ( en )
+ * 
+ 2021-01-06 
+ 2022-09-27 
+ 舒城吉特育乐用品有限公司 
+ Wood raw material moisture content check out test set 
+ CN112536470A 
+ ( en )
+ * 
+ 2021-01-14 
+ 2021-03-23 
+ 马鞍山锲恒精密组件科技有限公司 
+ Efficient cutting device for precise metal component 
+ CN112936373B 
+ ( en )
+ * 
+ 2021-02-01 
+ 2022-06-24 
+ 湖北职业技术学院 
+ Molecular pathology is section device for experiment 
+ MX2021004786A 
+ ( en )
+ * 
+ 2021-04-26 
+ 2022-10-27 
+ Jesus Raul Beltran Ramirez 
+ ASSEMBLY APPARATUS TO PERFORM PARAFFINATION AND CUTTING HISTOLOGICAL SAMPLES.
+ CN113319899B 
+ ( en )
+ * 
+ 2021-06-24 
+ 2025-12-30 
+ 苏州优尼普瑞精密仪器有限责任公司 
+ A fully automatic microtome for embedding sectioning
+ CN116296687B 
+ ( en )
+ * 
+ 2023-03-31 
+ 2024-09-10 
+ 中国中医科学院医学实验中心 
+ Tissue sample preparation device and application thereof 
+ CN116448479B 
+ ( en )
+ * 
+ 2023-04-14 
+ 2024-01-16 
+ 中国人民解放军总医院第三医学中心 
+ Automatic slicing device for general sampling of pathology biopsy 
+ CN116945436B 
+ ( en )
+ * 
+ 2023-07-25 
+ 2026-04-21 
+ 中国科学院电工研究所 
+ A mold for ex vivo mouse brain slices with a special angle and its design method
+Citations (11) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US3828641A 
+ ( en )
+ 1971-11-12 
+ 1974-08-13 
+ Reichert Optische Werke Ag 
+ Apparatus for adjusting the elevation of a specimen in microtomes, particularly ultramicrotomes 
+ JPS57100335A 
+ ( en )
+ 1980-12-15 
+ 1982-06-22 
+ Isamu Tamura 
+ Microtome 
+ US5181443A 
+ ( en )
+ * 
+ 1990-04-11 
+ 1993-01-26 
+ Hellmuth Sitte 
+ Device for controlling the drive and forward feed of microtomes, particularly ultramicrotomes 
+ US5226335A 
+ ( en )
+ 1990-04-11 
+ 1993-07-13 
+ Hellmuth Sitte 
+ Automatic initial-cutting device for microtomes, particularly ultramicrotomes 
+ US5865081A 
+ ( en )
+ * 
+ 1995-03-27 
+ 1999-02-02 
+ Sakura Finetek U.S.A., Inc. 
+ Anti-roll rake 
+ US5906148A 
+ ( en )
+ 1997-01-10 
+ 1999-05-25 
+ Chuo Precision Industrial Co., Ltd. 
+ Microtome having vibration dampening and micro-feeding mechanism 
+ US6209437B1 
+ ( en )
+ * 
+ 1994-08-15 
+ 2001-04-03 
+ Micron Laborgerate Gmbh 
+ Microtome 
+ US6619173B2 
+ ( en )
+ 2001-08-07 
+ 2003-09-16 
+ Masco Corporation Taylor 
+ Vibratory fiber chopper 
+ WO2003093799A1 
+ ( en )
+ 2002-04-27 
+ 2003-11-13 
+ Ruprecht-Karls-Universität Heidelberg 
+ Device for slicing a sample 
+ US6651538B2 
+ ( en )
+ * 
+ 2001-11-30 
+ 2003-11-25 
+ Dosaka Em Co., Ltd. 
+ Microtome 
+ US7146895B2 
+ ( en )
+ 2004-10-21 
+ 2006-12-12 
+ Kong George Y 
+ Sliding blade microtome 
+Family Cites Families (2) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ JP2589394B2 
+ ( en )
+ * 
+ 1990-02-27 
+ 1997-03-12 
+ フェザー安全剃刀株式会社 
+ Microtome
+ CN1172173C 
+ ( en )
+ * 
+ 2001-07-26 
+ 2004-10-20 
+ 清华大学 
+ Single cell sample microdissection method and system thereof
+ 2007 
+ 2007-05-22 
+ EP 
+ EP07795144A 
+ patent/EP2059373A4/en 
+ not_active 
+ Withdrawn 
+ 2007-05-22 
+ JP 
+ JP2009527340A 
+ patent/JP2010502983A/en 
+ active 
+ Pending 
+ 2007-05-22 
+ WO 
+ PCT/US2007/012120 
+ patent/WO2008030279A2/en 
+ not_active 
+ Ceased 
+ 2007-05-22 
+ CN 
+ CN2007800278621A 
+ patent/CN101500767B/en 
+ active 
+ Active 
+ 2007-05-22 
+ CA 
+ CA 2661866 
+ patent/CA2661866A1/en 
+ not_active 
+ Abandoned 
+ 2007-05-22 
+ US 
+ US12/310,519 
+ patent/US8109184B2/en 
+ active 
+ Active 
+Patent Citations (11) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US3828641A 
+ ( en )
+ 1971-11-12 
+ 1974-08-13 
+ Reichert Optische Werke Ag 
+ Apparatus for adjusting the elevation of a specimen in microtomes, particularly ultramicrotomes 
+ JPS57100335A 
+ ( en )
+ 1980-12-15 
+ 1982-06-22 
+ Isamu Tamura 
+ Microtome 
+ US5181443A 
+ ( en )
+ * 
+ 1990-04-11 
+ 1993-01-26 
+ Hellmuth Sitte 
+ Device for controlling the drive and forward feed of microtomes, particularly ultramicrotomes 
+ US5226335A 
+ ( en )
+ 1990-04-11 
+ 1993-07-13 
+ Hellmuth Sitte 
+ Automatic initial-cutting device for microtomes, particularly ultramicrotomes 
+ US6209437B1 
+ ( en )
+ * 
+ 1994-08-15 
+ 2001-04-03 
+ Micron Laborgerate Gmbh 
+ Microtome 
+ US5865081A 
+ ( en )
+ * 
+ 1995-03-27 
+ 1999-02-02 
+ Sakura Finetek U.S.A., Inc. 
+ Anti-roll rake 
+ US5906148A 
+ ( en )
+ 1997-01-10 
+ 1999-05-25 
+ Chuo Precision Industrial Co., Ltd. 
+ Microtome having vibration dampening and micro-feeding mechanism 
+ US6619173B2 
+ ( en )
+ 2001-08-07 
+ 2003-09-16 
+ Masco Corporation Taylor 
+ Vibratory fiber chopper 
+ US6651538B2 
+ ( en )
+ * 
+ 2001-11-30 
+ 2003-11-25 
+ Dosaka Em Co., Ltd. 
+ Microtome 
+ WO2003093799A1 
+ ( en )
+ 2002-04-27 
+ 2003-11-13 
+ Ruprecht-Karls-Universität Heidelberg 
+ Device for slicing a sample 
+ US7146895B2 
+ ( en )
+ 2004-10-21 
+ 2006-12-12 
+ Kong George Y 
+ Sliding blade microtome 
+Non-Patent Citations (1) 
+ * Cited by examiner, † Cited by third party 
+ Title 
+ King, Marcus J., " Slicing frozen meat with oscillating knife. " Meat Science, vol. 51, 1999, pp. 251-269. 
+Cited By (5) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20120055300A1 
+ ( en )
+ * 
+ 2009-09-15 
+ 2012-03-08 
+ Jian-Qiang Kong 
+ Microtome 
+ US8635934B2 
+ ( en )
+ * 
+ 2009-09-15 
+ 2014-01-28 
+ Jian-Qiang Kong 
+ Microtome 
+ US20140345433A1 
+ ( en )
+ * 
+ 2013-05-22 
+ 2014-11-27 
+ Daniel Studer 
+ Device for Transferring Section Ribbon to Specimen Holder for Transmission Electron Microscopy, and Method for its Use 
+ US9623581B2 
+ ( en )
+ * 
+ 2013-05-22 
+ 2017-04-18 
+ Daniel Studer 
+ Device for transferring section ribbon to specimen holder for transmission electron microscopy, and method for its use 
+ US20200011767A1 
+ ( en )
+ * 
+ 2018-07-06 
+ 2020-01-09 
+ Precisionary Instruments LLC 
+ Reciprocating Microtome 
+Also Published As 
+ Publication number 
+ Publication date 
+ JP2010502983A 
+ ( en )
+ 2010-01-28 
+ CN101500767B 
+ ( en )
+ 2010-12-15 
+ CA2661866A1 
+ ( en )
+ 2008-03-13 
+ EP2059373A4 
+ ( en )
+ 2011-06-01 
+ WO2008030279A3 
+ ( en )
+ 2008-08-07 
+ US20100175520A1 
+ ( en )
+ 2010-07-15 
+ EP2059373A2 
+ ( en )
+ 2009-05-20 
+ WO2008030279A2 
+ ( en )
+ 2008-03-13 
+ CN101500767A 
+ ( en )
+ 2009-08-05 
+Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ US20100175520A1 
+ ( en )
+ 2010-07-15 
+ Method and device for cutting fresh tissue slices 
+ US8635934B2 
+ ( en )
+ 2014-01-28 
+ Microtome 
+ US7146895B2 
+ ( en )
+ 2006-12-12 
+ Sliding blade microtome 
+ US5282404A 
+ ( en )
+ 1994-02-01 
+ Microtome with micro-plane and electric contact reference 
+ US6041686A 
+ ( en )
+ 2000-03-28 
+ Microtome having an oscillating blade 
+ EP2586204B1 
+ ( en )
+ 2020-08-05 
+ Oscillating microtome with flexure drive 
+ US5379633A 
+ ( en )
+ 1995-01-10 
+ Measurement of cutting edge sharpness 
+ US5148729A 
+ ( en )
+ 1992-09-22 
+ Biological tissue slicer 
+ CN103575563B 
+ ( en )
+ 2017-12-29 
+ Slicer with linear piezoelectric actuator 
+ Mohammed et al. 
+ 2012 
+ Microtomes and microtome knives 
+ CN213068248U 
+ ( en )
+ 2021-04-27 
+ Sample section device for biological detection 
+ US3440913A 
+ ( en )
+ 1969-04-29 
+ Microtome 
+ CN210665017U 
+ ( en )
+ 2020-06-02 
+ Bridge expansion joint detection device 
+ CN111141543B 
+ ( en )
+ 2022-07-05 
+ Pathological microtome for tissue embryology 
+ CN109175538A 
+ ( en )
+ 2019-01-11 
+ A kind of metal tube high efficiency cutting equipment 
+ CN212134274U 
+ ( en )
+ 2020-12-11 
+ Special automatic freezing slicer device of pathology department 
+ CN221350577U 
+ ( en )
+ 2024-07-16 
+ Vibrating microtome platform
+ CN112197994A 
+ ( en )
+ 2021-01-08 
+ A fully automatic vibrating slicer
+ DE102015012098A1 
+ ( en )
+ 2017-03-16 
+ Apparatus for holding slides for sawing samples attached thereto
+ DE10218927C1 
+ ( en )
+ 2003-11-13 
+ Device for making sample cuts
+ CN112557232B 
+ ( en )
+ 2024-10-29 
+ Sharpness test device for special-shaped blades
+ RU11341U1 
+ ( en )
+ 1999-09-16 
+ MICROTOME
+ CN224163388U 
+ ( en )
+ 2026-04-24 
+ A pathological slide sampling device
+ CN218524949U 
+ ( en )
+ 2023-02-24 
+ Linear large-stroke adjusting mechanism of microscope 
+ Wallin et al. 
+ 1985 
+ A simplified procedure for preparation of undecalcified human bone sections 
+Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2012-01-18 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 
+ 2015-02-09 
+ FPAY 
+ Fee payment 
+ Year of fee payment :
+ 4 
+ 2019-09-30 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ MAINTENANCE FEE REMINDER MAILED (ORIGINAL EVENT CODE: REM.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2019-11-17 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ 7.5 YR SURCHARGE - LATE PMT W/IN 6 MO, SMALL ENTITY (ORIGINAL EVENT CODE: M2555); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2019-11-17 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 8TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2552); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Year of fee payment :
+ 8 
+ 2023-02-07 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 12TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2553); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Year of fee payment :
+ 12 

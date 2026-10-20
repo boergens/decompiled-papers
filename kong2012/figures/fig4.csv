@@ -1,0 +1,14 @@
+# FIG. 4 of US 8,109,184 B2 (drawing sheet 4, PDF page 5): bar graph of live/dead cell ratios, two bars
+# columns: series = what the bar stands for (from the description: 206 = slices prepared with the vibrating,
+#   sliding-blade microtome of the invention, 208 = a prior vibrating microtome); numeral = the reference numeral
+#   printed at the bar; fill = how the bar is drawn; value = bar height (live/dead cell ratio, the y axis,
+#   no unit); err_high = length of the error bar above the bar top (ratio units; no bar below the top is drawn);
+#   mark = the asterisk printed above bar 206 (its meaning is not stated in the patent)
+# provenance: tier 3, digitized from the 300-ppi bilevel scan of the sheet (figures/fig4_extract.py); axis
+#   calibrated on the five printed ticks 0, 2, 4, 6, 8 by a least-squares line; the printed ticks are unevenly
+#   spaced (fit residual 0.10 ratio units), so the uncertainty is about +-0.1 ratio units (the line widths alone
+#   would give +-0.02)
+# the x axis has no labels or ticks: the bars are categories, left = 206, right = 208
+series,numeral,fill,value,err_high,mark
+"vibrating, sliding-blade microtome (present invention)",206,open,6.15,0.73,*
+prior vibrating microtome,208,hatched,1.17,0.19,

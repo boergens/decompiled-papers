@@ -1,0 +1,12 @@
+kong2012: Kong, Jian-Qiang & Kong, George Y. (2012). Method and device for cutting fresh tissue slices. US patent 8,109,184 B2, filed 2007-05-22
+(application 12/310,519, priority 2006-09-06), granted 2012-02-07.
+Files (fetched 2026-10-20 by the oct-20-compresstome session):
+  US8109184B2.pdf                 USPTO full-text image PDF, 11 pp., no text layer (pdffonts: none; one image per page). Scan-type: needs OCR.
+                                  from https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8109184 (curl, HTTP 200)
+  US8109184B2.google_patents.txt  the text of https://patents.google.com/patent/US8109184B2/en (HTML stripped, curl, same day):
+                                  bibliographic data, abstract, description, claims; use as the OCR second opinion, the PDF image is authoritative.
+Licence: US patent publication (USPTO); no copyright notice in the text.
+Why: this is the Compresstome patent: a specimen embedded in low-gel-point agarose in a syringe tube with a plunger, extruded through
+"a reduced diameter outlet lip" and sliced by a vibrating sliding blade parallel to the lip (description; the claims cover the blade carriage).
+Precisionary's site calls this "patented compression technology". Obtained for the Compresstome-on-large-brains question
+(~/ephemeral/oct_20_compresstome/README.md).
