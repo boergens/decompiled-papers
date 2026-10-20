@@ -55,7 +55,7 @@ import pymupdf
 #              1-bit page images >= 50 % of the page are scans, not figures; short repeated lines
 #              (footers with page numbers) count as repeated; \\rotatebox/\\scalebox arguments
 #              dropped; --exclude and --figure-box.
-VERSION = "2026-10-17j"
+VERSION = "2026-10-20a"
 
 LIG = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl", "ß": "ss", "æ": "ae", "œ": "oe",
        "ø": "o", "ł": "l", "đ": "d", "ð": "d", "þ": "th", "ı": "i"}
@@ -120,6 +120,9 @@ def vector_figure_boxes(page, gap=6.0, min_paths=15, min_area=3000.0):
 LIGATURE_FONT = str.maketrans({"W": "fi", "X": "fl", "V": "ff", "Y": "ffi"})
 
 
+FIG_MARGIN = 20.0  # pt around each figure box within which unmatched text counts as printed inside the figure
+
+
 def pdf_tokens(paths, pages_sel=None, drop_line_numbers=False, exclude=None, figure_box=None):
     """Tokens of the PDFs in reading order, the page of each, whether it is text printed inside a
     figure (a line whose centre lies on an embedded image that is not a page scan), and a line id."""
@@ -167,7 +170,9 @@ def pdf_tokens(paths, pages_sel=None, drop_line_numbers=False, exclude=None, fig
                     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
                     if any(r.x0 <= cx <= r.x1 and r.y0 <= cy <= r.y1 for r in exclude.get(gpage, [])):
                         continue
-                    f = any(r.x0 <= cx <= r.x1 and r.y0 <= cy <= r.y1 for r in figs)
+                    # in-figure: the line's box overlaps a figure box grown by FIG_MARGIN (axis labels and rotated
+                    # y labels sit up to ~17 pt outside the raster; measured on xu2021 p.2, pesce2022 p.3, 2026-10-20)
+                    f = any(x0 <= r.x1 + FIG_MARGIN and x1 >= r.x0 - FIG_MARGIN and y0 <= r.y1 + FIG_MARGIN and y1 >= r.y0 - FIG_MARGIN for r in figs)
                     toks += t
                     pages += [f"{path.rsplit('/', 1)[-1]} p.{i + 1}"] * len(t)
                     infig += [f] * len(t)

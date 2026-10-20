@@ -1,0 +1,13 @@
+# Pesce et al. 2022 Commun Biol 5:447, Supplementary Fig. 10a (supplement p. 11): structural similarity index (SSIM, y axis
+#   'SSIM index', 0-1) between high-resolution images of SST-immunoreactive neurons after clearing and after stripping;
+#   mean + SD bar (error bar upward only) and the 3 individual values (caption: mean +- SD, N = 3).
+# Columns: row_type = 'bar' or 'point'; label = x label as printed ('SST neurons'); bar rows: mean, sd, n_points;
+#   point rows: point_index (0-based, left to right) and value.
+# Provenance: tier 2, vector paths in the PDF, exact up to the PDF's precision (0.01 pt = 0.00009 SSIM). y axis calibrated on the 6 labelled major ticks 0,0 ... 1,0 (linear); max residual 0.0001.
+# Note: the PDF carries hidden text under white boxes (an earlier x label 'A' and a smaller 'SSIM index'); the visible
+#   labels are 'SST neurons' and 'SSIM index'.
+row_type,label,mean,sd,n_points,point_index,value
+bar,SST neurons,0.8967,0.0634,3,,
+point,SST neurons,,,,0,0.8802
+point,SST neurons,,,,1,0.9603
+point,SST neurons,,,,2,0.8502

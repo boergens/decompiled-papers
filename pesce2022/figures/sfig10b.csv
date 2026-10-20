@@ -1,0 +1,18 @@
+# Pesce et al. 2022 Commun Biol 5:447, Supplementary Fig. 10b (supplement p. 11): tortuosity (torsional index d/D, y axis
+#   'Tortuosity') of N = 6 individual SST branches measured post-clearing (grey squares) and after stripping (red squares);
+#   each row is one branch (the two values are joined by a line in the figure). Bracket 'N.S.' = not significant.
+# Columns: pair_index (0-based, ordered by decreasing post-clearing value); post_clearing; stripping (dimensionless).
+# Provenance: tier 2, vector paths in the PDF (square marker centres; pairing from the line segments, which join the
+#   square centres), exact up to the PDF's precision (0.01 pt = 0.00002). y axis calibrated on the 6
+#   labelled major ticks 1,00 ... 1,25 (linear); max residual 2.6e-05.
+# Note: the PDF carries hidden text under white boxes: earlier x labels 'SST - Post Clearing' / 'SST - Post Stripping'
+#   and a smaller 'Tortuosity'; the visible labels are 'Post-clearing' and 'Stripping'. The caption calls both image
+#   sets 'red' ('post-clearing (red) and after stripping (red)'); in the figure the stripping images/markers are red and
+#   the post-clearing markers grey.
+pair_index,post_clearing,stripping
+0,1.1800,1.1100
+1,1.0900,1.2300
+2,1.0800,1.0600
+3,1.0701,1.0200
+4,1.0400,1.0701
+5,1.0200,1.0400

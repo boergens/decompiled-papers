@@ -1,0 +1,113 @@
+# Pesce et al. 2022 Commun Biol 5:447, Fig. 3a (main PDF p. 6): labelling efficiency of two neuron markers, CR (upper chart)
+#   and PV (lower chart), in SHORT-processed slices imaged by LSFM: fluorescence intensity (y axis 'Intensity', arbitrary
+#   units) of the signal (S, neuronal somata) and background (B) at three depths, 0 um (0-240 um, maximal light exposure),
+#   350 um (240-470 um, slice middle) and 700 um (490-700 um, opposite the excitation side); mean + SD bars (error bar
+#   upward only) and the individual values (caption: 8 different neurons / background regions per bar).
+# Columns: row_type = 'bar' or 'point'; chart = CR or PV; depth_um = 0, 350 or 700 (the depth labels are printed on the
+#   micrograph strip under each chart; the S/B pairs are assigned to them left to right); signal_background = S or B as
+#   printed under the bar; bar rows: mean, sd, n_points = points found; point rows: point_index (0-based, left to right)
+#   and value.
+# Provenance: bars and SD are tier 2 (vector thin fills: bar outline, whisker and cap), exact up to the PDF's precision
+#   (0.01 pt = 2.6 units in CR, 0.50 in PV); y axes calibrated on the
+#   labelled major ticks (CR: 0,0, 5,0x10^3, 1,0x10^4, 1,5x10^4, 2,0x10^4, 2,5x10^4; PV: 0, 1x10^3, 2x10^3, 3x10^3, 4x10^3, 5x10^3), linear; max residuals
+#   2.63 (CR) and 0.529 (PV) units. The points are tier 3: the translucent
+#   discs exist in the PDF only as small raster tiles (transparency flattening), so they were digitized from a 600-dpi
+#   render (Hough circles of the 3.6-pt disc radius; every detection checked on the overlay); uncertainty about 0.25 pt =
+#   +-66 units (CR) / +-13 units (PV). Points hidden behind or overlapping another point by more than
+#   about half a disc cannot be separated; the counts found per bar are given in n_points (caption: n = 8), and for the
+#   bars with fewer than 8 the notes below give the value range covered by the cluster (so the hidden values lie in it).
+# CR S 0 um: only 6 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 7132 to 24387.
+# CR B 0 um: only 4 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 768 to 791.
+# CR S 350 um: only 7 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 6502 to 19630.
+# CR B 350 um: only 3 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 548 to 664.
+# CR S 700 um: only 7 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 2155 to 14337.
+# CR B 700 um: only 2 of 8 discs separable (the others coincide with or overlap them); the cluster is one disc high (its lower part is covered by the x axis line), so the hidden values are at most 548 and close to the detected ones (printed mean 289, SD 85).
+# PV chart: extra x-axis labels ['C', 'F'] printed at tick positions that carry no bar.
+# PV B 350 um: only 5 of 8 discs separable (the others coincide with or overlap them); the hidden ones lie within the cluster's range 662 to 762.
+row_type,chart,depth_um,signal_background,mean,sd,n_points,point_index,value
+bar,CR,0,S,12931.2,10124.0,6,,
+bar,CR,0,B,748.8,113.0,4,,
+bar,CR,350,S,10058.9,6869.4,7,,
+bar,CR,350,B,635.3,141.6,3,,
+bar,CR,700,S,5998.1,6282.4,7,,
+bar,CR,700,B,288.5,85.0,2,,
+bar,PV,0,S,2782.9,1849.3,8,,
+bar,PV,0,B,1104.9,195.2,8,,
+bar,PV,350,S,1522.3,513.5,8,,
+bar,PV,350,B,720.0,70.7,5,,
+bar,PV,700,S,829.0,411.7,8,,
+bar,PV,700,B,354.9,148.6,8,,
+point,CR,0,S,,,,0,9348.5
+point,CR,0,S,,,,1,24470.3
+point,CR,0,S,,,,2,17035.4
+point,CR,0,S,,,,3,12215.3
+point,CR,0,S,,,,4,7521.3
+point,CR,0,S,,,,5,7048.7
+point,CR,0,B,,,,0,842.5
+point,CR,0,B,,,,1,874.0
+point,CR,0,B,,,,2,748.0
+point,CR,0,B,,,,3,748.0
+point,CR,350,S,,,,0,6387.1
+point,CR,350,S,,,,1,10136.1
+point,CR,350,S,,,,2,6607.7
+point,CR,350,S,,,,3,19744.7
+point,CR,350,S,,,,4,10230.6
+point,CR,350,S,,,,5,7521.3
+point,CR,350,S,,,,6,9789.5
+point,CR,350,B,,,,0,685.0
+point,CR,350,B,,,,1,779.5
+point,CR,350,B,,,,2,559.0
+point,CR,700,S,,,,0,6418.6
+point,CR,700,S,,,,1,2071.1
+point,CR,700,S,,,,2,14420.6
+point,CR,700,S,,,,3,7017.2
+point,CR,700,S,,,,4,4055.9
+point,CR,700,S,,,,5,5725.6
+point,CR,700,S,,,,6,2291.7
+point,CR,700,B,,,,0,369.9
+point,CR,700,B,,,,1,369.9
+point,PV,0,S,,,,0,2799.3
+point,PV,0,S,,,,1,1548.0
+point,PV,0,S,,,,2,4862.8
+point,PV,0,S,,,,3,4321.4
+point,PV,0,S,,,,4,2474.5
+point,PV,0,S,,,,5,1493.9
+point,PV,0,S,,,,6,2793.3
+point,PV,0,S,,,,7,1975.2
+point,PV,0,B,,,,0,1229.2
+point,PV,0,B,,,,1,1114.9
+point,PV,0,B,,,,2,1120.9
+point,PV,0,B,,,,3,892.3
+point,PV,0,B,,,,4,1066.8
+point,PV,0,B,,,,5,964.5
+point,PV,0,B,,,,6,1283.3
+point,PV,0,B,,,,7,1169.0
+point,PV,350,S,,,,0,1572.1
+point,PV,350,S,,,,1,1319.4
+point,PV,350,S,,,,2,1999.2
+point,PV,350,S,,,,3,1132.9
+point,PV,350,S,,,,4,1590.1
+point,PV,350,S,,,,5,1475.8
+point,PV,350,S,,,,6,1981.2
+point,PV,350,S,,,,7,1096.8
+point,PV,350,B,,,,0,759.9
+point,PV,350,B,,,,1,645.6
+point,PV,350,B,,,,2,711.8
+point,PV,350,B,,,,3,657.7
+point,PV,350,B,,,,4,723.9
+point,PV,700,S,,,,0,747.9
+point,PV,700,S,,,,1,1060.7
+point,PV,700,S,,,,2,729.9
+point,PV,700,S,,,,3,1102.9
+point,PV,700,S,,,,4,585.5
+point,PV,700,S,,,,5,1265.3
+point,PV,700,S,,,,6,561.4
+point,PV,700,S,,,,7,579.5
+point,PV,700,B,,,,0,411.0
+point,PV,700,B,,,,1,260.6
+point,PV,700,B,,,,2,260.6
+point,PV,700,B,,,,3,507.3
+point,PV,700,B,,,,4,272.7
+point,PV,700,B,,,,5,477.2
+point,PV,700,B,,,,6,308.8
+point,PV,700,B,,,,7,326.8

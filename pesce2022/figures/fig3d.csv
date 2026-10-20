@@ -1,0 +1,105 @@
+# Pesce et al. 2022 Commun Biol 5:447, Fig. 3d (main PDF p. 6): signal-to-noise ratio (y axis 'Signal to noise') of SST
+#   immunolabelling in round 1, round 2 and round 3 of multi-round staining (x axis 'SST label'); mean + SD bars (error
+#   bar upward only) and the individual neurons (caption: n = 30 neurons per round).
+# Columns: row_type = 'bar' or 'point'; round = x label as printed; bar rows: mean, sd, n_points = points found; point rows:
+#   point_index (0-based, left to right) and value (dimensionless).
+# Provenance: bars and SD are tier 2 (vector thin fills: bar outline, whisker and cap), exact up to the PDF's precision
+#   (0.01 pt = 0.0005); y axis calibrated on the 6 labelled major ticks 0, 1, 2, 3, 4, 5 (linear), max residual
+#   0.00048. The points are tier 3: the translucent discs exist in the PDF only as small raster tiles (transparency
+#   flattening), so they were digitized from a 600-dpi render (Hough circles of the 3.6-pt disc radius; every detection
+#   checked on the overlay); uncertainty about 0.25 pt = +-0.013. Points fully hidden behind another
+#   point cannot be seen; the counts per bar are in n_points.
+row_type,round,mean,sd,n_points,point_index,value
+bar,Round 1,3.662,1.051,30,,
+bar,Round 2,2.491,0.506,30,,
+bar,Round 3,2.281,1.051,30,,
+point,Round 1,,,,0,3.661
+point,Round 1,,,,1,3.687
+point,Round 1,,,,2,3.383
+point,Round 1,,,,3,3.752
+point,Round 1,,,,4,3.130
+point,Round 1,,,,5,3.512
+point,Round 1,,,,6,3.214
+point,Round 1,,,,7,4.173
+point,Round 1,,,,8,3.797
+point,Round 1,,,,9,4.860
+point,Round 1,,,,10,3.415
+point,Round 1,,,,11,4.244
+point,Round 1,,,,12,3.732
+point,Round 1,,,,13,2.936
+point,Round 1,,,,14,4.950
+point,Round 1,,,,15,3.117
+point,Round 1,,,,16,4.017
+point,Round 1,,,,17,3.843
+point,Round 1,,,,18,2.974
+point,Round 1,,,,19,4.698
+point,Round 1,,,,20,3.272
+point,Round 1,,,,21,4.030
+point,Round 1,,,,22,3.551
+point,Round 1,,,,23,3.059
+point,Round 1,,,,24,3.557
+point,Round 1,,,,25,3.208
+point,Round 1,,,,26,3.512
+point,Round 1,,,,27,3.292
+point,Round 1,,,,28,3.687
+point,Round 1,,,,29,3.519
+point,Round 2,,,,0,2.204
+point,Round 2,,,,1,2.521
+point,Round 2,,,,2,2.210
+point,Round 2,,,,3,2.806
+point,Round 2,,,,4,2.340
+point,Round 2,,,,5,2.527
+point,Round 2,,,,6,2.210
+point,Round 2,,,,7,2.612
+point,Round 2,,,,8,2.424
+point,Round 2,,,,9,2.651
+point,Round 2,,,,10,2.307
+point,Round 2,,,,11,2.890
+point,Round 2,,,,12,2.378
+point,Round 2,,,,13,2.625
+point,Round 2,,,,14,3.039
+point,Round 2,,,,15,2.294
+point,Round 2,,,,16,2.702
+point,Round 2,,,,17,2.029
+point,Round 2,,,,18,2.890
+point,Round 2,,,,19,2.489
+point,Round 2,,,,20,2.754
+point,Round 2,,,,21,2.340
+point,Round 2,,,,22,2.540
+point,Round 2,,,,23,2.378
+point,Round 2,,,,24,2.521
+point,Round 2,,,,25,2.197
+point,Round 2,,,,26,2.625
+point,Round 2,,,,27,2.378
+point,Round 2,,,,28,2.754
+point,Round 2,,,,29,2.067
+point,Round 3,,,,0,1.854
+point,Round 3,,,,1,1.938
+point,Round 3,,,,2,2.087
+point,Round 3,,,,3,1.750
+point,Round 3,,,,4,2.262
+point,Round 3,,,,5,3.026
+point,Round 3,,,,6,2.793
+point,Round 3,,,,7,1.620
+point,Round 3,,,,8,2.301
+point,Round 3,,,,9,3.311
+point,Round 3,,,,10,2.871
+point,Round 3,,,,11,1.893
+point,Round 3,,,,12,2.216
+point,Round 3,,,,13,3.000
+point,Round 3,,,,14,2.618
+point,Round 3,,,,15,1.867
+point,Round 3,,,,16,1.433
+point,Round 3,,,,17,2.204
+point,Round 3,,,,18,3.182
+point,Round 3,,,,19,2.612
+point,Round 3,,,,20,1.789
+point,Round 3,,,,21,2.327
+point,Round 3,,,,22,3.117
+point,Round 3,,,,23,2.709
+point,Round 3,,,,24,1.834
+point,Round 3,,,,25,2.178
+point,Round 3,,,,26,1.938
+point,Round 3,,,,27,2.165
+point,Round 3,,,,28,1.556
+point,Round 3,,,,29,1.918

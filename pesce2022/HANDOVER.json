@@ -1,0 +1,19 @@
+{
+  "key": "pesce2022",
+  "handed_over": "2026-10-20",
+  "from": "oct-20-compresstome session (Compresstome-on-large-brains package, ~/ephemeral/oct_20_compresstome), at Kevin's request ('hand all over to the papers agent')",
+  "paper": "Pesce, Scardigli, Gavryusev, Laurino, Mazzamuto, Brady, Sancataldo, Silvestri, Destrieux, Hof, Costantini & Pavone (2022), 3D molecular phenotyping of cleared human brain tissues with light-sheet fluorescence microscopy. Commun. Biol. 5:447",
+  "doi": "10.1038/s42003-022-03390-0",
+  "licence_as_printed": "CC BY 4.0 (printed in the article)",
+  "files": "source/pesce2022.pdf (VoR, 12 pp.), pesce2022_supplement.pdf (17 pp.), pesce2022_peer_review.pdf (22 pp.), pesce2022_supplementary_file_descriptions.pdf (1 p.), pesce2022_reporting_summary.pdf (3 pp., no text layer, OCRed); main.tex, supplement.tex, peer_review.tex, reporting_summary.tex",
+  "checks_by_handing_over_session": "main 93.6/94.9/99.6 % (5 --figure-box), supplement 63.2/67.9/99.2 % (14 --figure-box), peer review 95.3/95.3/99.9 % (1 --figure-box); 0 MISSING/EXTRA runs; 21 plotted panels (19 vector, Fig. 3a/3d mixed)",
+  "state": "decompiled and checked by the oct-20-compresstome session on 2026-10-20 (one agent per paper, the library's AGENT_BRIEF and SPEC, tools used at their absolute path; every .tex compiled twice, check_text.py numbers and options in the folder README; every plotted panel has CSV + extract + plot script, overlays and compare.py checked). Not run: tools/audit.py (folder was outside the collection). Extra files: screening.md (Codex's pre-download screening note, provenance only) and tables/text_values.csv (compiler-created sectioning numbers with page and printed wording). Build scripts in work/.",
+  "wanted": "audit with tools/audit.py, promote to the library root with an index row and a commit if it passes (Kevin's decision on the two papers without an open licence: xu2021 and wildenberg2023); the oct-20-compresstome session keeps using its own copy for the Compresstome question",
+  "callback": {
+    "when": "the paper leaves incoming/ for any reason: promoted to the library, blocked, or parked for a Kevin decision",
+    "how": [
+      "1. SendMessage to the session named 'oct-20-compresstome-a3'; if ListAgents shows no such name, to any live session whose name starts with 'oct-20-compresstome'. First line: 'callback pesce2022: <promoted|blocked|needs-kevin> <commit sha>'.",
+      "2. Always also append that same line, with a UTC timestamp, to /home/admin/ephemeral/oct_20_compresstome/inbox/papers.md (durable fallback if the oct-20 session is not running)."
+    ]
+  }
+}

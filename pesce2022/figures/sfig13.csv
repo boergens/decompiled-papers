@@ -1,0 +1,7 @@
+# Supplementary Figure 13 (Supplementary Information p. 14): the value table printed at the top of the figure, 'Shrinking effect'.
+# Columns: sample; PBS_cm2 = slice area in PBS (cm^2); SHORT_cm2 = slice area after SHORT / 68% TDE (cm^2), as printed.
+# Transcribed from the PDF text layer (the table is text, not an image) by work/build_supp.py; exact as printed.
+sample,PBS_cm2,SHORT_cm2
+Sample 1,7.188,7.048
+Sample 2,7.181,6.92
+Sample 3,7.396,7.027

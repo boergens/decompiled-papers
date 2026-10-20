@@ -1,0 +1,17 @@
+pesce2022: Pesce L., Scardigli M., Gavryusev V., Laurino A., Mazzamuto G., Brady N., Sancataldo G., Silvestri L., Destrieux C., Hof P. R., Costantini I., Pavone F. S. (2022).
+3D molecular phenotyping of cleared human brain tissues with light-sheet fluorescence microscopy. Communications Biology 5, 447.
+DOI: 10.1038/s42003-022-03390-0
+Publisher page: https://www.nature.com/articles/s42003-022-03390-0
+Published: 12 May 2022.
+Licence: CC BY 4.0 (open access; printed in the article).
+
+Files (downloaded 2026-10-20 by the oct-20-compresstome session, browser slot 0, publisher site):
+  pesce2022.pdf                                 main article, publisher version of record, 12 pp.
+                                                from https://www.nature.com/articles/s42003-022-03390-0.pdf
+  pesce2022_supplement.pdf                      Supplementary Information, 17 pp. (publisher file 42003_2022_3390_MOESM2_ESM.pdf)
+  pesce2022_peer_review.pdf                     Peer Review File, 22 pp. (publisher file 42003_2022_3390_MOESM1_ESM.pdf)
+  pesce2022_supplementary_file_descriptions.pdf Description of Additional Supplementary Files, 1 p. (42003_2022_3390_MOESM3_ESM.pdf)
+  pesce2022_reporting_summary.pdf               Reporting Summary, 3 pp. (42003_2022_3390_MOESM8_ESM.pdf)
+Not downloaded: Supplementary Movies 1-4 (GIF/MP4) listed on the publisher page.
+
+Earlier screening (Codex session, 2026-10-20, before the PDFs were obtained): see ../screening.md.

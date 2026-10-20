@@ -1,0 +1,40 @@
+# Supplementary Table 1. Antibodies compatible with SHORT and the used dilutions. (Supplementary Information p. 16)
+# Transcribed from the PDF text layer by work/build_supp.py. Columns as printed: Molecule, Company, Cat. n., Host, P/M (polyclonal/monoclonal), Dilution.
+# Empty cells are empty in the table (the dyes have no host and no P/M).
+Molecule,Company,Cat. n.,Host,P/M,Dilution
+NeuN,Merck,ABN91,Chicken,P,1:50
+GAD67,Abcam,ab26116,Mouse,M,1:200
+PV,Abcam,ab11427,Rabbit,P,1:200
+PV,Abcam,ab32895,Goat,P,1:200
+CB,Abcam,ab207528,Rabbit,M,1:200
+VIP,Abcam,ab214244,Rabbit,M,1:200
+SST,Abcam,ab30788,Rat,M,1:200
+NPY,Abcam,ab6173,Sheep,P,1:200
+NPY,Abcam,ab11247,Mouse,M,1:200
+SMI-32,Merck,NE1023,Mouse,M,1:200
+SMI-31,Eurogentec OptimAb,SMI-31P-050,Mouse,M,1:300
+Neurofilament,Abcam,ab4680,Chicken,P,1:200
+GluS,Merck,MAB302,Mouse,M,1:200
+MAP2,Abcam,ab5392,Chicken,P,1:200
+GFAP,Abcam,ab194324,Rabbit,M,1:200
+Iba1,Abcam,ab195031,Rabbit,M,1:200
+Coll IV,Abcam,ab6586,Rabbit,P,1:200
+Vim,Abcam,ab8069,Mouse,M,1:200
+CR,Proteintech,66496-1-Ig,Mouse,M,1:200
+CR,Proteintech,12278-1-AP,Rabbit,P,1:200
+"Anti-Rat IgG, AF 568",Abcam,ab175475,Donkey,P,1:200
+"Anti-Rabbit IgG, AF 568",Abcam,ab175470,Donkey,P,1:200
+"Anti-Chicken IgY, AF 568",Abcam,ab175711,Goat,P,1:200
+"Anti-Mouse IgG, AF 568",Abcam,ab175700,Donkey,P,1:200
+"Anti-Sheep IgG, AF 568",Abcam,ab175712,Donkey,P,1:200
+"Anti-Rabbit IgG, AF 488",Abcam,ab150077,Goat,P,1:200
+"Anti-Chicken IgY, AF 488",Abcam,ab150169,Goat,P,1:200
+"Anti-Rabbit IgG, AF 488",Jackson,611-545-215,AffiniPure Alpaca,P,1:200
+"Anti-Goat IgG, AF 488",Jackson,805-545-180,AffiniPure Bovine,P,1:200
+"Anti Rabbit IgG, AF 647",Jackson,611-605-215,AffiniPure Alpaca,P,1:200
+"Anti Mouse IgG, AF 647",Abcam,ab150107,Donkey,P,1:200
+"Anti Chicken IgY, AF 647",Abcam,ab150171,Goat,P,1:200
+DiD,Thermo Fisher Scientific,D7757,,,0.5 mg/ml
+DAPI (Dilactate),Thermo Fisher Scientific,D3571,,,1:50
+SYTOX GREEN,Thermo Fisher Scientific,S7020,,,1:100
+Propidium Iodide,Thermo Fisher Scientific,P3566,,,1:50

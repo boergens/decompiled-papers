@@ -1,0 +1,6 @@
+# Supplementary Table 2. Area, age, fixative molecule, and fixation of the human brain material used in this work. (Supplementary Information p. 17)
+# Transcribed from the PDF text layer by work/build_supp.py. The Area cells are printed as dash-bulleted lists (one item per line); items separated here by '; '.
+Donor,Area,Age,Fixative,Fixation
+Donor 1,Precentral gyrus; Hippocampus,99 years old,10% Formalin,6 months
+Donor 2,Prefrontal cortex,62 years old,10% Formalin,4 years
+Donor 3,Broca’s area; Motor cortex,79 years old,10% Formalin,10 years
