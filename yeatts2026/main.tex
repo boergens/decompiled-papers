@@ -1,0 +1,290 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+\sourcefile{yeatts2026.pdf}
+\decompnote{bioRxiv preprint, version 1 (posted June 15, 2026), 23 pages, not peer reviewed. Left out on purpose: the bioRxiv stamp printed at the top of every page (``bioRxiv preprint doi: https://doi.org/10.64898/2026.06.11.731509; this version posted June 15, 2026. The copyright holder for this preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made available under a CC-BY-NC 4.0 International license.''), the manuscript's margin line numbers (1--505) and the page numbers. The affiliation list is set as a hanging-indent list and the reference list keeps its printed numbering. Each figure is placed before its caption, where it is printed; the whole-figure PNGs are 200-dpi renders of the embedded figure images. The text was extracted from the PDF's text layer by work/build\_main.py and proofread against the page images.}
+
+\pdfpage{1}
+\section*{Scaling up polarization-sensitive optical coherence tomography to image the whole macaque brain}
+
+MariPen Yeatts\textsuperscript{1}, Nirupama Chinthalapati\textsuperscript{1}, Bahar Baradaran\textsuperscript{1}, Henry M. Heinks\textsuperscript{1}, Emily Liao\textsuperscript{1}, Rachael Huxford\textsuperscript{2}, Vasilis Karlaftis\textsuperscript{3}, Taylor Grafft\textsuperscript{4}, Tanya K. Casta\textsuperscript{5}, Ayana Hellevik\textsuperscript{6}, Pramod K. Pisharady\textsuperscript{7,8}, Amy Howard\textsuperscript{9} , Jan Zimmermann\textsuperscript{7,10}, Thomas Pengo\textsuperscript{2}, Jonathan L. Baker\textsuperscript{11}, Keith P. Purpura\textsuperscript{11}, Matthew D. Johnson\textsuperscript{1}, R. Clay Reid\textsuperscript{6}, Franco Pestilli\textsuperscript{4}, Saad Jbabdi\textsuperscript{3}, Sarah R. Heilbronner\textsuperscript{5}, Taner Akkin\textsuperscript{1}
+
+\begin{hangpars}
+1. Department of Biomedical Engineering, University of Minnesota, Minneapolis, MN 55455
+
+2. Minnesota Supercomputing Institute, University of Minnesota, Minneapolis, MN 55455
+
+3. Oxford Center for Integrative Neuroimaging, FMRIB, Nuffield Department of Clinical Neuroscience, University of Oxford, Oxford, UK
+
+4. Department of Psychology, Department of Neuroscience, Center for Learning and Memory, Center for Perceptual Systems, The University of Texas at Austin, Austin, TX 78712
+
+5. Department of Neurosurgery, Baylor College of Medicine, Houston, TX 77030
+
+6. Allen Institute for Brain Sciences, Seattle, WA, 98109
+
+7. Center for Magnetic Resonance Research, University of Minnesota, Minneapolis, MN 55455
+
+8. Department of Neurology, University of Minnesota, Minneapolis, MN 55455
+
+9. Department of Bioengineering, Imperial College London, London, UK
+
+10. Department of Neuroscience, University of Minnesota, Minneapolis, MN 55455
+
+11. Brain and Mind Research Institute, Weill Cornell Medicine, New York, NY 10065
+
+\end{hangpars}
+\noindent \textbf{Correspondence:}\\
+Taner Akkin, PhD\\
+312 Church St SE, 6-130 Nils Hasselmo Hall\\
+Minneapolis, MN 55455\\
+akkin@umn.edu\\
+612-625-8783
+
+\textbf{Keywords:} axon, brain, connectivity, optical coherence tomography
+
+\textbf{Acknowledgements:} We acknowledge funding from UM1NS132201, R01MH126923, R01NS0811108, U24NS140384, and R01NS111019. We thank the entire Center for Mesoscale Connectomics for assistance with the conceptualization and implementation of this project. We thank Amazon Web Services Open Data Sponsorship Program for supporting data storage for brainlife.io.
+
+\textbf{Competing interests:} MP declares unpaid internship experience and paid travel and conference expenses from Precisionary Instruments LLC. All other authors declare no competing interests.
+
+\pdfpage{2}
+\subsection*{Summary}
+
+Polarization-sensitive optical coherence tomography (PS-OCT) is a label-free imaging technique that exploits birefringence to visualize myelinated axons at micrometer resolution. However, serial PS-OCT imaging has been limited to small volumes, including tissue blocks from larger species, owing to constraints in acquisition speed, system stability, and data processing. These limitations have prevented its application to whole-brain mapping in large mammals. Here we present a scalable PS-OCT acquisition system and computational pipeline for whole-brain imaging in the rhesus macaque. The framework integrates high-throughput serial imaging with automated reconstruction and processing, enabling volumetric imaging at micrometer-scale resolution across decimeter-scale brain volumes. Using this approach, we acquired two complete macaque brains at a voxel size of 5.5 × 5.5 × 3.4 μm and an effective resolution of approximately 10 × 10 × 5.5 μm, generating multi-terabyte datasets consisting of multiple contrasts including fiber orientation information. The datasets and associated processing tools are made publicly available. This platform establishes a method for large-scale, high-resolution mapping of white matter architecture in primate brains. The resulting datasets provide a reference for validating MRI models and support the development of neurotechnological applications, including deep brain stimulation, where accurate characterization of axonal organization is required.
+
+\pdfpage{3}
+\subsection*{Introduction}
+
+Axonal projections form the structural substrate for information transfer across functionally distinct brain regions. However, maps of these projections in larger brains, including those of humans and macaques, remain incomplete because of persistent technical limitations. Diffusion-weighted magnetic resonance imaging (dMRI) enables noninvasive whole-brain reconstruction of major axon bundles at millimeter resolution\textsuperscript{1}, but this scale cannot resolve fine axonal architecture and is error-prone in regions with complex fiber crossings\textsuperscript{2}. Tract-tracing methods provide high specificity and can reconstruct small groups of axons or even single trajectories\textsuperscript{3}, but they require \emph{in vivo} labeling, support only a limited number of injection sites, and are susceptible to histological distortion\textsuperscript{4}. Polarization-sensitive optical coherence tomography (PS-OCT)\textsuperscript{5,6,7} addresses these limitations by providing whole-brain, label-free, near-distortion-free measurements at micrometer-scale resolution.
+
+PS-OCT extends optical coherence tomography (OCT), an interferometric imaging technique that uses low-coherence light to generate depth-resolved images (\textbf{Fig. 1a})\textsuperscript{8,9}. By measuring changes in light polarization, PS-OCT reveals optically anisotropic tissue structures\textsuperscript{5}. In brain tissue, myelinated axons exhibit birefringence\textsuperscript{10}, producing measurable changes in polarization state that encode both the magnitude and orientation of local anisotropy. This contrast enables PS-OCT to distinguish highly myelinated white matter from nearly isotropic tissue\textsuperscript{11}. It also supports tracing of axon bundles and resolution of crossing fibers within white matter with high confidence, a major limitation of dMRI (\textbf{Fig. 1b}). Unlike dMRI, which infers fiber orientations indirectly from water diffusion, PS-OCT measures signals arising directly from the myelin sheath, providing a dense anatomical reference for axonal organization\textsuperscript{12,13}. No other current method combines these properties at comparable resolution and scale\textsuperscript{14}.
+
+OCT-based techniques typically achieve spatial resolutions of 1–10 μm, with imaging depths ranging from a few hundred micrometers to more than 1 mm\textsuperscript{15}. Because OCT is label-free, it does not require tracers, exogenous contrast agents, or genetic manipulation and can be applied to both human and non-human tissue. Early studies applied OCT and PS-OCT to exposed brain surfaces, acquiring only limited fields of view\textsuperscript{16-22}. Subsequent serial-sectioning approaches enabled volumetric imaging\textsuperscript{12,23–30} but were restricted to small brain regions or to small animal models. Here, we extend PS-OCT to enable volumetric imaging at the scale of the primate brain.
+
+\pdfpage{4}
+Previous serial PS-OCT systems were constrained by long acquisition times and physical slicing restrictions and therefore focused on rodent brains or tissue blocks from larger brains \textsuperscript{12,24,28,30}. Our objective was to develop an acquisition system and processing pipeline capable of whole-brain imaging in the macaque. The macaque provides a critical bridge between rodent and human neuroscience: tract-tracing is feasible, and its brain shares well-established homologies with the human brain\textsuperscript{31}. These features make it a key model for linking microstructural organization to systems-level function and to translational applications. For example, studies of Parkinson’s disease in macaques have informed deep brain stimulation (DBS) strategies targeting the basal ganglia. Computational models further show that stimulation efficacy depends strongly on the orientation and position of electrodes relative to targeted axons\textsuperscript{32–34}. Methods that resolve axonal organization with higher fidelity than dMRI therefore have direct translational relevance.
+
+Here, we present a scalable PS-OCT acquisition and processing framework for whole-brain imaging in the macaque. This approach enables dense, micrometer-resolution mapping of axonal organization across the entire brain, providing a bridge between sparse tract-tracing and indirect MRI-based methods, and establishing a foundation for high-resolution, whole-brain connectomics in large brains.
+
+\pdfpage{5}
+\subsection*{Results}
+
+We developed a toolkit for large-scale acquisition and dissemination of PS-OCT data at the level of entire macaque brains. The toolkit integrates a hardware system with a computational processing pipeline. We first outline the challenges associated with scaling PS-OCT to large primate brains and then describe the design of the acquisition system.
+
+Whereas previous systems were optimized for rodent brains or small blocks of tissue, whole-brain imaging in the macaque requires an approximately 200-fold increase in volumetric coverage. This expansion transforms acquisition from single-section imaging to large-scale serial imaging, requiring more than 20,000 volumetric scans per brain (\textbf{Fig. 1c}). Achieving this scale introduced several constraints, including limited field of view (FOV) imposed by fixed optics, restricted sectioning range of conventional instruments, tissue deformation during sectioning of large samples, limited throughput of existing data-processing pipelines, and the need for robust containers for storage and transport of large specimens (\textbf{Fig. 1d}). Using the integrated system described below, we acquired images from two complete macaque brains while preserving tissue integrity.
+
+To address these constraints, we developed a new PS-OCT acquisition system that increases imaging capacity. Previous implementations\textsuperscript{12} relied on fixed optical components positioned adjacent to a vibratome, with linear actuators used to shuttle the sample between imaging and sectioning positions. In these systems, the vibratome imposed strict limits on sample dimensions, determined by the cutting range and blade clearance, such that the sample height could not exceed the distance between the base of the chamber and the blade, nor could its lateral extent exceed the cutting range (\textbf{Supplemental Fig. 1}).
+
+To enable whole-brain imaging, we replaced the vibratome with a compresstome (VF800, Precisionary Instruments; modified, see Supplemental Materials), one of the few sectioning systems capable of accommodating macaque brain volumes without requiring freezing or paraffin embedding, which might alter tissue properties. This change necessitated a redesign of the imaging configuration, including the transition from fixed to mobile optical components and the development of a revised tissue preparation protocol (see Methods: Sample preparation).
+
+\pdfpage{6}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent \textbf{Figure 1: PS-OCT principles and system scaling for whole-brain imaging. a}. Schematic of PS-OCT signal generation, showing interferometric detection of backscattered light and polarization-state changes. \textbf{b}. Illustration of fiber orientation distributions across adjacent axonal bundles including a crossing configuration. \textbf{c}. Field of view of a single tile acquisition overlaid on a macaque brain, highlighting the limited coverage of individual scans and the requirement for large-scale tiling. \textbf{d}. Engineering challenges in scaling PS-OCT to whole primate brains, including acquisition throughput, mechanical and optical stability, and data handling, with corresponding solutions implemented in the integrated system. \textbf{e}. Architecture of the scaled PS-OCT platform, including acquisition hardware and computational pipeline. \textbf{f}. \pdfpage{7} Representative full coronal section of axis orientations from a complete macaque brain, demonstrating whole-brain coverage at micrometer-scale resolution.
+
+\alttext{Six panels (a--f) on a white background, assembled as one raster image (1908 × 2018 px, 300 ppi). Panel a (top left), schematic of the PS-OCT interferometer: four labelled blocks joined by thick fibre paths (red for light going out, blue for light coming back) that meet at a small dark box labelled ``PM Coupler'' in the centre. Top left ``Source'': a dark square with a white star-burst (the light source) emitting a red sine wave to the right. Top right ``Reference Arm'': a red sine wave ending at a hatched mirror. Bottom left ``Spectrometer'': a dark camera body receiving a red/blue sine wave. Bottom right ``Sample Arm'': a jagged red wave through a tilted plate (a mirror/scanner) down onto a small drawing of a brain lying in a tray. Each block is framed by red (outgoing) and blue (returning) brackets. Panel b (top centre, black background): an illustration of several ribbon-like fibre bundles, colour-coded by their local orientation, fanning out from the lower left to the upper right, with a second bundle crossing them horizontally near the lower middle; a colour wheel at the bottom left is labelled ``90°'' (red, at the top) and ``0°'' (cyan, at the right). Panel c (top right, black background): a grey-scale coronal image of a macaque brain (an MRI-like whole-section view with cortex, white matter and deep grey structures) with a small white rectangle, about 1/12 of the brain width, drawn near the left basal region and containing a small coloured PS-OCT tile; it marks the field of view of one tile. Panel d (middle row), engineering challenges and solutions: on the left a cartoon person crouches under a bowl piled with tilted coloured boxes reading ``large tissue transport'' (green), ``slow data pipeline'' (yellow), ``manual tiling'' (blue), ``tissue shearing'' (green), ``sectioning range'' (blue) and ``limited fov'' (blue); on the right a cartoon person stands, scratching its head, on top of a framed block diagram of three tiers: top ``parallel cluster processing'' (yellow); middle ``tissue stabilization'' and ``robust tissue storage'' (green); bottom ``custom compresstome'', ``moving optics'' and ``automatic tiling'' (blue). The colours pair each challenge with its solution (blue = hardware/acquisition, green = tissue handling, yellow = data). Panel e (bottom left): a 3D rendering of the acquisition hardware: a dark gantry table with a vertical post carries the scan head (a dark plate with a lens pointing down) over the compresstome, whose transparent cylindrical specimen tube (with a brain inside, outlined in green) sits in a bath on a beige cabinet; a small red triangle marks the beam at the tube's top. To its right, an exploded view of the storage system: a round lid, a stack of about a dozen ring-shaped dishes holding brain sections, two side clips (bracket-shaped, outlined green) and, below, a transparent jar with liquid (the 1000 mL specimen jar). Panel f (bottom right, black background): a coronal enface axis-orientation image of a whole macaque brain section, fibre bundles colour-coded by in-plane orientation (red, green, blue, yellow, magenta), with the corpus callosum, internal capsules, and cortical white matter visible; a colour wheel key is at the bottom left. No scale bars are printed in this figure.}
+
+To transition to moving optics, a major solution was to build an imaging platform above the compresstome. To do so, we condensed the sample arm onto a 6”x6” aluminum plate (scan head, \textbf{Fig. 1e}). The platform housed three long-range, computer-controlled, motorized stages (LTS150C, Thorlabs Inc.) to move the scan head in x, y, and z directions. The optical setup for the interferometer was similar to that reported in previous studies\textsuperscript{12}. In short, light from a superluminescent diode (center wavelength: 840 nm, bandwidth: 50 nm) was polarized and coupled into a PMF axis. A PMF-based coupler split the light onto the sample and reference arms (\textbf{Fig. 1a}) and combined the returning light. These arms included beam samplers to form additional light paths for generating a calibration signal to dynamically remove an offset from the axis orientation measurements\textsuperscript{28}. Light mixed in the coupler yielded interference that was detected by a custom spectrometer. Light spectra corresponding to the orthogonal axes of the PMF were focused side-by-side on a line-scan camera (Octoplus, e2v), which provided raw PS-OCT data. This camera has a row of 2048 rectangular pixels (10 μm x 200 μm) contributing to the long-term stability of the spectrometer.
+
+Custom acquisition software was written to operate the imaging system. To improve speed and consistency for large samples, automatic tiling was incorporated into the software. The movement distance between tiles was calculated from the scan size and a specified overlap percentage, generalizing tiling for any sample array. With a camera speed of 10 μs per A-line, and accounting for save time, motor movement, and tissue sectioning, we achieved a data acquisition speed of 125 tiles per hour for any given section (example of a large section with 99 tiles \textbf{Fig. 1f}). This increased throughput demanded a reliable way to verify image quality and prevent data loss. We achieved this by adding real time images of downsampled enface images to the acquisition display.
+
+\subsubsection*{Sample preparation and storage}
+
+Daily scanning sessions typically lasted 8 hours. To prevent tissue degradation during and after the scanning session, the system incorporated a cooling system to chill the fixed sample to 10 °C, preventing long-term degradation. The combination of cooling and agar gel embedding allowed us to pause imaging overnight while upholding tissue integrity.
+
+\pdfpage{8}
+The maximum sample size of a compresstome can section is controlled by the specimen tube volume. With a 120 mm diameter and 175 mm depth, our custom compresstome can accommodate a sample as large as a whole human brain hemisphere. The standard protocol to embed a sample in a compresstome is to pour agar gel into the specimen tube, over the tissue, and allow it to set. However, with larger tissue, the sample would slump out of the desired imaging position as the gel set, and was prone to voids in deep sulci. To address these issues, gel injection (\textbf{Fig. 2a}) and a mold pour were added (\textbf{Fig. 2b}).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent \textbf{Figure 2: Gel embedding process. a.} Liquid agar gel injected into spaces prone to air pockets. \textbf{b.} A whole brain positioned coronally in the silicone mold, and liquid agar gel poured to embed the tissue in the desired orientation. The gel was allowed to set before it was removed from the mold. \textbf{c.} The embedded tissue from b glued to the compresstome plunger. A second gel pour stabilized the sample in the specimen tube completing preparation for sectioning. \textbf{d.} A custom container array to store brain sections for shipment and eventual histology.
+
+\alttext{Four schematic panels (a--d), flat-colour illustrations on white, one raster image (1908 × 882 px). Panel a (top left): a macaque brain seen from the side (pink/beige, outlined by a dashed line), with a syringe pushed into the gap between the cerebellum and the occipital lobe injecting blue gel (blue droplets visible in the gap); a small beaker of blue liquid stands to the right, and a curved brown arrow leads from the beaker up to the syringe (the gel is drawn up and injected). Panel b (top middle), four stages in a green-walled rectangular mold, left to right: the brain (viewed from the front, i.e. positioned coronally) standing in the empty mold; a beaker pouring blue liquid gel into the mold while the brain is half covered; the brain fully submerged in blue gel; the mold with its walls bent outward (two curved brown arrows at the top) releasing the set gel block. Panel c (bottom left): at the top left the demolded gel block, a light-blue rounded block with the brain visible inside, lying on its side; below, four views of the grey specimen tube cut open: the empty tube with the white plunger disc at its base; the gel block standing on the plunger while a beaker pours more gel; the tube filled with gel around the block; and the filled tube with three upward brown arrows at the bottom (the plunger advancing) and a thin disc floating above the tube (a cut section). Panel d (right): a 3D rendering of the custom storage container: a stack of about twelve ring-shaped dishes with brain sections lying in the top ones, a round lid with a central knob above the stack, and two bracket-shaped side clips drawn to the left and right; the stack is dark grey, the sections beige.}
+
+To achieve consistent tissue support during imaging and cutting, it was critical to identify a suitable agarose gel compound. We embedded the brain in agarose gel in three stages. In the first stage, a blunt, needleless syringe was used to inject approximately 100 ml of warm, liquid agarose gel into areas difficult to penetrate with submersion, including the space between the cerebellum and the occipital lobe, the central sulcus, and the interhemispheric fissure (\textbf{Fig. 2a}). The gel was allowed to briefly set, at which point stage two began (\textbf{Fig. 2b}). In this stage, the brain was placed into a silicone mold to hold it in the correct position for sectioning, and the \pdfpage{9} remaining gel was poured. The mold was placed inside an incubator set to 40 °C for 60 minutes, allowing the gel to penetrate the brain. The mold was removed from the incubator and allowed to cool to room temperature prior to demolding the sample. An additional 500 ml of agarose gel was prepared for stage 3 (\textbf{Fig. 2c}) and kept at 100 °C until poured. The embedded sample was attached to the plunger of the compresstome with a cyanoacrylate glue applied to the flat surface of the gel. After allowing 5-10 minutes for the glue to cure, the additional agarose was carefully poured around the sample to fill the specimen tube, fully embedding the brain into the compresstome for sectioning and imaging. Once set, the surface of the gel was then sectioned until the tissue was visible, providing a smooth imaging surface to begin acquisition.
+
+A section thickness of 200 µm was chosen to minimize the effect of light attenuation within sections in the depth direction and limit the total number of sections to image and store. The best sectioning settings are variable based on mechanical properties of the tissue. A speed of 0.5 mm/sec (speed setting 2) and an oscillation rate of 68 Hz (oscillation setting 8) yielded the most consistent quality, minimizing tissue deformation and maximizing section integrity. Each section was collected from the bath and transferred into a custom stackable dish filled with 10\% phosphate-buffered saline (PBS) to maintain section flatness and ordinal number for future histology comparison with the PS-OCT images (\textbf{Fig. 2d}). Once complete, each stack of dishes was secured with a base, clips, and a lid and placed in a 1000 mL specimen jar (ThermoFisher catalog number 2116-1000) filled with PBS for storage until shipment (\textbf{Fig. 1e}) for subsequent study.
+
+\subsubsection*{Data Processing Pipeline}
+
+Each brain generated 80-115 TB of raw data. Leveraging the Minnesota Supercomputing Institute (MSI), the data was accessed directly from cloud storage and processed in parallel by section.
+
+\pdfpage{10}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent \textbf{Figure 3: Processing diagram.} Each A-line has 2 channels which correspond to 1 scanline in depth. Performing a single scan in the x direction creates the B line (1000 A-lines). A raster scan (tile) generates 1000 B-lines (or 1000 x 1000 A-lines). Pre-processing takes in raw data and converts it to complex depth profiles, translating it from the spectral to the spatial domain. Processing extracts individual contrasts from complex depth profiles.
+
+\alttext{A flow diagram on white (two stacked raster images, together 1908 × 1610 px) with three illustrations down the left side. Left column, top: a cross-section of tissue (beige with fibre texture) under a blue layer labelled ``10\% PBS''; a red cone (the focused beam) enters from above, ``Tissue Surface'' is marked with a small arrowhead, and a brace along the beam below the surface is labelled ``A-line''. Middle: the same scene with a red arrow running horizontally above the tissue and a brace along the surface labelled ``B-line''. Bottom: a 3D block of tissue with a red hatched top face, a red beam at its corner and a brace labelled ``Tile''. Right part, boxes connected by arrows: a purple box ``Raw Data'' with a second purple box ``Spectral 2048px : 2 channels (1024px)'' pointing into the blue ``Pre-processing'' chain: ``Background Removal'' → ``Interpolation'' → ``Dispersion Compensation''; from there to ``Complex Depth Profiles'' with two dark-blue boxes holding the equations $A_1(z)e^{i\theta_1(z)}$ and $A_2(z)e^{i\theta_2(z)}$. These feed the green ``Processing'' box and a yellow ``Contrasts'' box, which fans out into four green boxes with a yellow equation box under each: ``Reflectivity'' $(A_1)^2+(A_2)^2$; ``Cross-Polarization'' $(A_1)^2$; ``Retardance'' $\arctan\!\left(\dfrac{A_1}{A_2}\right)$; ``Axis Orientation'' $\dfrac{(\Delta\theta)-\Delta\theta_{offset}}{2}$. Green connectors bring the four contrasts together into ``3D Tiles'', then ``Tile Enface'' (with a small grey-scale image of one tile showing fibrous white-matter texture) → ``Stitching'' (a small image of a grid of about 5 × 7 tiles with white gaps between them) → ``Slice Enface'' (a grey-scale coronal enface image of a whole macaque section on black, white matter bright). No scale bars.}
+
+Data were processed in two main stages (\textbf{Fig. 3}). The pre-processing stage started by loading and reshaping the data to the appropriate tile dimensions (1000x1000) and calculating the spectral background by averaging in the x and y to one A-line (\textbf{Supplemental Fig. 2}). The background was subtracted, and the two channels were separated. After background removal, the signal was zero-padded and interpolated into linear k-space. Dispersion compensation and a hamming window were then applied. Finally, the signal was Fourier transformed into the spatial domain, resulting in two channels of complex depth profiles (CDP) per A-line, represented by $A(z)e^{i\theta(z)}$ (\textbf{Fig. 3}). The CDP was the end product of the pre-processing stage, \pdfpage{11} maintaining all necessary information to derive PS-OCT contrasts such reflectivity, cross-polarization, phase retardance, and axis orientation as depicted by the equations in the processing section of \textbf{Fig. 3}.
+
+For each brain section, we generated four contrasts: reflectivity, cross-polarization, phase retardance, and axis orientation (\textbf{Figs. 4a and 5a}). To create an enface image for each contrast, a weighted average was taken along the depth of each tile as visualized in the left of \textbf{Fig. 3}. Retardance and orientation were kept in the complex domain to avoid unwrapping errors during averaging. The tile enface images (sized 1000 x 1000 pixels) were then stitched with a 10\% overlap and a simple linear blend to generate the composite slice enface images for each contrast. The resulting enface images provided an impressive level of detail with regard to brain structure.
+
+Reflectivity images - sensitive to refractive index mismatches and scattering microstructure (\textbf{Figs. 4b and 5b)} - allow for segmentation of tissue from the background and visualization of tissue boundaries such as ventricles and large blood vessels. Together, cross-polarization and retardance images provide fine-grained segmentation of gray matter from white matter as well as information about structural variation, such as bundling and fasciculation, within white matter (\textbf{Figs. 4c-d and 5c-d}). There is also interesting orientation-dependent contrast. Fibers lying within the imaging plane (and therefore approximately perpendicular to the incident beam) produce stronger signal and appear hyperintense, whereas fibers oriented out of the plane, with a component parallel to the beam, appear relatively hypointense. Although PS-OCT provides sensitivity to three-dimensional fiber orientation, reliable estimation of fiber inclination remains non-trivial and is an active area of investigation. Consequently, the orientations shown here are restricted to the two-dimensional in-plane components (\textbf{Figs. 4e and 5e}).
+
+\pdfpage{12}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent \textbf{Figure 4: Coronal macaque brain (Subject M) enface contrasts and zoom in. a.} Four contrasts across three slices \textbf{b.} Enlarged reflectivity image of fibers of the prefrontal cortex from slice 81 as marked by the cyan rectangle. Fibers from the prefrontal cortex cross to the contralateral hemisphere via the corpus callosum (CC); fibers of the orbitofrontal cortex (OFC) and uncinate fasciculus (UF) commingle. \textbf{c.} Enlarged cross-polarization image of the globus \pdfpage{13} pallidus from slice 169 as marked by the green rectangle. The globus pallidus internus (GPi) is easily differentiable from the globus pallidus externus (GPe) and putamen. Fine details of the fibers of the internal capsule (IC), medial medullary lamina (mml), and lateral medullary lamina are also visible. \textbf{d.} Enlarged retardance image of fibers of the midbrain from slice 203 as marked by the yellow rectangle . Fibers of the posterior commissure (PC) are visible next to the periaqueductal gray (PAG). \textbf{e.} Axis orientations of the same regions of interest in b,c, and d.
+
+\alttext{Two raster images (1908 × 1852 px and 1908 × 459 px) on a black background. Panel a (top): a 3 × 4 grid of coronal enface images of Subject M; rows are slices labelled in green at the left ``081'', ``169'' and ``203'' (anterior to posterior: slice 081 is a small frontal section, 169 is at the level of the basal ganglia with the lateral ventricles and corpus callosum, 203 at the level of the midbrain); columns are titled ``Reflectivity'', ``Cross polarization'', ``Retardance'' and ``Axis Orientation''. Reflectivity images are an even mid-grey with dark sulci and vessels; cross-polarization and retardance images show white matter bright and grey matter dark, the corpus callosum and internal capsule brightest; axis-orientation images are colour-coded (red, green, blue, yellow, magenta) with a colour wheel key at the bottom right. Three coloured rectangles mark the zoom regions: cyan on slice 081 reflectivity (left hemisphere, prefrontal white matter), green on slice 169 cross polarization (right of the midline, the globus pallidus), yellow on slice 203 retardance (midline, the midbrain). A second title row ``Reflectivity'', ``Cross polarization'', ``Retardance'' heads the three columns of panels b--d. Panel b (cyan letter): grey-scale reflectivity zoom of prefrontal white matter with fine fibre streaks: ``CC'' near the top (fibres running diagonally to the upper right), ``UF'' at the lower left (fibres curving) and ``OFC'' at the bottom (a dark curved band of cortex). Panel c (green letter): cross-polarization zoom of the globus pallidus with bright fibre bundles: ``IC'' with a white arrowhead at the top left, ``GPe'' upper right, ``GPi'' lower left, ``mml'' lower middle; the lateral medullary lamina is mentioned in the caption but not labelled. Panel d (yellow letter): retardance zoom of the midbrain: a bright arching band ``PC'' across the top, a dark vertical slit (the aqueduct) at the centre, and ``PAG'' labelled in the grey region around it. Panel e (orange letter): the axis-orientation images of the same three regions, in the same order, fibres colour-coded by in-plane direction (b: mostly blue/magenta diagonal streaks with a green band at the lower right; c: red/orange bundles at the left, green and magenta bundles at the right; d: a red-to-green arch at the top, magenta and green below). A white scale bar labelled ``1mm'' sits at the bottom left of the third image of panel e.}
+
+The Supplemental Videos for Subjects M and V show the axis orientation images with the brightness controlled by retardance values. To remove noise from voids, such as in the ventricles, the retardance was masked by thresholded reflectivity.
+
+\pdfpage{14}
+\pdfpage{15}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent \textbf{Figure 5: Sagittal macaque brain (Subject V) enface contrasts and zoom in. a.} Four contrasts across three slices \textbf{b.} Reflectivity zoom in blue rectangle. Fibers from the prefrontal cortex enter the caudate nucleus (Cd) at its head. Muratoff’s bundle (MB) contains axons streaming anterior-posteriorly to reach the appropriate level of the caudate for termination. A complex mixture of bundles that, at more posterior positions, will form the internal capsule (IC), external capsule (EC), and uncinate fasciculus (UF) can be seen gathering ventral to the head of the caudate \textbf{c.} Cross polarization zoom in green rectangle. The section shows complex fibers through a sagittal section at the intersection of the diencephalon, midbrain, and pons. The superior colliculus (SC) and inferior colliculus (InfC) can be clearly segmented. The fasciculus retroflexus (FR), traveling primarily dorsal-ventrally, is bright. The complexity of the fibers of the midbrain reticular formation can be appreciated. \textbf{d.} Retardance zoom in yellow rectangle. Fibers of the IC traveling primarily dorsal-ventrally are very bright. It is possible to segment the globus pallidus internus (GPi) and externus (GPe) from each other. \textbf{e.} Axis orientations zoom in as marked by the orange rectangles in b,c,and d
+
+\alttext{Two raster images (1908 × 1976 px and 1908 × 493 px) on black. Panel a (top): a 3 × 4 grid of sagittal enface images of Subject V; rows labelled in green at the left ``083'', ``138'' and ``172'' (083 is a lateral section, 138 near the midline with the whole cerebellar arbor vitae, 172 medial through the basal ganglia); columns ``Reflectivity'', ``Cross polarization'', ``Retardance'', ``Axis Orientation'' as in Fig. 4. A white scale bar labelled ``15 mm'' is at the bottom left of the first column; a colour wheel at the bottom right of the axis-orientation column. Coloured rectangles mark the zooms: cyan on 083 reflectivity (frontal, at the anterior end), green on 138 cross polarization (midbrain/pons, in front of the cerebellum), yellow on 172 retardance (basal ganglia, under the cortex). Panel b (cyan letter, middle row left): a grey-scale reflectivity zoom with labels ``MB'' (top right), ``Cd'' (centre, the rounded head of the caudate), ``IC/EC/UF'' (lower left, fibre bundles) and ``OFC'' (bottom left); next to it the axis-orientation image of the same field (green and blue streaks with a red/orange band) with an orange rectangle at its lower middle. Panel d (yellow letter, middle row right): a retardance zoom with ``GPe'' (left), ``IC'' (centre, bright vertical fibres) and ``GPi'' (lower left); next to it its axis-orientation image (red/orange vertical bundles) with an orange rectangle at the upper right. Panel c (green letter, third row): a wide cross-polarization zoom of the midbrain: ``SC'' at the top right, ``FR'' with a white arrowhead pointing at a bright diagonal bundle at the upper left, ``InfC'' at the right, ``RN'' at the lower left, and cerebellar folia at the far right; next to it the axis-orientation image (a magenta bundle at the top, a broad green band across the middle, blue at the right) with an orange rectangle at the lower right. Panel e (orange letter, bottom row): three axis-orientation zooms of the orange rectangles of b, c and d: left, green/blue streaks with red at the centre; middle, a bright green-to-cyan band crossing a magenta field with a white scale bar labelled ``1 mm''; right, dense red, green and magenta fibre texture.}
+
+A 3D slide deck was formed by stacking the cross-polarization slice enface images and performing co-registration of slides. To co-register the images, each slide was zero-padded to the dimensions of the largest slide and then downsampled by a factor of 10. Translations and rotations between successive PS-OCT slides were estimated using FSL’s FLIRT\textsuperscript{35}. The estimated transformations were concatenated such that all slides were aligned to the largest, central sections. The result was a complete 3D volume (\textbf{Fig. 6 and Supplemental Fig. 3}). This 3D volume is used for co-registration with MRI data.
+
+Data and processing code are publicly available at brainlife.io.
+
+\pdfpage{16}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.75\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent \textbf{Figure 6: Alignment across sections produces 3D PS-OCT volumes. a.} Slide-deck post alignment. \textbf{b}. Coronal (imaging slice) and axial views showing good between-slice alignment. \textbf{c}. Sagittal (top) and axial (bottom) views showing the good between-slice alignment of anatomy.
+
+\alttext{One grey-scale raster image (1246 × 2048 px, 276 ppi, somewhat blurred) on white. Panel a: two 3D renderings of the aligned stack of coronal cross-polarization sections (``slide deck''), each drawn as a block of stacked slices viewed obliquely; the left one shows the front face (a coronal section with the bright corpus callosum and ventricles) and the slices receding to the upper right; the right one is cut open to show a horizontal/oblique internal face with bright white matter. Panel b: three reconstructed views on black: a coronal section (left), an axial (horizontal) section (middle) and a third, sagittal-looking view (right; the caption names only coronal and axial views). Fine horizontal/vertical banding and small jagged edges are visible, the traces of the slice boundaries. Panel c: two montages on black. The top montage is 4 rows × 10 images of bilaterally symmetric sections that progress from small anterior/ventral shapes to full hemispheres and back to small ones; the bottom montage is 6 rows × 10 images of lateral (sagittal-looking) profiles with the cerebellum visible, that grow from small lateral slivers to full medial profiles. The caption calls the top montage sagittal and the bottom axial; to my eye the top looks axial and the bottom sagittal, but the images are small and dark, so this is noted, not asserted. No scale bars.}
+
+\pdfpage{17}
+\subsection*{Discussion}
+
+Here, we provide a new method of acquiring a whole macaque brain with PS-OCT and the resulting images of two complete brains. The unique space occupied by PS-OCT, as a label free imaging technique with spatial resolution two orders of magnitude finer than MRI, provides a bridge between tract-tracing and MRI. By highlighting white matter at a voxel size of 5.5 × 5.5 × 3.4 µm, we have demonstrated our data’s potential future value in connectomics and microstructural analysis. A PS-OCT system capable of imaging large brains was essential to this end.
+
+The white matter of the primate brain occupies roughly half its volume, and the axonal connections it contains are the structural basis of long-range communication. As corroborated with tract-tracing and myelin stains, brain connectomics can be studied via white matter trajectories\textsuperscript{14}. However, there remain major gaps in the literature in our understanding of white matter organization, particularly for large primate brains. In this study, we created a method to obtain the data needed to help fill these gaps and demonstrated its viability by imaging two complete macaque brains, one in the coronal and one in the sagittal plane.
+
+Our next goal will be to image an entire human hemi-brain. The human brain is roughly 13 times the size of the macaque brain. While we anticipate that this will lead to additional challenges in data size, we are working to refine our data file type and structures to compensate. The completed macaque brains are currently undergoing multimodal analysis, as Subject M and Subject V have been multimodally imaged by high-field in-vivo dMRI, high-field ex-vivo dMRI \textsuperscript{36,37}, PS-OCT and light sheet microscopy.
+
+A limitation of our current method is the fact that the measured orientations are in the 2D (xy) plane, missing the through plane component (polar angle or inclination angle). This has been addressed in other PS-OCT systems by introducing a second scanning angle\textsuperscript{28,38}. However, this solution doubles the amount of data saved, significantly increases the acquisition time, and currently operates with fixed optics. We are investigating computational methods to extract the through plane angle from our current data to complete estimation of 3D orientations. One possibility is that the through plane component might be estimated from a normative brain acquired in the perpendicular plane. This is one advantage of our current dataset, in which one brain was imaged coronally and another sagittally.
+
+\pdfpage{18}
+We have demonstrated successful large-scale PS-OCT imaging of the macaque brain. With this system, we will continue to gather data from primate brains and interrogate the fine white matter structures in regions such as the basal ganglia, brainstem, and the prefrontal cortex. We expect that this method will continue to develop and provide a framework for large-scale imaging of additional species and other tissues.
+
+\subsection*{Methods}
+
+\subsubsection*{Sample preparation}
+
+Experimental procedures were performed with the approval of the Institutional Animal Care and Use Committee (IACUC) at the University of Minnesota. Adult rhesus macaques (n=2 males) were subjects in this study. Prior to brain extraction, both subjects had intracranial injections of tract-tracers, the results of which are not shared here. Brains were intracardially exsanguinated and perfused with 4\% paraformaldehyde (PFA). The PFA was mixed with hydrogel monomer solution (HMS), as described in Xu et al., 2021\textsuperscript{3}, to facilitate later histology. After extraction, brains were fixed overnight, washed, and stored in 10\% PBS until imaging. Because of additional dMRI scans performed between extraction and PS-OCT, a variable number of days passed between extraction and PS-OCT imaging. This had no significant impact on the resulting images. To improve slice quality, extra care was taken to remove blood vessels and dura mater prior to embedding to improve slice quality.
+
+The amount and concentration of gel varied across subjects. For Subject V, 400 ml of 3.25\% wt low-melting-point agarose gel solution was prepared by heating to 140 °C under a constant stir until clear. It was kept at a minimum of 40 °C to maintain the liquid state prior to use.
+
+For subject M, we embedded directly in the sample tube using 2\% agarose gel. Due to insufficient surface area to glue the tissue to the plunger, during imaging of subject M we observed small rotations between some sections. Additionally, there was some tissue gouging in the last third of subject M due to gel softness and degradation.
+
+To address rotation and gel degradation, different agarose concentrations were tested. Tissue was embedded in the sagittal position using a silicone mold as shown in Figure 2b with 4\% agarose gel. The flat surface of the gel was glued to the plunger. The sample was then fully embedded in the specimen tube with a second agarose gel pour. This eliminated rotational misalignment. However the increased gel stiffness caused cracking during sectioning. After \pdfpage{19} testing agarose gel concentrations between 2\% to 4\%, 3.25\% agarose gel was determined to yield the most consistent sections.
+
+Narrow passages such as the gap between the cerebellum and the occipital lobe were notably empty or partially filled in Subject M, which lead to minor sectioning artifacts. To address such deep and narrow crevices that had difficulty filling prior to the gel setting, Subject V had agarose gel injected into these areas as shown in Figure 2a. Large hollow blood vessels also had difficulty sectioning and cast shadows around the edges of Subject M’s images. Extra care was taken to remove as much of the dura and blood vessels from Subject V prior to embedding, significantly improving image and section quality.
+
+\subsubsection*{Optical system description}
+
+This optical system (\textbf{Supplemental Fig. 4}) is an extension of our previous system\textsuperscript{11,28}. The light source is a superluminescent diode (Superlum S840-B-I-20) emitting low-coherent light centered at a wavelength of 840 nm with a spectral bandwidth of 50 nm. Passing through a polarizer in a fiber bench, linearly polarized light is coupled into a polarization-maintaining fiber (PMF) based 2x2 70:30 coupler (Evanescent Optics Inc). The coupler, which has FC/APC connectors on all ends, splits the incoming light into the reference and sample arms.
+
+In the reference arm, the linearly polarized light emerging from the PMF is first collimated by a fiber collimator and then transmitted through a beam sampler. The beam sampler directs 4\% of the light to a calibration path, which consists of a quarter-wave plate with the axis at 22.5°, an achromatic lens, and a mirror. In the main path, the light continues through a linear polarizer whose transmission axis is set to 45°. Then an achromatic lens focuses light onto a partial reflector (a glass wedge). This configuration ensures that light returning from the reference arm couples back into both PMF axes with equal power.
+
+In the sample arm, a triplet collimator (Thorlabs, TC18APC-850) collimates the linearly polarized light. A beam sampler directs 4\% of the light to a calibration path that is identical to the one in the reference arm. The main path comprises an achromatic quarter-wave plate (QWP), a two-axis galvanometer-based scanner (GVS002, Thorlabs), and a scan lens (Thorlabs, LSM03-BB). A custom mounting system was designed to attach and align a mounting adaptor (GCM102, Thorlabs Inc.), scanning galvo mirrors and the scan lens. This configuration with the QWP axis at 45° illuminates the sample with circularly polarized light. An anisotropic tissue alters the \pdfpage{20} polarization into an elliptical state such that when the light returns to the PMF, it has unequal power between channel axes.
+
+Light returning from the reference and sample arms interferes in the PMF coupler, which transmits the signal to the detection arm. A home-built spectrometer in the detection arm records the interference signal. The spectrometer consists of an achromatic collimating lens, a volume phase holographic grating (1200 lines/mm, Wasatch Photonics), a Wollaston prism (Custom 6°, Karl Lambrecht Corporation), a camera lens (EMERALD 2.9/100mm, Schneider Optics Inc.), and a line scan camera (OctoPlus, Teledyne e2v). This configuration enables the spectra emerging from PMF channels to be focused side by side on the same camera.
+
+To synchronize the galvo mirror scanning and image acquisition a DAQ card (NI PCIe 6361) controlling the galvo mirrors and a frame grabber (NI PCIe 1437) controlling the camera were connected by a RTISI cable. Raw data acquired in LabVIEW were saved to local hard drives during imaging and then uploaded to cloud storage overnight between imaging sessions.
+
+A single capture of the camera was used to compute two complex-valued depth profiles (channel 1 and channel 2) for a single lateral location (A-line in the z-direction). To capture all locations within an approximately 5.5 x 5.5 mm\textsuperscript{2} FOV, the light beam was raster-scanned in the x and y directions by using a pair of galvo-mirrors. The resulting tile was saved to disk in buffers of 10 scans in x-direction (B-lines) and named to identify the slice number and tile location for later reconstruction.
+
+\subsubsection*{Processing}
+
+A linear blend was used to stitch individual tile enface images into a slice enface image. The overlap regions of two adjacent tiles were multiplied by opposing linear gradients from 0-1 and then summed, returning the magnitude to a factor of 1. All images were taken with a 10\% overlap; equivalent to 100 pixels shared between two adjacent tiles.
+
+The axis orientation contrast was also corrected by removing the polarization imperfections from the system across a given tile as measured in the gel area. A polynomial fit was applied to a smoothed gel tile to generate a removal matrix that was then inversely scaled by the magnitude of the axis orientation for each tile. The angular offset was translated into a complex number and then removed.
+
+\pdfpage{21}
+\subsection*{\underline{References}}
+
+\begin{hangpars}
+1. Jbabdi, S. \& Johansen-Berg, H. Tractography: Where Do We Go from Here? \emph{Brain} \emph{Connectivity} \textbf{1}, 169–183 (2011).
+
+2. Schilling, K. G. \emph{et al.} Limits to anatomical accuracy of diffusion tractography using modern approaches. \emph{NeuroImage} \textbf{185}, 1–11 (2019).
+
+3. Xu, F. \emph{et al.} High-throughput mapping of a whole rhesus monkey brain at micrometer resolution. \emph{Nat Biotechnol} \textbf{39}, 1521–1528 (2021).
+
+4. Bullock, D. N. \emph{et al.} A taxonomy of the brain’s white matter: twenty-one major tracts for the 21st century. \emph{Cerebral Cortex} \textbf{32}, 4524–4548 (2022).
+
+5. De Boer, J. F., Milner, T. E., Van Gemert, M. J. C. \& Nelson, J. S. Two-dimensional birefringence imaging in biological tissue by polarization-sensitive optical coherence tomography. \emph{Opt. Lett.} \textbf{22}, 934 (1997).
+
+6. De Boer, J. F., Hitzenberger, C. K. \& Yasuno, Y. Polarization sensitive optical coherence tomography – a review [Invited]. \emph{Biomed. Opt. Express} \textbf{8}, 1838 (2017).
+
+7. Jones, R. \emph{et al.} Insight into the fundamental trade-offs of diffusion MRI from polarization-sensitive optical coherence tomography in ex vivo human brain. \emph{NeuroImage} \textbf{214}, 116704 (2020).
+
+8. Huang, D. \emph{et al.} Optical coherence tomography. \emph{Science} \textbf{254}, 1178–1181 (1991).
+
+9. Bouma, B. E. \emph{et al.} Optical coherence tomography. \emph{Nat Rev Methods Primers} \textbf{2}, 79 (2022).
+
+10. De Campos Vidal, B., Mello, M. L. S., Caseiro-Filho, A. C. \& Godo, C. Anisotropic properties of the myelin sheath. \emph{Acta Histochemica} \textbf{66}, 32–39 (1980).
+
+11. Wang, H. \emph{et al.} Reconstructing micrometer-scale fiber pathways in the brain: Multi-contrast optical coherence tomography based tractography. \emph{NeuroImage} \textbf{58}, 984–992 (2011).
+
+12. Wang, H., Zhu, J. \& Akkin, T. Serial optical coherence scanner for large-scale brain imaging at microscopic resolution. \emph{NeuroImage} \textbf{84}, 1007–1017 (2014).
+
+13. Yendiki, A. \emph{et al.} Post mortem mapping of connectional anatomy for the validation of diffusion MRI. \emph{NeuroImage} \textbf{256}, 119146 (2022).
+
+14. Heilbronner, S. R., Reid, R. C., Casta, T. K. \& Pestilli, F. Reconstructing the human brain’s wiring diagram from axons up. \emph{Trends in Neurosciences} \textbf{49}, 8–19 (2026).
+
+15. Abdelfattah, A. \emph{et al.} Neurophotonic Tools for Microscopic Measurements and Manipulation: Status Report. \emph{Neurophoton.} \textbf{9}, (2022).
+
+16. Magnain, C. \emph{et al.} Blockface histology with optical coherence tomography: A comparison with Nissl staining. \emph{NeuroImage} \textbf{84}, 524–533 (2014).
+
+\pdfpage{22}
+17. Wang, H. \& Akkin, T. Brain Imaging and Mapping with Multi-Contrast Optical Coherence Tomography. in \emph{Neurophotonics and Brain Mapping} (eds Chen, Y. \& Kateb, B.) 177–202 (CRC Press, Boca Raton : Taylor \& Francis, 2017., 2017). doi:10.1201/9781315373058-12.
+
+18. Baumann, B. Optical Coherence Tomography for Brain Imaging. in \emph{Advanced Optical} \emph{Methods for Brain Imaging} (eds Kao, F.-J., Keiser, G. \& Gogoi, A.) 49–68 (Springer Singapore, Singapore, 2019). doi:10.1007/978-981-10-9020-2\_2.
+
+19. Fan, Y. \emph{et al.} Optical coherence tomography for precision brain imaging, neurosurgical guidance and minimally invasive theranostics. \emph{BST} \textbf{12}, 12–23 (2018).
+
+20. Liu, C. J., Rainwater, O., Clark, H. B., Orr, H. T. \& Akkin, T. Polarization-sensitive optical coherence tomography reveals gray matter and white matter atrophy in SCA1 mouse models. \emph{Neurobiology of Disease} \textbf{116}, 69–77 (2018).
+
+21. Li, Y.-Q. \emph{et al.} Polarization-Sensitive Optical Coherence Tomography for Brain Tumor Characterization. \emph{IEEE J. Select. Topics Quantum Electron.} \textbf{25}, 1–7 (2019).
+
+22. Lichtenegger, A. \emph{et al.} Ex-vivo Alzheimer’s disease brain tissue investigation: a multiscale approach using 1060-nm swept source optical coherence tomography for a direct correlation to histology. \emph{Neurophoton.} \textbf{7}, (2020).
+
+23. Lefebvre, J., Castonguay, A., Pouliot, P., Descoteaux, M. \& Lesage, F. Whole mouse brain imaging using optical coherence tomography: reconstruction, normalization, segmentation, and comparison with diffusion MRI. \emph{Neurophoton} \textbf{4}, 041501 (2017).
+
+24. Wang, H. \emph{et al.} Imaging of developing human brains with ex vivo PSOCT and dMRI. \emph{Imaging Neuroscience} \textbf{3}, imag\_a\_00510 (2025).
+
+25. Magnain, C. \emph{et al.} Optical coherence tomography visualizes neurons in human entorhinal cortex. \emph{Neurophoton} \textbf{2}, 015004 (2015).
+
+26. Yang, J. \emph{et al.} Volumetric Characterization of Microvasculature in Ex Vivo Human Brain Samples By Serial Sectioning Optical Coherence Tomography. \emph{IEEE Trans. Biomed. Eng.} \textbf{69}, 3645–3656 (2022).
+
+27. Cheng, S. \emph{et al.} Enhanced multiscale human brain imaging by semi-supervised digital staining and serial sectioning optical coherence tomography. \emph{Light Sci Appl} \textbf{14}, 57 (2025).
+
+28. Liu, C. J., Williams, K. E., Orr, H. T. \& Akkin, T. Visualizing and mapping the cerebellum with serial optical coherence scanner. \emph{Neurophoton.} \textbf{4}, 1 (2016).
+
+29. Li, T., Liu, C. J. \& Akkin, T. Contrast-enhanced serial optical coherence scanner with deep learning network reveals vasculature and white matter organization of mouse brain. \emph{Neurophoton.} \textbf{6}, 1 (2019).
+
+30. Liu, C. J. \emph{et al.} Quantification of volumetric morphometry and optical property in the \pdfpage{23} cortex of human cerebellum at micrometer resolution. \emph{NeuroImage} \textbf{244}, 118627 (2021).
+
+31. Heilbronner, S. R. \& Chafee, M. V. Learning How Neurons Fail Inside of Networks: Nonhuman Primates Provide Critical Data for Psychiatry. \emph{Neuron} \textbf{102}, 21–26 (2019).
+
+32. Slopsema, J. P. \emph{et al.} Clinical deep brain stimulation strategies for orientation-selective pathway activation. \emph{J. Neural Eng.} \textbf{15}, 056029 (2018).
+
+33. Janson, A. P. \& Butson, C. R. Targeting Neuronal Fiber Tracts for Deep Brain Stimulation Therapy Using Interactive, Patient-Specific Models. \emph{JoVE} 57292 (2018) doi:10.3791/57292.
+
+34. Janson, A. P., Anderson, D. N. \& Butson, C. R. Activation robustness with directional leads and multi-lead configurations in deep brain stimulation. \emph{J. Neural Eng.} \textbf{17}, 026012 (2020).
+
+35. Jenkinson, M., Bannister, P., Brady, M. \& Smith, S. Improved Optimization for the Robust and Accurate Linear Registration and Motion Correction of Brain Images. \emph{NeuroImage} \textbf{17}, 825–841 (2002).
+
+36. Tendler, B. Diffusion-weighted steady-state free precession imaging in the ex vivo macaque brain on a 10.5T human MRI scanner.
+
+37. Warrington, S. \emph{et al.} 10.5 Tesla High-Resolution Macaque Brain MRI for Connectivity Studies.
+
+38. Liu, C. J. \emph{et al.} Three-dimensional fiber orientation mapping of ex vivo human brain at micrometer resolution. \emph{npj Imaging} \textbf{3}, 13 (2025).
+
+39. Chung, K. \emph{et al.} Structural and molecular interrogation of intact biological systems. \emph{Nature} \textbf{497}, 332–337 (2013).
+
+\end{hangpars}
+\end{document}

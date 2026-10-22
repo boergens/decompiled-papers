@@ -1,0 +1,17 @@
+# Wildenberg et al. 2023, bioRxiv 2023.10.23.563679v1, Figure 5C (PDF p. 23): accuracy of human tracing of myelinated
+#   axons across a computational kerf, against kerf size. One row per plotted marker (3 markers joined by a line).
+# Columns: kerf_slices_label = the x tick label the marker belongs to (0, 50, 100 slices); kerf_um_label = the
+#   second row of x labels printed under 50 and 100 ('1.5 um', '3 um'; 30 nm voxels); kerf_slices = marker centre
+#   mapped through the x calibration; accuracy_pct = marker centre mapped through the y calibration;
+#   line_x_slices, line_y_pct = the vertex of the orange polyline at that marker (the line joins the marker centres);
+#   printed_annotation = the number printed above the marker in the figure ('(97)', '(60)').
+# Provenance: tier 2, vector paths of the PDF (fig5c_extract.py). y calibrated on the four dotted grid lines, which
+#   are at the labelled ticks 100/80/60/40 (the grid lines are not exactly equidistant: fit residuals up to 0.27 %);
+#   x calibrated on the centres of the tick
+#   labels 0/50/100 (there are no tick marks; residuals < 0.3 slices).
+# Uncertainty: y about 0.3 % (the grid-line residual; the coordinate precision itself is 0.01 pt = 0.01 %); x about 1 slice (label centring).
+# The marker y values are 99.7, 96.8 and 60.1 %: the paper reports 97 % and 60 % (and 100 % for the full stack).
+kerf_slices_label,kerf_um_label,kerf_slices,accuracy_pct,line_x_slices,line_y_pct,printed_annotation
+0,0,-0.32,99.68,0.22,99.46,
+50,1.5,49.6,96.79,50.31,96.78,(97)
+100,3,100.41,60.12,100.41,60.18,(60)

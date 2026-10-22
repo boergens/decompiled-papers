@@ -1,0 +1,15 @@
+yeatts2026: Yeatts M., Chinthalapati N., Baradaran B., Heinks H., Liao E., Huxford R., Karlaftis V., Grafft T., Casta T. K., Hellevik A., Pisharady P. K., Howard A. F., Zimmermann J., Pengo T., Baker J. L., Purpura K. P., Johnson M., Reid R. C., Pestilli F., Jbabdi S., Heilbronner S. R., Akkin T. (2026).
+Scaling up polarization-sensitive optical coherence tomography to image the whole macaque brain. bioRxiv preprint.
+DOI: 10.64898/2026.06.11.731509
+Preprint page: https://www.biorxiv.org/content/10.64898/2026.06.11.731509v1
+Version: bioRxiv version 1, posted 15 June 2026 (the only version as of 2026-10-20; api.biorxiv.org: version 1, license cc_by_nc, published NA).
+Not peer reviewed. Licence: CC BY-NC 4.0 (printed on every page of the PDF).
+Also indexed at PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC13308142/ and Oxford ORA:
+https://ora.ox.ac.uk/objects/uuid%3A15468a12-4912-4360-8ebc-1bdd5c5d6adc
+
+Files (downloaded 2026-10-20 by the oct-20-compresstome session, browser slot 0, biorxiv.org):
+  yeatts2026.pdf             the preprint, 23 pp. (biorxiv file 2026.06.11.731509v1.full.pdf; bioRxiv stamp on every page)
+  yeatts2026_supplement.pdf  Supplemental Methods and Results, 5 pp. (biorxiv file media-1.pdf)
+Data and code named by the preprint: brainlife.io (not retrieved).
+
+Earlier screening (Codex session, 2026-10-20, before the PDFs were obtained): see ../screening.md.

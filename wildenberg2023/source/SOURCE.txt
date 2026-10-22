@@ -1,0 +1,16 @@
+wildenberg2023: Wildenberg G. A., Boergens K. M., Nikitin V., Deriy A., De Carlo F., De Andrade V., Xiao X., Kasthuri N. (2023).
+A Pipeline for a Primate Projectome: mapping every individual myelinated axon across the whole brain. bioRxiv preprint.
+DOI: 10.1101/2023.10.23.563679
+Preprint page: https://www.biorxiv.org/content/10.1101/2023.10.23.563679v1
+Version: bioRxiv version 1, posted 24 October 2023 (the only version as of 2026-10-20; api.biorxiv.org: version 1, license cc_no, published NA).
+Not peer reviewed.
+Licence: none; "All rights reserved. No reuse allowed without permission" (bioRxiv page and PDF stamp). The copyright holder is the
+authors; Kevin Boergens (the owner of this collection) is the second author.
+
+Files (downloaded 2026-10-20 by the oct-20-compresstome session, browser slot 0, biorxiv.org):
+  wildenberg2023.pdf   the preprint, 38 pp. (biorxiv file 2023.10.23.563679v1.full.pdf; bioRxiv stamp on every page)
+Not downloaded: Supplementary Movie 1 (563679_file02.mov), the only supplementary file listed on bioRxiv.
+
+Why it is here: Codex's screening (2026-10-20) listed it as a lead on section-surface damage; the PDF text confirms that it
+compares Compresstome and vibratome cut surfaces of macaque cortex by SEM, traces myelinated axons across Compresstome-cut
+pillars, and estimates the gap between adjacent sections.

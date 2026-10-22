@@ -1,0 +1,395 @@
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+\decompnote{bioRxiv preprint, version 1 (posted October 24, 2023; the only version), 38 pages: text pp.\,1--14 (title, authors, sections 1--7 with subsections 3.1--3.4, 4.1 and 5.1--5.9, 53 references), Figures 1--6 on pp.\,15--26 and Supplementary Figures 1--6 on pp.\,27--38, each figure on one page (with a bold ``Figure N'' label above the image) and its caption on the following page. Left out: the bioRxiv stamp at the top of every page (given once below, because it carries the licence statement), the page numbers, and the line numbers 1--576 printed in the left margin. Text printed inside the figures (panel letters, labels, scale bars, axis labels) is in the figure descriptions (the decompiler boxes under each caption). Hyphenation at line ends was undone; ``hemi-brain'', ``synchrontron-source'' and ``Sub-cellular'' (Figure 3 caption) were kept hyphenated, ``Pro-Long'' was joined to ``ProLong'' (the product name). The degree sign of ``4 °C'', ``180°'' and ``0.3°'' is a raised circle (\textbackslash circ) in the PDF.}
+
+\sourcefile{wildenberg2023.pdf}
+
+\noindent bioRxiv preprint doi: https://doi.org/10.1101/2023.10.23.563679; this version posted October 24, 2023. The copyright holder for this preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission.\par
+
+\pdfpage{1}
+\section*{A Pipeline for a Primate Projectome: mapping every individual myelinated axon across the whole brain}
+
+\noindent Gregg Wildenberg*†\textsuperscript{1,2}, Kevin Boergens†\textsuperscript{3}, Viktor Nikitin\textsuperscript{4}, Alex Deriy\textsuperscript{4}, Francesco De Carlo\textsuperscript{4}, Vincent De Andrade\textsuperscript{4}, Xianghui Xiao\textsuperscript{5}, and Narayan Kasthuri*\textsuperscript{1,2}
+
+\medskip
+\noindent \textsuperscript{1}Department of Neurobiology, The University of Chicago\\
+\textsuperscript{2}Argonne National Laboratory, Biosciences Division, Lemont, IL, USA\\
+\textsuperscript{3}Department of Physics, University of Illinois, Chicago\\
+\textsuperscript{4}Argonne National Laboratory, Advanced Photon Source, Lemont, IL, USA\\
+\textsuperscript{5}National Synchrotron Light Source II, Brookhaven National Laboratory, Upton, NY, USA\\
+\textsuperscript{*}corresponding authors: gwildenberg@uchicago.edu, bobbykasthuri@uchicago.edu\\
+\textsuperscript{†}authors contributed equally
+
+\section*{1\quad Abstract}
+
+We developed a pipeline to detail the morphology and complete trajectory of every long distance projecting neuron in large volumes of the non-human primate brain - a projectome. A projectome would organize how the hundreds of brain regions in a primate brain communicate with each other and provide a comprehensive classification of long distance neurons. The reason such projectomes do not exist already is that there is no single imaging technique with the resolution and sampling depth capable of producing one in primates. Here we address that gap by combining new ways to cut brains with minimal tissue loss, nanoscale x-ray microscopy imaging that reveals every individual myelinated axon (MA) and the location, size, and morphology of every neuron, and algorithms for tracing individual myelinated axons for millimeters to centimeters, across tissue gaps.
+
+\section*{2\quad Introduction}
+
+A fundamental goal of neuroscience is to determine the organizational logic of brains. Brains are obviously parcellated, and in some large brains like the non-human primate (i..e, \emph{Rhesus macaque}) and human, there are likely hundreds of anatomically and functionally distinct brains regions [1, 2]. Decades of experiments have suggested that information moves across these brain regions in specific ways critical for brain functioning [3] and disruptions of these pathways results in a range of neurological disorders (e.g., multiple sclerosis, autism, epilepsy, schizophrenia, aphasia) [4, 5, 6, 7]. However, our understanding of the how brain regions communicate is biased, limited by existing technology. For example, we have good models of the averaged trajectory of thousands of long \pdfpage{2}distance myelinated axons (MA) imaged with MRI [7, 8], or of the long distance targets of a small fraction («1\%) of individual neurons, revealed with optical microscopy [9, 10, 11, 12, 13]. Such data is clearly valuable, for example see ’Van Essen’ diagrams [3], but these techniques leave open questions about brain-wide organizational logic at the cellular level, many of which we suggest could be answered with a projectome: the detailed paths of every individual long distance neurons with its downstream targets, \emph{relative to each other} [14]. A projectome would at minimum classify potentially every single long distance projection neuron in every brain region by its targets and the dendrite morphology. Moreover, a projectome would reveal every single long distance pathway in a single brain, including some that have never been characterized before, the ∼strength of connection of every brain region on its target, and the numbers of projection neurons across different cortical and subcortial areas - essentially creating a Rosetta stone for correlating with function or genetic expression in the future. By having a \emph{whole brain} projectome, rather than a sub-division (e.g., visual cortex), will uniquely address variability in the organizations of brains by, for instance, quantifying:
+
+\decompnote{``«1\%'' is printed with a guillemet («), as in the PDF; a ``much less than'' sign (≪) was presumably meant.}
+
+\begin{hangpars}\setlength{\parindent}{0pt}
+1. How often the trajectory of individual neurons match the trajectories of nerve tracts (e.g., do individual axons branch when nerves branch and vice versa?).
+
+2. How much variability is there in the composition of projection neuron classes and numbers of projection neurons across cortical and subcortical regions?
+
+3. Across animals, is variability in an individual projection to a particular brain region compensated by downstream pathways (i.e., if Region X has a smaller projection to Region Y in one animal, does the projection from region Y to Z increase to compensate?).
+
+4. Variability in disease states, in response to the disease.
+\end{hangpars}
+
+We argue that such principles are hard, if not impossible to reveal with either averaged or sparse sampling approaches. Finally, a hallmark of species with bigger brains, ranging from mice to humans, is variability in behavior and macro-connectivity (e.g., MRI) [15, 16, 17, 18] and thus we argue projectomes of large brains are well poised to address the fundamental question of how variability in long distance communication between brain regions can underlie variability in behavior.
+
+Part of the reason such maps don’t already exist is that there is no single imaging technique with the requisite resolution, sampling depth, and speed to image entire primate projectomes. Magnetic resonance imaging (MRI) approaches are fast, span whole brains, can be done \emph{in vivo} but lack resolutions to parse out long-range properties of individual neurons. Fluorescence approaches (e.g., light sheet [19], expansion [20]) can resolve individual axons only if a small fraction ( <5-10\%) of axons are labeled and in addition, fluorescence techniques often require genetic access for expressing fluorophores. Electron microscopy (EM) offers sufficient resolution to resolve individual myelinated axons, labels all neurons and is species independent, but current 3D electron microscopy approaches are limited to volumes substantially smaller than whole primate brains [21, 22].
+
+One promising option is to use synchrotron source x-ray imaging, which we have in the past demonstrated can image large volumes of brains at sub-cellular resolution [23] and indeed can image entire mouse brains, ∼1 cm\textsuperscript{3}, at sub-micron resolution [24]. Synchrotron micro and nano x-ray computed tomogrpahy (µXCT, nXCT) have several advantages relative to standard optical microscopy and electron microscopy:
+
+\begin{hangpars}\setlength{\parindent}{0pt}
+1. depth of penetration [23]
+
+\pdfpage{3}2. infinite vertical tiling [25]
+
+3. speed of imaging ∼10 MHz for µXCT [23] and ∼100 MHz for nXCT [26]
+
+4. automated imaging [25]
+
+5. compatibly with post-hoc EM [24]
+\end{hangpars}
+
+However, imaging an entire macaque brain (∼5 cm\textsuperscript{3}) with x-rays poses at least 2 challenges. First, heavy metals used to stain brains for x-ray imaging (e.g., osmium, uranyl acetate, lead citrate) and epoxy resins need to diffuse through the entire brain. While it is now possible to stain entire mouse brains with osmium [27, 28, 29], the ∼200 fold greater volume of macaque brains will still pose problems for chemical access primarily thru diffusion. One possibility is transcardial perfusion of stains [30], but such approaches remain unreliable, hazardous, and thus, unlikely to be used on scarce and valuable primate tissue. A second obstacle is that, even with the minimal scattering afforded by using x-rays, penetrating through multi-cm thick samples while maintaining focus and resolution remains problematic. A human projectome only exacerbate the problems by orders of magnitude.
+
+Thus, we developed a pipeline that entails subdividing brains with minimal loss, imaging each sub-volume with synchrotron source x-rays (\textbf{Figure 1}) at resolutions sufficient to reveal the trajectory of every MA and the morphology of every cell, and algorithms to trace MA in subvolumes and across cut surfaces. While the work presented here is a proof-of-concept rather than a whole projectome, it solves many critical hurdles first necessary to surpass and lays the path forward for following most, if not all, individual MAs over large volumes of a primate brain.
+
+\section*{3\quad Results}
+
+\subsection*{3.1\quad Cutting Brains with Minimal Loss}
+
+We first investigated whether a commercial system called the ’Compresstome’, a new microtome that compresses tissue as it’s cut, developed for decreasing damage during cutting of living brain slices[31], could be used to tracing individual MAs across tissue sections. The Compresstome was recently used to track sparsely labeled fluorescent axons across serial macaque brain slices [9] but because this approach relied on labeling sparsity to follow axons across cut surfaces, the surfaces of the cut sections were not evaluated nor was the accuracy in following individual MAs across cut surfaces. We cut 300 µm thick serial slices of cortex brain tissue and stained each slice with Fluoromyelin, a fluorescent dye that labels individual MAs [32] (\textbf{Figure 2A}). We imaged opposing cut surfaces using confocal microscopy and found that we could easily identify many individual MAs across the cut surface, whether such axons were cut in cross-section, appearing as circles, or broadly parallel to the cut surface) (\textbf{Figure 2B, red box and green circle, respectively}). We next compared the relative surface integrity of a standard vibratome and compresstome brain section with scanning electron microscopy (SEM). Consistent with our ability to trace MA across cut surfaces, we found that the surface of compresstome sections were relatively preserved, with biological features like soma, nuclei, and individual MAs where reliably identifiable. Vibratome section surfaces, however, appeared uniformly jagged without any discernible biological features (\textbf{Supplementary Figure 1}).
+
+\pdfpage{4}
+\subsection*{3.2\quad µXCT tomography of large brain pillars}
+
+We next used the Compresstome to cut a 2x4 pillar array of macaque cortex with each pillar ∼0.7 mm × 0.5 mm × 8 mm in dimension, spanning across primary and secondary visual cortices (V1, V2 respectively) and the white matter tracts between (\textbf{Supplementary Figure 2}). Each pillar was then stained and embedded in a hard plastic resin using established EM protocols[33] which provide high contrast and physical stability for µXCT imaging[23, 24, 26] (\textbf{Figure 3A}). We developed custom cylindrical molds that reduce the sharp edges of the resin to minimize x-ray scattering[34, 35, 36] and that fit into a single field of view (FOV). Adjacent pillars were imaged using µXCT at ∼600 nm\textsuperscript{3} resolution, and acquisition took approximately 75 min to image 1.3 x 10\textsuperscript{10} voxels (i.e., 2.9 MHz) (see Methods for how to access full data sets). In both V1 and V2 grey matter, individual neurons and their primary dendrites are clearly visible, and in white matter, numerous individual MAs can be resolved (\textbf{Figure 3B}). Additionally, manual inspection showed large fiducials (e.g., blood vessels) that cross two of the pillars, allowing identification of adjacent cut surfaces (\textbf{Figure 3C, Supplementary Movie 1.}).
+
+\subsection*{3.3\quad Tracing individual MAs across µXCT pillars and estimating tissue loss}
+
+We next used the µXCT datasets to ask whether individual MAs could be traced within and across across the gap between two pillars, and to calculate the tissue loss between pillars. We traced 31 readily identified MAs that traversed the two pillars (\textbf{Figure 4, and Supplementary Figure 3})and we were able to follow 30 MAs across the entire 700 µm plane of the two pillars, and the one that could not be fully traced de-myelinated within the volume of pillar 1 but could be fully traced through pillar 2. The average length of MA traced was 1.4 mm, and in total we traced 86.99 mm of MA across the two pillars. We then used these reconstructed MAs to estimate the tissue loss, or “kerf”, between two pillars. Briefly, we fitted lines to each MA reconstruction that traverses the gap between the two pillars and estimated the distance between the ends of the MA reconstructions at the edges of each pillar (see Methods). Using this method we averaged the kerf over all 31 MAs as 697 nm (i.e., the loss from cutting is about 1 pixel of µXCT data). Overall, we conclude that: 1) large pillars can be readily stained and automatically imaged by µXCT, 2) there is minimal tissue loss between pillars, and 3) MAs can be manually followed throughout and across pillars even with micron scale x-ray imaging.
+
+\decompnote{``within and across across the gap'' and ``Supplementary Figure 3)and'' are printed so.}
+
+\subsection*{3.4\quad Synchrotron \textbf{\emph{nano}}-x-ray tomography for tracing MA}
+
+Although µXCT has the advantage of accommodating very large samples, even up to whole mouse brains [24], we found the resolution of µXCT was insufficient for automated segmentation of MAs and joining MA segments across the gap, both which would be necessary to scale this pipeline to whole brains. Thus, we next investigated nano-xray tomography (nXCT) imaging of brains as a higher resolution option for projectomics. We collected multiple nXCT datasets at multiple resolutions, using different nano x-ray imaging approaches, and at different synchrotron beamlines. We ultimately created two datasets, a 30 nm resolution, (∼50 µm\textsuperscript{3}) volume from white matter in primates acquired on a Transmission x-ray Microscope (TXM) at the Full-field x-ray Imaging beamline of the National Synchrotron Light Source II at Brookhaven National Laboratory (BNL), and \pdfpage{5}a 100 nm (∼250 µm)\textsuperscript{3} volume of lower layers (L6) of mouse cortex at The European Synchrotron Radiation Facility (ESRF) using holotomography[37, 26, 38].
+
+With 30 nm isotropic voxel resolution, we could reliably trace 100 percent of all MA within the volume, in dense white matter and across de-myleination events like nodes of Ranvier. We first asked how well such resolution could support tracing across kerfs. We produced computational gaps by removing slices from complete white matter nXCT stacks to mimic kerfs of different sizes (\textbf{Figure 5A}) to determine how accurately humans could trace MAs across different sized divides (See Methods). We removed 1.5 and 3 µm kerfs, ∼2x and 4x larger than the actual gap we calculated for the compresstome sections, and had independent experts trace the same MAs across the 1.5 and 3 µm gap (\textbf{Figure 5B-C}). We found that experts agreed on the trajectories of 97\% of the axons across a 1.5 µm gap, and that accuracy drops to 60\% when the gap is 3 µm wide (104 MA fragments, mean length ∼32 µm, total MA length 3.3 mm). Although 30 nm nXCT provides superior resolution, such imaging is currently limited to volumes of ∼50 µm\textsuperscript{3} and would necessitate cutting 10,000 s of approx 1 mm diameter pillars to map even a 0.01\% of macaque primate brain. Thus, we asked about mapping projectomes in a larger volume but coarser resolution nanoholotomography x-ray dataset [37] which we generated at ESRF at 100 nm\textsuperscript{3} voxel resolution. We first verified that humans could reliably trace individual MA throughout the volume (127 accurately axons traced; data not shown, see Methods). Furthermore, we found that at 100 nm voxel resolution, dendritic arbors could be clearly traced, and demyelination events like Nodes of Ranvier could be clearly visualized (\textbf{Figure 6A, Supplementary Figure 4}).
+
+We next asked whether algorithms used for electron microscopy data could reliably segment MAs from 100nm\textsuperscript{3} nXCT data. We found that a state of the art (SOA) EM segmentation algorithm, Local Shape Descriptors (LSD) [39], with minimal training could reliably identify nearly all MA profiles throughout a subvolume (116 µm\textsuperscript{3}) of the nXCT data set (\textbf{Figure 6B}). We manually inspected 100 random MA segmentations and found 81\% of MAs were accurately segmented throughout the entire volume (total length = 3.3 mm, average length = 35 µm) and all errors were splits (i.e., a single MA was labeled with 2 IDs). We found such splits were readily identified and fixed algorithmically: we first automatically identified putative split errors from the list of segmented objects by identifying tips of segments (i.e., where the segment ends). Second, we found MA tips that were within 250 nm and pointing at each other. We joined these ends and subsequent visual inspection found that 100\% of theses repair were correct. Finally, we asked how well can algorithms trace MA across kerfs of 100nm\textsuperscript{3} nXCT data? To test this, we removed 19 sections, ∼1.9 µm, from the segmented volume (∼2.5-fold greater than the estimated real gap of 697 nm), removed all unique identifiers, and used matching algorithms and directional predictions described above to reconstruct MA across gaps. We found that our algorithm performed 94.4\% optimally in matching MA segmentations across the 1.9 µm divide \textbf{(Supplementary Figure 5)}. While such computational gaps are likely idealized (i.e., they do not contain cutting distortions or other artifacts), they suggest that tracing the vast majority of MA across Compresstome-generated gaps is feasible. Thus, with minimal training, available algorithms for automatic segmentation appear sufficient for our proposed pipeline for projectome mapping of nXCT data. Overall, these datasets confirmed several points that suggest 100 nm\textsuperscript{3} data appears to be a sufficient resolution for projectome mapping of individual MAs, and neuronal dendritic morphologies.
+
+\pdfpage{6}
+\section*{4\quad Discussion}
+
+Here we outline an experimental pipeline for mapping many to all individual myelinated axons and cell morphologies across large brains using synchrotron source x-ray imaging. We addressed several challenges:
+
+\begin{hangpars}\setlength{\parindent}{0pt}
+1. methods for sectioning brains with minimal tissue loss and preparing for x-ray tomography.
+
+2. identifying the minimal resolution needed to trace all individual MAs within volumes and across tissue gaps
+
+3. automatic segmentation of individual MAs.
+
+4. algorithms for joining segments of individual MAs across tissue gaps.
+\end{hangpars}
+
+We found that with current x-rays resolutions (i.e., 100 nm voxels) we can trace MA within pillars with near 100\% accuracy and across pillars with 97\% human accuracy and 94\% algorithmic accuracy across gaps we estimate are 2-fold wider than the actual gap between compresstome cut sections. Finally, we model the MA tracing success rate as P≈(Pseg×Pgap)\textsuperscript{Ngap}, where Pseg is the fraction of axons within a pillar that are reconstructed without error, Pgap is the fraction of axons successfully traced across a kerf gap, and Ngap is the number of gaps jumped by the myelinated axon from end to end. Thus, the required success rate for an axon traversing on average 100 pillars (or 10 cm for 1 mm wide pillars) is Pseg×Pgap ≥97.8. Thus, we predict that algorithms could completely trace the long distance MA projections of 10\% of all MA (10’s of thousands) in a cm\textsuperscript{3} volume (\textbf{Supplementary Figure 6}). This number could be increased with human intervention and error checking, which itself could be made more efficient by building expectations/priors for what MAs should look like using data collected from segmentation and error checking of MAs. These priors to identify possible sources of error (e.g., trifurcations, inappropriate loops, etc.) or to target human error checking could be scaled using the rising number of online tools to error checking the algorithmic output of connectomic data (EYEwire [40], FlyWire [41], and others [42, 43]). Second, there is now a public challenge for autosegmentation of MA through x-ray data: \texttt{https://xpress.grand-challenge.org/} which will increase algorithmic efficiency.
+
+\decompnote{Printed so: ``P≈(Pseg×Pgap)\textsuperscript{Ngap}'' with seg, gap and Ngap typed as plain letters (Ngap raised), and the threshold ``≥97.8'' without a percent sign (0.978 or 97.8\,\% is meant).}
+
+\subsection*{4.1\quad A projectome of a primate hemi-brain}
+
+The projectome of an adult macaque hemi-brain, conservatively estimated at ∼5 x 3 x 5 cm, would create ∼1500 pillars, 5 cm long and 1 mm wide as described above. These pillars could be imaged at existing synchrotrons, like the Advanced Photon Source (APS) at Argonne National Lab (ANL), using µXCT at 600 nm resolution in 78 days of continuous imaging (∼50 MHz acquisition). Such data would allow for identifying every soma, tracing large fractions of dendritic arbors, tracing large caliber MA long distances, and detailing the full vasculature. A complete projectome, detailing the course of every MA in a volume will likely require 100 nm\textsuperscript{3} pixel size or better. We demonstrate such resolutions are currently achievable with nXCT and some beamlines have achieved such resolutions over a millimeter of penetration [38]. One critical factor for future projectomes is that beamlines are often upgraded, sometimes increasing their brightness by an order of magnitude. For example, the APS at ANL is currently upgrading with an expected increase of 500x brightness \pdfpage{7}\texttt{https://www.aps.anl.gov/APS-Upgrade}. With the upgrade, µXCT at 600 nm\textsuperscript{3} of the hemi-brain would take 16 hrs and, assuming the major bottleneck in acquisition speed post-upgrade are detectors [44] and with the current availability of 6 GHz detectors, a 100 nm projectome would take 144 days.
+
+\section*{5\quad Methods}
+
+\subsection*{5.1\quad Animal care and tissue processing}
+
+Perfusion procedures were followed according to animal regulations at the University of Chicago’s Animal Resources Center (ARC) and approved IACUC protocols. Rhesus macaques were housed in accordance with the Guide for the Care and Use of Laboratory Animals, Public Health Service Policy, and the Animal Welfare Act and Regulations, at the University of at Chicago, a fully AAALAC-accredited institution. All procedures involving animal care and use were approved by the IACUC at the University of Chicago.
+
+\subsection*{5.2\quad Fluoromyelin staining}
+
+Tissue sections were provided by Precisionary Instruments, makers of the Compresstome. Paraformaldehyde fixed zebrafinch brain was cut into 200 µm thick serial sections using the Compresstome, keeping track of the order of sections. Tissue was then stained with FluoroMyelin (Thermofisher Scientific, F34651) according to manufacture’s protocol. Stained sections were mounted with ProLong Gold Antifade Mountant (Thermofisher Scientific, P10144) and imaged with a Leica Sp5 Confocal microscope.
+
+\decompnote{The Methods say the Fluoromyelin sections were 200 µm thick zebrafinch brain, provided by Precisionary Instruments; the Results (3.1) say ``We cut 300 µm thick serial slices of cortex brain tissue''. Both are kept as printed.}
+
+\subsection*{5.3\quad Tissue sectioning and staining}
+
+Primate brain tissue was prepared for EM as previously described [33]. Briefly, animals were deeply anesthetized until unresponsive. Primates were then transcardially perfused first with buffer (0.1M Sodium Cacodylate, pH 7.4) followed by fixative (0.1M Sodium Cacodylate, pH 7.4, 2\% paraformaldehyde, and 2.5\% glutaraldehyde). The brain was then extracted and postfixed for 24 hours in fixative at 4 °C. A coronal piece of brain encompassing V1 was first cut out with a surgical scalpel followed by further excision of an area spanning V1 and V2 for either vibratome or compresstome sectioning. The visual cortex was identified using the calcarine and lunate sulcus, and a region just ventral to the lunate sulcus was selected that spanned V1 and V2 with intervening white matter. Tissue was then stained with heavy metals, dehydrated and embedded in plastic for electron microscopy as previously described [33].
+
+\subsection*{5.4\quad Synchrotron x-ray computed tomography}
+
+Three x-ray datasets were generated for this study. First, the µXCT was produced at Argonne National Laboratory at station 2-BM using 20 keV energy, 10x objective and a detector size of 2448x2048. Each projection data volume was acquired at a 0.3 s exposure per projection with a total of 3000 angles totally 15 min/volume. About 5 scans were required to span the 8 mm axis \pdfpage{8}at 0.345 µm pixel size, totaling about 75 minutes/pillar. Tomograms were reconstructed using publicly available scripts: \texttt{https://github.com/tomography/tomopy-cli}. Secondly, a nXCT data set was acquired with the transmission x-ray microscope (TXM) at the Full-field X-ray Imaging beamline of National Synchrotron Light Source II at Brookhaven National Laboratory [45, 46]. The x-ray energy used in the experiment was set to 8.5 keV. The projection images of the sample were recorded at 600 angles in 180° with 0.3° angle step. The exposure time for a single projection image was 0.1 s and the time for a tomography scan was 1 minute. Tomographic images of the sample were reconstructed from the projection images with Gridrec reconstruction algorithm [47] implemented in a Python package TomoPy [48]. The reconstructed tomography images have isotropic voxel size of 20.6 nm. The third dataset was collected at the European Synchrotron Radiation Facility (ESRF) (Grenoble, France) using holotomography and imaging parameters as previously cited[37, 26, 38].
+
+\subsection*{5.5\quad Manual and automatic segmentation}
+
+MAs from µXCT data sets were manually reconstructed in Knossos (\texttt{https://knossos.app/}) using skeleton tracings. 3D reconstructions of neurons from the 100nm nXCT, and MA tracing across a computational kerf of the 30 nm nXCT data set were done in webknossos [49] ((\texttt{https:}\texttt{//webknossos.org/}). Automatic segmentation of MA from the 100nm nXCT was done using the previously published local shape descriptor algorithm [39] which can be found here:\texttt{https:}\texttt{//github.com/funkelab/lsd}.
+
+\subsection*{5.6\quad µXCT gap estimation}
+
+To estimate the gap between the two adjacent pillars sectioned with a compresstome, 31 myelinated axons were identified that traversed the gap and skeleton-reconstructed using Knossos.Then we measured how strong the direction of the “edge” closest to the gap correlated with the edges as the skeleton tracing moved further away from the gap. To get a direction predictor of the skeleton as it enters the gap we used the last five edges closest to the gap and calculated the weighted average direction (according to the correlation coefficient). Next, we extended the skeleton across the hypothesized gap from both sides and varied the gap width to minimize the residual tension using the downhill simplex algorithm[50]. To measure the residual tension, we iterated over all axons, temporarily removed that axon and matched the axon stubs coming from pillar 1 onto the axon stubs coming from pillar 2 using the Clough-Tocher scheme[51] (because the relative alignment of the two pillars is not exactly known). We then used this interpolation to predict the position of the temporarily removed axon stub from pillar 1 and added the distance of its terminal to its partners terminal (from pillar 2) to the overall tension term.
+
+\subsection*{5.7\quad Repairing MA segmentation splits}
+
+To repair splits we used the skeletons from manual annotations in the µXCT data sets that traversed pillars 1 and 2 as described in the methods section, µXCT gap estimation. We identified all endings of skeletons and measured the pairwise distance between all endings of all skeletons. We matched endings by stepwise increasing distance up to a cutoff of 250 nm and at every step matching endings that had a smaller distance. We rejected tentative ending pairings if the dot product of the two \pdfpage{9}normalized direction vectors was larger than -sqrt(0.5). We produced an NML file detailing all matchings created this way and used webKnossos [49] to manually assess the performance of this matching.
+
+\subsection*{5.8\quad Connecting MAs across a computational gap}
+
+To estimate how effectively we can reconstruct axons over a gap, we used the 100nm\textsuperscript{3} nXCT data and manually removed 19 slices (1.9 µm), creating two sub-datasets A and B. We then used the Kimimaro algorithm (\texttt{https://zenodo.org/record/5539913}) to skeletonize the segmentations derived automatically (\textbf{Figure 6B}). For each terminal on the surface of this artificial gap, we calculated the distance of each connected node along the skeleton (using the Dijkstra “shortest path” algorithm[52]) and measured average position of all connected nodes between 7 and 7.5 µm away (if none were, we substituted it with the position of the most distant node). We used the connecting vector from this average to the surface node as a direction predictor and extended the skeletons tentatively from both sides half-way into the gap. If this connecting vector was longer than 5 times the gap width it was rejected and a vector orthogonal to the cut surface was used instead. This lead to 374 skeletons coming from the A side of the artificial gap and terminating half-way into the gap and 383 skeletons coming from the B side of the artificial gap and terminating half-way into the gap. From here on, we considered these endings only in this half-way plane. We measured the pairwise distance of all endings from A and from B. We then used the Hungarian algorithm[53] to create a least-cost matching for these potential pairs, using the square root of the distance as the cost. We counted the number of correctly matched pairs and calculated the performance metric as a percentage of the highest theoretically achievable score.
+
+\subsection*{5.9\quad Data availability}
+
+All datasets are freely available for download at BosssBD (\texttt{https://bossdb.org/}).
+
+\section*{6\quad Acknowledgements}
+
+We would like to sincerely thank Jian-Qiang for providing Compresstome sections. This research used the Full-field x-ray Imaging beamline 18-ID of the National Synchrotron Light Source II, a U.S. Department of Energy (DOE) Office of Science User Facility operated for the DOE Office of Science by Brookhaven National Laboratory under Contract No. DE-SC0012704
+
+\section*{7\quad References}
+
+\section*{References}
+
+\begin{hangpars}\small\setlength{\parindent}{0pt}
+[1] Michael J Hawrylycz, Ed S Lein, Angela L Guillozet-Bongaarts, Elaine H Shen, Lydia Ng, Jeremy A Miller, Louie N Van De Lagemaat, Kimberly A Smith, Amanda Ebbert, Zackery L Riley, et al. An anatomically comprehensive atlas of the adult human brain transcriptome. \emph{Nature}, 489(7416):391–399, 2012.
+
+\pdfpage{10}[2] Katrin Amunts, Hartmut Mohlberg, Sebastian Bludau, and Karl Zilles. Julich-brain: A 3d probabilistic atlas of the human brain’s cytoarchitecture. \emph{Science}, 369(6506):988–992, 2020.
+
+[3] Daniel J Felleman and David C Van Essen. Distributed hierarchical processing in the primate cerebral cortex. \emph{Cerebral cortex (New York, NY: 1991)}, 1(1):1–47, 1991.
+
+[4] Kim A Meijer, Martijn D Steenwijk, Linda Douw, Menno M Schoonheim, and Jeroen JG Geurts. Long-range connections are more severely damaged and relevant for cognition in multiple sclerosis. \emph{Brain}, 143(1):150–160, 2020.
+
+[5] Martijn P van den Heuvel and Olaf Sporns. A cross-disorder connectome landscape of brain dysconnectivity. \emph{Nature reviews neuroscience}, 20(7):435–446, 2019.
+
+[6] Ke Zeng, Jiannan Kang, Gaoxiang Ouyang, Jingqing Li, Junxia Han, Yao Wang, Estate M Sokhadze, Manuel F Casanova, and Xiaoli Li. Disrupted brain network in children with autism spectrum disorder. \emph{Scientific reports}, 7(1):16253, 2017.
+
+[7] Yaniv Assaf, Heidi Johansen-Berg, and Michel Thiebaut de Schotten. The role of diffusion mri in neuroscience. \emph{NMR in Biomedicine}, 32(4):e3762, 2019.
+
+[8] Christine J Charvet, Kwadwo Ofori, Christine Baucum, Jianli Sun, Melinda S Modrell, Khan Hekmatyar, Brian L Edlow, and Andre J van der Kouwe. Tracing modification to cortical circuits in human and nonhuman primates from high-resolution tractography, transcription, and temporal dimensions. \emph{Journal of Neuroscience}, 42(18):3749–3767, 2022.
+
+[9] Fang Xu, Yan Shen, Lufeng Ding, Chao-Yu Yang, Heng Tan, Hao Wang, Qingyuan Zhu, Rui Xu, Fengyi Wu, Yanyang Xiao, et al. High-throughput mapping of a whole rhesus monkey brain at micrometer resolution. \emph{Nature biotechnology}, 39(12):1521–1528, 2021.
+
+[10] Nicholas W Plummer, Daniel J Chandler, Jeanne M Powell, Erica L Scappini, Barry D Waterhouse, and Patricia Jensen. An intersectional viral-genetic method for fluorescent tracing of axon collaterals reveals details of noradrenergic locus coeruleus structure. \emph{eneuro}, 7(3), 2020.
+
+[11] Tamily A Weissman, Joshua R Sanes, Jeff W Lichtman, and Jean Livet. Generating and imaging multicolor brainbow mice. \emph{Cold Spring Harbor Protocols}, 2011(7):pdb–top114, 2011.
+
+[12] James H Marshel, Takuma Mori, Kristina J Nielsen, and Edward M Callaway. Targeting single neuronal networks for gene expression and cell labeling in vivo. \emph{Neuron}, 67(4):562–574, 2010.
+
+[13] Chase A Weinholtz and Michael J Castle. Intersectional targeting of defined neural circuits by adeno-associated virus vectors. \emph{Journal of neuroscience research}, 99(4):981–990, 2021.
+
+[14] Narayanan Kasthuri and Jeff W Lichtman. The rise of the’projectome’. \emph{Nature Methods}, 4(4):307–308, 2007.
+
+\pdfpage{11}[15] Sophia Mueller, Danhong Wang, Michael D Fox, BT Thomas Yeo, Jorge Sepulcre, Mert R Sabuncu, Rebecca Shafee, Jie Lu, and Hesheng Liu. Individual variability in functional connectivity architecture of the human brain. \emph{Neuron}, 77(3):586–595, 2013.
+
+[16] Eyal Bergmann, Xenia Gofman, Alexandra Kavushansky, and Itamar Kahn. Individual variability in functional connectivity architecture of the mouse brain. \emph{Communications biology}, 3(1):738, 2020.
+
+[17] Liying Ma, Lixia Tian, Tianyu Hu, Tianzi Jiang, and Nianming Zuo. Development of individual variability in brain functional connectivity and capability across the adult lifespan. \emph{Cerebral Cortex}, 31(8):3925–3938, 2021.
+
+[18] Mohamed L Seghier and Cathy J Price. Interpreting and utilising intersubject variability in brain function. \emph{Trends in cognitive sciences}, 22(6):517–530, 2018.
+
+[19] Hiroki R Ueda, Hans-Ulrich Dodt, Pavel Osten, Michael N Economo, Jayaram Chandrashekar, and Philipp J Keller. Whole-brain profiling of cells and circuits in mammals by tissue clearing and light-sheet microscopy. \emph{Neuron}, 106(3):369–387, 2020.
+
+[20] Emmanouil D Karagiannis and Edward S Boyden. Expansion microscopy: development and neuroscience applications. \emph{Current opinion in neurobiology}, 50:56–63, 2018.
+
+[21] Jeff W Lichtman, Hanspeter Pfister, and Nir Shavit. The big data challenges of connectomics. \emph{Nature neuroscience}, 17(11):1448–1454, 2014.
+
+[22] Larry F Abbott, Davi D Bock, Edward M Callaway, Winfried Denk, Catherine Dulac, Adrienne L Fairhall, Ila Fiete, Kristen M Harris, Moritz Helmstaedter, Viren Jain, et al. The mind of a mouse. \emph{Cell}, 182(6):1372–1376, 2020.
+
+[23] Eva L Dyer, William Gray Roncal, Judy A Prasad, Hugo L Fernandes, Doga Gürsoy, Vincent De Andrade, Kamel Fezzaa, Xianghui Xiao, Joshua T Vogelstein, Chris Jacobsen, et al. Quantifying mesoscale neuroanatomy using x-ray microtomography. \emph{eneuro}, 4(5), 2017.
+
+[24] Sean Foxley, Vandana Sampathkumar, Vincent De Andrade, Scott Trinkle, Anastasia Sorokina, Katrina Norwood, Patrick La Riviere, and Narayanan Kasthuri. Multi-modal imaging of a single mouse brain over five orders of magnitude of resolution. \emph{NeuroImage}, 238:118250, 2021.
+
+[25] Rafael Vescovi, Ming Du, V de Andrade, William Scullin, Dogˇa Gürsoy, and Chris Jacobsen. Tomosaic: efficient acquisition and reconstruction of teravoxel tomography data using limited-size synchrotron x-ray beams. \emph{Journal of synchrotron radiation}, 25(5):1478–1489, 2018.
+
+[26] Aaron T Kuan, Jasper S Phelps, Logan A Thomas, Tri M Nguyen, Julie Han, Chiao-Lin Chen, Anthony W Azevedo, John C Tuthill, Jan Funke, Peter Cloetens, et al. Dense neuronal reconstruction through x-ray holographic nano-tomography. \emph{Nature neuroscience}, 23(12):1637–1643, 2020.
+
+\pdfpage{12}[27] Sebastian Ströh, Eric W Hammerschmith, David W Tank, H Sebastian Seung, and Adrian Andreas Wanner. In situ x-ray-assisted electron microscopy staining for large biological samples. \emph{Elife}, 11:e72147, 2022.
+
+[28] Kun Song, Zhihui Feng, and Moritz Helmstaedter. High-contrast en bloc staining of mouse whole-brain and human brain samples for em-based connectomics. \emph{Nature Methods}, pages 1–5, 2023.
+
+[29] Shawn Mikula, Jonas Binding, and Winfried Denk. Staining and embedding the whole mouse brain for electron microscopy. \emph{Nature methods}, 9(12):1198–1201, 2012.
+
+[30] Sanford L Palay, SM McGee-Russell, Spencer Gordon Jr, and Mary A Grillo. Fixation of neural tissues for electron microscopy by perfusion with solutions of osmium tetroxide. \emph{The Journal of cell biology}, 12(2):385–410, 1962.
+
+[31] Hadia M Abdelaal, Hyeon O Kim, Reece Wagstaff, Ryoko Sawahata, Peter J Southern, and Pamela J Skinner. Comparison of vibratome and compresstome sectioning of fresh primate lymphoid and genital tissues for in situ mhc-tetramer and immunofluorescence staining. \emph{Biological procedures online}, 17:1–8, 2015.
+
+[32] Paula C Monsma and Anthony Brown. Fluoromyelin™ red is a bright, photostable and non-toxic fluorescent stain for live imaging of myelin. \emph{Journal of neuroscience methods}, 209(2):344–350, 2012.
+
+[33] Yunfeng Hua, Philip Laserstein, and Moritz Helmstaedter. Large-volume en-bloc staining for electron microscopy-based connectomics. \emph{Nature communications}, 6(1):7923, 2015.
+
+[34] Axel Lange, Andreas Kupsch, Bernd R Müller, and Manfred P Hentschel. \emph{Edge artefacts of radiographic images by X-ray refraction}. 2012.
+
+[35] M Strobl, N Kardjilov, A Hilger, G Kühne, G Frei, and I Manke. High-resolution investigations of edge effects in neutron imaging. \emph{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, 604(3):640–645, 2009.
+
+[36] Samantha J Borland, Julia Behnsen, Nick Ashton, Sheila E Francis, Keith Brennan, Michael J Sherratt, Philip J Withers, and Ann E Canfield. X-ray micro-computed tomography: An emerging technology to analyze vascular calcification in animal models. \emph{International Journal of Molecular Sciences}, 21(12):4538, 2020.
+
+[37] Anna Khimchenko, Christos Bikis, Alexandra Pacureanu, Simone E Hieber, Peter Thalmann, Hans Deyhle, Gabriel Schweighauser, Jürgen Hench, Stephan Frank, Magdalena Müller-Gerbl, et al. Hard x-ray nanoholotomography: large-scale, label-free, 3d neuroimaging beyond optical limit. \emph{Advanced Science}, 5(6):1700694, 2018.
+
+[38] Mariam Andersson, Hans Martin Kjer, Jonathan Rafael-Patino, Alexandra Pacureanu, Bente Pakkenberg, Jean-Philippe Thiran, Maurice Ptito, Martin Bech, Anders Bjorholm Dahl, Vedrana Andersen Dahl, et al. Axon morphology is modulated by the local environment and \pdfpage{13}impacts the noninvasive investigation of its structure–function relationship. \emph{Proceedings of the National Academy of Sciences}, 117(52):33649–33659, 2020.
+
+[39] Arlo Sheridan, Tri M Nguyen, Diptodip Deb, Wei-Chung Allen Lee, Stephan Saalfeld, Srinivas C Turaga, Uri Manor, and Jan Funke. Local shape descriptors for neuron segmentation. \emph{Nature Methods}, 20(2):295–303, 2023.
+
+[40] http://eyewire.org/.
+
+[41] https://flywire.ai/.
+
+[42] Jonathan Zung, Ignacio Tartavull, Kisuk Lee, and H Sebastian Seung. An error detection and correction framework for connectomics. \emph{Advances in neural information processing systems}, 30, 2017.
+
+[43] Daniel Haehn, John Hoffer, Brian Matejek, Adi Suissa-Peleg, Ali K Al-Awami, Lee Kamentsky, Felix Gonda, Eagon Meng, William Zhang, Richard Schalek, et al. Scalable interactive visualization for connectomics. In \emph{Informatics}, volume 4, page 29. MDPI, 2017.
+
+[44] Ming Du, Zichao Di, Dogˇa Gürsoy, R Patrick Xian, Yevgenia Kozorovitskiy, and Chris Jacobsen. Upscaling x-ray nanoimaging to macroscopic specimens. \emph{Journal of applied crystallography}, 54(2):386–401, 2021.
+
+[45] Xianghui Xiao, Mingyuan Ge, Chong Yin, Feng Wang, Lijie Zou, Fei Chen, Yu-chen Karen Chen-Wiegart, and Wah-Keat Lee. Full-field x-ray imaging, a workhorse microscopy beamline at nsls ii for material science researches. \emph{Microscopy and Microanalysis}, 25(S2):386–387, 2019.
+
+[46] Mingyuan Ge, David Scott Coburn, Evgeny Nazaretski, Weihe Xu, Kazimierz Gofron, Huijuan Xu, Zhijian Yin, and Wah-Keat Lee. One-minute nano-tomography using hard x-ray full-field transmission microscope. \emph{Applied Physics Letters}, 113(8), 2018.
+
+[47] Betsy A Dowd, Graham H Campbell, Robert B Marr, Vivek V Nagarkar, Sameer V Tipnis, Lisa Axe, and D Peter Siddons. Developments in synchrotron x-ray computed microtomography at the national synchrotron light source. In \emph{Developments in X-ray Tomography II}, volume 3772, pages 224–236. SPIE, 1999.
+
+[48] Doga Gürsoy, Francesco De Carlo, Xianghui Xiao, and Chris Jacobsen. Tomopy: a framework for the analysis of synchrotron tomographic data. \emph{Journal of synchrotron radiation}, 21(5):1188–1193, 2014.
+
+[49] Kevin M Boergens, Manuel Berning, Tom Bocklisch, Dominic Bräunlein, Florian Drawitsch, Johannes Frohnhofen, Tom Herold, Philipp Otto, Norman Rzepka, Thomas Werkmeister, et al. webknossos: efficient online 3d data annotation for connectomics. \emph{nature methods}, 14(7):691–694, 2017.
+
+[50] John A Nelder and Roger Mead. A simplex method for function minimization. \emph{The computer journal}, 7(4):308–313, 1965.
+
+\pdfpage{14}[51] R.W. Clough and J.L. Tocher. Finite element stiffness matrices for analysis of plates in bending. \emph{Proceedings of Conference on Matrix Methods in Structural Analysis}, pages 515–545, 1966.
+
+[52] Edsger W Dijkstra. A note on two problems in connexion with graphs. In \emph{Edsger Wybe Dijkstra: His Life, Work, and Legacy}, pages 287–290. 2022.
+
+[53] Harold W Kuhn. The hungarian method for the assignment problem. \emph{Naval research logistics quarterly}, 2(1-2):83–97, 1955.
+\end{hangpars}
+
+\pdfpage{15}
+\noindent \textbf{Figure 1}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+
+\pdfpage{16}
+\noindent \textbf{Figure 1.Proposed pipeline for x-ray primate projectome mapping}. \emph{Top left: 1}, a brain is cut into pillars by first cutting the brain into large flat slices (e.g., A, B, C, D, etc..) which are then cut a second time into thinner pillars (e.g., A1,A2,A3,A4 and B1,B2,B3,B4, etc...). \emph{Top right: 2}, Each pillar, after being stained with heavy metals and embedded in resin, is imaged by synchrontron-source x-ray computed tomography (sXCT). \emph{Bottom left: 3}, Individal MAs (depicted as lines between each pillar) are traced within and across each pillar to reconstruct a full brain projectome. \emph{Bottom right: 4}, After projectome mapping, the same pillars are compatible with large volume serial EM for focused connectomic reconstruction of synaptic circuitry. \emph{Middle}: Visual representation of primate brain sub-divided into a series of pillars.
+\alttext{Colour schematic of the proposed pipeline, divided into four quadrants by a thick black vertical and a thick black horizontal line; the quadrants are numbered 1 (upper left of the vertical line, top), 2 (upper right), 3 (lower left) and 4 (lower right) in very large bold black numerals placed next to the centre lines. In the middle, overlapping all four quadrants, is a translucent grey-brown rendering of a primate brain enclosed in a cube made of pale blue, yellow and orange translucent pillars (the brain sub-divided into pillars; ``Middle'' of the caption). Quadrant 1, titled ``SUB-DIVIDE BRAIN'': at the left a block with a green top, an orange front and a blue side, lettered A, B, C, D along the front with dotted vertical lines between the letters (the large flat slices); a grey square (a blade) stands upright on its top. To its right, two thinner slabs labelled A and B, each divided by dotted lines into pillars numbered 1, 2, 3, 4 (small black digits), with a grey square blade above them. Quadrant 2, titled ``IMAGE sXCT `PILLARS'\,'': four tall narrow pillars (orange front, blue side, green top) labelled ``A 1'', ``B 1'', ``A 2'', ``B 2''; above each a black ellipse with a black arrowhead (rotation); at the left the text ``Synch. X-rays'' with five horizontal black arrows pointing at the pillars. Quadrant 3, titled ``ALGORITHMIC TRACING'': three pillars labelled ``A 1'', ``A 2'' and ``B 2''; between A 1 and A 2 five wavy magenta lines end in small white circles on the facing surfaces, and between A 2 and B 2 black curved lines connect white circles on the two facing surfaces (axons traced across the gaps). Quadrant 4, titled ``LARGE VOLUME SERIAL EM'': a purple-tinted drawing of a serial-section EM set-up with small labels ``ELECTRON MICROSCOPE'' (a vertical column at the top), ``CONVEYOR BELT'' (a black tape running from the microscope down to the right), ``DIAMOND KNIFE'' and ``WATER'' (a blue bath), with an orange pillar ``A 1'' standing at the right. No scale.}
+
+\pdfpage{17}
+\noindent \textbf{Figure 2}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+
+\pdfpage{18}
+\noindent \textbf{Figure 2. Individual MAs can be identified across brain sections cut with a Compresstome. A.} Schematic of experimental design where a piece of tissue (A) is cut in half with a compresstome to produce two sections, A1 and A2. MAs in sections A1 and A2 are fluorescently stained with Fluoromyelin, and the matched surfaces are imaged (i.e., back of A1 and front of A2) by 2-photon confocal microscopy. \textbf{B.} Matched MAs from the back of A1 and the front of A2 can be manually identified (e.g., A1, 1 matches A2, 1’, etc...). \emph{red box and inset}: zoom of cluster 2 and 2’ from A1 back and A2 front, respectively show three individual MAs that traverse the two sections. \emph{Green circle}: an individual MA running in ∼plane with the cut surface. Dark circles are negative contrast from unstained soma.
+\alttext{(A) Colour schematic in three numbered steps, left to right, joined by two large black arrows. ``1.'': an orange block labelled ``A'' with a blue right side and green top; a grey rectangle with a black outline (the blade) lies flat on its top at the front, and a dashed vertical line on the blue side marks the cut. ``2.'': two blocks ``A1'' (front, lower) and ``A2'' (behind, taller), the two halves. ``3.'': A1 and A2 drawn apart; small black circles and ellipses are drawn on the back face of A1 (dotted outlines, with the edges of A1 drawn dotted as if seen through the block) and on the front face of A2 (solid outlines): the cut myelinated axons on the two matching surfaces. (B) Two greyscale confocal images side by side, each with an orange label box: ``A1 back'' (left) and ``A2 front'' (right); the right image is slightly rotated, leaving black wedges at its left and lower right edges. Myelinated axons cut across appear as small bright white rings and dots on a grey, speckled background, often in clusters; large dark round blobs are unstained somata (``Dark circles'' of the caption). Large yellow numerals 1--6 on A1 back and 1\textquotesingle--6\textquotesingle{} on A2 front mark six matching clusters in corresponding positions (1/1\textquotesingle{} upper left, 2/2\textquotesingle{} upper right, 3/3\textquotesingle{} middle left, 4/4\textquotesingle{} lower middle, 5/5\textquotesingle{} and 6/6\textquotesingle{} at the bottom). A thin red rectangle (tall, narrow) on each image, next to 2 and 2\textquotesingle, encloses a column of three bright rings; the two rectangles are enlarged in two red-framed insets stacked in the middle between the images, labelled ``2'' (upper inset) and ``2\textquotesingle'' (lower), each showing three blurry bright rings one above the other. A green ellipse on each image (middle right of A1 back, right of A2 front) encloses an elongated bright streak running diagonally, an axon lying in the plane of the cut. No scale bar is printed in B.}
+
+\pdfpage{19}
+\noindent \textbf{Figure 3}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+
+\pdfpage{20}
+\noindent \textbf{Figure 3. Pillar for sXCT imaging}. \textbf{A}. Shown is an individual pillar (0.7 mm × 0.5 mm × 8 mm) spanning V1 and V2 with intervening white matter (green line) is prepared using the compresstome,stained for x-rays and embedded in a cylindrical resin mold prior to micron scale x-ray imaging. \textbf{B.} Sub-cellular features cab be readily identified including dendrites (\emph{left and middle, red and green box}, and individual MAs (\emph{right, yellow box}. \emph{Below} 4x Zoom-ins from each example from corresponding colored boxes can be seen throughout the volume. \textbf{C.} Adjoining surfaces of two opposing pillars (1 and 2) are shown with a large blood vessel traversing across the gap. Scale Bar = 1 mm (A), 10 µm(B), 4 μm(C).
+\alttext{(A) Top, full width: greyscale photograph of one embedded pillar, a long black horizontal bar (the stained tissue) inside a lighter translucent resin rod, photographed on a white background with the black millimetre marks of a ruler visible along the top edge. Labels: ``1 mm'' with a black bar with end ticks at the upper left (scale bar); ``L1'' in white at both ends of the pillar, each with a white square outlining the end region (layer 1 at the two cortical surfaces); ``V2'' in red over the left part and ``V1'' in cyan over the right part; a vertical green line across the pillar at mid-length (the intervening white matter, ``green line'' of the caption). (B) Middle row: three greyscale µXCT slices side by side (sub-cellular detail: dark round and oval profiles are cell bodies, dark elongated streaks are myelinated axons or vessels, on a mottled grey background). Left slice: a red box (centre right) around a group of dark round somata with a thin dark process; a short white vertical bar near the lower left. Middle slice: a yellow box at the top around a small bright-rimmed ring (an axon cross section); a large dark oval with a bright rim in the lower middle (a vessel). Right slice: a green box at the lower left around a dark cell with a process; a long dark streak at the upper left. Each slice has a small blue horizontal and red vertical line at its top (viewer axes). Three 4× zoom-ins of the boxed regions, framed in green (top), yellow (middle) and red (bottom), are stacked at the right of panel C: the green one shows a round dark-rimmed profile, the yellow one a dark elongated cell with a bright-rimmed ring beside it, the red one several dark oval somata with a dark diagonal process. No scale bar is printed in B (10 µm per the caption). (C) Bottom left: greyscale µXCT image of the adjoining ends of two pillars, labelled ``Pillar 1'' and ``Pillar 2'' in white at the top; a vertical dark seam between them (the gap) runs down the middle, and a large black blood vessel enters from the lower left of pillar 1, widens, and crosses the seam into pillar 2 towards the upper right. No scale bar is printed in C (4 µm per the caption).}
+\decompnote{``compresstome,stained'' (no space), ``cab be'' and the unclosed parentheses after ``green box'' and ``yellow box'' are printed so. ``Sub-cellular'' is split ``Sub-'' / ``cellular'' at a line end in the PDF; the hyphen was kept because the running text writes ``sub-cellular''. The caption writes ``10 µm'' with a micro sign and ``4 μm'' with a Greek mu, as in the PDF.}
+
+\pdfpage{21}
+\noindent \textbf{Figure 4}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+
+\pdfpage{22}
+\noindent \textbf{Figure 4. Individual myelinated axons can be traced across µXCT pillars. A.} 2D image showing the entire length of pillars 1 and 2 overlayed with manual reconstructions of individual MAs that traverse the two datasets. Each colored line refers to an individual MA. \textbf{B.} Zoom-in of A on region where individual MAs were traced across pillars 1 and 2. \textbf{C.} Zoom-ins of 3 different regions showing individual MAs traversing pillars 1 and 2. \emph{Red boxes}: regions further zoomed-in and shwon on right side with traversing MAs highlighted in red. Red asterisks mark blood vessels that traverse the two pillars. Scale bars = 1.5 mm (A), 100 µm (C).
+\alttext{Three greyscale µXCT panels on a black background. (A) Left, full height: two tall narrow pillars side by side, labelled ``Pillar 1'' (left, darker, slightly bluish grey) and ``Pillar 2'' (right, lighter grey) in white at the top; both show faint horizontal banding (tile boundaries) and fine dark speckles (cells). Over the lower half, many thin coloured lines (red, green, blue, yellow, magenta, white, black, cyan) run obliquely upward to the right and cross from pillar 1 into pillar 2: the manual reconstructions of individual MAs. A white scale bar at the bottom labelled ``1.5 mm''. (B) Upper right: zoom of the region where the traced axons cross; two blocks of speckled grey texture separated by a vertical dark gap (the kerf) a little right of the middle; about 20 coloured polylines (red, green, light green, blue, dark blue, cyan, white, black, yellow, orange, magenta) run from the left edge across the gap to the right edge, mostly rising to the right, and continue straight through the gap. (C) Lower right: three rows. In each row the left image is a greyscale slice with the vertical dark gap between the pillars in its middle, a thick red rectangle marking a region on the gap, and a red asterisk marking a blood vessel that crosses the gap (top row: a small dark spot just below the box; middle row: a large black oval above the box; bottom row: a dark ring at the upper left). The right image of each row is the boxed region enlarged, with one axon crossing the gap highlighted in semi-transparent red-orange: a thin band rising to the right (top row), a band rising steeply to the right (middle row), and a nearly horizontal band (bottom row). A white scale bar labelled ``100 µm'' at the lower left of C.}
+
+\pdfpage{23}
+\noindent \textbf{Figure 5}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+
+\pdfpage{24}
+\noindent \textbf{Figure 5. Individual MAs can be accurately traced across a computational kerf up to 1 µm. A}. Schematic of experiment: the same 104 individual MAs were manually traced by three separate people in the same nXCT that is either: 1) full, 2) minus 50 slices (1.5 µm gap), and 3) minus 100 images (3 µm gap). \textbf{B.} Manual reconstructions of the same set of MAs from the full nXCT dataset (top) or the nXCT dataset with a 1.5 µm gap. Each color corresponds to an individual MA and the matching colors from the full and 1.5 µm kerf are the same MAs across datasets. \textbf{C.} Dot plot of x: computational kerf distance (µm) versus y: accuracy of tracing across the computational kerf. 97\% of MA 1.5 µm kerf and 60\% of MA can be traced across a kerk of 3 µm. Mean length +/-STD: 31.6+/-7.7 µm, total length traced = 3.26 mm. Scale bars = 5 µm (A), 10 µm (B).
+\alttext{(A) Upper left: greyscale nXCT image (30 nm voxels) of white matter: densely packed round, oval and elongated profiles with dark rims (myelinated axons cut at various angles) on a grey background; a large white round profile at the lower right. Five axons are shaded in semi-transparent colour: a long purple one running from the upper left towards the centre, a red and a green elongated one at the upper right, a small cyan one in the middle and a small purple one below the centre. A tall narrow green rectangle labelled ``100 slices'' (black text on green) and, inside it, a narrower red rectangle labelled ``50 slices'' (black text on red) mark the slabs removed to make the computational kerfs. Scale bar at the lower right: ``5 um'' (white text, black bar). (B) Right, two stacked panels on black. Top, labelled ``Full'' in white: about 15 skeleton traces, each a polyline of small dots in one colour (green, dark green, yellow, cyan, orange, red, purple, magenta, pink, light blue), running roughly left to right across the panel, some branching or crossing. Bottom, labelled ``- 50 slices'': the same set of traces in the same colours, traced in the data set with the 50-slice gap. A white scale bar at the top right of the lower panel labelled ``10 um''. (C) Lower left: dot plot on a black background with white text. x axis ``Kerf size (slices/microns)'', labels 0, 50, 100 with ``1.5 um'' under 50 and ``3 um'' under 100 (no tick marks); y axis ``Accuracy (\%)'' with labels 40, 60, 80, 100 at dotted horizontal grid lines, linear. Three white dots joined by an orange line: at 0 slices, 100\,\% (99.7 measured); at 50 slices, 97\,\% (annotated ``(97)'' above the dot; 96.8 measured); at 100 slices, 60\,\% (annotated ``(60)''; 60.1 measured). The line is nearly flat from 0 to 50 and drops steeply from 50 to 100.}
+\figuredata{C}{figures/fig5c.csv}{figures/fig5c.py}{vector paths in the PDF (tier 2); y calibrated on the dotted grid lines at the labelled ticks (residual 0.3\,\%), x on the tick-label centres (about 1 slice)}
+\decompnote{The title says ``up to 1 µm'' while the data show 97\,\% at a 1.5 µm kerf; ``kerk'' is printed so.}
+
+\pdfpage{25}
+\noindent \textbf{Figure 6}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+
+\pdfpage{26}
+\noindent \textbf{Figure 6. 100 nm}\textsuperscript{\textbf{3}} \textbf{nXCT has sufficient resolution for reconstruction of neuronal morphologies and individual myelinated axons. A}.3D renderings from manual reconstruction of three neurons overlayed on a 3D plane view of the raw nXCT data. \textbf{B}. Single 2D image from the nXCT volume overlayed with segmentation of individual MAs. \textbf{C}. 3D rendering of segmented MAs from (B). Scale bar = 10 (B).
+\alttext{(A) Top, black background: 3D rendering of three manually reconstructed neurons, coloured red (upper left, largest, with a thick apical process rising to the top and several dendrites), orange (centre, below the red one) and blue (right), each a rounded soma with radiating dendrites drawn as tubes; the dendrites extend down towards and below a greyscale nXCT slice shown as a horizontal plane at the bottom (bright round profiles on a grey mottled texture) and a second slice standing vertically behind the neurons at the right; the slice planes have thin magenta, cyan and green edges (the volume box). At the far right a separate smaller grey slice with a short blue process. (B) Lower left: a single greyscale nXCT slice framed in yellow, showing grey neuropil with several large bright round profiles (somata) and many small profiles; hundreds of small coloured blobs (green, magenta, cyan, yellow, blue, orange, red) mark the segmented myelinated-axon cross sections scattered over the whole slice. A white scale bar labelled ``10 um'' at the lower left. (C) Lower right: 3D rendering inside a yellow wire-frame box of the segmented MAs as a dense bundle of coloured tubes (green, magenta, cyan, orange, blue, red, yellow) running roughly from the lower left to the upper right, filling the box.}
+\decompnote{``Scale bar = 10 (B)'' is printed without a unit; the bar in panel B is labelled ``10 um''.}
+
+\pdfpage{27}
+\noindent \textbf{Supplementary Figure 1}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig1.png}
+\end{center}
+
+\pdfpage{28}
+\noindent \textbf{Supplementary Figure 1. Compresstome sections retain biological architecture on very surface of the cut section. A.} Low resolution SEM image of brain tissue cut with a vibratome (left) and compresstome (right). \textbf{B.} High resolution SEM image of the surface of a vibratome section (left) and compresstome section (right). Note that in the compresstome section, neuronal nuclei (dotted circle) and individual MAs (red arrows) can be readily visualized. Scale bar = 1 mm (A), 10 µm (B).
+\alttext{(A) Top: two low-magnification SEM images of whole sections. Left, labelled ``Vibratome'': a mid-grey, elongated, irregular section, narrow and pointed at the top, wider and lighter at the bottom, with a crease across its lower third, on a nearly white background; scale bar ``1 mm'' (black) at the lower left. Right, labelled ``Compresstome'': a larger, roughly pentagonal flat grey section with slightly rounded edges, a few small white specks and faint streaks, filling most of the frame. (B) Bottom: two high-magnification SEM images of the cut surfaces. Left, ``Vibratome'': a rough, jagged surface of overlapping bulged plates and dark fissures running diagonally, with no recognisable cell outlines. Right, ``Compresstome'': a flatter, finely textured surface in which two large round profiles (neuronal nuclei, each outlined by a red dotted circle, upper left of centre and upper right) and further round somata are visible, plus small ring-shaped profiles; two red arrows (lower left and right) point at small ring-shaped myelinated-axon profiles. Scale bar ``10 µm'' (black) under the left image.}
+
+\pdfpage{29}
+\noindent \textbf{Supplementary Figure 2}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig2.png}
+\end{center}
+
+\pdfpage{30}
+\noindent \textbf{Supplementary Figure 2. Brain region excised for primate projectome. A}. A coronal piece of primate brain was cut using a scalpel and a small piece (red box) spanning V1 and V2 was further excised for Compresstome sectioning. V1 and V2 was identified by locating the calcarine sulcus (dashed line). \textbf{B}. Left: Cartoon of tissue pillar array made from Compresstome sectioning of V1/V2 brain tissue from (A). Right: bright field images of tissue pillar array spanning V1 and V2.
+\alttext{(A) Colour photograph of a coronal slab of fixed primate brain, pale cream tissue with grey sulci, on a black background, the occipital part. A small red rectangle near the middle marks the excised piece; ``V2'' is written at its left and ``V1'' at its right in black, and a black dashed line runs from the rectangle down and to the left along a sulcus (the calcarine sulcus). (B) Left: cartoon of eight tall narrow pillars (orange front, blue side, green top) in two rows of four, labelled ``A 1'', ``B 1'', ``C 1'', ``D 1'' (top row) and ``A 2'', ``B 2'', ``C 2'', ``D 2'' (bottom row). Right: bright-field photograph on a black background of eight pale yellowish tissue pillars, long thin strips standing in two rows, labelled in white ``A1 B1 C1 D1'' above the top row and ``A2 B2 C2 D2'' above the bottom row, with ``V1'' at the top left and ``V2'' at the bottom left of the top row (the ends of the strips). No scale bar.}
+
+\pdfpage{31}
+\noindent \textbf{Supplementary Figure 3}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig3.png}
+\end{center}
+
+\pdfpage{32}
+\noindent \textbf{Supplementary Figure 3. Montage of an individual MA traversing µXCT pillars 1 and 2}. Individual images that follow a MA (outlined in red) across the two pillars were stitched together to show the 2.2 mm path and ability to be traced entirely. \emph{Inset}: Zoom-in showing a cluster of additional MAs (red asterisks). Roman numerals I-IV correspond to zoomed in areas depicted below.
+\alttext{Top: a montage on a black background. ``Pillar 1'' (left half) and ``Pillar 2'' (right half) are labelled in white at the top and separated by a white dashed vertical line. Greyscale µXCT image tiles form a staircase-like band rising from the lower left corner to the upper right; along it a thin red line traces one myelinated axon across both pillars, and a straight white line with end ticks drawn parallel to the band is labelled ``2.2 mm'' (white, rotated along the line). Four small white boxes on the band are labelled with white roman numerals: I (upper right, pillar 2), II (pillar 2, left of I), III (pillar 1, near the dashed line) and IV (lower left, pillar 1). A white scale bar labelled ``500 um'' near the bottom middle. Lower right: an inset (a white-framed enlargement connected by thin white lines to a small white box on the band near IV) showing a cluster of myelinated-axon profiles, eight of them marked with red asterisks. Bottom: four greyscale zoom panels in two rows, labelled I and III (top row) and II and IV (bottom row) in white outlined letters, each showing the traced axon as a semi-transparent red-orange band running diagonally across the panel (rising to the right in I, II and III, rising more steeply in IV).}
+
+\pdfpage{33}
+\noindent \textbf{Supplementary Figure 4}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig4.png}
+\end{center}
+
+\pdfpage{34}
+\noindent \textbf{Supplementary Figure 4. Nodes of Ranvier can be identified in nXCT}. Zoom in of an individual myelinated axon (red dotted circle) with a Node of Ranvier. Red arrow points to the Node of Ranvier and green arrows point to the portion of myelin flanking the Node of Ranvier. Scale bar = 2.5 µm.
+\alttext{A single greyscale nXCT image (100 nm voxels), strongly enlarged so that the pixels are visible as blocks; mottled grey with dark and bright patches. A red dotted ellipse, elongated from the lower left to the upper right, outlines one myelinated axon. A red arrow from the lower right points up-left at the middle of the ellipse, where the dark rim is interrupted (the Node of Ranvier); two green arrows, one from below the ellipse pointing up at its lower left part and one from the right pointing up-left at its upper right part, point at the dark myelin flanking the node. Scale bar at the lower left: ``2.5 um'' in white with a white bar.}
+
+\pdfpage{35}
+\noindent \textbf{Supplementary Figure 5}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig5.png}
+\end{center}
+
+\pdfpage{36}
+\noindent \textbf{Supplementary Figure 5. Individual MA segments can be joined across a computational gap.} 100 nm resolution nXCT image showing the number of correct (green), incorrect (red) matches, and those that didn’t have a match across the gap (yellow) across a 1.9 µm gap. Scale bar = 10 µm.
+\alttext{A greyscale nXCT image (100 nm) on a black background: grey neuropil with several large bright round profiles (somata), a few dark rings and dark streaks (vessels), and a dark elongated blob at the lower right. Scattered over the whole image are small filled squares: several hundred green ones (correct matches), about ten red ones (incorrect matches; e.g.\ near the lower middle and at the right edge) and about ten yellow ones (no match; mostly along the left edge). Scale bar at the lower left: ``10 um'' in white with a white bar.}
+
+\pdfpage{37}
+\noindent \textbf{Supplementary Figure 6}
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.62\textheight,keepaspectratio]{figures/sfig6.png}
+\end{center}
+
+\pdfpage{38}
+\noindent \textbf{Supplementary Figure 6. Estimated rates of successfully tracing myelinated axons across tissue pillars of different size.} Plot of x: the number of neurons successfully traced versus y: the total distance neurons are accurately traced for different rates of successful tracing across pillars. Estimates were performed for both tissue pillars that are either 1 mm (solid line) or 2 mm (dashed line) diameter.
+\alttext{Line plot. x axis ``Distance (mm)'', linear, 0 to 100 with labelled ticks every 10; y axis ``No. MAs traced'', logarithmic, labelled 10\textsuperscript{0}, 10\textsuperscript{1}, 10\textsuperscript{2}, 10\textsuperscript{3}, 10\textsuperscript{4} with minor ticks (a second, finer set of unlabelled tick marks is also drawn on the upper part of the y axis). The axes box extends above 10\textsuperscript{4} to about 7 × 10\textsuperscript{4}. Eight straight lines (straight on the log scale, i.e.\ exponential decays) start together near the top left: solid lines for 1 mm pillars and dotted lines for 2 mm pillars, in four colours given in the legend below the plot: ``Success rates'' 0.50 (purple), 0.75 (green), 0.90 (red-orange), 0.99 (blue), and ``Pillar diameter'' dotted = 2 mm, solid = 1 mm. Values read from the vector data: all lines start at about 7 × 10\textsuperscript{4} at 0 mm; blue 0.99 solid ends at about 2.6 × 10\textsuperscript{4} at 100 mm and blue dotted at about 5.4 × 10\textsuperscript{4}; red 0.90 solid falls to about 2 at 100 mm and red dotted to about 340; green 0.75 solid reaches 1 (the bottom of the box) at about 39 mm and green dotted at about 77 mm; purple 0.50 solid reaches 1 at about 16 mm and purple dotted at about 32 mm. Each dotted line falls half as fast (per mm) as the solid line of the same colour.}
+\figuredata{whole figure}{figures/sfig6.csv}{figures/sfig6.py}{vector paths in the PDF (tier 2), exact: 412 line vertices, axes calibrated on the tick marks (residuals 0.006 mm, 0.0004 decades)}
+\decompnote{Printed caption: x is the number of neurons traced and y the distance; in the plot the distance is on the x axis and the number of MAs traced on the y axis.}
+\end{document}
