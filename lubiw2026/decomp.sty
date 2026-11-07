@@ -1,0 +1,41 @@
+% decomp.sty -- shared macros for the decompiled papers (see ../README.md).
+% Everything the decompiler adds (not the paper's own words) goes through
+% \alttext, \decompnote or \figuredata, so a reader or a script can tell the two apart.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{decomp}[2026/10/16 decompiled-paper macros]
+% Compile with lualatex. Write Unicode directly (μ, °, ±, Greek, accents).
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}[Scale=0.9]
+\RequirePackage{textcomp}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs,longtable,array}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{siunitx}
+\RequirePackage{xcolor}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[margin=2.5cm]{geometry}
+% Start of page N of the source PDF (for citing by page).
+\newcommand{\pdfpage}[1]{\marginpar{\footnotesize\textcolor{gray}{[p.\,#1]}}}
+% Which PDF the following text comes from (main, supplement, ...).
+\newcommand{\sourcefile}[1]{\par\noindent\textcolor{gray}{\footnotesize[source file: \texttt{#1}]}\par}
+% Figure description written by the decompiler, not by the authors.
+\newcommand{\alttext}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep}{\footnotesize\textbf{Description (decompiler):} #1}}\par}
+% Data and plotting code for one plotted panel: {panel}{csv}{py}{provenance}
+\newcommand{\figuredata}[4]{\par\noindent{\footnotesize\textbf{Data, panel #1:} \texttt{\detokenize{#2}}, plotted by \texttt{\detokenize{#3}}; provenance: #4.}\par}
+% Any other remark by the decompiler (missing parts, corrections, uncertainty).
+\newcommand{\decompnote}[1]{\par\noindent\textcolor{teal}{\footnotesize[Decompiler note: #1]}\par}
+% Paragraphs with a hanging indent, for reference lists and numbered steps that the paper
+% prints with their own numbers (write the numbers as text: "1. Dissection ...").
+% The \relax matters: without it "\hangafter=1" swallows a leading digit of the next paragraph.
+\newenvironment{hangpars}{\par\begingroup\everypar{\hangindent=1.5em\hangafter=1\relax}}{\par\endgroup}
+% Collection markers (added centrally by tools/mark_local.py, after the paper's own text):
+% \localcopy{key}: this cited work is in the local collection, decompiled in decompiled/<key>/.
+% \externalonly{what}{doi or url}: named by the paper but not in the local collection.
+\newcommand{\localcopy}[1]{\textcolor{teal}{\footnotesize\ [local: \texttt{decompiled/\detokenize{#1}/}]}}
+% \localother{key}: the reference cites another version (e.g. the preprint) of a work that is local.
+\newcommand{\localother}[1]{\textcolor{teal}{\footnotesize\ [local, other version: \texttt{decompiled/\detokenize{#1}/}]}}
+\newcommand{\externalonly}[2]{\par\noindent\textcolor{purple}{\footnotesize[external pull needed: #1 --- \texttt{\detokenize{#2}}]}\par}
+\endinput

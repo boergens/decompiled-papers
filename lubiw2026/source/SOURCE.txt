@@ -1,0 +1,6 @@
+Lubiw A, Schaefer M. Recognizing Penny and Marble Graphs is Hard for Existential Theory of the Reals. arXiv:2508.10136v3 [cs.CG], 9 Sep 2026 (stamp on p. 1).
+PDF fetched 2026-11-06 from https://arxiv.org/pdf/2508.10136v3 in a browser slot. TeX source fetched 2026-11-07 from https://arxiv.org/e-print/2508.10136v3 with curl (Kevin's OK, 2026-11-07); unpacked in work/arxiv.
+Licence: the arXiv abstract page links CC BY 4.0 (http://creativecommons.org/licenses/by/4.0/), checked 2026-11-07.
+
+lubiw2026.pdf: 42587455 bytes, SHA-256 c4a77b61c0f83f4929ad80406c2687643c33802a58aa453d605446e97aee32ff
+arXiv-2508.10136v3.tar.gz: 35329431 bytes, SHA-256 6b7af9753238464bdf861161dab8fc38b36ed4c6007149d9d8f2ed908f6c08c7

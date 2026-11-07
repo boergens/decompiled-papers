@@ -7,6 +7,12 @@ Usage:
                              [--exclude P:x0,y0,x1,y1 ...] [--figure-box P:x0,y0,x1,y1 ...]
 
 --reference-text F uses the plain-text file F (an OCR or publisher text) instead of the PDF's text layer (scans without one);
+  form feeds in F separate pages (pdftotext and tesseract write them), so repeated headers are found as with a PDF;
+--glyph-map F applies a JSON decode table to the PDF's text layer before tokenising, for fonts without a usable Unicode
+  map: {"<font name or its first characters>": {"<character as read>": "<replacement>", ...}, ...}, e.g.
+  {"AdvP4C4E74": {"ð": "(", "Þ": ")", "¼": "=", "þ": "+"}}; "" drops the character;
+--words-only also compares only the tokens of two or more letters on both sides (numbers and single letters, i.e. most
+  of the maths, left out) and reports that coverage as well, for papers where OCR or font encoding garbles the maths;
 --pages A-B checks only those pages of each PDF (a supplement printed inside the main PDF);
 --drop-line-numbers ignores bare numbers in the outer 15 % of the page width (preprint line numbers);
 --exclude P:x0,y0,x1,y1 ignores PDF text whose line centre lies in that rectangle of page P (1-based,
@@ -56,7 +62,16 @@ import pymupdf
 #              1-bit page images >= 50 % of the page are scans, not figures; short repeated lines
 #              (footers with page numbers) count as repeated; \\rotatebox/\\scalebox arguments
 #              dropped; --exclude and --figure-box.
-VERSION = "2026-10-20b"
+# 2026-11-07a (reports from the hexagon, Ludl, V30S, VF800 and dukes2007 decompiles; bead papers-d1a):
+#              tex side: the \\name=number rule applies only to TeX's own registers (it ate \\alpha=-1, \\beta=33,
+#              \\mu = 11.31), the \\name=<length> rule only without a space before the unit and not to Greek letters;
+#              \\(re)newcommand, \\setcounter, \\cline, \\parbox/\\makebox widths and minipage options dropped;
+#              operator names printed (\\gcd, \\min, \\log, \\pmod -> "mod", ...), \\ell read as l, \\r ring accent.
+#              PDF side: math symbol fonts dropped (CMEX, MSAM, AdvTex, Symbol, ...; CMSY/MSBM keep only their
+#              upper-case letters), TeX names in TeX-font spans removed and their accents composed (SIAM: "\\surd",
+#              "J\\'er\\'emy"; not in typewriter or other fonts, where "\\n" is printed code); --glyph-map;
+#              --reference-text split into pages at form feeds; --words-only.
+VERSION = "2026-11-07a"
 
 LIG = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl", "ß": "ss", "æ": "ae", "œ": "oe",
        "ø": "o", "ł": "l", "đ": "d", "ð": "d", "þ": "th", "ı": "i"}
@@ -120,15 +135,52 @@ def vector_figure_boxes(page, gap=6.0, min_paths=15, min_area=3000.0):
 
 LIGATURE_FONT = str.maketrans({"W": "fi", "X": "fl", "V": "ff", "Y": "ffi"})
 
+# Math symbol fonts: their glyphs are never words, but without a Unicode map they read as letters (CMEX's radical as
+# "p", 3B2's AdvTex "U" for <=, Symbol's "a" for alpha). Their spans are dropped on the PDF side.
+SYMBOL_FONTS = ("CMEX", "EUEX", "MSAM", "AdvTex", "AdvTgreek", "AdvPi", "MT-Extra", "MTEX", "MTSY", "Symbol",
+                "MathematicalPi", "EuclidSymbol", "EuclidExtra", "Universal-GreekwithMathPi", "UniversalGreekwithMathPi")
+# Symbol fonts whose upper-case slots are letters (calligraphic, blackboard bold) and whose lower-case and digit slots are
+# symbols (CMSY "p" = radical, "0" = prime): only the upper-case letters are kept.
+UPPER_ONLY_FONTS = ("CMSY", "MSBM", "EUSM")
+TEX_NAME = re.compile(r"\\[A-Za-z]+(\{\})?")
+# TeX's own fonts (Computer Modern, AMS, Euler, Latin Modern, EC): some text layers spell math glyphs and accents in them
+# as TeX names (SIAM: "\surd", "\geqslant", "J\'er\'emy"), which are removed. Not in typewriter fonts, and not in other
+# fonts, where a backslash is printed text (code listings: "\n").
+TEX_FONTS = ("CM", "MSAM", "MSBM", "EU", "LM", "SF")
+TT_FONTS = ("CMTT", "CMSLTT", "CMITT", "LMMono", "SFTT", "SFIT", "SFST")
+
+
+def tex_font(fn):
+    return fn.startswith(TEX_FONTS) and not fn.startswith(TT_FONTS)
+
+
+def span_text(sp, glyph_map):
+    """A span's text, with the font-specific decoding: Springer's Ligature font, a --glyph-map table, TeX names in TeX
+    fonts, math symbol fonts."""
+    fn = re.sub(r"^[A-Z]{6}\+", "", sp["font"])
+    st = sp["text"]
+    if fn == "Ligature":
+        return st.translate(LIGATURE_FONT)
+    for prefix, table in glyph_map:
+        if fn.startswith(prefix):  # PyMuPDF cuts long font names, so a prefix is enough
+            return "".join(table.get(c, c) for c in st)
+    if "\\" in st and tex_font(fn):
+        st = TEX_NAME.sub(" ", ACCENT.sub(r"\1", st))
+    if fn.startswith(SYMBOL_FONTS):
+        return " "
+    if fn.startswith(UPPER_ONLY_FONTS):
+        return "".join(" " if c.isascii() and (c.islower() or c.isdigit()) else c for c in st)
+    return st
+
 
 FIG_MARGIN = 20.0  # pt around each figure box within which unmatched text counts as printed inside the figure
 
 
-def pdf_tokens(paths, pages_sel=None, drop_line_numbers=False, exclude=None, figure_box=None):
+def pdf_tokens(paths, pages_sel=None, drop_line_numbers=False, exclude=None, figure_box=None, glyph_map=None):
     """Tokens of the PDFs in reading order, the page of each, whether it is text printed inside a
     figure (a line whose centre lies on an embedded image that is not a page scan), and a line id."""
     toks, pages, infig, lineid = [], [], [], []
-    exclude, figure_box = exclude or {}, figure_box or {}
+    exclude, figure_box, glyph_map = exclude or {}, figure_box or {}, glyph_map or []
     nline = 0
     gpage = 0  # page number counted across all PDFs, for --exclude / --figure-box
     for path in paths:
@@ -157,12 +209,17 @@ def pdf_tokens(paths, pages_sel=None, drop_line_numbers=False, exclude=None, fig
                 for line in block.get("lines", []):
                     # A space between spans of clearly different size, so superscripts and
                     # subscripts (affiliation letters, citation numbers) don't glue onto words.
+                    # (Tried 2026-11-07 and left out: joining Word small capitals, "S" + smaller "MALL". Span origins
+                    # can't tell them from subscripts lowered by text rise, a capitals-only test glued subscripts
+                    # such as F_B, and vf800_manual2025 scored 98.5 % with and without it.)
                     main = max((sp["size"] for sp in line["spans"]), default=0)
                     text = ""
                     for sp in line["spans"]:
                         small = sp["size"] < 0.85 * main
-                        st = sp["text"].translate(LIGATURE_FONT) if sp["font"] == "Ligature" else sp["text"]
+                        st = span_text(sp, glyph_map)
                         text += (" " + st + " ") if small else st
+                    if "\\" in text and any(tex_font(re.sub(r"^[A-Z]{6}\+", "", sp["font"])) for sp in line["spans"]):
+                        text = ACCENT.sub(r"\1", text)  # an accent whose letter is in the next span
                     t = tokens(text + " ")
                     x0, y0, x1, y1 = line["bbox"]
                     if drop_line_numbers and text.strip().isdigit() and (
@@ -221,7 +278,20 @@ def drop_braced(s, cmd, nargs):
 
 # letter accents (\\c, \\t, \\b, ...) must be followed by "{" or a space, otherwise
 # \\ce{..}, \\textsuperscript, \\textbf, \\bigskip were eaten as accent + letter ("e", "extsuperscript", ...).
-ACCENT = re.compile(r"\\(?:[`'^\"~=.]\s*|[uvHcdbtk](?:\s+|(?=\{)))\{?([A-Za-z])\}?")
+ACCENT = re.compile(r"\\(?:[`'^\"~=.]\s*|[uvHcdbtkr](?:\s+|(?=\{)))\{?([A-Za-z])\}?")
+
+# TeX's own integer registers: "\hangafter=1" sets one and prints nothing. Any other "\name=number" is printed maths
+# ("\alpha=-1", "\beta=33"), so its number stays.
+INT_REGISTERS = ("hangafter|looseness|tolerance|pretolerance|uchyph|linepenalty|hyphenpenalty|exhyphenpenalty|"
+                 "clubpenalty|widowpenalty|displaywidowpenalty|brokenpenalty|interlinepenalty|binoppenalty|relpenalty|"
+                 "predisplaypenalty|postdisplaypenalty|adjdemerits|doublehyphendemerits|finalhyphendemerits|"
+                 "hbadness|vbadness|lefthyphenmin|righthyphenmin|count[0-9]+")
+GREEK = ("alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|vartheta|iota|kappa|lambda|mu|nu|xi|pi|varpi|rho|"
+         "varrho|sigma|varsigma|tau|upsilon|phi|varphi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|"
+         "Psi|Omega|ell")
+# Operators whose name is printed ("gcd", "min", "mod"): kept as words, not dropped with the other command names.
+OPERATORS = ("arccos|arcsin|arctan|arg|bmod|cosh|cos|coth|cot|csc|deg|det|dim|exp|gcd|hom|inf|ker|lg|liminf|limsup|lim|"
+             "ln|log|max|min|mod|pmod|Pr|sec|sinh|sin|sup|tanh|tan")
 
 
 def tex_text(path):
@@ -240,7 +310,11 @@ def tex_text(path):
     s = re.sub(r"\\begin\{(tabular|longtable|array)\*?\}(\[[^\]]*\])?\{(?:[^{}]|\{[^{}]*\})*\}", " ", s)
     s = re.sub(r"\\\\\s*\[[^\]]*\]", " ", s)
     s = re.sub(r"\\cmidrule\s*(\([^)]*\))?\s*\{[^}]*\}", " ", s)
-    for cmd, n in [("alttext", 1), ("decompnote", 1), ("figuredata", 4), ("sourcefile", 1),
+    s = re.sub(r"\\begin\{minipage\}(\[[^\]]*\])*\s*\{[^{}]*\}", " ", s)  # position options and width
+    s = re.sub(r"\\(makebox|framebox)\s*(\[[^\]]*\])+", " ", s)  # width and position options; the text stays
+    s = re.sub(r"\\(renewcommand|newcommand|providecommand)\*?\s*(\\[A-Za-z]+)", r"\\\1{\2}", s)  # \renewcommand\x{..}
+    for cmd, n in [("renewcommand", 2), ("newcommand", 2), ("providecommand", 2), ("setcounter", 2), ("cline", 1),
+                   ("parbox", 1),("alttext", 1), ("decompnote", 1), ("figuredata", 4), ("sourcefile", 1),
                    ("pdfpage", 1), ("localcopy", 1), ("localother", 1), ("externalonly", 2), ("includegraphics", 1), ("label", 1), ("ref", 1),
                    ("eqref", 1), ("hypertarget", 1),
                    ("setlength", 2), ("addtolength", 2), ("vspace", 1), ("hspace", 1),
@@ -251,8 +325,11 @@ def tex_text(path):
     s = re.sub(r"\\href\s*\{[^{}]*\}", " ", s)  # \href{url}{text}: keep the text
     s = re.sub(r"\\url(?![A-Za-z])", " ", s)  # \url{...}: keep the URL, it is printed
     s = re.sub(r"\\item\s*\[([^\]]*)\]", r" \1 ", s)  # \item[1.]: the label is printed
-    s = re.sub(r"\\[A-Za-z]+\s*=\s*-?[0-9.]+\s*(em|ex|pt|cm|mm|in|bp)\b", " ", s)  # \hangindent=3em
-    s = re.sub(r"\\[A-Za-z]+\s*=\s*-?[0-9]+\b", " ", s)  # \hangafter=1
+    # \hangindent=3em, \dcw=39pt: a length assignment, with no space before the unit and not to a Greek letter
+    s = re.sub(r"\\(?!(?:" + GREEK + r")(?![A-Za-z]))[A-Za-z]+\s*=\s*-?[0-9.]+(em|ex|pt|cm|mm|in|bp)\b", " ", s)
+    s = re.sub(r"\\(?:" + INT_REGISTERS + r")\s*=\s*-?[0-9]+\b", " ", s)  # \hangafter=1
+    s = re.sub(r"\\(" + OPERATORS + r")(?![A-Za-z])", lambda m: " " + m.group(1).replace("pmod", "mod").replace("bmod", "mod") + " ", s)
+    s = re.sub(r"\\ell(?![A-Za-z])", " l ", s)
     s = ACCENT.sub(r"\1", s)
     s = s.replace("\\ss", "ss").replace("~", " ").replace("\\\\", " ")
     s = re.sub(r"\\(ce|textsubscript|textsuperscript|emph|textbf|textit|textrm|textsc|mathrm|mathit|text|mbox|section|subsection|subsubsection|paragraph|caption|title|author|footnote|item|textsf|texttt|underline|mathbf|mathsf|operatorname|SI|si|num)(?![A-Za-z])\*?(\[[^\]]*\])?", " ", s)  # (?![A-Za-z]) so \\sigma is not read as \\si + "gma"
@@ -284,40 +361,8 @@ def present_elsewhere(seg, grams, n):
     return sum(x in grams for x in g) >= 0.9 * len(g)
 
 
-def main(argv):
-    min_run, jout, files, pages_sel, dln = 6, None, [], None, False
-    exclude, figure_box = {}, {}
-    reference_text = None  # --reference-text <file>: a plain-text reference (e.g. Google Patents text, a fresh OCR) used instead of the PDF's text layer
-    i = 0
-    while i < len(argv):
-        if argv[i] in ("--exclude", "--figure-box"):
-            pg, _, xy = argv[i + 1].partition(":")
-            r = pymupdf.Rect(*[float(v) for v in xy.split(",")])
-            (exclude if argv[i] == "--exclude" else figure_box).setdefault(int(pg), []).append(r)
-            i += 2; continue
-        if argv[i] == "--min-run":
-            min_run = int(argv[i + 1]); i += 2; continue
-        if argv[i] == "--pages":
-            a, _, b = argv[i + 1].partition("-"); pages_sel = (int(a), int(b or a)); i += 2; continue
-        if argv[i] == "--drop-line-numbers":
-            dln = True; i += 1; continue
-        if argv[i] == "--json":
-            jout = argv[i + 1]; i += 2; continue
-        if argv[i] == "--reference-text":
-            reference_text = argv[i + 1]; i += 2; continue
-        files.append(argv[i]); i += 1
-    if len(files) < 2:
-        sys.exit(__doc__)
-    tex, pdfs = files[0], files[1:]
-    if reference_text:
-        rt = open(reference_text, encoding="utf-8", errors="replace").read()
-        p = tokens(norm(rt)); pages = [1] * len(p); infig = [False] * len(p); lineid = list(range(len(p)))
-        print(f"reference text: {reference_text} ({len(p)} tokens) used instead of the PDF text layer")
-    else:
-        p, pages, infig, lineid = pdf_tokens(pdfs, pages_sel, dln, exclude, figure_box)
-        if not p:
-            print("WARNING: the PDF has no text layer (0 tokens): OCR it, or pass --reference-text <file> with an OCR or publisher text to check against")
-    t = tokens(tex_text(tex))
+def compare(p, pages, infig, lineid, t, min_run):
+    """Align the PDF tokens p with the tex tokens t and collect the numbers and runs that main() reports."""
     sm = SequenceMatcher(None, p, t, autojunk=False)
     p_ok, t_ok = [False] * len(p), [False] * len(t)
     for a, b, size in sm.get_matching_blocks():
@@ -395,27 +440,111 @@ def main(argv):
         extra.append({"after": ctx, "n": b - a, "text": " ".join(t[a:b])[:400]})
     repeated_list = sorted(({"pages": len(w), "text": txt} for txt, w in repeated.items()),
                            key=lambda r: -r["pages"])
-    cov = sum(p_ok) / max(1, len(p))
-    prec = sum(t_ok) / max(1, len(t))
+    return {"pdf_tokens": len(p), "tex_tokens": len(t),
+            "coverage": sum(p_ok) / max(1, len(p)),
+            "coverage_without_repeated": sum(p_ok) / max(1, len(p) - rep_tokens),
+            "coverage_running_text": sum(p_ok) / max(1, len(p) - rep_tokens - fig_missing),
+            "precision": sum(t_ok) / max(1, len(t)),
+            "repeated_tokens": rep_tokens, "unmatched_in_figure_tokens": fig_missing,
+            "missing": missing, "repeated": repeated_list, "extra": extra}
+
+
+WORD = re.compile(r"[a-z]{2,}$")
+
+
+def main(argv):
+    min_run, jout, files, pages_sel, dln = 6, None, [], None, False
+    exclude, figure_box, glyph_map, words_only = {}, {}, [], False
+    reference_text = None  # --reference-text <file>: a plain-text reference (e.g. Google Patents text, a fresh OCR) used instead of the PDF's text layer
+    i = 0
+    while i < len(argv):
+        if argv[i] in ("--exclude", "--figure-box"):
+            pg, _, xy = argv[i + 1].partition(":")
+            r = pymupdf.Rect(*[float(v) for v in xy.split(",")])
+            (exclude if argv[i] == "--exclude" else figure_box).setdefault(int(pg), []).append(r)
+            i += 2; continue
+        if argv[i] == "--min-run":
+            min_run = int(argv[i + 1]); i += 2; continue
+        if argv[i] == "--pages":
+            a, _, b = argv[i + 1].partition("-"); pages_sel = (int(a), int(b or a)); i += 2; continue
+        if argv[i] == "--drop-line-numbers":
+            dln = True; i += 1; continue
+        if argv[i] == "--json":
+            jout = argv[i + 1]; i += 2; continue
+        if argv[i] == "--reference-text":
+            reference_text = argv[i + 1]; i += 2; continue
+        if argv[i] == "--glyph-map":
+            # longest font prefix first, so "AdvP4C4E7" does not catch a font that has a table of its own
+            glyph_map = sorted(json.load(open(argv[i + 1], encoding="utf-8")).items(), key=lambda kv: -len(kv[0]))
+            i += 2; continue
+        if argv[i] == "--words-only":
+            words_only = True; i += 1; continue
+        files.append(argv[i]); i += 1
+    if len(files) < 2:
+        sys.exit(__doc__)
+    tex, pdfs = files[0], files[1:]
+    if reference_text:
+        rt = open(reference_text, encoding="utf-8", errors="replace").read()
+        name = reference_text.rsplit("/", 1)[-1]
+        p, pages, infig, lineid = [], [], [], []
+        texts = rt.split("\f")
+        if texts and not texts[-1].strip():
+            texts.pop()  # pdftotext ends with a form feed
+        nline = 0
+        for pi, ptxt in enumerate(texts):
+            for line in ptxt.split("\n"):
+                lt = tokens(line + " ")
+                p += lt
+                pages += [f"{name} p.{pi + 1}"] * len(lt)
+                infig += [False] * len(lt)
+                lineid += [nline] * len(lt)
+                nline += 1
+        print(f"reference text: {reference_text} ({len(p)} tokens, {len(texts)} page(s) at form feeds) used instead of the PDF text layer")
+    else:
+        p, pages, infig, lineid = pdf_tokens(pdfs, pages_sel, dln, exclude, figure_box, glyph_map)
+        if not p:
+            print("WARNING: the PDF has no text layer (0 tokens): OCR it, or pass --reference-text <file> with an OCR or publisher text to check against")
+    t = tokens(tex_text(tex))
+    r = compare(p, pages, infig, lineid, t, min_run)
     print(f"check_text.py version {VERSION}")
     print(f"{tex}: PDF tokens {len(p)}, tex tokens {len(t)}")
-    print(f"coverage {cov:.1%} of PDF tokens found in tex; {prec:.1%} of tex tokens found in PDF")
-    cov_x = sum(p_ok) / max(1, len(p) - rep_tokens)
-    print(f"coverage without text repeated on >= 3 pages ({rep_tokens} tokens): {cov_x:.1%}")
-    cov_r = sum(p_ok) / max(1, len(p) - rep_tokens - fig_missing)
-    print(f"coverage of the running text (also without {fig_missing} unmatched tokens printed inside figures): {cov_r:.1%}")
-    print(f"REPEATED (missing on >= 3 pages; '#' = any number): {len(repeated_list)} text(s), {rep_tokens} tokens")
-    for r in repeated_list[:30]:
-        print(f"  [{r['pages']} pages] {r['text']}")
-    print(f"MISSING runs >= {min_run}: {len(missing)} ({sum(m['n'] for m in missing)} tokens)")
-    for m in missing:
+    print(f"coverage {r['coverage']:.1%} of PDF tokens found in tex; {r['precision']:.1%} of tex tokens found in PDF")
+    print(f"coverage without text repeated on >= 3 pages ({r['repeated_tokens']} tokens): {r['coverage_without_repeated']:.1%}")
+    print(f"coverage of the running text (also without {r['unmatched_in_figure_tokens']} unmatched tokens printed inside figures): {r['coverage_running_text']:.1%}")
+    print(f"REPEATED (missing on >= 3 pages; '#' = any number): {len(r['repeated'])} text(s), {r['repeated_tokens']} tokens")
+    for x in r["repeated"][:30]:
+        print(f"  [{x['pages']} pages] {x['text']}")
+    print(f"MISSING runs >= {min_run}: {len(r['missing'])} ({sum(m['n'] for m in r['missing'])} tokens)")
+    for m in r["missing"]:
         print(f"  [{m['where']}] ({m['n']}) {m['text']}")
-    print(f"EXTRA runs >= {min_run}: {len(extra)} ({sum(m['n'] for m in extra)} tokens)")
-    for m in extra:
+    print(f"EXTRA runs >= {min_run}: {len(r['extra'])} ({sum(m['n'] for m in r['extra'])} tokens)")
+    for m in r["extra"]:
         print(f"  (after '{m['after']}') ({m['n']}) {m['text']}")
+    w = None
+    if words_only:
+        keep = [k for k, x in enumerate(p) if WORD.match(x)]
+        w = compare([p[k] for k in keep], [pages[k] for k in keep], [infig[k] for k in keep], [lineid[k] for k in keep],
+                    [x for x in t if WORD.match(x)], min_run)
+        print(f"WORDS ONLY (tokens of two or more letters; numbers and single letters, i.e. most of the maths, left out): "
+              f"PDF {w['pdf_tokens']}, tex {w['tex_tokens']}")
+        print(f"  word coverage {w['coverage']:.1%}; without repeated text {w['coverage_without_repeated']:.1%}; "
+              f"running text {w['coverage_running_text']:.1%}; {w['precision']:.1%} of tex words found in PDF")
+        print(f"  MISSING word runs >= {min_run}: {len(w['missing'])} ({sum(m['n'] for m in w['missing'])} tokens)")
+        for m in w["missing"]:
+            print(f"    [{m['where']}] ({m['n']}) {m['text']}")
+        print(f"  EXTRA word runs >= {min_run}: {len(w['extra'])} ({sum(m['n'] for m in w['extra'])} tokens)")
+        for m in w["extra"]:
+            print(f"    (after '{m['after']}') ({m['n']}) {m['text']}")
     if jout:
-        json.dump({"version": VERSION, "tex": tex, "pdfs": pdfs, "coverage": cov, "coverage_without_repeated": cov_x, "coverage_running_text": cov_r, "unmatched_in_figure_tokens": fig_missing, "precision": prec,
-                   "missing": missing, "repeated": repeated_list, "extra": extra}, open(jout, "w"), indent=1)
+        out = {"version": VERSION, "tex": tex, "pdfs": pdfs, "coverage": r["coverage"],
+               "coverage_without_repeated": r["coverage_without_repeated"],
+               "coverage_running_text": r["coverage_running_text"],
+               "unmatched_in_figure_tokens": r["unmatched_in_figure_tokens"], "precision": r["precision"],
+               "missing": r["missing"], "repeated": r["repeated"], "extra": r["extra"]}
+        if w:
+            out["words"] = {k: w[k] for k in ("pdf_tokens", "tex_tokens", "coverage", "coverage_without_repeated",
+                                              "coverage_running_text", "precision", "missing", "extra")}
+        json.dump(out, open(jout, "w"), indent=1)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+# Table 2 of Lubiw & Schaefer, arXiv:2508.10136v3, p. 19: Flexible-angle vertex types. Notation like (60°, 180°) indicates the range for a single angle.
+# The printed table merges the degree cell over its rows; here each row repeats it.
+degree,angles,sample_instances
+2,"(60°, 180°)","C and G in the flex gadget, Figs. 5, 15; also L in the inversion gadget, Figs. 13, 16"
+2,"(120°, 240°)","M2 and N2 in the modified flex gadget, Fig. 7; also U, P in the inversion gadget, Figs. 13, 16"
+3,"180°, (20°, 100°)","B, E, A and D in the flex gadget, Figs. 5, 15"
+4,"180°, (85°, 114°), (35°, 46°)","H, the apex vertex in the modified flex gadget, Figs. 7, 15, with ranges for angles α, β"

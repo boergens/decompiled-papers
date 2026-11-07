@@ -7,9 +7,15 @@ arXiv:2209.09800v2 [math.CO], 15 Jun 2023 (v1: 20 September 2022). 2020 MSC Prim
 printed in the left margin of p. 1; the PDF prints no journal, DOI or dates). The paper was later published as
 *Discrete & Computational Geometry* **72** (2024), 1530–1544, DOI
 [10.1007/s00454-023-00530-z](https://doi.org/10.1007/s00454-023-00530-z) (online 18 August 2023); those details come
-from `source/SOURCE.txt` (Crossref), the journal version was not read and may differ.
+from `source/SOURCE.txt` (Crossref). **The text here follows arXiv v2, not the journal.** The published version was added to
+`source/` on 2026-11-07 and has not been decompiled or proofread. A `check_text.py` run of this `main.tex` against its pp. 2-16
+gives 92.1 % coverage of the running text. Its MISSING runs of 6 or more tokens are the journal's front matter (DOI, dates,
+editor, affiliations), the open-access notice, Springer's note, details in one reference, and two formula fragments (pp. 10
+and 15). Equation numbers shift: arXiv (10) is the published (9), the one case read in both PDFs, and the p. 10 fragment was
+not looked at. That check only reports runs of 6 or more tokens, so shorter wording or formula changes would not show.
 
-**Licence:** the arXiv listing says CC BY 4.0; the PDF itself prints no licence line.
+**Licence:** the arXiv listing says CC BY 4.0; the arXiv PDF prints no licence line. The published version prints
+"© The Author(s) 2023" and a Creative Commons Attribution 4.0 International notice.
 
 ## Source files (`source/`)
 
@@ -17,7 +23,8 @@ from `source/SOURCE.txt` (Crossref), the journal version was not read and may di
 |---|---|
 | `lavollee2023.pdf` | arXiv v2, 12 pages, born-digital (LaTeX via dvips + Ghostscript 9.22; embedded Computer Modern Type 1C fonts, `pdffonts`). The text layer is the typesetter's, not OCR. TeX rules (radical overlines, fraction bars, the footnote rule) are 1×1 stencil images scaled to size; the three figures are vector paths. |
 | `lavollee2023.txt` | `pdftotext -layout` dump, used as a second opinion. |
-| `SOURCE.txt` | fetch note (arXiv, 2026-10-11). |
+| `lavollee2024_published.pdf` | the published version (*Discrete Comput. Geom.* 72 (2024) 1530–1544), 16 pages: LSE Research Online's cover page, then the article's 15 pages. Added 2026-11-07, not decompiled. |
+| `SOURCE.txt` | fetch notes (arXiv, 2026-10-11; published version, 2026-11-06). |
 
 The paper names no data set, supplement, code or video, so nothing was missing.
 

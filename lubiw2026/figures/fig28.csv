@@ -1,0 +1,17 @@
+# Figure 28 of Lubiw & Schaefer (arXiv:2508.10136v3, p. 32): two pennies D_u and D_v with slope parameter m = m_uv.
+# A geometric construction on a GeoGebra coordinate grid, not plotted data; digitized because the panel has numbered axes.
+# Columns: object (decompiler's names; only u, v, 1 and m are printed in the figure); x, y in the figure's axis units; radius for circles, empty otherwise.
+# Provenance: tier 3, digitized from the raster figures/fig28.png (authors' Treestwodisks.png, 417 x 284 px) by fig28_extract.py.
+# Calibration: integer grid lines, 69.5 px per unit. Uncertainty about 0.02 units (one to two pixels).
+# Printed in the figure and not digitized: m = 2.0095100503047; the blue base of the triangle is labelled 1.
+# Oddity: the top end of the blue vertical merges into the dark slope line, so its y here reads low by up to about 0.06.
+object,x,y,radius
+bottom point of D_u,0.00,-1.00,
+centre u of D_u,0.00,-0.01,
+contact point of D_u and D_v,0.80,0.60,
+centre v of D_v,1.59,1.20,
+top point of D_v,1.59,2.20,
+circle D_u,0.00,-0.01,1.00
+circle D_v,1.59,1.20,1.00
+slope triangle corner (base right end),1.00,-1.00,
+slope triangle corner (top),1.00,0.95,

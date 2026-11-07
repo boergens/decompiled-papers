@@ -1,0 +1,11 @@
+# Table 1 of Lubiw & Schaefer, arXiv:2508.10136v3, p. 19: Fixed-angle vertex types.
+# The printed column 'pic' holds a small drawing; here pic_file is the authors' image and pic_description is the decompiler's.
+# The printed table merges the degree cell over its rows; here each row repeats it.
+degree,angles,pic_file,pic_description,sample_instances
+2,90°,figures/table1_angle_90.png,"horizontal bar from the left and vertical bar going up, square mark, label 90°","T, R in the flex gadget, Fig. 5"
+2,120°,figures/table1_angle_120.png,"horizontal bar from the left and bar going up to the right, sector mark, label 120°","L in the addition gadget, Fig. 10"
+2,150°,figures/table1_angle_150.png,"horizontal bar from the left and bar going right and slightly up, sector mark, label 150°","V in the addition gadget, Fig. 10"
+3,"90°, 90°",figures/table1_angle_90_90.png,"horizontal bar with a vertical bar rising from the vertex, two square marks, labels 90° and 90°","Q in the flex gadget, Fig. 5"
+3,"90°, 120°",figures/table1_angle_90_120.png,"horizontal bar from the left, bar going up, bar going down to the right, square mark and sector mark, labels 90° and 120°","U in the cross-over gadget, Fig. 9"
+3,"150°, 30°",figures/table1_angle_150_30.png,"horizontal bar through the vertex and bar going up to the right, two sector marks, labels 150° and 30°","W in the turn gadget, Fig. 8"
+4,"60°, 90°, 30°",figures/table1_angle_60_90_30.png,"horizontal bar through the vertex, bars going up to the left and up to the right, marks labelled 60°, 90° and 30°","W in the cross-over gadget, Fig. 9"

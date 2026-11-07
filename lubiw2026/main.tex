@@ -1,0 +1,1310 @@
+\documentclass{article}
+\usepackage{decomp}
+\newcommand{\defn}[1]{\textit{\textbf{\boldmath #1}}}
+\begin{document}
+
+\decompnote{arXiv preprint v3 (born-digital LaTeX PDF, 41 pages), decompiled tool-first: the text comes from the authors' TeX source of the same version (\texttt{source/arXiv-2508.10136v3.tar.gz}), turned into this file by \texttt{work/build\_main.py}, which removes the authors' comments, writes out their macros, and puts in the printed numbers of sections, theorems, equations, figures and citations. The reference list comes from the PDF's text layer, because the archive has no compiled bibliography. No journal version is at hand, so the PDF is the reference, and everything was proofread against its page images. No licence statement is printed in the PDF (the arXiv abstract page says CC BY 4.0, see README). The page numbers printed at the foot of each page are left out; they equal the PDF page numbers given by the margin markers. The arXiv stamp printed vertically in the left margin of p.\,1 is given once below. Floats stand at the end of the paragraph in which the PDF prints them.}
+
+\pdfpage{1}
+\noindent arXiv:2508.10136v3 [cs.CG] 9 Sep 2026
+\decompnote{The line above is the arXiv stamp, printed vertically along the left margin of p.\,1. The date under the authors below (September 11, 2026) is printed by the PDF as it stands; the source sets no date, so it is the compile date.}
+
+\begin{center}
+{\LARGE Recognizing Penny and Marble Graphs is Hard\\ for Existential Theory of the Reals}
+
+\bigskip
+Anna Lubiw$^{*1}$ and Marcus Schaefer $^{\dagger 2}$
+
+\medskip
+$^{1}$University of Waterloo\\
+$^{2}$DePaul University
+
+\medskip
+September 11, 2026
+\end{center}
+
+\noindent $^{*}$alubiw@uwaterloo.ca\\
+$^{\dagger}$mschaefe@depaul.edu
+
+\begin{center}\textbf{Abstract}\end{center}
+\begin{quote}
+We show that the recognition problem for penny graphs 
+(contact graphs of unit disks in the plane) is \ensuremath{\exists\mathbb{R}}-complete, that is, computationally as hard as the existential theory of the reals, even if a combinatorial plane embedding of the graph is given.
+The exact complexity of the penny graph recognition problem has been a long-standing open problem. 
+
+We lift the penny graph result to three dimensions and show 
+that the recognition problem for marble graphs (contact graphs of unit balls in three dimensions) is \ensuremath{\exists\mathbb{R}}-complete. 
+
+Finally, we show that rigidity of penny graphs is \ensuremath{\forall\mathbb{R}}-complete and look at grid embeddings of penny graphs 
+that are trees.
+\end{quote}
+
+\section*{1 Introduction}
+
+\defn{Penny 
+graphs} are contact graphs of unit
+disks in the plane, or equivalently, contact graphs of disks of equal radius in the plane.
+For example, $K_4-e$ is a penny graph as the realization in Figure~1 shows, but $K_4$ is not.
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent\textbf{Figure 1:} A penny graph realization of $K_4-e$.
+\alttext{Photograph on a light grey background. Four copper-coloured coins lie flat and touch in a diamond arrangement: one at the top, one at the left, one at the right, one at the bottom. The left and right coins touch each other, and the top and bottom coins each touch both of them; the top and bottom coins do not touch. No printed labels.}
+
+Similarly, Figure~2 proves that the $4 \times 4$ grid is a penny graph, but as the middle illustration shows, the $4 \times 4$ grid has many degrees of freedom; this flexibility can be reduced by bracing the sides of the grid, as shown in the right illustration; the braced $4\times 4$ grid behaves like a rhombus (a property we will exploit later).
+
+\pdfpage{2}
+\begin{center}
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig2left.png}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig2middle.png}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig2right.png}
+\end{center}
+\noindent\textbf{Figure 2:} {\em (Left)} the $4 \times 4$ grid as a penny graph; {\em (middle)} a perturbed realization of the $4\times 4$ grid; {\em (right)} a braced $4\times 4$ grid with one degree of freedom.
+\alttext{Three photographs of copper-coloured coins on a grey-blue surface, no printed labels. Left: 16 coins in a square grid of 4 rows and 4 columns, each touching its horizontal and vertical neighbours. Middle: the same 16 coins, with the rows and columns visibly bent and sheared out of the square arrangement while neighbours stay in contact. Right: a slanted, rhombus-like arrangement of 22 coins (the decompiler's count), rows of 3, 4, 5, 5 and 5 from top to bottom, in which the grid is sheared and extra coins lie along its sides.}
+
+Our main result is that the recognition problem for penny graphs 
+is complete for \ensuremath{\exists\mathbb{R}}, the existential theory of the reals.  
+Until now, the best complexity result for penny graphs was due to Breu and Kirkpatrick~[10, 11] who showed 
+in 1996
+that recognizing penny graphs is \textsf{NP}-hard, and remains hard even if the radii of the disks can vary slightly.   As noted by them, and
+also by Hliněný and Kratochvíl~[28],
+membership in NP is not at all obvious---the issue, for the straight-forward approach,   
+is how to represent the coordinates of the disk centers.
+The \textsf{NP}-hardness proof of Breu and Kirkpatrick encoded the true/false settings of Boolean variables as different choices in the combinatorial embedding.  This approach left open 
+the complexity of the problem 
+when the input includes a specified combinatorial embedding. 
+Our proof shows that this variant is \ensuremath{\exists\mathbb{R}}-complete as well.  
+
+The \ensuremath{\exists\mathbb{R}}-hardness of penny graph recognition has the usual consequences: the coordinates in a realization of a penny graph can be algebraic numbers of arbitrary (algebraic) complexity.\footnote{A number is {\em algebraic} if it is the root of an integer polynomial; we can take the size of the encoding of such a polynomial as a measure of the complexity of the algebraic number.} We show that for trees this is not the case; rational coordinates with double-exponential precision are sufficient to realize any penny graph 
+that is a tree.
+
+Our proof for penny graphs allows us to prove and/or strengthen \ensuremath{\exists\mathbb{R}}-completeness results for recognition problems for several other graph classes including matchstick and unit-distance graphs and, in $\ensuremath{\mathbb{R}}^3$, marble graphs and contact graphs of balls (of possibly differing radii). 
+
+Another consequence of our reduction is that testing rigidity of a given penny graph configuration is complete for \ensuremath{\forall\mathbb{R}}, the {\em universal theory of the reals}. Previously, \ensuremath{\forall\mathbb{R}}-completeness of rigidity testing had been known for linkages (Schaefer~[41]) and matchstick graphs (Abel, Demaine, Demaine, Eisenstat, Lynch, and Schardl~[2]).
+
+A \defn{matchstick graph} is a graph that has a planar straight-line drawing with all edges of unit length.  The class of penny graphs is properly contained in the class of matchstick graphs. See Figure~3, which also shows classes of unit-distance graphs. 
+A \defn{strict unit-distance graph} is a graph whose vertices can be placed at distinct points in the plane such that two vertices are distance~1 apart  if and only if there is an edge between them. 
+A \defn{weak unit-distance graph} is a subgraph of a unit-distance graph, i.e., the condition is ``if'' rather than ``if and only if''.\footnote{Some nomenclature omits ``strict'' and some omits ``weak''. We use both to avoid confusion.}  
+A matchstick graph can equivalently be defined as a \defn{non-crossing} weak unit-distance graph, 
+meaning that it has a weak unit-distance representation in which edges do not 
+intersect 
+except at a common endpoint. 
+Figure~3 also shows the class of non-crossing strict unit-distance graphs which \pdfpage{3}lies between penny and matchstick graphs.
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig3.pdf}
+\end{center}
+\noindent\textbf{Figure 3:} Subclasses of unit-distance graphs with examples to show that containments are proper.
+\alttext{Schematic: a containment diagram of ovals with sample graphs, drawn in black on white. The largest oval is labelled ``weak unit-distance'' (label outside its right edge). Inside it, two tilted ovals overlap: an upper one labelled ``non-crossing = matchstick'' and a lower one labelled ``strict''. In their overlap, at the left, is a circle labelled ``penny''. Sample graphs, drawn with black vertex dots: (1) in the upper oval only, near the top: seven vertices, a hexagon with a centre vertex joined to all six, with one perimeter edge (upper right) missing; (2) in the overlap of the two tilted ovals, outside the penny circle: six vertices forming a pentagon-like outline with one inner vertex; (3) in the lower oval only: a pentagon with an inner star-like set of vertices and crossing edges, labelled ``Petersen graph''; (4) in the largest oval only, at the right: an octagon-like outline with many crossing inner edges, labelled ``Möbius-Kantor graph''; on a close look some of its vertex dots have a faint red or blue rim.}
+
+Schaefer~[41]
+showed that 
+weak/strict unit-distance graphs are \ensuremath{\exists\mathbb{R}}-complete to recognize~[41], but his hardness construction 
+requires crossings.
+Abel, Demaine, Demaine, Eisenstat, Lynch, and Schardl~[2] proved that the problem 
+for weak unit-distance remains \ensuremath{\exists\mathbb{R}}-complete for crossing-free configurations, in other words, the recognition problem for matchstick graphs is \ensuremath{\exists\mathbb{R}}-complete even if a combinatorial plane embedding of the graph is specified; our main result yields a new proof of this theorem.
+We also prove \ensuremath{\exists\mathbb{R}}-completeness of recognizing 
+non-crossing strict unit-distance graphs, with or without a  specified combinatorial embedding.
+Thus all classes shown in Figure~3 are \ensuremath{\exists\mathbb{R}}-complete to recognize.
+
+Penny graphs generalize to \defn{marble graphs} which are contact graphs of equal radius balls in~$\ensuremath{\mathbb{R}}^3$. 
+Hliněný~[27] proved that the problem of recognizing marble graphs is 
+\textsf{NP}-hard. 
+We prove that the problem is \ensuremath{\exists\mathbb{R}}-complete. 
+We also show \ensuremath{\exists\mathbb{R}}-completeness of recognizing contact graphs of balls of possibly different radii in $\ensuremath{\mathbb{R}}^3$.  This problem is easy in two dimensions, since the contact graphs of disks
+(the \defn{coin graphs})
+are precisely the planar graphs~[31, 45].
+
+\paragraph{Main Result.}
+Our hardness results are proved via a reduction from an \ensuremath{\exists\mathbb{R}}-complete problem called \textnormal{\textsc{ETR-INV}} which asks for real values for variables in the range $[\frac{1}{2},2]$ to satisfy a formula~$\varphi$ that is a conjunction of constraints of the form $x + y = z$ and $x \cdot y = 1$. 
+For more details on \textnormal{\textsc{ETR-INV}}, see Section~1.2 or the survey~[43].
+Our reduction produces a graph $G$ with a combinatorial plane embedding. A \defn{combinatorial plane embedding} is a collection of circular permutations of 
+the edges incident to each vertex 
+that corresponds to a plane embedding of the graph~[40, Chapter 4].
+The reduction has the following properties. 
+
+\par\medskip\noindent\textbf{Theorem 1.} \begin{itshape}
+There is a polynomial-time algorithm that takes as input an \textnormal{\textsc{ETR-INV}}\ formula $\varphi$ and constructs a graph $G$ and a combinatorial plane embedding $D$ of $G$ such that
+\begin{itemize}
+    \item 
+    if $\varphi$ is true, then $G$ has a penny graph embedding realizing $D$,
+    and
+    \item if $\varphi$ is false, then $G$ is not a  weak unit-distance graph.
+\end{itemize}
+\end{itshape}\par\medskip
+
+The conditions in the theorem imply that the constructed graph $G$ has a penny graph realization if and only if $\varphi$ is true.  Thus Theorem~1 implies that recognizing penny graphs---with or without \pdfpage{4}a specified combinatorial plane embedding---is \ensuremath{\exists\mathbb{R}}-hard. 
+Since in the case that $\varphi$ is false, $G$ cannot even be realized as a 
+weak unit-distance graph, we can draw a stronger conclusion.
+
+\par\medskip\noindent\textbf{Corollary 2.} \begin{itshape}
+ It is \ensuremath{\exists\mathbb{R}}-complete to recognize penny graphs, non-crossing strict unit-distance graphs,  matchstick graphs, 
+ and weak/strict unit-distance graphs with or without a specified combinatorial embedding.
+\end{itshape}\par\medskip
+
+For matchstick and weak/strict unit-distance graphs the results were known and we provide a different proof.
+
+\paragraph{Paper Outline.}
+Theorem~1 is proved in Sections~2 and~3.  
+In Section~2 we 
+construct from an ETR-INV formula~$\varphi$ 
+a linkage---a graph with specified integer edge lengths and angle constraints between some pairs of incident edges---that has a plane
+realization iff $\varphi$ is true. 
+In Section~3 we show that the particular linkages we construct can be simulated by penny graphs.
+The \ensuremath{\exists\mathbb{R}}-completeness results for marble and ball contact graphs in $\ensuremath{\mathbb{R}}^3$ are proved in Section~4.
+Section~5 shows $\ensuremath{\forall\mathbb{R}}$-completeness of testing rigidity of penny graphs, and Section~6 looks at grid embeddings of penny graphs 
+that are trees.
+
+\paragraph{Gadgets.}
+We have implemented most of the gadgets used in this paper as geogebra applets which can be explored interactively~[23]. These gadgets are available through the arxiv version of the paper~[35]. We will point out the names of the applets in the corresponding figures.
+
+We conclude the current section by discussing history and background, and describing \textnormal{\textsc{ETR-INV}}\ in more detail.
+
+\subsection*{1.1 History and Background}
+
+Penny graphs are the special case of coin graphs in which all coins have the same radius; this creates a connection with Koebe's theorem, which states that all planar graphs are coin graphs~[31]. As far as we can tell, the term ``penny graph'' was first introduced in the context of coin graphs and Koebe's theorem in the 1990s by Hartsfield, Ringel, and Breu~[26, 9]. Penny graphs, under different names, are older though. 
+
+Erdős~[22] introduced the minimum distance graphs 
+and proved that they are planar (in fact, they are the penny graphs), and therefore have at most $3n-6$ edges; this led to research---still very active---on edge bounds in penny graphs; Harborth~[25] showed a sharp upper bound on the number of edges in penny graphs of $\lfloor 3n-\sqrt{12n-3}\rfloor$. 
+
+Penny graphs have also been defined as 
+contact graphs of unit (or equal-radius) disks in the context of {\em intersection graphs}. Breu and Kirkpatrick~[11] proved that recognizing intersection graphs of unit disks, the so-called \defn{unit-disk graphs}, is \textsf{NP}-hard.  They mention that their result extends to penny graphs (which they call ``unit disk touching graphs''). 
+They make this result explicit in a conference paper~[10] and strengthen it to show that the problems of recognizing intersection or contact graphs of disks is \textsf{NP}-hard even if the radii of the disks are in an interval $[1,\rho]$ for any fixed $\rho \ge 1$.
+Hliněný and Kratochvíl~[28] later showed that recognizing \defn{disk graphs}, intersection graphs of disks, is \textsf{NP}-hard as well.
+
+Breu and Kirkpatrick raise the question of membership in \textsf{NP}: ``[a]lthough grid-constrained versions of our recognition problems
+(like grid graph recognition [...]) are in fact \textsf{NP}-complete, it \pdfpage{5}is
+not clear that the unconstrained versions are in \textsf{NP}''. 
+They recognize the relationship of their problems to the theory of the reals, writing that ``membership in \textsf{PSPACE}\ follows directly from results of Canny~[14]''. This result is more formally stated by Hliněný and Kratochvíl in~[28, Proposition 4.4]. In this 2001 paper, the authors also write ``An important question is whether the recognition of disk graphs belongs to \textsf{NP}. The
+obvious approach to guess a disk representation and check it, does not work immediately,
+since the coordinates and radii of disks in the representation may not be expressible
+using polynomial number of bits.''
+
+The \ensuremath{\exists\mathbb{R}}-completeness of both disk graphs and unit disk graphs was eventually shown by McDiarmid and Müller~[39], who also gave bounds on the required precision of a realization~[38]. 
+Bowen, Durocher, Löffler, Rounds, Schulz, and Tóth~[8] showed that penny graph recognition remains \textsf{NP}-hard for trees with a given embedding. It is also known that testing whether a graph is a subgraph of a penny graph is \textsf{NP}-hard for embedded caterpillars~[16] and for trees without a given embedding~[17]. The complexity of checking whether a tree without embedding is a penny graph is open, even \textsf{NP}-hardness is not known in this case, though there is an \textsf{NP}-hardness result for outerplanar graphs without embedding~[5].
+Most of the \textsf{NP}-hardness results are based on  
+the logic engine of 
+Eades and Whitesides~[19],
+which does not lend itself to \ensuremath{\exists\mathbb{R}}-hardness proofs.
+
+Penny graphs generalized to higher dimensions give us unit-ball contact graphs, known as marble graphs in dimension $3$; here we touch on one of the most famous problems in geometry, Kepler's conjecture, now known as Hales' theorem, on the density of optimal sphere packings. Unit-ball contact graphs are known to be \textsf{NP}-hard to recognize in $\ensuremath{\mathbb{R}}^d$ for $d = 3, 4$ by Hliněný~[27] and for $d = 8$ and $d = 24$ by Hliněný and Kratochvíl~[28]. The latter paper is also the most recent survey on intersection and contact presentations with disks and balls. Both papers conjecture that the problem is \textsf{NP}-hard for arbitrary dimension. 
+
+Matchstick graphs, or equivalently, non-crossing weak unit distance graphs, seem to trace back to Harborth's ``Match Sticks in the Plane''~[24], in which he shows that there is a $3$-regular matchstick graph on $8$ vertices and a $4$-regular matchstick graph on $52$ vertices, now known as the {\em Harborth graph}.  Harborth conjectured that the upper bound of  $\lfloor 3n-\sqrt{12n-3}\rfloor$ edges for penny graphs extends to matchstick graphs.
+The conjecture was settled only recently (in the affirmative) by Lavollée and Swanepoel~[33].
+
+We already mentioned that the \ensuremath{\exists\mathbb{R}}-completeness of 
+recognizing matchstick graphs was shown by Abel, Demaine, Demaine, Eisenstat, Lynch, and Schardl~[2]. Earlier \textsf{NP}-hardness results are due to Eades and Wormald~[20] and Whitesides~[47]. Cabello, Demaine and Rote~[13] showed that matchstick graphs are \textsf{NP}-hard to recognize even if the graph is $3$-connected (and infinitesimally rigid).  
+
+Matchstick graphs can also be seen as a special case of graphs with fixed-length embeddings, where each edge is assigned a length that has to be realized. This notion, with and without the planarity constraint, has also been investigated, starting with Yemini~[48], and with linkages in place of graphs (allowing edges and vertices to overlap). The \ensuremath{\exists\mathbb{R}}-completeness results from~[41] belong in this context. \ensuremath{\exists\mathbb{R}}-hardness here was foreshadowed by a result of 
+Maehara~[36] who showed that any algebraic number can occur as a distance between two vertices in a rigid unit-distance graph. 
+
+\subsection*{1.2 The Existential Theory of the Reals and \ensuremath{\exists\mathbb{R}}-completeness}
+
+How do we even determine whether a given graph is a penny graph? The problem is not obviously decidable, as it involves irrational numbers: any representation of $K_3$ as a penny graph requires at \pdfpage{6}least one irrational coordinate (since a triangle with unit sides has irrational height). The answer, maybe surprisingly, comes from logic: We can express that $K_3$ is a penny graph as
+\begin{equation}\tag{1}
+\begin{split}
+(\exists x_1,y_1,x_2,y_2,x_3,y_3)\ & (x_1-x_2)^2+(y_1-y_2)^2 = 1\ \wedge \\
+ & (x_1-x_3)^2+(y_1-y_3)^2 = 1\ \wedge \\
+ & (x_2-x_3)^2+(y_2-y_3)^2 = 1. 
+\end{split}
+\end{equation}
+Here $(x_i,y_i)$, $i \in \{1,2,3\}$, are the three centers of the pennies which we, arbitrarily but conveniently, modeled as having diameter $1$, so that the centers have distance $1$. 
+
+Sentence (1) is true if interpreted over the real numbers, so $K_3$ is a penny graph. More generally, an $n$-vertex graph $G = (V,E)$ is a penny graph if and only if the sentence
+\begin{equation}\tag{2}
+\begin{split}
+(\exists x_1, y_1, \ldots, x_n, y_n)\ & \bigwedge_{v_iv_j \in E} (x_i-x_j)^2+(y_i-y_j)^2 = 1\ \wedge \\
+ & \bigwedge_{v_iv_j \notin E} (x_i-x_j)^2+(y_i-y_j)^2 > 1
+\end{split}
+\end{equation}
+is true over the real numbers. Sentences~(1) and~(2) are written in a language that logicians
+refer to as the existential theory of the reals (\textnormal{\textsc{ETR}}). \textnormal{\textsc{ETR}}\ is defined as the set of all existentially quantified Boolean formulas
+using constants $\{0,1\}$, arithmetical operators $\{+,\cdot\}$ and comparison operators $\{=, <\}$, and which are true sentences (no free variables) when interpreted over the real numbers. Examples include, $(\exists x)\ x\cdot x = 1+1$, and  $(\exists x_1, \ldots, x_n)\ x_1 = 1 + 1 \wedge \bigwedge_{i=1}^{n-1} x_i\cdot x_i = x_{i+1}$, but not 
+$(\exists x)\ x\cdot x +1 = 0$, because it is not true over the real numbers, or $(\exists x)\ x = y$, because it is not a sentence (there is a free variable, $y$).
+
+Tarski~[46] introduced the method of quantifier elimination and used it to show that \textnormal{\textsc{ETR}}\ is decidable. The decidability of \textnormal{\textsc{ETR}}\ then implies that the penny graph problem is decidable, since we saw how to translate any penny graph recognition problem efficiently into the language of \textnormal{\textsc{ETR}}. Our main result in this paper is that there is a translation in the reverse direction: we can efficiently (in polynomial time) translate a question of the form $\varphi \in \textnormal{\textsc{ETR}}$ into a penny graph recognition problem. So \textnormal{\textsc{ETR}}\ and penny graph recognition have the same computational complexity.
+
+This bi-translatability of computational problems to \textnormal{\textsc{ETR}}\ was first noticed in the early 1990s and eventually led to the definition of a complexity class, \ensuremath{\exists\mathbb{R}}, the \defn{existential theory of the reals}, as the set of all decision problems that reduce (translate) in polynomial time to \textnormal{\textsc{ETR}}. It is known that $\textsf{NP} \subseteq \ensuremath{\exists\mathbb{R}} \subseteq \textsf{PSPACE}$~[44, 14]; in particular, \ensuremath{\exists\mathbb{R}}-hardness implies \textsf{NP}-hardness. For history and more detailed background, see~[37, 43]. 
+The class \ensuremath{\exists\mathbb{R}}\ captures the complexity of many computational problems involving real numbers, many of them in computational geometry, such as the segment intersection graphs~[32], the rectilinear crossing number~[7], the art gallery problem~[3] and many others. The recent compendium~[43] lists more than 200 problems complete for \ensuremath{\exists\mathbb{R}}, with about half of them being classified as coming from computational geometry.
+
+\paragraph{\textnormal{\textsc{ETR-INV}}.} Our \ensuremath{\exists\mathbb{R}}-hardness reduction will use a restricted form of \textnormal{\textsc{ETR}}\ introduced by 
+Abrahamsen, Adamaszek, and Miltzow~[3] as part of their proof that the art gallery problem is \ensuremath{\exists\mathbb{R}}-complete. This restricted form is known as \textnormal{\textsc{ETR-INV}}; it restricts the range of the variables to the interval $[\frac{1}{2},2]$ and allows only two real operations: addition and inversion, that is, we have \defn{constraints} of the form $x = y+z$ and $x\cdot y = 1$.
+Abrahamsen and Miltzow~[4] in a separate note worked out the full details of \ensuremath{\exists\mathbb{R}}-completeness of \textnormal{\textsc{ETR-INV}}, that is, they showed how to reduce \textnormal{\textsc{ETR}}\ to \textnormal{\textsc{ETR-INV}}. This allows us to work with \textnormal{\textsc{ETR-INV}}\ as our starting problem.
+
+\paragraph{\ensuremath{\forall\mathbb{R}}.} \pdfpage{7}Just like \textsf{NP}\ has \textsf{coNP}, \ensuremath{\exists\mathbb{R}}\ has \ensuremath{\forall\mathbb{R}}, the \defn{universal theory of the reals}; a problem belongs to \ensuremath{\forall\mathbb{R}}\ if its complement belongs to \ensuremath{\exists\mathbb{R}}. While we could avoid \ensuremath{\forall\mathbb{R}}, by stating that the negation of a problem is in \ensuremath{\exists\mathbb{R}}, it is often more natural to work with \ensuremath{\forall\mathbb{R}}. 
+
+\section*{2 From \textnormal{\textsc{ETR-INV}}\ to Linkages with Angle Constraints}
+
+In this section we show how to translate questions of the form $\varphi \in \textnormal{\textsc{ETR-INV}}$ into a linkage realizability problem. We introduce our linkage model in Section~2.1. At the heart of the translation is a historic linkage, {\em Hart's A-frame}, which we describe in Section~2.2. Hart's A-frame allows us to build what we call a flex gadget, introduced in Section~2.3. With this flex gadget we can construct the more sophisticated gadgets we need for the reduction, see Sections~2.4 and ~2.5. The main properties of the reduction are stated in Section~2.6.
+
+\subsection*{2.1 Angle-Constrained Linkages}
+
+For our purposes, a \defn{linkage} is a graph with positive edge-weights. 
+The edges of a linkage are referred to as \defn{bars}.
+A \defn{configuration} or \defn{realization} of a linkage assigns 
+points in $\mathbb{R}^2$ 
+to the vertices so that the resulting straight line edges have the specified lengths. 
+A configuration is \defn{non-crossing} if edges do not intersect except at a common endpoint; otherwise we say that the configuration is \defn{crossing} (note that this
+includes the case
+of two vertices assigned to the same point and the case of a vertex assigned to a point in a non-incident embedded edge).
+
+An \defn{angle-constraint} specifies the angle between an ordered pair of incident edges, and 
+an \defn{angle-constrained} 
+linkage consists of a linkage together with some angle constraints.
+A configuration of an angle-constrained linkage must satisfy the angle constraints.
+In a realization, 
+the  two edges of an angle constraint
+need not be consecutive at their common vertex.
+
+We reduce \textnormal{\textsc{ETR-INV}} to the question of whether an angle-constrained linkage has a realization; see Theorem~11 below. 
+To prove our main result (Theorem~1) for penny graphs we show that the particular linkages we construct can be modeled as penny graphs, i.e., from an angle-constrained linkage we construct a penny graph preserving non-crossing realizability.
+The construction relies on special properties of the linkages.
+In particular, our linkages have
+integer edge lengths, small degree vertices, and each angle constraint limits some face angle in the combinatorial embedding to some multiple of $30^\circ$.
+
+\subsection*{2.2 Hart's A-frame}
+
+A bar of a linkage has fixed length so if one endpoint is stationary, the other endpoint moves in a circle. 
+Our reduction makes use of a linkage that converts circular motion to straight-line motion.  This allows us to model a variable as the distance between two moving parallel bars of the linkage.
+
+The Peaucellier linkage is the most well-known linkage for straight-line motion, but we find it more convenient to have the fixed points of the linkage in the outer face of the embedding. We therefore use Hart's A-frame, 
+aka Hart's second inversor,
+as shown in Figure~4, with horizontal base $AD$ and with edge lengths as shown in the figure.
+In Hart's A-frame, 
+$AC$ and $DG$ are single bars with internal vertices $B$ and $E$, respectively. 
+This is captured in our angle-constrained linkage model by replacing $AC$ by two
+bars $AB$ and $BC$ 
+with the angle between them
+at $B$ constrained to $180^\circ$, and similarly for $DE$ and $EG$.  
+
+\pdfpage{8}
+\begin{center}
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig4left.pdf}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig4middle.pdf}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig4right.pdf}
+\end{center}
+\noindent\textbf{Figure 4:} Hart's A-frame. $AC$ and $DG$ are single bars of length 4. {\em (left)} When $C$ is collinear with $A$ and $H$, the apex $H$ is at height $h = 4 \sqrt 2 \approx 5.66$. {\em (middle)} As $C$ moves in a circle centered at $A$, $H$ moves vertically downward and $h$ decreases. {\em (right)} In the degenerate configuration when $C$ becomes collinear with $A$ and $E$, bar $DG$ is vertical and bar $HG$ is horizontal, so the limit for non-crossing configurations is $h=4$. \textit{Geogebra applet:} Hart's-A-frame.ggb; vertex $C$ can be moved.
+\alttext{Three GeoGebra drawings of the same linkage, grey bars with dark vertex dots; vertex $C$ is blue. In all panels the base $AD$ is horizontal at the bottom and labelled 4, and a red dashed vertical line bisects it and passes through $H$. Bar lengths printed: $AB$ 3, $BC$ 1, $CH$ 2, $BE$ 2. Left: a symmetric ``A'' shape; $A$, $B$, $C$, $H$ lie on one straight line rising to the apex $H$; $D$, $E$, $G$, $H$ lie on the mirror line; $BE$ is a horizontal crossbar; red label ``h = 5.66''. Middle: $A$, $B$, $C$ form a straight bar leaning right, with $B$ on the dashed line and $C$ to its right; $CH$ runs up and left to $H$ on the dashed line, $HG$ runs right and down; $G$, $E$, $D$ form a nearly vertical bar at the right; red label ``h = 4.74''. Right: $A$, $B$, $C$ and $E$ lie on one straight line rising to the right; $D$, $E$, $G$ form a vertical bar at the right; $HG$ is horizontal, with $H$ on the dashed line; red label ``h = 4''.}
+
+\par\medskip\noindent\textbf{Claim 3.} \begin{itshape}
+
+In Hart's A-frame, 
+as $C$ moves on a circle centered at $A$, the apex $H$ moves on a vertical line bisecting $AD$. For edge lengths as specified in Figure~4, 
+the height~$h$ 
+takes on all values in the interval 
+$[-4\sqrt{2}, 4\sqrt{2} \,] \approx [-5.66, 5.66]$.\footnote{Throughout, we round to two decimal places for presentation purposes.}
+The configuration 
+is crossing iff $h \in [-4,4]$.
+Every value of $h$ in the open interval 
+$(4,4\sqrt{2})$
+corresponds to exactly two configurations of the A-frame, a left-leaning one and a right-leaning one, both non-crossing.
+Furthermore, for right-leaning [or left-leaning] configurations, $h$ and all the angles of the A-frame are  continuous monotone functions of the angle~$CAD$.
+\end{itshape}\par\medskip
+
+The first part of this claim is given as an exercise in several sources, e.g.,~[12].  We include a proof of Claim~3 in  Appendix~A.
+
+\subsection*{2.3 The Flex Gadget}
+
+Using Hart's A-frame we 
+construct a \defn{flex gadget} as follows.  See the contents of the light blue rectangle in Figure~5. 
+Place two A-frames scaled by factor 2 side-by-side with a gap of length 2 between them at the base. Join their apexes $H$ and $H'$ with a bar of length 10. 
+
+\par\medskip\noindent\textbf{Claim 4.} \begin{itshape}
+
+In a flex gadget the bar $HH'$ joining the apexes remains parallel to the bar $AD'$ of the bases.
+A flex gadget has width $18$.
+Configurations with the apex bar above the base bar are non-crossing iff $h \in $ 
+$(8, 8 \sqrt{2}\, ] \approx (8,11.31]$.
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+Refer to Figure~5.
+By Claim~3, $H$ and $H'$ move on vertical lines.  Thus,
+if $H$ and $H'$ were at different heights, bar $HH'$ would be longer than 10.  The two A-frames are then forced to act synchronously and $HH'$ remains parallel to the base.
+The width of the flex gadget is $18$ by construction. 
+The statement about height follows from Claim~3.
+\hfill$\square$\par\medskip
+
+\pdfpage{9}
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig5left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig5right.pdf}
+\end{center}
+\noindent\textbf{Figure 5:} A flex gadget (in the light blue rectangle) determines a channel formed by two parallel bars, $\ell_1$ and $\ell_2$, separated by distance $x$ in a range that includes $[\frac{1}{2},2]$. Drawing conventions used throughout: bars and angles drawn in black are of fixed size; distances and angles drawn in blue or red are not fixed. \textit{Geogebra applet:} flex-gadget.ggb; vertex $C$ can be moved.
+\alttext{Two GeoGebra drawings of the same gadget in two configurations, left taller, right lower. A light blue rectangle holds two A-frames side by side. Their bases $AD$ (labelled 8 under the left one) and $A'D'$ lie on one horizontal line, and the rectangle's bottom width is labelled 18. The apexes $H$ and $H'$ are joined by a horizontal bar on the rectangle's top edge. From point $Q$ on this bar, with a right-angle mark, a vertical bar labelled 21 rises to $T$; a horizontal bar runs right from $T$ to $R$ (right-angle marks at both); a vertical bar labelled 30 descends from $R$ to $S$; at $S$, with a right-angle mark, a horizontal line $\ell_1$ runs right. The base line continues to the right as $\ell_2$. Red dashed verticals show $h$ (from $Q$ down to the base) and $x$ (between $\ell_1$ and $\ell_2$). Left panel: blue height label 11.31, red ``h = 11.31'', blue angle 70.5° at $B$, red ``x = 2.31''; the A-frames stand symmetric with horizontal crossbars. Right panel: blue height label 9.48, red ``h = 9.48'', blue angle 21.85° at $B$, red ``x = 0.48''; the A-frames are leaning in the kneeling form, with $C$ to the right of $B$, and a faint grey line joins $A$ to $H$. Vertices $C$ and $D$ are labelled in blue. No quantitative axes.}
+
+In Section~2.5.1, we show how to
+limit the height of a flex gadget to the range $[9.5,11]$.
+This has the important implication (via Claim~4) that the flex gadget is restricted to non-crossing configurations. 
+
+To model a variable $x$, 
+we add bars
+with angles restricted to $90^\circ$
+as shown in Figure~5 to create two parallel bars called a \defn{channel} (see $\ell_1, \ell_2$ in the figure) with distance in a range that includes $[\frac{1}{2},2]$.  
+By limiting the height of the flex gadget to the range $[9.5,11]$
+we limit the channel distance to $[\frac{1}{2},2]$.
+
+In our construction we will often use the larger channel of distance $x + 30$, and narrow to a channel of distance $x$ only when necessary. 
+It may seem arbitrary that we place the top of the larger channel (at point $T$ in the figure) $21$ units above the top of the flex gadget,  
+but we need room to
+turn a channel from horizontal to vertical as shown later~on, and a difference of $30$ between the larger and narrower channels makes it easy to read off the value of $x$.
+
+\subsection*{2.4 Overview of the Construction}
+
+Having represented each variable $x$ of the formula $\varphi$ as a horizontal channel of height $x + 30$, the overall construction is as shown in Figure~6. 
+There is a horizontal channel 
+and a vertical channel 
+for each variable.
+From now on we refer to the distance of a channel as its \defn{width}, regardless of whether 
+the channel is horizontal or vertical.
+
+The channel widths vary depending on the values of the variables but the gaps between the channels have fixed lengths, though not all the same. 
+There are addition and inversion gadgets (drawn here as rectangles) corresponding to the constraints
+of~$\varphi$.
+For each occurrence of a variable \pdfpage{10}in a constraint we add an extra 
+horizontal channel connected to the constraint's gadget.
+  
+When two channels cross, the width of each channel must be maintained.  If the channels correspond to different variables, the crossing must be ``free'' in the sense that the widths of the horizontal channel and the vertical channel are independent.  
+However, in order to transmit the chosen value for a variable to its gadgets, when two channels corresponding to the same variable cross each other, we enforce a one-to-one relationship between their widths.  Enforcing the same width seems tricky.  Instead, we ensure that all the horizontal channels corresponding to variable $x$ have width $x + 30$, and all the vertical channels corresponding to  $x$ have width $\sqrt{3}(x+30)$.   
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig6.pdf}
+\end{center}
+\noindent\textbf{Figure 6:} Overall plan for an instance of \textnormal{\textsc{ETR-INV}} with three variables $x_1, x_2, x_3$ and constraints $x_1 \cdot x_2 = 1$ and $x_1 + x_3 = x_2$. A diagonal segment where two channels cross indicates a relationship between their widths.
+\alttext{Schematic of a grid of channels, each channel drawn as a pair of parallel black lines with a pale fill. Three vertical channels run the full height, labelled at the top $x_1$, $x_2$, $x_3$ from left to right, filled pale blue. Horizontal channels enter from the left and are labelled on the left. Top group, filled pale blue, ending past the third vertical channel: $x_1$, $x_2$, $x_3$. Middle group, filled pale pink: $x_1$, $x_2$, running into a pink box at the right labelled ``inversion gadget''. Bottom group, filled pale pink: $x_1$, $x_3$, $x_2$, running into a larger pink box at the right labelled ``addition gadget''. A short diagonal black segment marks each crossing of a horizontal and a vertical channel of the same variable; crossings of different variables have none.}
+
+In the following subsection 
+we construct the following gadgets:
+
+\begin{itemize}
+\item The \defn{channel-restricting gadget} restricts the 
+height of a flex gadget to the interval $[9.5,11]$ 
+which restricts the flex gadget to non-crossing configurations and restricts the corresponding variable to $[\frac{1}{2},2]$.
+Channel-restricting gadgets are placed at the beginning of the primary horizontal channel representing each variable (the blue horizontal channels in Figure~6).  They limit all subsequent gadgets to non-crossing configurations. 
+\item The \defn{turn gadget} enforces the relationship between a horizontal channel of width $w$ and a vertical channel of width $\sqrt{3} w$.  Turn gadgets are used in the cross-over gadgets and the addition and inversion gadgets.
+\item \defn{Cross-over gadgets} are used whenever a horizontal channel crosses a vertical channel.  There are two versions depending on whether the two channels correspond to the same variable or not.  
+\item The \defn{addition gadget} enforces a constraint $x_i + x_j = x_k$.
+\item \pdfpage{11}The \defn{inversion gadget} enforces a constraint $x_i \cdot x_j = 1$.  (To avoid subscripts, we will write this as $x \cdot y = 1$.)
+\end{itemize}
+
+\subsection*{2.5 Details of the construction}
+
+\subsubsection*{2.5.1 Channel-restricting gadget and non-crossing properties.}
+
+We restrict the width of a large horizontal channel representing a variable $x$ to the interval 
+$[30.5, 32]$ (i.e., restricting $x$ to  $[\frac{1}{2},2]$)
+by adding bars as shown in Figure~7(middle)
+to restrict the height of the flex gadget to $[9.5,11]$. 
+The bars are added to the primary horizontal channel representing each variable, i.e., the blue horizontal channels shown in Figure~6.   
+This has the important 
+consequence of  restricting the flex gadget to non-crossing configurations
+by Claim~4. 
+(Nothing constrains the  channel-restricting gadget itself to non-crossing configurations.)
+
+\begin{center}
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig7left.pdf}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig7middle.pdf}\hfill
+\includegraphics[width=0.31\linewidth,height=0.40\textheight,keepaspectratio]{figures/fig7right.pdf}
+\end{center}
+\noindent\textbf{Figure 7:} Adding extra bars (drawn thick) at nodes $M_1,M_2,M_3$ and $N_1, \ldots, N_5$ to the left of the flex gadget (in the light blue rectangle) to constrain the height of the flex gadget to $[9.5,11]$. Fixed angles are drawn in black; flexible angles in blue. \textit{Geogebra applet:} flex-gadget-range-constrained.ggb; a slider controls the value of $x$.
+\alttext{Three GeoGebra drawings of one gadget at three heights. Each has a light blue rectangle holding a flex gadget (two kneeling A-frames, drawn thin) at the lower right, with $H$ and $Q$ on its top edge and a red dashed vertical from $Q$ to the base line. A vertical bar labelled 21 rises from $Q$ to $T$ on a long horizontal line at the top. To the left are the added bars, drawn thick. A chain $M_1$, $M_2$, $M_3$ with both bars labelled 16 joins the base line at $M_1$ to the top line at $M_3$. Beside it a vertical bar labelled 29.5 joins $N_5$ on the base line (right-angle mark) to $N_4$ (right-angle mark), with a short horizontal bar from $N_4$ to $N_3$. A chain $N_3$, $N_2$, $N_1$ with both bars labelled 10 ends at $N_1$, on the level of the top of the rectangle. Angles are in blue. Left: ``h = 11'', ``x = 2''; 180° at $M_2$ (the chain is straight), 90° at $M_1$, 112.33° at $N_3$, 135.34° at $N_2$, 67.67° at $N_1$. Middle: ``h = 10.3'', ``x = 1.3''; 155.99° at $M_2$, 102.01° at $M_1$, 106.26° at $N_3$, 147.48° at $N_2$, 73.74° at $N_1$. Right: ``h = 9.5'', ``x = 0.5''; 144.78° at $M_2$, 107.61° at $M_1$, 90° at $N_3$, 180° at $N_2$ (the chain is straight), 90° at $N_1$.}
+
+\par\medskip\noindent\textbf{Claim 5.} \begin{itshape}
+
+The channel-restricting gadget in Figure~7 
+allows a flex gadget of height $h$ iff $h \in [9.5,11]$. Furthermore, all these values of $h$ can be realized via non-crossing configurations of the channel-restricting gadget.
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+Points $M_1$ and $M_3$ are vertically aligned and the 
+distance between them is at most $32$ because of the  
+two bars $M_1 M_2$ and $M_2 M_3$.  Thus the maximum height of the flex gadget is $11$ (see  Figure~7(left)), corresponding to an $x$ value of $2$.
+Similarly, the minimum $x$ value of $0.5$, corresponding to the minimum height of the flex gadget at $9.5$, is enforced by bars $N_1 N_2$ and $N_2 N_3$ (see Figure~7(right))). 
+For the second statement in the claim, note that the configurations in the figure are non-crossing and intermediate configurations are non-crossing by monotonicity of the flex gadget.
+\hfill$\square$\par\medskip
+
+\pdfpage{12}
+\subsubsection*{2.5.2 Turn gadget}
+As mentioned above, for a variable $x$, the
+plan is that the corresponding horizontal channels have width 
+$x+30$ and the corresponding vertical channels have width $\sqrt{3}(x+30)$.  This relationship between a horizontal and vertical channel is enforced by the turn gadget which is used as a building block in  the crossing gadgets and the addition and inversion gadgets.
+The turn gadget is shown in Figure~8(left). It is entered from the left by a horizontal channel of width $x+30$.
+The width of the vertical channel is controlled 
+by double-size flex gadgets
+(labelled $F_2$ and $F_3$) that have base length $2 \cdot 16 + 2 = 34$, and the height 
+of non-crossing configurations 
+in the interval $(16, 16\sqrt{2}\,] \approx (16,22.63]$.
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig8left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig8right.pdf}
+\end{center}
+\noindent\textbf{Figure 8:} {\em (left)} The turn gadget enforces $w_2 = \sqrt{3} d_1$. {\em (right)} The cross-over gadget for $x_i,x_j$ with $i \ne j$ enforces $d_1=d_2$ and $w_1 = w_2$. \textit{Geogebra applet:} cross-over-gadget-different-variables.ggb; sliders control the values of $x_i$ and $x_j$.
+\alttext{Two GeoGebra schematics; flex gadgets are shown as pale blue rectangles. Left (turn gadget): a horizontal channel enters from the left, labelled $x_i$, its top line running to $U$ and its bottom line to $X$ (right-angle mark). A small rectangle on the bottom line, base labelled 18 and blue height 10.68, is joined from $Q$ by a vertical bar labelled 21 up to $T$ on the top line. Red dashed ``d$_1$ = 31.68'' between the lines. From $U$ a bar labelled 42 runs down to the right, at a grey angle mark 150° at $U$, into the long side of a tilted rectangle $F_2$ (right-angle mark), blue dimension 21.35. Its other long side, labelled 34, has its midpoint at $W$ on a vertical line, with a 30° angle mark at $W$. From $X$ and $W$ two vertical lines descend, forming a vertical channel labelled $x_i$ at the bottom, red dashed ``w$_2$ = 54.87'' across it. A rectangle $F_3$ with blue height 21.87 stands on the left line, midpoint $S'$; a bar labelled 33 joins it to $S$ on the right line (right-angle marks). Right (cross-over, different variables): a horizontal channel labelled $x_i$ crosses a vertical channel labelled $x_j$; the corners of the central crossing are $U$ (upper left), $V$ (upper right), $X$ (lower left), $W$ (lower right), each with a right-angle mark. Red dashed $d_1$ (left), $d_2$ (right), $w_1$ (top), $w_2$ (bottom). Left and right each have a small rectangle $F_1$, blue height 10.5, on the bottom line at $T'$ and $R'$, joined by a bar labelled 21 up to $T$ (blue) and $R$. Above and below each have a rectangle $F_3$, blue dimension 19.6, on the left line at $P'$ and $S'$, joined by a bar labelled 33 to $P$ and $S$ on the right line.}
+
+\par\medskip\noindent\textbf{Claim 6.} \begin{itshape} 
+
+The turn gadget in Figure~8(left) works correctly:
+if 
+the horizontal channel has width $d_1 \in [30.5,32]$, then the vertical channel has width $w_2 =  \sqrt{3}d_1$.  Furthermore, these configurations are non-crossing.
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+Points $U$ and $X$ are vertically aligned.  
+The flex gadget at $S'$ forces $W$ to be horizontally aligned with $X$.  
+Therefore, triangle $UXW$ is a $60^\circ,90^\circ,30^\circ$ right-angle triangle with side lengths $d_1, \sqrt{3} d_1, 2d_1$.  Because the $F_2$ flex gadget at $W$ is double size, the diagonal $UW$ can accommodate any choice for $d_1$ in its range. We next show that the distance $XW$ accommodates $x_i$ in the necessary range. 
+Recall that $d_1 = x_i + 30$. 
+For $x_i= \frac{1}{2}$, $d_1 = 30.5$, so we need $XW = \sqrt{3}d_1 \approx 52.83$, and we need flex gadget $F_3$ to have height $\sqrt{3}d_1 - 33 \approx 19.83$, which is in the  range of its non-crossing configurations.
+For $x_i=2$, $d_1 = 32$, so we need $XW \approx 55.43$, and we need $F_3$ of height $22.43$, also in the range of its non-crossing configurations.
+By continuity (Claim~3), all values of $x_i$ in the range $[\frac{1}{2},2]$ are achievable via non-crossing configurations.    
+\hfill$\square$\par\medskip
+
+\subsubsection*{2.5.3 Cross-over gadgets}
+There are two versions of the cross-over gadget, one for when the corresponding variables are different, and one for when they are the same. 
+The first version, for $x_i, x_j$, $i \ne j$ is shown in 
+\pdfpage{13}Figure~8(right).  It uses a standard flex gadget for the horizontal channel and a double-size flex gadget for the vertical channel.
+
+\par\medskip\noindent\textbf{Claim 7.} \begin{itshape}
+
+The cross-over gadget for $x_i, x_j, i \ne j$ in Figure~8(right)  works correctly: if $d_1$ and $w_1$ lie in  $[30.5,32]$, then $d_2=d_1$ and $w_1=w_2$.  Furthermore, these configurations are non-crossing.  
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.}  
+Points $U$ and $X$ are vertically aligned.  
+The flex gadget and bar between $S'$ and $S$ force $W$ to be horizontally aligned with $X$.  Similarly, the flex gadget and bars between $P'$ and $P$ force $V$ to be horizontally aligned with $U$.  Thus $d_2 = d_1$.  A similar argument shows $w_1 = w_2$.  All values of $x_i$ and $x_j$ in the range $[\frac{1}{2},2]$ are realizable (appealing to Claim~6 for the vertical channel).
+\hfill$\square$\par\medskip
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig9.pdf}
+\end{center}
+\noindent\textbf{Figure 9:} The cross-over gadget for $x_i,x_i$ enforces $d_1=d_2$, $w_1 = w_2$, and $w_1 = \sqrt{3} d_1$. \textit{Geogebra applet:} cross-over-gadget-same-variable.ggb; a slider controls the value of $x_i$.
+\alttext{GeoGebra schematic of a horizontal channel labelled $x_i$ (at the left) crossing a vertical channel labelled $x_i$ (at the top). Corners of the crossing: $U$ (upper left, right-angle mark and grey 120° mark), $V$ (upper right), $X$ (lower left), $W$ (lower right). Red dashed: ``d$_1$ = 31.24'', ``d$_2$ = 31.24'', ``w$_1$ = 54.11'', ``w$_2$ = 54.11''. Left: a rectangle on the bottom line, base labelled 18, blue height 10.24, joined from $Q$ by a bar labelled 21 up to $T$. Right: a rectangle $F_1$ on the bottom line at $R'$, joined by a bar labelled 21 up to $R$. Top: a rectangle $F_3$ on the left line at $P'$, joined by a bar labelled 33 to $P$. Bottom: a rectangle $F_3$, blue height 21.11, on the left line at $S'$, joined by a bar labelled 33 to $S$. Centre: from $U$ a bar labelled 42 runs down and to the right into a tilted rectangle $F_2$, blue dimension 20.48, whose long side labelled 34 passes through $W$, with angle marks 60° and 30° at $W$.}
+
+The version of the cross-over gadget for $x_i,x_i$ incorporates the turn gadget into the cross-over gadget as shown in Figure~9.
+
+\par\medskip\noindent\textbf{Claim 8.} \begin{itshape}
+The cross-over gadget for $x_i, x_i$ in Figure~9  works correctly:
+if $d_1 \in [30.5,32]$, then 
+$d_1 = d_2$, $w_1 = w_2$, and $w_1 = \sqrt{3}d_1$.  Furthermore, these configurations are non-crossing. 
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+By Claims~6 and~7.
+\hfill$\square$\par\medskip
+
+\subsubsection*{2.5.4 Addition gadget}
+Consider the constraint $x_i + x_j = x_k$.  
+From the overall plan (see Figure~6), 
+the gadget corresponding to this constraint is entered from the left by
+horizontal channels of widths $x_i + 30$, $x_j + 30$ and $x_k + 30$.  We separate these channels by fixed distances of $90$ units.  The addition gadget is constructed as shown in Figure~10 using three double-size flex gadgets.  
+\pdfpage{14}
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig10.pdf}
+\end{center}
+\noindent\textbf{Figure 10:} The addition gadget for $x_i + x_j = x_k$, illustrated here for $x_i=1.2$, $x_j=0.7$, and $x_k = 1.9$. Each of the three incoming horizontal channels has width $x+30$ for value $x$. Note that $E$ and $L$ are not aligned. \textit{Geogebra applet:} addition-gadget.ggb; sliders control the values of $x_i$ and $x_j$.
+\alttext{GeoGebra schematic, drawn for the values in the caption. Three horizontal channels enter from the left, crossed by one vertical dashed line. Labels on the left, top to bottom: ``x$_i$ = 1.2'' with red 31.2; ``x$_j$ = 0.7'' with red 30.7; ``x$_k$ = 1.9'' with red 31.9. Grey labels 90 mark the gaps between the channels. The top line of the first channel runs right to $G$ (right-angle mark); its lower line stops at a blue dot. The upper line of the second channel stops at $E$; its lower line runs to $M$ (right-angle mark). The upper line of the third channel runs to $U$ (right-angle mark); its lower line runs to $V$. A vertical bar labelled 120 joins $G$ to $L$. Between $M$ and $U$ is a vertical bar labelled 90 with a blue rectangle on it, joined by a short horizontal bar to $Q'$ on a vertical line from $Q$ to $T$. Tilted blue rectangles sit below $L$ and above $V$; bars from $L$ and from $V$, each with a 30° mark, run into them; $Q$ and $T$ also carry 30° marks.}
+
+\par\medskip\noindent\textbf{Claim 9.} \begin{itshape}
+The addition gadget in Figure~10 works correctly:
+if $x_i, x_j \in [\frac{1}{2},2]$ and the corresponding incoming channels have width $x_i + 30$ and $x_j + 30$, respectively, then the channel for $x_k$ has width $x_i + x_j + 30$.  Furthermore, these configurations are non-crossing.  
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+We prove that the gadget  enforces $x_i + x_j = x_k$, and does not otherwise restrict the values of the variables in the interval $[\frac{1}{2},2]$.
+
+Because the distance between the incoming  channels for $x_i$ and for $x_j$ is fixed at 90 units, 
+we have $|GM| = (x_i +30) + (x_j +30) + 90$, so $|LM| = |GM|-120 = x_i + x_j +30$. 
+By Claim~6 the two turns force $|LM| = |UV|$. 
+Thus $x_i + x_j + 30 = x_k + 30$. 
+Also by Claim~6 the gadget realizes (via non-crossing configurations) any values of $x_i, x_j, x_k$ in $[\frac{1}{2},2]$ that satisfy $x_i + x_j = x_k$. 
+\hfill$\square$\par\medskip
+
+\subsubsection*{2.5.5 Inversion gadget}
+Consider the constraint $x \cdot y = 1$.  The corresponding inversion gadget is entered from the left by channels of widths $x + 30$ and $y +30$.  We separate the channels by fixed distance $110$.  
+We turn the channel for $y$ to an upwards vertical channel.
+Although the addition gadget worked with the wide channels, the inversion gadget cannot, so we reduce the channels to widths $x$ and $\sqrt{3} y$, respectively, as shown in Figure~11.  
+The basic idea of the inversion gadget is shown in Figure~12.
+It requires us \pdfpage{15}to simulate two collinear segments (shown in red) with flexible lengths. The gadget to accomplish that is shown in Figure~13 using two flex gadgets  scaled by one-and-a-half with width $2\times 12 + 2$ and height of non-crossing configurations in the range $(12,12\sqrt{2}\,] \approx (12, 16.97 ]$.
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig11.pdf}
+\end{center}
+\noindent\textbf{Figure 11:} Set-up for the inversion gadget. Channels for variables $x$ and $y$, of width $x+30$ and $y+30$, respectively, enter the inversion gadget from the left. The top channel is narrowed to its actual value $x$. The bottom channel is turned upward and then narrowed to width $\sqrt{3} y$. Contents of the dashed box are shown in subsequent figures. \textit{Geogebra applet:} inversion-setup.ggb; a slider controls the value of $x$.
+\alttext{GeoGebra schematic. At the upper left the channel for $x$ enters, label ``x = 1.7'' and red 31.7; a red dashed vertical runs through it, continuing grey down to the lower channel with a grey label 110. Its lines end at $A$ and $A'$ (right-angle marks), joined by a vertical bar labelled 30. A dashed grey empty box lies right of $A$ and $A'$. At the lower left the channel for $y$ enters, label ``y = 0.59'' and red 30.59, its lines ending at $B$ and at $C$. A vertical line rises from $B$ to the box, through a blue rectangle (side labelled 34) joined by a bar labelled 33 to the right-hand vertical bar. A pale triangle has corners $F$ (on the vertical line), $G$ and $E$; $FG$ is labelled 30 in grey, $FE$ is labelled 60, $G$ is a small dot on the vertical line, and $E$ has a grey 120° mark. From $E$ a vertical bar labelled 60 runs down to $D$, with a 30° mark. From $C$, with a grey 150° mark, a bar labelled 42 runs up and to the right into a tilted blue rectangle (side labelled 34) whose long side passes through $D$.}
+
+\par\medskip\noindent\textbf{Claim 10.} \begin{itshape}
+
+The inversion gadget shown in Figures~11,~12,~13 works correctly:
+if $x \in [\frac{1}{2},2]$ and the corresponding incoming channel has width $x + 30$,  then the channel for $y$ has width $1/x + 30$ (i.e., $x \cdot y = 1$).  Furthermore, these configurations are non-crossing. 
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+The set-up for the inversion gadget, as shown in Figure~11, uses the turn gadget from Figure~8(left).
+The resulting vertical channel has width $\sqrt{3}(y + 30)$. 
+We claim that bar $EF$ narrows the vertical channel to width $\sqrt{3}y$.  This is because the right-angle triangle $EFG$ (where $G$ is not part of the construction) has side-lengths $60,30,30\sqrt{3}$.
+
+Next, consider the construction in Figure~12. The bottom bar of the channel for $x$ and the left bar of the channel for $y$ meet at point $S$.  From points $R$ and $Q$ (which lie on vertical lines $1$ and~$2$ units, respectively, to the left of $S$) we construct bars of length~$2$ at a fixed angle of $120^\circ$ from horizontal.  
+This creates three right-angle triangles of side-lengths $2,1,\sqrt{3}$, namely
+$PRS$, $RPT$, and $UQT'$.
+
+Consider the triangles $UTP$ and $PSL$ (shaded red).
+Triangle $UTP$ has altitude $x$ and base~$1$; triangle $PSL$ has altitude $\sqrt 3$ and base $w = \sqrt{3} y$.
+If the segments $UP$ and $PL$ are 
+collinear, then the triangles $UTP$ and $PSL$ are similar so
+$x / 1 = \sqrt{3} / \sqrt{3} y$, i.e., $x \cdot y = 1$.
+
+\pdfpage{16}
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig12left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig12right.pdf}
+\end{center}
+\noindent\textbf{Figure 12:} An inversion gadget forcing $x \cdot y = 1$ by means of the two similar red triangles. Only black segments are bars of the linkage. The two collinear red segments incident to $P$ must have adjustable lengths, and are implemented as shown in Figure~13.
+\alttext{Two GeoGebra drawings of the same construction for two values. Black bars of length 2 (labelled) rise at grey 120° marks from $Q$ and from $R$ to $U$ and to $P$. Pale blue parallelogram-like fill between them, with grey labels 1 (from $Q$ to $T'$ and from $T$ to $P$), and $\sqrt{3}$ on the vertical from $R$ to $T$. A black line from the left ends at $Q$, another ends at $R$, and a bar labelled 1 runs from $R$ to $S$ (right-angle mark at $S$). Pale red triangles are shaded with hypotenuses in bright red, from $U$ through red point $P$ to blue point $L$; vertical black lines descend from $S$ and $L$, with a red dashed $w$ between them. Left: red dashed 2 and ``x = 2'' at the left; red lengths 2.24 ($UP$) and 1.94 ($PL$); ``w = 0.87''; ``y = w/$\sqrt{3}$ = 0.5''. Right: red dashed 0.5 and ``x = 0.5''; red lengths 1.12 ($UP$) and 3.87 ($PL$); ``w = 3.46''; ``y = w/$\sqrt{3}$ = 2''. In the right panel $T'$ lies below $T$; in the left panel it lies above.}
+
+Figure~13 shows how we force $UP$ and $PL$ to be collinear.  It remains to show that the flex gadgets $F_1$ and $F_2$ allow any values of $x$ and $y$ in the interval $[\frac{1}{2},2]$ that satisfy $x \cdot y = 1$. 
+Recall that $F_1$ and $F_2$ are flex gadget with  height of non-crossing configurations in the (rounded) range $(12, 16.97]$).
+Since the flex gadget changes monotonically 
+it suffices to consider the extremes $x = 2$, $y = \frac{1}{2}$ and $x = \frac{1}{2}, y = 2$.
+
+If $x = 2$, then $|UP| = \sqrt{5} \approx 2.24$ and $|PL| = \sqrt{3.75} \approx 1.94$. Then $|H_1 U_3| = 15 + \sqrt{5} - 1 \approx 16.24$ which is in the range of non-crossing configurations of $F_1$, and $|H_2 L_3| = 15 + \sqrt{3.75} -2 \approx 14.94$,
+which is in the range of non-crossing configurations of $F_2$.
+
+If $x = \frac{1}{2}$, then $|UP| = \sqrt{1.25} \approx 1.12$ and $|PL| = \sqrt{15} \approx 3.87$. Then $|H_1 U_3| = 15 + \sqrt{1.25} - 1 \approx  15.12$ which is in the
+range of non-crossing configurations of $F_1$, and $|H_2 L_3| = 15 + \sqrt{15} -2 \approx 16.87$, which is in the range of non-crossing configurations of~$F_2$.
+\hfill$\square$\par\medskip
+
+\subsection*{2.6 Properties of the Constructed Linkage}
+
+From an \textnormal{\textsc{ETR-INV}} formula $\varphi$ the construction described above produces an angle-constrained linkage $L$ together with a combinatorial embedding $\Lambda$ of $L$ (as shown in the figures above). 
+
+\par\medskip\noindent\textbf{Theorem 11.} \begin{itshape}
+There is a polynomial-time algorithm that takes as input an \textnormal{\textsc{ETR-INV}}\ formula $\varphi$ and constructs 
+an angle-constrained linkage 
+$L$ and a combinatorial embedding $\Lambda$ of $L$ such that 
+\begin{itemize}
+\item if $\varphi$ is true, then $L$ has a non-crossing realization with combinatorial embedding $\Lambda$ and
+\item if $\varphi$ is false, then $L$ has no realization (whether non-crossing or crossing). 
+\end{itemize}
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+If $\varphi$ is true, then, as justified by Claims~3--10,  the values of the variables that satisfy $\varphi$ determine channel widths that result in a non-crossing realization of $L$ with combinatorial embedding~$\Lambda$.
+
+\pdfpage{17}
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig13left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig13right.pdf}
+\end{center}
+\noindent\textbf{Figure 13:} Detail of inversion gadget using flex gadgets $F_1$ and $F_2$ scaled by one-and-a-half with width $2\times 12 + 2 = 26$ and height of non-crossing configurations in the range $(12,12\sqrt{2}\,] \approx (12, 16.97 ]$. Right-angle symbols have been omitted (for example at $U_1, L_1, H$) but should be apparent from the two views. \textit{Geogebra applet:} inversion-detail.ggb; a slider controls the value of $x$.
+\alttext{Two GeoGebra views in dashed grey frames, the interior of the dashed box of Figure 11, for two values. Two large pale blue tilted rectangles $F_1$ (upper) and $F_2$ (lower) hold no drawn linkage inside. $F_1$ has a long side from $U_2$ through $U_3$ to $U_4$, labelled 26; $F_2$ has one from $L_2$ through $L_3$ to $L_4$. A bar labelled 15 joins $U_1$ to the small hook at $U$, and another labelled 15 joins $L_1$ to the hook at $L$. In the narrow gap between the rectangles a long bar runs from red point $P$ to $H$, with short bars $H_1H$ (labelled 1) and $HH_2$ (labelled 2) at its end. At the lower left, horizontal lines labelled 20 enter, with the labels of the channel values, and two vertical lines labelled 20 leave downward. Small red triangles and blue angle marks are at $U$, $P$, $L$ (see Figure 16 for a closeup). Left: ``x = 2'', ``y = 0.5''; blue dimensions 16.236 for $F_1$ and 14.936 for $F_2$. Right: ``x = 0.5'', ``y = 2''; blue dimensions 15.118 for $F_1$ and 16.873 for $F_2$; the rectangles stand steeper, and the red segment from $P$ to $L$ is long.}
+
+Now suppose $\varphi$ is false. Although Hart's A-frame and the flex gadget (in isolation) have crossing realizations, our channel-restricting gadgets from Section~2.5.1 ensure that the initial flex gadgets only take on non-crossing configurations that correspond to a value of a variable in the interval $[\frac{1}{2}, 2]$.  After that, the rest of our construction faithfully implements the addition and inversion constraints of~$\varphi$. 
+(More formally, this is by induction.)
+Therefore there is no realization of $L$, even allowing crossing configurations.    
+ 
+\hfill$\square$\par\medskip
+
+In the next section we give a realization-preserving transformation from angle-constrained 
+linkages produced by the above construction to penny graphs.
+
+\section*{3 From Linkages to Penny Graphs}
+
+In this section we show how to turn the angle-constrained linkages
+constructed in Section~2 into penny graphs. At a first glance that would appear to be straightforward: simply replace each vertex with a penny and each bar of integer length $\ell$ between two vertices with $\ell+1$ pennies lying on a line with the centers of the first and last pennies representing the end vertices of the bar. The centers will then have distance $\ell$ times the diameter of the pennies. An immediate obstacle is that a penny can touch at most six other pennies, so our linkages better have max-degree at most $6$, which fortunately they do. We also need to 
+keep the pennies representing a bar on a line. This can be achieved by bracing the line of pennies on either (or both) sides as necessary, see the left illustration in Figure~14; the illustration on the right shows how the same bar can connect to \pdfpage{18}further bars if the angles are part of the triangular grid, i.e., a multiple of $60^\circ$.
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig14left.png}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig14right.png}
+\end{center}
+\noindent\textbf{Figure 14:} {\em (left)} A bar of length $6$ (times the penny diameter) between vertices $A$ and $B$ braced on opposite sides. {\em (right)} The same bar with additional bars attached at $A$ and $B$ at angles of $120^{\circ}$ and $60^{\circ}$.
+\alttext{Two GeoGebra drawings of equal-sized circles (pennies) with a dot at each centre. Left: a horizontal row of 7 touching circles with a straight line through their centres, end circles labelled $A$ and $B$; along the row the centre dots alternate grey and black, starting grey at $A$. Three circles lie above the row in triangular-grid positions, at its right part; four lie below it, at its left part. Right: the same bar with two more arms, on white. From $A$ an arm goes to the upper left, with a grey sector and the label 120° at $A$; from $B$ an arm goes to the upper left, with a grey sector and the label 60° at $B$. Each arm is a row of circles with a line through the centres, running on beyond the last circle, with a parallel row of bracing circles on its inner side. The arm from $A$ has 4 circles on the line after $A$, the arm from $B$ has 5 after $B$. The three circles above the bar at the right double as the lowest bracing circles of the arm from $B$.}
+
+Using extra pennies to brace a bar creates a follow-up problem: the penny at the end of a bar must be in contact with one of the extra bracing pennies.
+This further restricts the degree of linkage vertices, though it is possible for two bars to share a bracing penny, see, for example, the 
+$60^{\circ}$ angle at vertex $B$ in the right illustration in Figure~14.
+Luckily, the linkages we constructed in Section~2 have small degree and most of the vertex types are easy to model. The only difficult case is the flex gadget vertex that is the apex of Hart's A-frame (see vertex $H$ in 
+Figure~5). This vertex has degree $3$ and must allow a range of motion for the three angles. 
+Even worse, in the modified flex gadget that has the channel-restricting gadget attached to it, the vertex $H$ (see Figure~7) 
+has degree $4$ and includes one angle constrained to $180^\circ$ and three angles that must allow some range of motion.   
+The gadget achieving this flexibility at the apex vertex is 
+at the core of our reduction.
+
+We need to pay close attention to the vertex types (degree and angle constraints) in our linkage gadgets. The construction in Section~2 uses the following five gadgets: 
+the {\em flex gadget} of Section~2.3, which incorporates Hart's A-frame from Section~2.2;
+the {\em channel-restricting gadget} of Section~2.5.1;
+the {\em turn gadget} of Section~2.5.2;
+the {\em cross-over gadgets} of Section~2.5.3;
+the {\em addition gadget} of  Section~2.5.4; and
+the  {\em inversion gadget} of Section~2.5.5.
+
+We distinguish between \defn{fixed-angle} vertices that have all their incident angles constrained and \defn{flexible-angle} vertices 
+that do not have all their incident angles constrained. We classify fixed-angle vertices in Table~1 and flexible-angle vertices in Table~2.
+
+To shorten the classification, we will only include examples from one
+or two gadgets for each vertex type. For example, the flex gadget contains degree-$2$ vertices at a right angle, $T$, $R$ and $S$ in Figure~5; the same type of vertex occurs in the cross-over gadget, e.g., as $X$ in Figure~9, and 
+also in the channel-restricting gadget, the addition gadget and the inversion gadget, but we do not list those instances separately in Table~1. 
+
+For the flexible-angle types in Table~2 we must also pay attention to the range of motion needed at angles that are not constrained.  
+For example, the degree-$2$ vertex $M_2$ of the channel-restricting gadget in Figure~7, must allow angles in the range $(144^\circ, 180^\circ]$. 
+To simplify the classification, we overestimate the angle ranges; for example $M_2$'s range is overestimated as $(120^\circ, 240^\circ)$. 
+For degree $2$ and $3$ vertices there is one degree of freedom and we only list the range of one of the angles. 
+For \pdfpage{19}the degree $4$ vertex $H$, the apex vertex in the modified flex gadget (see Figure~15), 
+there is still only one degree of freedom and we list 
+only the ranges for angles $\alpha$ and $\beta$ in the figure---this is explained further in the proof of Lemma~12. 
+Note that the case of the degree $3$ apex vertex $H$ of Figure~7
+is subsumed by the degree $4$ case.
+
+        
+
+\begin{center}
+\begin{tabular}{|c|l|l|l|}
+\hline
+degree & angle(s) & pic &  sample instance(s) \\ \hline
+2 & $90^{\circ}$ 
+& \includegraphics[height=0.4in]{figures/table1_angle_90.png}
+& $T$, $R$ in the flex gadget,  Fig.~5 \\ \cmidrule{2-4}
+                        &$120^{\circ}$ 
+                        &\includegraphics[height=0.4in]{figures/table1_angle_120.png}
+                        & $L$ in the addition gadget,  
+                        Fig.~10 \\ \cmidrule{2-4}
+                        & $150^{\circ}$
+                        &\includegraphics[height=0.4in]{figures/table1_angle_150.png}
+                        & $V$ in the addition gadget,  
+                         Fig.~10\\ \hline
+3 & $90^{\circ}, 90^{\circ}$ & \includegraphics[height=0.4in]{figures/table1_angle_90_90.png}
+& $Q$ in the flex gadget,  Fig.~5\\ \cmidrule{2-4}
+& $90^{\circ}, 120^{\circ}$& \includegraphics[height=0.4in]{figures/table1_angle_90_120.png}
+& $U$ in the cross-over gadget,  Fig.~9\\ \cmidrule{2-4}
+& $150^{\circ}$, $30^{\circ}$& \includegraphics[height=0.4in]{figures/table1_angle_150_30.png}
+& $W$ in the turn gadget, Fig.~8  
+\\ \hline
+4 & $60^{\circ}, 90^{\circ}, 30^{\circ}$ 
+& \includegraphics[height=0.4in]{figures/table1_angle_60_90_30.png}
+& $W$ in the cross-over gadget,  Fig.~9 \\ \hline
+    
+\end{tabular}
+\end{center}
+\begin{center}
+Table 1: Fixed-angle vertex types.
+\end{center}
+\alttext{The ``pic'' column holds seven small drawings, each a black dot at the vertex with thick grey or black lines for the bars and grey angle marks, labelled with the values in the row. Row by row: 90°: a horizontal line from the left and a vertical line going up, with a square mark. 120°: a horizontal line from the left and a line going up to the right, with a sector mark. 150°: a horizontal line from the left and a line going to the right and slightly up, with a sector mark. 90°, 90°: a horizontal line with a vertical line rising from its midpoint, with two square marks. 90°, 120°: a horizontal line from the left, a line going up, and a line going down to the right, with a square mark and a sector mark. 150°, 30°: a horizontal line through the vertex and a line going up to the right, with two sector marks. 60°, 90°, 30°: a horizontal line through the vertex, a line going up to the left and a line going up to the right, and the right-angle mark between them, with marks 60°, 90° and 30°.}
+\decompnote{Also as \texttt{tables/table1.csv}.}
+
+\begin{center}
+\begin{tabular}{|c|l|p{3.5in}|}
+\hline
+degree & angle(s) & sample instance(s) \\ \hline
+2 & $(60^{\circ}, 180^{\circ})$ & $C$ and $G$ in the flex gadget, 
+Figs.~5,~15;
+also  $L$ in the inversion gadget, Figs.~13,~16 \\
+\cmidrule{2-3}
+ & $(120^{\circ}, 240^{\circ})$ & $M_2$ and $N_2$ in the modified flex gadget,  Fig.~7; also $U$, $P$ in the inversion gadget, 
+Figs.~13,~16 \\ 
+\hline
+3& $180^{\circ}$, $(20^{\circ},100^{\circ})$ & 
+$B$, $E$, $A$ and $D$ in the flex gadget, 
+Figs.~5,~15
+\\ \hline
+4 & $180^{\circ}$, 
+$(85^\circ,114^\circ)$, $(35^{\circ},46^{\circ})$
+& $H$, the apex vertex in the modified flex gadget, Figs.~7, 15, with ranges for angles $\alpha, \beta$ \\ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+Table 2: Flexible-angle vertex types. Notation like $(60^\circ, 180^\circ)$ indicates the range for a single angle.
+\end{center}
+\decompnote{Also as \texttt{tables/table2.csv}.}
+
+\par\medskip\noindent\textbf{Lemma 12.} \begin{itshape}
+Tables~1 and~2 cover all angle types required by our linkage construction in Section~2. 
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+A close inspection of the linkage gadgets shows that all their vertex types are captured in the tables.
+
+For Table~2, there are two additional aspects to verifying the angle ranges.  First, we claim that all non-constrained angles change 
+monotonically so an angle always lies between its values in the extreme positions for $x=2$ and $x = 0.5$. 
+This is clear for 
+degree $2$ flexible-angle vertices.  \pdfpage{20}The other flexible-angle vertices only appear in the [modified] flex gadget.  Refer to Figure~15. 
+Monotonicity 
+for the degree-$3$ flexible angle vertices $B,E,A,D$ is clear.
+The situation at vertex $H$ is more complicated.  As $h$ decreases, angle $\alpha$ is monotonically increasing and $\gamma$ is monotonically decreasing.   
+In Appendix~A we show that angle $\beta$ is the same as angle $AHD$, and therefore it is monotonically increasing. 
+
+Finally, 
+for the values of the angles in the extreme positions 
+we rely on the figures, but it is possible to justify these values algebraically. 
+\hfill$\square$\par\medskip
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig15left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig15right.pdf}
+\end{center}
+\noindent\textbf{Figure 15:} Angles in the flex gadget. \emph{(left)} The configuration realizing $x=2$. \emph{(right)} The ``kneeling'' configuration realizing $x = 0.5$. In between these two positions, the flex gadget continuously simulates all values $x \in [\frac{1}{2},2]$ as we proved earlier.
+\alttext{Two GeoGebra drawings of an A-frame, base $AD$ horizontal, labelled 8, on a long line; a red dashed vertical passes through $H$, and a long horizontal line passes through $H$. Printed bar lengths: $AB$ 6, $BC$ 2, $CH$ 4, $BE$ 4. Blue angle marks with values; at $H$ three angles below the line: purple $\alpha$ (left of $HC$), orange $\beta$ (between $HC$ and $HG$), light blue $\gamma$ (right of $HG$). Left, labelled ``x = 2'' and red ``h = 11'': $\alpha$ = 87.99°, $\beta$ = 39.95°, $\gamma$ = 52.06°; 153.16° at $C$; 153.16° at $G$; 52.06° at $B$; 92.01° at $E$; 61.15° at $A$; 78.9° at $D$. Right, labelled ``x = 0.5'' and red ``h = 9.5'': $\alpha$ = 112.27°, $\beta$ = 45.68°, $\gamma$ = 22.05°; 114.14° at $C$; 114.14° at $G$; 22.05° at $B$; 67.73° at $E$; 46.41° at $A$; 87.9° at $D$. Vertex $C$ is blue in both.}
+
+The next lemma shows that we can simulate an angle-constrained linkage with angle types as identified in Tables~1 and~2 by a penny graph. 
+
+\par\medskip\noindent\textbf{Lemma 13.} \begin{itshape}
+There is a polynomial-time algorithm that takes as input an angle-constrained
+linkage~$L$ 
+as constructed in Section~2
+(with edge-weights in $\ensuremath{\mathbb{N}}/2$ and angle types as described in Tables~1 and 2) and a combinatorial embedding $\Lambda$
+and constructs a graph $G$ and a combinatorial plane embedding $D$ of $G$ such that
+\begin{itemize}
+    \item if $L$ is realizable, then $G$ has a penny-graph embedding realizing $D$, and
+    \item if $L$ is not realizable, then $G$ is not a weak unit-distance graph for any embedding.
+\end{itemize}
+\end{itshape}\par\medskip
+
+Bars and vertices in a linkage do not have area, but pennies do; when replacing bars with bar gadgets and vertices with vertex gadgets these gadgets take up space. Consider realizing a bar of length $\ell$. We could do so using a line of $\ell+1$ pennies of unit diameter braced on either (or both) sides. That bar has a thickness of $(\sqrt{3}+1)/2<2$ so it is less than two pennies thick (measuring \pdfpage{21}thickness as distance from the middle of the bar). We can reduce the thickness of the bar to below any value $\varepsilon > 0$ by working with a line of $t\ell+1$ pennies each of diameter $1/t$. If we choose $t > 2/\varepsilon$ the resulting line of pennies (braced on either or both sides) still has length $\ell$ and thickness less than $2/t<\varepsilon$. Doing the same thing for vertex gadgets allows us to make bars sufficiently thin, and vertex gadgets sufficiently small so that they do not interfere with each other. 
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig16left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig16right.pdf}
+\end{center}
+\noindent\textbf{Figure 16:} Closeup showing the angle ranges at vertices $U, P, L$ for $x=2$ (left) and $x=0.5$ (right) from Figure~13.
+\alttext{Two enlarged GeoGebra crops around $U$, $P$, $L$ of Figure 13, with parts of the pale blue rectangles at the upper right. A bright red segment runs from $U$ through red point $P$ to blue point $L$; pale red triangles and pale blue fill lie beside it; a right-angle mark is at the foot of the vertical below $P$. Blue angle values. Left ($x=2$): the red segment is steep; 146.57° at $U$, 146.57° at $P$, 116.57° at $L$. Right ($x=0.5$): the red segment is shallow; 183.43° at $U$, 183.43° at $P$, 153.43° at $L$.}
+
+More formally, we introduce the notion of ``thickness''---for the proof of Lemma~13 only---to measure the space requirements of our gadgets. The \defn{thickness} of our vertex and bar gadgets is defined as the smallest $\varepsilon$ such that the pennies in the gadget lie within an $\varepsilon$-neighborhood of the linkage part they represent (vertex or bar). We do not need the exact $\varepsilon$, upper bounds are sufficient. We distinguish the thickness of a vertex (the radius of a disk containing all pennies representing the vertex) and the thickness of a bar (half the width of the bar-gadget containing all pennies representing the bar). When analyzing the gadgets, we express their thickness in terms of pennies, e.g., the bar-gadget we described earlier is less than two pennies thick; the actual thickness will then depend on the diameter we choose for the pennies. 
+
+\par\noindent\textit{Proof.} 
+We start by showing how to replace vertices of each type with penny graph gadgets. 
+
+\paragraph{Fixed-Angle Vertex Types.} 
+Gadgets for $120^{\circ}$- and $60^{\circ}$-angles are easy to build as we already saw in Figure~14, since they are part of the triangular grid. A right angle can be forced using the Pythagorean triple $(3,4,5)$---this idea is based on~[2, Figure~5]; combining these two ideas we can build a universal vertex gadget, shown in Figure~17, which realizes bars at angles $90^{\circ}$, $60^{\circ}$, $120^{\circ}$, $60^{\circ}$, and $30^{\circ}$ in this (cyclic) order. 
+In this and the following figures, the thickness of a vertex gadget is shown as a green disk.  
+Only pennies lying fully inside the green disk
+belong to the vertex gadget; the remaining pennies belong to bar gadgets connecting the vertex gadget to another vertex gadget and are included for illustration only.
+
+This universal vertex gadget can be used  to simulate all the fixed-angle vertex types from Table~1 by extending the appropriate subset of arms, and (if necessary) flipping the gadget: the gadget contains bars at angles $90^{\circ}$, $120^{\circ}$ and $150^{\circ}=90^{\circ}+60^{\circ}$, 
+simulating all the degree-$2$ fixed-angle vertices; it contains bars at angles $90^{\circ}=60^{\circ}+30^{\circ}$, $90^{\circ}$; $90^{\circ}=60^{\circ}+30^{\circ}$, $120^{\circ}$; and  $150^{\circ}=90^{\circ}+60^{\circ}$, $30^{\circ}$, simulating all the degree-$3$ fixed-angle vertices; and finally it contains bars at angles $30^{\circ}$, $90^{\circ}$, $60^{\circ}$, which simulate the degree-$4$ fixed-angle vertex. 
+The universal vertex gadget is at most $7$ pennies thick.
+
+\pdfpage{22}
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig17.png}
+\end{center}
+\noindent\textbf{Figure 17:} The universal vertex gadget with angles $90^{\circ}$, $60^{\circ}$, $120^{\circ}$, $60^{\circ}$, and $30^{\circ}$. The green disk shows that our gadget is at most $7$ pennies thick.
+\alttext{GeoGebra drawing of equal-sized circles with centre dots on a pale green disk with a green outline. At the centre of the disk a shaded double circle marks the vertex. Five arms leave the vertex, each a line through the centres of a row of touching circles, with bracing rows of circles beside it: a horizontal line through the vertex going left and right; a vertical line going up; a line going up to the left, at the upper end of a long diagonal; the same diagonal continuing down to the right. Angle labels between the arms near the vertex: 90° (between up and right), 30° (between up and up-left), 60° (between up-left and left), 120° (between left and down-right), 60° (between down-right and right). A further band of braces runs from the right-hand arm up and to the left, to the vertical arm. The arms run past the edge of the green disk and the edge of the picture.}
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig18.png}
+\end{center}
+\noindent\textbf{Figure 18:} A universal flexible degree-$2$ vertex gadget; the angle between arms $BA$ and $AC$ can range in the open interval $(120^{\circ}, 240^{\circ})$, and the angle between arms $BA$ and $AD$ in the open interval $(60^{\circ}, 180^{\circ})$. The green disk indicates that the gadget is at most $3$ pennies thick. \textit{Geogebra applet:} degree-2-flexible-vertex.ggb; point $C$ can be moved.
+\alttext{GeoGebra drawing of equal-sized circles with centre dots on a pale green disk, whose centre is $A$, with a shaded circle at $A$. A nearly horizontal line comes from blue point $B$ at the left through a row of circles to $A$, with a row of bracing circles above. From $A$ a slightly rising line runs right through circles to blue point $C$, and a falling line runs down and to the right through circles to blue point $D$. Blue labels: 167° above $A$ and 133° below $A$. Arms $AC$ and $AD$ share a small triangular cluster of circles next to $A$; one circle in it has a grey centre dot. Both arms have a bracing row and extend beyond the green disk.}
+
+\paragraph{Flexible-Angle Vertex Types.} 
+For these vertex types we need more than one gadget. For the flexible-angle degree-$2$ vertices, we use the universal gadget in Figure~18. Arms $BA,AD$ simulate the bars with angles in the range $(60^{\circ}, 180^{\circ})$ while arms $BA$,$BC$ realize the range $(120^{\circ}, 240^{\circ})$.
+
+The flexible degree-$3$ vertex has a fixed angle of $180^{\circ}$ and a flexible angle; the vertex gadget in Figure~19 shows that we can simulate a flexible angle in the range $[20^{\circ}, 100^{\circ}]$, indeed the actual \pdfpage{23}range is even larger. 
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig19left.png}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig19right.png}
+\end{center}
+\noindent\textbf{Figure 19:} A flexible degree-$3$ vertex gadget with a straight-line bar (through $AB$) and a flexible angle $\angle BAC$ at $20^{\circ}$ {\em (left)} and at $100^{\circ}$ {\em (right)}. The angle can range in the closed interval $[20^{\circ}, 100^{\circ}]$. The green disk shows that the gadget is at most $5$ pennies thick. \textit{Geogebra applet:} degree-3-flexible-vertex.ggb; point $C$ can be moved.
+\alttext{Two GeoGebra drawings of equal-sized circles with centre dots on a pale green disk, cut off at the top by the picture. A horizontal line runs from blue point $B$ at the left through a row of circles and through $A$ to blue point $D$ at the right; two further rows of circles arch above it, with gaps in the row on the line near the middle. A third arm leaves $A$ to blue point $C$, a line through circles with a bracing row. Left: the arm runs down to the right at a shallow angle, blue label 20° at $A$. Right: the arm runs nearly straight down, blue label 100° at $A$.}
+
+This leaves us with the trickiest case, the apex vertex $H$ of the modified flex gadget; 
+ see
+Figure~15, which shows $H$ and its angles $\alpha, \beta$, and $\gamma$ in 
+the positions for $x=2$ and $x=0.5$.
+From Table~2 and the proof of Lemma~12 we have
+that $\alpha$ and $\beta$ are monotonically increasing in the ranges $(85^\circ, 114^\circ)$ and $(35^\circ, 46^\circ)$, respectively.
+There is a single degree of freedom.
+
+At the heart of the apex vertex gadget is a $4\times 4$ grid of pennies---colored blue in the figures, see Figure~20. We call one corner vertex of this grid $H$ and brace the two sides not incident to $H$ with three pennies each, so that the blue pennies are forced to realize a rhombus; the angle of the rhombus at $H$, without the additional appendages, can range in the interval $(60^{\circ},120^{\circ})$.\footnote{The grid of pennies has similarities with the {\em pantograph}, one of the oldest known linkages, dating to the early 17th century, see~\url{https://historyofinformation.com/detail.php?id=1259}.}
+We extend the two sides incident to $H$ into arms as shown in the figure; one arm connects to $G$, the other arm is a virtual arm, colored gray in the illustrations; the angle between the virtual arm and $HG$ cannot be made sufficiently small for our purposes, so we extend the virtual arm, outside the area of the rhombus, so it can simulate an arm rotated $60^{\circ}$ counterclockwise at $H$. We use this new arm to connect to $C$. Figure~20 shows that this gadget can realize angles $CHG$ in the range 
+$[20^{\circ},50^{\circ}]$
+which accommodates the range of angle $\beta \in (35^\circ, 46^\circ)$.
+
+Finally, we attach $H$ to a subset of a triangular grid that simulates a line through $H$; this gives us the final apex vertex gadget, 
+as shown in Figures~21 and~22, with the line through $H$ shown as horizontal. 
+Figure~21 shows that the apex vertex gadget can realize the 
+minima $\alpha = 85^\circ$ and $\beta = 35^\circ$.
+Figure~22 shows that the apex vertex gadget can realize the 
+maxima $\alpha = 114^\circ$ and $\beta = 46^\circ$.
+Since $\alpha+\beta$ is monotonically increasing and every value of $\beta$ in its range can be realized, 
+this implies that every configuration of $H$ in the modified flex gadget between the configurations for $x=0.5$ and $x=2$ can be realized by the apex vertex gadget.
+
+\paragraph{Completing the Construction.}
+For our \ensuremath{\exists\mathbb{R}}-hardness proof we can assume, by  Theorem~11,  that we are given an angle-constrained linkage $L$ and a combinatorial embedding $\Lambda$. We know that if $L$ can be realized, then we can assume that $L$ realizes $\Lambda$ and that in this realization the minimum distance between any two vertices (the \defn{vertex-vertex resolution}) and any vertex and an edge not \pdfpage{24}incident to the vertex (the \defn{vertex-edge resolution}) is 
+at least $\varepsilon > 0$, where $\varepsilon$ is a fixed constant greater than $0$ independent of $L$.
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig20left.png}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig20right.png}
+\end{center}
+\noindent\textbf{Figure 20:} The heart of the apex vertex gadget is a $4 \times 4$ grid of pennies (shown in blue) which realizes angle $CHG$ in the range $[20^\circ, 50^\circ]$.
+\alttext{Two GeoGebra drawings of equal-sized circles with centre dots on white. In each, 16 circles tinted blue form a rhombus, four on a side, with one corner at $H$ (label at its upper left). Two thin lines leave $H$. One goes right and slightly up through the blue top row and then through a double band of white circles, on to the label ``$\to$ G''. The other goes right and downward to the label ``$\to$ C'', passing through the end of a band of white circles. Three white circles lie along the rhombus's right side and three along its lower side. A double band of white circles leaves the lower left of the rhombus, goes down, turns at the bottom and rises to the right to end on the $C$ line. A faint grey line leaves $H$ downward through the rhombus and the band, and runs off the bottom of the picture. Left: the rhombus is narrower at $H$, the $C$ line falls only slightly; blue label 20° between the $G$ and $C$ lines. Right: the rhombus is wider at $H$, the $C$ line falls steeply and the band reaches it running almost horizontally; blue label 50°.}
+
+At this point we have shown how to realize each vertex type in $L$, (Lemma~12 showed that the list is complete).
+All our penny graph gadgets are less than $11$ pennies thick (which is needed to simulate the apex vertex in Hart's A-frame). Let $t = \lceil 11/\varepsilon \rceil$. We build a graph $G$ and an embedding $D'$ from $(L,D)$ as follows: replace each vertex of $L$ with the penny graph gadget we constructed. For every bar $uv \in L$ we do the following: 
+suppose $uv$ has length $\ell \in \ensuremath{\mathbb{N}}/2$ (all our distances are half-integers; actually, with one exception, they are all integers); connect the appropriate arms of the vertex gadgets of $u$ and $v$ by a braced arm of $t \ell+1$ pennies (merging the arms into the vertex gadgets at its ends). Let $G$ be the resulting contact graph of the pennies, and $D$ the combinatorial 
+embedding of $G$ based on the combinatorial embedding $\Lambda$ of $L$ and the (geometric) embeddings of the vertex gadgets we have seen. It follows that if $L$ is realizable with combinatorial embedding $\Lambda$, then $G$ is realizable as a penny graph with combinatorial embedding $D$. If we work with pennies of diameter $1/t$, then a bar $uv$ of length $\ell$ in $L$ will also have length $t \ell/t = \ell$ in the realization of $G$. We picked $t$ sufficiently large so that no vertex gadget can interfere with another vertex gadget, or an edge gadget which it is not incident to. Finally, any realization of $G$ (whether realizing $D$ or not) can be turned into a realization of $L$, simply because the penny graph gadgets enforce the proper distances between vertices. This completes the proof. 
+\hfill$\square$\par\medskip
+
+\pdfpage{25}
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig21.png}
+\end{center}
+\noindent\textbf{Figure 21:} Adding the horizontal bar to create the final apex vertex gadget, shown here close to the standing position corresponding to $x = 2$, see Fig.~15(\emph{left}). The green disc shows that the gadget is less than $11$ gadgets thick. \textit{Geogebra applet:} degree-4-flexible-vertex.ggb; the two points in the $4 \times 4$ grid closest to $H$ can be moved.
+\alttext{GeoGebra drawing of equal-sized circles with centre dots on a pale green disk with a green outline, cut off at the top by the picture. A horizontal line crosses the picture just above the disk's centre. A double band of circles runs along above it from far left, up, across the top, and down to the far right, with a short group of circles coming down from its middle to the corner labelled $H$, on the line. Below the line are 16 circles tinted blue, forming a rhombus with its top corner at $H$. A line from $H$ goes nearly straight down through the rhombus to the label ``$\to$ C''. A line from $H$ goes down and to the right through the rhombus's edge and a double band of circles to the label ``$\to$ G''. A second double band leaves the left corner of the rhombus, curls up and to the left, turns, and runs down to the right to end on the $C$ line near the disk's edge. A faint grey line comes from the rhombus's left corner and runs off to the lower left. Blue labels: 85° at the lower left, 35° between the $C$ and $G$ lines, 60° at the right, between the $G$ line and the horizontal line.}
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig22.png}
+\end{center}
+\noindent\textbf{Figure 22:} The apex vertex gadget close to the kneeling position corresponding to $x = 0.5$, see Fig.~15(\emph{right}).
+\alttext{GeoGebra drawing built like Figure 21, now in the other position. Pale green disk, horizontal line, double band of circles arching above, short group of circles down to the top corner of the blue rhombus (the $H$ label is not printed here). A line from that corner goes right and slightly down through a double band of circles to the label ``$\to$ G''. A line from it goes down and to the right through the rhombus to the label ``$\to$ C''. A second double band leaves the rhombus's left side, curls down and to the left, and runs right almost horizontally to end on the $C$ line near the disk's edge. A faint grey line runs off to the lower left from the band's lower left. Blue labels: 20° at the right, between the horizontal line and the $G$ line; 46° between the $G$ and $C$ lines; 114° at the lower left.}
+
+\pdfpage{26}
+\section*{4 Marbles and Ball Contact Graphs}
+
+Coin and penny graphs generalize to higher dimensions: A graph $G = (V,E)$ is a \defn{ball contact graph} in $\ensuremath{\mathbb{R}}^d$, $d\geq 2$ if 
+there is a mapping from vertices $v \in V$ to center points 
+$c(v) \in \ensuremath{\mathbb{R}}^d$ and radii 
+$r(v) \in \ensuremath{\mathbb{R}}_{>0}$,
+such that 
+\begin{itemize}
+    \item if $uv \in E$, then $d(u,v) = r(u)+r(v)$, and
+    \item if $uv \not\in E$, then $d(u,v)>r(u)+r(v)$,
+\end{itemize}
+for all pairs of points $u,v \in V$, where $d(u,v)$ is the Euclidean distance of $u$ and $v$.
+ In plain English, there is a family of closed balls $B^d(c(v),r(v))$, $v \in V$, such that the balls corresponding to the endpoints of an edge touch, and all other pairs of balls do not overlap. If all radii are the same (equivalently all radii are $1$), we speak of \defn{unit-ball contact graphs}; unit-ball contact graphs in $\ensuremath{\mathbb{R}}^3$ are also known as \defn{marble graphs}. 
+
+Since coin graphs coincide with the planar graphs, they are easy to recognize; this fails in higher dimensions: contact graphs of balls in $\ensuremath{\mathbb{R}}^3$ are \textsf{NP}-hard to recognize, a result attributed to Kirkpatrick and Rote by Hliněný and Kratochvíl~[28, Corollary 4.6]. The result follows from a reduction by Kirkpatrick and Rote~[28, Proposition 4.5]: a graph $G$ is a unit-ball contact graph in $\ensuremath{\mathbb{R}}^d$ if and only if $G + K_2$ is a ball contact graph in $\ensuremath{\mathbb{R}}^{d+1}$ for every $d \geq 2$. Here $+$ denotes the join of two graphs. Applying this reduction to Theorem~1 immediately yields the following result.
+
+\par\medskip\noindent\textbf{Corollary 14.} \begin{itshape}
+    Recognizing ball contact graphs in $\ensuremath{\mathbb{R}}^3$ is \ensuremath{\exists\mathbb{R}}-complete. 
+\end{itshape}\par\medskip
+
+The reduction by Kirkpatrick and Rote turns unit balls in $\ensuremath{\mathbb{R}}^d$  into 
+(not necessarily unit)
+balls in $\ensuremath{\mathbb{R}}^{d+1}$; we are not aware of a general construction that lifts a unit ball result in $\ensuremath{\mathbb{R}}^d$ to a unit ball result in $\ensuremath{\mathbb{R}}^{d+1}$, but we
+present below
+a reduction from $\ensuremath{\mathbb{R}}^2$ to $\ensuremath{\mathbb{R}}^3$ which yields our second main result: the recognition problem of marble graphs is \ensuremath{\exists\mathbb{R}}-complete. 
+
+\par\medskip\noindent\textbf{Theorem 15.} \begin{itshape}
+ Recognizing marble graphs is \ensuremath{\exists\mathbb{R}}-complete.
+\end{itshape}\par\medskip
+
+As an immediate consequence of Theorem~15 and the Kirkpatrick-Rote reduction we obtain the following result. Hliněný and Kratochvíl~[28] had shown \textsf{NP}-hardness.
+
+\par\medskip\noindent\textbf{Corollary 16.} \begin{itshape}
+    Recognizing ball contact graphs in $\ensuremath{\mathbb{R}}^4$ is \ensuremath{\exists\mathbb{R}}-complete. 
+\end{itshape}\par\medskip
+
+\par\medskip\noindent\textit{Remark.} 
+Hliněný~[27] and Hliněný and Kratochvíl~[28] proved \textsf{NP}-hardness of recognizing unit-ball contact graphs in dimensions $3$, $4$, $8$ and sketched an approach for $24$ (which implies \textsf{NP}-hardness of recognizing ball contact graphs in dimensions $4$, $5$, $9$ and $25$ by the Kirkpatrick-Rote reduction). It is possible that their ideas can be combined with our reduction. The difficulty appears to lie in constructing rigid gadgets in higher dimensions. 
+\par\medskip
+
+We base our proof of Theorem~15 on Theorem~1, but we should point out that the weaker result that unit-distance recognition is \ensuremath{\exists\mathbb{R}}-complete~[41] would be sufficient as a starting point.
+
+\par\noindent\textit{Proof of Theorem~15.} 
+    Membership is immediate from the definition of marble graphs. For \ensuremath{\exists\mathbb{R}}-hardness, we reduce from the penny graph recognition problem. For a given graph $G$ we build a graph $H$ such that if $G$ is a penny graph then $H$ is a marble graph, and if $H$ is not a marble graph, then $G$ is not a weak unit distance graph. This is sufficient by Theorem~1.
+
+For intuition about our reduction, imagine a penny graph realization.  Each vertex in the plane will be replaced by a vertical column in the $z$-direction to which we attach arms for each incident \pdfpage{27}edge; these arms are assigned to different $x$-$y$ layers so they do not interfere with each other.
+The idea of stacking bars was motivated by actual physical linkages.\footnote{See \url{https://americanhistory.si.edu/collections/search?edan_q=inversor} for examples.}
+To realize this plan we will need various rigid marble graphs in three dimensions.
+
+    We will visualize the realization of a marble graph by displaying each vertex at the center of the marble representing it, e.g., $K_4$ would be visualized as a tetrahedron. 
+    The core structure we work with consists of a flat hexagon on which we erect three tetrahedra whose apexes form a triangle; we call this a \defn{UFO}, see Figure~23.\footnote{The convex hull is a triangular cupola.}
+    
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig23.png}
+\end{center}
+\noindent\textbf{Figure 23:} The UFO, a rigid marble graph.
+\alttext{Photograph, seen obliquely from above, of a model built from coloured magnetic rods and steel balls, on a dark wood surface. Light green rods form a flat hexagon of six outer balls with a centre joined by spokes, lying on the table. Three more steel balls stand above it (at the top, the right and the middle left of the picture), joined to each other by orange rods in a triangle; each is also joined by orange rods to three points of the hexagon below. No printed labels.}
+
+    
+    More generally, for any integer~$k$ we can arrange $k+1$ UFOs along a line, such that for each consecutive pair their base hexagons share two triangles and 
+    the two UFOs overlap in one tetrahedron.
+    The centers of the hexagons of the first and last UFO have distance $k$, see Figure~24 (note that we have to add an edge between two overlapping UFOs in the top triangle layer). We call this a \defn{$k$-arm}.
+     
+
+   
+    The arm 
+    allows us to enforce distances between points.
+
+    \begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig24.png}
+\end{center}
+\noindent\textbf{Figure 24:} A $3$-arm, another rigid marble graph.
+\alttext{Photograph, seen obliquely from above, of a longer model in the same style on the same dark wood surface, extending from left to right. Along the bottom, the rods form a flat band of triangles, in green at the left, then blue, then yellow, then dark green at the right; five steel balls lie along its front edge. Above it is a second band: five steel balls along its front and four along its back, joined by rods in orange at the left, then pink and lilac, then light blue at the right. Uprights and slanting rods between the bands repeat these colours: orange, pink, red and magenta. No printed labels.}
+
+Consider the \defn{spinner} in Figure~25.
+    Like the UFO, the spinner starts with a flat hexagon (in the middle) on which we erect three tetrahedra on each side (on the same three base triangles, though that does not matter), and a final pair of tetrahedra at the top and at the bottom. The top \pdfpage{28}and bottom vertices of the spinner (the apexes of the final two tetrahedra) have distance $4\sqrt{6}/3$ from each other.
+
+        
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig25.png}
+\end{center}
+\noindent\textbf{Figure 25:} A spinner: yet another rigid marble graph.
+\alttext{Photograph of a model in the same style, standing diagonally from the lower left to the upper right of the picture, on a dark wood surface that is blurred at the top. Its lower half is built of orange rods and its upper half of magenta rods. Across the middle runs a level of bright green rods, with three large steel balls in front. At each end, a pair of green rods meets in a single steel ball at the tip of the model. No printed labels.}
+
+    It is easy to verify that all the gadgets we have seen so far: $k$-arms, UFOs and spinners are marble graphs, indeed the visualizations we included show how to realize each of the gadgets. 
+    We prove in Appendix~C that the gadgets are rigid:
+
+    \par\medskip\noindent\textbf{Claim 17.} \begin{itshape}
+     The UFO, the $k$-arm (for every $k \geq 1$) and the spinners are rigid in $\ensuremath{\mathbb{R}}^3$.
+    \end{itshape}\par\medskip
+
+    We now take nine copies of the spinner, and stack them on top of each other (say along the $z$-axis) so that the top vertex of one spinner is identified with the bottom vertex of the next spinner.
+    To keep the spinners vertical
+    this arrangement we create a rigid column
+    called a \defn{mast}, that alternates hexagons and triangles along an axis parallel to the $z$-axis through the spinners;
+    we can ensure that a hexagon in the stack of spinners lies in the same plane and with the same orientation as a hexagon in the 
+    mast.
+    We then connect the top and the bottom spinners to the 
+    mast
+    using $11$-arms, see Figure~26. This will be our \defn{vertex gadget}. Note that each vertex gadget contains seven flexible spinners that can rotate.
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig26.png}
+\end{center}
+\noindent\textbf{Figure 26:} The vertex gadget illustrated for four spinners (instead of $9$), the outer two fixed, the inner two flexible in the sense that they can rotate around the vertex gadget's main axis. \textit{Geogebra applet:} 3d-marble-arms.ggb; this file needs to be opened in ``3D Calculator'' mode, it is slow to render. Points $C1$ and $C2$ can be moved to control the direction of the arms.
+\alttext{GeoGebra 3D rendering on white of a structure of black struts with black and blue vertex dots. A red $x$ axis runs from left to right, with tick labels from $-10$ to 7 and an arrow labelled x. A green $y$ axis runs from upper left to lower right, with tick labels up to 12, the arrow labelled y. A blue $z$ axis runs vertically, with tick labels up to about 6 at the top, partly hidden by the struts. Along the $z$ axis at the right is a stack of bipyramid-like spinners. Two long horizontal arms (a band of triangulated struts) join its top and bottom spinners to a vertical column at the far left, the mast, also a stack of triangulated levels. In the middle of the stack, two further triangulated arms point right, one up to a pale point labelled C2 at its end, one to the right, with a dark blue point labelled C beyond its end (the caption calls the points $C1$ and $C2$; the first prints here as C, at the very edge of the picture). The figures at the axes are small and partly hidden.}
+
+    
+    
+    \pdfpage{29}We can assume that $G$ has max-degree at most $6$, otherwise it is not a penny graph, and
+    for the reduction we can let $H$ be a $K_5$ 
+    which is not a weak unit distance graph in $\ensuremath{\mathbb{R}}^3$.
+    Vizing's theorem then implies that the edges of $G$ can be $7$-colored and such a coloring can be found in polynomial time; fix such a coloring.
+
+    We are ready to construct $H$: create a vertex gadget $L(v)$ for each vertex $v \in V(G)$. For every edge $uv \in E(G)$ with
+    $c = c(uv)$, connect the top UFOs in the $c$-th flexible spinner of $L(u)$ and the $c$-th flexible spinner in $L(v)$ using a $30$-arm gadget.
+    This completes the construction of $H$.
+
+    If $H$ is realizable, the $(x,y)$ coordinates of the $z$-axis passing through $L(v)$ give a location for each $v \in V(G)$ in the plane such that $d(u,v) = 30$ if $uv \in E(G)$ and $d(u,v)>2$ otherwise (assuming $u \neq v$); in particular the locations of two different vertices are distinct;  this is sufficient by Theorem~1.
+
+    
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig27.png}
+\end{center}
+\noindent\textbf{Figure 27:} A vertex gadget as seen from above; the two arms form an angle less than $60$ degrees and still have distance greater than $1$ from the vertices of the mast in red).
+\alttext{GeoGebra 3D rendering on white, the structure seen from above, with a green axis running nearly top to bottom through the right part (tick labels from $-5$ to 7, sign as printed) and a red axis running from left to right (tick labels $-12$, $-11$, $-10$ at the left, 2 at the right; others are hidden). All levels of the stack at the right project onto one small dense cluster of black struts. From there, two long black triangulated arms open to the left, each with a green centre line: the upper one toward a blue point labelled C2, the lower one toward a grey point labelled C1. Between them, along the red axis, a third arm with blue vertex dots ends at the left in a hexagon outlined in red, surrounding a black triangulated column seen end-on.}
+
+ 
+    
+    If $G$ is a penny graph, we can fix a realization of $G$ in the $xy$-plane, and erect the three-dimensional gadgets of top of this realization as shown in the figures. Then $H$ is a marble graph, using the realizations of the gadgets shown in the figures. There is only one constraint we need to be careful with: 
+  the mast of a vertex gadget must be positioned where it does not intersect any of the arms.  In a realization of a penny graph, two edges incident on the same vertex form an angle greater than $60$ degrees.  As shown in the top view of the vertex gadget in Figure~27, because the mast is joined to the central axis of the gadget by an 11-arm, there is room to  place it in the $\ge 60^\circ$ gap between any two consecutive arms.
+ Finally, because edges of the penny graph become $30$-arms, no two masts interfere with each other.  \hfill$\square$\par\medskip
+
+\section*{5 Rigidity}
+
+Two realizations (of a linkage or penny graph) are \defn{congruent} if  the pairwise point distances in each realization are the same,
+or, equivalently, if there is an \defn{isometry} (a distance-preserving map) of the plane that maps one realization to the other. A realization is \defn{rigid} if there is an $\varepsilon > 0$ such that any configuration in which each vertex is perturbed by a distance of at most $\varepsilon$ is congruent to the original configuration. In the \defn{rigidity} problem we are given a linkage or penny graph together with a realization of the linkage (or penny graph) and ask whether the realization is rigid. Since realizations of penny graphs require non-rational coordinates we work 
+over the set of constructible \pdfpage{30}numbers; the \defn{constructible numbers} are those numbers that can be obtained from $0$ and $1$ using addition, multiplication, inverses, and square roots; constructible numbers can be expressed by a radical expression. Geometrically, a real number is constructible if a line segment with its length can be constructed using compass and straightedge. 
+
+Abbott~[1] showed that linkage rigidity is \textsf{coNP}-hard by a reduction from the isolated zero problem \textnormal{\textsc{ISO}}, which we will introduce below; Schaefer~[41] showed that \textnormal{\textsc{ISO}}\ is complete for \ensuremath{\forall\mathbb{R}}, implying that linkage rigidity is \ensuremath{\forall\mathbb{R}}-complete. Abel, Demaine, Demaine, Eisenstat, Lynch, and Schardl~[2] strengthened this result to show that linkage rigidity remains \ensuremath{\forall\mathbb{R}}-complete for non-crossing unit linkages. In this section we take this result one step further by showing that rigidity of penny graphs is \ensuremath{\forall\mathbb{R}}-complete.
+
+\par\medskip\noindent\textbf{Theorem 18.} \begin{itshape}
+ Testing whether a given realization of a penny graph is rigid is \ensuremath{\forall\mathbb{R}}-complete.
+\end{itshape}\par\medskip
+
+The proof follows the same pattern as the rigidity hardness proofs in~[1, 41]. For a family $f = (f_i)_{i \in [n]}: \ensuremath{\mathbb{R}}^d \rightarrow \ensuremath{\mathbb{R}}^n$ of (explicitly given) polynomials, let $V(f) = \{x \in \ensuremath{\mathbb{R}}^d: f(x) = 0\}$.
+
+We start with the problem \textnormal{\textsc{ISO}}: given a family $f = (f_i)_{i \in [n]}: \ensuremath{\mathbb{R}}^d \rightarrow \ensuremath{\mathbb{R}}^n$ of polynomials such that $0 \in V(f)$, is $0$ an \defn{isolated zero}? That is, is there an $\varepsilon > 0$ such that for every $x \in \ensuremath{\mathbb{R}}^d$ with $0 < \lvert x \rvert < \varepsilon$ we have $x \not\in V(f)$? It was shown in~[41] that this problem is \ensuremath{\forall\mathbb{R}}-complete. To apply a result by Abrahamsen and Miltzow~[4] later, we need $V(f)$ to be compact; as the following lemma shows, we can assume this to be the case. The proof of the lemma can be found in Appendix~B.
+
+\par\medskip\noindent\textbf{Lemma 19.} \begin{itshape}
+    Testing whether $0$ is an isolated zero of a family of polynomials $f: \ensuremath{\mathbb{R}}^d\rightarrow \ensuremath{\mathbb{R}}^n$ is \ensuremath{\forall\mathbb{R}}-complete even if $V(f)$ is a compact set.
+\end{itshape}\par\medskip
+
+Given a formula $\varphi(x)$ with free variables $x \in \ensuremath{\mathbb{R}}^n$, we define
+$V(\varphi)$, the  \defn{realization-space} of $\varphi$ as:
+\[V(\varphi) := \{x \in \ensuremath{\mathbb{R}}^n: \varphi(x)\}.\]
+With this we have $V(f) = V(f = 0)$.
+
+\par\noindent\textit{Proof of Theorem~18.} 
+Suppose we are given a family $f: \ensuremath{\mathbb{R}}^d\rightarrow \ensuremath{\mathbb{R}}^n$ of polynomials such that $0 \in V(f)$ and $V(f)$ is compact. By Lemma~19 it is \ensuremath{\forall\mathbb{R}}-complete to tell whether $0$ is isolated in $V(f)$. Using~[4, Theorem 1] we can efficiently compute an instance $\Phi = (\exists x \in [\frac{1}{2},2]^{n'})\ \varphi(x)$ of \textnormal{\textsc{ETR-INV}}, with $n' \in \ensuremath{\mathbb{N}}$, and a rational point $p \in [\frac{1}{2},2]^{n'}$ such that $0$ is an isolated $0$ in $V(f)$ if and only if $p$ is an isolated point in $V(\varphi)$. 
+
+Now using our reduction in Theorem~1 we can build a graph $G$ such that every point in $V(\varphi)$ corresponds to a realization of $G$ as a penny graph. It follows that the realization corresponding to $p$ is rigid if and only if $p$ is isolated in $V(\varphi)$. 
+
+It remains to show that the realization corresponding to $p$ only requires constructible coordinates. But this follows from the nature of our gadgets: all points in our linkages can be obtained by specifying their distance from two other points (and possibly selecting one of two possible solutions), which corresponds to intersecting two circles (leading to square root expressions); for example, see how $C$ is obtained from $H$ and $A$ in Figure~29. Similarly, the locations of all pennies in our penny gadgets can be described with respect to the (constructible by induction) endpoints of the bars they belong to.
+\hfill$\square$\par\medskip
+
+\defn{Global rigidity} is a stronger rigidity notion that requires all realizations of a linkage (or penny graph) to be congruent. Abel, Demaine, Demaine, Eisenstat, Lynch, and Schardl~[2] showed that \pdfpage{31}testing global rigidity of non-crossing matchstick graphs is \ensuremath{\forall\mathbb{R}}-complete. Our construction does not immediately yield this result; for example, Hart's A-frame is not globally rigid, since it can bend in one of two ways. It is likely that our linkage and penny graph gadgets can be made globally rigid, but we have not attempted to do so. 
+
+For a recent paper discussing rigidity questions on penny (and marble) graphs, see Dewar et al.~[18].
+
+\section*{6 Grid Embeddings}
+
+At a first glance asking for grid embeddings of penny graphs seems hopeless: an equilateral triangle requires at least one irrational coordinate in any embedding, so no graph containing a $3$-cycle is a penny graph with its vertices lying on a square grid. A second glance suggests two follow-up questions: $(1)$ what can we say about penny graphs on triangular grids, and $(2)$ what if we consider graphs without any $3$-cycles?
+
+We do not have any answers to question $(1)$. It is conceivable that our reduction for proving Theorem~1 satisfies (or can be modified) to satisfy the property that the \textnormal{\textsc{ETR-INV}}\ formula $\varphi$ has a solution in the rationals if and only if $G$ is a penny graph embeddable on a triangular grid. In this case, the triangular grid-embedding variant of penny graphs would be complete for \ensuremath{\exists\mathbb{Q}}, the existential theory of the rational numbers, which is not known to be decidable. Graph drawing problems for which it is known that their grid variants are \ensuremath{\exists\mathbb{Q}}-complete include the planar slope number~[29], recognition of visibility graphs~[15], and right-angle crossing graphs~[42]. On the other hand, it is also conceivable that $G$ 
+can be constructed from $\varphi$ in such a way that there always is a triangular grid embedding of the penny graph if $\varphi$ is satisfiable. In that case the problem would be \ensuremath{\exists\mathbb{R}}-complete.
+
+Question $(2)$ can be sharpened: How hard is it to recognize whether $G$ is a penny graph if $G$ is bipartite or a tree? As we mentioned earlier, the problem is \textsf{NP}-hard for trees 
+in the fixed embedding variant~[8]. This suggests the question of whether a tree penny graph can always be realized on a grid, and if so, how small a grid? If we could show that the grid has exponential---or even polynomial---size, then recognizing tree penny graphs (with a given embedding) would be \textsf{NP}-complete. Unfortunately, we seem to be very far from showing such a result, but we can show that a doubly-exponential size grid is sufficient for trees.
+
+\par\medskip\noindent\textbf{Theorem 20.} \begin{itshape}
+ A tree which is a penny graph can be embedded on a grid of size at most $2^{2^{O(n^k)}}$ where $n$ is the order of the tree.
+\end{itshape}\par\medskip
+
+The same result also holds for matchstick graphs with essentially the same proof.
+
+\par\noindent\textit{Proof.} 
+The main trick in the proof is to parameterize the embeddings of $T$ in such a way that rational parameters correspond to a grid embedding. To do this we view $T$ as a rooted tree; to each directed edge $uv$ in the tree we associate a real number $m_{uv} \in \ensuremath{\mathbb{R}}$. The collection of these numbers describes a potential penny graph drawing of $T$ as follows: let the root of $T$ be realized by a unit disk centered at the origin. Assuming the penny $D_u$ for $u$ has already been placed, we place the penny $D_v$ for $v$ such that the slope between the 
+bottommost point of $D_u$ and the topmost point of $D_v$ has slope $m_{uv}$ and $D_u$ and $D_v$ touch; in an abuse of notation we write $u$ and $v$ for the centers of $D_u$ and $D_v$, respectively. See Figure~28. We call this drawing {\em potential}, since disks belonging to non-adjacent vertices may overlap, which is not legal in a penny drawing, of course.
+
+\pdfpage{32}
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig28.png}
+\end{center}
+\noindent\textbf{Figure 28:} Two pennies $D_u$ and $D_v$ in a tree with parameter (slope) $m = m_{uv}$.
+\alttext{GeoGebra coordinate construction on a square grid with minor lines; $x$ axis labelled $-2$ to 3, $y$ axis labelled $-1$ to 2. Two dark circles of radius about 1: $D_u$, with centre dot labelled u at the origin, and $D_v$, with centre dot labelled v at about (1.6, 1.2); they touch at a dark dot at about (0.8, 0.6). A straight dark line rises from the dark dot at the bottom of $D_u$, about (0, $-1$), through the contact point to a dark dot at the top of $D_v$, about (1.6, 2.2), and on beyond it. A pale blue right triangle has its corner at the bottom of $D_u$, its horizontal side from $x=0$ to $x=1$ at $y=-1$, labelled 1 in blue, and its vertical side at $x=1$ up to about $y=1$; the sloping line is its hypotenuse. The blue label ``m = 2.0095100503047'' stands to the right of $x=1$, printed over the $x$ axis, so that the axis line runs through it. The panel is a construction on numbered axes, not plotted data; the CSV holds the digitized points.}
+\figuredata{whole figure}{figures/fig28.csv}{figures/fig28.py}{tier 3, digitized from the raster image by \texttt{figures/fig28\_extract.py}, about 0.02 axis units}
+
+   
+This parametrization is based on the parametrization of Pythagorean triangles. Assuming that $u$ has rational coordinates, we have the following property: $m_{uv}$ is rational if and only if $v$ has rational coordinates. This is because the contact point between the two disks has that property and $v$ is the reflection of $u$ in that point. We conclude that $(m_{uv})_{uv \in E(T)}$ describes a placement of pennies (which may not be legal) such that the centers of all pennies are rational if and only if all the $m_{uv}$ are rational. If there is a penny graph realization of $T$ on a grid, we can move the root of the tree to the origin, and (rationally) rotate the embedding such that there are no two center vertices with the same $x$-coordinate. This realization can then be described using rational parameters $(m_{uv})_{uv \in E(T)}$.
+
+Let $S$ be the semialgebraic set consisting of all $(m_{uv})_{uv \in E(T)}$ which correspond to a legal penny graph drawing so any pair of disks not corresponding to an edge in $T$ have distance greater than $0$. It follows that $S$ is an open set. If $T$ is a penny graph, then $S$ is not empty, and, by a result of Kachiyan and Porkolab~[30, Corollary 2.6], contains a rational point of at most exponential bit-complexity, which can be turned into an embedding of $T$ on a grid of size at most $2^{2^{O(n^k)}}$.
+\hfill$\square$\par\medskip
+
+The bound in Theorem~20 is unlikely to be optimal, but we do not see any simple tools that would remove even one of the exponentiations, which would imply an \textsf{NP}\ upper bound on the penny graph recognition problem for trees. Can one construct trees  which require a single-exponential size grid in a penny graph embedding?
+
+We do not expect that recognizing whether a tree is a penny graph is \ensuremath{\exists\mathbb{R}}-complete (though we have no supporting evidence), but what about bipartite graphs? The problem with bipartite graphs or any graph not containing $3$-cycles is that they do not seem to be rigid
+which makes encoding hard. Our reduction certainly relies on the presence of $3$-cycles. So we again face the combinatorial question of whether bipartite penny graphs can always be embedded on a grid. The complexity of the question is also wide open.
+
+\section*{7 Open Questions}
+
+We saw that penny graph recognition is \ensuremath{\exists\mathbb{R}}-complete; our construction makes essential use of $3$-cycles, to rigidify the realizations, and induced $4$-cycles, to simulate a degree-$3$ vertex with variable angles. 
+\pdfpage{33}
+\par\medskip\noindent\textbf{Question 1.} \begin{itshape}
+    Does penny graph recognition remain \ensuremath{\exists\mathbb{R}}-hard if the penny graph does not contain $3$-cycles and/or induced $4$-cycles?
+\end{itshape}\par\medskip 
+(Eppstein~[21] showed that penny graphs without $3$-cycles are $2$-degenerate.) Encoding without these tools appears difficult; on the other hand, it is not clear that forbidding these substructures makes the problem easier to solve. We already discussed the tree case in Section~6.  
+
+Another restriction to consider is the maximum degree of the penny graph; the gadgets constructed in our reduction have maximum degree $6$; with a bit more care we can avoid degree-$6$ vertices so that penny graph recognition remains \ensuremath{\exists\mathbb{R}}-hard for maximum degree $5$. Since all graphs of maximum degree $2$ are penny graphs, this leaves open the cases of maximum degree $3$ and $4$. 
+\par\medskip\noindent\textbf{Question 2.} \begin{itshape}
+    Does penny graph recognition remain \ensuremath{\exists\mathbb{R}}-hard for graphs of maximum degree~$3$ or $4$?
+\end{itshape}\par\medskip
+We conjecture \ensuremath{\exists\mathbb{R}}-hardness for maximum degree~$4$. The same question can also  be asked for matchstick graphs.
+
+Breu and Kirkpatrick~[10] introduced the approximate penny graph recognition problem, where the disks have radii (not necessarily the same) in an interval $[1,\rho]$; they showed that this problem is \textsf{NP}-hard. Using standard methods---see the case of approximate \textnormal{\textsc{RAC}}-drawings, for example~[42, Corollary 18]---it can be shown that the problem remains \ensuremath{\exists\mathbb{R}}-hard for $\rho = 2^{-2^{n^c}}$ for some constant $c>0$, for $n$-vertex graphs, but the complexity of the approximate penny graph recognition problem in which $\rho$ itself is constant is open.
+
+\par\medskip\noindent\textbf{Question 3.} \begin{itshape}
+    Does penny graph recognition remain \ensuremath{\exists\mathbb{R}}-hard if the radii of the pennies can range in a fixed interval $[1,\rho]$?
+\end{itshape}\par\medskip
+
+Very little is known about how hard it is to recognize ball contact graphs---with or without unit radius---in higher dimensions, see Remark~4.
+\par\medskip\noindent\textbf{Question 4.} \begin{itshape}
+    What is the complexity of recognizing [unit] ball contact graphs in more than three dimensions?
+\end{itshape}\par\medskip
+There is no complexity lower bound even for $\ensuremath{\mathbb{R}}^5$.
+
+Penny graphs have been studied on surfaces other than the plane, e.g., Lorand showed that $K_5$ and $K_{3,3}$ are penny graphs on the flat torus~[34]. It is easy to see that our constructions can be extended to show that whether a graph is a penny graph on a flat torus is still \ensuremath{\exists\mathbb{R}}-complete (by constructing a gadget that blocks access to the topology). Less obvious is what happens on other surfaces, like the sphere, or hyperbolic surfaces. Hyperbolic unit disk intersection graphs are known to be \ensuremath{\exists\mathbb{R}}-complete~[6]
+to recognize.
+\par\medskip\noindent\textbf{Question 5.} \begin{itshape}
+    Is recognizing penny graphs on other surfaces, such as the sphere or the torus, \ensuremath{\exists\mathbb{R}}-complete?
+\end{itshape}\par\medskip
+
+\section*{References}
+\begin{hangpars}
+[1] Timothy Good Abbott. \emph{Generalizations of Kempe’s Universality Theorem}. Master’s thesis, Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2008. URL: \href{http://hdl.handle.net/1721.1/44375}{\nolinkurl{http://hdl.handle.net/1721.1/44375}}.
+
+\pdfpage{34}[2] Zachary Abel, Erik D. Demaine, Martin L. Demaine, Sarah Eisenstat, Jayson Lynch, and Tao B. Schardl. Who needs crossings? Noncrossing linkages are universal, and deciding (global) rigidity is hard. \emph{Journal of Computational Geometry}, 16(1):378–452, Jun. 2025. \href{https://doi.org/10.20382/jocg.v16i1a12}{\nolinkurl{doi:10.20382/jocg.v16i1a12}}.
+
+[3] Mikkel Abrahamsen, Anna Adamaszek, and Tillmann Miltzow. The art gallery problem is $\exists\mathbb{R}$-complete. \emph{J. ACM}, 69(1):Art. 4, 70, 2022. \href{https://doi.org/10.1145/3486220}{\nolinkurl{doi:10.1145/3486220}}.
+
+[4] Mikkel Abrahamsen and Tillmann Miltzow. Dynamic toolbox for ETRINV. \emph{arXiv}, abs/1912.08674, 2019. \href{https://arxiv.org/abs/1912.08674}{\nolinkurl{arXiv:1912.08674}}.
+
+[5] Sujoy Bhore, Maarten Löffler, Soeren Nickel, and Martin Nöllenburg. Unit disk representations of embedded trees, outerplanar and multi-legged graphs. In \emph{Graph drawing and network visualization}, volume 12868 of \emph{Lecture Notes in Comput. Sci.}, pages 304–317. Springer, Cham, 2021. \href{https://doi.org/10.1007/978-3-030-92931-2_22}{\texttt{doi:10.1007/\allowbreak 978-3-030-92931-2\textbackslash\_22}}.
+
+[6] Nicholas Bieker, Thomas Bläsius, Emil Dohse, and Paul Jungeblut. Recognizing unit disk graphs in hyperbolic geometry is $\exists\mathbb{R}$-complete. \emph{arXiv}, 2023. \href{https://arxiv.org/abs/2301.05550}{\nolinkurl{arXiv:2301.05550}}.
+
+[7] Daniel Bienstock. Some provably hard crossing number problems. \emph{Discrete Comput. Geom.}, 6(5):443–459, 1991. \href{https://doi.org/10.1007/BF02574701}{\nolinkurl{doi:10.1007/BF02574701}}.
+
+[8] Clinton Bowen, Stephane Durocher, Maarten Löffler, Anika Rounds, André Schulz, and Csaba D. Tóth. Realization of simply connected polygonal linkages and recognition of unit disk contact trees. In \emph{Graph Drawing and Network Visualization}, volume 9411 of \emph{Lecture Notes in Comput. Sci.}, pages 447–459. Springer, Cham, 2015. \href{https://doi.org/10.1007/978-3-319-27261-0_37}{\texttt{doi:10.1007/\allowbreak 978-3-319-27261-0\textbackslash\_37}}.
+
+[9] Heinz Breu. \emph{Algorithmic Aspects of Constrained Unit Disk Graphs}. PhD thesis, University of British Columbia, April 1996.
+
+[10] Heinz Breu and David G. Kirkpatrick. On the complexity of recognizing intersection and touching graphs of disks. In \emph{Graph Drawing (Passau, 1995)}, volume 1027 of \emph{Lecture Notes in Comput. Sci.}, pages 88–98. Springer, Berlin, 1996. \href{https://doi.org/10.1007/BFb0021793}{\nolinkurl{doi:10.1007/BFb0021793}}.
+
+[11] Heinz Breu and David G. Kirkpatrick. Unit disk graph recognition is NP-hard. \emph{Comput. Geom.}, 9(1-2):3–24, 1998. \href{https://doi.org/10.1016/S0925-7721(97)00014-X}{\nolinkurl{doi:10.1016/S0925-7721(97)00014-X}}.
+
+[12] John Bryant and Chris Sangwin. \emph{How Round is Your Circle?: Where Engineering and Mathematics Meet}. Princeton University Press, 2011.
+
+[13] Sergio Cabello, Erik D. Demaine, and Günter Rote. Planar embeddings of graphs with specified edge lengths. \emph{J. Graph Algorithms Appl.}, 11(1):259–276, 2007. \href{https://doi.org/10.7155/jgaa.00145}{\nolinkurl{doi:10.7155/jgaa.00145}}.
+
+[14] John Canny. Some algebraic and geometric computations in pspace. In \emph{STOC ’88: Proceedings of the Twentieth Annual ACM Symposium on Theory of Computing}, pages 460–469, New York, NY, USA, 1988. ACM. \href{https://doi.org/10.1145/62212.62257}{\nolinkurl{doi:10.1145/62212.62257}}.
+
+[15] Jean Cardinal and Udo Hoffmann. Recognition and complexity of point visibility graphs. \emph{Discrete Comput. Geom.}, 57(1):164–178, 2017. \href{https://doi.org/10.1007/s00454-016-9831-1}{\nolinkurl{doi:10.1007/s00454-016-9831-1}}.
+
+\pdfpage{35}[16] Man-Kwun Chiu, Jonas Cleve, and Martin Nöllenburg. Recognizing embedded caterpillars with weak unit disk contact representations is NP-hard. \emph{arXiv}, 2020. \href{https://arxiv.org/abs/2010.01881}{\nolinkurl{arXiv:2010.01881}}.
+
+[17] Jonas Cleve. Weak unit disk contact representations for graphs without embedding. \emph{arXiv}, 2020. \href{https://arxiv.org/abs/2010.01886}{\nolinkurl{arXiv:2010.01886}}.
+
+[18] Sean Dewar, Georg Grasegger, Kaie Kubjas, Fatemeh Mohammadi, and Anthony Nixon. On the uniqueness of collections of pennies and marbles. \emph{Ex. Countex.}, 7:Paper No. 100181, 5, 2025. \href{https://doi.org/10.1016/j.exco.2025.100181}{\nolinkurl{doi:10.1016/j.exco.2025.100181}}.
+
+[19] Peter Eades and Sue Whitesides. The logic engine and the realization problem for nearest neighbor graphs. \emph{Theoret. Comput. Sci.}, 169(1):23–37, 1996. \href{https://doi.org/10.1016/S0304-3975(97)84223-5}{\nolinkurl{doi:10.1016/S0304-3975(97)84223-5}}.
+
+[20] Peter Eades and Nicholas C. Wormald. Fixed edge-length graph drawing is NP-hard. \emph{Discrete Appl. Math.}, 28(2):111–134, 1990. \href{https://doi.org/10.1016/0166-218X(90)90110-X}{\nolinkurl{doi:10.1016/0166-218X(90)90110-X}}.
+
+[21] David Eppstein. Edge bounds and degeneracy of triangle-free penny graphs and squaregraphs. \emph{J. Graph Algorithms Appl.}, 22(3):483–499, 2018. \href{https://doi.org/10.7155/jgaa.00463}{\nolinkurl{doi:10.7155/jgaa.00463}}.
+
+[22] P. Erdös. On sets of distances of $n$ points. \emph{Amer. Math. Monthly}, 53:248–250, 1946. \href{https://doi.org/10.2307/2305092}{\nolinkurl{doi:10.2307/2305092}}.
+
+[23] GeoGebra Inc. Geogebra (version 6.0). \href{https://www.geogebra.org}{\nolinkurl{https://www.geogebra.org}}, 2026. Last accessed: September 6, 2026.
+
+[24] Richard K. Guy and Robert E. Woodrow, editors. \emph{The Lighter Side of Mathematics}, MAA Spectrum. Mathematical Association of America, Washington, DC, 1994.
+
+[25] Heiko Harborth. Lösung zu Problem 664a. \emph{Elem. Math.}, 29:14–15, 1974.
+
+[26] Nora Hartsfield and Gerhard Ringel. \emph{Pearls in Graph Theory}. Academic Press, Inc., Boston, MA, 1994. A comprehensive introduction, Revised reprint of the 1990 original.
+
+[27] Petr Hliněný. Touching graphs of unit balls. In \emph{Graph Drawing (Rome, 1997)}, volume 1353 of \emph{Lecture Notes in Comput. Sci.}, pages 350–358. Springer, Berlin, 1997. URL: \href{https://doi.org/10.1007/3-540-63938-1_80}{\nolinkurl{https://doi.org/10.1007/3-540-63938-1_80}}, \href{https://doi.org/10.1007/3-540-63938-1_80}{\texttt{doi:10.1007/\allowbreak 3-540-63938-1\textbackslash\_80}}.
+
+[28] Petr Hliněný and Jan Kratochvíl. Representing graphs by disks and balls (a survey of recognition-complexity results). \emph{Discrete Math.}, 229(1-3):101–124, 2001. \href{https://doi.org/10.1016/S0012-365X(00)00204-1}{\nolinkurl{doi:10.1016/S0012-365X(00)00204-1}}.
+
+[29] Udo Hoffmann. On the complexity of the planar slope number problem. \emph{J. Graph Algorithms Appl.}, 21(2):183–193, 2017. \href{https://doi.org/10.7155/jgaa.00411}{\nolinkurl{doi:10.7155/jgaa.00411}}.
+
+[30] Leonid Khachiyan and Lorant Porkolab. Computing integral points in convex semi-algebraic sets. In \emph{38th Annual Symposium on Foundations of Computer Science, FOCS ’97, Miami Beach, Florida, USA, October 19-22, 1997}, pages 162–171. IEEE Computer Society, 1997. \href{https://doi.org/10.1109/SFCS.1997.646105}{\nolinkurl{doi:10.1109/SFCS.1997.646105}}.
+
+\pdfpage{36}[31] Paul Koebe. Kontaktprobleme der konformen Abbildung. \emph{Ber. Sächs. Akad. Wiss. Leipzig, Math.-phys. Kl.}, 88:141–164, 1936.
+
+[32] Jan Kratochvíl and Jiří Matoušek. Intersection graphs of segments. \emph{J. Combin. Theory Ser. B}, 62(2):289–315, 1994. \href{https://doi.org/10.1006/jctb.1994.1071}{\nolinkurl{doi:10.1006/jctb.1994.1071}}.
+
+[33] Jérémy Lavollée and Konrad Swanepoel. A tight bound for the number of edges of matchstick graphs. \emph{Discrete Comput. Geom.}, 72(4):1530–1544, 2024. \href{https://doi.org/10.1007/s00454-023-00530-z}{\nolinkurl{doi:10.1007/s00454-023-00530-z}}.
+
+[34] Cédric Lorand. K5 and K3,3 are toroidal penny graphs. \emph{arXiv}, 2024. \href{https://arxiv.org/abs/2410.10673}{\nolinkurl{arXiv:2410.10673}}.
+
+[35] Anna Lubiw and Marcus Schaefer. Recognizing penny and marble graphs is hard for existential theory of the reals. \emph{arXiv}, 2025. \href{https://arxiv.org/abs/2508.10136}{\nolinkurl{arXiv:2508.10136}}.
+
+[36] Hiroshi Maehara. Distances in a rigid unit-distance graph in the plane. \emph{Discrete Appl. Math.}, 31(2):193–200, 1991. \href{https://doi.org/10.1016/0166-218X(91)90070-D}{\nolinkurl{doi:10.1016/0166-218X(91)90070-D}}.
+
+[37] Jiří Matoušek. Intersection graphs of segments and $\exists\mathbb{R}$. In János Pach and Géza Tóth, editors, \emph{Courses in Discrete and Computational Geometry}, pages 129–165. Springer Nature Switzerland, Cham, 2026. \href{https://doi.org/10.1007/978-3-032-10503-5_4}{\nolinkurl{doi:10.1007/978-3-032-10503-5_4}}.
+
+[38] Colin McDiarmid and Tobias Müller. The number of bits needed to represent a unit disk graph. In \emph{Graph-Theoretic Concepts in Computer Science}, volume 6410 of \emph{Lecture Notes in Comput. Sci.}, pages 315–323. Springer, Berlin, 2010. \href{https://doi.org/10.1007/978-3-642-16926-7_29}{\texttt{doi:10.1007/\allowbreak 978-3-642-16926-7\textbackslash\_29}}.
+
+[39] Colin McDiarmid and Tobias Müller. Integer realizations of disk and segment graphs. \emph{J. Combin. Theory Ser. B}, 103(1):114–143, 2013. \href{https://doi.org/10.1016/j.jctb.2012.09.004}{\nolinkurl{doi:10.1016/j.jctb.2012.09.004}}.
+
+[40] Bojan Mohar and Carsten Thomassen. \emph{Graphs on Surfaces}. Johns Hopkins Studies in the Mathematical Sciences. Johns Hopkins University Press, Baltimore, MD, 2001.
+
+[41] Marcus Schaefer. Realizability of graphs and linkages. In \emph{Thirty Essays on Geometric Graph Theory}, pages 461–482. Springer, New York, 2013. \href{https://doi.org/10.1007/978-1-4614-0110-0_24}{\texttt{doi:10.1007/\allowbreak 978-1-4614-0110-0\textbackslash\_24}}.
+
+[42] Marcus Schaefer. RAC-drawability is $\exists\mathbb{R}$-complete and related results. \emph{J. Graph Algorithms Appl.}, 27(9):803–841, 2023. \href{https://doi.org/10.7155/jgaa.00646}{\nolinkurl{doi:10.7155/jgaa.00646}}.
+
+[43] Marcus Schaefer, Jean Cardinal, and Tillmann Miltzow. The existential theory of the reals as a complexity class: A compendium. In János Pach and Géza Tóth, editors, \emph{Courses in Discrete and Computational Geometry}, pages 167–313. Springer Nature Switzerland, Cham, 2026. \href{https://doi.org/10.1007/978-3-032-10503-5_5}{\nolinkurl{doi:10.1007/978-3-032-10503-5_5}}.
+
+[44] Peter W. Shor. Stretchability of pseudolines is NP-hard. In \emph{Applied Geometry and Discrete Mathematics}, volume 4 of \emph{DIMACS Ser. Discrete Math. Theoret. Comput. Sci.}, pages 531–554. Amer. Math. Soc., Providence, RI, 1991. \href{https://doi.org/10.1090/dimacs/004/41}{\nolinkurl{doi:10.1090/dimacs/004/41}}.
+
+[45] Kenneth Stephenson. Circle packing: a mathematical tale. \emph{Notices Amer. Math. Soc.}, 50(11):1376–1388, 2003.
+
+\pdfpage{37}[46] Alfred Tarski. \emph{A Decision Method for Elementary Algebra and Geometry}. The Rand Corporation, Santa Monica, CA, 1948.
+
+[47] Sue Whitesides. Algorithmic issues in the geometry of planar linkage movement. \emph{Aust. Comput. J.}, 24(2):42–50, 1992.
+
+[48] Yechiam Yemini. Some theoretical aspects of position-location problems. In \emph{20th Annual Symposium on Foundations of Computer Science (San Juan, Puerto Rico, 1979)}, pages 1–8. IEEE, New York, 1979.
+
+\end{hangpars}
+
+\pdfpage{38}
+\section*{A Hart's A-frame}
+
+We prove Claim~3.
+
+\begin{center}
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig29left.pdf}\hfill
+\includegraphics[width=0.47\linewidth,height=0.45\textheight,keepaspectratio]{figures/fig29right.pdf}
+\end{center}
+\noindent\textbf{Figure 29:} Hart's A-frame.
+\alttext{Two GeoGebra drawings of Hart's A-frame with base $AD$ labelled 4 and a vertex $C$ in blue. Left: bars $HG$ labelled 2, $GE$ labelled 1, $ED$ labelled 3, $BE$ labelled 2; $A$, $B$, $C$ form one straight bar, $H$ is joined to $C$ and $G$. Blue lines join $A$ to $H$ and $D$ to $H$; green lines join $B$ to $H$ and $E$ to $H$. A red dashed vertical passes through $H$, red label ``h = 5.33''. Blue angle 56.54° at $A$. Right: the same linkage in another position, $H$ lower, labelled ``h = 5.11'' in red, with bars $AB$ 3, $BC$ 1, $CH$ 2, $BE$ 2, base 4. Three grey circles are drawn: a full circle centred at $H$ through $C$ and $G$; an arc centred at $A$ through $C$ and $G$; an arc centred at $D$, also through $C$ and $G$. $C$ and $G$ lie at intersections of these circles. A red dashed vertical passes through $H$.}
+
+\par\medskip\noindent\textbf{Claim 21.} \begin{itshape}
+
+The apex of Hart's A-frame moves along a straight line   that is a perpendicular bisector of the base.  
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+We use notation as in Figure~29, and we use, e.g., $HA$ to mean both the bar and its length. 
+
+(1) Triangles $HCA$ and $BCH$ are similar because the angle at $C$ is the same and $HC/CA = BC/CH = 1/2$.
+Thus $HB/HA = 1/2$.
+Similarly, $HE/HD = 1/2$.
+This implies that $HB/HE = HA/HD$, a property we will use in step (3).
+
+(2) Triangles $BHE$ and $AHD$ are similar because all three corresponding pairs of edges have ratio $\frac{1}{2}$.  Thus angle $BHE$ equals angle $AHD$.  Subtracting the common angle $BHD$ we get angle $AHB$ equals angle $DHE$.
+
+(3) Triangles $AHB$ and $DHE$ are similar because the angle at $H$ is the same and $HB/HE = HA/HD$ (from (1)).  Since $AB = DE$, the triangles are in fact congruent.  Thus $AH = DH$.  So $H$ is the apex of an isosceles triangle on base $AD$, and $H$ moves on the perpendicular to the base.
+
+We add one further point for use later:
+
+(4) Since triangles $BHE$ and $AHD$ are similar, and $AHD$ is isoceles, so is $BHE$.  Thus $BH=EH$ and triangles $BHC$ and $EHG$ are congruent.  This implies that angle $CHG$ equals $AHD$.
+\hfill$\square$\par\medskip
+
+\pdfpage{39}
+\par\medskip\noindent\textbf{Claim 22.} \begin{itshape}
+For each value of $h \in (4,4 \sqrt{2})$ there are exactly two configurations of Hart's A-frame (left-leaning and right-leaning) that put $H$ at height $h$. Both configurations are non-crossing. Furthermore, 
+$h$ 
+and all the angles of the A-frame are  continuous monotone functions of the angle~$CAD$.
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.}  
+We show that any point $H$ on the perpendicular bisector of $AD$ at height $h \in (4,4 \sqrt{2})$ yields two valid configurations of the A-frame.  We basically follow the above proof backwards. 
+For each position of $H$ on the perpendicular bisector of $AD$, point $C$ is at the intersection of two circles as shown in Figure~29(\emph{right}). 
+Similarly, $G$ is at the intersection of two circles. 
+Edge 
+$BE$ has length 2 iff we make the same choice (left-leaning or right-leaning) for $C$ and $G$.  
+
+Clearly, $h$ is a continuous monotone function of angle $CAD$. As for the angles, the only non-obvious one is angle $CHG$: by point (4) in the proof of Claim~21, angle $CHG$ is equal to $AHD$, which changes monotonically.  
+\hfill$\square$\par\medskip
+
+\section*{B Proof of Lemma~19}
+
+Our goal is to show that testing whether $0$ is an isolated zero of $g$ is \ensuremath{\forall\mathbb{R}}-complete even if $V(g)$ is a compact set. We closely follow the proof of~[41, Corollary 3.10].
+
+We make use of the result that testing whether a family of polynomials $f = (f_i)_{i \in [n]}: \ensuremath{\mathbb{R}}^d \rightarrow \ensuremath{\mathbb{R}}^n$ of total degree at most $2$ has a zero in the \defn{($d$-dimensional) unit ball} $B^d(0,1) := \{x \in \ensuremath{\mathbb{R}}^d: \lvert x \rvert \leq 1\}$, that is $V(f) \cap B^d(0,1) \neq \emptyset$, is \ensuremath{\exists\mathbb{R}}-complete, by~[41, Lemma 3.9]. We define a new family of polynomials as follows:
+\[g_i(x_1, \ldots,x_d,y_1,y_2,y_3) = y_1^2f_i(x_1/y_1,\ldots,x_d/y_1),\]
+where $i \in [n]$, and
+\begin{align*}
+g_{d+1}(x_1, \ldots,x_d,y_1,y_2,y_3) & = y_2^2-y_1^2+\sum_{i \in [d]} x_i^2 ,\\
+g_{d+2}(x_1, \ldots,x_d,y_1,y_2,y_3) & = y_1^2+(1-y_3)^2 - 1.
+\end{align*}
+Then $g = (g_i)_{i \in [d+2]}$ is a family of polynomials, the first $d$ of them homogeneous, such that $(x_1, \ldots, x_n, y_1,y_2,y_3) \in V(g)$ if and only if $y_1 = 0$ or $y_1 \neq 0$ and $(x_1/y_1,\ldots,x_d/y_1) \in V(f)$, and 
+$\sum_{i \in [d]} x_i^2 + y_2^2-y_1^2 = 0$ as well as
+$y_1^2+(1-y_3)^2 = 1$.
+By construction, $0$ is a zero of $g$. Also, if $(x_1,\ldots, x_d, y_1,y_2,y_3) \in V(g)$, then the condition on $g_{d+2}$ implies that $(y_1,y_3) \in B_2(0,1)$, which, using that $g_{d+1}$ is zero, then implies that $y_2 \in B_1(0,1)$ and $(x_1,\ldots, x_d) \in B_d(0,1)$, so $V(g) \subseteq B_{d+3}(0,1)$ is bounded and therefore, by the continuity of $g$, compact. 
+
+\par\medskip\noindent\textbf{Claim 23.} \begin{itshape}
+$f$ has a zero in $B^d(0,1)$ if and only if $0$ is not an isolated zero of $g$.
+\end{itshape}\par\medskip
+\par\noindent\textit{Proof.} 
+Suppose that $(x_1, \ldots, x_d) \in B^d(0,1)\cap V(f)$. Then $s := \sum_{i \in [d]} x_i^2 \leq 1$. For arbitrary $y_1 \in (0,1)$ 
+define $x'_i = y_1x_i$, $i \in [d]$, $y_2 = y_1 \sqrt{1-s}$, and $y_3 = 1-\sqrt{1-y_1^2}$. 
+Then
+$(x'_1, \ldots x'_d,y_1,y_2,y_3) \in$ \pdfpage{40}$V(G)$
+since $g_i(x'_1, \ldots x'_d,y_1,y_2,y_3) = y_1^2f(x_1,\ldots,x_d) = 0$ for $i \in [d]$, and 
+\begin{align*}
+   g_{d+1}(x'_1, \ldots x'_d,y_1,y_2,y_3) & = y_2^2-y_1^2+\sum_{i \in [d]} (x'_i)^2  \\
+            &= y_2^2-y_1^2+y_1^2 \sum_{i \in [d]} x_i^2 \\
+            &= y_2^2-y_1^2+y_1^2 s  \\
+            & = 0
+\end{align*}
+as well as 
+\[g_{d+2}(x'_1, \ldots x'_d,y_1,y_2,y_3) =y_1^2 + (1-y_3)^2 -1 = 0.\]
+So for every $y_1 \in (0,1)$ we have found a zero $(x'_1, \ldots x'_d,y_1,y_2,y_3)$ in $V(g)$ and since, by definition, $x'_i$, $y_2$ and $y_3$ converge to $0$ if $y_1$ does, $0$ is not an isolated zero of $g$.
+
+For the other direction, let us assume that $0$ is not isolated in $V(g)$. So for every $k > 0$ there is a point $p_k = (x_{k,1},\ldots, x_{k,d},y_{k,1}, y_{k,2}, y_{k,3}) \in B^{d+3}(0,1/k) -\{0\}$ such that $f(p_k) = 0$. We will argue that the first $d$ coordinates $(x_{k,1},\ldots, x_{k,d})$ of $p_k$ converge to a point $x \in B^d(0,1)$. 
+
+If  $y_{k,1} = 0$, then $g_{d+1}(p_k) = 0$ implies that $y_{k,2} = \sum_{i \in [d]} x_i^2 = 0$, and $g_{d+2}(p_k) = 0$ forces $y_{k,3} = 0$. So $p_k = 0$ which contradicts our choice of $p_k$. We conclude that $y_{k,1} \neq 0$, allowing
+us to define $x'_k := (x_{k,1}/y_{k,1}, \ldots, x_{k,d}/y_{k,1})$.
+Then
+\[f_i(x'_k) = 0\]
+for $i \in [d]$. Since $g_{d+1}(p_k) = 0$ we know that
+$\sum_{i \in [d]}x_{k,i}^2 \leq y_{k,1}^2$, so $\sum_{i \in [d]}(x_{k,i}/y_{k,1})^2 \leq 1$ and $x'_k = (x_{k,1}/y_{k,1}, \ldots, x_{k,d}/y_{k,1}) \in B_d(0,1)$. We conclude that $(x'_k)$ is a sequence of zeros of $f$ in $B_d(0,1)$ and, since $B_d(0,1)$ is compact the sequence has a limit point $x \in B_d(0,1)$ which belongs to $V(f)$ by continuity.
+\hfill$\square$\par\medskip
+
+\section*{C Proof of Claim~17}
+
+ First of all, we observe that the regular tetrahedron is rigid (up to an isometry, possibly orientation-reversing). Similarly, the \defn{regular triangular bipyramid}, the union of two regular tetrahedra along a face is rigid, since the two apexes have to be distinct. 
+
+ To see that the UFO gadget is rigid, we view it from the top, as seen in the left half of Figure~30. We can then consider the plane angles (as in the projection from the top) between consecutive spokes of the wheel. Each of these angles must be at most $2\pi/6$: If one of the angles, say between $uv$ and $uw$ as seen from above were larger than $2\pi/6$, the actual angle between $uv$ and $uw$ would be larger than $2\pi/6$ implying that $vw$ cannot have the same length as $uv$ and $uw$ (see the right half of the figure). Since the plane angles must sum up to $2\pi$ we conclude that the angles are all exactly $2\pi/6$ which implies that the hexagon is flat, forcing the embedding to be rigid. 
+
+ For the $k$-arm we work with the following observation: If two rigid graphs share a tetrahedron, then their union is rigid. Since we can think of a $k$-arm as the union of $k$ UFO gadgets, every two of which have a tetrahedron in common, the $k$-arms are rigid.
+
+ The spinner is the union of four rigid graphs, two UFOs and two tetrahedra; to this union we can add three triangular bipyramids, two overlapping a UFO and the tetrahedron attached to it, and one overlapping the two UFOs; the union of these seven graphs is still the spinner, and the \pdfpage{41}bipyraminds share a tetrahedron with each of the graphs they overlap, implying that the whole spinner is rigid.
+
+\begin{center}
+\includegraphics[width=0.80\linewidth,height=0.50\textheight,keepaspectratio]{figures/fig30.png}
+\end{center}
+\noindent\textbf{Figure 30:} Rigidity of the UFO.
+\alttext{Two photographs side by side of one model from above, magnetic rods and steel balls on a dark wood surface; no printed labels. Left: a regular hexagon of six steel balls around a central ball. Perimeter rods are purple at the top, green at the upper left, upper right and bottom; spokes and upper rods are in matching groups, purple (top), magenta (lower left), red (lower right); dark blue rods lie beneath, around the centre. Right: the same model with one green perimeter rod at the upper left detached, its upper end loose, and the outline visibly distorted; the magenta spoke at the left and the balls around it have moved out of the regular hexagon.}
+
+\end{document}

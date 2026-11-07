@@ -1,6 +1,6 @@
 Lavollée J, Swanepoel KJ. A tight bound for the number of edges of matchstick graphs. arXiv:2209.09800v2 [math.CO],
 15 June 2023 (v1 20 September 2022). Published in Discrete & Computational Geometry 72 (2024), 1530-1544,
-doi:10.1007/s00454-023-00530-z (online 18 August 2023; journal details from Crossref, journal version not read).
+doi:10.1007/s00454-023-00530-z (online 18 August 2023; journal details from Crossref).
 
 Fetched 2026-10-11 ~20:45 UTC from arXiv (the v2 PDF) by the oct-11-hexagon-clink session; the exact URL was not
 recorded. 12 pages, 197,964 bytes, SHA-256 4223026dfa39ed00656c4f2b380a86a1713736ef3fa3e220b6903ca220082c32,
@@ -8,3 +8,9 @@ recorded. 12 pages, 197,964 bytes, SHA-256 4223026dfa39ed00656c4f2b380a86a171373
 [math.CO] 15 Jun 2023". Licence: the arXiv abstract page for v2 links CC BY 4.0
 (http://creativecommons.org/licenses/by/4.0/), checked 2026-10-18.
 Text layer: lavollee2023.txt (pdftotext -layout).
+
+Published version: lavollee2024_published.pdf. Kevin downloaded it himself in a browser slot on 2026-11-06 from
+https://researchonline.lse.ac.uk/id/eprint/118619/3/Swanepoel_tight_bound_for_the_number_published.pdf ; added to this
+entry at his word on 2026-11-07. 16 pages: LSE's cover page (Version: Published Version; Licence: Creative Commons:
+Attribution 4.0), then the article, which prints the CC BY 4.0 open-access notice itself. 476010 bytes, SHA-256 c7bf18c308fcb41568b9d4c2478b925c8e29217147ee9077d278399f66f30f65.
+main.tex follows the arXiv v2 above, not this version.
