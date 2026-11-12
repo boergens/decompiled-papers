@@ -7,10 +7,10 @@
 # JPEG noise (chroma subsampling bleeds the white separators and black asterisks into the cells) makes the uncertainty larger:
 # checked against the costs printed in Fig. 4c and Extended Data Fig. 9a,d: MiD3cm/MiD3cm 2006 (printed 1315, below the key),
 # MiD2cm/MiD2cm 2006 (2054), MiD2i/MiD2i 2031 (2062), MiM1 #1/MiM1 #1 2354 (2321), MiD2i/MiM1 #1 2354 (2242),
-# MiM1 #1/MiD2i 2155 (1967), CaV/MeMv 5968 (14608, above the key): about +-50 to +-200 near the yellow end, where the key
+# MiM1 #1/MiD2i 2155 (1967), CaV/MeMv 5968 (146208, above the key): about +-50 to +-200 near the yellow end, where the key
 # colours change slowly; take the values as about +-150 overall.
 # Costs outside 2000-6000 are clipped by the colour scale: flag says so ('>=6000' for the dark navy cells; the paper
-# prints 1315 for the MiD3cm pair and 14608 for MeMv right vs CaV left in Fig. 4c, both outside the key).
+# prints 1315 for the MiD3cm pair and 146208 for MeMv right vs CaV left in Fig. 4c, both outside the key).
 # rgb_dist: RGB distance to the matched key colour (quality). asterisk: black = globally optimal assignment;
 # red = optimal assignment that is not the left-right homolog (Fig. 4b caption).
 # columns: left; right; row (1-22); col (1-22); cost; rgb_dist; asterisk; flag

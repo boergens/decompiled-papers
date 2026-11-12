@@ -1,0 +1,248 @@
+% main.tex for eberle2015, written by work/build_main.py from the PDF's text layer (do not edit by hand;
+% change the build script and re-run it). Proofread against the page images.
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\pdfpage{1}
+
+\noindent \textit{Journal of Microscopy, Vol. 259, Issue 2 2015, pp. 114–120} \hfill doi: 10.1111/jmi.12224\par
+\noindent \textit{Received 12 September 2014; accepted 23 December 2014}\par
+
+\decompnote{Above the journal line, p.~1 carries the journal's masthead: ``Journal of Microscopy'' in white on a blue band (vector outlines, not text). Running headers (``HIGH-THROUGHPUT IMAGING WITH A MULTIBEAM SEM'' and ``A.L. EBERLE \textit{ET AL.}'' with the page numbers 115--120) and the running footers of pp.~2--7 are left out; the footer of p.~1 is given below, after the footnotes.}
+
+\section*{High-resolution, high-throughput imaging with a multibeam scanning electron microscope}
+
+\noindent A.L. EBERLE\textsuperscript{*}, S. MIKULA†, R. SCHALEK‡, J.W. LICHTMAN‡, M.L. KNOTHE TATE§ \& D. ZEIDLER\textsuperscript{*}
+
+\noindent \textsuperscript{*}\textit{Carl Zeiss Microscopy GmbH, Oberkochen, Germany}\\
+†\textit{Max-Planck-Institute for Medical Research, Heidelberg, Germany}\\
+‡\textit{Department of Molecular and Cellular Biology, Harvard University, Cambridge, Massachusetts, U.S.A}\\
+§\textit{Graduate School of Biomedical Engineering, University of New South Wales, Sydney, Australia}
+
+\noindent {\small The copyright line for this article was changed on June 17, 2015 after original online publication.}
+
+\noindent {\small Correspondence to: Anna Lena Eberle, Carl Zeiss Microscopy GmbH, Carl-Zeiss-Str. 22, D-73447 Oberkochen, Germany. Tel: +49 7364 20 6853; fax: +49 7364 20 9456; e-mail: anna-lena.eberle@zeiss.com}
+
+\decompnote{The two notes above are printed at the foot of the left column of p.~1. The footer of p.~1 follows; pp.~2--7 repeat its first two lines with ``, 259, 114--120'' added after ``Society''.}
+
+\noindent {\small © 2015 The Authors}\\
+{\small Journal of Microscopy © 2015 Royal Microscopical Society}
+
+\noindent {\small This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.}
+
+\noindent \textbf{Key words.} High-throughput imaging, multibeam, parallel data acquisition, scanning electron microscopy.
+
+\section*{Summary}
+
+Electron–electron interactions and detector bandwidth limit the maximal imaging speed of single-beam scanning electron microscopes. We use multiple electron beams in a single column and detect secondary electrons in parallel to increase the imaging speed by close to two orders of magnitude and demonstrate imaging for a variety of samples ranging from biological brain tissue to semiconductor wafers.
+
+\section*{Introduction}
+
+Electron microscopy is commonly used to image biological samples, enabling acquisition of high-resolution images from small sample regions, typically in the range of several micrometres. However, there is an increasing need for large area imaging or even volume imaging of biological tissues at nanoscopic resolution comprising billions of pixels. An example is connectomics, an emerging field in neuroscience aimed at comprehensively reconstructing neural circuits (Lichtman \& Denk, 2011; Helmstädter \textit{et al}., 2013) and analysing extended cellular structures (Holcomb \textit{et al.}, 2013). To image surfaces, such as in the serial block-face technique (Denk \& Horstmann, 2004) or with ultrathin sections on a solid substrate (Micheva \& Smith, 2007; Horstmann \textit{et al}., 2012), scanning electron microscopes (SEMs) need to be used, which conventionally acquire an image one pixel at a time. This limits the data acquisition rate and, in turn, the sample size that can be imaged within a reasonable amount of time. As an example, mapping a 1 mm cube of tissue with an isotropic voxel size of 4 nm will result in almost 16 petabytes of data. Data acquisition at 20 MHz would require a total acquisition time of almost 25 years, even before taking into account overhead times such as those due to stage movements.
+
+Another application is quality control, such as is needed for wafer production, where we need to detect nanometre-sized particles and defects (Patterson \textit{et al}., 2012). A similar protocol is followed in medical research where histological samples are searched for characteristic motifs, antibodies or nanoparticles (Kaiser \textit{et al}., 2013). Due to throughput limitations, these methods are confined to analyses of a small fraction of the sample surface, thereby increasing the number of ‘false negative’ events.
+
+Finally, organs and tissues exhibit architectures which emerge hierarchically from cell-scale events culminating at the macroscale and resulting in ‘smart’ or stimuli-responsive properties (Evans \textit{et al}., 2013). Application of experiments and computer models in parallel enables mechanistic elucidation of these system properties (Knothe Tate, 2011; Moore \textit{et al}., 2014). To date, different imaging methods had to be used to bridge the gap between different length scales. The capability to image the structure of organs and tissues seamlessly across length scales using high-throughput electron microscopy is expected to facilitate understanding of functional implications across length scales.
+
+The above-mentioned applications show that there is a strong need for high-throughput electron microscopy that can image large areas or volumes at high resolution. However, because scanning electron microscopy is widely thought of as an inherently low-throughput technique, the SEM may not even be considered for applications that require high-throughput imaging. Here, we demonstrate a multibeam SEM with a throughput increase by almost two orders of magnitude.
+
+\section*{Throughput limitations of single-beam SEMs}
+
+The signal-to-noise ratio in an SEM image depends on beam current, pixel dwell time, sample contrast and detection \pdfpage{2}efficiency. It has to be larger than a minimum signal-to-noise ratio to make features in the data set – the signal –visible sufficiently well against background noise (Bright \textit{et al}. 1998). If we want to increase throughput by decreasing the pixel dwell time, we have to increase the beam current to maintain the signal-to-noise ratio if all other parameters remain unchanged. Increasing the beam current will lead to increasing Coulomb interactions between the electrons, thereby blurring the electron beam and reducing the resolution. Moreover, we cannot operate electron detectors faithfully at arbitrarily high rates because electrons of different energies reach the detector at different times, thereby limiting the effective detector bandwidth. Another limitation of the bandwidth of efficient secondary electron (SE) detectors is determined by signal decay time, such as occurs at a scintillator.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent \textbf{Fig. 1.} The multibeam SEM uses multiple beams in parallel to image a hexagonal sample area 100-µm wide. Primary electrons (solid lines, left) are focused onto the specimen and separated by a beam splitter from the secondary electrons (dotted lines, right) which are detected simultaneously. All electron beams form many individual images which are then merged into a single, large area micrograph.
+\alttext{Schematic line drawing (black, white and shades of grey) of the multibeam SEM, with a boxed ``1'' (the figure
+number) at the upper left. Each component sits in a light-grey panel with a dashed outline; finer dashed boxes
+surround the lenses and the detector. Upper left, panel ``Multi-Beam Source'': five thick black horizontal bars, one
+above the other, pass through a tall narrow white ellipse (a lens) and taper to points on its right; the top and the
+bottom bar continue as thin solid lines with arrowheads pointing right, into the large central panel ``Beam
+Splitter''. There the two solid lines bend downwards (the upper one in a wide arc that comes down on the right, the
+lower one in a tighter arc that comes down on the left) and run straight down into the panel below the beam
+splitter, which holds ``Objective'' (a wide, flat white ellipse) above ``Specimen'' (a dark-grey slab under a
+horizontal line). Under the objective five narrow black cones, evenly spaced, converge to points on the specimen
+surface; around each black cone two dotted lines rise from the same point to the objective. From the objective two
+dotted lines run up through the beam splitter, crossing the solid lines, bend to the right and leave it with
+arrowheads pointing right, into the right-hand panel: ``Projector'', a tall white ellipse, from which thin dotted
+lines converge to five points in a column just in front of ``Multi-Detector'', a tall narrow white rectangle with a
+thin vertical line along it. Key at the lower right: a thick solid line ``Illumination'' and a thick dotted line
+``Detection''. Only the outermost two of the five beams are traced between the panels. The drawing has no numbers
+and no scale.}
+\decompnote{Figs.~1--5 are each printed at the top of a page (pp.~2--6); each is placed after the paragraph that runs onto that page, so the page marker comes before the figure.}
+
+\section*{Circumventing the single-beam limitations with a multibeam approach}
+
+The multibeam SEM currently uses 61 electron beams in a single column and one dedicated detector for each beam to alleviate Coulomb interaction limitations and bypass the detector bandwidth limit. The principle of operation is depicted in Figure 1: A multiple beam electron source produces a regular array of electron beams that are imaged onto the sample, forming a pattern of 61 primary electron foci. The array of primary beams is arranged in a hexagonal pattern to minimize electron optical aberrations. The SEs that emanate from each primary electron spot are imaged onto a multidetector with one detection unit for each electron beam. A magnetic sector field separates primary electron and SE beams. The electron beams are scanned over the sample, and the SE signal is recorded for each scan position as in conventional SEMs. One single scanning pass thus produces multiple images in parallel yielding a complete image of the sample region underneath the primary beam array. A number of options for producing an array of electron beams has been demonstrated (Platzgummer \textit{et al}., 2013 and references therein). More options to perform imaging with a multibeam electron microscope have also been demonstrated (Mohammadi-Gheidari \textit{et al}., 2010; Mohammadi-Gheidari \& Kruit, 2011; Enyama \textit{et al}., 2014).
+
+The total possible detector bandwidth of the multibeam SEM is the single detector bandwidth times the number of beams, in this case 1.22 GPixel/s. The Coulomb interaction is lower than in a single-beam configuration, as the charge is distributed across many beams and therefore spread over a larger volume \pdfpage{3}inside the electron optical column. The data acquisition computer system is highly parallelized to accommodate the large data acquisition rates and enable comparably low-bandwidth storage solutions.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent \textbf{Fig. 2.} Cerebral cortex of mouse brain (block-face), sample by Winfried Denk and Shawn Mikula, Max Planck Society, showing unmyelinated neuronal and glial processes and a neuronal nucleus (left of centre), acquired by the multibeam SEM at 0.45 GPixel/s and 3.8 nm pixel size, 26 nA total current, 270 electrons per pixel, scale bar: 10 µm. A 1–2 nm coat of palladium has been evaporated onto the block-face to dissipate charging (Titze \& Denk, 2013). Within the cellular processes, mitochondria, microtubules, synapses and endoplasmic reticulum are visible. Inset lower right: 12 µm × 10 µm single-beam subimage, detail of the full multibeam image, scale bar: 5 µm.
+\alttext{Grey-scale SEM micrograph of the block-face, assembled from many rectangular single-beam subimages into a stepped,
+roughly hexagonal field on a black background; the field is wider than tall and its middle rows reach both side
+edges of the figure. Figure number ``2'' in a white-outlined box at the upper left; scale bar at the lower left: a
+white bar with ``10 µm'' above it. The tissue is densely packed with small profiles outlined by dark membranes: many
+small dark round or oval bodies and grey profiles with finely granular content, with scattered bright (white)
+irregular patches between them; a few narrow bright streaks run diagonally through the upper half. Left of centre
+lies a smooth, oval, medium-grey region with a darker middle and a bright rim on its right side (the neuronal nucleus
+of the caption). At the right edge of the field, below the middle, a small dark rounded body is cut off by the edge.
+Some neighbouring subimages differ slightly in brightness and contrast. A white rectangle at the centre, a little
+wider than tall, is joined by a white arrow to the inset at the lower right (white frame), which shows that region
+about three times larger: dark membranes outline densely packed profiles of many sizes, containing small dark round
+to oval bodies (several in some profiles) and grey contents with dark dots; white irregular gaps lie between the
+profiles. The inset has a white scale bar at its lower right without a label (5 µm according to the caption).}
+\decompnote{Decompiler's measurement, not a statement of the paper (\texttt{figures/figs2to5\_scalebars.csv}, made by \texttt{figures/figs2to5\_scalebars\_extract.py}): in each of Figs.~2--5 the main ``10 µm'' bar is 103--107 pixels of the embedded image long, while the tile pitch of the mosaic (the stepped outline moves by half a tile from one tile row to the next) is 156--165 px, which the text gives as the 12 µm distance between beams (p.~3), and the insets' own 5 µm bars make the insets 11.6--12.6 µm wide (captions: 12 µm $\times$ 10 µm). On either of these two scales the main bars measure about 7--8 µm and the whole field about 108--110 µm (text: approximately 100 µm); taken at face value, the ``10 µm'' bars would make the field about 138 µm wide and the marked rectangles about 16 µm wide.}
+\decompnote{Decompiler's arithmetic (\texttt{work/dose\_check.py}): with the total current $I$ and the acquisition speed $R$ of the captions, $I/(eR)$ gives 361 electrons per pixel for Figs.~2 and 3 (printed: 270), 1387 for Fig.~4 (printed: 420) and 347 for Fig.~5 (printed: 210). The printed values correspond to pixel rates of about 0.60~GPixel/s (Figs.~2--4) and 1.19~GPixel/s (Fig.~5), so the acquisition speeds evidently include time in which no pixels are recorded; the paper does not say how they are defined.}
+
+\section*{Application examples of the multibeam SEM}
+
+We demonstrate that the speed increase is achieved with a number of samples from the above-mentioned applications and that the multibeam SEM is compatible with the corresponding sample preparation methods. Typical landing energies of the multibeam electron microscope are 1–3 keV, typical pixel sizes are 4–10 nm. The electron optical setup has been chosen such that the distance between single beams is 12µm. The number of pixels per image in \textit{x} and \textit{y} and the pixel size are independent of the beam distance and have been chosen such that a small overlap between the images is obtained, which requires an aspect ratio of about 0.866 between \textit{x} and \textit{y}. In principle, other pixel sizes and aspect ratios can be chosen, but might result in too large overlaps or no overlap at all. In the following examples, the 61 images have been merged into one large image that contains up to 500 MPixel over a hexagonal area approximately 100 µm wide.
+
+For the large-volume investigation of biological tissues, an example is the volumetric reconstruction of a macroscopic volume of mouse brain tissue (Lichtman \& Denk, 2011). To obtain such data, a number of solutions for sectioning and imaging exist (Briggman \& Bock, 2012). For example, a slice of several nanometres in thickness can be removed from the sample surface using an in-chamber microtome. The freshly exposed sample surface is then imaged with an SEM. Repeating this process many times yields a data set of the entire volume (Denk \& Horstmann, 2004). It is also possible to collect ultrathin sections on a flat substrate and subsequently image them with an SEM (Micheva \& Smith, 2007; Horstmann \textit{et al}., 2012). The multibeam SEM is compatible with both methods, as demonstrated in Figures 2 and 3. Figure 2 shows a subregion from a coronal block-face of an osmium-stained mouse brain (Mikula \textit{et al}., 2012; Mikula \& Denk, 2014, in preparation) taken at approximately Bregma 1.5 mm. Figure 3 shows a multibeam SEM acquisition from a serial section taken from an osmium-stained mouse brain block. \pdfpage{4}The sample preparation with an automatic section collection device has been described in Hayworth \textit{et al}. (2006) and Tapia \textit{et al}. (2012). The whole experimental setup is designed such that a high degree of automation enables the reliable acquisition of large quantities of EM data (Hayworth \textit{et al}., 2014). We expect the signal in Figures 2 and 3 to be composed of SE1 and SE2 electrons mainly (Reimer, 1993; Cazaux, 2004) with a penetration depth of the SE1 contribution of about 10–20 nm (Seiler, 1983) and a slightly higher penetration depth for the SE2 contributions (Hennig \& Denk, 2007). The SE1 contributions are known to be dependent on surface topology (Griffin, 2011), such as knife marks and section folds. These defects are addressed by optimizing the sample preparation such that the frequency of occurrence is minimized and by data postprocessing.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent \textbf{Fig. 3.} Cortex of mouse brain (serial ultrathin section), sample by Jeff Lichtman and Richard Schalek, Harvard University, showing myelinated axons, plasma membranes, cell somata and dendrites, acquired by the multibeam SEM at 0.45 GPixel/s and 3.8 nm pixel size, 26 nA total current, 270 electrons per pixel, scale bar: 10 µm. Sample charging has been mitigated by placing the thin sections on a conductive surface such that no additional conductive coating is required. Within the cells, dendrites and axons, organelles such as mitochondria and endoplasmic reticulum are visible. Inset lower right: 12 µm × 10 µm single-beam subimage, detail of the full multibeam image, scale bar: 5 µm. Inset upper right: 3 µm × 2.6 µm detail of the single-beam subimage, scale bar: 1µm.
+\alttext{Grey-scale SEM micrograph of the serial ultrathin section, a mosaic of single-beam subimages forming a stepped,
+roughly hexagonal field on black, as in Fig.~2. Figure number ``3'' at the upper left; scale bar at the lower left:
+white bar, ``10 µm''. The field is crowded with thick dark rings around lighter cores and with dark elongated bands,
+between paler grey profiles. Numerous large round to oval, light-grey, finely granular profiles are scattered over the
+field, several with a darker irregular patch inside; the one at the upper left is surrounded by a ring of smaller
+dark granular material. Several white, structureless oval or elongated profiles lie among them, the largest below the
+centre. A white rectangle at the centre, around a white elongated profile, is joined by a white arrow to the inset at
+the lower right; inside that inset a smaller white rectangle at its upper left is joined by a white arrow to the inset
+at the upper right. Lower-right inset: thick dark rings with grey interiors (cross-sections) and dark rod-like
+profiles running diagonally from lower left to upper right, small dark oval bodies between them, and on the right a
+large white elongated region with a thin grey wall. Upper-right inset (highest magnification): a light-grey granular
+background with thin dark curved membrane profiles, dark oval bodies with internal texture near the edges, and in the
+centre a stack of several closely spaced, parallel dark membranes with small round profiles above it. Both insets
+have white scale bars at their lower right without labels (5 µm for the lower-right and 1 µm for the upper-right
+inset, according to the caption).}
+
+Imaging tissues or organs over several length scales results in samples of up to several centimetres diameter. Sample preparation requires special attention to provide a sufficiently uniform sample fixation and surface smoothness. Figure 4 shows the multibeam SEM image of a section of a human femoral neck collected per IRB (institutional review board) protocol guidelines, and normally discarded in the course of hip replacement surgery (Chang \textit{et al}., 2014). Tissues are sectioned and prepared for undecalcified histology with bulk embedding in polymethylmethacrylate. After curing of the resin, the surface is trimmed and smoothed for SEM inspection of the block-face (Knothe Tate, 2015, in preparation).
+
+All composite images (Figs. 2–5) show sufficient contrast in all subimages and the resolution of all subimages varies by only a few percent. The crosstalk between adjacent beams is below 1\%. To make the imaging capabilities of the multibeam SEM accessible to large-scale applications, it is desirable to automate the data acquisition process.
+
+\section*{Operating a multibeam SEM}
+
+Because the fundamental principles of an SEM are conserved in the multibeam SEM, operation is in many respects identical to operating a single-beam SEM. The main difference is that a multibeam SEM requires a higher degree of automation during adjustment, such as measuring and controlling parameters \pdfpage{5}(e.g. focus, stigmation, relative beam position) for all beams, which is difficult and time consuming for a human operator. As an example, the illumination optics of a multibeam SEM typically consist of a number of electron optical lenses. During general alignment, if focus adjustment is needed, changing the excitation of one of the lenses results not only in the change of focus, but also in a change of beam pitch at the sample. If the excitation of a magnetic lens is changed, not only will the beam pitch be altered, but also the rotation of the beam positions around the central beam. Thus, adjusting one parameter such as focus requires that multiple lens settings must be adjusted accordingly. This is most conveniently solved by an algorithm in connection with an appropriate test sample. One possible test sample is shown in Figure 5. It contains test structures written onto a wafer, which are suitable for automated alignment and calibration of a multibeam SEM. During data acquisition, for very small changes of focus (and stigmation), using just one lens (or stigmator) for automatic alignment is usually sufficient, and may be performed fast on any type of sample with sufficient structural information. The frequency of the automatic alignment depends on sample properties such as sample flatness, as the drifts of the multibeam SEM are small.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent \textbf{Fig. 4.} Femoral neck (PMMA-embedded and polished block-face), sample by Melissa Knothe Tate, University of New South Wales, and Ulf Knothe, Cleveland Clinic, showing an osteon comprising a bone capillary surrounded concentrically by osteocytes, acquired by the multibeam SEM at 0.18 GPixel/s and 11.3 nm pixel size, 40 nA total current, 420 electrons per pixel, scale bar: 10 µm. Inset lower right: 12 µm × 10 µm single-beam subimage, detail of the full multibeam image, showing one osteocyte, scale bar: 5 µm.
+\alttext{Grey-scale SEM micrograph of the polished bone block-face, a mosaic of single-beam subimages forming a stepped,
+roughly hexagonal field on black, as in Fig.~2. Figure number ``4'' at the upper left; scale bar at the lower left:
+white bar, ``10 µm''. The surface looks rough and torn, with bright edges and ridges, flakes and folds, and scattered
+dark slit-like gaps and pits. Left of centre lies a large, roughly circular region with a smoother, darker, finely
+textured surface, bounded by a thin bright rim; outside it, on the left, a second faint curved boundary runs roughly
+parallel to the rim, and dark slits lie around the circle (to its left, upper left and right). A white rectangle right
+of centre is joined by a white arrow to the inset at the lower right (white frame): a smoother, darker rounded area
+at its upper left (the osteocyte named in the caption is not marked), bordered on the right by a bright band of
+fibrous, ridged material running from the top towards the lower right; rough flakes elsewhere and a dark crack near
+the bottom. The inset has a white scale bar at its lower right without a label (5 µm according to the caption).}
+
+Furthermore, as large data sets are automatically acquired and evaluated by algorithms, many images are likely to never be inspected by a human being. Therefore, a large degree of automation is required during the data acquisition process as well. We will demonstrate this at the example of wafer stage movements for seamless acquisition of sample surfaces.
+
+Acquiring large areas with a multibeam SEM is performed in the same manner as with a single-beam SEM: The sample is mounted onto a stage such that multiple fields of view (FoV) cover the areas to be imaged. With a single-beam SEM, an efficient tessellation of the region of interest is possible for any rotation of the SEM scan direction, that is, orientation of the FoV of the single beam, as the movement of the sample can be chosen such that the area is completely covered with only small overlaps of the FoV being required. With a multibeam SEM, the tessellation has to take into account the relative beam positions of the multiple beams at the surface of the sample. This produces two constraints: (i) In order to produce an efficient tiling of the sample surface, the direction of the scan rotation of the scanning system that defines the axes of all single images has to coincide with the direction of one beam to one of its (four or six) nearest neighbours. In doing so, the FoV for each beam can be chosen equal to the beam pitch and thus be minimized. If the scan differs from this beam orientation, a larger FoV at the same beam pitch must be \pdfpage{6}chosen to completely image the area of interest, which means that a certain fraction of the surface is scanned more than once, leading to a reduction of throughput. Setting the optimal relation between the two directions is possible by either choosing a scan rotation according to the beam positions at the sample, or, if a special scan rotation is desired, by rotating the beam positions accordingly. The overlap between adjacent single-beam images ensures proper stitching of the images to below a few pixels within one hexagonal field of view. (ii) The tessellation of the region to be scanned has to take into account the arrangement of beams at the sample surface. For example, a hexagonal beam arrangement produces a hexagonal-like shaped total FoV for the entirety of all beams. A complete tiling of the surface with minimal overlap is then possible using adapted stage positions. As before, fulfilling these constraints is most conveniently solved by an algorithm.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent \textbf{Fig. 5.} Test chip showing a hexagonal arrangement of calibration structures for tool adjustments. The structures are printed in an e-beam direct write lithography process with a high placement precision, etched in SiO\textsubscript{2} on a Si-substrate, and finally coated with a completely conductive layer, scale bar: 10 µm. Pixel size was 3.8 nm, acquisition speed 0.72 GPixel/s, 40 nA total current, 210 electrons per pixel. Inset lower right: 12 µm × 10 µm single-beam subimage, detail of the full multibeam image, scale bar: 5 µm.
+\alttext{Grey-scale SEM micrograph of the test chip, a mosaic of single-beam subimages forming a stepped, roughly hexagonal
+field on black, as in Fig.~2 (the middle rows reach the left and right edges of the figure). Figure number ``5'' at
+the upper left; scale bar at the lower left: white bar, ``10 µm''. The chip carries a regular pattern of rectangular
+blocks in rows offset by half a block. Each block holds a square grid of small bright square outlines and, on its
+right, a darker strip with a column of bright characters: ``12'', ``200'' (the zeros with a diagonal stroke),
+``1:2'', a number that differs from block to block, and ``584'', followed by a larger square and a circle; between
+the rows of blocks lie small upright rectangles and pairs of circles. Neighbouring subimages differ slightly in grey
+level, so the tiles of the mosaic are visible. The block in the marked rectangle at the centre reads ``1''; read at
+the image's native resolution, the row above reads 13, 4, 3, 9, the centre row 14, 5, 1, 2, 8, and the row below
+15, 6, 7, 19 (from left to right), so the six blocks around ``1'' carry 2--7; the numbers of the other blocks were
+not transcribed. The inset at the lower right (white frame, joined by a white arrow to the marked rectangle) shows
+block ``1'' enlarged: a grid of small square outlines at the upper left, the column ``12'', ``200'', ``1:2'', ``1'',
+``584'' with a small horizontal rectangle beside ``12'', a larger square and a circle; below these a row of small
+upright rectangles and two circles, three small horizontal rectangles one above the other, further rows of squares,
+and at the lower left ``12'' and the top of a cut-off ``200''; faint vertical streaks cross the background. The inset
+has a white scale bar at its lower right without a label (5 µm according to the caption).}
+
+\section*{Conclusions}
+
+We have shown that the multibeam SEM is capable of high-throughput imaging (approaching 1 GHz) of a variety of samples of different compositions and contrast mechanisms, leading to a remarkable reduction in image acquisition time compared to a conventional single-beam SEM. Thus, we expect that the multibeam SEM will open up new fields of research where nanometre-resolution imaging over macroscopic areas and volumes in the range from millimetre to centimetre (Marx, 2013) are of utmost importance.
+
+\section*{Acknowledgements}
+
+The authors thank Winfried Denk for providing data for this work and scientific advice, Tomasz Garbowski for the preparation of the images and Ingo Müller, Stephan Nickell, Pascal Anger and Gregor Dellemann for discussions.
+
+\section*{References}
+
+\begin{hangpars}
+Briggman, K.L. \& Bock, D. (2012) Volume electron microscopy for neuronal circuit reconstruction. \textit{Curr. Opin. Neurobiol.} \textbf{22}, 154–161.
+
+Bright, D.S., Newbury, D.E. \& Steel, E.B. (1998) Visibility of objects in computer simulations of noisy micrographs. \textit{J. Microsc.} \textbf{198}, 25–42.
+
+Cazaux, J. (2004) About the role of the various types of secondary electrons (SE; SE; SE) on the performance of LVSEM. \textit{J. Microsc.} \textbf{214}, 341–347.
+\decompnote{As printed: ``(SE; SE; SE)'', the three SE without indices (checked at 300 dpi with \texttt{work/zoom.py}).}
+
+\pdfpage{7}Chang, H., Docheva, D., Knothe, U.R. \& Knothe Tate, M.L. (2014) Arthritic periosteal tissue from joint replacement surgery: a novel, autologous source of stem cells. \textit{Stem Cells Transl. Med.} \textbf{3}, 308–317.
+
+Denk, W. \& Horstmann, H. (2004) Serial block-face scanning electron microscopy to reconstruct three-dimensional tissue nanostructure. \textit{PLoS Biol.} \textbf{2}, e329.
+
+Enyama, M., Sakakibara, M., Tanimoto, S. \& Ohta, H. (2014) Optical system for a multiple-beam scanning electron microscope. \textit{J. Vac. Sci. Technol. B Nanotechnol. Microelectron: Mater. Process. Meas. Phenom.} \textbf{32}, 051801.
+
+Evans, S.F., Docheva, D., Bernecker, A., Colnot, C., Richter, R.P. \& Knothe Tate, M.L. (2013) Solid-supported lipid bilayers to drive stem cell fate and tissue architecture using periosteum derived progenitor cells. \textit{Biomaterials} \textbf{34}, 1878–1887.
+
+Griffin, B.J. (2011) A comparison of conventional Everhart-Thornley style and in-lens secondary electron detectors-a further variable in scanning electron microscopy. \textit{Scanning} \textbf{33}, 162–173.
+
+Hayworth, K.J., Kasthuri, N., Schalek, R. \& Lichtman, J.W. (2006) Automating the collection of ultrathin serial sections for large volume TEM reconstructions. \textit{Microsc. Microanal.} \textbf{12}, 86–87.
+
+Hayworth, K.J., Morgan, J.L., Schalek, R., Berger, D.R., Hildebrand, D.G. \& Lichtman, J.W. (2014) Imaging ATUM ultrathin section libraries with WaferMapper: a multi-scale approach to EM reconstruction of neural circuits. \textit{Front. Neural Circuits} \textbf{8}, 1–18.
+
+Helmstaedter, M., Briggman, K.L., Turaga, S.C., Jain, V., Seung, H.S. \& Denk, W. (2013) Connectomic reconstruction of the inner plexiform layer in the mouse retina. \textit{Nature} \textbf{500}, 168–174.
+\decompnote{Cited in the text (p.~1) as ``Helmstädter \textit{et al}., 2013''; the list spells ``Helmstaedter''.}
+
+Hennig, P. \& Denk, W. (2007) Point-spread functions for backscattered imaging in the scanning electron microscope. \textit{J. Appl. Phys.} \textbf{102}, 123101.
+
+Holcomb, P.S., Hoffpauir, B.K., Hoyson, M.C., \textit{et al}. (2013) Synaptic inputs compete during rapid formation of the calyx of Held: a new model system for neural development. \textit{J. Neurosci.} \textbf{33}, 12954–12969.
+
+Horstmann, H., Körber, C., Sätzler, K., Aydin, D. \& Kuner, T. (2012) Serial section scanning electron microscopy (S3EM) on silicon wafers for ultra-structural volume imaging of cells and tissues. \textit{PLoS One} \textbf{7}, e35172.
+
+Kaiser, J.P., Roesslein, M., Diener, L. \& Wick, P. (2013) Human health risk of ingested nanoparticles that are added as multifunctional agents to paints: an in vitro study. \textit{PLoS One} \textbf{8}, e83215.
+
+Knothe Tate, M.L. (2011) Top down and bottom up engineering of bone. \textit{J. Biomech.} \textbf{44}, 304–312.
+
+Lichtman, J.W. \& Denk, W. (2011) The big and the small: challenges of imaging the brain’s circuits. \textit{Science} \textbf{334}, 618–623.
+
+Marx, V. (2013) Neurobiology: brain mapping in high resolution. \textit{Nature} \textbf{503}, 147–152.
+
+Micheva, K. \& Smith, S. (2007) Array tomography: a new tool for imaging the molecular architecture and ultrastructure of neural circuits. \textit{Neuron} \textbf{55}, 25–36.
+
+Mikula, S., Binding, J. \& Denk, W. (2012) Staining and embedding the whole mouse brain for electron microscopy. \textit{Nat. Methods} \textbf{9}, 1198–1201.
+
+Mohammadi-Gheidari, A., Hagen, C.W. \& Kruit, P. (2010) Multibeam scanning electron microscope: experimental results. \textit{J. Vac. Sci. Technol. B Microelectron. Nanometer. Struct.} \textbf{28}, C6G5.
+
+Mohammadi-Gheidari, A. \& Kruit, P. (2011) Electron optics of multi-beam scanning electron microscope. \textit{Nucl. Instrum. Method Phys. Res. A} \textbf{645}, 60–67.
+
+Moore, S.R., Saidel, G.M., Knothe, U., Knothe Tate, M.L. (2014) Mechanistic, mathematical model to predict the dynamics of tissue genesis in bone defects via mechanical feedback and mediation of biochemical factors. \textit{PLoS Comput. Biol.} \textbf{10}, e1003604.
+
+Patterson, O.D., Lee, J., Monkowski, M.D., \textit{et al}. (2012) E-beam inspection system for comparison of wafer and design data. \textit{Proceedings SPIE Vol.} \textbf{8324}, 83242J.
+
+Platzgummer, E., Klein, C., Loeschner, H. (2013) Electron multibeam technology for mask and wafer writing at 0.1 nm address grid. \textit{J. Micro/Nanolith. MEMS MOEMS} \textbf{12}, 1–12.
+
+Reimer, L. (1993) \textit{Image Formation in Low-Voltage Scanning Electron Microscopy}. SPIE Optical Engineering Press, Bellingham, Washington.
+
+Seiler, H. (1983) Secondary electron emission in the scanning electron microscope. \textit{J. Appl. Phys.} \textbf{54}, R1–R18.
+
+Tapia, J., Kasthuri, N., Hayworth, K., Schalek, R., Lichtman, J.W., Smith, S. \& Buchanan, J. (2012) High contrast en bloc staining of neuronal tissue for field emission scanning electron microscopy. \textit{Nat. Protoc.} \textbf{7}, 193–206.
+
+Titze, B. \& Denk, W. (2013) Automated in-chamber specimen coating for serial block-face electron microscopy. \textit{J. Microsc.} \textbf{250}, 101–110.
+\end{hangpars}
+
+\end{document}

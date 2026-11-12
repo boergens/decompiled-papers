@@ -22,7 +22,10 @@
 % Which PDF the following text comes from (main, supplement, ...).
 \newcommand{\sourcefile}[1]{\par\noindent\textcolor{gray}{\footnotesize[source file: \texttt{#1}]}\par}
 % Figure description written by the decompiler, not by the authors.
-\newcommand{\alttext}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep}{\footnotesize\textbf{Description (decompiler):} #1}}\par}
+% framed (not \fbox{\parbox}) so that a long description can break across pages (2026-11-12: Berg 2026
+% Figs. 6-7 ran 80 pt off the page bottom with the unbreakable box).
+\RequirePackage{framed}
+\newcommand{\alttext}[1]{\par\smallskip\begin{framed}\footnotesize\noindent\textbf{Description (decompiler):} #1\end{framed}\par}
 % Data and plotting code for one plotted panel: {panel}{csv}{py}{provenance}
 \newcommand{\figuredata}[4]{\par\noindent{\footnotesize\textbf{Data, panel #1:} \texttt{\detokenize{#2}}, plotted by \texttt{\detokenize{#3}}; provenance: #4.}\par}
 % Any other remark by the decompiler (missing parts, corrections, uncertainty).

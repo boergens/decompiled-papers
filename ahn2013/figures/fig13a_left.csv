@@ -1,0 +1,27 @@
+# Fig. 13, panel (a) left (ahn2013), title box '150nm x150nm clear defect': Transmission vs defect density for three wavelengths.
+# Columns: series (legend: wavelength 400nm / 600nm / 800nm), defect_density_cm2 (category label, cm^-2; the
+# x axis is five evenly spaced categories 1, 10, 100, 1000, 10000, placed at their label centres), value (Transmission),
+# from the series' line on both sides of the marker; marker_value = centre of the visible marker (check);
+# side_spread = difference between the left- and right-side estimates.
+# Provenance: tier 3, digitized from the embedded image with work/markers.py (via figures/fig13_extract.py):
+# colour masks, y from 9 gridlines (max residual 0.00142; hidden gridlines skipped: [0.9, 0.8]).
+# Uncertainty: about 1 px = 0.0022, more where lines of two series touch (the series drawn later, 800nm on
+# top, hides parts of the others; see side_spread). Where markers of different series overlap, the hidden part
+# of a marker shifts marker_value (by up to about half a marker, 6 px); value from the lines is preferred.
+# The panel's title box and the legend ('wavelength', outside the plot) are not data.
+series,defect_density_cm2,value,marker_value,side_spread
+400nm,1,0.7933,0.8024,
+400nm,10,0.792,0.8024,0.0033
+400nm,100,0.7914,0.7991,0.00039
+400nm,1000,0.7864,0.798,0.0017
+400nm,10000,0.7876,0.7969,
+600nm,1,0.767,0.7793,
+600nm,10,0.7686,0.776,0.005
+600nm,100,0.7677,0.7782,0.0047
+600nm,1000,0.7666,0.776,0.0053
+600nm,10000,0.7707,0.7716,
+800nm,1,0.7551,0.7562,
+800nm,10,0.7551,0.7551,1.1e-16
+800nm,100,0.7549,0.754,0.0017
+800nm,1000,0.753,0.754,0.0013
+800nm,10000,0.7535,0.7507,

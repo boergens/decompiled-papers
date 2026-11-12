@@ -1,0 +1,24 @@
+hildebrand2017_biorxiv_134882.pdf
+  47 pp., sha256 cb1bb5dd90222c6fbf4024814a8b4e96295623f47d106c62ffe3de1eb62519ee
+
+Hildebrand, Cicconet, Torres, Choi, Quan, Moon, Wetzel, Champion, Graham, Randlett, Plummer, Portugues, Bianco,
+  Saalfeld, Baden, Lillaney, Burns, Vogelstein, Schier, Lee, Jeong, Lichtman & Engert (2017), "Whole-brain
+  serial-section electron microscopy in larval zebrafish", bioRxiv preprint 134882, version 1, posted May 7, 2017,
+  doi:10.1101/134882. Licence: CC BY 4.0 (bioRxiv stamp on every page).
+Downloaded 2026-10-13 by curl from https://www.biorxiv.org/content/biorxiv/early/2017/05/07/134882.full.pdf
+  (as recorded in papers/hildebrand2017/SOURCE.txt, quoted in ../README.md; copied into this folder on 2026-10-18).
+  Decompiled in ../main.tex.
+
+nature22356.pdf
+  20 pp., sha256 9cd4c261024dcd2d74ff1ffa36fe7ec18fef8f3d3bbaadf5e71e6753452508c8
+
+Same authors (the Nature byline gives "Alexander David Baden" where the preprint has "Alex Baden"), "Whole-brain
+  serial-section electron microscopy in larval zebrafish", Nature 545, 345-349 (18 May 2017; Letter),
+  doi:10.1038/nature22356. Received 19 December 2016; accepted 11 April 2017; published online 10 May 2017.
+  Version of record. (c) 2017 Macmillan Publishers Limited, part of Springer Nature. All rights reserved
+  (footer of every page). Private use only.
+Downloaded 2026-11-12 from https://www.nature.com/articles/nature22356 (UIC library access). PDF producer:
+  Adobe InDesign CS6 / Adobe PDF Library 10.0.1, created 10 May 2017.
+  Not taken: the Supplementary Information, which is 10 videos only (Supplementary Videos 1-10).
+Requested by Kevin via the nov-11-best-paper-fd session (2026-11-12), for a comparison of connectomics datasets.
+  Decompiled in ../nature2017.tex.

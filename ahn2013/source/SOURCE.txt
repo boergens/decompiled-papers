@@ -1,0 +1,16 @@
+ahn2013_jm3_12_3_031104.pdf
+  10 pp., sha256 434f93c040578f60129a459883f196676b2c2b7d7671f88685e624f230d1cf4d
+  (PDF title field "JM3-13038SSP 10..10 ++"; Arbortext Advanced Print Publisher 9.1 / Acrobat Distiller 6.0.1, created 2013-08-10;
+  downloaded as 031104_1.pdf)
+
+Ahn, Yang, Miller, Ganapathisubramanian, Menezes, Choi, Xu, Resnick & Sreenivasan (2013), "High-performance wire-grid
+  polarizers using jet and Flash(TM) imprint lithography", J. Micro/Nanolith. MEMS MOEMS 12(3), 031104 (Jul-Sep 2013),
+  doi:10.1117/1.JMM.12.3.031104. Version of record.
+Licence, as printed on p. 1: "(c) The Authors. Published by SPIE under a Creative Commons Attribution 3.0 Unported License."
+  (Crossref's metadata, noted on the retrieval sheet, gives CC BY 4.0; the PDF's own statement is CC BY 3.0.)
+  Openly licensed; Kevin OK'd publishing it on the public mirror on 2026-11-12 ("yes, publish ahn2013 and eberle2015 to the mirror").
+Downloaded 2026-11-12 22:05:19 UTC from www.spiedigitallibrary.org via the DOI, the article page's "PDF" button
+  (browser slot 2). The button fetches the whole file inside the page before handing it to Chrome, so it shows
+  "Loading..." for a while; see retrieval/ahn2013.txt for the earlier blocked attempts.
+Requested by Kevin via the nov-11-novel-optics-90 session (2026-11-12: "we need to bounce these papers you mention to the
+  papers agent"), for the deep-UV near-field grating imaging idea (claim to check: roll-based imprint, 65 nm half-pitch grating).

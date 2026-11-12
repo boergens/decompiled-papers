@@ -1,0 +1,27 @@
+# Fig. 13, panel (a) right (ahn2013), title box '150nm x150nm clear defect': Extinction Ratio vs defect density for three wavelengths.
+# Columns: series (legend: wavelength 400nm / 600nm / 800nm), defect_density_cm2 (category label, cm^-2; the
+# x axis is five evenly spaced categories 1, 10, 100, 1000, 10000, placed at their label centres), value (Extinction Ratio),
+# from the series' line on both sides of the marker; marker_value = centre of the visible marker (check);
+# side_spread = difference between the left- and right-side estimates.
+# Provenance: tier 3, digitized from the embedded image with work/markers.py (via figures/fig13_extract.py):
+# colour masks, y from 11 gridlines (max residual 11.2; hidden gridlines skipped: []).
+# Uncertainty: about 1 px = 11, more where lines of two series touch (the series drawn later, 800nm on
+# top, hides parts of the others; see side_spread). Where markers of different series overlap, the hidden part
+# of a marker shifts marker_value (by up to about half a marker, 6 px); value from the lines is preferred.
+# The panel's title box and the legend ('wavelength', outside the plot) are not data.
+series,defect_density_cm2,value,marker_value,side_spread
+400nm,1,718,712.5,
+400nm,10,717.3,712.5,1.4
+400nm,100,717.2,712.5,1.7
+400nm,1000,714.2,712.5,4.3
+400nm,10000,711.9,712.5,
+600nm,1,1907,1918,
+600nm,10,1907,1907,2.3e-12
+600nm,100,1905,1907,0.14
+600nm,1000,1906,1907,1.7
+600nm,10000,1907,1907,
+800nm,1,3789,3783,
+800nm,10,3777,3772,1.5
+800nm,100,3777,3772,1.7
+800nm,1000,3760,3772,12
+800nm,10000,3731,3756,

@@ -1,0 +1,13 @@
+# Decompiler's measurement on the embedded images of Figs. 2-5 (eberle2015), NOT data of the paper.
+# Made by figures/figs2to5_scalebars_extract.py (see its docstring for the method). Lengths in native
+# image pixels (300 dpi in print); uncertainty about +-2 px per length (JPEG edges, frame thickness).
+# Assumptions: the mosaic outline steps by half the tile pitch per tile row and the tile pitch equals the
+# 12 um beam distance given on p. 3; the inset scale bars are 5 um (captions); the inset shows the marked
+# rectangle (12 um x 10 um per the captions). For Fig. 3 the lower-right inset is used.
+# Result: the printed '10 um' bars measure about 7-8 um on the other two scales, which agree with each
+# other and with the ~100 um field width of the text (p. 3) and the Fig. 1 caption.
+figure,image_px,main_bar_px,inset_bar_px,tile_half_step_px,tile_row_pitch_px,n_outline_steps,rect_inner_px,inset_inner_px,inset_magnification,px_per_um_from_10um_bar,px_per_um_from_12um_pitch,px_per_um_from_inset_bar,bar_length_um_by_pitch,bar_length_um_by_inset_bar,image_width_um_by_bar,image_width_um_by_pitch,rect_width_um_by_bar,inset_width_um_by_inset_bar,row_pitch_over_tile_pitch
+2,1486x1282,107,217,82.0,141.0,11,175x152,519x464,2.97,10.7,13.67,14.63,7.8,7.3,139.0,109.0,16.4,12.0,0.86
+3,1425x1232,104,208,78.0,136.0,9,168x146,500x446,2.98,10.4,13.0,13.98,8.0,7.4,137.0,110.0,16.2,12.0,0.872
+4,1425x1229,103,207,79.0,134.5,5,167x147,523x466,3.13,10.3,13.17,13.22,7.8,7.8,138.0,108.0,16.2,12.6,0.851
+5,1425x1260,103,208,79.0,,1,170x147,483x470,2.84,10.3,13.17,14.64,7.8,7.0,138.0,108.0,16.5,11.6,

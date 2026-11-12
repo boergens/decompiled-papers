@@ -7,9 +7,11 @@ Schier, Wei-Chung Allen Lee, Won-Ki Jeong, Jeff William Lichtman, Florian Engert
 microscopy in larval zebrafish." **bioRxiv preprint** 134882, version posted May 7, 2017.
 DOI [10.1101/134882](https://doi.org/10.1101/134882) (printed in the bioRxiv stamp on every page).
 
-**Version:** this is the **bioRxiv preprint**, not the journal version. (From background knowledge, not from the PDF: the
-paper was later published in *Nature* 545, 345–349 (2017), doi:10.1038/nature22356; that version is not in the collection.)
-The collection key `hildebrand2017` fits both; the folder holds the preprint only.
+**Versions:** this folder holds both versions of the paper. `main.tex` is the **bioRxiv preprint** (described in the
+first part of this README). `nature2017.tex` is the **version of record**, *Nature* 545, 345–349 (18 May 2017; Letter),
+doi:10.1038/nature22356, received 19 December 2016, accepted 11 April 2017, published online 10 May 2017 (all printed in
+the Nature PDF); it was added on 2026-11-12 and is described in the section **Nature version** at the end. The collection
+key `hildebrand2017` fits both.
 
 **DOI check:** verify-sources receipt `vs-20261013-de73d2784b` (and -f960bd837c, -3be89511f2, -798e06dc61, cited in
 `web/whitepaper.md`) resolved 10.1101/134882 at Crossref (type posted-content, publisher openRxiv, not retracted) and matched
@@ -22,6 +24,8 @@ the author/funder.
 
 | file | what it is |
 |---|---|
+| `source/SOURCE.txt` | provenance of both PDFs (URL, date, sha256, pages). |
+| `source/nature22356.pdf` | the Nature version of record, 20 pp. (Adobe InDesign CS6, born-digital text; Figs 1–4 are composites of many rasters with vector labels, and the colour-mapped panels of Fig. 4 are embedded at data resolution; Extended Data Figs 1–10 are one 300 ppi JPEG each). Downloaded 2026-11-12 from https://www.nature.com/articles/nature22356 (UIC access); © 2017 Macmillan Publishers Limited, part of Springer Nature, all rights reserved: private use. sha256 `9cd4c261…452508c8`. |
 | `source/hildebrand2017_biorxiv_134882.pdf` | the preprint, 47 pp. (Word/Acrobat PDFMaker, born-digital text; all figures are 150 ppi raster images). Copied from `papers/hildebrand2017/`; `SOURCE.txt` there says: "hildebrand2017_biorxiv_134882.pdf: https://www.biorxiv.org/content/biorxiv/early/2017/05/07/134882.full.pdf (curl, 2026-10-13)". |
 
 `papers/hildebrand2017/` also holds `.txt`/`.raw.txt` text extractions (not used).
@@ -36,11 +40,11 @@ Circuits* 8, 68) = `hayworth2014`. No other reference matches a manifest key (`w
 *J. Microsc.* 2015, not ref. 30; `luft1961` is not ref. 50, Luft 1973).
 
 **Not available** (named by the paper, not on this machine):
-- Supplementary Videos 1–10 (only their legends are in the PDF).
+- Supplementary Videos 1–10 (only their legends are in the preprint PDF; the Nature PDF has no legends, its Supplementary
+  Information is the 10 videos, not downloaded).
 - The complete dataset and reconstructions (http://hildebrand16.neurodata.io/, CATMAID) and the custom tools
   (http://github.com/davidhildebrand/hildebrand16/); these would be the tier-1 source for the Fig. 4 and Extended Data
   Fig. 3–5, 9 data. No source-data files are named.
-- The journal (Nature) version of the paper.
 
 ## Contents
 
@@ -51,7 +55,8 @@ Circuits* 8, 68) = `hayworth2014`. No other reference matches a manifest key (`w
   Figures 1–4 and Extended Data Figures 1–10 with full captions, descriptions and data links, and the Supplementary Video
   legends. `\pdfpage{N}` marks every page start. Compile from this folder:
   `lualatex -interaction=nonstopmode -halt-on-error main.tex` (twice): no errors, no missing characters (main.pdf is
-  39 pp., 16.8 MB because it embeds all figure PNGs).
+  39 pp., 16.8 MB because it embeds all figure PNGs; 40 pp. since `decomp.sty` was replaced by the 2026-11-12 version from
+  `tools/` with the breakable framed `\alttext`, recompiled twice without errors or missing characters).
 - `figures/`: each figure rendered at 200 dpi from the PDF without its caption (`fig1–fig4.png`, `edfig1–edfig10.png`;
   Extended Data figures are named `edfigN`), and for each plotted panel `<panel>.csv`, `<panel>_extract.py`,
   `<panel>.py`, `<panel>_replot.png`.
@@ -120,7 +125,7 @@ no-data stripes are matched on colour direction instead (counts in each CSV head
 **Cross-checks against numbers printed in the paper:**
 - Fig. 4b vs printed costs (Fig. 4c, ED Fig. 9a, d): MiD3cm/MiD3cm read 2006 (printed 1315, below the key, so at its yellow
   end), MiD2cm 2006 (2054), MiD2i/MiD2i 2031 (2062), MiM1 #1/MiM1 #1 2354 (2321), MiD2i/MiM1 #1 2354 (2242), MiM1 #1/MiD2i
-  2155 (1967), CaV row/MeMv column 5968 (printed 14608, above the key). So ±50–200 near the flat yellow end of the key;
+  2155 (1967), CaV row/MeMv column 5968 (printed 146208, above the key). So ±50–200 near the flat yellow end of the key;
   the asterisk pattern (20 black on the diagonal, 2 red at MiD2i/MiM1 #1) matches the caption.
 - ED Fig. 9d: 2242 + 1967 = 4209 vs 2062 + 2321 = 4383, difference 174, as the caption says ("by 174").
 - ED Fig. 5j: 84 + 81 + 43 = 208, the printed "208 total".
@@ -183,3 +188,7 @@ headings and the bold/italic of figure titles.
 About 30 minutes of wall-clock time by the machine clock (03:37–04:06 UTC, 2026-10-18): reading spec/brief and setting up
 ~3 min; text drafting, structuring and equations ~5 min; figure crops and descriptions ~7 min; digitizing the 14 data CSVs
 with overlays and comparisons ~12 min; checks and README ~3 min.
+
+## Nature version
+
+The private collection also holds a decompile of the Nature version of record (doi:10.1038/nature22356; © Macmillan Publishers Limited, part of Springer Nature, all rights reserved). It is not published in this mirror; mentions of `nature2017.tex`, `source/nature22356.pdf` and the `nfig*`/`nedfig*` files above refer to that private copy.

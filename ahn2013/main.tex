@@ -1,0 +1,440 @@
+% main.tex for ahn2013, written by work/build_main.py from the PDF's text layer (do not edit by hand;
+% change the build script or work/figure_texts.py and re-run it). Proofread against the page images.
+\documentclass{article}
+\usepackage{decomp}
+\begin{document}
+
+\pdfpage{1}
+
+\begin{center}
+{\Large\textbf{High-performance wire-grid polarizers using jet and Flash™ imprint lithography}}
+
+\medskip
+Se Hyun Ahn\\
+Shuqiang Yang\\
+Mike Miller\\
+Maha Ganapathisubramanian\\
+Marlon Menezes\\
+Jin Choi\\
+Frank Xu\\
+Douglas J. Resnick\\
+S. V. Sreenivasan
+\end{center}
+
+\decompnote{PDF p.~1 is a cover page added by the SPIE Digital Library; its only text is the title and the nine author names above. Its images: at the top the journal name ``Journal of Micro/Nanolithography, MEMS, and MOEMS'' over a dark red band reading ``SPIEDigitalLibrary.org/jm3'', and the SPIE logo at the bottom left. The article itself (journal pp.~031104-1 to 031104-9) is PDF pp.~2--10.}
+
+
+\pdfpage{2}
+
+\noindent J. Micro/Nanolith. MEMS MOEMS 12(3), 031104 (Jul–Sep 2013)
+
+\decompnote{The line above is the running header of p.~2 (journal p.~031104-1), kept as the journal block. Left out as page furniture: the footer of every article page, ``J. Micro/Nanolith. MEMS MOEMS 031104-$N$ Jul–Sep 2013/Vol. 12(3)'' ($N$ = 1 to 9), and the running header of pp.~3--10, ``Ahn et al.: High-performance wire-grid polarizers using jet and Flash™ imprint lithography''.}
+
+\begin{center}
+{\Large\textbf{High-performance wire-grid polarizers using jet and Flash™ imprint lithography}}
+\end{center}
+
+\noindent \textbf{Se Hyun Ahn}\\
+\textbf{Shuqiang Yang}\\
+\textbf{Mike Miller}\\
+\textbf{Maha Ganapathisubramanian}\\
+\textbf{Marlon Menezes}\\
+\textbf{Jin Choi}\\
+\textbf{Frank Xu}\\
+\textbf{Douglas J. Resnick}\\
+\textbf{S. V. Sreenivasan}\\
+Molecular Imprints, Inc.\\
+1807-C West Braker Lane\\
+Austin, Texas 78758\\
+E-mail: dresnick@molecularimprints.com
+
+\begin{quote}
+\textbf{Abstract.} Extremely large-area roll-to-roll (R2R) manufacturing on flexible substrates is ubiquitous for applications such as paper and plastic processing. It combines the benefits of high speed and inexpensive substrates to deliver a commodity product at low cost. The challenge is to extend this approach to the realm of nanopatterning and realize similar benefits. In order to achieve low-cost nanopatterning, it is imperative to move toward high-speed imprinting, less complex tools, near zero waste of consumables, and low-cost substrates. We have developed a roll-based J-FIL process and applied it to a technology demonstrator tool, the LithoFlex 100, to fabricate large-area flexible bilayer wire-grid polarizers (WGPs) and high-performance WGPs on rigid glass substrates. Extinction ratios of better than 10,000 are obtained for the glass-based WGPs. Two simulation packages are also employed to understand the effects of pitch, aluminum thickness, and pattern defectivity on the optical performance of the WGP devices. It is determined that the WGPs can be influenced by both clear and opaque defects in the gratings; however, the defect densities are relaxed relative to the requirements of a high-density semiconductor device. © \textit{The Authors. Published by SPIE under a Creative Commons Attribution 3.0 Unported License. Distribution or reproduction of this work in whole or in part requires full attribution of the original publication, including its DOI.} [DOI: 10.1117/1.JMM.12.3.031104]
+
+Subject terms: jet and flash imprint lithography; J-FIL; nanoimprint; polarizer; wire-grid polarizer; WGP; displays.
+
+Paper 13038SSP received Apr. 2, 2013; revised manuscript received Jun. 6, 2013; accepted for publication Jun. 19, 2013; published online Aug. 12, 2013.
+\end{quote}
+
+
+\section*{1 Introduction}
+
+The ability to pattern materials at the nanoscale can enable a variety of applications ranging from high-density data storage, displays, photonic devices and complementary metal-oxide-semiconductor integrated circuits to emerging applications in the biomedical and energy sectors. These applications require varying levels of pattern control, short- and long-range order, and have varying cost tolerances.
+
+Roll-to-roll (R2R) printing or web printing involves the patterning of flexible materials such as plastics or metal foils. The flexible material, or web, is unwound from a core, processed, and then returned to a second core at the end of the sequence. R2R processing is in use today by industry and many R2R processes already exist for etch and deposition. Lithographic processes are also established for micron-scale manufacturing and for applications that only require polymer embossing without any subsequent processing.\textsuperscript{1} Recent work has investigated devices requiring metal etching in conjunction with imprint lithography, but again at a micron scale.\textsuperscript{2} However, R2R patterning of arbitrary patterns with thin residual layer control (needed for subsequent pattern transfer) at the nanoscale is far more challenging, particularly at a cost structure suited for commodity applications. The challenge is to create a process that is scalable and meets defectivity, throughput, and cost of ownership requirements.
+
+The cost of manufacturing is typically driven by speed (or throughput), tool complexity, cost of consumables (materials used, mold or master cost, etc.), substrate cost, and the downstream processing required (annealing, deposition, etching, etc.). In order to achieve low-cost nanopatterning, it is imperative to move toward high-speed imprinting, less complex tools, near zero waste of consumables, and low-cost substrates. Several research groups are currently investigating roll-based nanoimprinting using either thermal or ultra violet (UV) processes established for planar applications.\textsuperscript{3–6} These approaches are limited in their ability to simultaneously address the challenges noted above.
+
+There are additional requirements keeping for the adoption of R2R nanoimprint lithography. One requirement is achieving the lithographic performance required for pattern transfer of nanoscale structures (as opposed to strictly a functional pattern such as an embossed film). Typical lithography metrics such as aspect ratio, minimum critical dimension, pattern complexity dependence, residual layer thickness (RLT), and consumables costs are especially demanding at the scale required for realizing patterned nanostructures over large areas and at high throughput. In additional, a manufacturing infrastructure must be established to support production processes. Large-area nanostructured devices will require master patterns written using high-end lithography (e-beam, 193 immersions) and replication to create large-area daughter imprint templates. Also, processing steps such as descum etching must be implemented over a large area and at a throughput similar to the lithographic process.
+
+A roll-based nanoimprint lithography process should also allow for precise and easy control over nanoimprint resist thickness. Nanoimprint lithography (both thermal and UV) has been used by others to pattern very small features, but \pdfpage{3}like traditional lithographic techniques, it requires the use of spin-coaters that necessitates significant resist material waste as well as spinning of the substrate which can limit the size and format of the substrate. Additionally, because the nanoimprint process is essentially a molding technique, the spin-coated resist must fill voids in the nanostructured imprint template to accomplish patterning. Since the thickness of the spin-cast resist film is uniform over the area of the substrate, changes in pattern density/depth will result in nonuniform residual resist thickness at the base of the patterned features. Such nonuniformities can lead to pattern transfer difficulties when using etch process techniques.\textsuperscript{7,8} Also, spin-coating is not optimal for R2R coating, and knife coating or spray coating is generally employed.\textsuperscript{9} However, volume control of the imprint resist to a level suitable for thin RLT is extremely challenging.
+
+The jet and flash imprint lithography (J-FIL™) process uses drop dispensing of UV curable resists to assist high-resolution patterning for subsequent dry etch pattern transfer.\textsuperscript{10–17} A drop-on-demand ink-jetting approach is used to reduce material waste and achieve very thin and uniform RLTs by matching the amount of low viscosity resist dispensed to the actual relief images in the imprint template. Following deposition, a controlled pattern fill step is used to fill the relief images. The process takes advantage of the capillary force created between the mask and substrate, and requires no additional pressure during filling, thereby minimizing any distortion or damage to either the mask or substrate.
+
+In this paper, we address the key challenges for roll-based nanopatterning by introducing a novel concept: inkjet-based plate-to-roll nanopatterning. To address this challenge, we have introduced a J-FIL-based demonstrator product, the LithoFlex 100. The topics that are discussed in the paper include tool design and process performance (including process longevity). In addition, we have used the LithoFlex 100 to fabricate high-performance wire-grid polarizers (WGPs) on both fused silica wafers and flexible polycarbonate (PC) films. Finally, the performance of the polarizers has been modeled to understand the impact of defects in the pattern polarizer devices.
+
+\section*{2 Experimental Details}
+
+\subsection*{2.1 Tool Development}
+
+The roll-based concept tool discussed in this section, the LithoFlex 100, allows the exploration of key technology risks associated with an inkjet resist driven nanoimprinter. Figure 1 illustrates the basic imprint tool concept, using a template and a roll module, where the flexible film can be patterned. Imprinting is performed by moving the roll module and the template is only translated up or down.
+
+The process sequence is as follows: first, fluid dispensing with pico-liter volume drops is performed by moving the linear stage onto which the roller module is mounted. Drop patterns are preprogrammed based on the template pattern geometry. Once the fluid drops are dispensed on the film, the roll module is moved to the back side of the template (left side of template as shown in Fig. 1), while the dispensed portion of the film is rolled backwards by the counterclockwise roller motion. Imprinting is performed by the synchronized motion of the roll module and bottom linear stage so that the dispensed portion of the film is brought into contact with the template similar to a laminating process. This is followed by a UV curing step, where a broadband UV spectrum is used and a separation step, where synchronized motions of the roll module and linear stage induce a peeling separation from the template starting at one side and ending at the other side of the template.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig1.png}
+\end{center}
+\noindent \textbf{Fig. 1} Imprinting scheme selected for high-throughput flexible film imprinting.
+\alttext{Schematic drawing (3-D style, colour) of the imprint tool concept. A grey bar at the bottom,
+``Stage'', carries on its top surface a red double arrow (one arrow pointing left, one right). Standing on the stage
+are two large rolls seen end-on: at the left a dark blue roll marked ``R2'' and labelled ``Patterned Roll'', at the
+right a lighter blue roll marked ``R1'' and labelled ``Unpatterned roll''; each has a curved arrow on its end face
+pointing counterclockwise. A light-blue band (the film) runs from R1 up and over a pair of green-grey rollers placed
+side by side above the rolls (the roll module) and down to R2; a label ``PET PEN PC'' at the left has an arrow
+pointing to the film. Above the top of the film, at the left, a flat brown bar is labelled ``Template''; at the
+right, a dark green block above the film is labelled ``Inkjet''. A short dotted line lies on the film between the
+template and the inkjet.}
+\decompnote{Fig.~1 is printed at the top of the right column of p.~3; it is placed after the paragraph that runs from the left column into the right one.}
+
+Incoming roll films are initially masked with a protection film. Prior to dispensing step, the area to be imprinted on the film is peeled off from the masking layer. After the separation step, the imprinted film is again protected with the same masking layer. This approach keeps the surface of the imprinted film clean and also protects imprinted features after separation. Interfacing surfaces of the imprinting and masking film are not in contact with rollers or other mechanical components in the process loop to avoid contamination of these surfaces.
+
+The process steps of the “technology demonstrator” are sequential and therefore, it is expected that its throughput will be limited as compared to cases where all process steps are done in-parallel. Current throughput is approximately 180 printed fields per hour. A next-generation tool will address parallel processing. Photographs of the LithoFlex 100 are shown in Fig. 2.
+
+\subsection*{2.2 Template Form Factor and Fabrication}
+
+The template blank is a 6-in. fused silica wafer, identical to the blank used on the NuTera™ HD7000 high-throughput media imprinting systems. Patterning of the template can either be done directly or by replication using an existing master template. For most of the experiments performed, a replication process was employed. The primary pattern consisted of 50- and 65-nm half-pitch gratings. For the earlier experiments, the grating field size on the master template was either 5 or 25 mm on a side, and a step and repeat J-FIL tool was used to replicate the pattern on to the 6 in. round blank. Other replicated patterns included 120-nm curvilinear structures, 100-nm dense pillars, and 25-nm dense holes. Larger area templates were created by patterning a 300-mm silicon wafer using an immersion-based 193-nm scanner. Details of the pattern transfer process used to form the final relief images in the replica have been previously been reported.\textsuperscript{18,19} Scanning electron microscopy (SEM) images of a grating master with a 65-nm half pitch are shown in Fig. 3.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig2.png}
+\end{center}
+\noindent \textbf{Fig. 2} (a) a partial view of LithoFlex100 being used for process development. (b) imprint tool is enclosed within an environment control unit.
+\alttext{Two colour photographs. (a) Close view of the tool mechanism under orange light: a black metal
+frame with several rollers carrying a white film or web, knurled knobs, small motors and cables; a large black
+roll at the right. (b) The tool in a bright yellow cabinet (the environment control unit) with a large window in
+the front showing the red-lit interior and a smaller window in the side wall.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig3.png}
+\end{center}
+\noindent \textbf{Fig. 3} SEM cross-sections of a silicon master. The grating half pitch is 65 nm.
+\alttext{Two SEM images of a grating cross-section, grey scale. Left: a horizontal bright band across the
+middle of the image carries a row of small, regular rectangular teeth (the grating lines in cross-section, several
+dozen of them across the field); above and below it smooth grey. Data bar: ``15.0kV 4.7mm x25.0k SE(U,LA0)
+4/2/2012'' and a dotted scale of 10 divisions labelled ``2.00um''. Right: higher magnification, tilted view; the upper
+half shows the tops of the grating lines as bright parallel stripes running up and slightly to the right, ending at
+a square-wave cross-section profile at mid-height; the lower half is black. Data bar: ``15.0kV 4.8mm x45.1k
+SE(U,LA0) 4/2/2012'' and a scale of 10 divisions labelled ``1.00um''. The caption gives the half pitch, 65 nm.}
+
+\pdfpage{4}\subsection*{2.3 Patterning Results}
+
+Several pattern types were tested to ensure that imprint nonfill and separation induced defects were addressed. The initial test pattern consisted of curvilinear 120-nm features on a 300-nm pitch, in order to understand if there were any separation issues resulting from pattern direction. Figure 4(a) shows a 10-m roll (over 100 imprints) printed with this pattern, and a close-up of the printed lines. All fields were cleanly imprinted. A second longevity experiment using a 50-nm grating with a 20 mm × 20 mm field was also run. After more than 1000 consecutive imprinted fields, no pattern degradation was observed [see Fig. 4(b) and 4(c)].
+
+Once the process was established, resolution was tested by imprinting three different patterns: 100-nm dense pillars, 50-nm half-pitch lines, and dense 25-nm holes. All patterns were faithfully resolved. Aspect ratios of up to 3\texttt{∶}1 were also demonstrated for 50-nm lines. Further details on patterning can be found in Ref. 20.
+
+\section*{3 Wire-Grid Polarizer Results}
+
+\subsection*{3.1 Bilayer WGPs}
+
+The WGPs are already used in digital projectors. The combination of performance and temperature durability makes their use an attractive choice for this market. Their application to larger displays, including mobile phones, tablets, monitors, and TVs, has been limited by an inability to scale the WGP to the required areas for these markets. A roll-based printing process enables printing over substantially larger areas and therefore addresses the requirements of both performance and CoO.
+
+Using imprinted 50-nm half-pitch gratings (covering a 50 mm × 50 mm area), samples of a bi-layer wire-grid polarizer were fabricated by depositing a thin layer of aluminum (Al) over the printed resist.\textsuperscript{21} The quality of a WGP can be quantified by measuring optical transmission and extinction ratio (ER). ER is defined as the ratio of the \pdfpage{5}transverse magnetic (TM) mode over the transverse electric (TE) mode (in which the polarizer is rotated by 90 deg), or TM/TE. The transmission and ER of the device (at 700 nm) were >80\% and >4500, respectively (Fig. 5).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig4.png}
+\end{center}
+\noindent \textbf{Fig. 4} (a) Imprinted pattern covering 10 m of the polycarbonate (PC) substrate. (b) and (c) Demonstration of 1012 consecutive imprints.
+\alttext{Three panels. (a) Colour photograph of a strip of clear plastic film, curled into a loop, on a
+dark background with a pattern of small dots; the strip carries a row of round imprinted fields that show rainbow
+diffraction colours, and the roll end is at the upper right. (b) SEM top view, ``Imprint 1'' (large white italic
+text at the top left): a field of fine, even horizontal lines. An inset at the top right, framed in red, shows a few
+lines enlarged, with two vertical measurement markers labelled with small, blurred text that reads about ``60.3nm''
+and ``99.1nm''. The data bar at the bottom, partly cut off, reads ``NONE SEI 4.0kV X10,000 WD 7.2mm'' with a scale
+bar (``1µm'', cut). (c) The same view for ``Imprint 1012'': fine horizontal lines, a red-framed inset with two
+measurement markers whose labels are too blurred to read with confidence (perhaps ``100.0nm'' and
+``62.?nm''); data bar ``NONE SEI 4.0kV X10,000 WD 7.5mm'', scale bar ``1µm'' (cut). Panel letters (a),
+(b), (c) at the lower right of each panel.}
+\decompnote{Fig.~4 is printed at the foot of p.~4, inside the paragraph that continues on p.~5; Figs.~4--6 are placed after that paragraph, so the [p.~5] marker comes before Fig.~4.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig5.png}
+\end{center}
+\noindent \textbf{Fig. 5} 50 mm × 50 mm bilayer wire-grid polarizer (WGP) fabricated on a film using roll-based jet and flash imprint lithography (J-FIL) and Al deposition.
+\alttext{Two line plots side by side, no panel letters (called left and right here). Left: Transmission
+(\%) (0--100, ticks every 10) vs Wavelength (nm) (400--900). A blue line labelled ``TM'' (with an arrow) rises from
+about 30\% at 400 nm through about 44\% at 450 nm, 59\% at 500 nm and 72\% at 550 nm to about 79\% near 650 nm and
+stays at 78--80\% to its end at about 885 nm, where it ends in a dot. A red line labelled ``TE'' (arrow) lies on the x
+axis, at about 0\%, over the whole range. Bold blue annotation ``Max TR = 80\%'' above the curve. Right: Extinction
+Ratio (0--7000) vs Wavelength (nm) (400--900); legend ``ER(L-B)'' (light purple line). The purple trace is very noisy:
+it rises from about 100--200 at 400 nm to about 400--500 at 450 nm, 900--1100 at 500 nm, 1600--1800 at 550 nm and
+2700--3100 at 600 nm; from about 650 nm on it spikes widely, many spikes running off the top of the plot (above 7000)
+between about 660 and 880 nm and some down to the x axis near 860--880 nm. A thin black line with no legend entry
+follows the purple data smoothly, from about 260 at 420 nm to about 2700 at 600--650 nm, about 3700 at 700 nm, peaks
+of about 5300 near 780 and 805 nm, a dip to about 1700 near 840 nm and about 4000--5000 near 870--880 nm. Bold blue
+annotation ``ER $>$ 4500'' with a red arrow pointing right at the curve near 690--700 nm.}
+\figuredata{left}{figures/fig5left.csv}{figures/fig5.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; x from tick marks, y from tick-label centres; checked by overlay and compare.py)}
+\figuredata{right}{figures/fig5right.csv}{figures/fig5.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; the noisy purple ER(L-B) trace as its range per pixel column, the black line as the darkest smooth path; x and y from tick marks; checked by overlay and compare.py)}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig6.png}
+\end{center}
+\noindent \textbf{Fig. 6} Improved performance of a WGP was obtained by depositing the Al at an angle of 80 deg relative to the plane of the PC film.
+\alttext{Two line plots side by side, titled ``Transmission'' (left) and ``Extinction Ratio'' (right).
+Left: Transmission (\%) (0--100) vs Wavelength (nm) (400--900). Blue line ``TM'' (arrow) from about 64\% at 400 nm
+rising to about 79\% at 500 nm and 84\% at 600 nm, nearly flat (84\%) to 700 nm, then rising slowly to about 90\% at
+its end near 885 nm, where it ends in a dot. Red line ``TE'' (arrow) on the x axis, about 0\%. Bold black annotation
+``Max. TR \textasciitilde{} 85\%''. Right: Extinction Ratio (0--4000) vs Wavelength (nm) (400--900); legend: ``ER''
+(light purple) and ``200 per. Mov. Avg. (ER)'' (thin black). The purple ER trace is noisy: about 400--700 at 400 nm,
+rising with large scatter to about 1300--1500 at 500 nm, 2500--3100 at 600 nm and 3600--4000 at 700 nm (spikes up to
+the top of the plot, 4000, around 700--750 nm), then falling with growing scatter, spikes reaching the top and the x
+axis near 870--880 nm. The black moving average starts at about 440 nm (about 700) and rises to about 1300 at 500 nm,
+2400 at 600 nm, 3200 at 700 nm and a maximum of about 3550 near 730 nm, then falls to about 3100 at 800 nm and 2500 at
+850 nm with small bumps, and ends with a narrow spike to about 3300 and a drop to about 1500 at about 885 nm. Bold
+black annotation ``ER $>$ 3000 @ 700nm''.}
+\figuredata{left}{figures/fig6left.csv}{figures/fig6.py}{tier 3, digitized from the embedded Flate image at native resolution (colour masks; x and y from tick marks; checked by overlay and compare.py)}
+\figuredata{right}{figures/fig6right.csv}{figures/fig6.py}{tier 3, digitized from the embedded Flate image at native resolution (colour masks; the noisy purple ER trace as its range per pixel column, the moving average as the darkest smooth path; x and y from tick marks; checked by overlay and compare.py)}
+
+Note the substantial roll-off in both transmission and ER at the lower visible wavelengths. One method for minimizing this problem is to deposit the metal at an angle, thereby restricting the deposited material primarily to the sidewall of the resist feature.\textsuperscript{22} Figure 6 depicts the performance of a flexible polarizer in which the angle of deposition was set to 80 deg relative to the plane of the polarizer. A transmission of better than 60\% is now observed at a wavelength of 400 nm. Figure 7 shows an example of a large-area bilayer polarizer with a measured diagonal of 5.7 in. The polarizer has been placed on top of an iPad display and has been rotated by 90 deg in order to demonstrate performance of both the TM and TE modes.
+
+\subsection*{3.2 Etched Wire-Grid Polarizers on Glass}
+
+Al-based WGPs formed on glass are typically fabricated by depositing the Al on the glass, patterning the resist grating, and then using the resist as mask to etch the Al. Gratings with half pitches on the order of 50 nm typically have transmissions and ERs that are superior to the bilayer WGPs discussed above. Initial performance results patterned with \pdfpage{6}an older template with a half pitch of 50 nm are compared with the performance of a newer template with a half pitch of 65 nm in Fig. 8(a) and 8(b).
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig7.png}
+\end{center}
+\noindent \textbf{Fig. 7} Optical performance of a 5.7-in. flexible WGP.
+\alttext{Two colour photographs side by side, labelled ``TM'' (left) and ``TE'' (right) in white at the
+upper left. Each shows a display screen (dark bezel at the edges) with a rectangular film polarizer laid on it and
+held with small pieces of white tape. TM: through the polarizer the screen shows an orange area with the logo and
+name ``MolecularImprints''; the screen outside the film is light. TE: the area under the polarizer is dark slate blue
+and nothing of the screen content is visible through it.}
+\decompnote{Fig.~7 is printed at the foot of p.~5, inside the paragraph that continues on p.~6; Figs.~7 and 8 are placed after that paragraph, so the [p.~6] marker comes before Fig.~7.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig8.png}
+\end{center}
+\noindent \textbf{Fig. 8} Etched wire-grid polarizers patterned with two different imprint templates. There is a significant difference in the extinction ratio (ER) for the two polarizers.
+\alttext{Two line plots with grey horizontal gridlines. (a) Extinction Ratio (TM/TE) (0--6000, gridlines
+every 1000) vs Wavelength (nm) (400--800). A thick, noisy blue line rises in steps from about 700--900 at 400 nm to
+about 1300 at 450 nm, 1900 at 500 nm, 2400 at 550 nm and 3000 at 600 nm (local peak about 4000 near 650 nm), then
+fluctuates around 3300--3500 between about 660 and 740 nm, peaks sharply at about 4500--4800 near 750 nm, drops to
+about 2100 near 785 nm and ends at about 2500--2700 at 800 nm. (b) Extinction Ratio (TM/TE) (0--50000, gridlines every
+5000) vs Wavelength (nm), x labels 400--700; the panel is cut off at the right edge at about 725 nm. A thick blue line
+stays near 9000--10000 from 400 to about 450 nm, then rises in steps to about 16000 at 500 nm, 20000 at 550--575 nm,
+26000 at 600 nm, 28000 at 650 nm, about 30000 near 680 nm (with spikes to about 34000) and about 35000--37500 above
+700 nm, where it runs out of the image.}
+\figuredata{a}{figures/fig8a.csv}{figures/fig8.py}{tier 3, digitized from the embedded Flate image at native resolution (colour mask, line centre and ink extent per pixel column; axes piecewise linear through the ticks; checked by overlay and compare.py)}
+\figuredata{b}{figures/fig8b.csv}{figures/fig8.py}{tier 3, digitized from the embedded Flate image at native resolution (colour mask, line centre and ink extent per pixel column; axes piecewise linear through the ticks; checked by overlay and compare.py)}
+
+\section*{4 Wire-Grid Polarizer Modeling}
+
+\subsection*{4.1 Two-Dimensional Linear Model}
+
+Both etched WGP examples above display superior performance relative to their bilayer WGP counterparts. However, despite the fact that the half pitch of the polarizer shown in Fig. 9(a) is smaller than the WGP in Fig. 9(b) there is a substantial difference in the optical performance. There are several parameters that can affect both the transmission and ER of a WGP. Key parameters include pitch, duty cycle, and Al aspect ratio. To understand the effect of these parameters on optical performance, GSolver, a commercial optical simulation software package, was used to model the optical behavior of two-dimensional linear diffraction gratings.\textsuperscript{23}
+
+\decompnote{As printed. Fig.~9 shows GSolver simulations for 100- and 130-nm pitch; the two etched polarizers with 50- and 65-nm half pitch and their measured extinction ratios are in Fig.~8 (p.~6), which is probably meant here, in ``both WGPs in Fig.~9'' (end of Sec.~4.1) and in ``the experimental observations from Fig.~9'' (Sec.~4.2).}
+
+Both a 100- and 130-nm pitch WGP are shown below. There are some very clear trends predicted by the model. The first is that while ER is enhanced by increasing the Al thickness, there is a corresponding small decrease in the absolute transmission which becomes more apparent at lower wavelengths. It is also clear that for a given Al thickness, the ER is greater for the smaller pitch. Since the Al thickness is nearly \pdfpage{8}the same for both WGPs in Fig. 9, there is another factor impacting the performance of these polarizers.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig9.png}
+\end{center}
+\noindent \textbf{Fig. 9} ER as a function of wavelength and Al thickness for a 100-nm pitch WGP (a) and for a 130-nm pitch WGP (b). Duty cycle was set to 1:1 for both gratings.
+\alttext{Four line plots in two rows, black lines only; four series in each, keyed in (a) and (b) as
+``100nmAl'' (long dashes), ``150nmAl'' (short dashes), ``200nmAl'' (medium dashes) and ``250nmAl'' (solid); the legend
+boxes have a drop shadow. All x axes: Wavelength (nm), 400--800. (a) Transmission (\%), axis 0--1 in steps of 0.1:
+all four curves lie between about 0.69 and 0.85. 100nmAl falls from about 0.84 at 400 nm to about 0.81 and stays near
+0.80--0.81; 150nmAl rises to a maximum of about 0.85 near 490 nm and falls to about 0.78 at 800 nm; 200nmAl rises from
+about 0.69 at 410 nm to about 0.82 near 580 nm and falls to about 0.76 at 800 nm; 250nmAl dips from about 0.73 at
+400 nm to about 0.70 near 450 nm, rises to about 0.78 near 670 nm and ends at about 0.74. (b) The same for the 130-nm
+pitch: 100nmAl about 0.81 at 400 nm, then 0.76--0.77; 150nmAl maximum about 0.85 near 480 nm, about 0.75 at 800 nm;
+200nmAl from about 0.62 at 410 nm to about 0.82 near 580 nm, about 0.74 at 800 nm; 250nmAl from about 0.67 at 400 nm,
+minimum about 0.64 near 440 nm, about 0.78 near 670 nm, about 0.73 at 800 nm. (c) Extinction Ratio, log axis
+1.E+00--1.E+09, label ``100nm pitch'' at the lower left; above the plot the italic title ``Increasing Al thickness'' and
+a large grey up-arrow drawn across the curves near 600 nm. The four curves are nearly parallel, each rising gently to a
+broad maximum near 720--730 nm and falling a little towards 800 nm: 100nmAl about 1.4E+03 at 400 nm, 5.5E+03 at its
+maximum; 150nmAl about 6E+04 to 2.7E+05; 200nmAl about 2E+06 to 1.4E+07; 250nmAl about 8E+07 to 7E+08. (d) The same
+for ``130nm pitch'' (y label ``Extinction ratio''): 100nmAl about 450 to 1.9E+03; 150nmAl about 1E+04 to 5.3E+04;
+200nmAl about 1.9E+05 to 1.5E+06; 250nmAl about 3.8E+06 to 4.1E+07, i.e. lower than in (c) for each thickness.}
+\figuredata{a}{figures/fig9a.csv}{figures/fig9.py}{tier 2, vector paths in the PDF (filled stroke outlines cut at every 10 nm; axes from the tick marks), exact; the outlines continue outside the axes box (hidden by the PDF's clip path), those rows have in\_plot = 0}
+\figuredata{b}{figures/fig9b.csv}{figures/fig9.py}{tier 2, vector paths in the PDF (filled stroke outlines cut at every 10 nm; axes from the tick marks), exact; the outlines continue outside the axes box (hidden by the PDF's clip path), those rows have in\_plot = 0}
+\figuredata{c}{figures/fig9c.csv}{figures/fig9.py}{tier 2, vector paths in the PDF (filled stroke outlines cut at every 10 nm; axes from the tick marks), exact; the outlines continue outside the axes box (hidden by the PDF's clip path), those rows have in\_plot = 0}
+\figuredata{d}{figures/fig9d.csv}{figures/fig9.py}{tier 2, vector paths in the PDF (filled stroke outlines cut at every 10 nm; axes from the tick marks), exact; the outlines continue outside the axes box (hidden by the PDF's clip path), those rows have in\_plot = 0}
+\decompnote{The caption names panels (a) and (b) and ``ER'', but the figure has four panels: (a) and (b) show transmission, (c) and (d) the extinction ratio, labelled ``100nm pitch'' and ``130nm pitch''. The transmission axes of (a) and (b) are labelled ``Transmission (\%)'' with tick labels 0 to 1. Fig.~9 is printed at the foot of p.~6, inside the paragraph that continues on p.~8 (p.~7 holds only Figs.~10 and 11); Figs.~9--12 are placed after that paragraph, so the [p.~8] marker comes before the [p.~7] marker.}
+
+\pdfpage{7}\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig10.png}
+\end{center}
+\noindent \textbf{Fig. 10} Etched wire-grid polarizers: (a) an etched Al grating using a manual process involving significant wafer handling and (b) a WGP made from an automated J-FIL process.
+\alttext{Two SEM top views, grey scale, each with a black data bar at the bottom. (a) A grating seen
+from above, its lines running horizontally (fine and only just resolved); scattered over the field are about twenty
+small dark spots of various sizes (some with bright rims) and a few small bright specks. Data bar: ``NONE SEI 4.0kV
+X4,500 WD 6.5mm'' and a scale bar ``1µm''. (b) Dense, even lines running almost vertically (slightly tilted to the
+right) over the whole field, with no spots visible. Data bar: ``NONE SEI 4.0kV X5,000 WD 7.3mm'' and a scale bar
+``1µm''.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig11.png}
+\end{center}
+\noindent \textbf{Fig. 11} (a) Transmission as a function of wavelength for a clean WGP and a WGP with a clear 250 nm × 250 nm defect every 16 μm\textsuperscript{2}. Almost no change in transverse magnetic mode (TM) is observed. (b) ER as a function of wavelength. The clear defect causes a decrease in the ER by more than order of magnitude.
+\alttext{Four line plots in two rows (panel letter (a) under the top row, (b) under the bottom row).
+Top row, titled ``Defect Free WGP'' (left) and ``250nm x 250nm Clear Defect'' (right): TM Transmission (left axis,
+0.0--1.0) and TE Transmission (right axis, blue; 0.0--2.0E-3 on the left plot, 0.0--1.0E-2 on the right plot) vs
+Wavelength (nm) (400--800); legend: ``TM'' black solid, ``TE'' blue dashed. A black ellipse around the TM curve near
+480 nm has an arrow pointing to the left axis; a blue ellipse around the TE curve near 720 nm has an arrow pointing
+to the right axis. Defect free: TM rises from about 0.69 at 400 nm to about 0.82 near 455 nm, falls to about 0.72 near
+560 nm and rises to about 0.83 near 720 nm, ending at about 0.81; TE falls from about 1.2E-3 at 400 nm to about
+6E-4 at 500 nm and a minimum of about 2.3E-4 near 690 nm, then rises slightly to about 2.7E-4 at 800 nm. With the clear
+defect: TM is practically the same curve (about 0.69, 0.82, 0.72, 0.83, 0.81 at the same places); TE falls from about
+4.1E-3 at 400 nm through 3.5E-3 at 500 nm and 2.5E-3 at 600 nm to about 1.3E-3 at 800 nm; framed annotation ``Minimal
+change in TM transmission''. Bottom row: Extinction Ratio vs Wavelength (nm) (400--800), black solid line. Left (axis
+0--4000): from about 580 at 400 nm through 1300 at 500 nm and 2300 at 600 nm to a maximum of about 3500 near 700 nm,
+about 3000 at 800 nm. Right (axis 0--1000): from about 170 at 400 nm to a plateau of about 220 between 450 and 520 nm,
+then rising to about 300 at 600 nm, 500 at 700 nm and about 600 at 800 nm; framed annotation ``$>$5x decrease in
+extinction ratio''.}
+\figuredata{a, left}{figures/fig11a_left.csv}{figures/fig11.py}{tier 3, digitized from the embedded Flate image at native resolution (line followed as the smooth path of most ink; x and both y axes from tick marks; TE only where a dash is; checked by overlay and compare.py)}
+\figuredata{a, right}{figures/fig11a_right.csv}{figures/fig11.py}{tier 3, digitized from the embedded Flate image at native resolution (as panel (a), left; checked by overlay and compare.py)}
+\figuredata{b, left}{figures/fig11b_left.csv}{figures/fig11.py}{tier 3, digitized from the embedded Flate image at native resolution (line followed as the smooth path of most ink; axes from tick marks; checked by overlay and compare.py)}
+\figuredata{b, right}{figures/fig11b_right.csv}{figures/fig11.py}{tier 3, digitized from the embedded Flate image at native resolution (as panel (b), left; checked by overlay and compare.py)}
+\decompnote{The caption says ``more than order of magnitude'' (as printed, without ``an''); the panel annotation says ``$>$5x decrease'' and the text (p.~9) ``more than a factor of 5''. In the digitized curves of (b) the ratio of the two extinction ratios is about 3.4 at 400 nm, 7.8 at 600 nm (largest, about 8, near 630 nm), 7.0 at 700 nm and 5.0 at 800 nm (decompiler's measurement, \texttt{work/er\_ratio.py}).}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig12.png}
+\end{center}
+\noindent \textbf{Fig. 12} Transmission and ER as a function of wavelength. Minimal changes are observed for both cases.
+\alttext{Two line plots side by side, no panel letters. Left: TM transmission (left axis, 0.0--1.0) and
+TE transmission (right axis, blue, 0.0--2.0E-3) vs Wavelength (nm) (400--800); legend ``TM'' black solid, ``TE'' blue
+dashed; black ellipse with an arrow to the left axis around TM near 480 nm, blue ellipse with an arrow to the right
+axis around TE near 720 nm; framed annotation ``Minimal change in transmission''. TM: about 0.69 at 400 nm, maximum
+about 0.82 near 455 nm, minimum about 0.72 near 560 nm, about 0.82 near 720 nm, about 0.81 at 800 nm. TE: about
+1.2E-3 at 400 nm falling to about 6E-4 at 500 nm and a minimum of about 2.3E-4 near 700 nm, about 2.7E-4 at 800 nm.
+Right: Extinction Ratio (0--4000) vs Wavelength (nm) (400--800), black solid line from about 560 at 400 nm through
+1250 at 500 nm and 2250 at 600 nm to a maximum of about 3430 near 705 nm and about 2960 at 800 nm; framed annotation
+``Minimal change in extinction ratio''. Both panels look almost the same as the defect-free plots of Fig.~11.}
+\figuredata{left}{figures/fig12left.csv}{figures/fig12.py}{tier 3, digitized from the embedded Flate image at native resolution (line followed as the smooth path of most ink; x and both y axes from tick marks; TE only where a dash is; checked by overlay and compare.py)}
+\figuredata{right}{figures/fig12right.csv}{figures/fig12.py}{tier 3, digitized from the embedded Flate image at native resolution (line followed as the smooth path of most ink; axes from tick marks; checked by overlay and compare.py)}
+
+\subsection*{4.2 Three-Dimensional Finite Difference Time Domain Simulation}
+
+The other major difference noted in the two polarizers was the defectivity of both the imprinted pattern and the resulting pattern transferred Al. These differences are depicted in the figures below. Figure 10(a) shows an etched Al grating using a manual process involving significant wafer handling. Figure 10(b) is a WGP made with an automated J-FIL process.
+
+To understand how defectivity affects WGP polarizer performance, a finite difference time domain (FDTD) Maxwell solver (from Lumerical Solutions Inc.) was used to simulate a metal wire-grid polarizers.\textsuperscript{24} To model WGPs containing defects in different sizes and densities, 3-D modeling with a periodic boundary condition along the grating direction (\textit{x}-axis) and a perfectly matched layers boundary condition \pdfpage{9}for the \textit{y} and \textit{z} direction was applied. In the graphs shown below, the Al line size and pitch were set to 50 and 100 nm, respectively. Al thickness was held constant at 100 nm.
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig13.png}
+\end{center}
+\noindent \textbf{Fig. 13} Transmission and ER as a function of “clear” defect density, plotted for three wavelengths covering the spectrum of visible light. The smaller defect has negligible effects on both transmission and ER for defect densities up to 10\textsuperscript{4} cm\textsuperscript{−2}. The large defect causes a sizable roll-off in ER for densities greater than 100 cm\textsuperscript{−2}.
+\alttext{Four line charts with markers in two rows, (a) top and (b) bottom; left: Transmission (0--1,
+steps of 0.1), right: Extinction Ratio (0--5000, steps of 500). Each plot has grey horizontal gridlines, a category x axis ``Defect Density (cm\textsuperscript{-2})'' with the
+five evenly spaced labels 1, 10, 100, 1000, 10000, and a legend ``wavelength'' at its right: ``400nm'' blue line with
+diamonds, ``600nm'' red line with squares, ``800nm'' green line with triangles; each plot has a blue title box. (a) Title boxes ``150nm x150nm clear
+defect''. Transmission: three flat lines at about 0.79 (400nm), 0.77 (600nm) and 0.755 (800nm) at all densities.
+Extinction ratio: flat at about 720 (400nm), 1900 (600nm) and 3780 (800nm), the 800nm line easing to about 3730 at
+10000. (b) Title boxes ``5 µm x 5 µm clear defect''. Transmission: again nearly flat, about 0.79 to 0.78 (400nm),
+0.765 (600nm) and 0.75 (800nm). Extinction ratio: 400nm about 720 at 1, 700 at 100, 610 at 1000 and 260 at 10000;
+600nm about 1910 at 1 and 10, 1890 at 100, 1840 at 1000 and 1470 at 10000; 800nm about 3740 at 1, 3750 at 10, 3650 at
+100, 2930 at 1000 and 980 at 10000 (falling below the 600nm line between 1000 and 10000).}
+\figuredata{a, left}{figures/fig13a_left.csv}{figures/fig13.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{a, right}{figures/fig13a_right.csv}{figures/fig13.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{b, left}{figures/fig13b_left.csv}{figures/fig13.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{b, right}{figures/fig13b_right.csv}{figures/fig13.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\decompnote{Fig.~13 is printed at the foot of p.~8, inside the paragraph that continues on p.~9; Figs.~13 and 14 are placed after that paragraph, so the [p.~9] marker comes before Fig.~13.}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=0.55\textheight,keepaspectratio]{figures/fig14.png}
+\end{center}
+\noindent \textbf{Fig. 14} TM and ER for two opaque defect sizes. The larger defect causes a significant change in TM for defectivities above 100 cm\textsuperscript{−2}.
+\alttext{Four line charts with markers in two rows, (a) top and (b) bottom, laid out like Fig.~13; left:
+Transmission (0--1), right: Extinction Ratio (0--5000). Each plot has grey horizontal gridlines, a category x axis ``Defect Density (cm\textsuperscript{-2})'' with the
+five evenly spaced labels 1, 10, 100, 1000, 10000, and a legend ``wavelength'' at its right: ``400nm'' blue line with
+diamonds, ``600nm'' red line with squares, ``800nm'' green line with triangles; each plot has a blue title box. (a) Title boxes ``150nm x150nm opaque
+defect''. Transmission flat at about 0.795 (400nm), 0.77 (600nm) and 0.757 (800nm); extinction ratio flat at about 790
+(400nm), 1910 (600nm) and 3770 (800nm). (b) Title boxes ``5 µm x 5 µm opaque defect''. Transmission: about 0.79,
+0.77 and 0.76 up to 100, then falling to about 0.69, 0.66 and 0.62 at 1000 and 0.63, 0.59 and 0.53 at 10000 (400nm,
+600nm, 800nm). Extinction ratio: rising at high density: 400nm about 790 up to 100, 870 at 1000, 960 at 10000; 600nm
+about 1910 at 1 and 10, 2000 at 100, 2490 at 1000, 2700 at 10000; 800nm about 3780 at 1 and 10, 3820 at 100, 4060 at
+1000 and 4040 at 10000.}
+\figuredata{a, left}{figures/fig14a_left.csv}{figures/fig14.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{a, right}{figures/fig14a_right.csv}{figures/fig14.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{b, left}{figures/fig14b_left.csv}{figures/fig14.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+\figuredata{b, right}{figures/fig14b_right.csv}{figures/fig14.py}{tier 3, digitized from the embedded JPEG at native resolution (colour masks; category x axis from label centres, y from gridlines; each value from its line on both sides of the marker; checked by overlay and compare.py)}
+
+The most common defect noted in the SEM from Fig. 10(a) was a “clear” defect with dimensions of approximately 250 nm × 250 nm. In the FDTD model, a clear defect of this size was inserted into a grating with a surface area of 16 μm\textsuperscript{2} (comparable to the defect density observed in SEMs shown in Fig. 10). The results of the model, comparing the transmission (TM and TE) and ER for a defect free WGP and a WGP with a clear area defect are shown in Fig. 11. TM transmission, even at an extremely high defect density remains almost unaffected for both cases. TE transmission and ER, however, are severely impacted, and drops by more than a factor of 5, consistent with the experimental observations from Fig. 9.
+
+For completeness, we have also modeled the effects of an opaque defect. A defect size of 250 nm × 250 nm was chosen, in order to be consistent with the modeling above. These results are shown in Fig. 12. For the case of an opaque defect, the resultant change in both transmission (TM and TE) and ER is quite small. This can be explained by the fact that an opaque defect causes almost no change to the TE mode.
+
+Finally, both TM and ER were studied as a function of defect size and defect density across the visible spectrum. Both a smaller (150 nm × 150 nm) and larger (5 mm× 5 mm) defect size were modeled across a range in defect densities. The results for clear defects are shown in Fig. 13. The smaller defect has negligible effects on both TM and ER for defect densities up to 10\textsuperscript{4} cm\textsuperscript{−2}. The large defect causes a sizable roll-off in ER for densities greater than 100 cm\textsuperscript{−2}.
+
+\decompnote{As printed: ``5 mm'' (the text layer and a 400-dpi view show a roman ``m'', whereas the italic µ of ``16 µm\textsuperscript{2}'' on the same page is a different glyph); the title boxes of Figs.~13 and 14 say ``5 µm x 5 µm''.}
+
+Optical performance of a WGP with opaque defects is shown in Fig. 14. Again, the change in both TM and ER is minimal for the smaller defect. The large defect causes a significant change in transmission for densities above 100 cm\textsuperscript{−2}. Based on this analysis, the key is to control contamination for the larger defect sizes. Relative to the stringent requirements of semiconductor logic and memory devices, however (which require defect densities of less than 1 cm\textsuperscript{−2}), the specifications, by comparison, are substantially relaxed.
+
+\section*{5 Conclusions}
+
+A novel imprinting scheme, the LithoFlex 100, was successfully implemented for roll-based J-FIL patterning on continuous PC films. A roll module was developed and a prototype roll-based J-FIL tool was assembled and successfully tested. Several different templates, including 50-nm half-pitch gratings and 25-nm half-pitch dense hole arrays, were used to evaluate the imprinting scheme. The system has been used to fabricate large-area flexible bilayer WGPs as well as high-performance WGPs on glass. Experimental data as well as modeling confirm that defectivity can impact the performance of the polarizer; however, the defect levels are very much relaxed relative to the requirements of high-density semiconductor devices. It should also be noted that the defectivity requirements set forth in Sec. 4.2 are now being routinely achieved at pitches of 100 and 130 nm.
+
+Now that the prototype tool is performing efficiently and providing repeatable results, the next step is to scale the tool and process to address industry requirements for both area and throughput. To do this will require both a new template infrastructure and an imprinting scheme with a parallel \pdfpage{10}processing configuration. These topics will also be the subject of future work.
+
+\subsection*{Acknowledgments}
+
+The authors would like to thank both the University of Texas and the College of Nanoscale Science and Engineering for their contributions. This work was funded in part by the U.S. Department of Defense Small Business Technology Transfer (STTR) Program, Contract No. FA9550-11-C-0046.
+
+\subsection*{References}
+
+
+
+\begin{hangpars}
+
+1. W. Matthias, \textit{Hot Embossing: Theory and Technology of Microreplication}, William Andrew, Burlington, Massachusetts (2009).
+
+2. C. Taussig et al., “Roll-to-roll manufacturing of backplanes for paper-like displays,” \textit{SID Symposium Digest of Technical Papers}, Vol. 41, pp. 1151–1154 (2010).
+
+3. A. Jeans et al., “Advances in roll-to-roll imprint lithography for display applications, ” \textit{Proc. SPIE} \textbf{7637}, 763719 (2010).
+
+4. E. R. Holland et al., “Adaptation of roll-to-roll imprint lithography: from flexible electronics to structural templates, ” \textit{Proc. SPIE} \textbf{7970}, 797016 (2011).
+
+5. S. H. Ahn and L. J. Guo, “High speed roll-to-roll nanoimprint lithography on flexible plastic substrate, ” \textit{Adv. Mater.} \textbf{20}, 2044–2049 (2008).
+
+6. S. H. Ahn and L. J. Guo, “Large-area roll-to-roll and roll-to-plate nanoimprint lithography and analytical models for predicting residual layer thickness, ” \textit{ACS Nano} \textbf{3}(8), 2304–2310 (2009).
+
+7. S. V. Sreenivasan, “Nano-scale manufacturing enabled by imprint lithography,” \textit{MRS Bull.} \textbf{33}, 854–863 (2008).
+
+8. B. J. Choi et al., “UV nanoimprint lithography,” in \textit{Handbook of Nanofabrication}, G. Wiederrecht, Ed., Academic Press, Burlington, Massachusetts (2009).
+
+9. http://en.wikipedia.org/wiki/Coating (15 April 2013).
+
+10. M. Colburn et al., “Step and flash imprint lithography: a new approach to high resolution printing, ” \textit{Proc. SPIE} \textbf{3576}, 379–389 (1999).
+
+11. M. Colburn et al., “Development and advantages of step-and-flash lithography, ” \textit{Solid State Technol.} \textbf{44}, 67–76 (2001).
+
+12. T. C. Bailey et al., “Template fabrication schemes for step and flash imprint lithography, ” \textit{Microelectron. Eng.} \textbf{61–62}, 461–467 (2002).
+
+13. N. Hayashi, “NIL template: progress and challenges,” Presented at the \textit{2013 SPIE Advanced Lithography Symposium}, San Jose, California (25 February 2013).
+
+14. S. V. Sreenivasan et al., \textit{Presented at the SPIE Advanced Lithography Symposium}, San Jose, California, Vol. 7271 (2009).
+
+15. K. Selenidis et al., “Defect reduction progress in step and flash imprint lithography, ” \textit{Proc. SPIE} \textbf{6730}, 67300F (2007).
+
+16. I. McMackin et al., “Step and repeat UV nanoimprint lithography tools and processes, ” \textit{Proc. SPIE} \textbf{5374}, 222–231 (2004).
+
+17. L. Singh et al., “Defect reduction of high-density full-field patterns in jet and flash imprint lithography, ” \textit{Proc. SPIE} \textbf{797007} (2011).
+
+18. C. Brooks et al., “Development of template and mask replication using jet and flash imprint lithography, ” \textit{Proc. SPIE} \textbf{7823}, 797007 (2010).
+
+19. K. S. Selinidis, “Progress in mask replication using jet and flash imprint lithography, ” \textit{Proc. SPIE} \textbf{7970}, 797009 (2011).
+
+20. S. Ahn, “Roll-to-roll nanopatterning using jet and flash imprint lithography, ” \textit{Proc. SPIE}, \textbf{8323}, 83231L (2012).
+
+21. Y. Ekinci et al., “Bilayer Al wire-grids as broadband and high-performance polarizers, ” \textit{Opt. Express}, \textbf{14}(6), 2323 (2006).
+
+22. L. Chen et al., “Large flexible nanowire grid visible polarizer made by nanoimprint lithography, ” \textit{Appl. Phys. Lett.} \textbf{90}, 063111 (2007).
+
+23. T. K. Gaylord and M. G. Moharam, ”Analysis and application of optical diffraction by gratings,” \textit{Proc. IEEE} \textbf{73}, 894 (1985).
+
+24. A.-C. Wei, H.-P. D. Shieh, and J.-R. Sze, “Study of effect of seam on wire-grid polarizer efficiency using rigorous coupled-wave analysis,” \textit{Jpn. J. Appl. Phys.} \textbf{46}, 5379 (2007).
+
+\end{hangpars}
+
+Biographies and photographs of the authors not available.
+
+\end{document}
